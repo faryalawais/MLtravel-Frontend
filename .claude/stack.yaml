@@ -1,0 +1,14 @@
+# Stack manifest — frontend only (no local API/DB).
+stack: nextjs
+
+ui:
+  framework: next
+  bundler: next
+  css: tailwind
+  test_runner: playwright-bdd
+  pages_dir: app
+  components_dir: components
+
+token_pipeline: dtcg
+
+# API lives in MLtravel-Backend — this repo consumes it via fetch/client only.

@@ -1,0 +1,394 @@
+{
+  "$metadata": {
+    "version": "0.1.0",
+    "description": "UI registry — LP-001 Navbar slice (ui-registry-build 2026-07-01)",
+    "pathGrammar": "<domain>.<segment>(.<segment>)+",
+    "owner": "MLtravel FE",
+    "gherkinAliases": {
+      "screen.landing": "screen.landing.home",
+      "screen.contact": "screen.contact.page",
+      "screen.howItWorks": "screen.howItWorks.page",
+      "component.navbar": "component.navbar.root"
+    }
+  },
+  "screen": {
+    "landing": {
+      "home": {
+        "$description": "Landing page at / (Gherkin: screen.landing)"
+      }
+    },
+    "contact": {
+      "page": {
+        "$description": "Contact / demo booking at /contact (Gherkin: screen.contact)"
+      }
+    },
+    "howItWorks": {
+      "page": {
+        "$description": "How it works at /how-it-works (Gherkin: screen.howItWorks)"
+      }
+    }
+  },
+  "component": {
+    "navbar": {
+      "root": {
+        "$description": "Shared navbar desktop (Gherkin: component.navbar)",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "5164:6559",
+        "$states": [
+          "default",
+          "hover"
+        ],
+        "$tokens": {},
+        "$shared": true
+      },
+      "brand": {
+        "$description": "Navbar brand cluster",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3150:14",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "logoIcon": {
+        "$description": "Navbar logo icon frame (hidden on desktop)",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3150:15",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "brandLabel": {
+        "$description": "Navbar brand text MaqsoodTravel",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3150:16",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "navLinks": {
+        "$description": "Navbar nav link row",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3150:17",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "productLink": {
+        "$description": "Nav link Product",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3150:18",
+        "$states": [
+          "default",
+          "hover"
+        ],
+        "$tokens": {}
+      },
+      "productLinkLabel": {
+        "$description": "Nav label Product",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3150:18;3149:14",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "howItWorksLink": {
+        "$description": "Nav link How It Works",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3150:20",
+        "$states": [
+          "default",
+          "hover"
+        ],
+        "$tokens": {}
+      },
+      "howItWorksLinkLabel": {
+        "$description": "Nav label How It Works",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3150:20;3149:14",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "pricingLink": {
+        "$description": "Nav link Pricing",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3150:22",
+        "$states": [
+          "default",
+          "hover"
+        ],
+        "$tokens": {}
+      },
+      "pricingLinkLabel": {
+        "$description": "Nav label Pricing",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3150:22;3149:14",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "cta": {
+        "$description": "Book A Demo CTA (Gherkin: component.navbar.cta)",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3147:1442",
+        "$states": [
+          "default",
+          "hover"
+        ],
+        "$tokens": {}
+      },
+      "ctaLabel": {
+        "$description": "CTA label Book A Demo",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3147:1442;2780:1465",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "ctaIcon": {
+        "$description": "CTA icon button",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3147:1442;2780:1466",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "ctaGraphic": {
+        "$description": "CTA arrow graphic",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6559;3147:1442;2780:1466;2780:1505",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "mobile": {
+        "root": {
+          "$description": "Mobile top bar (Gherkin: component.navbar @393px)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:7031",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "leadingCluster": {
+          "$description": "Mobile leading cluster",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:7032",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "menuCluster": {
+          "$description": "Mobile menu icon cluster",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:7033",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "trailingCluster": {
+          "$description": "Mobile trailing cluster",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:7035",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "cta": {
+          "$description": "Mobile Book A Demo CTA",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:7037",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "ctaLabel": {
+          "$description": "Mobile CTA label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:7037;2780:1465",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaIcon": {
+          "$description": "Mobile CTA icon",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:7037;2780:1466",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaGraphic": {
+          "$description": "Mobile CTA graphic",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:7037;2780:1466;2780:1505",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        }
+      },
+      "motion": {
+        "root": {
+          "$description": "Navbar motion prototype (Gherkin: motion matches 5164:10334)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:10334",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "brand": {
+          "$description": "Motion frame brand cluster",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:10335",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "logoIcon": {
+          "$description": "Motion frame logo icon",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:10336",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "brandLabel": {
+          "$description": "Motion frame brand label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:10337",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "navLinks": {
+          "$description": "Motion frame nav links",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:10338",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "productLink": {
+          "$description": "Motion frame Product link",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:10339",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "productLinkLabel": {
+          "$description": "Motion frame Product label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:10339;3149:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "howItWorksLink": {
+          "$description": "Motion frame How It Works link",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:10340",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "howItWorksLinkLabel": {
+          "$description": "Motion frame How It Works label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:10340;3149:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "pricingLink": {
+          "$description": "Motion frame Pricing link",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:10341",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "pricingLinkLabel": {
+          "$description": "Motion frame Pricing label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:10341;3149:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "cta": {
+          "$description": "Motion frame CTA",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:10342",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "ctaLabel": {
+          "$description": "Motion frame CTA label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:10342;2780:1465",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaIcon": {
+          "$description": "Motion frame CTA icon",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:10342;2780:1466",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaGraphic": {
+          "$description": "Motion frame CTA graphic",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:10342;2780:1466;2780:1505",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        }
+      }
+    }
+  }
+}

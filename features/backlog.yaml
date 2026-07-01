@@ -1,0 +1,102 @@
+# features/backlog.yaml
+# One parent feature per page → feature-split → .1 API / .2 UI
+#
+# LP-001 Landing · F-002 Contact · F-003 How It Works
+# Shared: design tokens (tokens/), Navbar/Footer from LP-001
+#
+# START: /grill-me per feature, then prd-author per feature
+# See docs/START-HERE.md
+
+features:
+
+  - id: LP-001
+    title: "Landing page — D4"
+    persona: Travel agency decision-maker
+    slice: parent
+    story: >-
+      As a travel agency owner I want a landing page that explains ML Travel's
+      value proposition so I can decide whether to book a demo.
+    acceptance_criteria:
+      - "Guest can view the full landing page matching Figma at desktop and mobile breakpoints"
+      - "Navbar links to /contact (F-002) and /how-it-works (F-003) routes"
+      - "Hero CTA navigates to /contact"
+      - "All sections render: hero, problem, comparison, how-it-works, features, social proof, pricing, footer"
+      - "Each slice ships desktop + mobile together; motion per MOTION-SPEC where Figma shows it"
+      - "Layout uses design tokens only — no raw hex or px"
+      - "Shared Navbar and Footer reused on F-002 and F-003 — no duplicate components"
+      - "Strict pixel match to Figma; spacing targets post-design Figma updates"
+      - "MUST feature-split → LP-001.1 API (health stub), LP-001.2 UI"
+    priority: 1
+    status: contracted
+    design_contract: features/LP-001/contract.md
+    depends_on: []
+    figma_frames:
+      - { name: "Landing canvas", node_id: "5164:6346" }
+      - { name: "D4-Desktop", node_id: "5164:6558" }
+      - { name: "D4-Mobile", node_id: "5164:6569" }
+      - { name: "Navbar", node_id: "5164:6559", mobile_node_id: "5164:7031" }
+      - { name: "HeroSection", node_id: "5164:6560", mobile_node_id: "5164:7080" }
+      - { name: "ProblemSection", node_id: "5164:6561", mobile_node_id: "5164:6571" }
+      - { name: "ComparisonSection-first", node_id: "5164:6566", mobile_node_id: "5164:6609" }
+      - { name: "HowItWorksSection", node_id: "5164:6567", mobile_node_id: "5164:6690" }
+      - { name: "ComparisonSection-second", node_id: "5164:6563" }
+      - { name: "FeatureGrid", node_id: "5164:6562", mobile_node_id: "5164:6785" }
+      - { name: "SocialProofSectionBig", node_id: "5164:6568", mobile_node_id: "5164:6836" }
+      - { name: "NewPricingSection", node_id: "5164:6564", mobile_node_id: "5164:6915" }
+      - { name: "Footer", node_id: "5164:6565", mobile_node_id: "5164:7038" }
+    registry_roots:
+      - "screen.landing.*"
+      - "component.landing.*"
+      - "component.navbar.*"
+      - "component.footer.*"
+
+  - id: F-002
+    title: "Contact — demo booking flow"
+    persona: Travel agency decision-maker
+    slice: parent
+    story: >-
+      As a prospect I want to pick a day and time for a live demo so I can
+      see the platform without committing to a contract.
+    acceptance_criteria:
+      - "Guest can complete the 4-step flow: choose day → choose hour → details → summary"
+      - "Each step matches the corresponding Figma frame"
+      - "Form validation on details step (name, email required)"
+      - "MUST feature-split → F-002.1 API (if any), F-002.2 UI"
+    priority: 2
+    status: pending
+    depends_on: [LP-001]
+    figma_frames:
+      - { name: "Choose day", node_id: "5185:4332" }
+      - { name: "Choose hour", node_id: "5186:4533" }
+      - { name: "Details", node_id: "5186:4857" }
+      - { name: "Summary", node_id: "5198:4102" }
+    registry_roots:
+      - "screen.contact.*"
+      - "component.contact.*"
+
+  - id: F-003
+    title: "How It Works"
+    persona: Travel agency decision-maker
+    slice: parent
+    story: >-
+      As a prospect I want to understand the onboarding process so I know
+      what switching to ML Travel involves.
+    acceptance_criteria:
+      - "Guest can view the how-it-works page matching HIW-Desktop"
+      - "FAQ section expands and collapses"
+      - "Mid-page and final CTAs link to contact / demo booking (F-002)"
+      - "MUST feature-split → F-003.1 API (if any), F-003.2 UI"
+    priority: 3
+    status: pending
+    depends_on: [LP-001]
+    figma_frames:
+      - { name: "HIW-Desktop", node_id: "5217:6697" }
+      - { name: "HIWHeroSection", node_id: "5217:6699" }
+      - { name: "HowItWorksSection", node_id: "5217:6700" }
+      - { name: "SixWeekSection", node_id: "5217:6705" }
+      - { name: "FAQSection", node_id: "5261:8072" }
+      - { name: "FinalCTASection", node_id: "5217:7555" }
+      - { name: "Footer", node_id: "5217:6714" }
+    registry_roots:
+      - "screen.how-it-works.*"
+      - "component.how-it-works.*"

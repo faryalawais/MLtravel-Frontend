@@ -1,0 +1,39 @@
+{
+  "screen": "screen.landing.home",
+  "figmaNodeId": "5164:6346",
+  "version": "2026-07-01",
+  "figmaLastModified": "2026-07-01T07:26:09Z",
+  "root": {
+    "type": "stack",
+    "direction": "vertical",
+    "children": [
+      {
+        "slug": "component.navbar.root"
+      },
+      {
+        "slug": "component.navbar.mobile.root"
+      },
+      {
+        "slug": "component.navbar.motion.root"
+      },
+      {
+        "slug": "component.navbar.motion.cta"
+      },
+      {
+        "slug": "component.navbar.mobile.leadingCluster"
+      },
+      {
+        "slug": "component.navbar.mobile.cta"
+      },
+      {
+        "slug": "component.navbar.cta"
+      },
+      {
+        "slug": "component.navbar.brand"
+      },
+      {
+        "slug": "component.navbar.navLinks"
+      }
+    ]
+  }
+}

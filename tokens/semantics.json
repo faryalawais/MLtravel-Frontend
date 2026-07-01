@@ -1,0 +1,1562 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "color": {
+    "background": {
+      "page": {
+        "$type": "color",
+        "$value": "{color.neutral.0}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.0"
+        }
+      },
+      "surface": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.100"
+        }
+      },
+      "surface-warm": {
+        "$type": "color",
+        "$value": "{color.neutral.150}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.150"
+        }
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.50"
+        }
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.900"
+        }
+      },
+      "dark-deep": {
+        "$type": "color",
+        "$value": "{color.navy.600}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.navy.600"
+        }
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.900"
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.neutral.800}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.800"
+        }
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.700"
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.neutral.0}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.0"
+        }
+      },
+      "brand-navy": {
+        "$type": "color",
+        "$value": "{color.navy.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.navy.500"
+        }
+      },
+      "brand-orange": {
+        "$type": "color",
+        "$value": "{color.orange.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.orange.500"
+        }
+      },
+      "brand-teal": {
+        "$type": "color",
+        "$value": "{color.teal.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.teal.500"
+        }
+      },
+      "success": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.green.500"
+        }
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "{color.red.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.red.500"
+        }
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.200"
+        }
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.100"
+        }
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{color.neutral.800}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.800"
+        }
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{color.orange.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.orange.500"
+        }
+      },
+      "success": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.green.500"
+        }
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "{color.orange.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.orange.500"
+        }
+      },
+      "error": {
+        "$type": "color",
+        "$value": "{color.red.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.red.500"
+        }
+      },
+      "info": {
+        "$type": "color",
+        "$value": "{color.navy.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.navy.500"
+        }
+      }
+    },
+    "pill": {
+      "problem": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.red.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.red.500"
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.red.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.red.500"
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.red.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.red.500"
+          }
+        }
+      },
+      "solution": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.teal.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.teal.500"
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.teal.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.teal.500"
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.teal.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.teal.500"
+          }
+        }
+      },
+      "feature": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.navy.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.navy.500"
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.neutral.0}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.neutral.0"
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.navy.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.navy.500"
+          }
+        }
+      }
+    },
+    "icon": {
+      "dark": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.900"
+        }
+      },
+      "navy": {
+        "$type": "color",
+        "$value": "{color.navy.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.navy.500"
+        }
+      },
+      "orange": {
+        "$type": "color",
+        "$value": "{color.orange.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.orange.500"
+        }
+      },
+      "teal": {
+        "$type": "color",
+        "$value": "{color.teal.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.teal.500"
+        }
+      },
+      "green": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.green.500"
+        }
+      }
+    },
+    "surface": {
+      "canvas": {
+        "$type": "color",
+        "$value": "{color.neutral.0}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.background.page"
+        }
+      },
+      "raised": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.background.surface"
+        }
+      },
+      "sunken": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.background.subtle"
+        }
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "{color.neutral.150}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.background.surface-warm"
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.background.dark"
+        }
+      },
+      "inverse-muted": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.700"
+        }
+      }
+    },
+    "action": {
+      "primary": {
+        "default": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.orange.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.orange.500"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "hover": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.orange.600}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.orange.600"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "active": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.orange.700}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.orange.700"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "focused": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.orange.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.orange.500"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{color.orange.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.orange.500"
+            }
+          }
+        },
+        "disabled": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutral.200}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.200"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.700}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.700"
+            }
+          }
+        }
+      },
+      "secondary": {
+        "default": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.navy.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.navy.500"
+            }
+          }
+        },
+        "hover": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.navy.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.navy.500"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "active": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.navy.600}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.navy.600"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "focused": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.navy.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.navy.500"
+            }
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{color.neutral.200}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.200"
+            }
+          }
+        },
+        "disabled": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutral.100}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.100"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.700}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.700"
+            }
+          }
+        }
+      },
+      "tertiary": {
+        "default": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.navy.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.navy.500"
+            }
+          }
+        },
+        "hover": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutral.50}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.50"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.navy.600}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.navy.600"
+            }
+          }
+        },
+        "active": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutral.100}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.100"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.navy.600}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.navy.600"
+            }
+          }
+        },
+        "focused": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.navy.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.navy.500"
+            }
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{color.navy.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.navy.500"
+            }
+          }
+        },
+        "disabled": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutral.100}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.100"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.700}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.700"
+            }
+          }
+        }
+      },
+      "danger": {
+        "default": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.red.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.red.500"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "hover": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.red.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.red.500"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "active": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.red.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.red.500"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "focused": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.red.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.red.500"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{color.red.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.red.500"
+            }
+          }
+        },
+        "disabled": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutral.200}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.200"
+            }
+          },
+          "label": {
+            "$type": "color",
+            "$value": "{color.neutral.700}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.700"
+            }
+          }
+        }
+      }
+    },
+    "input": {
+      "surface": {
+        "$type": "color",
+        "$value": "{color.neutral.0}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.0"
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.200"
+        }
+      },
+      "placeholder-dim": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.neutral.700"
+        }
+      },
+      "icon": {
+        "default": {
+          "$type": "color",
+          "$value": "{color.neutral.700}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.neutral.700"
+          }
+        },
+        "error": {
+          "$type": "color",
+          "$value": "{color.red.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.red.500"
+          }
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{color.neutral.200}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.neutral.200"
+          }
+        }
+      },
+      "default": {
+        "empty": {
+          "border": {
+            "$type": "color",
+            "$value": "{color.neutral.200}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.200"
+            }
+          },
+          "placeholder": {
+            "$type": "color",
+            "$value": "{color.neutral.700}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.700"
+            }
+          },
+          "value": {
+            "$type": "color",
+            "$value": "{color.neutral.900}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.900"
+            }
+          },
+          "helper": {
+            "$type": "color",
+            "$value": "{color.neutral.800}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.800"
+            }
+          },
+          "surface": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "focused": {
+          "border": {
+            "$type": "color",
+            "$value": "{color.orange.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.orange.500"
+            }
+          },
+          "placeholder": {
+            "$type": "color",
+            "$value": "{color.neutral.700}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.700"
+            }
+          },
+          "value": {
+            "$type": "color",
+            "$value": "{color.neutral.900}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.900"
+            }
+          },
+          "helper": {
+            "$type": "color",
+            "$value": "{color.neutral.800}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.800"
+            }
+          },
+          "surface": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "filled": {
+          "border": {
+            "$type": "color",
+            "$value": "{color.neutral.200}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.200"
+            }
+          },
+          "placeholder": {
+            "$type": "color",
+            "$value": "{color.neutral.700}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.700"
+            }
+          },
+          "value": {
+            "$type": "color",
+            "$value": "{color.neutral.900}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.900"
+            }
+          },
+          "helper": {
+            "$type": "color",
+            "$value": "{color.neutral.800}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.800"
+            }
+          },
+          "surface": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "error": {
+          "border": {
+            "$type": "color",
+            "$value": "{color.red.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.red.500"
+            }
+          },
+          "placeholder": {
+            "$type": "color",
+            "$value": "{color.neutral.700}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.700"
+            }
+          },
+          "value": {
+            "$type": "color",
+            "$value": "{color.neutral.900}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.900"
+            }
+          },
+          "helper": {
+            "$type": "color",
+            "$value": "{color.red.500}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.red.500"
+            }
+          },
+          "surface": {
+            "$type": "color",
+            "$value": "{color.neutral.0}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.0"
+            }
+          }
+        },
+        "disabled": {
+          "border": {
+            "$type": "color",
+            "$value": "{color.neutral.100}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.100"
+            }
+          },
+          "placeholder": {
+            "$type": "color",
+            "$value": "{color.neutral.200}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.200"
+            }
+          },
+          "value": {
+            "$type": "color",
+            "$value": "{color.neutral.700}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.700"
+            }
+          },
+          "helper": {
+            "$type": "color",
+            "$value": "{color.neutral.200}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.200"
+            }
+          },
+          "surface": {
+            "$type": "color",
+            "$value": "{color.neutral.50}",
+            "$extensions": {
+              "layer": "semantic",
+              "source": "figma",
+              "aliasOf": "color.neutral.50"
+            }
+          }
+        }
+      }
+    },
+    "feedback": {
+      "success": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.green.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.green.500"
+          }
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.neutral.0}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.neutral.0"
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.green.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.green.500"
+          }
+        },
+        "icon": {
+          "$type": "color",
+          "$value": "{color.green.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.green.500"
+          }
+        }
+      },
+      "warning": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.orange.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.orange.500"
+          }
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.neutral.0}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.neutral.0"
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.orange.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.orange.500"
+          }
+        },
+        "icon": {
+          "$type": "color",
+          "$value": "{color.orange.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.orange.500"
+          }
+        }
+      },
+      "error": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.red.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.red.500"
+          }
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.neutral.0}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.neutral.0"
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.red.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.red.500"
+          }
+        },
+        "icon": {
+          "$type": "color",
+          "$value": "{color.red.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.red.500"
+          }
+        }
+      },
+      "info": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.navy.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.navy.500"
+          }
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.neutral.0}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.neutral.0"
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.navy.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.navy.500"
+          }
+        },
+        "icon": {
+          "$type": "color",
+          "$value": "{color.navy.500}",
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma",
+            "aliasOf": "color.navy.500"
+          }
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "$type": "color",
+        "$value": "{color.orange.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.orange.500"
+        }
+      },
+      "ring-error": {
+        "$type": "color",
+        "$value": "{color.red.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.red.500"
+        }
+      },
+      "ring-info": {
+        "$type": "color",
+        "$value": "{color.navy.500}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "color.navy.500"
+        }
+      }
+    }
+  },
+  "space": {
+    "xs": {
+      "$type": "dimension",
+      "$value": "{spacing.4}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "spacing.4"
+      }
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "{spacing.8}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "spacing.8"
+      }
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "{spacing.16}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "spacing.16"
+      }
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "{spacing.24}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "spacing.24"
+      }
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "{spacing.32}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "spacing.32"
+      }
+    },
+    "2xl": {
+      "$type": "dimension",
+      "$value": "{spacing.40}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "spacing.40"
+      }
+    },
+    "3xl": {
+      "$type": "dimension",
+      "$value": "{spacing.64}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "spacing.64"
+      }
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{spacing.12}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "spacing.12"
+      }
+    },
+    "gutter": {
+      "$type": "dimension",
+      "$value": "{spacing.16}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "spacing.16"
+      }
+    },
+    "section": {
+      "$type": "dimension",
+      "$value": "{spacing.64}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "spacing.64"
+      }
+    }
+  },
+  "radius": {
+    "control": {
+      "$type": "dimension",
+      "$value": "{radius.8}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "radius.8"
+      }
+    },
+    "surface": {
+      "$type": "dimension",
+      "$value": "{radius.8}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "radius.8"
+      }
+    },
+    "panel": {
+      "$type": "dimension",
+      "$value": "{radius.20}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "radius.20"
+      }
+    },
+    "pill": {
+      "$type": "dimension",
+      "$value": "{radius.full}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "radius.full"
+      }
+    },
+    "sharp": {
+      "$type": "dimension",
+      "$value": "{radius.0}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "radius.0"
+      }
+    }
+  },
+  "shadow": {
+    "sm": {
+      "$type": "shadow",
+      "$value": "{shadow.card}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "shadow.card"
+      }
+    },
+    "md": {
+      "$type": "shadow",
+      "$value": "{shadow.card-elevated}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "shadow.card-elevated"
+      }
+    },
+    "lg": {
+      "$type": "shadow",
+      "$value": "{shadow.card-elevated}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "shadow.card-elevated"
+      }
+    },
+    "focus": {
+      "$type": "shadow",
+      "$value": "{shadow.card}",
+      "$extensions": {
+        "layer": "semantic",
+        "source": "figma",
+        "aliasOf": "shadow.card"
+      }
+    }
+  },
+  "motion": {
+    "duration": {
+      "default": {
+        "$type": "duration",
+        "$value": "{motion.duration.700}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "motion.duration.700"
+        }
+      },
+      "stepDelay": {
+        "$type": "duration",
+        "$value": "{motion.duration.120}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "motion.duration.120"
+        }
+      },
+      "autoAdvance": {
+        "$type": "duration",
+        "$value": "{motion.duration.300}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "motion.duration.300"
+        }
+      }
+    },
+    "easing": {
+      "default": {
+        "$type": "cubicBezier",
+        "$value": "{motion.easing.ease-in}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "motion.easing.ease-in"
+        }
+      },
+      "hero": {
+        "$type": "cubicBezier",
+        "$value": "{motion.easing.ease-out}",
+        "$extensions": {
+          "layer": "semantic",
+          "source": "figma",
+          "aliasOf": "motion.easing.ease-out"
+        }
+      }
+    }
+  }
+}

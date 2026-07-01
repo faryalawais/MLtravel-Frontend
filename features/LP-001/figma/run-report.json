@@ -1,0 +1,49 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "frame": "5164:6559",
+    "frameName": "Navbar",
+    "extractionMethod": "figma:extract:rest",
+    "figmaFileKey": "h6BqI1ZRMSJxR7jESNF0Ep",
+    "figmaLastModified": "2026-06-30T12:22:10Z",
+    "completedAt": "2026-07-01"
+  },
+  "calls": [
+    {
+      "tool": "figma-rest-files-nodes",
+      "nodeId": "5164:6559",
+      "outcome": "ok",
+      "bytes": 0
+    },
+    {
+      "tool": "figma-rest-files-nodes",
+      "nodeId": "5164:7031",
+      "outcome": "ok",
+      "bytes": 0
+    },
+    {
+      "tool": "figma-rest-files-nodes",
+      "nodeId": "5164:10334",
+      "outcome": "ok",
+      "bytes": 0
+    },
+    {
+      "tool": "figma-rest-images",
+      "nodeId": "5164:6559",
+      "outcome": "ok",
+      "note": "reference-navbar.png"
+    },
+    {
+      "tool": "figma-rest-images",
+      "nodeId": "5164:7031",
+      "outcome": "ok",
+      "note": "reference-navbar-mobile.png"
+    },
+    {
+      "tool": "figma-rest-images",
+      "nodeId": "5164:10334",
+      "outcome": "ok",
+      "note": "reference-navbar-animation.png"
+    }
+  ]
+}

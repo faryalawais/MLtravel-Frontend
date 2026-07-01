@@ -1,0 +1,21 @@
+{
+  "frame": "5164:6346",
+  "frameName": "🟣 Landing D4- 18JUN2026",
+  "sliceRoots": [
+    {
+      "nodeId": "5164:6559",
+      "name": "Navbar",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:7031",
+      "name": "Navbar Mobile",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:10334",
+      "name": "Navbar Animation",
+      "source": "explicit"
+    }
+  ]
+}

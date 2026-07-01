@@ -1,0 +1,7 @@
+{
+  "generatedAt": "2026-07-01T07:41:10.269Z",
+  "figmaFileKey": "h6BqI1ZRMSJxR7jESNF0Ep",
+  "byVariableId": {},
+  "byFigmaPath": {},
+  "apiWarning": "Figma /variables/local: Invalid scope(s): current_user:read, file_comments:read, file_content:read, file_metadata:read, file_versions:read, library_assets:read, team_library_content:read, library_content:read, file_dev_resources:read, projects:read, webhooks:read. This endpoint requires the file_variables:read scope. Add file_variables:read to FIGMA_ACCESS_TOKEN for full boundVariables mapping."
+}

@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://sdlc-fe/schemas/layout.schema.json",
+  "title": "Composition Layout Tree (layout.json)",
+  "description": "Composition-only tree derived from Figma Auto-Layout (docs/figma-single-pass-extract-plan.md §4). Describes WHERE elements sit, never how they look, behave, or bind data. Allowed node types: stack, grid, spacer, slot. Leaves carry a registry slug. Behaviour belongs in Gherkin, styling in the component, data in code.",
+  "type": "object",
+  "required": ["screen", "figmaNodeId", "version", "root"],
+  "additionalProperties": false,
+  "properties": {
+    "screen": {
+      "type": "string",
+      "description": "Registry screen path this tree composes, e.g. screen.shop.checkout.",
+      "pattern": "^screen\\.[a-z][a-zA-Z0-9]*(\\.[a-z][a-zA-Z0-9]*)+$"
+    },
+    "figmaNodeId": {
+      "type": "string",
+      "description": "Figma node id of the frame this tree was derived from."
+    },
+    "version": {
+      "type": "string",
+      "description": "Generation date stamp (build-layout regenerates each run)."
+    },
+    "figmaLastModified": {
+      "type": ["string", "null"],
+      "description": "Figma file lastModified stamp used for freshness checks; null when unknown (offline bootstrap)."
+    },
+    "root": { "$ref": "#/definitions/node" },
+    "overrides": { "$ref": "#/definitions/overrides" }
+  },
+  "definitions": {
+    "tokenRef": {
+      "type": "string",
+      "description": "Design-token reference (e.g. space.lg, spacing.1.5). Must start with a letter so raw px values like \"24px\" are rejected.",
+      "pattern": "^[a-zA-Z][a-zA-Z0-9]*(\\.[a-zA-Z0-9][a-zA-Z0-9-]*)+$"
+    },
+    "node": {
+      "oneOf": [
+        { "$ref": "#/definitions/leaf" },
+        { "$ref": "#/definitions/container" },
+        { "$ref": "#/definitions/spacer" },
+        { "$ref": "#/definitions/slot" }
+      ]
+    },
+    "leaf": {
+      "type": "object",
+      "description": "A registry component placed in the composition.",
+      "required": ["slug"],
+      "additionalProperties": false,
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^component\\.[a-z][a-zA-Z0-9]*(\\.[a-z][a-zA-Z0-9]*)+$"
+        },
+        "overrides": { "$ref": "#/definitions/overrides" }
+      }
+    },
+    "container": {
+      "type": "object",
+      "description": "A stack (flex) or grid container.",
+      "required": ["type", "children"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": ["stack", "grid"] },
+        "direction": { "enum": ["horizontal", "vertical"] },
+        "gap": { "$ref": "#/definitions/tokenRef" },
+        "padding": { "$ref": "#/definitions/tokenRef" },
+        "align": { "enum": ["start", "center", "end", "stretch", "baseline"] },
+        "justify": { "enum": ["start", "center", "end", "between", "around", "evenly"] },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/node" }
+        },
+        "overrides": { "$ref": "#/definitions/overrides" }
+      }
+    },
+    "spacer": {
+      "type": "object",
+      "description": "Flexible or fixed gap between siblings.",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "spacer" },
+        "grow": { "type": "boolean" },
+        "gap": { "$ref": "#/definitions/tokenRef" }
+      }
+    },
+    "slot": {
+      "type": "object",
+      "description": "A named insertion point for runtime-injected children (lists, dynamic regions).",
+      "required": ["type", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "slot" },
+        "name": { "type": "string", "pattern": "^[a-z][a-zA-Z0-9]*$" },
+        "overrides": { "$ref": "#/definitions/overrides" }
+      }
+    },
+    "overrides": {
+      "type": "object",
+      "description": "Per-breakpoint hint overrides, keyed by breakpoint name (e.g. md, lg).",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "direction": { "enum": ["horizontal", "vertical"] },
+          "gap": { "$ref": "#/definitions/tokenRef" },
+          "padding": { "$ref": "#/definitions/tokenRef" },
+          "align": { "enum": ["start", "center", "end", "stretch", "baseline"] },
+          "justify": { "enum": ["start", "center", "end", "between", "around", "evenly"] },
+          "grow": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

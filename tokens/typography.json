@@ -1,0 +1,743 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "typography": {
+    "display": {
+      "desktop": {
+        "pricing-xl": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.40}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg2}",
+            "lineHeight": "{font.lineheight.48}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "lg": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.48}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg2}",
+            "lineHeight": "{font.lineheight.60}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "stat": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.28}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg0-5}",
+            "lineHeight": "{font.lineheight.32}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "pricing-sm": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.32}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg2}",
+            "lineHeight": "{font.lineheight.40}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        }
+      },
+      "mobile": {
+        "lg": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.32}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg1}",
+            "lineHeight": "{font.lineheight.40}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "stat": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.20}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg0-5}",
+            "lineHeight": "{font.lineheight.28}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "pricing-xl": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.36}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg2}",
+            "lineHeight": "{font.lineheight.44}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "pricing-sm": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.28}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg2}",
+            "lineHeight": "{font.lineheight.36}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        }
+      }
+    },
+    "heading": {
+      "desktop": {
+        "h1": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.40}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg0-5}",
+            "lineHeight": "{font.lineheight.52}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "h2": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.26}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg0-5}",
+            "lineHeight": "{font.lineheight.32}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "h3-sm": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.24}",
+            "fontWeight": "{font.weight.500}",
+            "letterSpacing": "{font.letterspacing.neg0-449}",
+            "lineHeight": "{font.lineheight.32}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "h4": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.18}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg0-3}",
+            "lineHeight": "{font.lineheight.24}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "h1-hero": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.48}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg2}",
+            "lineHeight": "{font.lineheight.60}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "h4-feature": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.16}",
+            "fontWeight": "{font.weight.500}",
+            "letterSpacing": "{font.letterspacing.neg0-44}",
+            "lineHeight": "{font.lineheight.22}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        }
+      },
+      "mobile": {
+        "h1": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.32}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg0-85}",
+            "lineHeight": "{font.lineheight.40}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "h2": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.18}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.0}",
+            "lineHeight": "{font.lineheight.24}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "h3-sm": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.18}",
+            "fontWeight": "{font.weight.500}",
+            "letterSpacing": "{font.letterspacing.neg0-449}",
+            "lineHeight": "{font.lineheight.26}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "h4": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.16}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg0-44}",
+            "lineHeight": "{font.lineheight.22}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "h1-hero": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.32}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.neg2}",
+            "lineHeight": "{font.lineheight.40}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "h4-feature": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.14}",
+            "fontWeight": "{font.weight.500}",
+            "letterSpacing": "{font.letterspacing.neg0-44}",
+            "lineHeight": "{font.lineheight.22}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        }
+      }
+    },
+    "body": {
+      "desktop": {
+        "md": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.16}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.neg0-4}",
+            "lineHeight": "{font.lineheight.24}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "sm": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.15}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.neg0-4}",
+            "lineHeight": "{font.lineheight.24}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "xs": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.14}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.0}",
+            "lineHeight": "{font.lineheight.22}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "testimonial": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.24}",
+            "fontWeight": "{font.weight.500}",
+            "letterSpacing": "{font.letterspacing.neg0-2}",
+            "lineHeight": "{font.lineheight.32}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "xs-sm": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.13}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.0}",
+            "lineHeight": "{font.lineheight.20}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        }
+      },
+      "mobile": {
+        "md": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.14}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.neg0-3125}",
+            "lineHeight": "{font.lineheight.20}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "sm": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.14}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.neg0-3125}",
+            "lineHeight": "{font.lineheight.26}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "xs": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.13}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.pos0p55}",
+            "lineHeight": "{font.lineheight.20}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "testimonial": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.satoshi}",
+            "fontSize": "{font.size.20}",
+            "fontWeight": "{font.weight.500}",
+            "letterSpacing": "{font.letterspacing.neg0-2}",
+            "lineHeight": "{font.lineheight.28}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "xs-sm": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.12}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.neg0-31}",
+            "lineHeight": "{font.lineheight.16}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        }
+      }
+    },
+    "label": {
+      "desktop": {
+        "nav-link": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.15}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.neg0-15}",
+            "lineHeight": "{font.lineheight.24}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "lg": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.16}",
+            "fontWeight": "{font.weight.600}",
+            "letterSpacing": "{font.letterspacing.neg0-31}",
+            "lineHeight": "{font.lineheight.24}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "md-tag": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.14}",
+            "fontWeight": "{font.weight.600}",
+            "letterSpacing": "{font.letterspacing.pos0p3}",
+            "lineHeight": "{font.lineheight.16}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "xs-semibold": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.11}",
+            "fontWeight": "{font.weight.600}",
+            "letterSpacing": "{font.letterspacing.0}",
+            "lineHeight": "{font.lineheight.16}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "xs-medium": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.10}",
+            "fontWeight": "{font.weight.500}",
+            "letterSpacing": "{font.letterspacing.0}",
+            "lineHeight": "{font.lineheight.15}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "md-stat": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.14}",
+            "fontWeight": "{font.weight.500}",
+            "letterSpacing": "{font.letterspacing.pos0p55}",
+            "lineHeight": "{font.lineheight.20}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "stamp": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.8}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.pos1p2}",
+            "lineHeight": "{font.lineheight.12}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "micro-tag": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.9}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.1}",
+            "lineHeight": "{font.lineheight.14}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "sm-semibold": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.12}",
+            "fontWeight": "{font.weight.600}",
+            "letterSpacing": "{font.letterspacing.0}",
+            "lineHeight": "{font.lineheight.18}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "sub": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.12}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.0}",
+            "lineHeight": "{font.lineheight.17}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "hero-statlabel": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.10}",
+            "fontWeight": "{font.weight.600}",
+            "letterSpacing": "{font.letterspacing.pos0p2}",
+            "lineHeight": "{font.lineheight.14}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        }
+      },
+      "mobile": {
+        "lg": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.16}",
+            "fontWeight": "{font.weight.600}",
+            "letterSpacing": "{font.letterspacing.neg0-31}",
+            "lineHeight": "{font.lineheight.24}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "md-tag": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.10}",
+            "fontWeight": "{font.weight.600}",
+            "letterSpacing": "{font.letterspacing.pos0p3}",
+            "lineHeight": "{font.lineheight.14}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "xs-semibold": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.10}",
+            "fontWeight": "{font.weight.600}",
+            "letterSpacing": "{font.letterspacing.pos0p1996}",
+            "lineHeight": "{font.lineheight.16}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "xs-medium": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.9}",
+            "fontWeight": "{font.weight.500}",
+            "letterSpacing": "{font.letterspacing.pos1p5}",
+            "lineHeight": "{font.lineheight.14}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "md-stat": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.12}",
+            "fontWeight": "{font.weight.500}",
+            "letterSpacing": "{font.letterspacing.neg0-1504}",
+            "lineHeight": "{font.lineheight.18}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "stamp": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.7}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.pos1p2}",
+            "lineHeight": "{font.lineheight.10}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "micro-tag": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.8}",
+            "fontWeight": "{font.weight.700}",
+            "letterSpacing": "{font.letterspacing.1}",
+            "lineHeight": "{font.lineheight.10}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "sm-semibold": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.10}",
+            "fontWeight": "{font.weight.600}",
+            "letterSpacing": "{font.letterspacing.0}",
+            "lineHeight": "{font.lineheight.14}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "sub": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.10}",
+            "fontWeight": "{font.weight.400}",
+            "letterSpacing": "{font.letterspacing.0}",
+            "lineHeight": "{font.lineheight.16}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        },
+        "hero-statlabel": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{font.family.inter}",
+            "fontSize": "{font.size.8}",
+            "fontWeight": "{font.weight.600}",
+            "letterSpacing": "{font.letterspacing.pos0p2}",
+            "lineHeight": "{font.lineheight.12}"
+          },
+          "$extensions": {
+            "layer": "semantic",
+            "source": "figma"
+          }
+        }
+      }
+    }
+  }
+}

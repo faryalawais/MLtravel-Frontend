@@ -1,0 +1,40 @@
+{
+  "$comment": "Small MCP get_design_context targets — one call per row. Never call the full landing frame (5164:6346).",
+  "feature": "LP-001",
+  "figmaFileKey": "h6BqI1ZRMSJxR7jESNF0Ep",
+  "rule": "One node per MCP call. Wait for each response before the next. Use REST for bulk cache; MCP only for gap-fill.",
+  "sliceRoots": {
+    "description": "REST cache files (one JSON per row) — already extracted",
+    "nodes": [
+      { "nodeId": "5164:6559", "name": "Navbar desktop", "cache": "nodes/5164-6559.json" },
+      { "nodeId": "5164:7031", "name": "Navbar mobile bar", "cache": "nodes/5164-7031.json" },
+      { "nodeId": "5164:10334", "name": "Navbar animation", "cache": "nodes/5164-10334.json" }
+    ]
+  },
+  "mcpChunks": {
+    "description": "Sub-frame MCP calls when a slice-root times out — smallest useful units",
+    "desktop": [
+      { "nodeId": "I5164:6559;3150:14", "name": "brand cluster" },
+      { "nodeId": "I5164:6559;3150:17", "name": "nav-links" },
+      { "nodeId": "I5164:6559;3147:1442", "name": "Book A Demo CTA" }
+    ],
+    "mobile": [
+      { "nodeId": "5164:7032", "name": "leading cluster (menu + wordmark)" },
+      { "nodeId": "5164:7034", "name": "menu icon vector" },
+      { "nodeId": "5164:7036", "name": "wordmark vector" },
+      { "nodeId": "5164:7037", "name": "mobile CTA" }
+    ],
+    "animation": [
+      { "nodeId": "5164:10342", "name": "animation CTA (hover target)" }
+    ]
+  },
+  "restRefresh": {
+    "description": "npm run figma:refresh-node -- --feature LP-001 --refresh-node <id>",
+    "examples": [
+      "5164:6559",
+      "5164:7031",
+      "I5164:6559;3147:1442",
+      "5164:7037"
+    ]
+  }
+}

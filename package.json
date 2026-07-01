@@ -1,0 +1,48 @@
+{
+  "name": "mltravel-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "figma:check": "node --env-file=.env scripts/figma-check-rest.mjs",
+    "figma:extract:rest": "node --env-file=.env scripts/figma-extract-rest.mjs",
+    "figma:refresh-node": "node --env-file=.env scripts/figma-extract-rest.mjs",
+    "figma:export-image": "node --env-file=.env scripts/figma-export-image.mjs",
+    "build:spec-from-cache": "node scripts/build-spec-from-cache.mjs",
+    "build:layout": "node scripts/build-layout.mjs",
+    "validate:figma-extract": "node scripts/validate-figma-extract.mjs",
+    "validate:figma-coverage": "node scripts/validate-figma-coverage.mjs",
+    "validate:contract": "node scripts/validate-contract-anatomy.mjs",
+    "validate:layout": "node scripts/validate-layout.mjs",
+    "validate:assets": "node scripts/validate-assets.mjs",
+    "tokens:report": "node scripts/tokens-report.mjs",
+    "ui-registry:build": "node scripts/build-ui-registry.mjs",
+    "ui-registry:validate": "node scripts/build-ui-registry.mjs --validate",
+    "ui-registry:enrich-tokens": "node --env-file=.env scripts/enrich-registry-tokens.mjs",
+    "tokens:merge": "node scripts/merge-ml-travel-tokens.mjs",
+    "tokens:build": "node tokens/sd.config.mjs",
+    "tokens:validate-source": "node scripts/validate-token-source.mjs",
+    "tokens:dtcg-lint": "node scripts/validate-tokens-dtcg.mjs",
+    "tokens:validate": "node scripts/validate-tokens.mjs"
+  },
+  "dependencies": {
+    "next": "16.2.9",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "ajv": "^8.20.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "style-dictionary": "^4.3.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

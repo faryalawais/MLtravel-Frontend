@@ -1,0 +1,35 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "frame": "5164:6559",
+    "figmaFileKey": "h6BqI1ZRMSJxR7jESNF0Ep",
+    "generatedAt": "2026-07-01"
+  },
+  "assets": [
+    {
+      "nodeId": "2780:1506",
+      "nodeName": "Button/Secondary2 — CTA arrow (component master)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=2780:1506&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-button-arrow.svg",
+      "type": "svg",
+      "dataSource": "static",
+      "note": "Instance IDs do not render via REST; exported from Icon/Button vector master."
+    },
+    {
+      "nodeId": "5164:7034",
+      "nodeName": "Mobile menu icon",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=5164:7034&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-menu.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "5164:7036",
+      "nodeName": "MaqsoodTravel wordmark (mobile vector)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=5164:7036&format=svg&svg_include_id=true",
+      "localPath": "public/icons/logo-maqsood-travel.svg",
+      "type": "svg",
+      "dataSource": "static"
+    }
+  ]
+}

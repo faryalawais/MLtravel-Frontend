@@ -1,0 +1,29 @@
+@import '../tokens/build/tokens.css';
+@import 'tailwindcss';
+
+@utility text-heading-desktop-h4 {
+  font-family: var(--typography-heading-desktop-h4-font-family);
+  font-size: var(--typography-heading-desktop-h4-font-size);
+  font-weight: var(--typography-heading-desktop-h4-font-weight);
+  line-height: var(--typography-heading-desktop-h4-line-height);
+}
+
+@utility text-body-desktop-sm {
+  font-family: var(--typography-body-desktop-sm-font-family);
+  font-size: var(--typography-body-desktop-sm-font-size);
+  font-weight: var(--typography-body-desktop-sm-font-weight);
+  line-height: var(--typography-body-desktop-sm-line-height);
+}
+
+@utility text-label-desktop-lg {
+  font-family: var(--typography-label-desktop-lg-font-family);
+  font-size: var(--typography-label-desktop-lg-font-size);
+  font-weight: var(--typography-label-desktop-lg-font-weight);
+  line-height: var(--typography-label-desktop-lg-line-height);
+}
+
+body {
+  background: var(--color-background-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-inter);
+}

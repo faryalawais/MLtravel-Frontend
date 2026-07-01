@@ -1,5 +1,22 @@
 # MLtravel Frontend
 
-Frontend-only Next.js app for MLtravel.
+Frontend-only Next.js app for MLtravel. Backend lives in **MLtravel-Backend**.
 
-Development happens on feature branches; `main` is the integration target for reviewed work.
+**Start here:** [`docs/START-HERE.md`](docs/START-HERE.md)
+
+Pipeline quick reference: [`docs/feature-pipeline-quickref.md`](docs/feature-pipeline-quickref.md)
+
+Figma setup: [`docs/figma-setup.md`](docs/figma-setup.md)
+
+## Setup
+
+```bash
+npm install
+npm run dev
+```
+
+## Sync skills
+
+```bash
+cd ../sldc-skills && ./scripts/sync.sh ../MLtravel-Frontend
+```
