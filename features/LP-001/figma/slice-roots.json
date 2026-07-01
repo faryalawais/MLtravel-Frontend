@@ -46,6 +46,21 @@
       "nodeId": "5164:10344",
       "name": "problem-animation",
       "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6566",
+      "name": "ComparisonSectionFirst",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6609",
+      "name": "ComparisonMobileFirst",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:10411",
+      "name": "comparison-animation",
+      "source": "explicit"
     }
   ]
 }

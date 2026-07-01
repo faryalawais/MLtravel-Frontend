@@ -226,3 +226,4 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-01** — `/ui-registry-build` Problem slice — 71 problem paths; registry total 137; `build:layout` + `validate:layout` pass.
 - **2026-07-01** — `/design-contract` Problem slice — contract §2 + GH#5 anatomy; `validate:figma-coverage` + `validate:contract` pass; problem card icons exported.
 - **2026-07-01** — `/fe-implement` GH#5 Problem — `ProblemSection`; cascade motion + token shadow fix; e2e/visual pass; human **APPROVED**.
+- **2026-07-01** — Comparison `figma-extract:rest` — nodes `5164:6566`, `5164:6609`, `5164:10411`; reference PNGs exported; `validate:figma-extract` pass.
