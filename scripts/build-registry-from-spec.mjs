@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * One-off helper: seed component entries from LP-001 navbar spec checklist.
+ * Seed component entries from LP-001 figma checklist (navbar + hero slices).
  * ui-registry-build merges these into tokens/ui-registry.json.
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -11,7 +11,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SCREEN = "screen.landing.home";
 
 /** @type {Array<{ path: string[], description: string, nodeId: string, states?: string[] }>} */
-const ENTRIES = [
+const NAVBAR_ENTRIES = [
   // Desktop — GH#3
   { path: ["navbar", "root"], description: "Shared navbar desktop (Gherkin: component.navbar)", nodeId: "5164:6559", states: ["default", "hover"] },
   { path: ["navbar", "brand"], description: "Navbar brand cluster", nodeId: "I5164:6559;3150:14" },
@@ -55,6 +55,40 @@ const ENTRIES = [
   { path: ["navbar", "motion", "ctaGraphic"], description: "Motion frame CTA graphic", nodeId: "I5164:10342;2780:1466;2780:1505" },
 ];
 
+/** @type {Array<{ path: string[], description: string, nodeId: string, states?: string[] }>} */
+const HERO_ENTRIES = [
+  { path: ["landing", "hero", "root"], description: "Hero section desktop (Gherkin: component.landing.hero)", nodeId: "5164:6560", states: ["default", "hover"] },
+  { path: ["landing", "hero", "heroTop"], description: "Hero top row — copy + product image", nodeId: "I5164:6560;5160:5271" },
+  { path: ["landing", "hero", "textBlock"], description: "Hero text block", nodeId: "I5164:6560;5160:5272" },
+  { path: ["landing", "hero", "headingGroup"], description: "Hero heading group", nodeId: "I5164:6560;5160:5272;5160:43" },
+  { path: ["landing", "hero", "heading"], description: "Hero headline", nodeId: "I5164:6560;5160:5272;5160:44" },
+  { path: ["landing", "hero", "subheading"], description: "Hero subcopy", nodeId: "I5164:6560;5160:5272;5160:45" },
+  { path: ["landing", "hero", "ctaGroup"], description: "Hero CTA group", nodeId: "I5164:6560;5160:5272;5160:46" },
+  { path: ["landing", "hero", "ctaRow"], description: "Hero CTA row", nodeId: "I5164:6560;5160:5272;5160:47" },
+  { path: ["landing", "hero", "cta"], description: "Book A Demo primary CTA (Gherkin: component.landing.hero.cta)", nodeId: "I5164:6560;5160:5272;5160:48", states: ["default", "hover"] },
+  { path: ["landing", "hero", "ctaLabel"], description: "Primary CTA label", nodeId: "I5164:6560;5160:5272;5160:48;2780:1424" },
+  { path: ["landing", "hero", "ctaIcon"], description: "Primary CTA icon", nodeId: "I5164:6560;5160:5272;5160:48;2780:1425" },
+  { path: ["landing", "hero", "ctaGraphic"], description: "Primary CTA arrow", nodeId: "I5164:6560;5160:5272;5160:48;2780:1425;2780:1499" },
+  { path: ["landing", "hero", "secondaryCta"], description: "View Pricing secondary CTA", nodeId: "I5164:6560;5160:5272;5160:57", states: ["default", "hover"] },
+  { path: ["landing", "hero", "secondaryCtaLabel"], description: "View Pricing label", nodeId: "I5164:6560;5160:5272;5160:57;2780:1462" },
+  { path: ["landing", "hero", "proofLine"], description: "Agencies save average proof line", nodeId: "I5164:6560;5160:5272;5160:64" },
+  { path: ["landing", "hero", "productImage"], description: "Hero product screenshot", nodeId: "I5164:6560;5160:5290" },
+  { path: ["landing", "hero", "bottomFrame"], description: "Stats + logos container", nodeId: "I5164:6560;5164:5195" },
+  { path: ["landing", "hero", "statsStrip"], description: "Hero stats strip", nodeId: "I5164:6560;5160:5292" },
+  { path: ["landing", "hero", "stat1"], description: "Stat item $1,200/mo", nodeId: "I5164:6560;5160:5292;5160:5221" },
+  { path: ["landing", "hero", "stat2"], description: "Stat item 40%", nodeId: "I5164:6560;5160:5292;5160:5229" },
+  { path: ["landing", "hero", "stat3"], description: "Stat item 6 Weeks", nodeId: "I5164:6560;5160:5292;5160:5237" },
+  { path: ["landing", "hero", "stat4"], description: "Stat item 500+", nodeId: "I5164:6560;5160:5292;5160:5245" },
+  { path: ["landing", "hero", "logosStrip"], description: "Partner logos strip", nodeId: "I5164:6560;5160:5324" },
+  { path: ["landing", "hero", "mobile", "root"], description: "Hero mobile frame (Gherkin @393px)", nodeId: "5164:7080" },
+  { path: ["landing", "hero", "mobile", "banner"], description: "Mobile HeroBanner", nodeId: "5164:7081" },
+  { path: ["landing", "hero", "mobile", "cta"], description: "Mobile primary CTA", nodeId: "5164:7090", states: ["default", "hover"] },
+  { path: ["landing", "hero", "motion", "root"], description: "Hero motion prototype (Gherkin: motion 5164:10343)", nodeId: "5164:10343", states: ["default", "hover"] },
+  { path: ["landing", "hero", "motion", "cta"], description: "Motion frame primary CTA", nodeId: "I5164:10343;5307:6562", states: ["default", "hover"] },
+];
+
+const ENTRIES = [...NAVBAR_ENTRIES, ...HERO_ENTRIES];
+
 function setPath(tree, segments, leaf) {
   let cur = tree;
   for (let i = 0; i < segments.length - 1; i++) {
@@ -75,7 +109,7 @@ function setPath(tree, segments, leaf) {
 const registry = {
   $metadata: {
     version: "0.1.0",
-    description: "UI registry — LP-001 Navbar slice (ui-registry-build 2026-07-01)",
+    description: "UI registry — LP-001 Navbar + Hero slices (ui-registry-build 2026-07-01)",
     pathGrammar: "<domain>.<segment>(.<segment>)+",
     owner: "MLtravel FE",
     gherkinAliases: {
@@ -83,6 +117,8 @@ const registry = {
       "screen.contact": "screen.contact.page",
       "screen.howItWorks": "screen.howItWorks.page",
       "component.navbar": "component.navbar.root",
+      "component.landing.hero": "component.landing.hero.root",
+      "component.landing.hero.cta": "component.landing.hero.cta",
     },
   },
   screen: {

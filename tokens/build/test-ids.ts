@@ -50,7 +50,35 @@ export const testIds = {
   "component.navbar.motion.cta": "component-navbar-motion-cta",
   "component.navbar.motion.ctaLabel": "component-navbar-motion-ctaLabel",
   "component.navbar.motion.ctaIcon": "component-navbar-motion-ctaIcon",
-  "component.navbar.motion.ctaGraphic": "component-navbar-motion-ctaGraphic"
+  "component.navbar.motion.ctaGraphic": "component-navbar-motion-ctaGraphic",
+  "component.landing.hero.root": "component-landing-hero-root",
+  "component.landing.hero.heroTop": "component-landing-hero-heroTop",
+  "component.landing.hero.textBlock": "component-landing-hero-textBlock",
+  "component.landing.hero.headingGroup": "component-landing-hero-headingGroup",
+  "component.landing.hero.heading": "component-landing-hero-heading",
+  "component.landing.hero.subheading": "component-landing-hero-subheading",
+  "component.landing.hero.ctaGroup": "component-landing-hero-ctaGroup",
+  "component.landing.hero.ctaRow": "component-landing-hero-ctaRow",
+  "component.landing.hero.cta": "component-landing-hero-cta",
+  "component.landing.hero.ctaLabel": "component-landing-hero-ctaLabel",
+  "component.landing.hero.ctaIcon": "component-landing-hero-ctaIcon",
+  "component.landing.hero.ctaGraphic": "component-landing-hero-ctaGraphic",
+  "component.landing.hero.secondaryCta": "component-landing-hero-secondaryCta",
+  "component.landing.hero.secondaryCtaLabel": "component-landing-hero-secondaryCtaLabel",
+  "component.landing.hero.proofLine": "component-landing-hero-proofLine",
+  "component.landing.hero.productImage": "component-landing-hero-productImage",
+  "component.landing.hero.bottomFrame": "component-landing-hero-bottomFrame",
+  "component.landing.hero.statsStrip": "component-landing-hero-statsStrip",
+  "component.landing.hero.stat1": "component-landing-hero-stat1",
+  "component.landing.hero.stat2": "component-landing-hero-stat2",
+  "component.landing.hero.stat3": "component-landing-hero-stat3",
+  "component.landing.hero.stat4": "component-landing-hero-stat4",
+  "component.landing.hero.logosStrip": "component-landing-hero-logosStrip",
+  "component.landing.hero.mobile.root": "component-landing-hero-mobile-root",
+  "component.landing.hero.mobile.banner": "component-landing-hero-mobile-banner",
+  "component.landing.hero.mobile.cta": "component-landing-hero-mobile-cta",
+  "component.landing.hero.motion.root": "component-landing-hero-motion-root",
+  "component.landing.hero.motion.cta": "component-landing-hero-motion-cta"
 } as const;
 
 export type RegistryPath = keyof typeof testIds;
@@ -112,6 +140,42 @@ export const ids = {
         "ctaLabel": "component-navbar-motion-ctaLabel",
         "ctaIcon": "component-navbar-motion-ctaIcon",
         "ctaGraphic": "component-navbar-motion-ctaGraphic"
+      }
+    },
+    "landing": {
+      "hero": {
+        "root": "component-landing-hero-root",
+        "heroTop": "component-landing-hero-heroTop",
+        "textBlock": "component-landing-hero-textBlock",
+        "headingGroup": "component-landing-hero-headingGroup",
+        "heading": "component-landing-hero-heading",
+        "subheading": "component-landing-hero-subheading",
+        "ctaGroup": "component-landing-hero-ctaGroup",
+        "ctaRow": "component-landing-hero-ctaRow",
+        "cta": "component-landing-hero-cta",
+        "ctaLabel": "component-landing-hero-ctaLabel",
+        "ctaIcon": "component-landing-hero-ctaIcon",
+        "ctaGraphic": "component-landing-hero-ctaGraphic",
+        "secondaryCta": "component-landing-hero-secondaryCta",
+        "secondaryCtaLabel": "component-landing-hero-secondaryCtaLabel",
+        "proofLine": "component-landing-hero-proofLine",
+        "productImage": "component-landing-hero-productImage",
+        "bottomFrame": "component-landing-hero-bottomFrame",
+        "statsStrip": "component-landing-hero-statsStrip",
+        "stat1": "component-landing-hero-stat1",
+        "stat2": "component-landing-hero-stat2",
+        "stat3": "component-landing-hero-stat3",
+        "stat4": "component-landing-hero-stat4",
+        "logosStrip": "component-landing-hero-logosStrip",
+        "mobile": {
+          "root": "component-landing-hero-mobile-root",
+          "banner": "component-landing-hero-mobile-banner",
+          "cta": "component-landing-hero-mobile-cta"
+        },
+        "motion": {
+          "root": "component-landing-hero-motion-root",
+          "cta": "component-landing-hero-motion-cta"
+        }
       }
     }
   }

@@ -17,6 +17,15 @@
         "slug": "component.navbar.motion.root"
       },
       {
+        "slug": "component.landing.hero.root"
+      },
+      {
+        "slug": "component.landing.hero.mobile.root"
+      },
+      {
+        "slug": "component.landing.hero.motion.root"
+      },
+      {
         "slug": "component.navbar.motion.cta"
       },
       {

@@ -695,6 +695,17 @@
         "source": "figma"
       }
     },
+    "30": {
+      "$type": "dimension",
+      "$value": {
+        "value": 30,
+        "unit": "px"
+      },
+      "$extensions": {
+        "layer": "primitive",
+        "source": "figma"
+      }
+    },
     "32": {
       "$type": "dimension",
       "$value": {
@@ -710,6 +721,17 @@
       "$type": "dimension",
       "$value": {
         "value": 40,
+        "unit": "px"
+      },
+      "$extensions": {
+        "layer": "primitive",
+        "source": "figma"
+      }
+    },
+    "44": {
+      "$type": "dimension",
+      "$value": {
+        "value": 44,
         "unit": "px"
       },
       "$extensions": {
@@ -743,6 +765,17 @@
       "$type": "dimension",
       "$value": {
         "value": 64,
+        "unit": "px"
+      },
+      "$extensions": {
+        "layer": "primitive",
+        "source": "figma"
+      }
+    },
+    "180": {
+      "$type": "dimension",
+      "$value": {
+        "value": 180,
         "unit": "px"
       },
       "$extensions": {

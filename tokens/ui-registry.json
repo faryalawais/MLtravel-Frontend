@@ -1,14 +1,16 @@
 {
   "$metadata": {
     "version": "0.1.0",
-    "description": "UI registry — LP-001 Navbar slice (ui-registry-build 2026-07-01)",
+    "description": "UI registry — LP-001 Navbar + Hero slices (ui-registry-build 2026-07-01)",
     "pathGrammar": "<domain>.<segment>(.<segment>)+",
     "owner": "MLtravel FE",
     "gherkinAliases": {
       "screen.landing": "screen.landing.home",
       "screen.contact": "screen.contact.page",
       "screen.howItWorks": "screen.howItWorks.page",
-      "component.navbar": "component.navbar.root"
+      "component.navbar": "component.navbar.root",
+      "component.landing.hero": "component.landing.hero.root",
+      "component.landing.hero.cta": "component.landing.hero.cta"
     }
   },
   "screen": {
@@ -387,6 +389,272 @@
             "default"
           ],
           "$tokens": {}
+        }
+      }
+    },
+    "landing": {
+      "hero": {
+        "root": {
+          "$description": "Hero section desktop (Gherkin: component.landing.hero)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:6560",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "heroTop": {
+          "$description": "Hero top row — copy + product image",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5271",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock": {
+          "$description": "Hero text block",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "headingGroup": {
+          "$description": "Hero heading group",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:43",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "heading": {
+          "$description": "Hero headline",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:44",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "subheading": {
+          "$description": "Hero subcopy",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:45",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaGroup": {
+          "$description": "Hero CTA group",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:46",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaRow": {
+          "$description": "Hero CTA row",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:47",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "cta": {
+          "$description": "Book A Demo primary CTA (Gherkin: component.landing.hero.cta)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:48",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "ctaLabel": {
+          "$description": "Primary CTA label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:48;2780:1424",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaIcon": {
+          "$description": "Primary CTA icon",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:48;2780:1425",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaGraphic": {
+          "$description": "Primary CTA arrow",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:48;2780:1425;2780:1499",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "secondaryCta": {
+          "$description": "View Pricing secondary CTA",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:57",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "secondaryCtaLabel": {
+          "$description": "View Pricing label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:57;2780:1462",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "proofLine": {
+          "$description": "Agencies save average proof line",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5272;5160:64",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "productImage": {
+          "$description": "Hero product screenshot",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5290",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "bottomFrame": {
+          "$description": "Stats + logos container",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5164:5195",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "statsStrip": {
+          "$description": "Hero stats strip",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5292",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "stat1": {
+          "$description": "Stat item $1,200/mo",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5292;5160:5221",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "stat2": {
+          "$description": "Stat item 40%",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5292;5160:5229",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "stat3": {
+          "$description": "Stat item 6 Weeks",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5292;5160:5237",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "stat4": {
+          "$description": "Stat item 500+",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5292;5160:5245",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "logosStrip": {
+          "$description": "Partner logos strip",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6560;5160:5324",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "mobile": {
+          "root": {
+            "$description": "Hero mobile frame (Gherkin @393px)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:7080",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "banner": {
+            "$description": "Mobile HeroBanner",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:7081",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "cta": {
+            "$description": "Mobile primary CTA",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:7090",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          }
+        },
+        "motion": {
+          "root": {
+            "$description": "Hero motion prototype (Gherkin: motion 5164:10343)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:10343",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "cta": {
+            "$description": "Motion frame primary CTA",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10343;5307:6562",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          }
         }
       }
     }

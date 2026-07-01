@@ -156,7 +156,17 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - test:visual: not scaffolded yet
 - typecheck: passed (`npx tsc --noEmit`, `next build`)
 - token-lint: not scaffolded yet
-- Deviations from contract: `#pricing` anchor is empty stub until Hero/Pricing slice (GH#11); Product link uses `#product` pending section anchor
+- Deviations from contract: `#pricing` anchor is empty stub until Pricing slice (GH#11); Product link uses `#product` pending section anchor
+
+### FE notes — Hero GH#4
+<!-- Written by: fe-implement on 2026-07-01 -->
+- Components implemented: `HeroSection`, `HeroPrimaryCta`
+- ui-registry: 66 entries (navbar 38 + hero 28); `build:layout` updated
+- Hero contract appended to `features/LP-001/contract.md`
+- Product image: `public/images/hero-product.png` (Figma `I5164:6560;5160:5290`)
+- test:e2e: not scaffolded yet
+- typecheck + `next build`: passed
+- Deviations: mobile stats omit per-stat captions (2-line mobile Figma uses shorter stat blocks)
 
 ---
 
@@ -186,3 +196,5 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-01** — Navbar re-extract (small chunks): 3 slice-roots + 8 sub-chunks via REST; 11 cache files; all validate gates pass.
 - **2026-07-01** — `feat(LP-001-FE)` committed + pushed (`22a666d`) — GH#1 + GH#3 navbar slice.
 - **2026-07-01** — Hero `figma-extract:rest` started — slice-roots `5164:6560`, `5164:7080`, `5164:10343`; 237 checklist nodes; validate:figma-extract pass.
+- **2026-07-01** — `/ui-registry-build` Hero slice — 28 hero paths; registry total 66; `build:layout` + contract Hero § appended.
+- **2026-07-01** — `/fe-implement` GH#4 Hero — `HeroSection`, `HeroPrimaryCta`; `next build` passed.

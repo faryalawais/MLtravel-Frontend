@@ -22,6 +22,62 @@
   line-height: var(--typography-label-desktop-lg-line-height);
 }
 
+@utility text-display-desktop-lg {
+  font-family: var(--typography-display-desktop-lg-font-family);
+  font-size: var(--typography-display-desktop-lg-font-size);
+  font-weight: var(--typography-display-desktop-lg-font-weight);
+  line-height: var(--typography-display-desktop-lg-line-height);
+}
+
+@utility text-display-desktop-stat {
+  font-family: var(--typography-display-desktop-stat-font-family);
+  font-size: var(--typography-display-desktop-stat-font-size);
+  font-weight: var(--typography-display-desktop-stat-font-weight);
+  line-height: var(--typography-display-desktop-stat-line-height);
+}
+
+@utility text-display-mobile-lg {
+  font-family: var(--typography-display-mobile-lg-font-family);
+  font-size: var(--typography-display-mobile-lg-font-size);
+  font-weight: var(--typography-display-mobile-lg-font-weight);
+  line-height: var(--typography-display-mobile-lg-line-height);
+}
+
+@utility text-display-mobile-stat {
+  font-family: var(--typography-display-mobile-stat-font-family);
+  font-size: var(--typography-display-mobile-stat-font-size);
+  font-weight: var(--typography-display-mobile-stat-font-weight);
+  line-height: var(--typography-display-mobile-stat-line-height);
+}
+
+@utility text-body-desktop-md {
+  font-family: var(--typography-body-desktop-md-font-family);
+  font-size: var(--typography-body-desktop-md-font-size);
+  font-weight: var(--typography-body-desktop-md-font-weight);
+  line-height: var(--typography-body-desktop-md-line-height);
+}
+
+@utility text-body-desktop-xs {
+  font-family: var(--typography-body-desktop-xs-font-family);
+  font-size: var(--typography-body-desktop-xs-font-size);
+  font-weight: var(--typography-body-desktop-xs-font-weight);
+  line-height: var(--typography-body-desktop-xs-line-height);
+}
+
+@utility text-label-desktop-md-stat {
+  font-family: var(--typography-label-desktop-md-stat-font-family);
+  font-size: var(--typography-label-desktop-md-stat-font-size);
+  font-weight: var(--typography-label-desktop-md-stat-font-weight);
+  line-height: var(--typography-label-desktop-md-stat-line-height);
+}
+
+@utility text-label-desktop-nav-link {
+  font-family: var(--typography-label-desktop-nav-link-font-family);
+  font-size: var(--typography-label-desktop-nav-link-font-size);
+  font-weight: var(--typography-label-desktop-nav-link-font-weight);
+  line-height: var(--typography-label-desktop-nav-link-line-height);
+}
+
 body {
   background: var(--color-background-page);
   color: var(--color-text-primary);

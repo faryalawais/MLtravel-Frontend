@@ -16,6 +16,22 @@
       "note": "Instance IDs do not render via REST; exported from Icon/Button vector master."
     },
     {
+      "nodeId": "I5164:6560;5160:5272;5160:48;2780:1425;2780:1499",
+      "nodeName": "Hero primary CTA — Plane Arrow (white)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6560;5160:5272;5160:48;2780:1425;2780:1499&format=svg",
+      "localPath": "public/icons/icon-plane-arrow-white.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "2780:1507",
+      "nodeName": "Hero secondary CTA — Play-Navy icon",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=2780:1507&format=svg",
+      "localPath": "public/icons/icon-play-navy.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
       "nodeId": "5164:7034",
       "nodeName": "Mobile menu icon",
       "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=5164:7034&format=svg&svg_include_id=true",
@@ -29,6 +45,14 @@
       "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=5164:7036&format=svg&svg_include_id=true",
       "localPath": "public/icons/logo-maqsood-travel.svg",
       "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6560;5160:5290",
+      "nodeName": "Hero ProductImage frame",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6560;5160:5290&format=png&scale=2",
+      "localPath": "public/images/hero-product.png",
+      "type": "png",
       "dataSource": "static"
     }
   ]

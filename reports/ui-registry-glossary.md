@@ -59,6 +59,34 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.navbar.motion.ctaLabel` | Motion frame CTA label | `screen.landing.home` | `default` | `component-navbar-motion-ctaLabel` |
 | `component.navbar.motion.ctaIcon` | Motion frame CTA icon | `screen.landing.home` | `default` | `component-navbar-motion-ctaIcon` |
 | `component.navbar.motion.ctaGraphic` | Motion frame CTA graphic | `screen.landing.home` | `default` | `component-navbar-motion-ctaGraphic` |
+| `component.landing.hero.root` | Hero section desktop (Gherkin: component.landing.hero) | `screen.landing.home` | `default`, `hover` | `component-landing-hero-root` |
+| `component.landing.hero.heroTop` | Hero top row — copy + product image | `screen.landing.home` | `default` | `component-landing-hero-heroTop` |
+| `component.landing.hero.textBlock` | Hero text block | `screen.landing.home` | `default` | `component-landing-hero-textBlock` |
+| `component.landing.hero.headingGroup` | Hero heading group | `screen.landing.home` | `default` | `component-landing-hero-headingGroup` |
+| `component.landing.hero.heading` | Hero headline | `screen.landing.home` | `default` | `component-landing-hero-heading` |
+| `component.landing.hero.subheading` | Hero subcopy | `screen.landing.home` | `default` | `component-landing-hero-subheading` |
+| `component.landing.hero.ctaGroup` | Hero CTA group | `screen.landing.home` | `default` | `component-landing-hero-ctaGroup` |
+| `component.landing.hero.ctaRow` | Hero CTA row | `screen.landing.home` | `default` | `component-landing-hero-ctaRow` |
+| `component.landing.hero.cta` | Book A Demo primary CTA (Gherkin: component.landing.hero.cta) | `screen.landing.home` | `default`, `hover` | `component-landing-hero-cta` |
+| `component.landing.hero.ctaLabel` | Primary CTA label | `screen.landing.home` | `default` | `component-landing-hero-ctaLabel` |
+| `component.landing.hero.ctaIcon` | Primary CTA icon | `screen.landing.home` | `default` | `component-landing-hero-ctaIcon` |
+| `component.landing.hero.ctaGraphic` | Primary CTA arrow | `screen.landing.home` | `default` | `component-landing-hero-ctaGraphic` |
+| `component.landing.hero.secondaryCta` | View Pricing secondary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-hero-secondaryCta` |
+| `component.landing.hero.secondaryCtaLabel` | View Pricing label | `screen.landing.home` | `default` | `component-landing-hero-secondaryCtaLabel` |
+| `component.landing.hero.proofLine` | Agencies save average proof line | `screen.landing.home` | `default` | `component-landing-hero-proofLine` |
+| `component.landing.hero.productImage` | Hero product screenshot | `screen.landing.home` | `default` | `component-landing-hero-productImage` |
+| `component.landing.hero.bottomFrame` | Stats + logos container | `screen.landing.home` | `default` | `component-landing-hero-bottomFrame` |
+| `component.landing.hero.statsStrip` | Hero stats strip | `screen.landing.home` | `default` | `component-landing-hero-statsStrip` |
+| `component.landing.hero.stat1` | Stat item $1,200/mo | `screen.landing.home` | `default` | `component-landing-hero-stat1` |
+| `component.landing.hero.stat2` | Stat item 40% | `screen.landing.home` | `default` | `component-landing-hero-stat2` |
+| `component.landing.hero.stat3` | Stat item 6 Weeks | `screen.landing.home` | `default` | `component-landing-hero-stat3` |
+| `component.landing.hero.stat4` | Stat item 500+ | `screen.landing.home` | `default` | `component-landing-hero-stat4` |
+| `component.landing.hero.logosStrip` | Partner logos strip | `screen.landing.home` | `default` | `component-landing-hero-logosStrip` |
+| `component.landing.hero.mobile.root` | Hero mobile frame (Gherkin @393px) | `screen.landing.home` | `default` | `component-landing-hero-mobile-root` |
+| `component.landing.hero.mobile.banner` | Mobile HeroBanner | `screen.landing.home` | `default` | `component-landing-hero-mobile-banner` |
+| `component.landing.hero.mobile.cta` | Mobile primary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-hero-mobile-cta` |
+| `component.landing.hero.motion.root` | Hero motion prototype (Gherkin: motion 5164:10343) | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-root` |
+| `component.landing.hero.motion.cta` | Motion frame primary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-cta` |
 
 ---
 
