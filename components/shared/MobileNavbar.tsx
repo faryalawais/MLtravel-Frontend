@@ -43,27 +43,29 @@ export function MobileNavbar() {
   const panelId = useId();
   const panelRef = useRef<HTMLElement>(null);
 
-  const closeMenu = useCallback(() => setMenuOpen(false), []);
+  const closeMenu = useCallback(() => {
+    setMenuOpen(false);
+    setMenuVisible(false);
+  }, []);
 
   const toggleMenu = useCallback(() => {
     setMenuOpen((open) => {
-      if (open) return false;
+      if (open) {
+        setMenuVisible(false);
+        return false;
+      }
       setMenuMounted(true);
       return true;
     });
   }, []);
 
   useEffect(() => {
-    if (!menuMounted) return;
+    if (!menuMounted || !menuOpen) return;
 
-    if (menuOpen) {
-      const frame = requestAnimationFrame(() => {
-        requestAnimationFrame(() => setMenuVisible(true));
-      });
-      return () => cancelAnimationFrame(frame);
-    }
-
-    setMenuVisible(false);
+    const frame = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setMenuVisible(true));
+    });
+    return () => cancelAnimationFrame(frame);
   }, [menuMounted, menuOpen]);
 
   useEffect(() => {

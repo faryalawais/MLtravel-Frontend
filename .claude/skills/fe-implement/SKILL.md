@@ -5,7 +5,9 @@ description: >-
   frame data, @fe Gherkins, and the published OpenAPI spec from BE. Uses
   speckit internally — one task per @fe scenario, component by component.
   Figma is the visual reference; contract.md is the boundary; OpenAPI is the
-  data contract. Run only after BE ticket is be-implemented.
+  data contract. Run only after BE ticket is be-implemented. After each
+  vertical slice (GitHub issue), STOP for mandatory human review before
+  memory, commit, or the next slice.
 ---
 
 # fe-implement
@@ -314,7 +316,77 @@ npm run typecheck && npm run lint && npm run token-lint
 
 All three must pass.
 
-### Step 7 — Write to memory
+> **If Playwright is not yet scaffolded** (`test:e2e` / `test:visual` missing from
+> `package.json`): report it explicitly in the gate summary, run every other gate
+> that exists (`validate:*`, `ui-registry:validate`, `tokens:validate`, `build`,
+> `typecheck`), and **still proceed to Step 7 (human review)** — do not skip
+> review because BDD/visual is pending. Scaffold via `/bdd-scaffold` and
+> `/visual-regression` in a separate pass when the user asks.
+
+### Step 7 — Human slice review gate (MANDATORY — Day Shift)
+
+**This step blocks everything after it.** Do not write memory, sync Jira, commit,
+push, open a PR, or start the next GitHub issue until the user explicitly
+approves the current slice.
+
+After Step 6 automated gates pass (or are reported as partially scaffolded),
+**STOP implementing** and present a structured review card to the user:
+
+```markdown
+## Slice review — GH#<N> <slice name>
+
+**Implemented:** <component files + routes>
+**Figma refs:** `features/<id>/figma/reference-<section>.png` (nodes <ids>)
+**Check at:** 1440px desktop + 393px mobile (`npm run dev` → http://localhost:3000)
+
+### Automated gates
+| Gate | Result |
+|------|--------|
+| validate:figma-extract | pass / fail |
+| validate:contract | pass / fail |
+| test:e2e | pass / not scaffolded |
+| test:visual | pass / baseline pending / not scaffolded |
+| build + typecheck | pass / fail |
+
+### Known deviations (from contract / Figma)
+- <list each, or "none documented">
+
+---
+
+Please review this slice in the browser. Reply with:
+- **APPROVE** (or "LGTM", "looks good", "move on") — to proceed to the next slice, or
+- **Specific violations / improvements** — numbered list; I will fix them before re-asking.
+```
+
+**Wait for the user's reply.** Do not assume approval. Do not batch multiple
+slices without a review between each one.
+
+#### If the user reports violations or improvements
+
+1. **One fix cycle per user message** — address their list completely before
+   re-running gates and presenting the review card again.
+2. **Route fixes through the correct skill** (turn by turn, in pipeline order):
+   | Fix type | Skill to invoke |
+   |----------|-----------------|
+   | Stale or wrong Figma node data | `/figma-extract` or `npm run figma:refresh-node` |
+   | Missing / wrong tokens | `/design-tokens` |
+   | Registry path or test-id drift | `/ui-registry-build` → `/registry-validate` |
+   | Contract anatomy / §4 token wrong | `/design-contract` |
+   | Component layout / styling / responsiveness | stay in `/fe-implement` |
+   | BDD steps missing | `/bdd-scaffold` |
+   | Visual baselines | `/visual-regression` |
+3. After fixes: re-run **Step 6** automated gates, then present **Step 7** review
+   card again. Repeat until the user says **APPROVE**.
+4. **Never start the next GitHub issue** while the current slice is unapproved.
+
+#### If the user says APPROVE
+
+- Mark the slice approved in conversation (and optionally note in `memory.md`).
+- Tell the user what the **next slice** is (next GitHub issue) and which skill
+  to invoke first (`/figma-extract` for the new slice's nodes).
+- Do **not** auto-commit unless the user explicitly asks to commit and push.
+
+### Step 8 — Write to memory
 ```markdown
 ## Implementation Notes
 ### FE notes
@@ -325,15 +397,16 @@ All three must pass.
 - typecheck: passed
 - token-lint: passed
 - Deviations from contract: <none / list if any>
+- Human review: APPROVED on <date> (or: pending)
 ```
 
-### Step 8 — Run `jira-sync`
+### Step 9 — Run `jira-sync`
 Set FE ticket to `fe-implemented`.
 
-### Step 9 — Run `figma-comment`
+### Step 10 — Run `figma-comment`
 Post FE implementation complete notice to parent Jira ticket.
 
-### Step 10 — Commit, push branch, open PR
+### Step 11 — Commit, push branch, open PR
 ```bash
 # Stage all feature work
 git add app/ components/ features/<fe-jira-id>/ docs/ tokens/
@@ -376,7 +449,8 @@ EOF
 - Every `[component.*]` tag has a corresponding `data-testid`
 - `test:e2e` exits 0
 - `test:visual` exits 0
-- `typecheck`, `lint`, `token-lint` all pass
+- `typecheck`, `lint`, `token-lint` all pass (or reported not scaffolded)
+- Human slice review: user said **APPROVE** for this GitHub issue
 - No raw hex or px in `app/` or `components/`
 - All pages render correctly at 375px, 768px, and 1280px+ viewport widths
 - FE ticket `fe-implemented`
@@ -401,6 +475,9 @@ EOF
   any disagreement against Figma, then implement it once. Never re-implement a shared
   component that already exists. A shared component with the wrong token or a duplicate
   implementation breaks every feature that uses it.
+- **Human slice review is mandatory after every GitHub issue / vertical slice.**
+  Never skip Step 7. Never start the next slice until the user says APPROVE.
+  Fix cycles use the correct upstream skill in pipeline order, one turn at a time.
 - speckit is used internally — do not call speckit skills from outside this skill.
 - **No code before the cache is read. Every component's exact values come from
   `features/<fe-jira-id>/figma/nodes/<nodeId>.json` (the cache `figma-extract`

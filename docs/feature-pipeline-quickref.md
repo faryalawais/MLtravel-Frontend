@@ -7,7 +7,7 @@
 > one feature, one scenario, one component, one endpoint. Skills warn (never silently
 > degrade) when scope is too large and ask whether to continue or start a fresh chat.
 >
-> **Day Shift (you must be present):** `/feature-brief`, `/grill-me` (×2), `/prd-author`, `/prd-review`, `/ticket-generate`, `/to-issues`, `/scenario-review`, `/gherkin-validate` sign-off, gate reviews, final visual sign-off, `status: approved`.
+> **Day Shift (you must be present):** `/feature-brief`, `/grill-me` (×2), `/prd-author`, `/prd-review`, `/ticket-generate`, `/to-issues`, `/scenario-review`, `/gherkin-validate` sign-off, gate reviews, **per-slice human review inside `/fe-implement` (Step 7)**, final visual sign-off, `status: approved`.
 > **Night Shift (agent runs AFK):** `/prd-update`, `/openapi-author`, `/business-logic-author`, `/orm-schema-author`, `/be-implement`, `/figma-extract`, `/design-tokens`, `/ui-registry-build`, `/registry-validate`, `/design-contract`, `/fe-implement`.
 > Invest in the day shift. Night shift quality is determined before it starts.
 
@@ -65,10 +65,13 @@
 | 14 | `/ui-registry-build` | MLtravel-Frontend | Registers `screen.*` / `component.*` paths |
 | 15 | `/registry-validate` | MLtravel-Frontend | Confirms all paths are valid |
 | 16 | `/design-contract` | MLtravel-Frontend | `features/<fe-id>/contract.md` — FE Contract |
-| 17 | `/fe-implement` | MLtravel-Frontend | Pages + components in `app/` · `components/` |
+| 17 | `/fe-implement` | MLtravel-Frontend | Pages + components in `app/` · `components/` · **stops at Step 7 for human APPROVE per slice** |
 
 > **Gate:** `npm run gate` must pass (typecheck + token-lint + ESLint + BDD + visual).
-> Status → `fe-implemented`.
+> **Per-slice gate (inside fe-implement):** After automated checks, the agent presents a
+> review card and waits for **APPROVE** before memory / commit / next GitHub issue.
+> Violations → fix via the correct upstream skill (`/figma-extract`, `/design-contract`, etc.),
+> re-run gates, review again. Status → `fe-implemented` only after all slices approved.
 
 ---
 

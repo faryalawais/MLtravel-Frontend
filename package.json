@@ -26,7 +26,11 @@
     "tokens:build": "node tokens/sd.config.mjs",
     "tokens:validate-source": "node scripts/validate-token-source.mjs",
     "tokens:dtcg-lint": "node scripts/validate-tokens-dtcg.mjs",
-    "tokens:validate": "node scripts/validate-tokens.mjs"
+    "tokens:validate": "node scripts/validate-tokens.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test --project=e2e",
+    "test:visual": "playwright test --project=visual",
+    "test:visual:update": "playwright test --project=visual --update-snapshots"
   },
   "dependencies": {
     "next": "16.2.9",
@@ -34,6 +38,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
