@@ -1,3 +1,7 @@
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5 3L16 10L5 17V3Z" fill="#003D82" stroke="#003D82" stroke-linejoin="round"/>
+<g id="Icon=Play-Navy">
+<g id="graphic">
+<path id="Vector" d="M5 3L16 10L5 17V3Z" fill="#003D82" stroke="#003D82" stroke-linejoin="round"/>
+</g>
+</g>
 </svg>

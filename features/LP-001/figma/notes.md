@@ -1,12 +1,30 @@
-# Figma extract notes — LP-001 (Navbar slice #3)
+# Figma extract notes — LP-001
 
-**Frame:** Navbar desktop `5164:6559` · mobile `5164:7031` · animation `5164:10334`  
 **File:** `h6BqI1ZRMSJxR7jESNF0Ep` — [ML Travel Project (faryal-updated)](https://www.figma.com/design/h6BqI1ZRMSJxR7jESNF0Ep/ML-Travel-Project--faryal-updated-?node-id=5164-6346&p=f&m=dev)  
 **Extracted:** 2026-07-01 via REST (`figma:extract:rest` + `build:spec-from-cache`) · `figmaLastModified` 2026-07-01T07:26:09Z
 
-## Scope
+## Slices extracted
 
-This extract covers **GitHub issue #3 — Navbar** only (first FE tracer bullet). Remaining landing sections (Hero #4 … Footer #12) need additional `slice-roots.json` entries and a second `figma:extract:rest` pass per section.
+| GH# | Section | Desktop | Mobile | Motion |
+|-----|---------|---------|--------|--------|
+| #3 | Navbar | `5164:6559` | `5164:7031` | `5164:10334` |
+| #4 | Hero | `5164:6560` | `5164:7080` | `5164:10343` |
+| #5 | Problem | `5164:6561` | `5164:6571` | `5164:10344` |
+
+Reference PNGs: `reference-problemsection.png`, `reference-problemmobile.png`, `reference-problem-animation.png`.
+
+## Problem slice (#5) — 2026-07-01
+
+- **Desktop (`5164:6561` — ProblemSection):** SectionHeader with pill “The Problem”, subtitle, 3× ProblemCard grid, ProblemCTA (“The model is broken on purpose. / We built the alternative.”), gradient-bar footer accent.
+- **Mobile (`5164:6571` — ProblemPanelsSection):** Stacked cards + same header/CTA pattern; narrower layout.
+- **Motion (`5164:10344` — ProblemSection-animation):** Desktop prototype for card/hover motion — pair with `tokens/MOTION-SPEC.md`.
+- **Icons:** Each ProblemCard uses `Icon/ProblemCard` VECTOR graphics (`3091:14`, `3091:20`, `3091:27` masters). Export during `ui-registry-build` / implementation if not yet in `asset-manifest.json`.
+
+---
+
+## Navbar slice (#3)
+
+**Frame:** Navbar desktop `5164:6559` · mobile `5164:7031` · animation `5164:10334`
 
 ## Figma file key
 

@@ -31,6 +31,21 @@
       "nodeId": "5164:10343",
       "name": "hero-animation",
       "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6561",
+      "name": "ProblemSection",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6571",
+      "name": "ProblemMobile",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:10344",
+      "name": "problem-animation",
+      "source": "explicit"
     }
   ]
 }
