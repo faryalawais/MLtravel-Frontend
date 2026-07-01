@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "version": "0.1.0",
-    "description": "UI registry — LP-001 Navbar + Hero slices (ui-registry-build 2026-07-01)",
+    "description": "UI registry — LP-001 Navbar + Hero + Problem slices (ui-registry-build 2026-07-01)",
     "pathGrammar": "<domain>.<segment>(.<segment>)+",
     "owner": "MLtravel FE",
     "gherkinAliases": {
@@ -10,7 +10,8 @@
       "screen.howItWorks": "screen.howItWorks.page",
       "component.navbar": "component.navbar.root",
       "component.landing.hero": "component.landing.hero.root",
-      "component.landing.hero.cta": "component.landing.hero.cta"
+      "component.landing.hero.cta": "component.landing.hero.cta",
+      "component.landing.problem": "component.landing.problem.root"
     }
   },
   "screen": {
@@ -652,6 +653,662 @@
             "$states": [
               "default",
               "hover"
+            ],
+            "$tokens": {}
+          }
+        }
+      },
+      "problem": {
+        "root": {
+          "$description": "Problem section desktop (Gherkin: component.landing.problem)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:6561",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "outerFrame": {
+          "$description": "Problem outer layout frame",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;5151:12615",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "innerFrame": {
+          "$description": "Problem inner layout frame",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;5151:12530",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "headerWrap": {
+          "$description": "Problem header wrap",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionHeader": {
+          "$description": "SectionHeader/Problem",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:15",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionPill": {
+          "$description": "The Problem section pill",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:15;3131:1205",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionPillLabel": {
+          "$description": "Pill label The Problem",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:15;3131:1205;3131:1152",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "headingBlock": {
+          "$description": "Section heading block",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:15;3128:17",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionHeading": {
+          "$description": "Section H2 headline",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:15;3128:18",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionSubtitle": {
+          "$description": "Section subtitle copy",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:15;3128:19",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "cardsGrid": {
+          "$description": "Problem cards grid",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:24",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card1": {
+          "$description": "Problem card 1 — multi-platform",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:25",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "card1Icon": {
+          "$description": "Card 1 icon frame",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:25;3092:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card1Graphic": {
+          "$description": "Card 1 icon graphic",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:25;3092:14;3091:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card1TextBlock": {
+          "$description": "Card 1 text block",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:25;3092:20",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card1Heading": {
+          "$description": "Card 1 heading",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:25;3092:21",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card1AccentBar": {
+          "$description": "Card 1 accent bar",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:25;3092:22",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card1Body": {
+          "$description": "Card 1 body copy",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:25;3092:23",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card2": {
+          "$description": "Problem card 2 — 3rd party tools",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:41",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "card2Icon": {
+          "$description": "Card 2 icon frame",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:41;3092:25",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card2Graphic": {
+          "$description": "Card 2 icon graphic",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:41;3092:25;3091:20",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card2TextBlock": {
+          "$description": "Card 2 text block",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:41;3092:32",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card2Heading": {
+          "$description": "Card 2 heading",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:41;3092:33",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card2AccentBar": {
+          "$description": "Card 2 accent bar",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:41;3092:34",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card2Body": {
+          "$description": "Card 2 body copy",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:41;3092:35",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card3": {
+          "$description": "Problem card 3 — GDS disputes",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:59",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "card3Icon": {
+          "$description": "Card 3 icon frame",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:59;3092:37",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card3Graphic": {
+          "$description": "Card 3 icon graphic",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:59;3092:37;3091:27",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card3TextBlock": {
+          "$description": "Card 3 text block",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:59;3092:41",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card3Heading": {
+          "$description": "Card 3 heading",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:59;3092:42",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card3AccentBar": {
+          "$description": "Card 3 accent bar",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:59;3092:43",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card3Body": {
+          "$description": "Card 3 body copy",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:59;3092:44",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "cta": {
+          "$description": "ProblemCTA block",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:71",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaText": {
+          "$description": "CTA text cluster",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;5151:12347",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaLine1": {
+          "$description": "CTA line — The model is broken on purpose.",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;5151:12348",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaLine2": {
+          "$description": "CTA line — We built the alternative.",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;5151:12349",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "gradientBar": {
+          "$description": "Bottom gradient accent bar",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6561;3129:75",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "mobile": {
+          "root": {
+            "$description": "Problem mobile section (Gherkin @393px)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6571",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "headerContainer": {
+            "$description": "Mobile header container",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6575",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionPill": {
+            "$description": "Mobile section pill",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6576",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionPillLabel": {
+            "$description": "Mobile pill label The Problem",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6578",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "headingBlock": {
+            "$description": "Mobile heading block",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6579",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionHeading": {
+            "$description": "Mobile section H2",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6580",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionSubtitle": {
+            "$description": "Mobile section subtitle",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6582",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "cardsContainer": {
+            "$description": "Mobile cards stack container",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6584",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card1": {
+            "$description": "Mobile problem card 1",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6585",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "card1Icon": {
+            "$description": "Mobile card 1 icon",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6586",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card1Graphic": {
+            "$description": "Mobile card 1 graphic",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:6586;2317:119",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card1Heading": {
+            "$description": "Mobile card 1 heading",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6588",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card1Body": {
+            "$description": "Mobile card 1 body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6590",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card2": {
+            "$description": "Mobile problem card 2",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6591",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "card2Icon": {
+            "$description": "Mobile card 2 icon",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6592",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card2Graphic": {
+            "$description": "Mobile card 2 graphic",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:6592;2317:125",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card2Heading": {
+            "$description": "Mobile card 2 heading",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6594",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card2Body": {
+            "$description": "Mobile card 2 body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6596",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card3": {
+            "$description": "Mobile problem card 3",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6597",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "card3Icon": {
+            "$description": "Mobile card 3 icon",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6598",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card3Graphic": {
+            "$description": "Mobile card 3 graphic",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:6598;2317:132",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card3Heading": {
+            "$description": "Mobile card 3 heading",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6600",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card3AccentBar": {
+            "$description": "Mobile card 3 accent bar",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6601",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card3Body": {
+            "$description": "Mobile card 3 body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6602",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "ctaLine1": {
+            "$description": "Mobile CTA line 1",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6606",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "ctaLine2": {
+            "$description": "Mobile CTA line 2",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6607",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          }
+        },
+        "motion": {
+          "root": {
+            "$description": "Problem motion prototype (Gherkin: 5164:10344)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:10344",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "headerWrap": {
+            "$description": "Motion header wrap",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10344;5145:4201",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionHeader": {
+            "$description": "Motion section header",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10344;5145:4202",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "card1": {
+            "$description": "Motion card 1",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10344;5145:4205",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "card2": {
+            "$description": "Motion card 2",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10344;5145:4206",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "card3": {
+            "$description": "Motion card 3",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10344;5145:4207",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "cta": {
+            "$description": "Motion ProblemCTA",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10344;5145:4208",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "gradientBar": {
+            "$description": "Motion gradient bar",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10344;5145:4212",
+            "$states": [
+              "default"
             ],
             "$tokens": {}
           }

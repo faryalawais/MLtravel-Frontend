@@ -2,54 +2,14 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import {
+  DESKTOP_STATS,
+  LOGO_PARTNERS,
+  MOBILE_STATS,
+} from '@/constants/landing.constants';
 import { ids } from '@/tokens/build/test-ids';
+import type { HeroOptionalClassNameProps } from '@/types/landing.types';
 import { HeroPrimaryCta } from './HeroPrimaryCta';
-
-const DESKTOP_STATS = [
-  {
-    testId: ids.component.landing.hero.stat1,
-    value: '$1,200/mo',
-    label: 'SAVED IN FEES',
-    caption: 'Multiple Clients',
-  },
-  {
-    testId: ids.component.landing.hero.stat2,
-    value: '40%',
-    label: 'FASTER PER BOOKING',
-    caption: 'Post-migration measure',
-  },
-  {
-    testId: ids.component.landing.hero.stat3,
-    value: '6 Weeks',
-    label: 'TO GO LIVE',
-    caption: 'Dedicated Onboarding',
-  },
-  {
-    testId: ids.component.landing.hero.stat4,
-    value: '500+',
-    label: 'AIRLINES CONNECTED',
-    caption: 'Global inventory',
-  },
-] as const;
-
-const MOBILE_STATS = [
-  { testId: ids.component.landing.hero.stat1, value: '$3,000/mo', label: 'SAVED IN FEES' },
-  { testId: ids.component.landing.hero.stat2, value: '40%', label: 'FASTER PER BOOKING' },
-  { testId: ids.component.landing.hero.stat3, value: '6 Weeks', label: 'TO GO LIVE' },
-  { testId: ids.component.landing.hero.stat4, value: '500+', label: 'AIRLINES CONNECTED' },
-] as const;
-
-const LOGO_PARTNERS = [
-  'Sabre',
-  'Amadeus',
-  'Travelport',
-  'IATA NDC',
-  'Turkish Airlines',
-  'Emirates',
-  'British Airways',
-  'Qatar Airways',
-  'Etihad',
-] as const;
 
 function HeroHeadingDesktop() {
   return (
@@ -108,7 +68,7 @@ function HeroSecondaryCta() {
   );
 }
 
-function HeroProofLine({ className = '' }: { className?: string }) {
+function HeroProofLine({ className = '' }: HeroOptionalClassNameProps) {
   return (
     <p
       data-testid={ids.component.landing.hero.proofLine}
@@ -120,7 +80,7 @@ function HeroProofLine({ className = '' }: { className?: string }) {
   );
 }
 
-function HeroProductImage({ className = '' }: { className?: string }) {
+function HeroProductImage({ className = '' }: HeroOptionalClassNameProps) {
   return (
     <div
       data-testid={ids.component.landing.hero.productImage}

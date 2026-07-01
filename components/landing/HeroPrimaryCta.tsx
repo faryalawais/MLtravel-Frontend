@@ -3,15 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-
-type HeroPrimaryCtaProps = {
-  testId: string;
-  labelTestId: string;
-  iconTestId: string;
-  graphicTestId: string;
-  href: string;
-  className?: string;
-};
+import type { HeroPrimaryCtaProps } from '@/types/landing.types';
 
 export function HeroPrimaryCta({
   testId,

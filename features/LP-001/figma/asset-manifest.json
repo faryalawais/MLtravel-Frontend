@@ -54,6 +54,30 @@
       "localPath": "public/images/hero-product.png",
       "type": "png",
       "dataSource": "static"
+    },
+    {
+      "nodeId": "3091:14",
+      "nodeName": "Problem card icon 1 — multi-platform",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=3091:14&format=svg",
+      "localPath": "public/icons/icon-problem-card-1.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "3091:20",
+      "nodeName": "Problem card icon 2 — 3rd party tools",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=3091:20&format=svg",
+      "localPath": "public/icons/icon-problem-card-2.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "3091:27",
+      "nodeName": "Problem card icon 3 — GDS disputes",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=3091:27&format=svg",
+      "localPath": "public/icons/icon-problem-card-3.svg",
+      "type": "svg",
+      "dataSource": "static"
     }
   ]
 }

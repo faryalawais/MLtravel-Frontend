@@ -30,4 +30,24 @@ test.describe('LP-001 visual regression', () => {
       { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
     );
   });
+
+  test('problem desktop 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.problem.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.problem.root)).toHaveScreenshot(
+      'problem-desktop.png',
+      { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
+    );
+  });
+
+  test('problem mobile 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 1400 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.problem.mobile.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.problem.mobile.root)).toHaveScreenshot(
+      'problem-mobile.png',
+      { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
+    );
+  });
 });

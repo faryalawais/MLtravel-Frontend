@@ -18,7 +18,7 @@ Reference PNGs: `reference-problemsection.png`, `reference-problemmobile.png`, `
 - **Desktop (`5164:6561` — ProblemSection):** SectionHeader with pill “The Problem”, subtitle, 3× ProblemCard grid, ProblemCTA (“The model is broken on purpose. / We built the alternative.”), gradient-bar footer accent.
 - **Mobile (`5164:6571` — ProblemPanelsSection):** Stacked cards + same header/CTA pattern; narrower layout.
 - **Motion (`5164:10344` — ProblemSection-animation):** Desktop prototype for card/hover motion — pair with `tokens/MOTION-SPEC.md`.
-- **Icons:** Each ProblemCard uses `Icon/ProblemCard` VECTOR graphics (`3091:14`, `3091:20`, `3091:27` masters). Export during `ui-registry-build` / implementation if not yet in `asset-manifest.json`.
+- **Icons:** Each ProblemCard uses `Icon/ProblemCard` VECTOR graphics — exported to `public/icons/icon-problem-card-{1,2,3}.svg` (masters `3091:14`, `3091:20`, `3091:27`).
 
 ---
 

@@ -87,6 +87,77 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.landing.hero.mobile.cta` | Mobile primary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-hero-mobile-cta` |
 | `component.landing.hero.motion.root` | Hero motion prototype (Gherkin: motion 5164:10343) | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-root` |
 | `component.landing.hero.motion.cta` | Motion frame primary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-cta` |
+| `component.landing.problem.root` | Problem section desktop (Gherkin: component.landing.problem) | `screen.landing.home` | `default`, `hover` | `component-landing-problem-root` |
+| `component.landing.problem.outerFrame` | Problem outer layout frame | `screen.landing.home` | `default` | `component-landing-problem-outerFrame` |
+| `component.landing.problem.innerFrame` | Problem inner layout frame | `screen.landing.home` | `default` | `component-landing-problem-innerFrame` |
+| `component.landing.problem.headerWrap` | Problem header wrap | `screen.landing.home` | `default` | `component-landing-problem-headerWrap` |
+| `component.landing.problem.sectionHeader` | SectionHeader/Problem | `screen.landing.home` | `default` | `component-landing-problem-sectionHeader` |
+| `component.landing.problem.sectionPill` | The Problem section pill | `screen.landing.home` | `default` | `component-landing-problem-sectionPill` |
+| `component.landing.problem.sectionPillLabel` | Pill label The Problem | `screen.landing.home` | `default` | `component-landing-problem-sectionPillLabel` |
+| `component.landing.problem.headingBlock` | Section heading block | `screen.landing.home` | `default` | `component-landing-problem-headingBlock` |
+| `component.landing.problem.sectionHeading` | Section H2 headline | `screen.landing.home` | `default` | `component-landing-problem-sectionHeading` |
+| `component.landing.problem.sectionSubtitle` | Section subtitle copy | `screen.landing.home` | `default` | `component-landing-problem-sectionSubtitle` |
+| `component.landing.problem.cardsGrid` | Problem cards grid | `screen.landing.home` | `default` | `component-landing-problem-cardsGrid` |
+| `component.landing.problem.card1` | Problem card 1 — multi-platform | `screen.landing.home` | `default`, `hover` | `component-landing-problem-card1` |
+| `component.landing.problem.card1Icon` | Card 1 icon frame | `screen.landing.home` | `default` | `component-landing-problem-card1Icon` |
+| `component.landing.problem.card1Graphic` | Card 1 icon graphic | `screen.landing.home` | `default` | `component-landing-problem-card1Graphic` |
+| `component.landing.problem.card1TextBlock` | Card 1 text block | `screen.landing.home` | `default` | `component-landing-problem-card1TextBlock` |
+| `component.landing.problem.card1Heading` | Card 1 heading | `screen.landing.home` | `default` | `component-landing-problem-card1Heading` |
+| `component.landing.problem.card1AccentBar` | Card 1 accent bar | `screen.landing.home` | `default` | `component-landing-problem-card1AccentBar` |
+| `component.landing.problem.card1Body` | Card 1 body copy | `screen.landing.home` | `default` | `component-landing-problem-card1Body` |
+| `component.landing.problem.card2` | Problem card 2 — 3rd party tools | `screen.landing.home` | `default`, `hover` | `component-landing-problem-card2` |
+| `component.landing.problem.card2Icon` | Card 2 icon frame | `screen.landing.home` | `default` | `component-landing-problem-card2Icon` |
+| `component.landing.problem.card2Graphic` | Card 2 icon graphic | `screen.landing.home` | `default` | `component-landing-problem-card2Graphic` |
+| `component.landing.problem.card2TextBlock` | Card 2 text block | `screen.landing.home` | `default` | `component-landing-problem-card2TextBlock` |
+| `component.landing.problem.card2Heading` | Card 2 heading | `screen.landing.home` | `default` | `component-landing-problem-card2Heading` |
+| `component.landing.problem.card2AccentBar` | Card 2 accent bar | `screen.landing.home` | `default` | `component-landing-problem-card2AccentBar` |
+| `component.landing.problem.card2Body` | Card 2 body copy | `screen.landing.home` | `default` | `component-landing-problem-card2Body` |
+| `component.landing.problem.card3` | Problem card 3 — GDS disputes | `screen.landing.home` | `default`, `hover` | `component-landing-problem-card3` |
+| `component.landing.problem.card3Icon` | Card 3 icon frame | `screen.landing.home` | `default` | `component-landing-problem-card3Icon` |
+| `component.landing.problem.card3Graphic` | Card 3 icon graphic | `screen.landing.home` | `default` | `component-landing-problem-card3Graphic` |
+| `component.landing.problem.card3TextBlock` | Card 3 text block | `screen.landing.home` | `default` | `component-landing-problem-card3TextBlock` |
+| `component.landing.problem.card3Heading` | Card 3 heading | `screen.landing.home` | `default` | `component-landing-problem-card3Heading` |
+| `component.landing.problem.card3AccentBar` | Card 3 accent bar | `screen.landing.home` | `default` | `component-landing-problem-card3AccentBar` |
+| `component.landing.problem.card3Body` | Card 3 body copy | `screen.landing.home` | `default` | `component-landing-problem-card3Body` |
+| `component.landing.problem.cta` | ProblemCTA block | `screen.landing.home` | `default` | `component-landing-problem-cta` |
+| `component.landing.problem.ctaText` | CTA text cluster | `screen.landing.home` | `default` | `component-landing-problem-ctaText` |
+| `component.landing.problem.ctaLine1` | CTA line — The model is broken on purpose. | `screen.landing.home` | `default` | `component-landing-problem-ctaLine1` |
+| `component.landing.problem.ctaLine2` | CTA line — We built the alternative. | `screen.landing.home` | `default` | `component-landing-problem-ctaLine2` |
+| `component.landing.problem.gradientBar` | Bottom gradient accent bar | `screen.landing.home` | `default` | `component-landing-problem-gradientBar` |
+| `component.landing.problem.mobile.root` | Problem mobile section (Gherkin @393px) | `screen.landing.home` | `default` | `component-landing-problem-mobile-root` |
+| `component.landing.problem.mobile.headerContainer` | Mobile header container | `screen.landing.home` | `default` | `component-landing-problem-mobile-headerContainer` |
+| `component.landing.problem.mobile.sectionPill` | Mobile section pill | `screen.landing.home` | `default` | `component-landing-problem-mobile-sectionPill` |
+| `component.landing.problem.mobile.sectionPillLabel` | Mobile pill label The Problem | `screen.landing.home` | `default` | `component-landing-problem-mobile-sectionPillLabel` |
+| `component.landing.problem.mobile.headingBlock` | Mobile heading block | `screen.landing.home` | `default` | `component-landing-problem-mobile-headingBlock` |
+| `component.landing.problem.mobile.sectionHeading` | Mobile section H2 | `screen.landing.home` | `default` | `component-landing-problem-mobile-sectionHeading` |
+| `component.landing.problem.mobile.sectionSubtitle` | Mobile section subtitle | `screen.landing.home` | `default` | `component-landing-problem-mobile-sectionSubtitle` |
+| `component.landing.problem.mobile.cardsContainer` | Mobile cards stack container | `screen.landing.home` | `default` | `component-landing-problem-mobile-cardsContainer` |
+| `component.landing.problem.mobile.card1` | Mobile problem card 1 | `screen.landing.home` | `default`, `hover` | `component-landing-problem-mobile-card1` |
+| `component.landing.problem.mobile.card1Icon` | Mobile card 1 icon | `screen.landing.home` | `default` | `component-landing-problem-mobile-card1Icon` |
+| `component.landing.problem.mobile.card1Graphic` | Mobile card 1 graphic | `screen.landing.home` | `default` | `component-landing-problem-mobile-card1Graphic` |
+| `component.landing.problem.mobile.card1Heading` | Mobile card 1 heading | `screen.landing.home` | `default` | `component-landing-problem-mobile-card1Heading` |
+| `component.landing.problem.mobile.card1Body` | Mobile card 1 body | `screen.landing.home` | `default` | `component-landing-problem-mobile-card1Body` |
+| `component.landing.problem.mobile.card2` | Mobile problem card 2 | `screen.landing.home` | `default`, `hover` | `component-landing-problem-mobile-card2` |
+| `component.landing.problem.mobile.card2Icon` | Mobile card 2 icon | `screen.landing.home` | `default` | `component-landing-problem-mobile-card2Icon` |
+| `component.landing.problem.mobile.card2Graphic` | Mobile card 2 graphic | `screen.landing.home` | `default` | `component-landing-problem-mobile-card2Graphic` |
+| `component.landing.problem.mobile.card2Heading` | Mobile card 2 heading | `screen.landing.home` | `default` | `component-landing-problem-mobile-card2Heading` |
+| `component.landing.problem.mobile.card2Body` | Mobile card 2 body | `screen.landing.home` | `default` | `component-landing-problem-mobile-card2Body` |
+| `component.landing.problem.mobile.card3` | Mobile problem card 3 | `screen.landing.home` | `default`, `hover` | `component-landing-problem-mobile-card3` |
+| `component.landing.problem.mobile.card3Icon` | Mobile card 3 icon | `screen.landing.home` | `default` | `component-landing-problem-mobile-card3Icon` |
+| `component.landing.problem.mobile.card3Graphic` | Mobile card 3 graphic | `screen.landing.home` | `default` | `component-landing-problem-mobile-card3Graphic` |
+| `component.landing.problem.mobile.card3Heading` | Mobile card 3 heading | `screen.landing.home` | `default` | `component-landing-problem-mobile-card3Heading` |
+| `component.landing.problem.mobile.card3AccentBar` | Mobile card 3 accent bar | `screen.landing.home` | `default` | `component-landing-problem-mobile-card3AccentBar` |
+| `component.landing.problem.mobile.card3Body` | Mobile card 3 body | `screen.landing.home` | `default` | `component-landing-problem-mobile-card3Body` |
+| `component.landing.problem.mobile.ctaLine1` | Mobile CTA line 1 | `screen.landing.home` | `default` | `component-landing-problem-mobile-ctaLine1` |
+| `component.landing.problem.mobile.ctaLine2` | Mobile CTA line 2 | `screen.landing.home` | `default` | `component-landing-problem-mobile-ctaLine2` |
+| `component.landing.problem.motion.root` | Problem motion prototype (Gherkin: 5164:10344) | `screen.landing.home` | `default`, `hover` | `component-landing-problem-motion-root` |
+| `component.landing.problem.motion.headerWrap` | Motion header wrap | `screen.landing.home` | `default` | `component-landing-problem-motion-headerWrap` |
+| `component.landing.problem.motion.sectionHeader` | Motion section header | `screen.landing.home` | `default` | `component-landing-problem-motion-sectionHeader` |
+| `component.landing.problem.motion.card1` | Motion card 1 | `screen.landing.home` | `default`, `hover` | `component-landing-problem-motion-card1` |
+| `component.landing.problem.motion.card2` | Motion card 2 | `screen.landing.home` | `default`, `hover` | `component-landing-problem-motion-card2` |
+| `component.landing.problem.motion.card3` | Motion card 3 | `screen.landing.home` | `default`, `hover` | `component-landing-problem-motion-card3` |
+| `component.landing.problem.motion.cta` | Motion ProblemCTA | `screen.landing.home` | `default` | `component-landing-problem-motion-cta` |
+| `component.landing.problem.motion.gradientBar` | Motion gradient bar | `screen.landing.home` | `default` | `component-landing-problem-motion-gradientBar` |
 
 ---
 

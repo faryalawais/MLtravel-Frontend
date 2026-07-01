@@ -135,14 +135,24 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 
 **Token enrich:** `ui-registry:enrich-tokens` ran — 0 enriched (PAT needs `file_variables:read` for boundVariables → semantic mapping). Manual `$tokens` in design-contract until scope added.
 
+### Components catalogued (Problem slice #5 — 71 entries)
+- `component.landing.problem.root` — desktop `5164:6561` (Gherkin: `component.landing.problem`)
+- `component.landing.problem.*` — header, 3× cards (icon/graphic/heading/body), CTA, gradient bar (37 desktop entries)
+- `component.landing.problem.mobile.*` — mobile stack `5164:6571` (22 entries)
+- `component.landing.problem.motion.*` — animation reference `5164:10344` (8 entries)
+
+**Registry total:** 137 components (navbar 38 + hero 28 + problem 71) · `layout.json` 15 leaf slugs
+
+<!-- registry-validate: passed 2026-07-01 (137 components, 3 screens; Checks 1–3 pass; Check 4 deferred — static v1, no $dataSource) -->
+
 ---
 
 ## Design contract
 <!-- Written by: design-contract on 2026-07-01 -->
 <!-- validate:figma-coverage: passed · validate:contract: passed -->
-**Scope:** Navbar slice (#3) only — `features/LP-001/contract.md`  
+**Scope:** Navbar (#3) + Hero (#4) + Problem (#5) — `features/LP-001/contract.md`  
 **Branch:** `feature/LP-001-FE`  
-**Next:** `/fe-implement` — GH#1 app shell + GH#3 Navbar
+**Next:** `/figma-extract` — GH#6 Comparison (1st) nodes `5164:6566` / `5164:6609` / `5164:10411`
 
 ---
 
@@ -167,6 +177,20 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - test:e2e: not scaffolded yet
 - typecheck + `next build`: passed
 - Deviations: mobile stats omit per-stat captions (2-line mobile Figma uses shorter stat blocks)
+
+### FE notes — Problem GH#5
+<!-- Written by: fe-implement on 2026-07-01 -->
+<!-- Human review: APPROVED 2026-07-01 -->
+- Components implemented: `ProblemSection` (desktop + mobile); wired on `app/page.tsx` with `id="product"`
+- ui-registry: 137 entries (+71 problem); `build:layout` updated
+- Problem contract appended to `features/LP-001/contract.md`
+- Card icons: `public/icons/icon-problem-card-{1,2,3}.svg`
+- Shadow token fix: `tokens/sd.config.mjs` — `--shadow-card` now valid rgba
+- test:e2e: passed (13 scenarios incl. GH#5 smoke + product nav scroll)
+- test:visual: problem desktop/mobile baselines added
+- typecheck + `next build`: passed
+- Motion: card cascade on grid mouse-enter (120ms step delay); one-way per MOTION-SPEC; manual per-card CSS hover after cascade
+- Deviations: section heading uses h1 vs contract h2; card titles h4 vs Figma 24px; CTA not in cascade sequence (Figma has 5 motion states)
 
 ---
 
@@ -198,3 +222,7 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-01** — Hero `figma-extract:rest` started — slice-roots `5164:6560`, `5164:7080`, `5164:10343`; 237 checklist nodes; validate:figma-extract pass.
 - **2026-07-01** — `/ui-registry-build` Hero slice — 28 hero paths; registry total 66; `build:layout` + contract Hero § appended.
 - **2026-07-01** — `/fe-implement` GH#4 Hero — `HeroSection`, `HeroPrimaryCta`; `next build` passed.
+- **2026-07-01** — Problem `figma-extract:rest` — nodes `5164:6561`, `5164:6571`, `5164:10344`; validate:figma-extract pass.
+- **2026-07-01** — `/ui-registry-build` Problem slice — 71 problem paths; registry total 137; `build:layout` + `validate:layout` pass.
+- **2026-07-01** — `/design-contract` Problem slice — contract §2 + GH#5 anatomy; `validate:figma-coverage` + `validate:contract` pass; problem card icons exported.
+- **2026-07-01** — `/fe-implement` GH#5 Problem — `ProblemSection`; cascade motion + token shadow fix; e2e/visual pass; human **APPROVED**.

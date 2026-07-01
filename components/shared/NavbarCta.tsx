@@ -3,15 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-
-type NavbarCtaProps = {
-  testId: string;
-  labelTestId: string;
-  iconTestId: string;
-  graphicTestId: string;
-  href: string;
-  variant: 'desktop' | 'mobile';
-};
+import type { NavbarCtaProps } from '@/types/shared.types';
 
 export function NavbarCta({
   testId,

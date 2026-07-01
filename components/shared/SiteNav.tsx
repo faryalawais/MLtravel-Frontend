@@ -1,10 +1,8 @@
 import Link from 'next/link';
+import { NAV_LINK_CLASS_NAME } from '@/constants/shared.constants';
 import { ids } from '@/tokens/build/test-ids';
 import { MobileNavbar } from './MobileNavbar';
 import { NavbarCta } from './NavbarCta';
-
-const navLinkClassName =
-  'text-body-desktop-sm text-[var(--color-text-primary)] hover:underline focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]';
 
 export function SiteNav() {
   return (
@@ -38,14 +36,14 @@ export function SiteNav() {
           <Link
             href="#product"
             data-testid={ids.component.navbar.productLink}
-            className={navLinkClassName}
+            className={NAV_LINK_CLASS_NAME}
           >
             <span data-testid={ids.component.navbar.productLinkLabel}>Product</span>
           </Link>
           <Link
             href="/how-it-works"
             data-testid={ids.component.navbar.howItWorksLink}
-            className={navLinkClassName}
+            className={NAV_LINK_CLASS_NAME}
           >
             <span data-testid={ids.component.navbar.howItWorksLinkLabel}>
               How It Works
@@ -54,7 +52,7 @@ export function SiteNav() {
           <Link
             href="#pricing"
             data-testid={ids.component.navbar.pricingLink}
-            className={navLinkClassName}
+            className={NAV_LINK_CLASS_NAME}
           >
             <span data-testid={ids.component.navbar.pricingLinkLabel}>Pricing</span>
           </Link>

@@ -156,11 +156,11 @@
   --color-focus-ring: var(--color-orange-500);
   --color-focus-ring-error: var(--color-red-500);
   --color-focus-ring-info: var(--color-navy-500);
-  --shadow-card: 0px 4px 16px 0px [object Object]; /** Default card shadow. Used on ProblemCard, FeatureCard. */
-  --shadow-card-elevated: undefined undefined undefined undefined undefined; /** Elevated card with deep ambient shadow. Used on GiantTicket. */
-  --shadow-card-navy: undefined undefined undefined undefined undefined; /** Card with ambient + navy brand glow. Used on TestimonialCard, PricingCard. */
-  --shadow-glass: undefined undefined undefined undefined undefined; /** Glass morphism shadow. Used on Hero stat cards (3 layers: outer glow + ambient + inner highlight). */
-  --shadow-navbar: 0px 1px 0px 0px [object Object]; /** Hairline bottom shadow for navbar separation. */
+  --shadow-card: 0px 4px 16px 0px rgba(16, 24, 40, 0.08); /** Default card shadow. Used on ProblemCard, FeatureCard. */
+  --shadow-card-elevated: 0px 2px 8px 0px rgba(0, 0, 0, 0.04), 0px 16px 56px -4px rgba(0, 0, 0, 0.07); /** Elevated card with deep ambient shadow. Used on GiantTicket. */
+  --shadow-card-navy: 0px 2px 8px 0px rgba(0, 0, 0, 0.03), 0px 10px 36px 0px rgba(0, 61, 130, 0.09); /** Card with ambient + navy brand glow. Used on TestimonialCard, PricingCard. */
+  --shadow-glass: 0px 4px 16px 0px rgba(0, 21, 41, 0.18), 0px 1px 3px 0px rgba(0, 21, 41, 0.08), 0px 1px 0px 0px rgba(255, 255, 255, 0.2); /** Glass morphism shadow. Used on Hero stat cards (3 layers: outer glow + ambient + inner highlight). */
+  --shadow-navbar: 0px 1px 0px 0px rgba(0, 0, 0, 0.05); /** Hairline bottom shadow for navbar separation. */
   --shadow-sm: var(--shadow-card);
   --shadow-md: var(--shadow-card-elevated);
   --shadow-lg: var(--shadow-card-elevated);

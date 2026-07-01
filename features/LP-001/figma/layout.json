@@ -26,6 +26,15 @@
         "slug": "component.landing.hero.motion.root"
       },
       {
+        "slug": "component.landing.problem.root"
+      },
+      {
+        "slug": "component.landing.problem.mobile.root"
+      },
+      {
+        "slug": "component.landing.problem.motion.root"
+      },
+      {
         "slug": "component.navbar.motion.cta"
       },
       {

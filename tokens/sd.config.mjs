@@ -107,7 +107,22 @@ StyleDictionary.registerTransform({
   transform: (token) => `${token.$value.value}${token.$value.unit}`,
 });
 
-// shadow with nested {value,unit} dimensions  ->  "Xpx Ypx Bpx Spx rgba(...)"
+function colorObjectToCss(color) {
+  if (!color || typeof color !== 'object' || !Array.isArray(color.components)) {
+    return String(color ?? '');
+  }
+  const { components, alpha = 1 } = color;
+  const [r, g, b] = components.map((c) => Math.round(c * 255));
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
+function shadowLayerToString(layer) {
+  const dim = (d) =>
+    d && typeof d === 'object' && 'value' in d ? `${d.value}${d.unit ?? 'px'}` : String(d ?? 0);
+  return `${dim(layer.offsetX)} ${dim(layer.offsetY)} ${dim(layer.blur)} ${dim(layer.spread)} ${colorObjectToCss(layer.color)}`;
+}
+
+// shadow with nested {value,unit} dimensions and DTCG color objects -> CSS box-shadow
 StyleDictionary.registerTransform({
   name: 'shadow/object-to-string',
   type: 'value',
@@ -115,9 +130,13 @@ StyleDictionary.registerTransform({
   filter: (token) => token.$type === 'shadow' && token.$value && typeof token.$value === 'object',
   transform: (token) => {
     const v = token.$value;
-    const dim = (d) =>
-      d && typeof d === 'object' && 'value' in d ? `${d.value}${d.unit ?? 'px'}` : String(d);
-    return `${dim(v.offsetX)} ${dim(v.offsetY)} ${dim(v.blur)} ${dim(v.spread)} ${v.color}`;
+    if (Array.isArray(v)) {
+      return v.map(shadowLayerToString).join(', ');
+    }
+    if ('offsetX' in v || 'offsetY' in v) {
+      return shadowLayerToString(v);
+    }
+    return String(v);
   },
 });
 

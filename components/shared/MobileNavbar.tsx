@@ -3,38 +3,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
+import {
+  MENU_CLOSE_MS,
+  MOBILE_NAV_LINKS,
+  MOBILE_NAV_LINK_CLASS_NAME,
+  MOBILE_NAV_MOTION_TRANSITION,
+} from '@/constants/shared.constants';
 import { ids } from '@/tokens/build/test-ids';
 import { NavbarCta } from './NavbarCta';
-
-const navLinkClassName =
-  'block py-[var(--spacing-12)] text-body-desktop-sm text-[var(--color-text-primary)] hover:underline focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]';
-
-const mobileNavLinks = [
-  {
-    href: '#product',
-    label: 'Product',
-    linkTestId: ids.component.navbar.productLink,
-    labelTestId: ids.component.navbar.productLinkLabel,
-  },
-  {
-    href: '/how-it-works',
-    label: 'How It Works',
-    linkTestId: ids.component.navbar.howItWorksLink,
-    labelTestId: ids.component.navbar.howItWorksLinkLabel,
-  },
-  {
-    href: '#pricing',
-    label: 'Pricing',
-    linkTestId: ids.component.navbar.pricingLink,
-    labelTestId: ids.component.navbar.pricingLinkLabel,
-  },
-] as const;
-
-const motionTransition =
-  'duration-[var(--motion-duration-default)] ease-[var(--motion-easing-default)]';
-
-/** Matches `--motion-duration-default` (700ms) for unmount after slide-out. */
-const MENU_CLOSE_MS = 700;
 
 export function MobileNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -164,7 +140,7 @@ export function MobileNavbar() {
             tabIndex={menuVisible ? 0 : -1}
             className={[
               'absolute inset-0 bg-[var(--color-neutral-900)] transition-opacity',
-              motionTransition,
+              MOBILE_NAV_MOTION_TRANSITION,
               menuVisible ? 'opacity-40' : 'opacity-0',
             ].join(' ')}
             onClick={closeMenu}
@@ -178,16 +154,16 @@ export function MobileNavbar() {
             aria-hidden={!menuVisible}
             className={[
               'absolute left-0 top-0 flex h-full w-[min(100%,calc(var(--spacing-64)*5))] flex-col bg-[var(--color-background-page)] px-[var(--space-md)] pb-[var(--spacing-40)] pt-[var(--spacing-60)] shadow-[var(--shadow-md)] transition-transform will-change-transform',
-              motionTransition,
+              MOBILE_NAV_MOTION_TRANSITION,
               menuVisible ? 'translate-x-0' : '-translate-x-full',
             ].join(' ')}
           >
-            {mobileNavLinks.map((item) => (
+            {MOBILE_NAV_LINKS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 data-testid={item.linkTestId}
-                className={navLinkClassName}
+                className={MOBILE_NAV_LINK_CLASS_NAME}
                 tabIndex={menuVisible ? 0 : -1}
                 onClick={closeMenu}
               >

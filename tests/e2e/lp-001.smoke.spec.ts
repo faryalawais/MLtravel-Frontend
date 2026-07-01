@@ -66,3 +66,27 @@ test.describe('GH#4 — Hero', () => {
     await expect(page).toHaveURL(/\/contact/);
   });
 });
+
+test.describe('GH#5 — Problem', () => {
+  test('problem section visible at 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/');
+    await expect(page.getByTestId(ids.component.landing.problem.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.problem.sectionHeading)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.problem.card1)).toBeVisible();
+  });
+
+  test('problem section visible at 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 844 });
+    await page.goto('/');
+    await expect(page.getByTestId(ids.component.landing.problem.mobile.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.problem.mobile.sectionHeading)).toBeVisible();
+  });
+
+  test('product nav link scrolls to problem section', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.navbar.productLink).click();
+    await expect(page.getByTestId(ids.component.landing.problem.root)).toBeInViewport();
+  });
+});
