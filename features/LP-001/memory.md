@@ -149,7 +149,7 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 ## Implementation Notes
 ### FE notes
 <!-- Written by: fe-implement on 2026-07-01 -->
-- Components implemented: `SiteNav`, `NavbarCta`; route stubs `/`, `/contact`, `/how-it-works`
+- Components implemented: `SiteNav`, `MobileNavbar`, `NavbarCta`; route stubs `/`, `/contact`, `/how-it-works`
 - `globals.css` imports `tokens/build/tokens.css`; typography utilities for h4 + body-sm
 - Added primitive tokens `spacing.52`, `spacing.60` (Figma navbar gaps/heights)
 - test:e2e: not scaffolded yet (no Playwright config)
@@ -184,3 +184,5 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-01** — `/design-contract` — Navbar slice contract; `validate:figma-coverage` + `validate:contract` passed.
 - **2026-07-01** — `/fe-implement` — GH#1 route stubs + GH#3 Navbar (desktop/mobile/CTA motion); `next build` passed.
 - **2026-07-01** — Navbar re-extract (small chunks): 3 slice-roots + 8 sub-chunks via REST; 11 cache files; all validate gates pass.
+- **2026-07-01** — `feat(LP-001-FE)` committed + pushed (`22a666d`) — GH#1 + GH#3 navbar slice.
+- **2026-07-01** — Hero `figma-extract:rest` started — slice-roots `5164:6560`, `5164:7080`, `5164:10343`; 237 checklist nodes; validate:figma-extract pass.

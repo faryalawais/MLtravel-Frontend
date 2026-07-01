@@ -9,12 +9,27 @@
     },
     {
       "nodeId": "5164:7031",
-      "name": "Navbar Mobile",
+      "name": "PremiumTravelPlatform",
       "source": "explicit"
     },
     {
       "nodeId": "5164:10334",
-      "name": "Navbar Animation",
+      "name": "Navbar",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6560",
+      "name": "HeroSection",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:7080",
+      "name": "Frame 2095585155",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:10343",
+      "name": "hero-animation",
       "source": "explicit"
     }
   ]
