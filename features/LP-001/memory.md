@@ -170,7 +170,7 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 <!-- validate:figma-coverage: passed · validate:contract: passed -->
 **Scope:** Navbar (#3) + Hero (#4) + Problem (#5) + Comparison₁ (#6) + How-it-works teaser (#7) — `features/LP-001/contract.md`  
 **Branch:** `feature/LP-001-FE`  
-**Next:** `/fe-implement` — GH#7 How-it-works teaser
+**Next:** `/figma-extract` — GH#8 Comparison second block (`5164:6563` / `5164:6569` / `5164:10346`)
 
 ---
 
@@ -265,3 +265,5 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-01** — How-it-works `figma-extract:rest` — nodes `5164:6567`, `5164:6690`, `5164:10412`; reference PNGs exported; `validate:figma-extract` + `validate:assets` pass; `build:layout` + `validate:layout` pass (939 checklist nodes total).
 - **2026-07-01** — `/ui-registry-build` How-it-works teaser slice — 251 howItWorksTeaser paths; registry total 526; Gherkin alias `component.landing.howItWorksTeaser` → `.root`; `build:layout` + `validate:layout` pass.
 - **2026-07-01** — `/design-contract` How-it-works teaser slice — contract §2 + GH#7 anatomy; `validate:figma-coverage` + `validate:contract` pass.
+- **2026-07-01** — `/fe-implement` GH#6 + GH#7 — `ComparisonFirstSection`, `HowItWorksTeaserSection`; e2e + visual pass; commit `e8dd434`.
+- **2026-07-01** — `/ui-registry-build` re-run (post GH#7) — 526 components unchanged; `ui-registry:validate` + `build:layout` + `validate:layout` pass; token enrich 0 (PAT lacks `file_variables:read`).
