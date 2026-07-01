@@ -143,16 +143,34 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 
 **Registry total:** 137 components (navbar 38 + hero 28 + problem 71) · `layout.json` 15 leaf slugs
 
-<!-- registry-validate: passed 2026-07-01 (137 components, 3 screens; Checks 1–3 pass; Check 4 deferred — static v1, no $dataSource) -->
+### Components catalogued (Comparison first slice #6 — 138 entries)
+- `component.landing.comparisonFirst.root` — desktop `5164:6566` (Gherkin: `component.landing.comparisonFirst`)
+- `component.landing.comparisonFirst.*` — header, GiantTicket, industry + Maqsood cards (3 rows each), footnote, CTA (desktop)
+- `component.landing.comparisonFirst.mobile.*` — mobile stack `5164:6609` (52 entries)
+- `component.landing.comparisonFirst.motion.*` — animation reference `5164:10411` (7 entries)
+
+**Registry total:** 275 components (navbar 38 + hero 28 + problem 71 + comparisonFirst 138) · `layout.json` 18 leaf slugs
+
+<!-- registry-validate: passed 2026-07-01 (275 components, 3 screens; ui-registry:validate + validate:layout pass) -->
+
+### Components catalogued (How-it-works teaser slice #7 — 251 entries)
+- `component.landing.howItWorksTeaser.root` — desktop `5164:6567` (Gherkin: `component.landing.howItWorksTeaser`)
+- `component.landing.howItWorksTeaser.*` — header, 3× HIWCard (visual + step badge + copy), footer link (desktop)
+- `component.landing.howItWorksTeaser.mobile.*` — mobile stack `5164:6690` (stacked HIW cards + footer link)
+- `component.landing.howItWorksTeaser.motion.*` — animation reference `5164:10412` (4-step cascade states)
+
+**Registry total:** 526 components (navbar 38 + hero 28 + problem 71 + comparisonFirst 138 + howItWorksTeaser 251) · `layout.json` 21 leaf slugs
+
+<!-- registry-validate: passed 2026-07-01 (526 components, 3 screens; ui-registry:validate + validate:layout pass) -->
 
 ---
 
 ## Design contract
 <!-- Written by: design-contract on 2026-07-01 -->
 <!-- validate:figma-coverage: passed · validate:contract: passed -->
-**Scope:** Navbar (#3) + Hero (#4) + Problem (#5) — `features/LP-001/contract.md`  
+**Scope:** Navbar (#3) + Hero (#4) + Problem (#5) + Comparison₁ (#6) + How-it-works teaser (#7) — `features/LP-001/contract.md`  
 **Branch:** `feature/LP-001-FE`  
-**Next:** `/figma-extract` — GH#6 Comparison (1st) nodes `5164:6566` / `5164:6609` / `5164:10411`
+**Next:** `/fe-implement` — GH#7 How-it-works teaser
 
 ---
 
@@ -192,6 +210,20 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - Motion: card cascade on grid mouse-enter (120ms step delay); one-way per MOTION-SPEC; manual per-card CSS hover after cascade
 - Deviations: section heading uses h1 vs contract h2; card titles h4 vs Figma 24px; CTA not in cascade sequence (Figma has 5 motion states)
 
+### FE notes — Comparison₁ GH#6
+<!-- Written by: fe-implement on 2026-07-01 -->
+<!-- Human review: APPROVED 2026-07-01 -->
+- Components implemented: `ComparisonFirstSection` (desktop GiantTicket + mobile stacked cards); wired on `app/page.tsx` after `ProblemSection`
+- ui-registry: 275 entries (+138 comparisonFirst); `build:layout` updated
+- Comparison contract appended to `features/LP-001/contract.md`
+- Figma color pass: header tints, per-row accent tags/stamps, Maqsood `background-subtle` card body
+- Desktop: center perforated divider removed per human review
+- test:e2e: passed (GH#6 smoke + CTA → `/contact`)
+- test:visual: comparison desktop/mobile baselines
+- typecheck: passed
+- Motion: one-way GiantTicket hover reveal (700ms ease-in)
+- Deviations: center perforated divider omitted vs contract/Figma anatomy (human request)
+
 ---
 
 ## Gate Results
@@ -227,3 +259,9 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-01** — `/design-contract` Problem slice — contract §2 + GH#5 anatomy; `validate:figma-coverage` + `validate:contract` pass; problem card icons exported.
 - **2026-07-01** — `/fe-implement` GH#5 Problem — `ProblemSection`; cascade motion + token shadow fix; e2e/visual pass; human **APPROVED**.
 - **2026-07-01** — Comparison `figma-extract:rest` — nodes `5164:6566`, `5164:6609`, `5164:10411`; reference PNGs exported; `validate:figma-extract` pass.
+- **2026-07-01** — `/ui-registry-build` Comparison₁ slice — 138 comparisonFirst paths; registry total 275; `build:layout` + `validate:layout` pass.
+- **2026-07-01** — `/design-contract` Comparison₁ slice — contract §2 + GH#6 anatomy; `validate:figma-coverage` + `validate:contract` pass.
+- **2026-07-01** — `/fe-implement` GH#6 Comparison₁ — `ComparisonFirstSection`; Figma color fixes + visual/e2e pass; human **APPROVED**.
+- **2026-07-01** — How-it-works `figma-extract:rest` — nodes `5164:6567`, `5164:6690`, `5164:10412`; reference PNGs exported; `validate:figma-extract` + `validate:assets` pass; `build:layout` + `validate:layout` pass (939 checklist nodes total).
+- **2026-07-01** — `/ui-registry-build` How-it-works teaser slice — 251 howItWorksTeaser paths; registry total 526; Gherkin alias `component.landing.howItWorksTeaser` → `.root`; `build:layout` + `validate:layout` pass.
+- **2026-07-01** — `/design-contract` How-it-works teaser slice — contract §2 + GH#7 anatomy; `validate:figma-coverage` + `validate:contract` pass.

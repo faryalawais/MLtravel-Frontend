@@ -90,3 +90,62 @@ test.describe('GH#5 — Problem', () => {
     await expect(page.getByTestId(ids.component.landing.problem.root)).toBeInViewport();
   });
 });
+
+test.describe('GH#6 — Comparison first', () => {
+  test('comparison section visible at 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1200 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.comparisonFirst.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.comparisonFirst.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.comparisonFirst.sectionHeading)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.comparisonFirst.industryCard)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.comparisonFirst.maqsoodCard)).toBeVisible();
+  });
+
+  test('comparison section visible at 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 1400 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.comparisonFirst.mobile.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.comparisonFirst.mobile.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.comparisonFirst.mobile.sectionHeadingLine1)).toBeVisible();
+  });
+
+  test('Book A Free Demo CTA navigates to /contact', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1200 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.comparisonFirst.root).scrollIntoViewIfNeeded();
+    await page.getByTestId(ids.component.landing.comparisonFirst.cta).click();
+    await expect(page).toHaveURL(/\/contact/);
+  });
+});
+
+test.describe('GH#7 — How-it-works teaser', () => {
+  test('how-it-works teaser visible at 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1200 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.howItWorksTeaser.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.sectionHeader)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.hiwCard)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.hiwCard2)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.hiwCard3)).toBeVisible();
+  });
+
+  test('how-it-works teaser visible at 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 1800 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.howItWorksTeaser.mobile.sectionRoot).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.mobile.sectionRoot)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.mobile.hiwStack)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.mobile.hiwStack2)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.mobile.hiwStack3)).toBeVisible();
+  });
+
+  test('footer link navigates to /how-it-works', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1200 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.howItWorksTeaser.root).scrollIntoViewIfNeeded();
+    await page.getByTestId(ids.component.landing.howItWorksTeaser.textBlock21).click();
+    await expect(page).toHaveURL(/\/how-it-works/);
+  });
+});

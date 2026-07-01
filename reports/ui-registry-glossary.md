@@ -158,6 +158,395 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.landing.problem.motion.card3` | Motion card 3 | `screen.landing.home` | `default`, `hover` | `component-landing-problem-motion-card3` |
 | `component.landing.problem.motion.cta` | Motion ProblemCTA | `screen.landing.home` | `default` | `component-landing-problem-motion-cta` |
 | `component.landing.problem.motion.gradientBar` | Motion gradient bar | `screen.landing.home` | `default` | `component-landing-problem-motion-gradientBar` |
+| `component.landing.comparisonFirst.root` | Comparison first block desktop (Gherkin: component.landing.comparisonFirst) | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-root` |
+| `component.landing.comparisonFirst.sectionHeader` | SectionHeader/Comparison | `screen.landing.home` | `default` | `component-landing-comparisonFirst-sectionHeader` |
+| `component.landing.comparisonFirst.sectionPill` | The Choice section pill | `screen.landing.home` | `default` | `component-landing-comparisonFirst-sectionPill` |
+| `component.landing.comparisonFirst.sectionPillLabel` | Pill label The Choice | `screen.landing.home` | `default` | `component-landing-comparisonFirst-sectionPillLabel` |
+| `component.landing.comparisonFirst.headingBlock` | Section heading block | `screen.landing.home` | `default` | `component-landing-comparisonFirst-headingBlock` |
+| `component.landing.comparisonFirst.sectionHeading` | Section H2 — Dependency or Ownership | `screen.landing.home` | `default` | `component-landing-comparisonFirst-sectionHeading` |
+| `component.landing.comparisonFirst.sectionSubtitle` | Section subtitle copy | `screen.landing.home` | `default` | `component-landing-comparisonFirst-sectionSubtitle` |
+| `component.landing.comparisonFirst.columnsFrame` | Columns + CTA frame | `screen.landing.home` | `default` | `component-landing-comparisonFirst-columnsFrame` |
+| `component.landing.comparisonFirst.giantTicket` | GiantTicket two-column card stack | `screen.landing.home` | `default` | `component-landing-comparisonFirst-giantTicket` |
+| `component.landing.comparisonFirst.industryCard` | Industry norm comparison card | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-industryCard` |
+| `component.landing.comparisonFirst.industryCardHeader` | Industry card header | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryCardHeader` |
+| `component.landing.comparisonFirst.industryBadge` | Industry card header badge | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryBadge` |
+| `component.landing.comparisonFirst.industryBadgeLabel` | Industry badge label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryBadgeLabel` |
+| `component.landing.comparisonFirst.industryTitleLine1` | Industry card title line 1 | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryTitleLine1` |
+| `component.landing.comparisonFirst.industryTitleLine2` | Industry card title line 2 | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryTitleLine2` |
+| `component.landing.comparisonFirst.industryCardBody` | Industry card body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryCardBody` |
+| `component.landing.comparisonFirst.industryRow1` | Industry norm row 1 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-industryRow1` |
+| `component.landing.comparisonFirst.industryRow1MicroTag` | Industry norm row 1 micro tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow1MicroTag` |
+| `component.landing.comparisonFirst.industryRow1TagLabel` | Industry norm row 1 tag label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow1TagLabel` |
+| `component.landing.comparisonFirst.industryRow1Title` | Industry norm row 1 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow1Title` |
+| `component.landing.comparisonFirst.industryRow1Body` | Industry norm row 1 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow1Body` |
+| `component.landing.comparisonFirst.industryRow1Stamp` | Industry norm row 1 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow1Stamp` |
+| `component.landing.comparisonFirst.industryRow1StampLabel` | Industry norm row 1 stamp label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow1StampLabel` |
+| `component.landing.comparisonFirst.industryRow2` | Industry norm row 2 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-industryRow2` |
+| `component.landing.comparisonFirst.industryRow2MicroTag` | Industry norm row 2 micro tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow2MicroTag` |
+| `component.landing.comparisonFirst.industryRow2TagLabel` | Industry norm row 2 tag label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow2TagLabel` |
+| `component.landing.comparisonFirst.industryRow2Title` | Industry norm row 2 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow2Title` |
+| `component.landing.comparisonFirst.industryRow2Body` | Industry norm row 2 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow2Body` |
+| `component.landing.comparisonFirst.industryRow2Stamp` | Industry norm row 2 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow2Stamp` |
+| `component.landing.comparisonFirst.industryRow2StampLabel` | Industry norm row 2 stamp label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow2StampLabel` |
+| `component.landing.comparisonFirst.industryRow3` | Industry norm row 3 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-industryRow3` |
+| `component.landing.comparisonFirst.industryRow3MicroTag` | Industry norm row 3 micro tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow3MicroTag` |
+| `component.landing.comparisonFirst.industryRow3TagLabel` | Industry norm row 3 tag label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow3TagLabel` |
+| `component.landing.comparisonFirst.industryRow3Title` | Industry norm row 3 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow3Title` |
+| `component.landing.comparisonFirst.industryRow3Body` | Industry norm row 3 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow3Body` |
+| `component.landing.comparisonFirst.industryRow3Stamp` | Industry norm row 3 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow3Stamp` |
+| `component.landing.comparisonFirst.industryRow3StampLabel` | Industry norm row 3 stamp label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-industryRow3StampLabel` |
+| `component.landing.comparisonFirst.dividerPerforated` | Perforated divider between cards | `screen.landing.home` | `default` | `component-landing-comparisonFirst-dividerPerforated` |
+| `component.landing.comparisonFirst.maqsoodCard` | MaqsoodTravel comparison card | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-maqsoodCard` |
+| `component.landing.comparisonFirst.maqsoodCardHeader` | Maqsood card header | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodCardHeader` |
+| `component.landing.comparisonFirst.maqsoodBadge` | Maqsood card header badge | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodBadge` |
+| `component.landing.comparisonFirst.maqsoodBadgeLabel` | Maqsood badge label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodBadgeLabel` |
+| `component.landing.comparisonFirst.maqsoodTitleLine1` | Maqsood card title line 1 | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodTitleLine1` |
+| `component.landing.comparisonFirst.maqsoodTitleLine2` | Maqsood card title line 2 | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodTitleLine2` |
+| `component.landing.comparisonFirst.maqsoodCardBody` | Maqsood card body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodCardBody` |
+| `component.landing.comparisonFirst.maqsoodRow1` | MaqsoodTravel row 1 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-maqsoodRow1` |
+| `component.landing.comparisonFirst.maqsoodRow1MicroTag` | MaqsoodTravel row 1 micro tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow1MicroTag` |
+| `component.landing.comparisonFirst.maqsoodRow1TagLabel` | MaqsoodTravel row 1 tag label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow1TagLabel` |
+| `component.landing.comparisonFirst.maqsoodRow1Title` | MaqsoodTravel row 1 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow1Title` |
+| `component.landing.comparisonFirst.maqsoodRow1Body` | MaqsoodTravel row 1 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow1Body` |
+| `component.landing.comparisonFirst.maqsoodRow1Stamp` | MaqsoodTravel row 1 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow1Stamp` |
+| `component.landing.comparisonFirst.maqsoodRow1StampLabel` | MaqsoodTravel row 1 stamp label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow1StampLabel` |
+| `component.landing.comparisonFirst.maqsoodRow2` | MaqsoodTravel row 2 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-maqsoodRow2` |
+| `component.landing.comparisonFirst.maqsoodRow2MicroTag` | MaqsoodTravel row 2 micro tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow2MicroTag` |
+| `component.landing.comparisonFirst.maqsoodRow2TagLabel` | MaqsoodTravel row 2 tag label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow2TagLabel` |
+| `component.landing.comparisonFirst.maqsoodRow2Title` | MaqsoodTravel row 2 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow2Title` |
+| `component.landing.comparisonFirst.maqsoodRow2Body` | MaqsoodTravel row 2 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow2Body` |
+| `component.landing.comparisonFirst.maqsoodRow2Stamp` | MaqsoodTravel row 2 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow2Stamp` |
+| `component.landing.comparisonFirst.maqsoodRow2StampLabel` | MaqsoodTravel row 2 stamp label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow2StampLabel` |
+| `component.landing.comparisonFirst.maqsoodRow3` | MaqsoodTravel row 3 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-maqsoodRow3` |
+| `component.landing.comparisonFirst.maqsoodRow3MicroTag` | MaqsoodTravel row 3 micro tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow3MicroTag` |
+| `component.landing.comparisonFirst.maqsoodRow3TagLabel` | MaqsoodTravel row 3 tag label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow3TagLabel` |
+| `component.landing.comparisonFirst.maqsoodRow3Title` | MaqsoodTravel row 3 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow3Title` |
+| `component.landing.comparisonFirst.maqsoodRow3Body` | MaqsoodTravel row 3 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow3Body` |
+| `component.landing.comparisonFirst.maqsoodRow3Stamp` | MaqsoodTravel row 3 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow3Stamp` |
+| `component.landing.comparisonFirst.maqsoodRow3StampLabel` | MaqsoodTravel row 3 stamp label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-maqsoodRow3StampLabel` |
+| `component.landing.comparisonFirst.notchTop` | GiantTicket top notch | `screen.landing.home` | `default` | `component-landing-comparisonFirst-notchTop` |
+| `component.landing.comparisonFirst.ctaBlock` | Footnote + CTA block | `screen.landing.home` | `default` | `component-landing-comparisonFirst-ctaBlock` |
+| `component.landing.comparisonFirst.footnote` | Savings footnote copy | `screen.landing.home` | `default` | `component-landing-comparisonFirst-footnote` |
+| `component.landing.comparisonFirst.cta` | Book A Free Demo primary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-cta` |
+| `component.landing.comparisonFirst.ctaLabel` | CTA label Book A Free Demo | `screen.landing.home` | `default` | `component-landing-comparisonFirst-ctaLabel` |
+| `component.landing.comparisonFirst.ctaIcon` | CTA icon button | `screen.landing.home` | `default` | `component-landing-comparisonFirst-ctaIcon` |
+| `component.landing.comparisonFirst.ctaGraphic` | CTA arrow graphic | `screen.landing.home` | `default` | `component-landing-comparisonFirst-ctaGraphic` |
+| `component.landing.comparisonFirst.mobile.root` | Comparison first block mobile (Gherkin @393px) | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-mobile-root` |
+| `component.landing.comparisonFirst.mobile.headerBlock` | Mobile header block | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-headerBlock` |
+| `component.landing.comparisonFirst.mobile.sectionPill` | Mobile section pill | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-sectionPill` |
+| `component.landing.comparisonFirst.mobile.sectionPillDot` | Mobile pill dot | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-sectionPillDot` |
+| `component.landing.comparisonFirst.mobile.sectionPillLabel` | Mobile pill label The Choice | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-sectionPillLabel` |
+| `component.landing.comparisonFirst.mobile.headRow` | Mobile heading row | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-headRow` |
+| `component.landing.comparisonFirst.mobile.sectionHeadingLine1` | Mobile H2 line 1 | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-sectionHeadingLine1` |
+| `component.landing.comparisonFirst.mobile.sectionHeadingLine2` | Mobile H2 line 2 | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-sectionHeadingLine2` |
+| `component.landing.comparisonFirst.mobile.sectionSubtitle` | Mobile section subtitle | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-sectionSubtitle` |
+| `component.landing.comparisonFirst.mobile.contentFrame` | Mobile cards + CTA frame | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-contentFrame` |
+| `component.landing.comparisonFirst.mobile.giantTicket` | Mobile GiantTicket stack | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-giantTicket` |
+| `component.landing.comparisonFirst.mobile.industryCard` | Mobile industry norm card | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-mobile-industryCard` |
+| `component.landing.comparisonFirst.mobile.industryCardHeader` | Mobile industry card header | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryCardHeader` |
+| `component.landing.comparisonFirst.mobile.industryBadge` | Mobile industry badge | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryBadge` |
+| `component.landing.comparisonFirst.mobile.industryTitleLine1` | Mobile industry title line 1 | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryTitleLine1` |
+| `component.landing.comparisonFirst.mobile.industryTitleLine2` | Mobile industry title line 2 | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryTitleLine2` |
+| `component.landing.comparisonFirst.mobile.industryCardBody` | Mobile industry card body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryCardBody` |
+| `component.landing.comparisonFirst.mobile.industryRow1` | Mobile industry norm row 1 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-mobile-industryRow1` |
+| `component.landing.comparisonFirst.mobile.industryRow1Tag` | Mobile industry norm row 1 tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow1Tag` |
+| `component.landing.comparisonFirst.mobile.industryRow1Title` | Mobile industry norm row 1 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow1Title` |
+| `component.landing.comparisonFirst.mobile.industryRow1Body` | Mobile industry norm row 1 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow1Body` |
+| `component.landing.comparisonFirst.mobile.industryRow1Stamp` | Mobile industry norm row 1 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow1Stamp` |
+| `component.landing.comparisonFirst.mobile.industryRow2` | Mobile industry norm row 2 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-mobile-industryRow2` |
+| `component.landing.comparisonFirst.mobile.industryRow2Tag` | Mobile industry norm row 2 tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow2Tag` |
+| `component.landing.comparisonFirst.mobile.industryRow2Title` | Mobile industry norm row 2 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow2Title` |
+| `component.landing.comparisonFirst.mobile.industryRow2Body` | Mobile industry norm row 2 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow2Body` |
+| `component.landing.comparisonFirst.mobile.industryRow2Stamp` | Mobile industry norm row 2 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow2Stamp` |
+| `component.landing.comparisonFirst.mobile.industryRow3` | Mobile industry norm row 3 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-mobile-industryRow3` |
+| `component.landing.comparisonFirst.mobile.industryRow3Tag` | Mobile industry norm row 3 tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow3Tag` |
+| `component.landing.comparisonFirst.mobile.industryRow3Title` | Mobile industry norm row 3 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow3Title` |
+| `component.landing.comparisonFirst.mobile.industryRow3Body` | Mobile industry norm row 3 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow3Body` |
+| `component.landing.comparisonFirst.mobile.industryRow3Stamp` | Mobile industry norm row 3 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-industryRow3Stamp` |
+| `component.landing.comparisonFirst.mobile.maqsoodCard` | Mobile MaqsoodTravel card | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-mobile-maqsoodCard` |
+| `component.landing.comparisonFirst.mobile.maqsoodCardHeader` | Mobile Maqsood card header | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodCardHeader` |
+| `component.landing.comparisonFirst.mobile.maqsoodBadge` | Mobile Maqsood badge | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodBadge` |
+| `component.landing.comparisonFirst.mobile.maqsoodTitleLine1` | Mobile Maqsood title line 1 | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodTitleLine1` |
+| `component.landing.comparisonFirst.mobile.maqsoodTitleLine2` | Mobile Maqsood title line 2 | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodTitleLine2` |
+| `component.landing.comparisonFirst.mobile.maqsoodCardBody` | Mobile Maqsood card body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodCardBody` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow1` | Mobile MaqsoodTravel row 1 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-mobile-maqsoodRow1` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow1Tag` | Mobile MaqsoodTravel row 1 tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow1Tag` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow1Title` | Mobile MaqsoodTravel row 1 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow1Title` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow1Body` | Mobile MaqsoodTravel row 1 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow1Body` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow1Stamp` | Mobile MaqsoodTravel row 1 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow1Stamp` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow2` | Mobile MaqsoodTravel row 2 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-mobile-maqsoodRow2` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow2Tag` | Mobile MaqsoodTravel row 2 tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow2Tag` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow2Title` | Mobile MaqsoodTravel row 2 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow2Title` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow2Body` | Mobile MaqsoodTravel row 2 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow2Body` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow2Stamp` | Mobile MaqsoodTravel row 2 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow2Stamp` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow3` | Mobile MaqsoodTravel row 3 | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-mobile-maqsoodRow3` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow3Tag` | Mobile MaqsoodTravel row 3 tag | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow3Tag` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow3Title` | Mobile MaqsoodTravel row 3 title | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow3Title` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow3Body` | Mobile MaqsoodTravel row 3 body | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow3Body` |
+| `component.landing.comparisonFirst.mobile.maqsoodRow3Stamp` | Mobile MaqsoodTravel row 3 stamp | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-maqsoodRow3Stamp` |
+| `component.landing.comparisonFirst.mobile.ctaBlock` | Mobile footnote + CTA block | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-ctaBlock` |
+| `component.landing.comparisonFirst.mobile.footnote` | Mobile savings footnote | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-footnote` |
+| `component.landing.comparisonFirst.mobile.cta` | Mobile Book A Free Demo CTA | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-mobile-cta` |
+| `component.landing.comparisonFirst.mobile.ctaLabel` | Mobile CTA label | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-ctaLabel` |
+| `component.landing.comparisonFirst.mobile.ctaIcon` | Mobile CTA icon | `screen.landing.home` | `default` | `component-landing-comparisonFirst-mobile-ctaIcon` |
+| `component.landing.comparisonFirst.motion.root` | Comparison motion prototype (Gherkin: 5164:10411) | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-motion-root` |
+| `component.landing.comparisonFirst.motion.sectionHeader` | Motion section header | `screen.landing.home` | `default` | `component-landing-comparisonFirst-motion-sectionHeader` |
+| `component.landing.comparisonFirst.motion.giantTicket` | Motion GiantTicket | `screen.landing.home` | `default` | `component-landing-comparisonFirst-motion-giantTicket` |
+| `component.landing.comparisonFirst.motion.industryCard` | Motion industry card | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-motion-industryCard` |
+| `component.landing.comparisonFirst.motion.maqsoodCard` | Motion Maqsood card | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-motion-maqsoodCard` |
+| `component.landing.comparisonFirst.motion.ctaBlock` | Motion CTA block | `screen.landing.home` | `default` | `component-landing-comparisonFirst-motion-ctaBlock` |
+| `component.landing.comparisonFirst.motion.cta` | Motion primary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-comparisonFirst-motion-cta` |
+| `component.landing.howItWorksTeaser.root` | How-it-works teaser desktop (Gherkin: component.landing.howItWorksTeaser) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-root` |
+| `component.landing.howItWorksTeaser.sectionHeader` | SectionHeader/HowItWorks (I5164:6567;5155:21) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-sectionHeader` |
+| `component.landing.howItWorksTeaser.sectionPill` | SectionPill (I5164:6567;5155:21;5151:13131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-sectionPill` |
+| `component.landing.howItWorksTeaser.sectionRoot` | How It Works (I5164:6567;5155:21;5151:13131;5151:13130) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-sectionRoot` |
+| `component.landing.howItWorksTeaser.headingBlock` | heading-block (I5164:6567;5155:21;5155:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-headingBlock` |
+| `component.landing.howItWorksTeaser.textBlock` | From contract to booking in three steps. (I5164:6567;5155:21;5155:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock` |
+| `component.landing.howItWorksTeaser.textBlock2` | We handle the technical complexity. Your agents just search and book. (I5164:6567;5155:21;5155:19) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock2` |
+| `component.landing.howItWorksTeaser.frame2095585115` | Frame 2095585115 (I5164:6567;5151:13139) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame2095585115` |
+| `component.landing.howItWorksTeaser.cardsWrap` | cards-wrap (I5164:6567;5155:28) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-cardsWrap` |
+| `component.landing.howItWorksTeaser.hiwCard` | HIWCard (I5164:6567;5155:29) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-hiwCard` |
+| `component.landing.howItWorksTeaser.cardVisual` | card-visual (I5164:6567;5155:29;5151:13140) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-cardVisual` |
+| `component.landing.howItWorksTeaser.frame2095585128` | Frame 2095585128 (I5164:6567;5155:29;5151:13141) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame2095585128` |
+| `component.landing.howItWorksTeaser.mT` | MT (I5164:6567;5155:29;5151:13142) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mT` |
+| `component.landing.howItWorksTeaser.frame` | Frame (I5164:6567;5155:29;5151:13147) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame` |
+| `component.landing.howItWorksTeaser.sabre` | Sabre (I5164:6567;5155:29;5151:13148) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-sabre` |
+| `component.landing.howItWorksTeaser.frame2` | Frame (I5164:6567;5155:29;5151:13149) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame2` |
+| `component.landing.howItWorksTeaser.amadeus` | Amadeus (I5164:6567;5155:29;5151:13150) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-amadeus` |
+| `component.landing.howItWorksTeaser.frame3` | Frame (I5164:6567;5155:29;5151:13151) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame3` |
+| `component.landing.howItWorksTeaser.travelport` | Travelport (I5164:6567;5155:29;5151:13152) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-travelport` |
+| `component.landing.howItWorksTeaser.frame4` | Frame (I5164:6567;5155:29;5151:13153) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame4` |
+| `component.landing.howItWorksTeaser.nDC` | NDC (I5164:6567;5155:29;5151:13154) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-nDC` |
+| `component.landing.howItWorksTeaser.frame5` | Frame (I5164:6567;5155:29;5151:13155) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame5` |
+| `component.landing.howItWorksTeaser.textBlock3` | ✓ All sources connected (I5164:6567;5155:29;5151:13156) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock3` |
+| `component.landing.howItWorksTeaser.cardContent` | card-content (I5164:6567;5155:29;5154:16) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-cardContent` |
+| `component.landing.howItWorksTeaser.stepBadge` | HIWStepBadge (I5164:6567;5155:29;5154:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-stepBadge` |
+| `component.landing.howItWorksTeaser.step01` | STEP 01 (I5164:6567;5155:29;5154:17;5153:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-step01` |
+| `component.landing.howItWorksTeaser.mainBlock` | main-block (I5164:6567;5155:29;5154:19) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mainBlock` |
+| `component.landing.howItWorksTeaser.textBlock4` | We plug into your GDS & NDC contracts. (I5164:6567;5155:29;5154:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock4` |
+| `component.landing.howItWorksTeaser.accentBar` | AccentBar (I5164:6567;5155:29;5154:21) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-accentBar` |
+| `component.landing.howItWorksTeaser.textBlock5` | You keep your Sabre, Amadeus or Travelport agreements & we configure the platform in week one. No new contracts. No renegotiation. NDC connections added automatically. (I5164:6567;5155:29;5154:22) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock5` |
+| `component.landing.howItWorksTeaser.textBlock6` | Your contracts. Our infrastructure. (I5164:6567;5155:29;5154:23) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock6` |
+| `component.landing.howItWorksTeaser.hiwCard2` | HIWCard (I5164:6567;5155:44) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-hiwCard2` |
+| `component.landing.howItWorksTeaser.cardVisual2` | card-visual (I5164:6567;5155:44;5151:13175) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-cardVisual2` |
+| `component.landing.howItWorksTeaser.frame2095585136` | Frame 2095585136 (I5164:6567;5155:44;5151:13176) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame2095585136` |
+| `component.landing.howItWorksTeaser.sabre2` | Sabre (I5164:6567;5155:44;5151:13177) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-sabre2` |
+| `component.landing.howItWorksTeaser.frame2095585153` | Frame 2095585153 (I5164:6567;5155:44;5151:13178) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame2095585153` |
+| `component.landing.howItWorksTeaser.rectangle` | Rectangle (I5164:6567;5155:44;5151:13179) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle` |
+| `component.landing.howItWorksTeaser.rectangle2` | Rectangle (I5164:6567;5155:44;5151:13180) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle2` |
+| `component.landing.howItWorksTeaser.amadeus2` | Amadeus (I5164:6567;5155:44;5151:13181) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-amadeus2` |
+| `component.landing.howItWorksTeaser.frame2095585150` | Frame 2095585150 (I5164:6567;5155:44;5151:13182) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame2095585150` |
+| `component.landing.howItWorksTeaser.rectangle3` | Rectangle (I5164:6567;5155:44;5151:13183) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle3` |
+| `component.landing.howItWorksTeaser.rectangle4` | Rectangle (I5164:6567;5155:44;5151:13184) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle4` |
+| `component.landing.howItWorksTeaser.travelport2` | Travelport (I5164:6567;5155:44;5151:13185) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-travelport2` |
+| `component.landing.howItWorksTeaser.frame2095585151` | Frame 2095585151 (I5164:6567;5155:44;5151:13186) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame2095585151` |
+| `component.landing.howItWorksTeaser.rectangle5` | Rectangle (I5164:6567;5155:44;5151:13187) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle5` |
+| `component.landing.howItWorksTeaser.rectangle6` | Rectangle (I5164:6567;5155:44;5151:13188) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle6` |
+| `component.landing.howItWorksTeaser.ndcDirect` | NDC Direct (I5164:6567;5155:44;5151:13189) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-ndcDirect` |
+| `component.landing.howItWorksTeaser.frame2095585152` | Frame 2095585152 (I5164:6567;5155:44;5151:13190) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame2095585152` |
+| `component.landing.howItWorksTeaser.rectangle7` | Rectangle (I5164:6567;5155:44;5151:13191) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle7` |
+| `component.landing.howItWorksTeaser.rectangle8` | Rectangle (I5164:6567;5155:44;5151:13192) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle8` |
+| `component.landing.howItWorksTeaser.frame6` | Frame (I5164:6567;5155:44;5151:13193) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame6` |
+| `component.landing.howItWorksTeaser.textBlock7` | ↓ Results merged & ranked (I5164:6567;5155:44;5151:13194) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock7` |
+| `component.landing.howItWorksTeaser.cardContent2` | card-content (I5164:6567;5155:44;5154:27) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-cardContent2` |
+| `component.landing.howItWorksTeaser.stepBadge2` | HIWStepBadge (I5164:6567;5155:44;5154:28) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-stepBadge2` |
+| `component.landing.howItWorksTeaser.step02` | STEP 02 (I5164:6567;5155:44;5154:28;5153:16) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-step02` |
+| `component.landing.howItWorksTeaser.mainBlock2` | main-block (I5164:6567;5155:44;5154:30) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mainBlock2` |
+| `component.landing.howItWorksTeaser.textBlock8` | One query. Every source. Simultaneously. (I5164:6567;5155:44;5154:31) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock8` |
+| `component.landing.howItWorksTeaser.accentBar2` | AccentBar (I5164:6567;5155:44;5154:32) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-accentBar2` |
+| `component.landing.howItWorksTeaser.textBlock9` | Your agents type the route once. The platform fires parallel queries to all connected GDS and NDC sources at the same millisecond. Average fare saving vs single-GDS: ~23%. (I5164:6567;5155:44;5154:33) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock9` |
+| `component.landing.howItWorksTeaser.textBlock10` | All sources. One result list. (I5164:6567;5155:44;5154:34) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock10` |
+| `component.landing.howItWorksTeaser.hiwCard3` | HIWCard (I5164:6567;5155:59) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-hiwCard3` |
+| `component.landing.howItWorksTeaser.cardVisual3` | card-visual (I5164:6567;5155:59;5151:13216) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-cardVisual3` |
+| `component.landing.howItWorksTeaser.frame7` | Frame (I5164:6567;5155:59;5151:13217) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-frame7` |
+| `component.landing.howItWorksTeaser.rectangle9` | Rectangle (I5164:6567;5155:59;5151:13218) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle9` |
+| `component.landing.howItWorksTeaser.textBlock11` | ⬤ ⬤ ⬤ YOUR AGENCY PLATFORM (I5164:6567;5155:59;5151:13219) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock11` |
+| `component.landing.howItWorksTeaser.textBlock12` | LHR → DXB · EK405 (I5164:6567;5155:59;5151:13220) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock12` |
+| `component.landing.howItWorksTeaser.textBlock13` | £798 ✓ Booked (I5164:6567;5155:59;5151:13221) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock13` |
+| `component.landing.howItWorksTeaser.rectangle10` | Rectangle (I5164:6567;5155:59;5151:13222) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle10` |
+| `component.landing.howItWorksTeaser.textBlock14` | MAN → DOH · QR002 (I5164:6567;5155:59;5151:13223) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock14` |
+| `component.landing.howItWorksTeaser.textBlock15` | ⚡ Alert active (I5164:6567;5155:59;5151:13224) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock15` |
+| `component.landing.howItWorksTeaser.rectangle11` | Rectangle (I5164:6567;5155:59;5151:13225) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle11` |
+| `component.landing.howItWorksTeaser.textBlock16` | LGW → BOM · AI101 (I5164:6567;5155:59;5151:13226) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock16` |
+| `component.landing.howItWorksTeaser.textBlock17` | 📊 Reports ready (I5164:6567;5155:59;5151:13227) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock17` |
+| `component.landing.howItWorksTeaser.rectangle12` | Rectangle (I5164:6567;5155:59;5151:13228) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-rectangle12` |
+| `component.landing.howItWorksTeaser.cardContent3` | card-content (I5164:6567;5155:59;5154:38) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-cardContent3` |
+| `component.landing.howItWorksTeaser.stepBadge3` | HIWStepBadge (I5164:6567;5155:59;5154:39) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-stepBadge3` |
+| `component.landing.howItWorksTeaser.step03` | STEP 03 (I5164:6567;5155:59;5154:39;5153:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-step03` |
+| `component.landing.howItWorksTeaser.mainBlock3` | main-block (I5164:6567;5155:59;5154:41) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mainBlock3` |
+| `component.landing.howItWorksTeaser.textBlock18` | Book, and analyse: one branded portal. (I5164:6567;5155:59;5154:42) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock18` |
+| `component.landing.howItWorksTeaser.accentBar3` | AccentBar (I5164:6567;5155:59;5154:43) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-accentBar3` |
+| `component.landing.howItWorksTeaser.textBlock19` | Everything inside your white-label platform. Book fares, issue tickets, set price alerts, pull reports under your own brand. Your data in your database. No shared logins. Full ownership. (I5164:6567;5155:59;5154:44) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock19` |
+| `component.landing.howItWorksTeaser.textBlock20` | Your brand. Your data. Your platform. (I5164:6567;5155:59;5154:45) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock20` |
+| `component.landing.howItWorksTeaser.footerNote` | footer-note (I5164:6567;5155:71) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-footerNote` |
+| `component.landing.howItWorksTeaser.textBlock21` | All three steps completed within your 6-week onboarding. (I5164:6567;5155:72) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-textBlock21` |
+| `component.landing.howItWorksTeaser.mobile.sectionRoot` | How-it-works teaser mobile (Gherkin @393px) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-sectionRoot` |
+| `component.landing.howItWorksTeaser.mobile.frame1561553974` | Frame 1561553974 (5164:6691) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame1561553974` |
+| `component.landing.howItWorksTeaser.mobile.frame1561553973` | Frame 1561553973 (5164:6692) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame1561553973` |
+| `component.landing.howItWorksTeaser.mobile.container` | Container (5164:6693) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-container` |
+| `component.landing.howItWorksTeaser.mobile.sectionPill` | SectionPill (5164:6694) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-sectionPill` |
+| `component.landing.howItWorksTeaser.mobile.sectionRoot2` | How It Works (5164:6696) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-sectionRoot2` |
+| `component.landing.howItWorksTeaser.mobile.heading` | Heading 2 (5164:6697) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-heading` |
+| `component.landing.howItWorksTeaser.mobile.textBlock` | From contract to booking in three steps. (5164:6698) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock` |
+| `component.landing.howItWorksTeaser.mobile.paragraph` | Paragraph (5164:6699) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-paragraph` |
+| `component.landing.howItWorksTeaser.mobile.textBlock2` | The travel industry runs on outdated infrastructur (5164:6700) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock2` |
+| `component.landing.howItWorksTeaser.mobile.container2` | Container (5164:6701) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-container2` |
+| `component.landing.howItWorksTeaser.mobile.container3` | Container (5164:6702) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-container3` |
+| `component.landing.howItWorksTeaser.mobile.hiwStack` | HIW (5164:6703) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-hiwStack` |
+| `component.landing.howItWorksTeaser.mobile.frame` | Frame (5164:6704) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame` |
+| `component.landing.howItWorksTeaser.mobile.frame2095585128` | Frame 2095585128 (5164:6705) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2095585128` |
+| `component.landing.howItWorksTeaser.mobile.mT` | MT (5164:6706) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-mT` |
+| `component.landing.howItWorksTeaser.mobile.frame2` | Frame (5164:6711) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2` |
+| `component.landing.howItWorksTeaser.mobile.sabre` | Sabre (5164:6712) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-sabre` |
+| `component.landing.howItWorksTeaser.mobile.frame3` | Frame (5164:6713) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame3` |
+| `component.landing.howItWorksTeaser.mobile.amadeus` | Amadeus (5164:6714) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-amadeus` |
+| `component.landing.howItWorksTeaser.mobile.frame4` | Frame (5164:6715) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame4` |
+| `component.landing.howItWorksTeaser.mobile.travelport` | Travelport (5164:6716) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-travelport` |
+| `component.landing.howItWorksTeaser.mobile.frame5` | Frame (5164:6717) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame5` |
+| `component.landing.howItWorksTeaser.mobile.nDC` | NDC (5164:6718) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-nDC` |
+| `component.landing.howItWorksTeaser.mobile.frame6` | Frame (5164:6719) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame6` |
+| `component.landing.howItWorksTeaser.mobile.textBlock3` | ✓ All sources connected (5164:6720) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock3` |
+| `component.landing.howItWorksTeaser.mobile.frame2095585149` | Frame 2095585149 (5164:6721) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2095585149` |
+| `component.landing.howItWorksTeaser.mobile.frame7` | Frame (5164:6722) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame7` |
+| `component.landing.howItWorksTeaser.mobile.step01` | STEP 01 (5164:6723) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-step01` |
+| `component.landing.howItWorksTeaser.mobile.frame2095585133` | Frame 2095585133 (5164:6724) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2095585133` |
+| `component.landing.howItWorksTeaser.mobile.frame2095585130` | Frame 2095585130 (5164:6725) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2095585130` |
+| `component.landing.howItWorksTeaser.mobile.textBlock4` | We plug into your GDS & NDC contracts. (5164:6726) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock4` |
+| `component.landing.howItWorksTeaser.mobile.accentBar` | accent-bar (5164:6727) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-accentBar` |
+| `component.landing.howItWorksTeaser.mobile.textBlock5` | You keep your Sabre, Amadeus or Travelport agreements & we configure the platform in week one. No new contracts. No renegotiation. NDC connections added automatically. (5164:6728) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock5` |
+| `component.landing.howItWorksTeaser.mobile.textBlock6` | Your contracts. Our infrastructure. (5164:6729) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock6` |
+| `component.landing.howItWorksTeaser.mobile.hiwStack2` | HIW (5164:6730) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-hiwStack2` |
+| `component.landing.howItWorksTeaser.mobile.frame8` | Frame (5164:6731) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame8` |
+| `component.landing.howItWorksTeaser.mobile.frame2095585136` | Frame 2095585136 (5164:6732) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2095585136` |
+| `component.landing.howItWorksTeaser.mobile.sabre2` | Sabre (5164:6733) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-sabre2` |
+| `component.landing.howItWorksTeaser.mobile.frame2095585153` | Frame 2095585153 (5164:6734) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2095585153` |
+| `component.landing.howItWorksTeaser.mobile.rectangle` | Rectangle (5164:6735) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle` |
+| `component.landing.howItWorksTeaser.mobile.rectangle2` | Rectangle (5164:6736) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle2` |
+| `component.landing.howItWorksTeaser.mobile.amadeus2` | Amadeus (5164:6737) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-amadeus2` |
+| `component.landing.howItWorksTeaser.mobile.frame2095585150` | Frame 2095585150 (5164:6738) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2095585150` |
+| `component.landing.howItWorksTeaser.mobile.rectangle3` | Rectangle (5164:6739) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle3` |
+| `component.landing.howItWorksTeaser.mobile.rectangle4` | Rectangle (5164:6740) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle4` |
+| `component.landing.howItWorksTeaser.mobile.travelport2` | Travelport (5164:6741) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-travelport2` |
+| `component.landing.howItWorksTeaser.mobile.frame2095585151` | Frame 2095585151 (5164:6742) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2095585151` |
+| `component.landing.howItWorksTeaser.mobile.rectangle5` | Rectangle (5164:6743) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle5` |
+| `component.landing.howItWorksTeaser.mobile.rectangle6` | Rectangle (5164:6744) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle6` |
+| `component.landing.howItWorksTeaser.mobile.ndcDirect` | NDC Direct (5164:6745) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-ndcDirect` |
+| `component.landing.howItWorksTeaser.mobile.frame2095585154` | Frame 2095585154 (5164:6746) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2095585154` |
+| `component.landing.howItWorksTeaser.mobile.frame2095585152` | Frame 2095585152 (5164:6747) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame2095585152` |
+| `component.landing.howItWorksTeaser.mobile.rectangle7` | Rectangle (5164:6748) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle7` |
+| `component.landing.howItWorksTeaser.mobile.rectangle8` | Rectangle (5164:6749) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle8` |
+| `component.landing.howItWorksTeaser.mobile.frame9` | Frame (5164:6750) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame9` |
+| `component.landing.howItWorksTeaser.mobile.textBlock7` | ↓ Results merged & ranked (5164:6751) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock7` |
+| `component.landing.howItWorksTeaser.mobile.frame20955851492` | Frame 2095585149 (5164:6752) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame20955851492` |
+| `component.landing.howItWorksTeaser.mobile.frame10` | Frame (5164:6753) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame10` |
+| `component.landing.howItWorksTeaser.mobile.step0w` | STEP 0w (5164:6754) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-step0w` |
+| `component.landing.howItWorksTeaser.mobile.frame20955851332` | Frame 2095585133 (5164:6755) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame20955851332` |
+| `component.landing.howItWorksTeaser.mobile.frame20955851302` | Frame 2095585130 (5164:6756) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame20955851302` |
+| `component.landing.howItWorksTeaser.mobile.textBlock8` | One query. Every source. Simultaneously. (5164:6757) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock8` |
+| `component.landing.howItWorksTeaser.mobile.accentBar2` | AccentBar (5164:6758) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-accentBar2` |
+| `component.landing.howItWorksTeaser.mobile.textBlock9` | Your agents type the route once. The platform fires parallel queries to all connected GDS and NDC sources at the same millisecond. Average fare saving vs single-GDS: ~23%.cally. (5164:6759) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock9` |
+| `component.landing.howItWorksTeaser.mobile.textBlock10` | All sources. One result list. (5164:6760) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock10` |
+| `component.landing.howItWorksTeaser.mobile.hiwStack3` | HIW (5164:6761) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-hiwStack3` |
+| `component.landing.howItWorksTeaser.mobile.frame11` | Frame (5164:6762) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame11` |
+| `component.landing.howItWorksTeaser.mobile.frame12` | Frame (5164:6763) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame12` |
+| `component.landing.howItWorksTeaser.mobile.rectangle9` | Rectangle (5164:6764) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle9` |
+| `component.landing.howItWorksTeaser.mobile.textBlock11` | ⬤ ⬤ ⬤ YOUR AGENCY PLATFORM (5164:6765) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock11` |
+| `component.landing.howItWorksTeaser.mobile.textBlock12` | LHR → DXB · EK405 (5164:6766) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock12` |
+| `component.landing.howItWorksTeaser.mobile.textBlock13` | £798 ✓ Booked (5164:6767) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock13` |
+| `component.landing.howItWorksTeaser.mobile.rectangle10` | Rectangle (5164:6768) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle10` |
+| `component.landing.howItWorksTeaser.mobile.textBlock14` | MAN → DOH · QR002 (5164:6769) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock14` |
+| `component.landing.howItWorksTeaser.mobile.textBlock15` | ⚡ Alert active (5164:6770) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock15` |
+| `component.landing.howItWorksTeaser.mobile.rectangle11` | Rectangle (5164:6771) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle11` |
+| `component.landing.howItWorksTeaser.mobile.textBlock16` | LGW → BOM · AI101 (5164:6772) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock16` |
+| `component.landing.howItWorksTeaser.mobile.textBlock17` | 📊 Reports ready (5164:6773) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock17` |
+| `component.landing.howItWorksTeaser.mobile.rectangle12` | Rectangle (5164:6774) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-rectangle12` |
+| `component.landing.howItWorksTeaser.mobile.frame20955851493` | Frame 2095585149 (5164:6775) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame20955851493` |
+| `component.landing.howItWorksTeaser.mobile.frame13` | Frame (5164:6776) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame13` |
+| `component.landing.howItWorksTeaser.mobile.step03` | STEP 03 (5164:6777) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-step03` |
+| `component.landing.howItWorksTeaser.mobile.frame20955851333` | Frame 2095585133 (5164:6778) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame20955851333` |
+| `component.landing.howItWorksTeaser.mobile.frame20955851303` | Frame 2095585130 (5164:6779) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-frame20955851303` |
+| `component.landing.howItWorksTeaser.mobile.textBlock18` | Book, and analyse: one branded portal. (5164:6780) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock18` |
+| `component.landing.howItWorksTeaser.mobile.accentBar3` | AccentBar (5164:6781) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-mobile-accentBar3` |
+| `component.landing.howItWorksTeaser.mobile.textBlock19` | Everything inside your white-label platform. Book fares, issue tickets, set price alerts, pull reports under your own brand. Your data in your database. No shared logins. Full ownership. (5164:6782) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock19` |
+| `component.landing.howItWorksTeaser.mobile.textBlock20` | Your brand. Your data. Your platform. (5164:6783) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-mobile-textBlock20` |
+| `component.landing.howItWorksTeaser.motion.root` | How-it-works motion prototype (Gherkin: 5164:10412) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-root` |
+| `component.landing.howItWorksTeaser.motion.frame2095585127` | Frame 2095585127 (I5164:10412;5145:4905) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585127` |
+| `component.landing.howItWorksTeaser.motion.sectionPill` | SectionPill (I5164:10412;5145:4906) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPill` |
+| `component.landing.howItWorksTeaser.motion.sectionPillLabel` | The Choice (I5164:10412;5145:4906;3182:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPillLabel` |
+| `component.landing.howItWorksTeaser.motion.frame2095585126` | Frame 2095585126 (I5164:10412;5145:4907) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585126` |
+| `component.landing.howItWorksTeaser.motion.textBlock` | From contract to booking in three steps. (I5164:10412;5145:4908) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock` |
+| `component.landing.howItWorksTeaser.motion.textBlock2` | We handle the technical complexity. Your agents just search and book. (I5164:10412;5145:4909) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock2` |
+| `component.landing.howItWorksTeaser.motion.hiwStack` | HIW (I5164:10412;5145:4910) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-hiwStack` |
+| `component.landing.howItWorksTeaser.motion.frame` | Frame (I5164:10412;5145:4911) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame` |
+| `component.landing.howItWorksTeaser.motion.frame2095585128` | Frame 2095585128 (I5164:10412;5145:4912) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585128` |
+| `component.landing.howItWorksTeaser.motion.mT` | MT (I5164:10412;5145:4913) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-mT` |
+| `component.landing.howItWorksTeaser.motion.frame2` | Frame (I5164:10412;5145:4918) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2` |
+| `component.landing.howItWorksTeaser.motion.sabre` | Sabre (I5164:10412;5145:4919) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sabre` |
+| `component.landing.howItWorksTeaser.motion.frame3` | Frame (I5164:10412;5145:4920) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame3` |
+| `component.landing.howItWorksTeaser.motion.amadeus` | Amadeus (I5164:10412;5145:4921) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-amadeus` |
+| `component.landing.howItWorksTeaser.motion.frame4` | Frame (I5164:10412;5145:4922) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame4` |
+| `component.landing.howItWorksTeaser.motion.travelport` | Travelport (I5164:10412;5145:4923) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-travelport` |
+| `component.landing.howItWorksTeaser.motion.frame5` | Frame (I5164:10412;5145:4924) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame5` |
+| `component.landing.howItWorksTeaser.motion.nDC` | NDC (I5164:10412;5145:4925) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-nDC` |
+| `component.landing.howItWorksTeaser.motion.frame6` | Frame (I5164:10412;5145:4926) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame6` |
+| `component.landing.howItWorksTeaser.motion.textBlock3` | ✓ All sources connected (I5164:10412;5145:4927) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock3` |
+| `component.landing.howItWorksTeaser.motion.frame7` | Frame (I5164:10412;5145:4928) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame7` |
+| `component.landing.howItWorksTeaser.motion.step01` | STEP 01 (I5164:10412;5145:4929) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-step01` |
+| `component.landing.howItWorksTeaser.motion.frame2095585133` | Frame 2095585133 (I5164:10412;5145:4930) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585133` |
+| `component.landing.howItWorksTeaser.motion.frame2095585130` | Frame 2095585130 (I5164:10412;5145:4931) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585130` |
+| `component.landing.howItWorksTeaser.motion.textBlock4` | We plug into your GDS & NDC contracts. (I5164:10412;5145:4932) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock4` |
+| `component.landing.howItWorksTeaser.motion.accentBar` | accent-bar (I5164:10412;5145:4933) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-accentBar` |
+| `component.landing.howItWorksTeaser.motion.textBlock5` | You keep your Sabre, Amadeus or Travelport agreements & we configure the platform in week one. No new contracts. No renegotiation. NDC connections added automatically. (I5164:10412;5145:4934) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock5` |
+| `component.landing.howItWorksTeaser.motion.textBlock6` | Your contracts. Our infrastructure. (I5164:10412;5145:4935) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock6` |
+| `component.landing.howItWorksTeaser.motion.hiwStack2` | HIW (I5164:10412;5145:4938) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-hiwStack2` |
+| `component.landing.howItWorksTeaser.motion.frame8` | Frame (I5164:10412;5145:4939) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame8` |
+| `component.landing.howItWorksTeaser.motion.frame2095585136` | Frame 2095585136 (I5164:10412;5145:4940) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585136` |
+| `component.landing.howItWorksTeaser.motion.sabre2` | Sabre (I5164:10412;5145:4941) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sabre2` |
+| `component.landing.howItWorksTeaser.motion.rectangle` | Rectangle (I5164:10412;5145:4942) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle` |
+| `component.landing.howItWorksTeaser.motion.rectangle2` | Rectangle (I5164:10412;5145:4943) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle2` |
+| `component.landing.howItWorksTeaser.motion.amadeus2` | Amadeus (I5164:10412;5145:4944) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-amadeus2` |
+| `component.landing.howItWorksTeaser.motion.rectangle3` | Rectangle (I5164:10412;5145:4945) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle3` |
+| `component.landing.howItWorksTeaser.motion.rectangle4` | Rectangle (I5164:10412;5145:4946) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle4` |
+| `component.landing.howItWorksTeaser.motion.travelport2` | Travelport (I5164:10412;5145:4947) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-travelport2` |
+| `component.landing.howItWorksTeaser.motion.rectangle5` | Rectangle (I5164:10412;5145:4948) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle5` |
+| `component.landing.howItWorksTeaser.motion.rectangle6` | Rectangle (I5164:10412;5145:4949) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle6` |
+| `component.landing.howItWorksTeaser.motion.ndcDirect` | NDC Direct (I5164:10412;5145:4950) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ndcDirect` |
+| `component.landing.howItWorksTeaser.motion.rectangle7` | Rectangle (I5164:10412;5145:4951) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle7` |
+| `component.landing.howItWorksTeaser.motion.rectangle8` | Rectangle (I5164:10412;5145:4952) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle8` |
+| `component.landing.howItWorksTeaser.motion.frame9` | Frame (I5164:10412;5145:4953) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame9` |
+| `component.landing.howItWorksTeaser.motion.textBlock7` | ↓ Results merged & ranked (I5164:10412;5145:4954) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock7` |
+| `component.landing.howItWorksTeaser.motion.frame10` | Frame (I5164:10412;5145:4955) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame10` |
+| `component.landing.howItWorksTeaser.motion.step0w` | STEP 0w (I5164:10412;5145:4956) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-step0w` |
+| `component.landing.howItWorksTeaser.motion.frame2095585134` | Frame 2095585134 (I5164:10412;5145:4957) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585134` |
+| `component.landing.howItWorksTeaser.motion.frame2095585131` | Frame 2095585131 (I5164:10412;5145:4958) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585131` |
+| `component.landing.howItWorksTeaser.motion.textBlock8` | One query. Every source. Simultaneously. (I5164:10412;5145:4959) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock8` |
+| `component.landing.howItWorksTeaser.motion.accentBar2` | AccentBar (I5164:10412;5145:4960) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar2` |
+| `component.landing.howItWorksTeaser.motion.textBlock9` | Your agents type the route once. The platform fires parallel queries to all connected GDS and NDC sources at the same millisecond. Average fare saving vs single-GDS: ~23%. (I5164:10412;5145:4961) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock9` |
+| `component.landing.howItWorksTeaser.motion.textBlock10` | All sources. One result list. (I5164:10412;5145:4962) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock10` |
+| `component.landing.howItWorksTeaser.motion.hiwStack3` | HIW (I5164:10412;5145:4965) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-hiwStack3` |
+| `component.landing.howItWorksTeaser.motion.frame11` | Frame (I5164:10412;5145:4966) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame11` |
+| `component.landing.howItWorksTeaser.motion.frame12` | Frame (I5164:10412;5145:4967) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame12` |
+| `component.landing.howItWorksTeaser.motion.rectangle9` | Rectangle (I5164:10412;5145:4968) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle9` |
+| `component.landing.howItWorksTeaser.motion.textBlock11` | ⬤ ⬤ ⬤ YOUR AGENCY PLATFORM (I5164:10412;5145:4969) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock11` |
+| `component.landing.howItWorksTeaser.motion.textBlock12` | LHR → DXB · EK405 (I5164:10412;5145:4970) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock12` |
+| `component.landing.howItWorksTeaser.motion.textBlock13` | £798 ✓ Booked (I5164:10412;5145:4971) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock13` |
+| `component.landing.howItWorksTeaser.motion.rectangle10` | Rectangle (I5164:10412;5145:4972) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle10` |
+| `component.landing.howItWorksTeaser.motion.textBlock14` | MAN → DOH · QR002 (I5164:10412;5145:4973) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock14` |
+| `component.landing.howItWorksTeaser.motion.textBlock15` | ⚡ Alert active (I5164:10412;5145:4974) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock15` |
+| `component.landing.howItWorksTeaser.motion.rectangle11` | Rectangle (I5164:10412;5145:4975) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle11` |
+| `component.landing.howItWorksTeaser.motion.textBlock16` | LGW → BOM · AI101 (I5164:10412;5145:4976) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock16` |
+| `component.landing.howItWorksTeaser.motion.textBlock17` | 📊 Reports ready (I5164:10412;5145:4977) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock17` |
+| `component.landing.howItWorksTeaser.motion.rectangle12` | Rectangle (I5164:10412;5145:4978) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle12` |
+| `component.landing.howItWorksTeaser.motion.frame13` | Frame (I5164:10412;5145:4979) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame13` |
+| `component.landing.howItWorksTeaser.motion.step03` | STEP 03 (I5164:10412;5145:4980) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-step03` |
+| `component.landing.howItWorksTeaser.motion.frame2095585135` | Frame 2095585135 (I5164:10412;5145:4981) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585135` |
+| `component.landing.howItWorksTeaser.motion.frame2095585132` | Frame 2095585132 (I5164:10412;5145:4982) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585132` |
+| `component.landing.howItWorksTeaser.motion.textBlock18` | Book, and analyse: one branded portal. (I5164:10412;5145:4983) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock18` |
+| `component.landing.howItWorksTeaser.motion.accentBar3` | AccentBar (I5164:10412;5145:4984) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar3` |
+| `component.landing.howItWorksTeaser.motion.textBlock19` | Everything inside your white-label platform. Book fares, issue tickets, set price alerts, pull reports under your own brand. Your data in your database. No shared logins. Full ownership. (I5164:10412;5145:4985) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock19` |
+| `component.landing.howItWorksTeaser.motion.textBlock20` | Your brand. Your data. Your platform. (I5164:10412;5145:4986) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock20` |
+| `component.landing.howItWorksTeaser.motion.footerNote` | footer-note (I5164:10412;5404:10381) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-footerNote` |
+| `component.landing.howItWorksTeaser.motion.textBlock21` | How does the technical setup work? Read the full breakdown → (I5164:10412;5404:10382) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock21` |
 
 ---
 

@@ -32,3 +32,4 @@ Design file: `h6BqI1ZRMSJxR7jESNF0Ep` — [ML Travel Project (faryal-updated)](h
 1. No raw hex colours or px values — use design tokens
 2. No `app/api/`, no ORM, no DB — backend is MLtravel-Backend
 3. No `any`, no `@ts-ignore`, no skipped tests
+4. No `interface`, `type`, or module-level constants in `.tsx` — use `types/<domain>.types.ts` and `constants/` (see `.cursor/rules/types-and-constants.mdc`)

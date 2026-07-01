@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "version": "0.1.0",
-    "description": "UI registry — LP-001 Navbar + Hero + Problem slices (ui-registry-build 2026-07-01)",
+    "description": "UI registry — LP-001 Navbar + Hero + Problem + Comparison₁ + HowItWorksTeaser slices (ui-registry-build 2026-07-01)",
     "pathGrammar": "<domain>.<segment>(.<segment>)+",
     "owner": "MLtravel FE",
     "gherkinAliases": {
@@ -11,7 +11,9 @@
       "component.navbar": "component.navbar.root",
       "component.landing.hero": "component.landing.hero.root",
       "component.landing.hero.cta": "component.landing.hero.cta",
-      "component.landing.problem": "component.landing.problem.root"
+      "component.landing.problem": "component.landing.problem.root",
+      "component.landing.comparisonFirst": "component.landing.comparisonFirst.root",
+      "component.landing.howItWorksTeaser": "component.landing.howItWorksTeaser.root"
     }
   },
   "screen": {
@@ -1307,6 +1309,3600 @@
             "$description": "Motion gradient bar",
             "$screen": "screen.landing.home",
             "$figmaNode": "I5164:10344;5145:4212",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          }
+        }
+      },
+      "comparisonFirst": {
+        "root": {
+          "$description": "Comparison first block desktop (Gherkin: component.landing.comparisonFirst)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:6566",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "sectionHeader": {
+          "$description": "SectionHeader/Comparison",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionPill": {
+          "$description": "The Choice section pill",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:14;5005:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionPillLabel": {
+          "$description": "Pill label The Choice",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:14;5005:14;3182:15",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "headingBlock": {
+          "$description": "Section heading block",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:14;5002:1796",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionHeading": {
+          "$description": "Section H2 — Dependency or Ownership",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:14;5005:17",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionSubtitle": {
+          "$description": "Section subtitle copy",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:14;5005:18",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "columnsFrame": {
+          "$description": "Columns + CTA frame",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5002:1800",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "giantTicket": {
+          "$description": "GiantTicket two-column card stack",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryCard": {
+          "$description": "Industry norm comparison card",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "industryCardHeader": {
+          "$description": "Industry card header",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryBadge": {
+          "$description": "Industry card header badge",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:17",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryBadgeLabel": {
+          "$description": "Industry badge label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:17;3183:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryTitleLine1": {
+          "$description": "Industry card title line 1",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:20",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryTitleLine2": {
+          "$description": "Industry card title line 2",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:21",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryCardBody": {
+          "$description": "Industry card body",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:22",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow1": {
+          "$description": "Industry norm row 1",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:23",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "industryRow1MicroTag": {
+          "$description": "Industry norm row 1 micro tag",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:23;3183:19",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow1TagLabel": {
+          "$description": "Industry norm row 1 tag label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:23;3183:19;3182:17",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow1Title": {
+          "$description": "Industry norm row 1 title",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:23;3183:22",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow1Body": {
+          "$description": "Industry norm row 1 body",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:23;3183:23",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow1Stamp": {
+          "$description": "Industry norm row 1 stamp",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:23;3183:25",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow1StampLabel": {
+          "$description": "Industry norm row 1 stamp label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:23;3183:25;3182:30",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow2": {
+          "$description": "Industry norm row 2",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:35",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "industryRow2MicroTag": {
+          "$description": "Industry norm row 2 micro tag",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:35;3183:28",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow2TagLabel": {
+          "$description": "Industry norm row 2 tag label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:35;3183:28;3182:19",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow2Title": {
+          "$description": "Industry norm row 2 title",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:35;3183:31",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow2Body": {
+          "$description": "Industry norm row 2 body",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:35;3183:32",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow2Stamp": {
+          "$description": "Industry norm row 2 stamp",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:35;3183:34",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow2StampLabel": {
+          "$description": "Industry norm row 2 stamp label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:35;3183:34;3182:32",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow3": {
+          "$description": "Industry norm row 3",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:47",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "industryRow3MicroTag": {
+          "$description": "Industry norm row 3 micro tag",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:47;3183:37",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow3TagLabel": {
+          "$description": "Industry norm row 3 tag label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:47;3183:37;3182:21",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow3Title": {
+          "$description": "Industry norm row 3 title",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:47;3183:40",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow3Body": {
+          "$description": "Industry norm row 3 body",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:47;3183:41",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow3Stamp": {
+          "$description": "Industry norm row 3 stamp",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:47;3183:43",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "industryRow3StampLabel": {
+          "$description": "Industry norm row 3 stamp label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:20;5004:47;3183:43;3182:34",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "dividerPerforated": {
+          "$description": "Perforated divider between cards",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:90",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodCard": {
+          "$description": "MaqsoodTravel comparison card",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodCardHeader": {
+          "$description": "Maqsood card header",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:59",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodBadge": {
+          "$description": "Maqsood card header badge",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:62",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodBadgeLabel": {
+          "$description": "Maqsood badge label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:62;3183:16",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodTitleLine1": {
+          "$description": "Maqsood card title line 1",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:65",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodTitleLine2": {
+          "$description": "Maqsood card title line 2",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:66",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodCardBody": {
+          "$description": "Maqsood card body",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:67",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow1": {
+          "$description": "MaqsoodTravel row 1",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:68",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow1MicroTag": {
+          "$description": "MaqsoodTravel row 1 micro tag",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:68;3183:46",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow1TagLabel": {
+          "$description": "MaqsoodTravel row 1 tag label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:68;3183:46;3182:23",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow1Title": {
+          "$description": "MaqsoodTravel row 1 title",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:68;3183:49",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow1Body": {
+          "$description": "MaqsoodTravel row 1 body",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:68;3183:50",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow1Stamp": {
+          "$description": "MaqsoodTravel row 1 stamp",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:68;3183:52",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow1StampLabel": {
+          "$description": "MaqsoodTravel row 1 stamp label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:68;3183:52;3182:36",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow2": {
+          "$description": "MaqsoodTravel row 2",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:80",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow2MicroTag": {
+          "$description": "MaqsoodTravel row 2 micro tag",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:80;3183:55",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow2TagLabel": {
+          "$description": "MaqsoodTravel row 2 tag label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:80;3183:55;3182:25",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow2Title": {
+          "$description": "MaqsoodTravel row 2 title",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:80;3183:58",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow2Body": {
+          "$description": "MaqsoodTravel row 2 body",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:80;3183:59",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow2Stamp": {
+          "$description": "MaqsoodTravel row 2 stamp",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:80;3183:61",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow2StampLabel": {
+          "$description": "MaqsoodTravel row 2 stamp label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:80;3183:61;3182:38",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow3": {
+          "$description": "MaqsoodTravel row 3",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:92",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow3MicroTag": {
+          "$description": "MaqsoodTravel row 3 micro tag",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:92;3183:64",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow3TagLabel": {
+          "$description": "MaqsoodTravel row 3 tag label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:92;3183:64;3182:27",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow3Title": {
+          "$description": "MaqsoodTravel row 3 title",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:92;3183:67",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow3Body": {
+          "$description": "MaqsoodTravel row 3 body",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:92;3183:68",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow3Stamp": {
+          "$description": "MaqsoodTravel row 3 stamp",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:92;3183:70",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "maqsoodRow3StampLabel": {
+          "$description": "MaqsoodTravel row 3 stamp label",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:125;5004:92;3183:70;3182:40",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "notchTop": {
+          "$description": "GiantTicket top notch",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5006:22;5005:195",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaBlock": {
+          "$description": "Footnote + CTA block",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5151:7325",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "footnote": {
+          "$description": "Savings footnote copy",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5151:7327",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "cta": {
+          "$description": "Book A Free Demo primary CTA",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5151:7328",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "ctaLabel": {
+          "$description": "CTA label Book A Free Demo",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5151:7328;2780:1424",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaIcon": {
+          "$description": "CTA icon button",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5151:7328;2780:1425",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaGraphic": {
+          "$description": "CTA arrow graphic",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6566;5151:7328;2780:1425;2780:1499",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "mobile": {
+          "root": {
+            "$description": "Comparison first block mobile (Gherkin @393px)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6609",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "headerBlock": {
+            "$description": "Mobile header block",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6611",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionPill": {
+            "$description": "Mobile section pill",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6612",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionPillDot": {
+            "$description": "Mobile pill dot",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6613",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionPillLabel": {
+            "$description": "Mobile pill label The Choice",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6614",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "headRow": {
+            "$description": "Mobile heading row",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6615",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionHeadingLine1": {
+            "$description": "Mobile H2 line 1",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6616",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionHeadingLine2": {
+            "$description": "Mobile H2 line 2",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6618",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionSubtitle": {
+            "$description": "Mobile section subtitle",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6619",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "contentFrame": {
+            "$description": "Mobile cards + CTA frame",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6620",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "giantTicket": {
+            "$description": "Mobile GiantTicket stack",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6621",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryCard": {
+            "$description": "Mobile industry norm card",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6622",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "industryCardHeader": {
+            "$description": "Mobile industry card header",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6623",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryBadge": {
+            "$description": "Mobile industry badge",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6626",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryTitleLine1": {
+            "$description": "Mobile industry title line 1",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6629",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryTitleLine2": {
+            "$description": "Mobile industry title line 2",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6630",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryCardBody": {
+            "$description": "Mobile industry card body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6631",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow1": {
+            "$description": "Mobile industry norm row 1",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6632",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "industryRow1Tag": {
+            "$description": "Mobile industry norm row 1 tag",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6634",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow1Title": {
+            "$description": "Mobile industry norm row 1 title",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6635",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow1Body": {
+            "$description": "Mobile industry norm row 1 body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6636",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow1Stamp": {
+            "$description": "Mobile industry norm row 1 stamp",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6637",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow2": {
+            "$description": "Mobile industry norm row 2",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6639",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "industryRow2Tag": {
+            "$description": "Mobile industry norm row 2 tag",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6641",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow2Title": {
+            "$description": "Mobile industry norm row 2 title",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6642",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow2Body": {
+            "$description": "Mobile industry norm row 2 body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6643",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow2Stamp": {
+            "$description": "Mobile industry norm row 2 stamp",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6644",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow3": {
+            "$description": "Mobile industry norm row 3",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6646",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "industryRow3Tag": {
+            "$description": "Mobile industry norm row 3 tag",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6648",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow3Title": {
+            "$description": "Mobile industry norm row 3 title",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6649",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow3Body": {
+            "$description": "Mobile industry norm row 3 body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6650",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryRow3Stamp": {
+            "$description": "Mobile industry norm row 3 stamp",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6651",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodCard": {
+            "$description": "Mobile MaqsoodTravel card",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6653",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodCardHeader": {
+            "$description": "Mobile Maqsood card header",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6654",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodBadge": {
+            "$description": "Mobile Maqsood badge",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6657",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodTitleLine1": {
+            "$description": "Mobile Maqsood title line 1",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6660",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodTitleLine2": {
+            "$description": "Mobile Maqsood title line 2",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6661",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodCardBody": {
+            "$description": "Mobile Maqsood card body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6662",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow1": {
+            "$description": "Mobile MaqsoodTravel row 1",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6663",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow1Tag": {
+            "$description": "Mobile MaqsoodTravel row 1 tag",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6665",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow1Title": {
+            "$description": "Mobile MaqsoodTravel row 1 title",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6666",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow1Body": {
+            "$description": "Mobile MaqsoodTravel row 1 body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6667",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow1Stamp": {
+            "$description": "Mobile MaqsoodTravel row 1 stamp",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6668",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow2": {
+            "$description": "Mobile MaqsoodTravel row 2",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6670",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow2Tag": {
+            "$description": "Mobile MaqsoodTravel row 2 tag",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6672",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow2Title": {
+            "$description": "Mobile MaqsoodTravel row 2 title",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6673",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow2Body": {
+            "$description": "Mobile MaqsoodTravel row 2 body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6674",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow2Stamp": {
+            "$description": "Mobile MaqsoodTravel row 2 stamp",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6675",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow3": {
+            "$description": "Mobile MaqsoodTravel row 3",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6677",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow3Tag": {
+            "$description": "Mobile MaqsoodTravel row 3 tag",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6679",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow3Title": {
+            "$description": "Mobile MaqsoodTravel row 3 title",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6680",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow3Body": {
+            "$description": "Mobile MaqsoodTravel row 3 body",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6681",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodRow3Stamp": {
+            "$description": "Mobile MaqsoodTravel row 3 stamp",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6682",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "ctaBlock": {
+            "$description": "Mobile footnote + CTA block",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6683",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "footnote": {
+            "$description": "Mobile savings footnote",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6684",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "cta": {
+            "$description": "Mobile Book A Free Demo CTA",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6685",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "ctaLabel": {
+            "$description": "Mobile CTA label",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6686",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "ctaIcon": {
+            "$description": "Mobile CTA icon",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6687",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          }
+        },
+        "motion": {
+          "root": {
+            "$description": "Comparison motion prototype (Gherkin: 5164:10411)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:10411",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "sectionHeader": {
+            "$description": "Motion section header",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10411;5145:4498",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "giantTicket": {
+            "$description": "Motion GiantTicket",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10411;5145:4500",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "industryCard": {
+            "$description": "Motion industry card",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10411;5145:4500;5005:20",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "maqsoodCard": {
+            "$description": "Motion Maqsood card",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10411;5145:4500;5005:125",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "ctaBlock": {
+            "$description": "Motion CTA block",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10411;5145:4501",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "cta": {
+            "$description": "Motion primary CTA",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10411;5145:4504",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          }
+        }
+      },
+      "howItWorksTeaser": {
+        "root": {
+          "$description": "How-it-works teaser desktop (Gherkin: component.landing.howItWorksTeaser)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:6567",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "sectionHeader": {
+          "$description": "SectionHeader/HowItWorks (I5164:6567;5155:21)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:21",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionPill": {
+          "$description": "SectionPill (I5164:6567;5155:21;5151:13131)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:21;5151:13131",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sectionRoot": {
+          "$description": "How It Works (I5164:6567;5155:21;5151:13131;5151:13130)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:21;5151:13131;5151:13130",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "headingBlock": {
+          "$description": "heading-block (I5164:6567;5155:21;5155:17)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:21;5155:17",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock": {
+          "$description": "From contract to booking in three steps. (I5164:6567;5155:21;5155:18)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:21;5155:18",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock2": {
+          "$description": "We handle the technical complexity. Your agents just search and book. (I5164:6567;5155:21;5155:19)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:21;5155:19",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame2095585115": {
+          "$description": "Frame 2095585115 (I5164:6567;5151:13139)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5151:13139",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "cardsWrap": {
+          "$description": "cards-wrap (I5164:6567;5155:28)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:28",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "hiwCard": {
+          "$description": "HIWCard (I5164:6567;5155:29)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "cardVisual": {
+          "$description": "card-visual (I5164:6567;5155:29;5151:13140)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13140",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame2095585128": {
+          "$description": "Frame 2095585128 (I5164:6567;5155:29;5151:13141)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13141",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "mT": {
+          "$description": "MT (I5164:6567;5155:29;5151:13142)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13142",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame": {
+          "$description": "Frame (I5164:6567;5155:29;5151:13147)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13147",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sabre": {
+          "$description": "Sabre (I5164:6567;5155:29;5151:13148)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13148",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame2": {
+          "$description": "Frame (I5164:6567;5155:29;5151:13149)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13149",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "amadeus": {
+          "$description": "Amadeus (I5164:6567;5155:29;5151:13150)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13150",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame3": {
+          "$description": "Frame (I5164:6567;5155:29;5151:13151)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13151",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "travelport": {
+          "$description": "Travelport (I5164:6567;5155:29;5151:13152)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13152",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame4": {
+          "$description": "Frame (I5164:6567;5155:29;5151:13153)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13153",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "nDC": {
+          "$description": "NDC (I5164:6567;5155:29;5151:13154)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13154",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame5": {
+          "$description": "Frame (I5164:6567;5155:29;5151:13155)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13155",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock3": {
+          "$description": "✓ All sources connected (I5164:6567;5155:29;5151:13156)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5151:13156",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "cardContent": {
+          "$description": "card-content (I5164:6567;5155:29;5154:16)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5154:16",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "stepBadge": {
+          "$description": "HIWStepBadge (I5164:6567;5155:29;5154:17)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5154:17",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "step01": {
+          "$description": "STEP 01 (I5164:6567;5155:29;5154:17;5153:14)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5154:17;5153:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "mainBlock": {
+          "$description": "main-block (I5164:6567;5155:29;5154:19)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5154:19",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock4": {
+          "$description": "We plug into your GDS & NDC contracts. (I5164:6567;5155:29;5154:20)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5154:20",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "accentBar": {
+          "$description": "AccentBar (I5164:6567;5155:29;5154:21)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5154:21",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "textBlock5": {
+          "$description": "You keep your Sabre, Amadeus or Travelport agreements & we configure the platform in week one. No new contracts. No renegotiation. NDC connections added automatically. (I5164:6567;5155:29;5154:22)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5154:22",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock6": {
+          "$description": "Your contracts. Our infrastructure. (I5164:6567;5155:29;5154:23)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:29;5154:23",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "hiwCard2": {
+          "$description": "HIWCard (I5164:6567;5155:44)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "cardVisual2": {
+          "$description": "card-visual (I5164:6567;5155:44;5151:13175)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13175",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame2095585136": {
+          "$description": "Frame 2095585136 (I5164:6567;5155:44;5151:13176)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13176",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "sabre2": {
+          "$description": "Sabre (I5164:6567;5155:44;5151:13177)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13177",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame2095585153": {
+          "$description": "Frame 2095585153 (I5164:6567;5155:44;5151:13178)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13178",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "rectangle": {
+          "$description": "Rectangle (I5164:6567;5155:44;5151:13179)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13179",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "rectangle2": {
+          "$description": "Rectangle (I5164:6567;5155:44;5151:13180)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13180",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "amadeus2": {
+          "$description": "Amadeus (I5164:6567;5155:44;5151:13181)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13181",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame2095585150": {
+          "$description": "Frame 2095585150 (I5164:6567;5155:44;5151:13182)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13182",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "rectangle3": {
+          "$description": "Rectangle (I5164:6567;5155:44;5151:13183)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13183",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "rectangle4": {
+          "$description": "Rectangle (I5164:6567;5155:44;5151:13184)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13184",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "travelport2": {
+          "$description": "Travelport (I5164:6567;5155:44;5151:13185)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13185",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame2095585151": {
+          "$description": "Frame 2095585151 (I5164:6567;5155:44;5151:13186)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13186",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "rectangle5": {
+          "$description": "Rectangle (I5164:6567;5155:44;5151:13187)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13187",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "rectangle6": {
+          "$description": "Rectangle (I5164:6567;5155:44;5151:13188)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13188",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "ndcDirect": {
+          "$description": "NDC Direct (I5164:6567;5155:44;5151:13189)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13189",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame2095585152": {
+          "$description": "Frame 2095585152 (I5164:6567;5155:44;5151:13190)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13190",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "rectangle7": {
+          "$description": "Rectangle (I5164:6567;5155:44;5151:13191)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13191",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "rectangle8": {
+          "$description": "Rectangle (I5164:6567;5155:44;5151:13192)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13192",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "frame6": {
+          "$description": "Frame (I5164:6567;5155:44;5151:13193)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13193",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock7": {
+          "$description": "↓ Results merged & ranked (I5164:6567;5155:44;5151:13194)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5151:13194",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "cardContent2": {
+          "$description": "card-content (I5164:6567;5155:44;5154:27)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5154:27",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "stepBadge2": {
+          "$description": "HIWStepBadge (I5164:6567;5155:44;5154:28)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5154:28",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "step02": {
+          "$description": "STEP 02 (I5164:6567;5155:44;5154:28;5153:16)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5154:28;5153:16",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "mainBlock2": {
+          "$description": "main-block (I5164:6567;5155:44;5154:30)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5154:30",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock8": {
+          "$description": "One query. Every source. Simultaneously. (I5164:6567;5155:44;5154:31)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5154:31",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "accentBar2": {
+          "$description": "AccentBar (I5164:6567;5155:44;5154:32)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5154:32",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "textBlock9": {
+          "$description": "Your agents type the route once. The platform fires parallel queries to all connected GDS and NDC sources at the same millisecond. Average fare saving vs single-GDS: ~23%. (I5164:6567;5155:44;5154:33)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5154:33",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock10": {
+          "$description": "All sources. One result list. (I5164:6567;5155:44;5154:34)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:44;5154:34",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "hiwCard3": {
+          "$description": "HIWCard (I5164:6567;5155:59)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "cardVisual3": {
+          "$description": "card-visual (I5164:6567;5155:59;5151:13216)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13216",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "frame7": {
+          "$description": "Frame (I5164:6567;5155:59;5151:13217)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13217",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "rectangle9": {
+          "$description": "Rectangle (I5164:6567;5155:59;5151:13218)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13218",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "textBlock11": {
+          "$description": "⬤ ⬤ ⬤ YOUR AGENCY PLATFORM (I5164:6567;5155:59;5151:13219)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13219",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock12": {
+          "$description": "LHR → DXB · EK405 (I5164:6567;5155:59;5151:13220)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13220",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock13": {
+          "$description": "£798 ✓ Booked (I5164:6567;5155:59;5151:13221)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13221",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "rectangle10": {
+          "$description": "Rectangle (I5164:6567;5155:59;5151:13222)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13222",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "textBlock14": {
+          "$description": "MAN → DOH · QR002 (I5164:6567;5155:59;5151:13223)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13223",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock15": {
+          "$description": "⚡ Alert active (I5164:6567;5155:59;5151:13224)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13224",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "rectangle11": {
+          "$description": "Rectangle (I5164:6567;5155:59;5151:13225)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13225",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "textBlock16": {
+          "$description": "LGW → BOM · AI101 (I5164:6567;5155:59;5151:13226)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13226",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock17": {
+          "$description": "📊 Reports ready (I5164:6567;5155:59;5151:13227)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13227",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "rectangle12": {
+          "$description": "Rectangle (I5164:6567;5155:59;5151:13228)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5151:13228",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "cardContent3": {
+          "$description": "card-content (I5164:6567;5155:59;5154:38)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5154:38",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "stepBadge3": {
+          "$description": "HIWStepBadge (I5164:6567;5155:59;5154:39)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5154:39",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "step03": {
+          "$description": "STEP 03 (I5164:6567;5155:59;5154:39;5153:18)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5154:39;5153:18",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "mainBlock3": {
+          "$description": "main-block (I5164:6567;5155:59;5154:41)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5154:41",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock18": {
+          "$description": "Book, and analyse: one branded portal. (I5164:6567;5155:59;5154:42)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5154:42",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "accentBar3": {
+          "$description": "AccentBar (I5164:6567;5155:59;5154:43)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5154:43",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "textBlock19": {
+          "$description": "Everything inside your white-label platform. Book fares, issue tickets, set price alerts, pull reports under your own brand. Your data in your database. No shared logins. Full ownership. (I5164:6567;5155:59;5154:44)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5154:44",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock20": {
+          "$description": "Your brand. Your data. Your platform. (I5164:6567;5155:59;5154:45)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:59;5154:45",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "footerNote": {
+          "$description": "footer-note (I5164:6567;5155:71)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:71",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "textBlock21": {
+          "$description": "All three steps completed within your 6-week onboarding. (I5164:6567;5155:72)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:6567;5155:72",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "mobile": {
+          "sectionRoot": {
+            "$description": "How-it-works teaser mobile (Gherkin @393px)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6690",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame1561553974": {
+            "$description": "Frame 1561553974 (5164:6691)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6691",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame1561553973": {
+            "$description": "Frame 1561553973 (5164:6692)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6692",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "container": {
+            "$description": "Container (5164:6693)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6693",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionPill": {
+            "$description": "SectionPill (5164:6694)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6694",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionRoot2": {
+            "$description": "How It Works (5164:6696)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6696",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "heading": {
+            "$description": "Heading 2 (5164:6697)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6697",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock": {
+            "$description": "From contract to booking in three steps. (5164:6698)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6698",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "paragraph": {
+            "$description": "Paragraph (5164:6699)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6699",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock2": {
+            "$description": "The travel industry runs on outdated infrastructur (5164:6700)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6700",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "container2": {
+            "$description": "Container (5164:6701)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6701",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "container3": {
+            "$description": "Container (5164:6702)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6702",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "hiwStack": {
+            "$description": "HIW (5164:6703)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6703",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame": {
+            "$description": "Frame (5164:6704)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6704",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585128": {
+            "$description": "Frame 2095585128 (5164:6705)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6705",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "mT": {
+            "$description": "MT (5164:6706)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6706",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2": {
+            "$description": "Frame (5164:6711)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6711",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sabre": {
+            "$description": "Sabre (5164:6712)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6712",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame3": {
+            "$description": "Frame (5164:6713)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6713",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "amadeus": {
+            "$description": "Amadeus (5164:6714)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6714",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame4": {
+            "$description": "Frame (5164:6715)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6715",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "travelport": {
+            "$description": "Travelport (5164:6716)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6716",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame5": {
+            "$description": "Frame (5164:6717)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6717",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "nDC": {
+            "$description": "NDC (5164:6718)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6718",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame6": {
+            "$description": "Frame (5164:6719)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6719",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock3": {
+            "$description": "✓ All sources connected (5164:6720)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6720",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585149": {
+            "$description": "Frame 2095585149 (5164:6721)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6721",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame7": {
+            "$description": "Frame (5164:6722)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6722",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "step01": {
+            "$description": "STEP 01 (5164:6723)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6723",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585133": {
+            "$description": "Frame 2095585133 (5164:6724)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6724",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585130": {
+            "$description": "Frame 2095585130 (5164:6725)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6725",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock4": {
+            "$description": "We plug into your GDS & NDC contracts. (5164:6726)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6726",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "accentBar": {
+            "$description": "accent-bar (5164:6727)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6727",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock5": {
+            "$description": "You keep your Sabre, Amadeus or Travelport agreements & we configure the platform in week one. No new contracts. No renegotiation. NDC connections added automatically. (5164:6728)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6728",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock6": {
+            "$description": "Your contracts. Our infrastructure. (5164:6729)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6729",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "hiwStack2": {
+            "$description": "HIW (5164:6730)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6730",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame8": {
+            "$description": "Frame (5164:6731)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6731",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585136": {
+            "$description": "Frame 2095585136 (5164:6732)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6732",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sabre2": {
+            "$description": "Sabre (5164:6733)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6733",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585153": {
+            "$description": "Frame 2095585153 (5164:6734)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6734",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle": {
+            "$description": "Rectangle (5164:6735)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6735",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "rectangle2": {
+            "$description": "Rectangle (5164:6736)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6736",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "amadeus2": {
+            "$description": "Amadeus (5164:6737)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6737",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585150": {
+            "$description": "Frame 2095585150 (5164:6738)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6738",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle3": {
+            "$description": "Rectangle (5164:6739)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6739",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "rectangle4": {
+            "$description": "Rectangle (5164:6740)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6740",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "travelport2": {
+            "$description": "Travelport (5164:6741)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6741",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585151": {
+            "$description": "Frame 2095585151 (5164:6742)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6742",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle5": {
+            "$description": "Rectangle (5164:6743)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6743",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "rectangle6": {
+            "$description": "Rectangle (5164:6744)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6744",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "ndcDirect": {
+            "$description": "NDC Direct (5164:6745)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6745",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585154": {
+            "$description": "Frame 2095585154 (5164:6746)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6746",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585152": {
+            "$description": "Frame 2095585152 (5164:6747)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6747",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle7": {
+            "$description": "Rectangle (5164:6748)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6748",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "rectangle8": {
+            "$description": "Rectangle (5164:6749)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6749",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame9": {
+            "$description": "Frame (5164:6750)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6750",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock7": {
+            "$description": "↓ Results merged & ranked (5164:6751)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6751",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame20955851492": {
+            "$description": "Frame 2095585149 (5164:6752)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6752",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame10": {
+            "$description": "Frame (5164:6753)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6753",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "step0w": {
+            "$description": "STEP 0w (5164:6754)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6754",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame20955851332": {
+            "$description": "Frame 2095585133 (5164:6755)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6755",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame20955851302": {
+            "$description": "Frame 2095585130 (5164:6756)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6756",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock8": {
+            "$description": "One query. Every source. Simultaneously. (5164:6757)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6757",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "accentBar2": {
+            "$description": "AccentBar (5164:6758)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6758",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock9": {
+            "$description": "Your agents type the route once. The platform fires parallel queries to all connected GDS and NDC sources at the same millisecond. Average fare saving vs single-GDS: ~23%.cally. (5164:6759)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6759",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock10": {
+            "$description": "All sources. One result list. (5164:6760)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6760",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "hiwStack3": {
+            "$description": "HIW (5164:6761)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6761",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame11": {
+            "$description": "Frame (5164:6762)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6762",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame12": {
+            "$description": "Frame (5164:6763)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6763",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle9": {
+            "$description": "Rectangle (5164:6764)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6764",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock11": {
+            "$description": "⬤ ⬤ ⬤ YOUR AGENCY PLATFORM (5164:6765)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6765",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock12": {
+            "$description": "LHR → DXB · EK405 (5164:6766)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6766",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock13": {
+            "$description": "£798 ✓ Booked (5164:6767)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6767",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle10": {
+            "$description": "Rectangle (5164:6768)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6768",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock14": {
+            "$description": "MAN → DOH · QR002 (5164:6769)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6769",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock15": {
+            "$description": "⚡ Alert active (5164:6770)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6770",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle11": {
+            "$description": "Rectangle (5164:6771)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6771",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock16": {
+            "$description": "LGW → BOM · AI101 (5164:6772)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6772",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock17": {
+            "$description": "📊 Reports ready (5164:6773)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6773",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle12": {
+            "$description": "Rectangle (5164:6774)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6774",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame20955851493": {
+            "$description": "Frame 2095585149 (5164:6775)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6775",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame13": {
+            "$description": "Frame (5164:6776)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6776",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "step03": {
+            "$description": "STEP 03 (5164:6777)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6777",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame20955851333": {
+            "$description": "Frame 2095585133 (5164:6778)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6778",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame20955851303": {
+            "$description": "Frame 2095585130 (5164:6779)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6779",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock18": {
+            "$description": "Book, and analyse: one branded portal. (5164:6780)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6780",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "accentBar3": {
+            "$description": "AccentBar (5164:6781)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6781",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock19": {
+            "$description": "Everything inside your white-label platform. Book fares, issue tickets, set price alerts, pull reports under your own brand. Your data in your database. No shared logins. Full ownership. (5164:6782)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6782",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock20": {
+            "$description": "Your brand. Your data. Your platform. (5164:6783)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:6783",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          }
+        },
+        "motion": {
+          "root": {
+            "$description": "How-it-works motion prototype (Gherkin: 5164:10412)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5164:10412",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585127": {
+            "$description": "Frame 2095585127 (I5164:10412;5145:4905)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4905",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionPill": {
+            "$description": "SectionPill (I5164:10412;5145:4906)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4906",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sectionPillLabel": {
+            "$description": "The Choice (I5164:10412;5145:4906;3182:15)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4906;3182:15",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585126": {
+            "$description": "Frame 2095585126 (I5164:10412;5145:4907)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4907",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock": {
+            "$description": "From contract to booking in three steps. (I5164:10412;5145:4908)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4908",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock2": {
+            "$description": "We handle the technical complexity. Your agents just search and book. (I5164:10412;5145:4909)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4909",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "hiwStack": {
+            "$description": "HIW (I5164:10412;5145:4910)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4910",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame": {
+            "$description": "Frame (I5164:10412;5145:4911)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4911",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585128": {
+            "$description": "Frame 2095585128 (I5164:10412;5145:4912)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4912",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "mT": {
+            "$description": "MT (I5164:10412;5145:4913)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4913",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2": {
+            "$description": "Frame (I5164:10412;5145:4918)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4918",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sabre": {
+            "$description": "Sabre (I5164:10412;5145:4919)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4919",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame3": {
+            "$description": "Frame (I5164:10412;5145:4920)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4920",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "amadeus": {
+            "$description": "Amadeus (I5164:10412;5145:4921)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4921",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame4": {
+            "$description": "Frame (I5164:10412;5145:4922)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4922",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "travelport": {
+            "$description": "Travelport (I5164:10412;5145:4923)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4923",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame5": {
+            "$description": "Frame (I5164:10412;5145:4924)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4924",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "nDC": {
+            "$description": "NDC (I5164:10412;5145:4925)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4925",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame6": {
+            "$description": "Frame (I5164:10412;5145:4926)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4926",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock3": {
+            "$description": "✓ All sources connected (I5164:10412;5145:4927)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4927",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame7": {
+            "$description": "Frame (I5164:10412;5145:4928)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4928",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "step01": {
+            "$description": "STEP 01 (I5164:10412;5145:4929)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4929",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585133": {
+            "$description": "Frame 2095585133 (I5164:10412;5145:4930)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4930",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585130": {
+            "$description": "Frame 2095585130 (I5164:10412;5145:4931)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4931",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock4": {
+            "$description": "We plug into your GDS & NDC contracts. (I5164:10412;5145:4932)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4932",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "accentBar": {
+            "$description": "accent-bar (I5164:10412;5145:4933)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4933",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock5": {
+            "$description": "You keep your Sabre, Amadeus or Travelport agreements & we configure the platform in week one. No new contracts. No renegotiation. NDC connections added automatically. (I5164:10412;5145:4934)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4934",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock6": {
+            "$description": "Your contracts. Our infrastructure. (I5164:10412;5145:4935)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4935",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "hiwStack2": {
+            "$description": "HIW (I5164:10412;5145:4938)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4938",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame8": {
+            "$description": "Frame (I5164:10412;5145:4939)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4939",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585136": {
+            "$description": "Frame 2095585136 (I5164:10412;5145:4940)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4940",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "sabre2": {
+            "$description": "Sabre (I5164:10412;5145:4941)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4941",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle": {
+            "$description": "Rectangle (I5164:10412;5145:4942)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4942",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "rectangle2": {
+            "$description": "Rectangle (I5164:10412;5145:4943)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4943",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "amadeus2": {
+            "$description": "Amadeus (I5164:10412;5145:4944)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4944",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle3": {
+            "$description": "Rectangle (I5164:10412;5145:4945)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4945",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "rectangle4": {
+            "$description": "Rectangle (I5164:10412;5145:4946)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4946",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "travelport2": {
+            "$description": "Travelport (I5164:10412;5145:4947)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4947",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle5": {
+            "$description": "Rectangle (I5164:10412;5145:4948)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4948",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "rectangle6": {
+            "$description": "Rectangle (I5164:10412;5145:4949)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4949",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "ndcDirect": {
+            "$description": "NDC Direct (I5164:10412;5145:4950)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4950",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle7": {
+            "$description": "Rectangle (I5164:10412;5145:4951)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4951",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "rectangle8": {
+            "$description": "Rectangle (I5164:10412;5145:4952)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4952",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame9": {
+            "$description": "Frame (I5164:10412;5145:4953)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4953",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock7": {
+            "$description": "↓ Results merged & ranked (I5164:10412;5145:4954)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4954",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame10": {
+            "$description": "Frame (I5164:10412;5145:4955)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4955",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "step0w": {
+            "$description": "STEP 0w (I5164:10412;5145:4956)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4956",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585134": {
+            "$description": "Frame 2095585134 (I5164:10412;5145:4957)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4957",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585131": {
+            "$description": "Frame 2095585131 (I5164:10412;5145:4958)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4958",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock8": {
+            "$description": "One query. Every source. Simultaneously. (I5164:10412;5145:4959)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4959",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "accentBar2": {
+            "$description": "AccentBar (I5164:10412;5145:4960)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4960",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock9": {
+            "$description": "Your agents type the route once. The platform fires parallel queries to all connected GDS and NDC sources at the same millisecond. Average fare saving vs single-GDS: ~23%. (I5164:10412;5145:4961)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4961",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock10": {
+            "$description": "All sources. One result list. (I5164:10412;5145:4962)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4962",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "hiwStack3": {
+            "$description": "HIW (I5164:10412;5145:4965)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4965",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame11": {
+            "$description": "Frame (I5164:10412;5145:4966)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4966",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame12": {
+            "$description": "Frame (I5164:10412;5145:4967)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4967",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle9": {
+            "$description": "Rectangle (I5164:10412;5145:4968)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4968",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock11": {
+            "$description": "⬤ ⬤ ⬤ YOUR AGENCY PLATFORM (I5164:10412;5145:4969)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4969",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock12": {
+            "$description": "LHR → DXB · EK405 (I5164:10412;5145:4970)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4970",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock13": {
+            "$description": "£798 ✓ Booked (I5164:10412;5145:4971)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4971",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle10": {
+            "$description": "Rectangle (I5164:10412;5145:4972)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4972",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock14": {
+            "$description": "MAN → DOH · QR002 (I5164:10412;5145:4973)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4973",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock15": {
+            "$description": "⚡ Alert active (I5164:10412;5145:4974)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4974",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle11": {
+            "$description": "Rectangle (I5164:10412;5145:4975)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4975",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock16": {
+            "$description": "LGW → BOM · AI101 (I5164:10412;5145:4976)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4976",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock17": {
+            "$description": "📊 Reports ready (I5164:10412;5145:4977)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4977",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "rectangle12": {
+            "$description": "Rectangle (I5164:10412;5145:4978)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4978",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "frame13": {
+            "$description": "Frame (I5164:10412;5145:4979)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4979",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "step03": {
+            "$description": "STEP 03 (I5164:10412;5145:4980)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4980",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585135": {
+            "$description": "Frame 2095585135 (I5164:10412;5145:4981)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4981",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "frame2095585132": {
+            "$description": "Frame 2095585132 (I5164:10412;5145:4982)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4982",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock18": {
+            "$description": "Book, and analyse: one branded portal. (I5164:10412;5145:4983)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4983",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "accentBar3": {
+            "$description": "AccentBar (I5164:10412;5145:4984)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4984",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock19": {
+            "$description": "Everything inside your white-label platform. Book fares, issue tickets, set price alerts, pull reports under your own brand. Your data in your database. No shared logins. Full ownership. (I5164:10412;5145:4985)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4985",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "textBlock20": {
+            "$description": "Your brand. Your data. Your platform. (I5164:10412;5145:4986)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5145:4986",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "footerNote": {
+            "$description": "footer-note (I5164:10412;5404:10381)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5404:10381",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "textBlock21": {
+            "$description": "How does the technical setup work? Read the full breakdown → (I5164:10412;5404:10382)",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10412;5404:10382",
             "$states": [
               "default"
             ],

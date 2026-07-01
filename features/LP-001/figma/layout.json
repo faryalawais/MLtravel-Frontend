@@ -35,6 +35,24 @@
         "slug": "component.landing.problem.motion.root"
       },
       {
+        "slug": "component.landing.comparisonFirst.root"
+      },
+      {
+        "slug": "component.landing.comparisonFirst.mobile.root"
+      },
+      {
+        "slug": "component.landing.comparisonFirst.motion.root"
+      },
+      {
+        "slug": "component.landing.howItWorksTeaser.root"
+      },
+      {
+        "slug": "component.landing.howItWorksTeaser.mobile.sectionRoot"
+      },
+      {
+        "slug": "component.landing.howItWorksTeaser.motion.root"
+      },
+      {
         "slug": "component.navbar.motion.cta"
       },
       {

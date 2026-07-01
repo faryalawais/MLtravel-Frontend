@@ -10,8 +10,24 @@
 | #3 | Navbar | `5164:6559` | `5164:7031` | `5164:10334` |
 | #4 | Hero | `5164:6560` | `5164:7080` | `5164:10343` |
 | #5 | Problem | `5164:6561` | `5164:6571` | `5164:10344` |
+| #6 | Comparison (1st) | `5164:6566` | `5164:6609` | `5164:10411` |
+| #7 | How-it-works teaser | `5164:6567` | `5164:6690` | `5164:10412` |
 
-Reference PNGs: `reference-problemsection.png`, `reference-problemmobile.png`, `reference-problem-animation.png`.
+Reference PNGs: `reference-comparisonsectionfirst.png`, `reference-comparisonmobilefirst.png`, `reference-comparison-animation.png`, `reference-howitworkssection.png`, `reference-howitworksmobile.png`, `reference-howitworks-animation.png`.
+
+## How-it-works teaser slice (#7) — 2026-07-01
+
+- **Desktop (`5164:6567` — HowItWorksSection):** SectionHeader pill “How It Works”, H2 “From contract to booking in three steps.”, 3× `HIWCard` (GDS connect → parallel search → branded portal), footer link “How does the technical setup work? Read the full breakdown →”.
+- **Mobile (`5164:6690` — How It Works):** Stacked HIW cards with same copy; narrower card visuals.
+- **Motion (`5164:10412` — HowItWorks-animation):** 4-step cascade (hover → auto ×3 @ 120ms step delay) per `tokens/MOTION-SPEC.md` §4 — same pattern as ProblemSection.
+- **Assets:** Card visuals are CSS mock UI (rectangles + text labels — Sabre, Amadeus, etc.); no new static SVG/PNG exports. Footer link arrow reuses `public/icons/icon-button-arrow.svg` (master `2780:1506`).
+
+## Comparison first slice (#6) — 2026-07-01
+
+- **Desktop (`5164:6566` — ComparisonSection):** SectionHeader “The Choice”, GiantTicket with industry-norm + MaqsoodTravel ComparisonCards (3 rows each), savings footnote, Book A Free Demo CTA.
+- **Mobile (`5164:6609` — ComparisonSection — v3 FINAL):** Stacked LeftCard / RightCard with same copy; split H2 lines.
+- **Motion (`5164:10411` — ComparisonSection-animation):** One-step hover reveal per `tokens/MOTION-SPEC.md`.
+- **CTA arrow:** Primary button graphic exported to `public/icons/icon-plane-arrow-white.svg`.
 
 ## Problem slice (#5) — 2026-07-01
 
@@ -82,6 +98,7 @@ npm run validate:figma-extract -- LP-001
 | `I5164:6559;3147:1442;2780:1466;2780:1506` | CTA arrow Vector | svg | `public/icons/icon-button-arrow.svg` | master `2780:1506` (instance IDs null via REST) |
 | `5164:7034` | Mobile menu Vector | svg | `public/icons/icon-menu.svg` | — |
 | `5164:7036` | MaqsoodTravel wordmark | svg | `public/icons/logo-maqsood-travel.svg` | mobile only |
+| `I5164:6566;5151:7328;2780:1425;2780:1499` | Comparison CTA arrow | svg | `public/icons/icon-plane-arrow-white.svg` | primary CTA |
 
 ## Token mapping
 

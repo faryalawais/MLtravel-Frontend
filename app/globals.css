@@ -29,6 +29,50 @@
   line-height: var(--typography-heading-desktop-h4-line-height);
 }
 
+@utility text-heading-desktop-h3-sm {
+  font-family: var(--typography-heading-desktop-h3-sm-font-family);
+  font-size: var(--typography-heading-desktop-h3-sm-font-size);
+  font-weight: var(--typography-heading-desktop-h3-sm-font-weight);
+  line-height: var(--typography-heading-desktop-h3-sm-line-height);
+}
+
+@utility text-heading-mobile-h3-sm {
+  font-family: var(--typography-heading-mobile-h3-sm-font-family);
+  font-size: var(--typography-heading-mobile-h3-sm-font-size);
+  font-weight: var(--typography-heading-mobile-h3-sm-font-weight);
+  line-height: var(--typography-heading-mobile-h3-sm-line-height);
+}
+
+@utility text-heading-mobile-h4 {
+  font-family: var(--typography-heading-mobile-h4-font-family);
+  font-size: var(--typography-heading-mobile-h4-font-size);
+  font-weight: var(--typography-heading-mobile-h4-font-weight);
+  line-height: var(--typography-heading-mobile-h4-line-height);
+}
+
+@utility text-label-desktop-sm-semibold {
+  font-family: var(--typography-label-desktop-sm-semibold-font-family);
+  font-size: var(--typography-label-desktop-sm-semibold-font-size);
+  font-weight: var(--typography-label-desktop-sm-semibold-font-weight);
+  line-height: var(--typography-label-desktop-sm-semibold-line-height);
+}
+
+@utility text-label-desktop-micro-tag {
+  font-family: var(--typography-label-desktop-micro-tag-font-family);
+  font-size: var(--typography-label-desktop-micro-tag-font-size);
+  font-weight: var(--typography-label-desktop-micro-tag-font-weight);
+  line-height: var(--typography-label-desktop-micro-tag-line-height);
+  letter-spacing: var(--font-letterspacing-1);
+}
+
+@utility text-label-mobile-micro-tag {
+  font-family: var(--typography-label-mobile-micro-tag-font-family);
+  font-size: var(--typography-label-mobile-micro-tag-font-size);
+  font-weight: var(--typography-label-mobile-micro-tag-font-weight);
+  line-height: var(--typography-label-mobile-micro-tag-line-height);
+  letter-spacing: var(--font-letterspacing-1);
+}
+
 @utility text-body-desktop-sm {
   font-family: var(--typography-body-desktop-sm-font-family);
   font-size: var(--typography-body-desktop-sm-font-size);

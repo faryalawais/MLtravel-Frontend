@@ -78,6 +78,30 @@
       "localPath": "public/icons/icon-problem-card-3.svg",
       "type": "svg",
       "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6567;5155:29;5151:13140",
+      "nodeName": "HIW card visual — Step 01 (GDS sources)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6567;5155:29;5151:13140&format=png&scale=2",
+      "localPath": "public/images/hiw-card-visual-1.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6567;5155:44;5151:13175",
+      "nodeName": "HIW card visual — Step 02 (parallel search)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6567;5155:44;5151:13175&format=png&scale=2",
+      "localPath": "public/images/hiw-card-visual-2.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6567;5155:59;5151:13216",
+      "nodeName": "HIW card visual — Step 03 (agency platform)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6567;5155:59;5151:13216&format=png&scale=2",
+      "localPath": "public/images/hiw-card-visual-3.png",
+      "type": "png",
+      "dataSource": "static"
     }
   ]
 }

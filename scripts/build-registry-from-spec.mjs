@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Seed component entries from LP-001 figma checklist (navbar + hero + problem slices).
+ * Seed component entries from LP-001 figma checklist (navbar + hero        + comparison + howItWorksTeaser slices).
  * ui-registry-build merges these into tokens/ui-registry.json.
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -9,8 +9,166 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SCREEN = "screen.landing.home";
+const CHECKLIST_PATH = join(ROOT, "features/LP-001/figma/component-checklist.md");
 
-/** @type {Array<{ path: string[], description: string, nodeId: string, states?: string[] }>} */
+/** @typedef {{ path: string[], description: string, nodeId: string, states?: string[] }} RegistryEntry */
+
+/** @param {string} name */
+function sanitizeSegment(seg) {
+  let s = seg.replace(/[^a-zA-Z0-9]/g, "");
+  if (!s) return "node";
+  if (/^\d/.test(s)) s = `n${s}`;
+  return s.charAt(0).toLowerCase() + s.slice(1);
+}
+
+/** @param {string} name */
+function baseSlugFromName(name) {
+  const special = {
+    HowItWorksSection: "root",
+    "How It Works": "sectionRoot",
+    "HowItWorks-animation": "root",
+    "SectionHeader/HowItWorks": "sectionHeader",
+    SectionPill: "sectionPill",
+    HIWCard: "hiwCard",
+    "card-visual": "cardVisual",
+    "card-content": "cardContent",
+    HIWStepBadge: "stepBadge",
+    "main-block": "mainBlock",
+    AccentBar: "accentBar",
+    "accent-bar": "accentBar",
+    "footer-note": "footerNote",
+    "heading-block": "headingBlock",
+    "cards-wrap": "cardsWrap",
+    HIW: "hiwStack",
+    Container: "container",
+    "Heading 2": "heading",
+    Paragraph: "paragraph",
+    Rectangle: "rectangle",
+    Frame: "frame",
+    "The Choice": "sectionPillLabel",
+  };
+  if (special[name]) return special[name];
+
+  if (name.length > 36 || /[.→£✓⚡📊⬤↓]/.test(name)) {
+    return "textBlock";
+  }
+
+  const cleaned = name
+    .replace(/\//g, " ")
+    .replace(/[^\w\s]/g, "")
+    .trim();
+  if (!cleaned) return "node";
+
+  const words = cleaned.split(/\s+/).filter(Boolean);
+  if (words.length === 1) {
+    const w = words[0];
+    if (/^Frame/i.test(w)) return sanitizeSegment(w.replace(/^Frame/i, "frame"));
+    return sanitizeSegment(w);
+  }
+
+  const joined = words
+    .map((w, i) => (i === 0 ? w.toLowerCase() : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()))
+    .join("");
+  return sanitizeSegment(joined.slice(0, 40));
+}
+
+/**
+ * Parse HIW checklist sections into registry entries (GH#7).
+ * @returns {RegistryEntry[]}
+ */
+function parseHiwChecklistEntries() {
+  const md = readFileSync(CHECKLIST_PATH, "utf8");
+  const lines = md.split("\n");
+
+  /** @type {Array<{ prefix: string[], endMarker: string, rootDescription: string }>} */
+  const sections = [
+    {
+      prefix: ["landing", "howItWorksTeaser"],
+      endMarker: "## How It Works (nodeId: 5164:6690)",
+      rootDescription: "How-it-works teaser desktop (Gherkin: component.landing.howItWorksTeaser)",
+    },
+    {
+      prefix: ["landing", "howItWorksTeaser", "mobile"],
+      endMarker: "## HowItWorks-animation",
+      rootDescription: "How-it-works teaser mobile (Gherkin @393px)",
+    },
+    {
+      prefix: ["landing", "howItWorksTeaser", "motion"],
+      endMarker: "## Button/Secondary2 (nodeId: 5164:10342)",
+      rootDescription: "How-it-works motion prototype (Gherkin: 5164:10412)",
+    },
+  ];
+
+  /** @type {RegistryEntry[]} */
+  const entries = [];
+  let sectionIndex = -1;
+  let inHiw = false;
+  /** @type {Map<string, number>} */
+  const slugCounts = new Map();
+
+  for (const line of lines) {
+    if (line.startsWith("## HowItWorksSection")) {
+      inHiw = true;
+      sectionIndex = 0;
+      slugCounts.clear();
+      continue;
+    }
+    if (!inHiw) continue;
+
+    const section = sections[sectionIndex];
+    if (section && line.startsWith(section.endMarker)) {
+      sectionIndex += 1;
+      slugCounts.clear();
+      if (sectionIndex >= sections.length) {
+        inHiw = false;
+      }
+      continue;
+    }
+
+    const rowMatch = line.match(/^- \[ \] (.+?)  \(nodeId: ([^)]+)\)/);
+    if (!rowMatch || sectionIndex < 0 || sectionIndex >= sections.length) continue;
+
+    const [, rawName, nodeId] = rowMatch;
+    const name = rawName.replace(/  \(content:.*$/, "").trim();
+    const currentSection = sections[sectionIndex];
+
+    let leaf = baseSlugFromName(name);
+    if (leaf === "root" && entries.some((e) => e.nodeId === nodeId)) {
+      leaf = "sectionRoot";
+    }
+
+    const count = slugCounts.get(leaf) ?? 0;
+    slugCounts.set(leaf, count + 1);
+    if (count > 0) leaf = `${leaf}${count + 1}`;
+
+    const path = [...currentSection.prefix, leaf];
+    if (path.length > 4) {
+      throw new Error(`Registry path too deep: component.${path.join(".")} (${nodeId})`);
+    }
+
+    const isRoot =
+      (sectionIndex === 0 && nodeId === "5164:6567") ||
+      (sectionIndex === 1 && nodeId === "5164:6690") ||
+      (sectionIndex === 2 && nodeId === "5164:10412");
+
+    const isCard = /^HIWCard$/i.test(name) || name === "HIW";
+    const isInteractive =
+      isRoot ||
+      isCard ||
+      /Link|CTA|Button|NavLink/i.test(name) ||
+      /AccentBar|HIWCard|footer-note/i.test(name);
+
+    entries.push({
+      path,
+      description: isRoot ? currentSection.rootDescription : `${name} (${nodeId})`,
+      nodeId,
+      states: isInteractive ? ["default", "hover"] : ["default"],
+    });
+  }
+
+  return entries;
+}
+
 const NAVBAR_ENTRIES = [
   // Desktop — GH#3
   { path: ["navbar", "root"], description: "Shared navbar desktop (Gherkin: component.navbar)", nodeId: "5164:6559", states: ["default", "hover"] },
@@ -162,7 +320,335 @@ const PROBLEM_ENTRIES = [
   { path: ["landing", "problem", "motion", "gradientBar"], description: "Motion gradient bar", nodeId: "I5164:10344;5145:4212" },
 ];
 
-const ENTRIES = [...NAVBAR_ENTRIES, ...HERO_ENTRIES, ...PROBLEM_ENTRIES];
+/** Desktop comparison row leaf bindings. */
+function comparisonDesktopRows(cardKey, label, rows) {
+  return rows.flatMap((row, index) => {
+    const n = index + 1;
+    return [
+      {
+        path: ["landing", "comparisonFirst", `${cardKey}Row${n}`],
+        description: `${label} row ${n}`,
+        nodeId: row.row,
+        states: ["default", "hover"],
+      },
+      {
+        path: ["landing", "comparisonFirst", `${cardKey}Row${n}MicroTag`],
+        description: `${label} row ${n} micro tag`,
+        nodeId: row.microTag,
+      },
+      {
+        path: ["landing", "comparisonFirst", `${cardKey}Row${n}TagLabel`],
+        description: `${label} row ${n} tag label`,
+        nodeId: row.tagLabel,
+      },
+      {
+        path: ["landing", "comparisonFirst", `${cardKey}Row${n}Title`],
+        description: `${label} row ${n} title`,
+        nodeId: row.title,
+      },
+      {
+        path: ["landing", "comparisonFirst", `${cardKey}Row${n}Body`],
+        description: `${label} row ${n} body`,
+        nodeId: row.body,
+      },
+      {
+        path: ["landing", "comparisonFirst", `${cardKey}Row${n}Stamp`],
+        description: `${label} row ${n} stamp`,
+        nodeId: row.stamp,
+      },
+      {
+        path: ["landing", "comparisonFirst", `${cardKey}Row${n}StampLabel`],
+        description: `${label} row ${n} stamp label`,
+        nodeId: row.stampLabel,
+      },
+    ];
+  });
+}
+
+/** Mobile comparison row leaf bindings. */
+function comparisonMobileRows(cardKey, label, rows) {
+  return rows.flatMap((row, index) => {
+    const n = index + 1;
+    return [
+      {
+        path: ["landing", "comparisonFirst", "mobile", `${cardKey}Row${n}`],
+        description: `Mobile ${label} row ${n}`,
+        nodeId: row.row,
+        states: ["default", "hover"],
+      },
+      {
+        path: ["landing", "comparisonFirst", "mobile", `${cardKey}Row${n}Tag`],
+        description: `Mobile ${label} row ${n} tag`,
+        nodeId: row.tag,
+      },
+      {
+        path: ["landing", "comparisonFirst", "mobile", `${cardKey}Row${n}Title`],
+        description: `Mobile ${label} row ${n} title`,
+        nodeId: row.title,
+      },
+      {
+        path: ["landing", "comparisonFirst", "mobile", `${cardKey}Row${n}Body`],
+        description: `Mobile ${label} row ${n} body`,
+        nodeId: row.body,
+      },
+      {
+        path: ["landing", "comparisonFirst", "mobile", `${cardKey}Row${n}Stamp`],
+        description: `Mobile ${label} row ${n} stamp`,
+        nodeId: row.stamp,
+      },
+    ];
+  });
+}
+
+const INDUSTRY_DESKTOP_ROWS = [
+  {
+    row: "I5164:6566;5006:22;5005:20;5004:23",
+    microTag: "I5164:6566;5006:22;5005:20;5004:23;3183:19",
+    tagLabel: "I5164:6566;5006:22;5005:20;5004:23;3183:19;3182:17",
+    title: "I5164:6566;5006:22;5005:20;5004:23;3183:22",
+    body: "I5164:6566;5006:22;5005:20;5004:23;3183:23",
+    stamp: "I5164:6566;5006:22;5005:20;5004:23;3183:25",
+    stampLabel: "I5164:6566;5006:22;5005:20;5004:23;3183:25;3182:30",
+  },
+  {
+    row: "I5164:6566;5006:22;5005:20;5004:35",
+    microTag: "I5164:6566;5006:22;5005:20;5004:35;3183:28",
+    tagLabel: "I5164:6566;5006:22;5005:20;5004:35;3183:28;3182:19",
+    title: "I5164:6566;5006:22;5005:20;5004:35;3183:31",
+    body: "I5164:6566;5006:22;5005:20;5004:35;3183:32",
+    stamp: "I5164:6566;5006:22;5005:20;5004:35;3183:34",
+    stampLabel: "I5164:6566;5006:22;5005:20;5004:35;3183:34;3182:32",
+  },
+  {
+    row: "I5164:6566;5006:22;5005:20;5004:47",
+    microTag: "I5164:6566;5006:22;5005:20;5004:47;3183:37",
+    tagLabel: "I5164:6566;5006:22;5005:20;5004:47;3183:37;3182:21",
+    title: "I5164:6566;5006:22;5005:20;5004:47;3183:40",
+    body: "I5164:6566;5006:22;5005:20;5004:47;3183:41",
+    stamp: "I5164:6566;5006:22;5005:20;5004:47;3183:43",
+    stampLabel: "I5164:6566;5006:22;5005:20;5004:47;3183:43;3182:34",
+  },
+];
+
+const MAQSOOD_DESKTOP_ROWS = [
+  {
+    row: "I5164:6566;5006:22;5005:125;5004:68",
+    microTag: "I5164:6566;5006:22;5005:125;5004:68;3183:46",
+    tagLabel: "I5164:6566;5006:22;5005:125;5004:68;3183:46;3182:23",
+    title: "I5164:6566;5006:22;5005:125;5004:68;3183:49",
+    body: "I5164:6566;5006:22;5005:125;5004:68;3183:50",
+    stamp: "I5164:6566;5006:22;5005:125;5004:68;3183:52",
+    stampLabel: "I5164:6566;5006:22;5005:125;5004:68;3183:52;3182:36",
+  },
+  {
+    row: "I5164:6566;5006:22;5005:125;5004:80",
+    microTag: "I5164:6566;5006:22;5005:125;5004:80;3183:55",
+    tagLabel: "I5164:6566;5006:22;5005:125;5004:80;3183:55;3182:25",
+    title: "I5164:6566;5006:22;5005:125;5004:80;3183:58",
+    body: "I5164:6566;5006:22;5005:125;5004:80;3183:59",
+    stamp: "I5164:6566;5006:22;5005:125;5004:80;3183:61",
+    stampLabel: "I5164:6566;5006:22;5005:125;5004:80;3183:61;3182:38",
+  },
+  {
+    row: "I5164:6566;5006:22;5005:125;5004:92",
+    microTag: "I5164:6566;5006:22;5005:125;5004:92;3183:64",
+    tagLabel: "I5164:6566;5006:22;5005:125;5004:92;3183:64;3182:27",
+    title: "I5164:6566;5006:22;5005:125;5004:92;3183:67",
+    body: "I5164:6566;5006:22;5005:125;5004:92;3183:68",
+    stamp: "I5164:6566;5006:22;5005:125;5004:92;3183:70",
+    stampLabel: "I5164:6566;5006:22;5005:125;5004:92;3183:70;3182:40",
+  },
+];
+
+const INDUSTRY_MOBILE_ROWS = [
+  { row: "5164:6632", tag: "5164:6634", title: "5164:6635", body: "5164:6636", stamp: "5164:6637" },
+  { row: "5164:6639", tag: "5164:6641", title: "5164:6642", body: "5164:6643", stamp: "5164:6644" },
+  { row: "5164:6646", tag: "5164:6648", title: "5164:6649", body: "5164:6650", stamp: "5164:6651" },
+];
+
+const MAQSOOD_MOBILE_ROWS = [
+  { row: "5164:6663", tag: "5164:6665", title: "5164:6666", body: "5164:6667", stamp: "5164:6668" },
+  { row: "5164:6670", tag: "5164:6672", title: "5164:6673", body: "5164:6674", stamp: "5164:6675" },
+  { row: "5164:6677", tag: "5164:6679", title: "5164:6680", body: "5164:6681", stamp: "5164:6682" },
+];
+
+/** @type {Array<{ path: string[], description: string, nodeId: string, states?: string[] }>} */
+const COMPARISON_FIRST_ENTRIES = [
+  {
+    path: ["landing", "comparisonFirst", "root"],
+    description: "Comparison first block desktop (Gherkin: component.landing.comparisonFirst)",
+    nodeId: "5164:6566",
+    states: ["default", "hover"],
+  },
+  { path: ["landing", "comparisonFirst", "sectionHeader"], description: "SectionHeader/Comparison", nodeId: "I5164:6566;5006:14" },
+  { path: ["landing", "comparisonFirst", "sectionPill"], description: "The Choice section pill", nodeId: "I5164:6566;5006:14;5005:14" },
+  { path: ["landing", "comparisonFirst", "sectionPillLabel"], description: "Pill label The Choice", nodeId: "I5164:6566;5006:14;5005:14;3182:15" },
+  { path: ["landing", "comparisonFirst", "headingBlock"], description: "Section heading block", nodeId: "I5164:6566;5006:14;5002:1796" },
+  { path: ["landing", "comparisonFirst", "sectionHeading"], description: "Section H2 — Dependency or Ownership", nodeId: "I5164:6566;5006:14;5005:17" },
+  {
+    path: ["landing", "comparisonFirst", "sectionSubtitle"],
+    description: "Section subtitle copy",
+    nodeId: "I5164:6566;5006:14;5005:18",
+  },
+  { path: ["landing", "comparisonFirst", "columnsFrame"], description: "Columns + CTA frame", nodeId: "I5164:6566;5002:1800" },
+  { path: ["landing", "comparisonFirst", "giantTicket"], description: "GiantTicket two-column card stack", nodeId: "I5164:6566;5006:22" },
+  {
+    path: ["landing", "comparisonFirst", "industryCard"],
+    description: "Industry norm comparison card",
+    nodeId: "I5164:6566;5006:22;5005:20",
+    states: ["default", "hover"],
+  },
+  { path: ["landing", "comparisonFirst", "industryCardHeader"], description: "Industry card header", nodeId: "I5164:6566;5006:22;5005:20;5004:14" },
+  { path: ["landing", "comparisonFirst", "industryBadge"], description: "Industry card header badge", nodeId: "I5164:6566;5006:22;5005:20;5004:17" },
+  {
+    path: ["landing", "comparisonFirst", "industryBadgeLabel"],
+    description: "Industry badge label",
+    nodeId: "I5164:6566;5006:22;5005:20;5004:17;3183:14",
+  },
+  {
+    path: ["landing", "comparisonFirst", "industryTitleLine1"],
+    description: "Industry card title line 1",
+    nodeId: "I5164:6566;5006:22;5005:20;5004:20",
+  },
+  {
+    path: ["landing", "comparisonFirst", "industryTitleLine2"],
+    description: "Industry card title line 2",
+    nodeId: "I5164:6566;5006:22;5005:20;5004:21",
+  },
+  { path: ["landing", "comparisonFirst", "industryCardBody"], description: "Industry card body", nodeId: "I5164:6566;5006:22;5005:20;5004:22" },
+  ...comparisonDesktopRows("industry", "Industry norm", INDUSTRY_DESKTOP_ROWS),
+  { path: ["landing", "comparisonFirst", "dividerPerforated"], description: "Perforated divider between cards", nodeId: "I5164:6566;5006:22;5005:90" },
+  {
+    path: ["landing", "comparisonFirst", "maqsoodCard"],
+    description: "MaqsoodTravel comparison card",
+    nodeId: "I5164:6566;5006:22;5005:125",
+    states: ["default", "hover"],
+  },
+  { path: ["landing", "comparisonFirst", "maqsoodCardHeader"], description: "Maqsood card header", nodeId: "I5164:6566;5006:22;5005:125;5004:59" },
+  { path: ["landing", "comparisonFirst", "maqsoodBadge"], description: "Maqsood card header badge", nodeId: "I5164:6566;5006:22;5005:125;5004:62" },
+  {
+    path: ["landing", "comparisonFirst", "maqsoodBadgeLabel"],
+    description: "Maqsood badge label",
+    nodeId: "I5164:6566;5006:22;5005:125;5004:62;3183:16",
+  },
+  {
+    path: ["landing", "comparisonFirst", "maqsoodTitleLine1"],
+    description: "Maqsood card title line 1",
+    nodeId: "I5164:6566;5006:22;5005:125;5004:65",
+  },
+  {
+    path: ["landing", "comparisonFirst", "maqsoodTitleLine2"],
+    description: "Maqsood card title line 2",
+    nodeId: "I5164:6566;5006:22;5005:125;5004:66",
+  },
+  { path: ["landing", "comparisonFirst", "maqsoodCardBody"], description: "Maqsood card body", nodeId: "I5164:6566;5006:22;5005:125;5004:67" },
+  ...comparisonDesktopRows("maqsood", "MaqsoodTravel", MAQSOOD_DESKTOP_ROWS),
+  { path: ["landing", "comparisonFirst", "notchTop"], description: "GiantTicket top notch", nodeId: "I5164:6566;5006:22;5005:195" },
+  { path: ["landing", "comparisonFirst", "ctaBlock"], description: "Footnote + CTA block", nodeId: "I5164:6566;5151:7325" },
+  {
+    path: ["landing", "comparisonFirst", "footnote"],
+    description: "Savings footnote copy",
+    nodeId: "I5164:6566;5151:7327",
+  },
+  {
+    path: ["landing", "comparisonFirst", "cta"],
+    description: "Book A Free Demo primary CTA",
+    nodeId: "I5164:6566;5151:7328",
+    states: ["default", "hover"],
+  },
+  { path: ["landing", "comparisonFirst", "ctaLabel"], description: "CTA label Book A Free Demo", nodeId: "I5164:6566;5151:7328;2780:1424" },
+  { path: ["landing", "comparisonFirst", "ctaIcon"], description: "CTA icon button", nodeId: "I5164:6566;5151:7328;2780:1425" },
+  { path: ["landing", "comparisonFirst", "ctaGraphic"], description: "CTA arrow graphic", nodeId: "I5164:6566;5151:7328;2780:1425;2780:1499" },
+  // Mobile — 5164:6609
+  {
+    path: ["landing", "comparisonFirst", "mobile", "root"],
+    description: "Comparison first block mobile (Gherkin @393px)",
+    nodeId: "5164:6609",
+    states: ["default", "hover"],
+  },
+  { path: ["landing", "comparisonFirst", "mobile", "headerBlock"], description: "Mobile header block", nodeId: "5164:6611" },
+  { path: ["landing", "comparisonFirst", "mobile", "sectionPill"], description: "Mobile section pill", nodeId: "5164:6612" },
+  { path: ["landing", "comparisonFirst", "mobile", "sectionPillDot"], description: "Mobile pill dot", nodeId: "5164:6613" },
+  { path: ["landing", "comparisonFirst", "mobile", "sectionPillLabel"], description: "Mobile pill label The Choice", nodeId: "5164:6614" },
+  { path: ["landing", "comparisonFirst", "mobile", "headRow"], description: "Mobile heading row", nodeId: "5164:6615" },
+  { path: ["landing", "comparisonFirst", "mobile", "sectionHeadingLine1"], description: "Mobile H2 line 1", nodeId: "5164:6616" },
+  { path: ["landing", "comparisonFirst", "mobile", "sectionHeadingLine2"], description: "Mobile H2 line 2", nodeId: "5164:6618" },
+  { path: ["landing", "comparisonFirst", "mobile", "sectionSubtitle"], description: "Mobile section subtitle", nodeId: "5164:6619" },
+  { path: ["landing", "comparisonFirst", "mobile", "contentFrame"], description: "Mobile cards + CTA frame", nodeId: "5164:6620" },
+  { path: ["landing", "comparisonFirst", "mobile", "giantTicket"], description: "Mobile GiantTicket stack", nodeId: "5164:6621" },
+  {
+    path: ["landing", "comparisonFirst", "mobile", "industryCard"],
+    description: "Mobile industry norm card",
+    nodeId: "5164:6622",
+    states: ["default", "hover"],
+  },
+  { path: ["landing", "comparisonFirst", "mobile", "industryCardHeader"], description: "Mobile industry card header", nodeId: "5164:6623" },
+  { path: ["landing", "comparisonFirst", "mobile", "industryBadge"], description: "Mobile industry badge", nodeId: "5164:6626" },
+  { path: ["landing", "comparisonFirst", "mobile", "industryTitleLine1"], description: "Mobile industry title line 1", nodeId: "5164:6629" },
+  { path: ["landing", "comparisonFirst", "mobile", "industryTitleLine2"], description: "Mobile industry title line 2", nodeId: "5164:6630" },
+  { path: ["landing", "comparisonFirst", "mobile", "industryCardBody"], description: "Mobile industry card body", nodeId: "5164:6631" },
+  ...comparisonMobileRows("industry", "industry norm", INDUSTRY_MOBILE_ROWS),
+  {
+    path: ["landing", "comparisonFirst", "mobile", "maqsoodCard"],
+    description: "Mobile MaqsoodTravel card",
+    nodeId: "5164:6653",
+    states: ["default", "hover"],
+  },
+  { path: ["landing", "comparisonFirst", "mobile", "maqsoodCardHeader"], description: "Mobile Maqsood card header", nodeId: "5164:6654" },
+  { path: ["landing", "comparisonFirst", "mobile", "maqsoodBadge"], description: "Mobile Maqsood badge", nodeId: "5164:6657" },
+  { path: ["landing", "comparisonFirst", "mobile", "maqsoodTitleLine1"], description: "Mobile Maqsood title line 1", nodeId: "5164:6660" },
+  { path: ["landing", "comparisonFirst", "mobile", "maqsoodTitleLine2"], description: "Mobile Maqsood title line 2", nodeId: "5164:6661" },
+  { path: ["landing", "comparisonFirst", "mobile", "maqsoodCardBody"], description: "Mobile Maqsood card body", nodeId: "5164:6662" },
+  ...comparisonMobileRows("maqsood", "MaqsoodTravel", MAQSOOD_MOBILE_ROWS),
+  { path: ["landing", "comparisonFirst", "mobile", "ctaBlock"], description: "Mobile footnote + CTA block", nodeId: "5164:6683" },
+  { path: ["landing", "comparisonFirst", "mobile", "footnote"], description: "Mobile savings footnote", nodeId: "5164:6684" },
+  {
+    path: ["landing", "comparisonFirst", "mobile", "cta"],
+    description: "Mobile Book A Free Demo CTA",
+    nodeId: "5164:6685",
+    states: ["default", "hover"],
+  },
+  { path: ["landing", "comparisonFirst", "mobile", "ctaLabel"], description: "Mobile CTA label", nodeId: "5164:6686" },
+  { path: ["landing", "comparisonFirst", "mobile", "ctaIcon"], description: "Mobile CTA icon", nodeId: "5164:6687" },
+  // Motion — 5164:10411
+  {
+    path: ["landing", "comparisonFirst", "motion", "root"],
+    description: "Comparison motion prototype (Gherkin: 5164:10411)",
+    nodeId: "5164:10411",
+    states: ["default", "hover"],
+  },
+  { path: ["landing", "comparisonFirst", "motion", "sectionHeader"], description: "Motion section header", nodeId: "I5164:10411;5145:4498" },
+  { path: ["landing", "comparisonFirst", "motion", "giantTicket"], description: "Motion GiantTicket", nodeId: "I5164:10411;5145:4500" },
+  {
+    path: ["landing", "comparisonFirst", "motion", "industryCard"],
+    description: "Motion industry card",
+    nodeId: "I5164:10411;5145:4500;5005:20",
+    states: ["default", "hover"],
+  },
+  {
+    path: ["landing", "comparisonFirst", "motion", "maqsoodCard"],
+    description: "Motion Maqsood card",
+    nodeId: "I5164:10411;5145:4500;5005:125",
+    states: ["default", "hover"],
+  },
+  { path: ["landing", "comparisonFirst", "motion", "ctaBlock"], description: "Motion CTA block", nodeId: "I5164:10411;5145:4501" },
+  {
+    path: ["landing", "comparisonFirst", "motion", "cta"],
+    description: "Motion primary CTA",
+    nodeId: "I5164:10411;5145:4504",
+    states: ["default", "hover"],
+  },
+];
+
+const HOW_IT_WORKS_TEASER_ENTRIES = parseHiwChecklistEntries();
+
+const ENTRIES = [
+  ...NAVBAR_ENTRIES,
+  ...HERO_ENTRIES,
+  ...PROBLEM_ENTRIES,
+  ...COMPARISON_FIRST_ENTRIES,
+  ...HOW_IT_WORKS_TEASER_ENTRIES,
+];
 
 function setPath(tree, segments, leaf) {
   let cur = tree;
@@ -184,7 +670,7 @@ function setPath(tree, segments, leaf) {
 const registry = {
   $metadata: {
     version: "0.1.0",
-    description: "UI registry — LP-001 Navbar + Hero + Problem slices (ui-registry-build 2026-07-01)",
+    description: "UI registry — LP-001 Navbar + Hero + Problem + Comparison₁ + HowItWorksTeaser slices (ui-registry-build 2026-07-01)",
     pathGrammar: "<domain>.<segment>(.<segment>)+",
     owner: "MLtravel FE",
     gherkinAliases: {
@@ -195,6 +681,8 @@ const registry = {
       "component.landing.hero": "component.landing.hero.root",
       "component.landing.hero.cta": "component.landing.hero.cta",
       "component.landing.problem": "component.landing.problem.root",
+      "component.landing.comparisonFirst": "component.landing.comparisonFirst.root",
+      "component.landing.howItWorksTeaser": "component.landing.howItWorksTeaser.root",
     },
   },
   screen: {

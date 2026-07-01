@@ -285,6 +285,10 @@ function ProblemCardsDesktop() {
   const endCascade = useCallback(() => {
     cascadeActiveRef.current = false;
     setCascadeActive(false);
+    const motionDuration = getDurationTokenMs('--motion-duration-default');
+    timersRef.current.push(
+      setTimeout(() => setSequenceIndex(null), motionDuration),
+    );
   }, []);
 
   const playSequence = useCallback(() => {

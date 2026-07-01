@@ -61,6 +61,21 @@
       "nodeId": "5164:10411",
       "name": "comparison-animation",
       "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6567",
+      "name": "HowItWorksSection",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6690",
+      "name": "HowItWorksMobile",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:10412",
+      "name": "HowItWorks-animation",
+      "source": "explicit"
     }
   ]
 }
