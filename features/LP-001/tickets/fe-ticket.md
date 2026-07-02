@@ -13,7 +13,7 @@ Pixel-accurate, responsive landing page at `/` plus **shared site chrome** reuse
 - Each vertical slice ships **desktop (`5164:6558`) + mobile (`5164:6569`)** together
 - Motion: hovers, focus, section motion per Figma + motion specs in `tokens/`
 - Design tokens only — no raw hex or px
-- Implementation order: Navbar → Hero → Problem → Comparison₁ → How-it-works → Comparison₂ → Feature grid → Social proof → Pricing → Footer
+- Implementation order: Navbar → Hero → Problem → Comparison → How-it-works → Feature grid → Social proof → Pricing → Footer
 
 ### Routes / navigation
 
@@ -36,11 +36,10 @@ Pixel-accurate, responsive landing page at `/` plus **shared site chrome** reuse
 | 3 | Problem | `5164:6561` | `5164:6571` |
 | 4 | Comparison (1st) | `5164:6566` | `5164:6609` |
 | 5 | How-it-works | `5164:6567` | `5164:6690` |
-| 6 | Comparison (2nd) | `5164:6563` | — |
-| 7 | Feature grid | `5164:6562` | `5164:6785` |
-| 8 | Social proof | `5164:6568` | `5164:6836` |
-| 9 | Pricing | `5164:6564` | `5164:6915` |
-| 10 | Footer | `5164:6565` | `5164:7038` |
+| 6 | Feature grid | `5164:6562` | `5164:6785` |
+| 7 | Social proof | `5164:6568` | `5164:6836` |
+| 8 | Pricing | `5164:6564` | `5164:6915` |
+| 9 | Footer | `5164:6565` | `5164:7038` |
 
 **Exclude:** `5187:3101` (Placeholder Content)
 

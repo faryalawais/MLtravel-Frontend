@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "version": "0.1.0",
-    "description": "UI registry — LP-001 Navbar + Hero + Problem + Comparison₁ + HowItWorksTeaser slices (ui-registry-build 2026-07-01)",
+    "description": "UI registry — LP-001 Navbar + Hero + Problem + Comparison₁ + HowItWorksTeaser slices (ui-registry-build 2026-07-02)",
     "pathGrammar": "<domain>.<segment>(.<segment>)+",
     "owner": "MLtravel FE",
     "gherkinAliases": {

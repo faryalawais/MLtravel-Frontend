@@ -139,6 +139,7 @@ function CardVisualImage({ card }: { card: HiwCardConfig }) {
       width={424}
       height={184}
       className="h-auto w-full"
+      style={{ height: 'auto' }}
       aria-hidden="true"
     />
   );

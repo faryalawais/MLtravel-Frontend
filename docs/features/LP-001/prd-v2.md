@@ -1,7 +1,9 @@
 # PRD v2 — LP-001 Landing page
 
 > **Enriched from PRD v1 on 2026-07-01.** Approved PRD v1 at: `docs/features/LP-001/prd-v1.md`  
-> **Figma source:** `h6BqI1ZRMSJxR7jESNF0Ep` · analysed via Figma REST API (`/files/.../nodes`).
+> **Corrected 2026-07-02** — D4-Desktop main-column order re-verified via Figma MCP `get_metadata` on `5164:6558` and `5164:6569`.  
+> **Key layout truth:** One comparison block in page flow. After How-it-works: **Feature grid → Social proof → Pricing** (3 sections), then Footer.  
+> **Figma source:** `h6BqI1ZRMSJxR7jESNF0Ep` · analysed via Figma REST API + MCP metadata.
 
 **Product:** Pixel-accurate, responsive landing page for ML Travel — static marketing content with shared Navbar and Footer reused across the site.  
 **Design source:** [Landing page — faryal](https://www.figma.com/design/h6BqI1ZRMSJxR7jESNF0Ep/ML-Travel-Project--faryal-updated-?node-id=5164-6346&p=f&m=dev)  
@@ -52,6 +54,7 @@ Travel agency owners and operations leads evaluating booking platforms need a co
 - F-002 contact flow, F-003 page content (except shared chrome).
 - CMS, i18n, dynamic APIs, Calendly embed.
 - `Placeholder Content` node `5187:3101` on desktop (design artefact — do not implement unless design reactivates).
+- **ComparisonSection (2nd) `5164:6563`** — off-canvas design duplicate at `x=3234` on `D4-Desktop` (not in the main 1440px page column). Do **not** implement as a second on-page section unless design moves it to `x=0`.
 
 ---
 
@@ -118,19 +121,44 @@ Travel agency owners and operations leads evaluating booking platforms need a co
 | Navbar | `5164:6559` | `5164:7031` (`PremiumTravelPlatform`) | Brand, nav links, CTA; mobile = compact top bar + CTA |
 | HeroSection | `5164:6560` | `5164:7080` (`Frame 2095585155`) | Hero + partner/airline logo strip |
 | ProblemSection | `5164:6561` | `5164:6571` (`ProblemPanelsSection`) | Problem statement panels |
-| ComparisonSection (1st) | `5164:6566` | `5164:6609` (`ComparisonSection — v3 FINAL`) | First comparison block (desktop y≈1583) |
+| ComparisonSection (1st) | `5164:6566` | `5164:6609` (`ComparisonSection — v3 FINAL`) | First comparison block — **main column** (`x=0`, `y≈1583`) |
 | HowItWorksSection | `5164:6567` | `5164:6690` (`How It Works`) | Landing HIW teaser (not F-003 page) |
-| ComparisonSection (2nd) | `5164:6563` | — | Second comparison block (desktop y≈3195); **no separate mobile frame** — confirm collapse/merge at design-contract |
-| FeatureGrid | `5164:6562` | `5164:6785` (`FeatureGrid — Light Modern`) | Feature cards grid |
-| SocialProofSectionBig | `5164:6568` | `5164:6836` (`Social proof`) | Testimonials + integrations strip |
-| NewPricingSection | `5164:6564` | `5164:6915` (`Own it`) | Pricing tiers |
-| Footer | `5164:6565` | `5164:7038` | Site footer |
+| FeatureGrid | `5164:6562` | `5164:6785` (`FeatureGrid — Light Modern`) | **1 of 3** post–How-it-works sections — feature cards grid |
+| SocialProofSectionBig | `5164:6568` | `5164:6836` (`Social proof`) | **2 of 3** — testimonials + integrations strip |
+| NewPricingSection | `5164:6564` | `5164:6915` (`Own it`) | **3 of 3** — pricing tiers |
+| Footer | `5164:6565` | `5164:7038` | Site footer (shared chrome — after the 3 post–HIW sections) |
 
-### Visual section order (Y-position, confirmed via REST)
+### Visual section order (main column `x=0`, confirmed via Figma MCP `get_metadata` on `5164:6558`)
 
-**Desktop (`5164:6558`):** Navbar → Hero → Problem → Comparison₁ (`6566`) → How-it-works → Comparison₂ (`6563`) → Feature grid → Social proof → Pricing → Footer.
+**Desktop — shipped page flow (`D4-Desktop`, 1440px column):**
 
-**Mobile (`5164:6569`):** Top bar (`7031`) → Hero (`7080`) → Problem → Comparison → How-it-works → Feature grid → Social proof → Pricing (`Own it`) → Footer.
+| Y | NodeId | Section |
+|---|--------|---------|
+| 0 | `5164:6559` | Navbar |
+| 64 | `5164:6560` | Hero |
+| 831 | `5164:6561` | Problem |
+| 1583 | `5164:6566` | Comparison (1st) |
+| 2671 | `5164:6567` | How-it-works |
+| 3457 | `5164:6562` | Feature grid |
+| 4291 | `5164:6568` | Social proof |
+| 5312 | `5164:6564` | Pricing |
+| 6276 | `5164:6565` | Footer |
+
+**Navbar → Hero → Problem → Comparison → How-it-works → Feature grid → Social proof → Pricing → Footer.**
+
+### Post–How-it-works blocks (3 sections)
+
+After `HowItWorksSection`, the landing page has **exactly three** content sections before Footer — no second comparison:
+
+| Order | Section | Desktop nodeId | Mobile nodeId |
+|-------|---------|----------------|---------------|
+| 1 | Feature grid | `5164:6562` | `5164:6785` |
+| 2 | Social proof | `5164:6568` | `5164:6836` |
+| 3 | Pricing | `5164:6564` | `5164:6915` |
+
+> **Not in page flow:** `5164:6563` (`ComparisonSection` duplicate) sits at **`x=3234`** on `D4-Desktop` — outside the 1440px viewport. Parked design copy only; **do not implement** as a scroll section.
+
+**Mobile (`5164:6569`):** Top bar (`7031`) → Hero (`7080`) → Problem → Comparison (`6609`) → How-it-works (`6690`) → **same 3 sections** → Footer (`7038`). **One comparison only.**
 
 ### Components identified
 
@@ -141,7 +169,7 @@ Travel agency owners and operations leads evaluating booking platforms need a co
 | `Button/Secondary2` | default · hover · focus · pressed (motion spec) |
 | `HeroSection` | default · CTA click → `/contact` |
 | `ProblemSection` | static panels |
-| `ComparisonSection` | static comparison layout (×2 on desktop) |
+| `ComparisonSection` | static comparison layout — **one block** in main desktop/mobile flow |
 | `HowItWorksSection` | static; links per Figma |
 | `FeatureGrid` | static cards |
 | `SocialProofSectionBig` | static testimonials + integrations |
@@ -197,7 +225,8 @@ None — LP-001 UI does not consume BE response bodies. Health endpoint is gate-
 
 | Case | Expected behaviour |
 |------|-------------------|
-| **Two Comparison sections on desktop, one on mobile** | Implement desktop `6566` + `6563` in order; mobile uses `6609` only — design-contract confirms whether second block is omitted or merged on mobile |
+| **Off-canvas Comparison duplicate `5164:6563`** | Node exists at `x=3234` on `D4-Desktop` — **do not render** on `/`. If design moves it to `x=0`, re-run `prd-update` + `figma-extract`. |
+| **One Comparison on mobile** | Mobile uses `5164:6609` only — no second comparison frame |
 | **Placeholder node `5187:3101`** | Exclude from implementation |
 | **Figma spacing not yet updated** | Do not implement against stale spacing; wait for designer Figma fix per Q9 grill decision |
 | **Token vs Figma value mismatch** | Update token export; never hard-code raw px/hex |
@@ -211,8 +240,8 @@ None — LP-001 UI does not consume BE response bodies. Health endpoint is gate-
 
 ## Updated Acceptance Criteria
 
-1. Guest on `/` at **1440px** width sees all desktop sections in Figma Y-order: Navbar, Hero, Problem, Comparison₁, How-it-works, Comparison₂, Feature grid, Social proof, Pricing, Footer.
-2. Guest on `/` at **393px** width sees mobile frame layout: top bar, Hero, Problem, Comparison, How-it-works, Feature grid, Social proof, Pricing, Footer.
+1. Guest on `/` at **1440px** width sees all desktop sections in **main-column** Figma order: Navbar, Hero, Problem, Comparison, How-it-works, then **Feature grid, Social proof, Pricing** (3 sections), then Footer — **no second comparison block**.
+2. Guest on `/` at **393px** width sees mobile frame layout: top bar, Hero, Problem, Comparison, How-it-works, then the same **3 sections** (Feature grid, Social proof, Pricing), then Footer.
 3. `component.navbar` shows Figma labels; **How It Works** navigates to `/how-it-works`; **Book A Demo** navigates to `/contact`.
 4. Hero primary CTA navigates to `/contact`.
 5. **Pricing** nav control scrolls to pricing section on `/` (or navigates per design-contract).
@@ -250,11 +279,12 @@ None — LP-001 UI does not consume BE response bodies. Health endpoint is gate-
 | 3 | Problem | `5164:6561` | `5164:6571` | 3 |
 | 4 | Comparison (1st) | `5164:6566` | `5164:6609` | 4 |
 | 5 | How-it-works | `5164:6567` | `5164:6690` | 5 |
-| 6 | Comparison (2nd) | `5164:6563` | — | 6 |
-| 7 | Feature grid | `5164:6562` | `5164:6785` | 7 |
-| 8 | Social proof | `5164:6568` | `5164:6836` | 8 |
-| 9 | Pricing | `5164:6564` | `5164:6915` | 9 |
-| 10 | Footer | `5164:6565` | `5164:7038` | 10 |
+| 6 | Feature grid *(post-HIW 1/3)* | `5164:6562` | `5164:6785` | 6 |
+| 7 | Social proof *(post-HIW 2/3)* | `5164:6568` | `5164:6836` | 7 |
+| 8 | Pricing *(post-HIW 3/3)* | `5164:6564` | `5164:6915` | 8 |
+| 9 | Footer | `5164:6565` | `5164:7038` | 9 |
+
+**Parked / out of scope:** `5164:6563` — ComparisonSection duplicate at `x=3234` on `D4-Desktop` (not slice 6).
 
 ### Parent frames
 

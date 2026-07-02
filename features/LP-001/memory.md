@@ -4,8 +4,8 @@
 - **Parent ticket:** LP-001
 - **FE ticket:** LP-001-FE
 - **BE ticket:** LP-001-BE
-- **Status:** be-implemented (LP-001-BE merged · FE unblocked)
-- **Last updated:** 2026-07-01
+- **Status:** gherkins-ready
+- **Last updated:** 2026-07-02
 - **Figma file key:** `h6BqI1ZRMSJxR7jESNF0Ep`
 - **Figma anchor:** `5164:6346` (landing page only — not used for F-002 / F-003)
 
@@ -58,27 +58,32 @@ See [`docs/features/LP-001/prd-v1.md`](../../../docs/features/LP-001/prd-v1.md) 
 ## PRD v2
 
 <!-- Written by: prd-update on 2026-07-01 -->
-<!-- Approved by: human on 2026-07-01 -->
+<!-- Corrected: prd-update on 2026-07-02 — D4-Desktop main column verified via Figma MCP -->
+<!-- Layout: one Comparison; after How-it-works → Feature grid, Social proof, Pricing (3 sections) -->
+<!-- Approved by: human on 2026-07-02 -->
 Full file: [`docs/features/LP-001/prd-v2.md`](../../../docs/features/LP-001/prd-v2.md)
 
 ### Summary
 
-- Screens: 10 sections + 2 parent frames (D4-Desktop `5164:6558`, D4-Mobile `5164:6569`)
+- Screens: **9 in-flow sections** + 2 parent frames (D4-Desktop `5164:6558`, D4-Mobile `5164:6569`)
+- Post–How-it-works: **Feature grid** (`6562`/`6785`) → **Social proof** (`6568`/`6836`) → **Pricing** (`6564`/`6915`)
+- **No second comparison** — `5164:6563` off-canvas at `x=3234` — out of scope
 - ACs: 12
 - Data-bound UI fields: 0 (static landing; health stub only for BE gate)
-- Edge cases: 9 documented (incl. dual Comparison on desktop, single on mobile)
+- Edge cases: 9 (off-canvas duplicate, single comparison on mobile, placeholder node, etc.)
 
 ---
 
 ## Gherkins
 
 <!-- Written by: spec-author on 2026-07-01 -->
-<!-- Reviewed by: human on 2026-07-01 — approved -->
-<!-- Validated by: gherkin-validate on 2026-07-01 — all checks passed -->
-<!-- @fe scenarios: 11 | @be scenarios: 1 -->
+<!-- Updated by: spec-author on 2026-07-02 — PRD v2: removed GH#8 (Comparison 2nd) -->
+<!-- Reviewed by: human on 2026-07-02 — approved -->
+<!-- Validated by: gherkin-validate on 2026-07-02 — all checks passed -->
+<!-- @fe scenarios: 10 | @be scenarios: 1 -->
 Full file: [`features/LP-001/LP-001.feature`](./LP-001.feature)
 
-1:1 with GitHub issues [#1](https://github.com/faryalawais/MLtravel-Frontend/issues/1)–[#12](https://github.com/faryalawais/MLtravel-Frontend/issues/12).
+1:1 with open GitHub issues [#1](https://github.com/faryalawais/MLtravel-Frontend/issues/1)–[#7](https://github.com/faryalawais/MLtravel-Frontend/issues/7), [#9](https://github.com/faryalawais/MLtravel-Frontend/issues/9)–[#12](https://github.com/faryalawais/MLtravel-Frontend/issues/12). [#8](https://github.com/faryalawais/MLtravel-Frontend/issues/8) cancelled.
 
 ---
 
@@ -161,16 +166,17 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 
 **Registry total:** 526 components (navbar 38 + hero 28 + problem 71 + comparisonFirst 138 + howItWorksTeaser 251) · `layout.json` 21 leaf slugs
 
-<!-- registry-validate: passed 2026-07-01 (526 components, 3 screens; ui-registry:validate + validate:layout pass) -->
+<!-- registry-validate: passed 2026-07-02 (526 components; comparisonSecond removed per PRD v2) -->
 
 ---
 
 ## Design contract
 <!-- Written by: design-contract on 2026-07-01 -->
+<!-- Updated: 2026-07-02 — removed GH#8 Comparison₂ (cancelled per PRD v2) -->
 <!-- validate:figma-coverage: passed · validate:contract: passed -->
 **Scope:** Navbar (#3) + Hero (#4) + Problem (#5) + Comparison₁ (#6) + How-it-works teaser (#7) — `features/LP-001/contract.md`  
 **Branch:** `feature/LP-001-FE`  
-**Next:** `/figma-extract` — GH#8 Comparison second block (`5164:6563` / `5164:6569` / `5164:10346`)
+**Next:** `/fe-implement` — GH#10 Feature grid (`5164:6562` / `5164:6785`)
 
 ---
 
@@ -266,4 +272,9 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-01** — `/ui-registry-build` How-it-works teaser slice — 251 howItWorksTeaser paths; registry total 526; Gherkin alias `component.landing.howItWorksTeaser` → `.root`; `build:layout` + `validate:layout` pass.
 - **2026-07-01** — `/design-contract` How-it-works teaser slice — contract §2 + GH#7 anatomy; `validate:figma-coverage` + `validate:contract` pass.
 - **2026-07-01** — `/fe-implement` GH#6 + GH#7 — `ComparisonFirstSection`, `HowItWorksTeaserSection`; e2e + visual pass; commit `e8dd434`.
-- **2026-07-01** — `/ui-registry-build` re-run (post GH#7) — 526 components unchanged; `ui-registry:validate` + `build:layout` + `validate:layout` pass; token enrich 0 (PAT lacks `file_variables:read`).
+- **2026-07-02** — `/prd-update` — PRD v2 corrected: no Comparison₂ in page flow; post-HIW = Feature grid → Social proof → Pricing.
+- **2026-07-02** — `/prd-review` — PRD v2 **re-approved** by human.
+- **2026-07-02** — `/to-issues` — GH#8 cancelled; slices 6–9 renumbered on #10, #9, #11, #12.
+- **2026-07-02** — `/spec-author` — Gherkins updated (10 @fe + 1 @be; GH#8 removed).
+- **2026-07-02** — `/scenario-review` — Gherkins **approved** by human.
+- **2026-07-02** — Reverted GH#8 Comparison₂ artifacts (registry, contract, figma cache, slice-roots).

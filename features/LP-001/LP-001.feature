@@ -2,7 +2,9 @@ Feature: Landing page (LP-001)
 
   # AC-8: token lint enforced by npm run gate (no raw hex/px) — not a UI scenario
   # AC-10: human visual sign-off vs current Figma after spacing fixes — not automatable in BDD
-  # GitHub issues #1–#12 · one scenario per issue · grill-me pass 2
+  # GitHub issues #1–#7, #9–#12 · one scenario per issue · PRD v2 approved 2026-07-02
+  # Page flow: Navbar → Hero → Problem → Comparison → How-it-works → Feature grid → Social proof → Pricing → Footer
+  # GH#8 cancelled — no Comparison (2nd); `5164:6563` off-canvas
   # Every @fe slice: D4-Desktop + D4-Mobile + animation frame + MOTION-SPEC
 
   # ── FE scenarios ──────────────────────────────────────────────────────────
@@ -61,7 +63,7 @@ Feature: Landing page (LP-001)
     And `component.landing.problem` motion matches Figma node "5164:10344"
 
   @fe
-  Scenario: GH#6 — Comparison first block matches desktop mobile and animation
+  Scenario: GH#6 — Comparison block matches desktop mobile and animation
     Given a guest views the site at 1440px width
     When the guest navigates to "/"
     Then `component.landing.comparisonFirst` is visible
@@ -83,17 +85,6 @@ Feature: Landing page (LP-001)
     Then `component.landing.howItWorksTeaser` is visible
     And `component.landing.howItWorksTeaser` matches Figma node "5164:6690"
     And `component.landing.howItWorksTeaser` motion matches Figma node "5164:10412"
-
-  @fe
-  Scenario: GH#8 — Comparison second block matches desktop mobile and animation
-    Given a guest views the site at 1440px width
-    When the guest navigates to "/"
-    Then `component.landing.comparisonSecond` is visible
-    And `component.landing.comparisonSecond` matches Figma node "5164:6563"
-    And `component.landing.comparisonSecond` motion matches Figma node "5164:10346"
-    Given a guest views the site at 393px width
-    When the guest navigates to "/"
-    Then `component.landing.comparisonSecond` is visible on mobile per Figma "5164:6569"
 
   @fe
   Scenario: GH#10 — Feature grid matches desktop mobile and animation

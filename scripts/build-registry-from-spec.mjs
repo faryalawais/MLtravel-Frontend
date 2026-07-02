@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Seed component entries from LP-001 figma checklist (navbar + hero        + comparison + howItWorksTeaser slices).
+ * Seed component entries from LP-001 figma checklist (navbar + hero + comparison + howItWorksTeaser slices).
  * ui-registry-build merges these into tokens/ui-registry.json.
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -670,7 +670,7 @@ function setPath(tree, segments, leaf) {
 const registry = {
   $metadata: {
     version: "0.1.0",
-    description: "UI registry — LP-001 Navbar + Hero + Problem + Comparison₁ + HowItWorksTeaser slices (ui-registry-build 2026-07-01)",
+    description: "UI registry — LP-001 Navbar + Hero + Problem + Comparison₁ + HowItWorksTeaser slices (ui-registry-build 2026-07-02)",
     pathGrammar: "<domain>.<segment>(.<segment>)+",
     owner: "MLtravel FE",
     gherkinAliases: {

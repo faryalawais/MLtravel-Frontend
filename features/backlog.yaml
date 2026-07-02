@@ -27,7 +27,7 @@ features:
       - "Strict pixel match to Figma; spacing targets post-design Figma updates"
       - "MUST feature-split → LP-001.1 API (health stub), LP-001.2 UI"
     priority: 1
-    status: contracted
+    status: specced
     design_contract: features/LP-001/contract.md
     depends_on: []
     figma_frames:
@@ -39,7 +39,6 @@ features:
       - { name: "ProblemSection", node_id: "5164:6561", mobile_node_id: "5164:6571" }
       - { name: "ComparisonSection-first", node_id: "5164:6566", mobile_node_id: "5164:6609" }
       - { name: "HowItWorksSection", node_id: "5164:6567", mobile_node_id: "5164:6690" }
-      - { name: "ComparisonSection-second", node_id: "5164:6563" }
       - { name: "FeatureGrid", node_id: "5164:6562", mobile_node_id: "5164:6785" }
       - { name: "SocialProofSectionBig", node_id: "5164:6568", mobile_node_id: "5164:6836" }
       - { name: "NewPricingSection", node_id: "5164:6564", mobile_node_id: "5164:6915" }

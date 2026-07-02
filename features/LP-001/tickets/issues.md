@@ -1,22 +1,21 @@
 # LP-001 — GitHub issues
 
-Published: 2026-07-01
+> Updated 2026-07-02 per approved PRD v2 — **no Comparison (2nd)**; post–How-it-works: Feature grid → Social proof → Pricing.
 
-| # | GitHub | Slice | Title |
-|---|--------|-------|-------|
-| 0 | [#1](https://github.com/faryalawais/MLtravel-Frontend/issues/1) | — | App shell — marketing route stubs |
-| 1 | [#2](https://github.com/faryalawais/MLtravel-Frontend/issues/2) | LP-001-BE | GET /api/health stub |
-| 2 | [#3](https://github.com/faryalawais/MLtravel-Frontend/issues/3) | LP-001-FE · 1 | Navbar — desktop, mobile, motion |
-| 3 | [#4](https://github.com/faryalawais/MLtravel-Frontend/issues/4) | LP-001-FE · 2 | Hero — desktop, mobile, motion |
-| 4 | [#5](https://github.com/faryalawais/MLtravel-Frontend/issues/5) | LP-001-FE · 3 | Problem section |
-| 5 | [#6](https://github.com/faryalawais/MLtravel-Frontend/issues/6) | LP-001-FE · 4 | Comparison (1st) |
-| 6 | [#7](https://github.com/faryalawais/MLtravel-Frontend/issues/7) | LP-001-FE · 5 | How-it-works teaser |
-| 7 | [#8](https://github.com/faryalawais/MLtravel-Frontend/issues/8) | LP-001-FE · 6 | Comparison (2nd) — desktop + motion |
-| 8 | [#10](https://github.com/faryalawais/MLtravel-Frontend/issues/10) | LP-001-FE · 7 | Feature grid |
-| 9 | [#9](https://github.com/faryalawais/MLtravel-Frontend/issues/9) | LP-001-FE · 8 | Social proof |
-| 10 | [#11](https://github.com/faryalawais/MLtravel-Frontend/issues/11) | LP-001-FE · 9 | Pricing |
-| 11 | [#12](https://github.com/faryalawais/MLtravel-Frontend/issues/12) | LP-001-FE · 10 | Footer |
+| Slice | Issue | Title |
+|-------|-------|-------|
+| — | [#1](https://github.com/faryalawais/MLtravel-Frontend/issues/1) | App shell — marketing route stubs |
+| BE | [#2](https://github.com/faryalawais/MLtravel-Frontend/issues/2) | LP-001-BE · GET /api/health stub |
+| 1 | [#3](https://github.com/faryalawais/MLtravel-Frontend/issues/3) | LP-001-FE · Navbar — desktop, mobile, motion |
+| 2 | [#4](https://github.com/faryalawais/MLtravel-Frontend/issues/4) | LP-001-FE · Hero — desktop, mobile, motion |
+| 3 | [#5](https://github.com/faryalawais/MLtravel-Frontend/issues/5) | LP-001-FE · Problem section |
+| 4 | [#6](https://github.com/faryalawais/MLtravel-Frontend/issues/6) | LP-001-FE · Comparison (1st) |
+| 5 | [#7](https://github.com/faryalawais/MLtravel-Frontend/issues/7) | LP-001-FE · How-it-works teaser |
+| 6 | [#10](https://github.com/faryalawais/MLtravel-Frontend/issues/10) | LP-001-FE · Feature grid *(post-HIW 1/3)* |
+| 7 | [#9](https://github.com/faryalawais/MLtravel-Frontend/issues/9) | LP-001-FE · Social proof *(post-HIW 2/3)* |
+| 8 | [#11](https://github.com/faryalawais/MLtravel-Frontend/issues/11) | LP-001-FE · Pricing *(post-HIW 3/3)* |
+| 9 | [#12](https://github.com/faryalawais/MLtravel-Frontend/issues/12) | LP-001-FE · Footer |
 
-**Every FE slice:** desktop static + mobile static (extract from `D4-Mobile` per section — **no desktop-only slices**) + animation frame node + MOTION-SPEC. Motion **values** from `primitives.motion.*` (placeholder defaults in repo until designer export replaces them).
+**Cancelled:** [#8](https://github.com/faryalawais/MLtravel-Frontend/issues/8) — Comparison (2nd) `5164:6563` off-canvas; not in shipped page flow (PRD v2).
 
-**FE blocked by:** #2 (BE health gate). **#1** (app shell) can run in parallel with #2.
+**Every FE slice:** desktop static + mobile static + animation frame + MOTION-SPEC. Motion values from `primitives.motion.*`.
