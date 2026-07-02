@@ -84,6 +84,34 @@ its name and its `nodeId`:
 - Every `sections[].widgets[].name` + `widgets[].nodeId`
 - Every `sections[].columns[].name` + `columns[].nodeId`
 - Every `sections[].banners[].name` + `banners[].nodeId`
+- Every `instanceVariants` object on INSTANCE nodes (e.g. `Size: Wide`,
+  `Accent: Navy`) — **one §4 token row per variant value**, never collapsed
+
+**Step 1b — Mandatory cache read for INSTANCE variants (before §3/§4):**
+
+Read `features/<id>/figma/nodes/<slice-root>.json` for each slice in
+`slice-roots.json`. Walk the raw tree for `type: "INSTANCE"` nodes with
+`componentProperties`. Build a **Variant matrix** (write into contract appendix
+or inline §2):
+
+```
+| nodeId | Component set | Size | Accent | Notes |
+| I5164:6562;3113:38 | FeatureCard | Wide | Navy | badge <100ms |
+```
+
+If `component-checklist.md` lists a `FeatureCard` / `AccentBar` / `Button`
+INSTANCE **without** `(variants: …)` and the cache also lacks
+`componentProperties` → **STOP**. Extraction is incomplete. Instruct user to
+re-run `/figma-extract` with MCP gap-fill (Timeout Split on that slice-root).
+Do not write a contract that guesses one accent colour for all cards.
+
+**Step 1c — Layout direction from cache (before §3):**
+
+For every container named in §2 (`FooterBar`, `FeatureCardsGrid`, nav tiers),
+copy `layout.direction`, `layout.justify`, and `layout.align` from `spec.json`
+or the node's `layoutMode` / `primaryAxisAlignItems` in the cache. **Never
+assume `column / center`** because a prior feature used that pattern. If
+`FooterBar` is `row` + `space-between` in cache, §3 must say so.
 
 If `spec.json` does not record `nodeId` on a named element → **STOP**. The
 `figma-extract` run that produced this spec.json was written before the nodeId
@@ -173,6 +201,25 @@ Fill in `contract-template.md` (in this skill's folder) for the feature:
    Every value expressed as an **exact** design token from
    `reports/tokens-report.md`. "Exact" means the token's resolved px value
    equals the Figma measurement to within 1px.
+
+   **Layout direction is per-container — read from cache, never assume.**
+   For every named container in §3, copy `layout.direction`, `layout.justify`,
+   and `layout.align` from `spec.json` or the slice-root `nodes/<nodeId>.json`
+   cache. Do **not** default footers, CTAs, or toolbars to `column / center`
+   because an earlier slice used that pattern. Example: if Figma `FooterBar`
+   is `row` + `space-between`, §3 must say `row` + `space-between`, not
+   `column` + `center`.
+
+   **Component-set instance variants — one §4 row per instance, never collapsed.**
+   When the cache shows `componentProperties` on a Figma INSTANCE (e.g.
+   `FeatureCard` with `Size: Wide|Narrow`, `AccentBar` with
+   `Accent: Navy|Teal|Orange|Red`), document **each instance** in §2 anatomy
+   with its variant values in parentheses, and give **each instance its own §4
+   token row** (accent colour, size, padding if they differ). Forbidden:
+   writing one generic row such as “Accent bar → `color.action.primary`” for
+   all cards when Figma uses different `Accent` variants per card. The
+   implementor must be able to build from §4 alone — if variants are missing,
+   first-run UI will be wrong even when extraction is correct.
    **Never substitute a token whose resolved value differs from the Figma
    value** — approximations create invisible drift that compounds across
    components.
@@ -203,9 +250,11 @@ Fill in `contract-template.md` (in this skill's folder) for the feature:
      `feature-implement`.
 
 4. **Tokens** — per element: which token for background / text / border /
-   radius / spacing / font size. All token names must exactly match entries
-   in `reports/tokens-report.md`. If a Figma colour or radius has no exact
-   token match:
+   radius / spacing / font size / **font weight**. All token names must
+   exactly match entries in `reports/tokens-report.md`. When the cache gives
+   per-instance variant props, §4 must list tokens **per instance** (see step 3
+   variant rule) — not one token for all siblings of the same component name.
+   If a Figma colour or radius has no exact token match:
    - If `allow_raw_values: true` in backlog.yaml → record the exact hex/px
      value in the "Missing tokens (allow-raw approved)" section and use the
      raw value in the contract.
@@ -233,7 +282,11 @@ one exits 0. Do not mark `status: contracted` until both pass.
 > **Run this Bash command now. Do not skip, do not defer to the user.**
 > ```bash
 > npm run validate:figma-coverage -- <id>
+> npm run validate:figma-extract -- <id>
 > ```
+> `validate:figma-coverage` Check 1: every checklist entity in §2.
+> `validate:figma-extract`: cache complete, no placeholder PNGs, reconciliation
+> prerequisites (every slice-root has `nodes/*.json`).
 > | Exit code | Action |
 > |-----------|--------|
 > | **0** | Proceed to Checkpoint B |
@@ -309,6 +362,16 @@ feature's `design_contract` field in `backlog.yaml`, and advance its `status`
    A contract that omits visible Figma elements is incomplete. `feature-implement`
    will use this contract as the complete build checklist — any element absent
    from §2 is likely to be missing from the implementation too.
+6. **Component-set variants must not be collapsed in §4.** If the cache shows
+   different `componentProperties` on sibling instances (e.g. six `FeatureCard`s
+   with different `Accent` values), §4 needs one token row per instance — not
+   one generic row for the component name. Collapsing variants is a contract
+   defect that causes first-run orange-accent-on-everything bugs even when
+   extraction is correct.
+7. **`notes.md` must include Dual-source reconciliation.** If the figma-extract
+   reconciliation table is missing or shows MCP ✗ for any slice-root → **STOP**.
+   Re-run `/figma-extract` before contracting. A REST-only extract cannot
+   produce an exact contract for component-set variants.
 
 ## Success criteria
 - `contract.md` exists with all sections populated.

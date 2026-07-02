@@ -2,21 +2,40 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useState, type CSSProperties } from 'react';
 import {
   HIW_DESKTOP_CARDS,
   HIW_MOBILE_CARDS,
+  HIW_CARD_BODY_CLASS,
   HIW_SECTION_SUBTITLE,
+  LANDING_SECTION_HEADING_ACCENT_CLASS,
+  LANDING_SECTION_HEADING_DESKTOP_CLASS,
+  LANDING_SECTION_HEADING_MOBILE_CLASS,
+  LANDING_SECTION_PILL_LABEL_DESKTOP_CLASS,
+  LANDING_SECTION_PILL_LABEL_MOBILE_CLASS,
+  LANDING_SECTION_SUBTITLE_CLASS,
   PROBLEM_CARD_BASE_CLASS,
   PROBLEM_MOTION_STYLE,
   PROBLEM_TOKENS,
 } from '@/constants/landing.constants';
+import {
+  beginMotionReveal,
+  getMotionCascadeCardSurfaceStyle,
+  getMotionCascadeTextStyle,
+  getMotionSlideRevealStyle,
+  MOTION_DELAY_STEP,
+  MOTION_TRANSITION_PROPERTIES,
+  RESPONSIVE_IMAGE_DIMENSION_STYLE,
+} from '@/constants/motion.constants';
+import { runRapidFourStepMotion } from '@/lib/motion-sequence';
+import { useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
   HiwCardAccent,
   HiwCardConfig,
   HiwCardDesktopProps,
   HiwCardMobileProps,
+  HiwFooterLinkProps,
   HiwSectionPillProps,
 } from '@/types/landing.types';
 
@@ -40,19 +59,30 @@ const ACCENT_BORDER: Record<HiwCardAccent, string> = {
   teal: 'border-[var(--color-border-brand-teal)]',
 };
 
-function getDurationTokenMs(cssVarName: string): number {
-  if (typeof window === 'undefined') return 120;
-  const raw = getComputedStyle(document.documentElement).getPropertyValue(cssVarName).trim();
-  const parsed = Number.parseInt(raw, 10);
-  return Number.isNaN(parsed) ? 120 : parsed;
+function getCardSurfaceStyle(
+  cardIndex: number,
+  revealedUpTo: number,
+  activeIndex: number | null,
+  cascadeRunning: boolean,
+  motionEngaged: boolean,
+  isHighlighted: boolean,
+): CSSProperties {
+  return getMotionCascadeCardSurfaceStyle({
+    cardIndex,
+    revealedUpTo,
+    activeIndex,
+    cascadeRunning,
+    motionEngaged,
+    isHighlighted,
+    shadowToken: PROBLEM_TOKENS.shadowCard,
+    baseStyle: PROBLEM_MOTION_STYLE,
+  });
 }
 
-function getCardSurfaceStyle(isHighlighted: boolean): CSSProperties {
+function getCardChromeTransitionStyle(): CSSProperties {
   return {
     ...PROBLEM_MOTION_STYLE,
-    transitionProperty: 'border-color, box-shadow, transform',
-    boxShadow: isHighlighted ? PROBLEM_TOKENS.shadowCard : 'none',
-    transform: isHighlighted ? 'translateY(calc(var(--spacing-4) * -1))' : 'translateY(0)',
+    transitionProperty: MOTION_TRANSITION_PROPERTIES,
   };
 }
 
@@ -63,11 +93,15 @@ const ACCENT_HOVER_SHELL: Record<HiwCardAccent, string> = {
   teal: 'hover:border-[var(--color-border-brand-teal)] hover:shadow-[var(--shadow-card)] hover:-translate-y-[var(--spacing-4)]',
 };
 
-function getCardShellClass(accent: HiwCardAccent, isHighlighted: boolean, cascadeRunning: boolean): string {
+function getCardShellClass(
+  accent: HiwCardAccent,
+  isHighlighted: boolean,
+  motionActive: boolean,
+): string {
   if (isHighlighted) {
-    return `${ACCENT_BORDER[accent]} shadow-[var(--shadow-card)] -translate-y-[var(--spacing-4)]`;
+    return `${ACCENT_BORDER[accent]} shadow-[var(--shadow-card)]`;
   }
-  if (cascadeRunning) {
+  if (motionActive) {
     return 'border-[var(--color-border-default)]';
   }
   return `border-[var(--color-border-default)] ${ACCENT_HOVER_SHELL[accent]}`;
@@ -92,9 +126,7 @@ function HiwSectionPill({ pillTestId, labelTestId, variant = 'desktop' }: HiwSec
       <span
         data-testid={labelTestId}
         className={
-          isMobile
-            ? 'text-label-mobile-micro-tag text-[var(--color-pill-solution-text)]'
-            : 'text-label-desktop-md-tag text-[var(--color-pill-solution-text)]'
+          isMobile ? LANDING_SECTION_PILL_LABEL_MOBILE_CLASS : LANDING_SECTION_PILL_LABEL_DESKTOP_CLASS
         }
       >
         How It Works
@@ -121,11 +153,11 @@ function HiwAccentBar({
       aria-hidden="true"
       className={[
         'h-[var(--spacing-4)] w-[var(--spacing-64)] rounded-full',
-        'transition-[background] duration-[var(--motion-duration-default)] ease-in',
         isHighlighted
           ? 'bg-[linear-gradient(to_right,var(--color-text-brand-navy),color-mix(in_srgb,var(--color-text-brand-navy)_55%,var(--color-text-brand-orange)))]'
           : `bg-[var(--color-action-primary-default-background)]${cascadeRunning ? '' : ` ${hoverAccent}`}`,
       ].join(' ')}
+      style={getCardChromeTransitionStyle()}
     />
   );
 }
@@ -139,7 +171,7 @@ function CardVisualImage({ card }: { card: HiwCardConfig }) {
       width={424}
       height={184}
       className="h-auto w-full"
-      style={{ height: 'auto' }}
+      style={RESPONSIVE_IMAGE_DIMENSION_STYLE}
       aria-hidden="true"
     />
   );
@@ -149,10 +181,12 @@ function HiwCardContent({
   card,
   isHighlighted = false,
   cascadeRunning = false,
+  motionEngaged = false,
 }: {
   card: HiwCardConfig;
   isHighlighted?: boolean;
   cascadeRunning?: boolean;
+  motionEngaged?: boolean;
 }) {
   return (
     <div
@@ -170,7 +204,16 @@ function HiwCardContent({
           {card.stepLabel}
         </span>
       </div>
-      <div data-testid={card.mainBlockTestId} className="flex flex-col gap-[var(--spacing-8)]">
+      <div
+        data-testid={card.mainBlockTestId}
+        className="flex flex-col gap-[var(--spacing-8)]"
+        style={getMotionCascadeTextStyle(
+          isHighlighted,
+          cascadeRunning,
+          motionEngaged,
+          PROBLEM_MOTION_STYLE,
+        )}
+      >
         <h3
           data-testid={card.headingTestId}
           className="text-heading-desktop-h4 text-[var(--color-text-primary)]"
@@ -184,7 +227,7 @@ function HiwCardContent({
         />
         <p
           data-testid={card.bodyTestId}
-          className="text-body-desktop-sm text-[var(--color-text-secondary)]"
+          className={HIW_CARD_BODY_CLASS}
         >
           {card.body}
         </p>
@@ -199,7 +242,15 @@ function HiwCardContent({
   );
 }
 
-function HiwCardDesktop({ card, isHighlighted, cascadeRunning }: HiwCardDesktopProps) {
+function HiwCardDesktop({
+  card,
+  cardIndex,
+  revealedUpTo,
+  activeIndex,
+  isHighlighted,
+  cascadeRunning,
+  motionEngaged,
+}: HiwCardDesktopProps) {
   return (
     <article
       data-testid={card.cardTestId}
@@ -208,13 +259,24 @@ function HiwCardDesktop({ card, isHighlighted, cascadeRunning }: HiwCardDesktopP
         'group/card',
         PROBLEM_CARD_BASE_CLASS,
         'w-full max-w-[424px] flex-1 overflow-hidden border bg-[var(--color-background-surface)]',
-        'transition-[border-color,box-shadow,transform] duration-[var(--motion-duration-default)] ease-in',
-        getCardShellClass(card.accent, isHighlighted, cascadeRunning),
+        getCardShellClass(card.accent, isHighlighted, cascadeRunning || motionEngaged),
       ].join(' ')}
-      style={getCardSurfaceStyle(isHighlighted)}
+      style={getCardSurfaceStyle(
+        cardIndex,
+        revealedUpTo,
+        activeIndex,
+        cascadeRunning,
+        motionEngaged,
+        isHighlighted,
+      )}
     >
       <CardVisualImage card={card} />
-      <HiwCardContent card={card} isHighlighted={isHighlighted} cascadeRunning={cascadeRunning} />
+      <HiwCardContent
+        card={card}
+        isHighlighted={isHighlighted}
+        cascadeRunning={cascadeRunning}
+        motionEngaged={motionEngaged}
+      />
     </article>
   );
 }
@@ -231,9 +293,17 @@ function HiwCardMobile({ card }: HiwCardMobileProps) {
   );
 }
 
-function HiwFooterLink() {
+function HiwFooterLink({ isEmphasized = false, motionEngaged = false }: HiwFooterLinkProps) {
   return (
-    <div data-testid={hiw.footerNote} className="flex w-full justify-center text-center">
+    <div
+      data-testid={hiw.footerNote}
+      className="flex w-full justify-center text-center"
+      style={getMotionSlideRevealStyle(isEmphasized, PROBLEM_MOTION_STYLE, {
+        engaged: motionEngaged,
+        animateOpacity: false,
+        liftWhenRevealed: true,
+      })}
+    >
       <Link
         href="/how-it-works"
         data-testid={hiw.textBlock21}
@@ -256,105 +326,156 @@ function HiwFooterLink() {
   );
 }
 
-function HiwCardsDesktop() {
-  const [sequenceIndex, setSequenceIndex] = useState<number | null>(null);
-  const [cascadeActive, setCascadeActive] = useState(false);
-  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
-  const hasPlayedRef = useRef(false);
-  const cascadeActiveRef = useRef(false);
-
-  const clearSequence = useCallback(() => {
-    timersRef.current.forEach(clearTimeout);
-    timersRef.current = [];
-  }, []);
-
-  const endCascade = useCallback(() => {
-    cascadeActiveRef.current = false;
-    setCascadeActive(false);
-    const motionDuration = getDurationTokenMs('--motion-duration-default');
-    timersRef.current.push(setTimeout(() => setSequenceIndex(null), motionDuration));
-  }, []);
-
-  const playSequence = useCallback(() => {
-    if (hasPlayedRef.current) return;
-
-    hasPlayedRef.current = true;
-    clearSequence();
-    const stepDelay = getDurationTokenMs(PROBLEM_TOKENS.motionStepDelayVar);
-
-    cascadeActiveRef.current = true;
-    setCascadeActive(true);
-    setSequenceIndex(0);
-
-    timersRef.current.push(
-      setTimeout(() => setSequenceIndex(1), stepDelay),
-      setTimeout(() => {
-        setSequenceIndex(2);
-        endCascade();
-      }, stepDelay * 2),
-    );
-  }, [clearSequence, endCascade]);
-
-  useEffect(() => () => clearSequence(), [clearSequence]);
-
+function HiwDesktopCards({
+  revealedUpTo,
+  activeIndex,
+  cascadeActive,
+  headerEmphasized,
+  motionEngaged,
+  onPlaySequence,
+}: {
+  revealedUpTo: number;
+  activeIndex: number | null;
+  cascadeActive: boolean;
+  headerEmphasized: boolean;
+  motionEngaged: boolean;
+  onPlaySequence: () => void;
+}) {
   return (
-    <div
-      data-testid={hiw.cardsWrap}
-      className="flex w-full flex-wrap items-stretch justify-center gap-[var(--spacing-20)]"
-      onMouseEnter={playSequence}
-    >
-      {HIW_DESKTOP_CARDS.map((card, index) => (
-        <HiwCardDesktop
-          key={card.cardTestId}
-          card={card}
-          isHighlighted={sequenceIndex === index}
-          cascadeRunning={cascadeActive}
-        />
-      ))}
+    <div className="hidden min-[1440px]:block">
+      <div
+        data-testid={hiw.motion.root}
+        className="flex justify-center px-[var(--spacing-64)] py-[var(--spacing-40)]"
+        onMouseEnter={onPlaySequence}
+      >
+        <div
+          data-testid={hiw.frame2095585115}
+          className="flex w-full max-w-[1312px] flex-col items-center gap-[var(--spacing-40)]"
+        >
+          <div
+            data-testid={hiw.sectionHeader}
+            className="flex w-full max-w-[725px] flex-col items-center gap-[var(--spacing-16)] text-center"
+            style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
+              engaged: motionEngaged,
+              animateOpacity: false,
+            })}
+          >
+            <HiwSectionPill pillTestId={hiw.sectionPill} labelTestId={hiw.sectionRoot} />
+            <div
+              data-testid={hiw.headingBlock}
+              className="flex flex-col items-center gap-[var(--spacing-8)]"
+              style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
+                engaged: motionEngaged,
+                animateOpacity: false,
+              })}
+            >
+              <h2
+                data-testid={hiw.textBlock}
+                className={LANDING_SECTION_HEADING_DESKTOP_CLASS}
+                style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
+                  engaged: motionEngaged,
+                  animateOpacity: false,
+                })}
+              >
+                From contract to booking in{' '}
+                <span className={LANDING_SECTION_HEADING_ACCENT_CLASS}>three steps.</span>
+              </h2>
+              <p
+                data-testid={hiw.textBlock2}
+                className={LANDING_SECTION_SUBTITLE_CLASS}
+                style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
+                  engaged: motionEngaged,
+                  animateOpacity: false,
+                  transitionDelay: MOTION_DELAY_STEP,
+                })}
+              >
+                {HIW_SECTION_SUBTITLE}
+              </p>
+            </div>
+          </div>
+
+          <div
+            data-testid={hiw.cardsWrap}
+            className="flex w-full flex-wrap items-stretch justify-center gap-[var(--spacing-20)]"
+          >
+            {HIW_DESKTOP_CARDS.map((card, index) => (
+              <HiwCardDesktop
+                key={card.cardTestId}
+                card={card}
+                cardIndex={index}
+                revealedUpTo={revealedUpTo}
+                activeIndex={activeIndex}
+                isHighlighted={activeIndex === index}
+                cascadeRunning={cascadeActive}
+                motionEngaged={motionEngaged}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 export function HowItWorksTeaserSection() {
+  const [revealedUpTo, setRevealedUpTo] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [headerEmphasized, setHeaderEmphasized] = useState(false);
+  const [footerEmphasized, setFooterEmphasized] = useState(false);
+  const [cascadeActive, setCascadeActive] = useState(false);
+  const [motionEngaged, setMotionEngaged] = useState(false);
+
+  const playSequence = useCallback(
+    () =>
+      runRapidFourStepMotion([
+        () => {
+          beginMotionReveal(
+            () => {
+              setMotionEngaged(true);
+              setCascadeActive(true);
+              setRevealedUpTo(-1);
+              setActiveIndex(null);
+            },
+            () => {
+              setHeaderEmphasized(true);
+              setRevealedUpTo(0);
+              setActiveIndex(0);
+            },
+          );
+        },
+        () => {
+          setRevealedUpTo(1);
+          setActiveIndex(1);
+        },
+        () => {
+          setRevealedUpTo(2);
+          setActiveIndex(2);
+        },
+        () => {
+          setActiveIndex(null);
+          setCascadeActive(false);
+          setFooterEmphasized(true);
+        },
+      ]),
+    [],
+  );
+
+  const triggerMotion = useOneWayMotion(playSequence);
+
   return (
     <section
       data-testid={hiw.root}
       aria-label="How It Works"
       className="bg-[var(--color-background-page)]"
     >
-      {/* Desktop — Figma 5164:6567 */}
-      <div className="hidden min-[1440px]:block">
-        <div className="flex justify-center px-[var(--spacing-64)] py-[var(--spacing-40)]">
-          <div
-            data-testid={hiw.frame2095585115}
-            className="flex w-full max-w-[1312px] flex-col items-center gap-[var(--spacing-40)]"
-          >
-            <div
-              data-testid={hiw.sectionHeader}
-              className="flex w-full max-w-[725px] flex-col items-center gap-[var(--spacing-16)] text-center"
-            >
-              <HiwSectionPill pillTestId={hiw.sectionPill} labelTestId={hiw.sectionRoot} />
-              <div data-testid={hiw.headingBlock} className="flex flex-col items-center gap-[var(--spacing-8)]">
-                <h2
-                  data-testid={hiw.textBlock}
-                  className="text-heading-desktop-h2 text-[var(--color-text-primary)]"
-                >
-                  From contract to booking in{' '}
-                  <span className="text-[var(--color-text-brand-navy)]">three steps.</span>
-                </h2>
-                <p
-                  data-testid={hiw.textBlock2}
-                  className="text-body-desktop-md text-[var(--color-text-secondary)]"
-                >
-                  {HIW_SECTION_SUBTITLE}
-                </p>
-              </div>
-            </div>
-
-            <HiwCardsDesktop />
-          </div>
-        </div>
-      </div>
+      <HiwDesktopCards
+        revealedUpTo={revealedUpTo}
+        activeIndex={activeIndex}
+        cascadeActive={cascadeActive}
+        headerEmphasized={headerEmphasized}
+        motionEngaged={motionEngaged}
+        onPlaySequence={triggerMotion}
+      />
 
       {/* Mobile — Figma 5164:6690 */}
       <div
@@ -376,17 +497,11 @@ export function HowItWorksTeaserSection() {
                 variant="mobile"
               />
               <div data-testid={hiw.mobile.heading} className="flex flex-col items-center gap-[var(--spacing-8)]">
-                <h2
-                  data-testid={hiw.mobile.textBlock}
-                  className="text-heading-mobile-h2 text-[var(--color-text-primary)]"
-                >
+                <h2 data-testid={hiw.mobile.textBlock} className={LANDING_SECTION_HEADING_MOBILE_CLASS}>
                   From contract to booking in{' '}
-                  <span className="text-[var(--color-text-brand-navy)]">three steps.</span>
+                  <span className={LANDING_SECTION_HEADING_ACCENT_CLASS}>three steps.</span>
                 </h2>
-                <p
-                  data-testid={hiw.mobile.paragraph}
-                  className="text-body-desktop-md text-[var(--color-text-secondary)]"
-                >
+                <p data-testid={hiw.mobile.paragraph} className={LANDING_SECTION_SUBTITLE_CLASS}>
                   {HIW_SECTION_SUBTITLE}
                 </p>
               </div>
@@ -404,7 +519,7 @@ export function HowItWorksTeaserSection() {
       </div>
 
       <div className="flex justify-center px-[var(--spacing-16)] pb-[var(--spacing-28)] min-[1440px]:px-[var(--spacing-64)] min-[1440px]:pb-[var(--spacing-40)]">
-        <HiwFooterLink />
+        <HiwFooterLink isEmphasized={footerEmphasized} motionEngaged={motionEngaged} />
       </div>
     </section>
   );

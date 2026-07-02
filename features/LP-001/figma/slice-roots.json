@@ -76,6 +76,56 @@
       "nodeId": "5164:10412",
       "name": "HowItWorks-animation",
       "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6562",
+      "name": "FeatureGrid",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6785",
+      "name": "FeatureGridMobile",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5404:6074",
+      "name": "FeatureGrid-animation",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6568",
+      "name": "SocialProofSectionBig",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6836",
+      "name": "SocialProofMobile",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5307:6608",
+      "name": "SocialProof-animation",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:11204",
+      "name": "SocialProof-animation-alt",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6564",
+      "name": "NewPricingSection",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6915",
+      "name": "PricingMobile",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:11487",
+      "name": "Pricing-animation",
+      "source": "explicit"
     }
   ]
 }

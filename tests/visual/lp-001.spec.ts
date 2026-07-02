@@ -84,9 +84,69 @@ test.describe('LP-001 visual regression', () => {
   test('how-it-works teaser mobile 393px', async ({ page }) => {
     await page.setViewportSize({ width: 393, height: 1800 });
     await page.goto('/');
-    await page.getByTestId(ids.component.landing.howItWorksTeaser.root).scrollIntoViewIfNeeded();
-    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.root)).toHaveScreenshot(
+    await page.getByTestId(ids.component.landing.howItWorksTeaser.mobile.sectionRoot).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.howItWorksTeaser.mobile.sectionRoot)).toHaveScreenshot(
       'how-it-works-teaser-mobile.png',
+      { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
+    );
+  });
+
+  test('feature grid desktop 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1400 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.featureGrid.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.featureGrid.root)).toHaveScreenshot(
+      'feature-grid-desktop.png',
+      { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
+    );
+  });
+
+  test('feature grid mobile 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 2200 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.featureGrid.mobile.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.featureGrid.mobile.root)).toHaveScreenshot(
+      'feature-grid-mobile.png',
+      { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
+    );
+  });
+
+  test('social proof desktop 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1200 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.socialProof.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.socialProof.root)).toHaveScreenshot(
+      'social-proof-desktop.png',
+      { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
+    );
+  });
+
+  test('social proof mobile 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 1800 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.socialProof.mobile.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.socialProof.mobile.root)).toHaveScreenshot(
+      'social-proof-mobile.png',
+      { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
+    );
+  });
+
+  test('pricing desktop 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1200 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.pricing.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.pricing.root)).toHaveScreenshot(
+      'pricing-desktop.png',
+      { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
+    );
+  });
+
+  test('pricing mobile 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 2000 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.pricing.mobile.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.pricing.mobile.root)).toHaveScreenshot(
+      'pricing-mobile.png',
       { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
     );
   });

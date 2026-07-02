@@ -166,17 +166,39 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 
 **Registry total:** 526 components (navbar 38 + hero 28 + problem 71 + comparisonFirst 138 + howItWorksTeaser 251) · `layout.json` 21 leaf slugs
 
+### Components catalogued (Feature grid slice #10 — 338 entries)
+- `component.landing.featureGrid.root` — desktop `5164:6562` (Gherkin: `component.landing.featureGrid`)
+- `component.landing.featureGrid.*` — section header, 6× FeatureCard (2 rows), footer tagline + CTA, decorative planes
+- `component.landing.featureGrid.mobile.*` — mobile stack `5164:6785` (stacked cards + CTA row)
+- `component.landing.featureGrid.motion.*` — animation reference `5404:6074` (4-step cascade per MOTION-SPEC §7)
+
+### Components catalogued (Social proof slice #9 — 224 entries under `socialProof.*`)
+- `component.landing.socialProof.root` — desktop `5164:6568` (Gherkin: `component.landing.socialProof`)
+- `component.landing.socialProof.*` — header, 2× TestimonialBlock, SlideProgressBar, integrations strip (14 client logos), decorative plane
+- `component.landing.socialProof.mobile.*` — mobile stack `5164:6836` (scrollable testimonials + logo grid)
+- `component.landing.socialProof.motion.*` — testimonials animation `5307:6608` (MOTION-SPEC §8)
+- `component.landing.socialProof.clientsMotion.*` — clients strip animation `5164:11204` (MOTION-SPEC §5)
+
+**Registry total:** 1534 components · `layout.json` 28 leaf slugs
+
+<!-- figma-extract: passed 2026-07-02 (GH#9 Social proof — desktop/mobile/motion) -->
+<!-- ui-registry-build: passed 2026-07-02 (1534 components) -->
+<!-- registry-validate: passed 2026-07-02 (ui-registry:validate) -->
+
+<!-- figma-extract: passed 2026-07-02 (GH#10 Feature grid — desktop/mobile/motion) -->
+<!-- registry-validate: passed 2026-07-02 (864 components) -->
+
 <!-- registry-validate: passed 2026-07-02 (526 components; comparisonSecond removed per PRD v2) -->
 
 ---
 
 ## Design contract
 <!-- Written by: design-contract on 2026-07-01 -->
-<!-- Updated: 2026-07-02 — removed GH#8 Comparison₂ (cancelled per PRD v2) -->
+<!-- Updated: 2026-07-02 — Social proof GH#9 contracted -->
 <!-- validate:figma-coverage: passed · validate:contract: passed -->
-**Scope:** Navbar (#3) + Hero (#4) + Problem (#5) + Comparison₁ (#6) + How-it-works teaser (#7) — `features/LP-001/contract.md`  
+**Scope:** Navbar (#3) + Hero (#4) + Problem (#5) + Comparison₁ (#6) + How-it-works teaser (#7) + Feature grid (#10) + Social proof (#9) — `features/LP-001/contract.md`  
 **Branch:** `feature/LP-001-FE`  
-**Next:** `/fe-implement` — GH#10 Feature grid (`5164:6562` / `5164:6785`)
+**Next:** Human **APPROVE** GH#9 Social proof slice, then `/figma-extract` GH#11 Pricing
 
 ---
 
@@ -230,6 +252,18 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - Motion: one-way GiantTicket hover reveal (700ms ease-in)
 - Deviations: center perforated divider omitted vs contract/Figma anatomy (human request)
 
+### FE notes — Social proof GH#9
+<!-- Written by: fe-implement on 2026-07-02 -->
+- Components implemented: `SocialProofSection` (desktop testimonials row + integrations strip; mobile horizontal-scroll cards); wired on `app/page.tsx` after `FeatureGridSection`
+- Assets: testimonial logos, 14 client logos, avatar glow/circle SVGs, decorative plane, section pill dot
+- Typography utilities added: `text-body-desktop-testimonial`, `text-body-mobile-testimonial`, `text-label-desktop-xs-semibold`, `text-heading-mobile-h1`
+- test:e2e: passed (`--grep GH#9`, 2 scenarios)
+- test:visual: social proof desktop/mobile baselines established (pending human approval)
+- test:visual typography: social proof header + quote desktop passed
+- typecheck + `next build`: passed
+- Motion: one-way testimonials hover (700ms) on section enter; integrations strip logo emphasis on strip enter
+- Deviations: slide carousel is static (2 blocks visible, progress shows slide 1); third testimonial not in Figma extract as separate block
+
 ---
 
 ## Gate Results
@@ -277,4 +311,9 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-02** — `/to-issues` — GH#8 cancelled; slices 6–9 renumbered on #10, #9, #11, #12.
 - **2026-07-02** — `/spec-author` — Gherkins updated (10 @fe + 1 @be; GH#8 removed).
 - **2026-07-02** — `/scenario-review` — Gherkins **approved** by human.
+- **2026-07-02** — `/figma-extract` GH#9 Social proof — nodes `5164:6568`, `5164:6836`, `5307:6608`, `5164:11204`; 20 assets exported; `validate:figma-extract` pass (clients-animation-alt @4×).
+- **2026-07-02** — `/ui-registry-build` GH#9 Social proof — 224 `socialProof.*` paths; registry total 1534; `ui-registry:validate` + `validate:layout` pass (28 leaf slugs).
 - **2026-07-02** — Reverted GH#8 Comparison₂ artifacts (registry, contract, figma cache, slice-roots).
+- **2026-07-02** — `/fe-implement` GH#10 Feature grid — `FeatureGridSection`; typography constants + plane positioning; e2e/visual/typography gates pass; **human APPROVE pending**.
+- **2026-07-02** — `/design-contract` GH#9 Social proof — contract §2 + slice appendix; added `spacing.120` primitive; 19 assets in `notes.md`; Gherkin sub-component visibility steps; `validate:figma-coverage` + `validate:contract` pass.
+- **2026-07-02** — `/fe-implement` GH#9 Social proof — `SocialProofSection`; wired after `FeatureGridSection`; e2e/visual/typography gates pass; **human APPROVE pending**.

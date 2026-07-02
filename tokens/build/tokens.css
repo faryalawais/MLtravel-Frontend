@@ -184,6 +184,7 @@
   --spacing-52: 52px;
   --spacing-60: 60px;
   --spacing-64: 64px;
+  --spacing-120: 120px;
   --spacing-180: 180px;
   --radius-0: 0px;
   --radius-3: 3px;
@@ -220,10 +221,10 @@
   --font-size-36: 36px;
   --font-size-40: 40px;
   --font-size-48: 48px;
-  --font-weight-400: 400px;
-  --font-weight-500: 500px;
-  --font-weight-600: 600px;
-  --font-weight-700: 700px;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
   --font-lineheight-10: 10px;
   --font-lineheight-12: 12px;
   --font-lineheight-14: 14px;

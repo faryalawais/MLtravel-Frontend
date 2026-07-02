@@ -157,6 +157,36 @@
   line-height: var(--typography-label-desktop-md-stat-line-height);
 }
 
+@utility text-heading-mobile-h1 {
+  font-family: var(--typography-heading-mobile-h1-font-family);
+  font-size: var(--typography-heading-mobile-h1-font-size);
+  font-weight: var(--typography-heading-mobile-h1-font-weight);
+  line-height: var(--typography-heading-mobile-h1-line-height);
+}
+
+@utility text-body-desktop-testimonial {
+  font-family: var(--typography-body-desktop-testimonial-font-family);
+  font-size: var(--typography-body-desktop-testimonial-font-size);
+  font-weight: var(--typography-body-desktop-testimonial-font-weight);
+  line-height: var(--typography-body-desktop-testimonial-line-height);
+  font-style: italic;
+}
+
+@utility text-body-mobile-testimonial {
+  font-family: var(--typography-body-mobile-testimonial-font-family);
+  font-size: var(--typography-body-mobile-testimonial-font-size);
+  font-weight: var(--typography-body-mobile-testimonial-font-weight);
+  line-height: var(--typography-body-mobile-testimonial-line-height);
+  font-style: italic;
+}
+
+@utility text-label-desktop-xs-semibold {
+  font-family: var(--typography-label-desktop-xs-semibold-font-family);
+  font-size: var(--typography-label-desktop-xs-semibold-font-size);
+  font-weight: var(--typography-label-desktop-xs-semibold-font-weight);
+  line-height: var(--typography-label-desktop-xs-semibold-line-height);
+}
+
 @utility text-label-desktop-nav-link {
   font-family: var(--typography-label-desktop-nav-link-font-family);
   font-size: var(--typography-label-desktop-nav-link-font-size);

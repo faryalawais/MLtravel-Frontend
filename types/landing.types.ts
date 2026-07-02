@@ -5,7 +5,11 @@ export interface HeroPrimaryCtaProps {
   iconTestId: string;
   graphicTestId: string;
   href: string;
+  label?: string;
   className?: string;
+  /** One-way motion emphasis from hero section sequence (MOTION-SPEC §1). */
+  emphasized?: boolean;
+  useHeroEasing?: boolean;
 }
 
 export interface HeroOptionalClassNameProps {
@@ -60,8 +64,12 @@ export interface CardIconProps {
 
 export interface ProblemCardDesktopProps {
   card: DesktopCardConfig;
+  cardIndex: number;
+  revealedUpTo: number;
+  activeIndex: number | null;
   isHighlighted: boolean;
   cascadeRunning: boolean;
+  motionEngaged: boolean;
 }
 
 export interface ProblemCardMobileProps {
@@ -70,6 +78,17 @@ export interface ProblemCardMobileProps {
 
 export interface GradientBarProps {
   testId?: string;
+  isEmphasized?: boolean;
+}
+
+export interface ProblemCtaDesktopProps {
+  isEmphasized?: boolean;
+  motionEngaged?: boolean;
+}
+
+export interface HiwFooterLinkProps {
+  isEmphasized?: boolean;
+  motionEngaged?: boolean;
 }
 
 /** Landing page — comparison first section */
@@ -141,10 +160,102 @@ export interface HiwSectionPillProps {
 
 export interface HiwCardDesktopProps {
   card: HiwCardConfig;
+  cardIndex: number;
+  revealedUpTo: number;
+  activeIndex: number | null;
   isHighlighted: boolean;
   cascadeRunning: boolean;
+  motionEngaged: boolean;
 }
 
 export interface HiwCardMobileProps {
   card: HiwCardConfig;
+}
+
+/** Landing page — feature grid section */
+export type FeatureGridCardAccent = 'navy' | 'teal' | 'orange' | 'red';
+
+export type FeatureGridCardSize = 'wide' | 'narrow';
+
+export interface FeatureGridCardConfig {
+  cardTestId: string;
+  textBlockTestId: string;
+  titleRowTestId?: string;
+  titleTestId: string;
+  badgeTestId?: string;
+  badgeLabelTestId?: string;
+  badgeLabel?: string;
+  accentBarTestId: string;
+  bodyTestId: string;
+  heading: string;
+  body: string;
+  accent: FeatureGridCardAccent;
+  size: FeatureGridCardSize;
+}
+
+export interface FeatureGridCardDesktopProps {
+  card: FeatureGridCardConfig;
+  cardIndex: number;
+  revealedUpTo: number;
+  activeIndex: number | null;
+  isHighlighted: boolean;
+  cascadeRunning: boolean;
+  motionEngaged: boolean;
+}
+
+export interface FeatureGridCardMobileProps {
+  card: FeatureGridCardConfig;
+}
+
+export interface FeatureGridSectionPillProps {
+  pillTestId: string;
+  labelTestId: string;
+  variant?: 'desktop' | 'mobile';
+}
+
+export interface FeatureGridCtaProps {
+  testId: string;
+  labelTestId: string;
+  iconTestId: string;
+  graphicTestId: string;
+  className?: string;
+}
+
+/** Landing page — social proof section (GH#9) */
+export interface SocialProofTestimonialConfig {
+  blockTestId: string;
+  logoCardTestId: string;
+  logoSlotTestId: string;
+  companyLogoTestId: string;
+  quoteTestId: string;
+  authorTestId: string;
+  avatarTestId: string;
+  initialsTestId: string;
+  nameTestId: string;
+  roleTestId: string;
+  companyTestId: string;
+  logoSrc: string;
+  quote: string;
+  initials: string;
+  name: string;
+  role: string;
+  company: string;
+}
+
+export interface SocialProofClientLogoConfig {
+  src: string;
+  testId: string;
+}
+
+export interface SocialProofSectionPillProps {
+  pillTestId: string;
+  labelTestId: string;
+  variant?: 'desktop' | 'mobile';
+}
+
+/** Landing page — pricing section (GH#11) */
+export interface PricingSectionPillProps {
+  pillTestId: string;
+  labelTestId: string;
+  variant?: 'desktop' | 'mobile';
 }

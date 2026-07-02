@@ -772,6 +772,18 @@
         "source": "figma"
       }
     },
+    "120": {
+      "$type": "dimension",
+      "$value": {
+        "value": 120,
+        "unit": "px"
+      },
+      "$extensions": {
+        "layer": "primitive",
+        "source": "figma",
+        "figmaNode": "I5164:6568;5151:13742;5159:5007"
+      }
+    },
     "180": {
       "$type": "dimension",
       "$value": {
@@ -1125,44 +1137,32 @@
     },
     "weight": {
       "400": {
-        "$type": "dimension",
-        "$value": {
-          "value": 400,
-          "unit": "px"
-        },
+        "$type": "fontWeight",
+        "$value": 400,
         "$extensions": {
           "layer": "primitive",
           "source": "figma"
         }
       },
       "500": {
-        "$type": "dimension",
-        "$value": {
-          "value": 500,
-          "unit": "px"
-        },
+        "$type": "fontWeight",
+        "$value": 500,
         "$extensions": {
           "layer": "primitive",
           "source": "figma"
         }
       },
       "600": {
-        "$type": "dimension",
-        "$value": {
-          "value": 600,
-          "unit": "px"
-        },
+        "$type": "fontWeight",
+        "$value": 600,
         "$extensions": {
           "layer": "primitive",
           "source": "figma"
         }
       },
       "700": {
-        "$type": "dimension",
-        "$value": {
-          "value": 700,
-          "unit": "px"
-        },
+        "$type": "fontWeight",
+        "$value": 700,
         "$extensions": {
           "layer": "primitive",
           "source": "figma"

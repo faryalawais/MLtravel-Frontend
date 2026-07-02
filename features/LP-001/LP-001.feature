@@ -103,6 +103,11 @@ Feature: Landing page (LP-001)
     Given a guest views the site at 1440px width
     When the guest navigates to "/"
     Then `component.landing.socialProof` is visible
+    And `component.landing.socialProof.testimonialsRow` is visible
+    And `component.landing.socialProof.testimonialBlock` is visible
+    And `component.landing.socialProof.testimonialBlock2` is visible
+    And `component.landing.socialProof.slideProgressBar` is visible
+    And `component.landing.socialProof.integrationsStrip` is visible
     And `component.landing.socialProof` matches Figma node "5164:6568"
     Given a guest views the site at 393px width
     When the guest navigates to "/"
@@ -117,6 +122,10 @@ Feature: Landing page (LP-001)
     Then `component.landing.pricing` is visible
     And `component.landing.pricing` matches Figma node "5164:6564"
     And `component.landing.pricing` has anchor id "pricing"
+    And `component.landing.pricing.pricingCard` is visible
+    And `component.landing.pricing.routeStrip` is visible
+    And `component.landing.pricing.trustStrip` is visible
+    And `component.landing.pricing.cta` is visible
     Given a guest views the site at 393px width
     When the guest navigates to "/"
     Then `component.landing.pricing` is visible

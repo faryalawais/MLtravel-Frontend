@@ -149,3 +149,89 @@ test.describe('GH#7 — How-it-works teaser', () => {
     await expect(page).toHaveURL(/\/how-it-works/);
   });
 });
+
+test.describe('GH#10 — Feature grid', () => {
+  test('feature grid visible at 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1400 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.featureGrid.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.featureGrid.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.featureGrid.headingline1)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.featureGrid.featureCard)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.featureGrid.featureCard6)).toBeVisible();
+  });
+
+  test('feature grid visible at 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 2200 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.featureGrid.mobile.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.featureGrid.mobile.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.featureGrid.mobile.builtForSpeedPrecision)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.featureGrid.mobile.featureCard)).toBeVisible();
+  });
+
+  test('Start Building Now CTA navigates to /contact', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1400 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.featureGrid.root).scrollIntoViewIfNeeded();
+    await page.getByTestId(ids.component.landing.featureGrid.cta).click();
+    await expect(page).toHaveURL(/\/contact/);
+  });
+});
+
+test.describe('GH#9 — Social proof', () => {
+  test('social proof visible at 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1400 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.socialProof.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.socialProof.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.socialProof.testimonialsRow)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.socialProof.testimonialBlock)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.socialProof.testimonialBlock2)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.socialProof.slideProgressBar)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.socialProof.integrationsStrip)).toBeVisible();
+  });
+
+  test('social proof visible at 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 2000 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.socialProof.mobile.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.socialProof.mobile.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.socialProof.mobile.builtForFounders)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.socialProof.mobile.frame2095585138)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.socialProof.mobile.frame2095585139)).toBeVisible();
+  });
+});
+
+test.describe('GH#11 — Pricing', () => {
+  test('pricing section visible at 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1200 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.pricing.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.pricing.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.pricing.pricingCard)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.pricing.routeStrip)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.pricing.trustStrip)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.pricing.cta)).toBeVisible();
+    await expect(page.locator('#pricing')).toBeVisible();
+  });
+
+  test('pricing section visible at 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 2000 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.pricing.mobile.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.landing.pricing.mobile.root)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.pricing.mobile.pricingCard)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.pricing.mobile.routeStrip)).toBeVisible();
+    await expect(page.getByTestId(ids.component.landing.pricing.mobile.cta)).toBeVisible();
+    await expect(page.locator('#pricing')).toBeVisible();
+  });
+
+  test('Book A Demo CTA navigates to /contact', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1200 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.landing.pricing.root).scrollIntoViewIfNeeded();
+    await page.getByTestId(ids.component.landing.pricing.cta).click();
+    await expect(page).toHaveURL(/\/contact/);
+  });
+});

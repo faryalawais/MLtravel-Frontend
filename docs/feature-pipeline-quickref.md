@@ -60,11 +60,11 @@
 
 | # | Skill | Repo | Input needed |
 |---|-------|------|-------------|
-| 12 | `/figma-extract` | MLtravel-Frontend | Figma node ID for this feature's frames |
+| 12 | `/figma-extract` | MLtravel-Frontend | **Dual-source:** REST bulk + MCP gap-fill (Timeout Split on large nodes) → reconciled `nodes/*.json` |
 | 13 | `/design-tokens` | MLtravel-Frontend | Runs token pipeline (validate → build) |
 | 14 | `/ui-registry-build` | MLtravel-Frontend | Registers `screen.*` / `component.*` paths |
 | 15 | `/registry-validate` | MLtravel-Frontend | Confirms all paths are valid |
-| 16 | `/design-contract` | MLtravel-Frontend | `features/<fe-id>/contract.md` — FE Contract |
+| 16 | `/design-contract` | MLtravel-Frontend | `features/<fe-id>/contract.md` — reads cache **variant matrix** + layout direction; never collapses INSTANCE variants in §4 |
 | 17 | `/fe-implement` | MLtravel-Frontend | Pages + components in `app/` · `components/` · **stops at Step 7 for human APPROVE per slice** |
 
 > **Gate:** `npm run gate` must pass (typecheck + token-lint + ESLint + BDD + visual).

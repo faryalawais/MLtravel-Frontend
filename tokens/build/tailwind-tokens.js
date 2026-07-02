@@ -175,6 +175,7 @@ export default {
     "52": "var(--spacing-52)",
     "60": "var(--spacing-60)",
     "64": "var(--spacing-64)",
+    "120": "var(--spacing-120)",
     "180": "var(--spacing-180)",
     "xs": "var(--space-xs)",
     "sm": "var(--space-sm)",

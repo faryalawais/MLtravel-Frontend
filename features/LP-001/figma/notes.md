@@ -1,7 +1,7 @@
 # Figma extract notes — LP-001
 
 **File:** `h6BqI1ZRMSJxR7jESNF0Ep` — [ML Travel Project (faryal-updated)](https://www.figma.com/design/h6BqI1ZRMSJxR7jESNF0Ep/ML-Travel-Project--faryal-updated-?node-id=5164-6346&p=f&m=dev)  
-**Extracted:** 2026-07-01 via REST (`figma:extract:rest` + `build:spec-from-cache`) · `figmaLastModified` 2026-07-01T07:26:09Z
+**Extracted:** 2026-07-02 via REST (`figma:extract:rest` + `build:spec-from-cache`) · `figmaLastModified` 2026-07-02T12:52:45Z
 
 ## Slices extracted
 
@@ -12,8 +12,62 @@
 | #5 | Problem | `5164:6561` | `5164:6571` | `5164:10344` |
 | #6 | Comparison (1st) | `5164:6566` | `5164:6609` | `5164:10411` |
 | #7 | How-it-works teaser | `5164:6567` | `5164:6690` | `5164:10412` |
+| #10 | Feature grid | `5164:6562` | `5164:6785` | `5404:6074` |
+| #9 | Social proof | `5164:6568` | `5164:6836` | `5307:6608`, `5164:11204` |
+| #11 | Pricing | `5164:6564` | `5164:6915` | `5164:11487` |
 
-Reference PNGs: `reference-comparisonsectionfirst.png`, `reference-comparisonmobilefirst.png`, `reference-comparison-animation.png`, `reference-howitworkssection.png`, `reference-howitworksmobile.png`, `reference-howitworks-animation.png`.
+Reference PNGs: `reference-comparisonsectionfirst.png`, `reference-comparisonmobilefirst.png`, `reference-comparison-animation.png`, `reference-howitworkssection.png`, `reference-howitworksmobile.png`, `reference-howitworks-animation.png`, `reference-featuregrid.png`, `reference-featuregridmobile.png`, `reference-featuregrid-animation.png`, `reference-socialproofsectionbig.png`, `reference-socialproofmobile.png`, `reference-socialproof-animation.png`, `reference-socialproof-animation-alt.png`, `reference-newpricingsection.png`, `reference-pricingmobile.png`, `reference-pricing-animation.png`.
+
+## Pricing slice (#11) — 2026-07-02
+
+- **Desktop (`5164:6564` — NewPricingSection):** SectionHeader pill “Simple Pricing”, H2 “Own it, Don't Rent it”, RouteStrip (from → to with loading plane), boarding-pass `PricingCard` ($3,000 platform fee + $250/mo add-on), 8-item `ChecklistGrid`, Book A Demo CTA, `TrustStrip` platform-includes bar.
+- **Mobile (`5164:6915` — Own it):** Stacked layout with same copy; compact checklist grid (2-col rows); mobile All Plans strip.
+- **Motion (`5164:11487` — PricingSectionanimation):** 1-step hover reveal per `tokens/MOTION-SPEC.md` §6 (Property 1=1).
+- **Assets:** Map decoration PNG, route-plane PNG, checklist check SVG (`5018:3129` master). CTA arrow reuses `public/icons/icon-plane-arrow-white.svg`. Section pill dot reuses `public/icons/icon-section-pill-dot.svg`.
+
+### Dual-source reconciliation (Pricing)
+
+| slice-root | REST cache | MCP / componentProperties | instanceVariants in checklist |
+|------------|------------|---------------------------|------------------------------|
+| `5164:6564` | ✓ `5164-6564.json` | ✓ REST `componentProperties` (desktop INSTANCE too large for single MCP call) | ✓ SectionPill Type=Pricing; PricingTrackingLabel; PriceDisplay; TrustStripItem; Button/Primary |
+| `5164:6915` | ✓ `5164-6915.json` | ✓ MCP `get_design_context` (mobile frame) | ✓ |
+| `5164:11487` | ✓ `5164-11487.json` | ✓ MCP `get_design_context` (animation) | ✓ PricingSectionanimation Property 1=1 |
+
+
+## Social proof slice (#9) — 2026-07-02
+
+- **Desktop (`5164:6568` — SocialProofSectionBig):** SectionHeader pill “Trusted by Leaders”, H2 “Built for Founders, Proven in Production”, horizontal testimonial carousel (2× `TestimonialBlock` Variant A/B with logo card + quote + `TestimonialAuthor`), `SlideProgressBar` (track/fill + slide numbers 1–3), decorative plane vector, integrations strip with 14 client logos.
+- **Mobile (`5164:6836` — Social proof):** Stacked testimonial cards (horizontal scroll), same header copy, integrations logo grid below.
+- **Motion testimonials (`5307:6608` — SocialProofSection):** Testimonial carousel animation frame per `tokens/MOTION-SPEC.md` §8 (1-step hover reveal).
+- **Motion clients (`5164:11204` — clients-animaiton):** Integrations strip animation variant `Property 1=1` per `tokens/MOTION-SPEC.md` §5 (1-step hover reveal). Thin strip (1440×159) — reference PNG exported @4× to pass placeholder gate.
+- **Assets:** 2 testimonial logos, decorative plane SVG, avatar glow/circle SVGs, 14 client logos → `public/images/social-proof-*` and `public/icons/icon-social-proof-plane.svg`.
+
+### Dual-source reconciliation (Social proof)
+
+| slice-root | REST cache | MCP / componentProperties | instanceVariants in checklist |
+|------------|------------|---------------------------|------------------------------|
+| `5164:6568` | ✓ `5164-6568.json` | ✓ MCP `get_design_context` + REST `componentProperties` | ✓ SectionPill Type=Trusted; 2× TestimonialBlock Variant=A/B |
+| `5164:6836` | ✓ `5164-6836.json` | ✓ REST | ✓ |
+| `5307:6608` | ✓ `5307-6608.json` | ✓ REST | ✓ |
+| `5164:11204` | ✓ `5164-11204.json` | ✓ REST | ✓ clients-animaiton Property 1=1 |
+
+## Feature grid slice (#10) — 2026-07-02
+
+- **Desktop (`5164:6562` — FeatureGrid):** SectionHeader pill “Platform Features”, H2 “Built for Speed, Precision, and Total Control”, 6× `FeatureCard` in 2 rows (badges on row 1), footer tagline + “Start Building Now” CTA, decorative plane vectors top/bottom.
+- **Mobile (`5164:6785` — FeatureGrid — Light Modern):** Stacked feature cards with same copy; mobile badge labels differ slightly (e.g. “Churning Validation” vs desktop “ADM Alert Engine”).
+- **Motion (`5404:6074` — FeatureGrid-animation):** 4-step cascade (hover → auto ×3 @ 300ms step delay) per `tokens/MOTION-SPEC.md` §7.
+- **Assets:** Decorative planes exported to `public/icons/icon-feature-grid-plane-{top,bottom}.svg`. CTA arrow reuses `public/icons/icon-plane-arrow-white.svg`.
+
+### Dual-source reconciliation (Feature grid)
+
+| slice-root | REST cache | MCP / componentProperties | instanceVariants in checklist |
+|------------|------------|---------------------------|------------------------------|
+| `5164:6562` | ✓ `5164-6562.json` | ✓ (REST nodes include `componentProperties`) | ✓ 6× FeatureCard + per-card AccentBar |
+| `5164:6785` | ✓ `5164-6785.json` | ✓ | ✓ |
+| `5404:6074` | ✓ `5404-6074.json` | ✓ | ✓ |
+
+`build:spec-from-cache` emits `instanceVariants` on INSTANCE nodes — contract §4 must list
+one accent row per card (not one generic “Accent bar” row).
 
 ## How-it-works teaser slice (#7) — 2026-07-01
 
@@ -99,6 +153,27 @@ npm run validate:figma-extract -- LP-001
 | `5164:7034` | Mobile menu Vector | svg | `public/icons/icon-menu.svg` | — |
 | `5164:7036` | MaqsoodTravel wordmark | svg | `public/icons/logo-maqsood-travel.svg` | mobile only |
 | `I5164:6566;5151:7328;2780:1425;2780:1499` | Comparison CTA arrow | svg | `public/icons/icon-plane-arrow-white.svg` | primary CTA |
+| `I5164:6562;3109:1189` | Feature grid plane top | svg | `public/icons/icon-feature-grid-plane-top.svg` | decorative |
+| `I5164:6562;3109:1186` | Feature grid plane bottom | svg | `public/icons/icon-feature-grid-plane-bottom.svg` | decorative |
+| `I5164:6568;5151:13742;5159:5008;5159:23;5158:14` | Social proof testimonial logo A | png | `public/images/social-proof-testimonial-logo-a.png` | Moazam Arshad block |
+| `I5164:6568;5151:13742;5159:5023;5159:36;5158:14` | Social proof testimonial logo B | png | `public/images/social-proof-testimonial-logo-b.png` | Lance Bohling block |
+| `I5164:6568;5151:13742;5151:13905` | Social proof decorative plane | svg | `public/icons/icon-social-proof-plane.svg` | decorative |
+| `I5164:6568;5151:13742;5159:5008;5159:26;5159:14;3171:23` | Avatar initials glow ring | svg | `public/icons/icon-avatar-glow.svg` | testimonial author |
+| `I5164:6568;5151:13742;5159:5008;5159:26;5159:14;3171:24` | Avatar initials circle fill | svg | `public/icons/icon-avatar-circle.svg` | testimonial author |
+| `I5164:6568;5151:13791;5151:13718` | Social proof client logo 01 | png | `public/images/social-proof-client-01.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13720` | Social proof client logo 02 | png | `public/images/social-proof-client-02.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13721` | Social proof client logo 03 | png | `public/images/social-proof-client-03.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13723` | Social proof client logo 04 | png | `public/images/social-proof-client-04.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13724` | Social proof client logo 05 | png | `public/images/social-proof-client-05.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13726` | Social proof client logo 06 | png | `public/images/social-proof-client-06.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13727` | Social proof client logo 07 | png | `public/images/social-proof-client-07.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13729` | Social proof client logo 08 | png | `public/images/social-proof-client-08.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13730` | Social proof client logo 09 | png | `public/images/social-proof-client-09.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13732` | Social proof client logo 10 | png | `public/images/social-proof-client-10.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13734` | Social proof client logo 11 | png | `public/images/social-proof-client-11.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13735` | Social proof client logo 12 | png | `public/images/social-proof-client-12.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13737` | Social proof client logo 13 | png | `public/images/social-proof-client-13.png` | integrations strip |
+| `I5164:6568;5151:13791;5151:13739` | Social proof client logo 14 | png | `public/images/social-proof-client-14.png` | integrations strip |
 
 ## Token mapping
 

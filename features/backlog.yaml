@@ -27,7 +27,7 @@ features:
       - "Strict pixel match to Figma; spacing targets post-design Figma updates"
       - "MUST feature-split → LP-001.1 API (health stub), LP-001.2 UI"
     priority: 1
-    status: specced
+    status: contracted
     design_contract: features/LP-001/contract.md
     depends_on: []
     figma_frames:

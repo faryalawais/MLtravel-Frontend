@@ -175,6 +175,17 @@ function transformNode(node, depth = 0) {
     out.boundVariables = node.boundVariables;
   }
 
+  if (node.type === "INSTANCE" && node.componentProperties) {
+    /** @type {Record<string, string>} */
+    const variants = {};
+    for (const [key, prop] of Object.entries(node.componentProperties)) {
+      if (prop && typeof prop === "object" && "value" in prop) {
+        variants[key] = String(prop.value);
+      }
+    }
+    if (Object.keys(variants).length) out.instanceVariants = variants;
+  }
+
   const childNodes = (node.children ?? [])
     .map((c) => transformNode(c, depth + 1))
     .filter(Boolean);
@@ -250,10 +261,16 @@ const checklistLines = [
 
 function walkChecklist(node, indent = "") {
   if (node.nodeId) {
+    const variantSuffix =
+      node.instanceVariants && Object.keys(node.instanceVariants).length
+        ? `  (variants: ${Object.entries(node.instanceVariants)
+            .map(([k, v]) => `${k}=${v}`)
+            .join(", ")})`
+        : "";
     const label = node.content
       ? `${node.name}  (content: ${String(node.content).slice(0, 60)})`
       : node.name;
-    checklistLines.push(`${indent}- [ ] ${label}  (nodeId: ${node.nodeId})`);
+    checklistLines.push(`${indent}- [ ] ${label}  (nodeId: ${node.nodeId})${variantSuffix}`);
   }
   for (const key of ["layers", "widgets", "columns", "banners"]) {
     for (const child of node[key] ?? []) walkChecklist(child, indent);

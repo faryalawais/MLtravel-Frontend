@@ -1,7 +1,10 @@
+import { PricingSection } from '@/components/landing/PricingSection';
 import { ComparisonFirstSection } from '@/components/landing/ComparisonFirstSection';
+import { FeatureGridSection } from '@/components/landing/FeatureGridSection';
 import { HeroSection } from '@/components/landing/HeroSection';
 import { HowItWorksTeaserSection } from '@/components/landing/HowItWorksTeaserSection';
 import { ProblemSection } from '@/components/landing/ProblemSection';
+import { SocialProofSection } from '@/components/landing/SocialProofSection';
 import { ids } from '@/tokens/build/test-ids';
 
 export default function Home() {
@@ -11,7 +14,9 @@ export default function Home() {
       <ProblemSection />
       <ComparisonFirstSection />
       <HowItWorksTeaserSection />
-      <section id="pricing" aria-label="Pricing" className="scroll-mt-[var(--spacing-64)]" />
+      <FeatureGridSection />
+      <SocialProofSection />
+      <PricingSection />
     </div>
   );
 }

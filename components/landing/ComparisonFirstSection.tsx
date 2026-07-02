@@ -2,17 +2,40 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useState, type CSSProperties } from 'react';
 import {
-  COMPARISON_FOOTNOTE_DESKTOP,
-  COMPARISON_FOOTNOTE_MOBILE,
+  COMPARISON_CARD_HEADER_BADGE_INDUSTRY_CLASS,
+  COMPARISON_CARD_HEADER_BADGE_MAQSOOD_CLASS,
+  COMPARISON_CARD_HEADER_BADGE_MOBILE_CLASS,
+  COMPARISON_CARD_HEADER_TITLE_DESKTOP_CLASS,
+  COMPARISON_CARD_HEADER_TITLE_MOBILE_CLASS,
+  COMPARISON_FOOTNOTE_DESKTOP_CLASS,
+  COMPARISON_FOOTNOTE_EMPHASIS_CLASS,
+  COMPARISON_FOOTNOTE_MOBILE_CLASS,
   COMPARISON_MOTION_STYLE,
+  COMPARISON_ROW_BODY_DESKTOP_CLASS,
+  COMPARISON_ROW_BODY_MOBILE_CLASS,
+  COMPARISON_ROW_MICRO_TAG_DESKTOP_CLASS,
+  COMPARISON_ROW_MICRO_TAG_MOBILE_CLASS,
+  COMPARISON_ROW_TITLE_DESKTOP_CLASS,
+  COMPARISON_ROW_TITLE_MOBILE_CLASS,
+  COMPARISON_SECTION_SUBTITLE_MOBILE_CLASS,
+  COMPARISON_STAMP_DESKTOP_CLASS,
+  COMPARISON_STAMP_MOBILE_CLASS,
   COMPARISON_TOKENS,
   INDUSTRY_DESKTOP_ROWS,
   INDUSTRY_MOBILE_ROWS,
+  LANDING_SECTION_HEADING_ACCENT_CLASS,
+  LANDING_SECTION_HEADING_DESKTOP_CLASS,
+  LANDING_SECTION_HEADING_MOBILE_CLASS,
+  LANDING_SECTION_PILL_LABEL_DESKTOP_CLASS,
+  LANDING_SECTION_PILL_LABEL_MOBILE_CLASS,
+  LANDING_SECTION_SUBTITLE_CLASS,
   MAQSOOD_DESKTOP_ROWS,
   MAQSOOD_MOBILE_ROWS,
 } from '@/constants/landing.constants';
+import { getMotionRevealStyle } from '@/constants/motion.constants';
+import { useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
   ComparisonCtaProps,
@@ -62,15 +85,13 @@ function variantStyles(variant: 'industry' | 'maqsood') {
       : 'text-[var(--color-text-brand-orange)]',
     badge:
       'inline-flex w-fit items-center rounded-[var(--radius-3)] px-[var(--spacing-10)] py-[var(--spacing-5)]',
-    badgeLabel: isIndustry
-      ? 'text-label-desktop-micro-tag uppercase text-[var(--color-text-brand-orange)]'
-      : 'text-label-desktop-micro-tag uppercase text-[var(--color-text-success)]',
+    badgeLabelIndustry: COMPARISON_CARD_HEADER_BADGE_INDUSTRY_CLASS,
+    badgeLabelMaqsood: COMPARISON_CARD_HEADER_BADGE_MAQSOOD_CLASS,
+    badgeLabelMobileIndustry: `${COMPARISON_CARD_HEADER_BADGE_MOBILE_CLASS} text-[var(--color-text-brand-orange)]`,
+    badgeLabelMobileMaqsood: `${COMPARISON_CARD_HEADER_BADGE_MOBILE_CLASS} text-[var(--color-text-success)]`,
     badgeSurface: isIndustry
       ? 'border border-[var(--color-border-warning)] bg-[color-mix(in_srgb,var(--color-text-brand-orange)_8%,transparent)]'
       : 'border border-[var(--color-pill-solution-border)] bg-[color-mix(in_srgb,var(--color-pill-solution-background)_8%,transparent)]',
-    mobileBadgeLabel: isIndustry
-      ? 'text-label-mobile-micro-tag uppercase text-[var(--color-text-brand-orange)]'
-      : 'text-label-mobile-micro-tag uppercase text-[var(--color-text-success)]',
     cardBg: isIndustry
       ? 'bg-[var(--color-background-surface-warm)]'
       : 'bg-[var(--color-background-subtle)]',
@@ -106,7 +127,9 @@ function ComparisonSectionPill({
       />
       <span
         data-testid={labelTestId}
-        className="text-label-desktop-sm-semibold text-[var(--color-text-brand-navy)]"
+        className={
+          isMobile ? LANDING_SECTION_PILL_LABEL_MOBILE_CLASS : LANDING_SECTION_PILL_LABEL_DESKTOP_CLASS
+        }
       >
         The Choice
       </span>
@@ -128,7 +151,6 @@ function ComparisonDemoCta({
       data-testid={ctaTestId}
       data-motion-duration="motion.duration.default"
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       className="inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-6)] px-[var(--spacing-32)] py-[var(--spacing-12)] text-label-desktop-lg transition-[background-color,color] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]"
       style={{
         ...COMPARISON_MOTION_STYLE,
@@ -189,26 +211,23 @@ function ComparisonRowDesktop({
         >
           <span
             data-testid={row.tagLabelTestId}
-            className={`text-label-desktop-micro-tag uppercase ${tagText}`}
+            className={`${COMPARISON_ROW_MICRO_TAG_DESKTOP_CLASS} ${tagText}`}
           >
             {row.tagLabel}
           </span>
         </div>
         <div className="flex flex-col gap-[var(--spacing-4)]">
-          <p
-            data-testid={row.titleTestId}
-            className="text-heading-desktop-h4 text-[var(--color-text-primary)]"
-          >
+          <p data-testid={row.titleTestId} className={COMPARISON_ROW_TITLE_DESKTOP_CLASS}>
             {row.title}
           </p>
-          <p data-testid={row.bodyTestId} className="text-body-desktop-sm text-[var(--color-text-secondary)]">
+          <p data-testid={row.bodyTestId} className={COMPARISON_ROW_BODY_DESKTOP_CLASS}>
             {row.body}
           </p>
         </div>
         <div data-testid={row.stampTestId} className="flex justify-end">
           <span
             data-testid={row.stampLabelTestId}
-            className={`text-right text-label-desktop-micro-tag uppercase ${stampText} ${stampMuted}`}
+            className={`text-right ${COMPARISON_STAMP_DESKTOP_CLASS} ${stampText} ${stampMuted}`}
           >
             {row.stampLabel}
           </span>
@@ -233,19 +252,19 @@ function ComparisonRowMobile({
       <div data-testid={row.rowTestId} className="flex flex-col gap-[var(--spacing-6)]">
         <span
           data-testid={row.tagTestId}
-          className={`inline-flex w-fit rounded-[var(--radius-3)] px-[var(--spacing-8)] py-[var(--spacing-3)] text-label-mobile-micro-tag uppercase ${tagBg} ${tagText} ${tagMuted}`}
+          className={`inline-flex w-fit rounded-[var(--radius-3)] px-[var(--spacing-8)] py-[var(--spacing-3)] ${COMPARISON_ROW_MICRO_TAG_MOBILE_CLASS} ${tagBg} ${tagText} ${tagMuted}`}
         >
           {row.tagLabel}
         </span>
-        <p data-testid={row.titleTestId} className="text-heading-mobile-h4 text-[var(--color-text-primary)]">
+        <p data-testid={row.titleTestId} className={COMPARISON_ROW_TITLE_MOBILE_CLASS}>
           {row.title}
         </p>
-        <p data-testid={row.bodyTestId} className="text-body-desktop-sm text-[var(--color-text-secondary)]">
+        <p data-testid={row.bodyTestId} className={COMPARISON_ROW_BODY_MOBILE_CLASS}>
           {row.body}
         </p>
         <span
           data-testid={row.stampTestId}
-          className={`self-end text-right text-label-mobile-micro-tag uppercase ${stampText} ${stampMuted}`}
+          className={`self-end text-right ${COMPARISON_STAMP_MOBILE_CLASS} ${stampText} ${stampMuted}`}
         >
           {row.stampLabel}
         </span>
@@ -285,20 +304,20 @@ function IndustryCardDesktop({ revealed }: { revealed: boolean }) {
             data-testid={comparison.industryBadge}
             className={`${styles.badge} ${styles.badgeSurface}`}
           >
-            <span data-testid={comparison.industryBadgeLabel} className={styles.badgeLabel}>
+            <span data-testid={comparison.industryBadgeLabel} className={styles.badgeLabelIndustry}>
               ⚠ INDUSTRY NORM
             </span>
           </div>
           <div className="flex flex-col gap-[var(--spacing-4)]">
             <h3
               data-testid={comparison.industryTitleLine1}
-              className={`text-heading-desktop-h3-sm ${styles.titleLine1}`}
+              className={`${COMPARISON_CARD_HEADER_TITLE_DESKTOP_CLASS} ${styles.titleLine1}`}
             >
               Renting a seat on their platform
             </h3>
             <h3
               data-testid={comparison.industryTitleLine2}
-              className={`text-heading-desktop-h3-sm ${styles.titleLine2}`}
+              className={`${COMPARISON_CARD_HEADER_TITLE_DESKTOP_CLASS} ${styles.titleLine2}`}
             >
               Costs You Twice.
             </h3>
@@ -343,20 +362,20 @@ function MaqsoodCardDesktop({ revealed }: { revealed: boolean }) {
             data-testid={comparison.maqsoodBadge}
             className={`${styles.badge} ${styles.badgeSurface}`}
           >
-            <span data-testid={comparison.maqsoodBadgeLabel} className={styles.badgeLabel}>
+            <span data-testid={comparison.maqsoodBadgeLabel} className={styles.badgeLabelMaqsood}>
               ✈ MAQSOODTRAVEL
             </span>
           </div>
           <div className="flex flex-col gap-[var(--spacing-4)]">
             <h3
               data-testid={comparison.maqsoodTitleLine1}
-              className={`text-heading-desktop-h3-sm ${styles.titleLine1}`}
+              className={`${COMPARISON_CARD_HEADER_TITLE_DESKTOP_CLASS} ${styles.titleLine1}`}
             >
               You Own Every
             </h3>
             <h3
               data-testid={comparison.maqsoodTitleLine2}
-              className={`text-heading-desktop-h3-sm ${styles.titleLine2}`}
+              className={`${COMPARISON_CARD_HEADER_TITLE_DESKTOP_CLASS} ${styles.titleLine2}`}
             >
               Booking. Forever.
             </h3>
@@ -379,7 +398,7 @@ function MaqsoodCardDesktop({ revealed }: { revealed: boolean }) {
   );
 }
 
-function GiantTicketDesktop({ revealed, onReveal }: { revealed: boolean; onReveal: () => void }) {
+function GiantTicketDesktop({ revealed }: { revealed: boolean }) {
   return (
     <div
       data-testid={comparison.giantTicket}
@@ -389,7 +408,6 @@ function GiantTicketDesktop({ revealed, onReveal }: { revealed: boolean; onRevea
         transitionProperty: 'box-shadow',
         boxShadow: revealed ? COMPARISON_TOKENS.shadowTicketReveal : COMPARISON_TOKENS.shadowTicket,
       }}
-      onMouseEnter={onReveal}
     >
       <div
         data-testid={comparison.notchTop}
@@ -422,17 +440,17 @@ function IndustryCardMobile() {
           data-testid={comparison.mobile.industryBadge}
           className={`mb-[var(--spacing-12)] ${styles.badge} ${styles.badgeSurface}`}
         >
-          <span className={styles.mobileBadgeLabel}>⚠ INDUSTRY NORM</span>
+          <span className={styles.badgeLabelMobileIndustry}>⚠ INDUSTRY NORM</span>
         </div>
         <h3
           data-testid={comparison.mobile.industryTitleLine1}
-          className={`text-heading-mobile-h3-sm ${styles.titleLine1}`}
+          className={`${COMPARISON_CARD_HEADER_TITLE_MOBILE_CLASS} ${styles.titleLine1}`}
         >
           Every Booking
         </h3>
         <h3
           data-testid={comparison.mobile.industryTitleLine2}
-          className={`text-heading-mobile-h3-sm ${styles.titleLine2}`}
+          className={`${COMPARISON_CARD_HEADER_TITLE_MOBILE_CLASS} ${styles.titleLine2}`}
         >
           Costs You Twice.
         </h3>
@@ -473,17 +491,17 @@ function MaqsoodCardMobile() {
           data-testid={comparison.mobile.maqsoodBadge}
           className={`mb-[var(--spacing-12)] ${styles.badge} ${styles.badgeSurface}`}
         >
-          <span className={styles.mobileBadgeLabel}>✈ MAQSOODTRAVEL</span>
+          <span className={styles.badgeLabelMobileMaqsood}>✈ MAQSOODTRAVEL</span>
         </div>
         <h3
           data-testid={comparison.mobile.maqsoodTitleLine1}
-          className={`text-heading-mobile-h3-sm ${styles.titleLine1}`}
+          className={`${COMPARISON_CARD_HEADER_TITLE_MOBILE_CLASS} ${styles.titleLine1}`}
         >
           You Own Every
         </h3>
         <h3
           data-testid={comparison.mobile.maqsoodTitleLine2}
-          className={`text-heading-mobile-h3-sm ${styles.titleLine2}`}
+          className={`${COMPARISON_CARD_HEADER_TITLE_MOBILE_CLASS} ${styles.titleLine2}`}
         >
           Booking. Forever.
         </h3>
@@ -504,31 +522,52 @@ function MaqsoodCardMobile() {
   );
 }
 
+function ComparisonFootnote({
+  testId,
+  variant = 'desktop',
+}: {
+  testId: string;
+  variant?: 'desktop' | 'mobile';
+}) {
+  const className =
+    variant === 'mobile' ? COMPARISON_FOOTNOTE_MOBILE_CLASS : COMPARISON_FOOTNOTE_DESKTOP_CLASS;
+  const brandName = variant === 'mobile' ? 'MaqsoodTravel' : 'MaqqsedTravel';
+
+  return (
+    <p data-testid={testId} className={`max-w-[640px] ${className}`}>
+      Agencies on 3rd-party GDS portals typically spend $1,200–$2,000/month in combined platform and
+      per-booking fees. <span className={COMPARISON_FOOTNOTE_EMPHASIS_CLASS}>{brandName}</span> starts
+      at $250/month.
+    </p>
+  );
+}
+
 function ComparisonCtaBlock({
   footnoteTestId,
-  footnote,
+  footnoteVariant = 'desktop',
   ctaTestId,
   labelTestId,
   iconTestId,
   graphicTestId,
   blockTestId,
+  revealed = false,
 }: {
   footnoteTestId: string;
-  footnote: string;
+  footnoteVariant?: 'desktop' | 'mobile';
   ctaTestId: string;
   labelTestId: string;
   iconTestId: string;
   graphicTestId?: string;
   blockTestId: string;
+  revealed?: boolean;
 }) {
   return (
     <div
       data-testid={blockTestId}
       className="flex w-full flex-col items-center gap-[var(--spacing-16)] text-center"
+      style={getMotionRevealStyle(revealed, COMPARISON_MOTION_STYLE)}
     >
-      <p data-testid={footnoteTestId} className="max-w-[640px] text-body-desktop-sm text-[var(--color-text-secondary)]">
-        {footnote}
-      </p>
+      <ComparisonFootnote testId={footnoteTestId} variant={footnoteVariant} />
       <ComparisonDemoCta
         ctaTestId={ctaTestId}
         labelTestId={labelTestId}
@@ -540,14 +579,14 @@ function ComparisonCtaBlock({
 }
 
 export function ComparisonFirstSection() {
-  const hasPlayedRef = useRef(false);
   const [revealed, setRevealed] = useState(false);
 
   const playReveal = useCallback(() => {
-    if (hasPlayedRef.current) return;
-    hasPlayedRef.current = true;
     setRevealed(true);
+    return () => undefined;
   }, []);
+
+  const triggerReveal = useOneWayMotion(playReveal);
 
   return (
     <section
@@ -557,7 +596,11 @@ export function ComparisonFirstSection() {
     >
       {/* Desktop — Figma 5164:6566 */}
       <div className="hidden min-[1440px]:block">
-        <div className="flex justify-center px-[var(--spacing-64)] py-[var(--spacing-40)]">
+        <div
+          data-testid={comparison.motion.root}
+          className="flex justify-center px-[var(--spacing-64)] py-[var(--spacing-40)]"
+          onMouseEnter={triggerReveal}
+        >
           <div
             data-testid={comparison.columnsFrame}
             className="flex w-full max-w-[1312px] flex-col items-center gap-[var(--spacing-40)]"
@@ -565,6 +608,7 @@ export function ComparisonFirstSection() {
             <div
               data-testid={comparison.sectionHeader}
               className="flex w-full max-w-[1035px] flex-col items-center gap-[var(--spacing-16)] text-center"
+              style={getMotionRevealStyle(revealed, COMPARISON_MOTION_STYLE)}
             >
               <ComparisonSectionPill
                 pillTestId={comparison.sectionPill}
@@ -573,17 +617,22 @@ export function ComparisonFirstSection() {
               <div
                 data-testid={comparison.headingBlock}
                 className="flex flex-col items-center gap-[var(--spacing-8)]"
+                style={getMotionRevealStyle(revealed, COMPARISON_MOTION_STYLE)}
               >
                 <h2
                   data-testid={comparison.sectionHeading}
-                  className="text-heading-desktop-h2 text-[var(--color-text-primary)]"
+                  className={LANDING_SECTION_HEADING_DESKTOP_CLASS}
+                  style={getMotionRevealStyle(revealed, COMPARISON_MOTION_STYLE)}
                 >
                   Dependency or{' '}
-                  <span className="text-[var(--color-text-brand-navy)]">Ownership</span>
+                  <span className={LANDING_SECTION_HEADING_ACCENT_CLASS}>Ownership</span>
                 </h2>
                 <p
                   data-testid={comparison.sectionSubtitle}
-                  className="text-body-desktop-md text-[var(--color-text-secondary)]"
+                  className={LANDING_SECTION_SUBTITLE_CLASS}
+                  style={getMotionRevealStyle(revealed, COMPARISON_MOTION_STYLE, {
+                    transitionDelay: 'var(--motion-duration-step-delay)',
+                  })}
                 >
                   The travel industry runs on outdated models built for their profit, not yours. Choose
                   differently.
@@ -591,16 +640,17 @@ export function ComparisonFirstSection() {
               </div>
             </div>
 
-            <GiantTicketDesktop revealed={revealed} onReveal={playReveal} />
+            <GiantTicketDesktop revealed={revealed} />
 
             <ComparisonCtaBlock
               blockTestId={comparison.ctaBlock}
               footnoteTestId={comparison.footnote}
-              footnote={COMPARISON_FOOTNOTE_DESKTOP}
+              footnoteVariant="desktop"
               ctaTestId={comparison.cta}
               labelTestId={comparison.ctaLabel}
               iconTestId={comparison.ctaIcon}
               graphicTestId={comparison.ctaGraphic}
+              revealed={revealed}
             />
           </div>
         </div>
@@ -628,21 +678,18 @@ export function ComparisonFirstSection() {
             >
               <h2
                 data-testid={comparison.mobile.sectionHeadingLine1}
-                className="text-heading-mobile-h2 text-[var(--color-text-primary)]"
+                className={LANDING_SECTION_HEADING_MOBILE_CLASS}
               >
                 Dependency or
               </h2>
               <h2
                 data-testid={comparison.mobile.sectionHeadingLine2}
-                className="text-heading-mobile-h2 text-[var(--color-text-brand-navy)]"
+                className={`${LANDING_SECTION_HEADING_MOBILE_CLASS} ${LANDING_SECTION_HEADING_ACCENT_CLASS}`}
               >
                 Ownership
               </h2>
             </div>
-            <p
-              data-testid={comparison.mobile.sectionSubtitle}
-              className="text-body-desktop-md text-[var(--color-text-secondary)]"
-            >
+            <p data-testid={comparison.mobile.sectionSubtitle} className={COMPARISON_SECTION_SUBTITLE_MOBILE_CLASS}>
               The travel industry runs on outdated models built for their profit, not yours. Choose
               differently.
             </p>
@@ -665,7 +712,7 @@ export function ComparisonFirstSection() {
         <ComparisonCtaBlock
           blockTestId={comparison.mobile.ctaBlock}
           footnoteTestId={comparison.mobile.footnote}
-          footnote={COMPARISON_FOOTNOTE_MOBILE}
+          footnoteVariant="mobile"
           ctaTestId={comparison.mobile.cta}
           labelTestId={comparison.mobile.ctaLabel}
           iconTestId={comparison.mobile.ctaIcon}

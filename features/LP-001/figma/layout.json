@@ -2,7 +2,7 @@
   "screen": "screen.landing.home",
   "figmaNodeId": "5164:6346",
   "version": "2026-07-02",
-  "figmaLastModified": "2026-07-01T07:26:09Z",
+  "figmaLastModified": "2026-07-02T12:52:45Z",
   "root": {
     "type": "stack",
     "direction": "vertical",
@@ -53,22 +53,25 @@
         "slug": "component.landing.howItWorksTeaser.motion.root"
       },
       {
-        "slug": "component.navbar.motion.cta"
+        "slug": "component.landing.featureGrid.root"
       },
       {
-        "slug": "component.navbar.mobile.leadingCluster"
+        "slug": "component.landing.featureGrid.mobile.root"
       },
       {
-        "slug": "component.navbar.mobile.cta"
+        "slug": "component.landing.featureGrid.motion.root"
       },
       {
-        "slug": "component.navbar.cta"
+        "slug": "component.landing.socialProof.root"
       },
       {
-        "slug": "component.navbar.brand"
+        "slug": "component.landing.socialProof.mobile.root"
       },
       {
-        "slug": "component.navbar.navLinks"
+        "slug": "component.landing.socialProof.motion.root"
+      },
+      {
+        "slug": "component.landing.socialProof.clientsMotion.root"
       }
     ]
   }

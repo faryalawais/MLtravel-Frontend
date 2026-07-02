@@ -83,9 +83,12 @@ Read these completely before writing any code (all on disk — 0 MCP):
 2. `figma/nodes/<nodeId>.json` — the cached exact values per slice-root/leaf
 3. `figma/layout.json` — the composition tree (where each component sits)
 4. `figma/reference-<section>.png` — open and keep as visual reference throughout
-5. `figma/spec.json` — exact measurements, colours, spacing (+ `$meta.figmaLastModified` for the freshness check)
-6. `docs/openapi/paths/<be-jira-id>.yaml` — know every endpoint and response field
-7. `tokens-report.md` — know which token names to use
+5. `figma/spec.json` — exact measurements, colours, spacing, **`instanceVariants`**
+   per INSTANCE (+ `$meta.figmaLastModified` for the freshness check)
+6. `figma/component-checklist.md` — confirm `(variants: …)` on every component-set
+   INSTANCE; if missing → STOP, re-run `/figma-extract` MCP gap-fill
+7. `docs/openapi/paths/<be-jira-id>.yaml` — know every endpoint and response field
+8. `tokens-report.md` — know which token names to use
 
 ### Step 2 — Plan with speckit
 Run `speckit-plan` with:
@@ -140,6 +143,10 @@ FOR EACH component in the current slice/task:
        - Color token for every fill, stroke, background
        - Border width, border-radius / shadow tokens
        - Icon sizes and exact SVG asset URLs
+       - **Figma INSTANCE `componentProperties`** (e.g. `Size: Wide`,
+         `Accent: Navy`) — one record per card/row, not one value for all
+       - **Container `layout.direction` / `justify` / `align`** for footers,
+         grids, and header stacks (from `spec.json` or cache)
   4. Read layout.json to know WHERE this component sits on the page
      (its slot in the composition tree) so a stub/replace slice drops the real
      component into a known position — do not re-derive page composition.
@@ -153,15 +160,40 @@ FOR EACH component in the current slice/task:
   - the cache file is missing AND figma:refresh-node cannot fetch it → STOP,
     report to user (the feature was not fully extracted; re-run figma-extract)
   - A measurement has no exact token and allow_raw_values is not set → STOP
+  - **INSTANCE `componentProperties` missing** for a named component set card
+    (FeatureCard, AccentBar, etc.) in cache → STOP; re-run `/figma-extract`
+    MCP gap-fill with Timeout Split on that slice-root — do not guess variants
+  - **Variant matrix row count ≠ implementation card count** → STOP; fix contract
+    or re-extract before coding
 ```
 
 **Why cache-first is correct:** the cache is a verified-fresh snapshot, not a
 guess. `figma-extract` captured the exact recursive payload once; the
 `figmaLastModified` stamp makes staleness explicit, and `figma:refresh-node`
 re-fetches exactly the one node that drifted. So you keep live-Figma correctness
-without the ~26 duplicate calls. If contract.md §2 and the cached payload
-disagree on a value, the cached Figma value wins — update the contract to match.
-Never extract the full frame; never loop `get_design_context` per component.
+without the ~26 duplicate calls. If contract.md §2/§3/§4 and the cached payload
+disagree on a value, **the cached Figma value wins** — implement from cache and
+update the contract to match. Never extract the full frame; never loop
+`get_design_context` per component.
+
+**Anti-pattern: sibling-section cloning (BLOCKER).**
+Do **not** implement the current slice by copying layout, class strings, or
+motion logic from another landing section (Problem, Comparison, How-it-works,
+etc.) without re-reading **this** slice's cache and `reference-<section>.png`.
+Prior sections are reference for *code patterns* (hooks, test-id wiring), not
+for dimensions, footer direction, accent colours, or card sizes. If you catch
+yourself reusing `max-w-[424px]`, a shared accent-bar colour, or a centered
+footer column from a sibling → stop and read the Feature grid (or current
+slice) cache first.
+
+**Pre-code variant checklist (write in chat before opening `.tsx`):**
+For each repeated Figma component (FeatureCard, AccentBar, SectionPill, etc.):
+```
+| nodeId | Size variant | Accent/colour variant | WxH | padding |
+```
+If every row in the table is identical, one implementation class is fine.
+If any column differs → per-instance props in `constants/` + conditional
+classes; a single shared colour/size is wrong.
 
 **Stale or missing cache protocol:** If a node's cache file is missing or its
 `figmaLastModified` no longer matches `spec.json`:
@@ -179,6 +211,14 @@ Never extract the full frame; never loop `get_design_context` per component.
 **§4 Token Audit — mandatory after EVERY component, before moving on:**
 `token-lint` only catches raw values — it cannot catch a wrong token. `bg-surface-warning`
 and `bg-surface-brand` are both valid tokens; only `contract.md §4` says which is correct.
+
+**Typography — cache wins over semantic names:**
+Before picking `text-heading-desktop-h2`, `h4`, or `color.pill.*.text`, read the TEXT
+node in `figma/nodes/<slice>.json` and record `fontSize`, `fontWeight`, and the fill
+variable id (e.g. `3003:24` → `color.text.brand-navy`). Map **px → utility** via
+`tokens/build/tokens.css` (40px/700 → `text-heading-desktop-h1`, not h2). If §4 says
+"h2" but cache says 40px → implement h1 and fix §4. Pill labels often bind to
+`color.text.brand-navy` even when the pill semantic token says white/teal.
 
 After writing each component, open `contract.md §4 Tokens per element` and walk every row
 that applies to elements in that component. For each row, verify the exact token used in
@@ -283,13 +323,33 @@ implementation must also work at mobile (≥320px) and tablet (≥768px).
 - Layout, spacing, typography, colours must match Figma within fidelity tolerance
   defined in contract.md §11.
 
-### Step 5 — Run tests after each component
+### Step 5 — Run tests after each slice (MANDATORY before next GH issue)
+
+After **every** section slice (GH#N), run all three gates scoped to that slice.
+Do not start the next slice until they pass.
+
 ```bash
-npm run test:e2e -- --grep "<scenario name>"
+# 1. E2E smoke — visibility, CTAs, navigation for this slice
+npm run test:e2e -- --grep "GH#<N>"
+
+# 2. Visual regression — screenshot baselines for this slice's desktop + mobile roots
+npm run test:visual -- --grep "<slice-name>"
+
+# 3. Typography precision — computed fontSize/fontWeight for this slice
+npm run test:visual -- tests/visual/lp-001-typography.spec.ts --grep "<slice-name>"
+```
+
+If visual baselines for the slice do not exist yet, establish them once with
+`npm run test:visual:update -- --grep "<slice-name>"` and note "baseline
+pending human approval" in the Step 7 review card.
+
+Also run after each slice:
+```bash
+npm run typecheck
 ```
 
 Fix failures before moving to the next component. Never move on with a
-failing scenario.
+failing scenario or failing visual/typography assertion.
 
 ### Step 6 — Final gate
 After all components implemented, run a full §4 sweep across every implemented component:
@@ -344,8 +404,9 @@ After Step 6 automated gates pass (or are reported as partially scaffolded),
 |------|--------|
 | validate:figma-extract | pass / fail |
 | validate:contract | pass / fail |
-| test:e2e | pass / not scaffolded |
-| test:visual | pass / baseline pending / not scaffolded |
+| test:e2e (`--grep GH#<N>`) | pass / not scaffolded |
+| test:visual (slice screenshots) | pass / baseline pending / not scaffolded |
+| test:visual (typography spec) | pass / not scaffolded |
 | build + typecheck | pass / fail |
 
 ### Known deviations (from contract / Figma)

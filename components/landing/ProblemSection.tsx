@@ -1,17 +1,36 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useState, type CSSProperties } from 'react';
 import {
   CARD_SHELL_DEFAULT,
   CARD_SHELL_HIGHLIGHT,
   CARD_SHELL_HOVER,
   DESKTOP_CARDS,
   MOBILE_CARDS,
+  PROBLEM_CARD_BODY_CLASS,
+  PROBLEM_CARD_BODY_MOBILE_CLASS,
+  PROBLEM_CARD_TITLE_DESKTOP_CLASS,
+  PROBLEM_CARD_TITLE_MOBILE_CLASS,
+  PROBLEM_SECTION_PILL_LABEL_DESKTOP_CLASS,
+  PROBLEM_SECTION_PILL_LABEL_MOBILE_CLASS,
+  LANDING_SECTION_HEADING_DESKTOP_CLASS,
+  LANDING_SECTION_HEADING_MOBILE_CLASS,
+  LANDING_SECTION_SUBTITLE_CLASS,
   PROBLEM_CARD_BASE_CLASS,
   PROBLEM_MOTION_STYLE,
   PROBLEM_TOKENS,
 } from '@/constants/landing.constants';
+import {
+  beginMotionReveal,
+  getMotionCascadeCardSurfaceStyle,
+  getMotionCascadeTextStyle,
+  getMotionSlideRevealStyle,
+  MOTION_DELAY_STEP,
+  MOTION_TRANSITION_PROPERTIES,
+} from '@/constants/motion.constants';
+import { runRapidFourStepMotion } from '@/lib/motion-sequence';
+import { useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
   AccentBarProps,
@@ -19,25 +38,36 @@ import type {
   GradientBarProps,
   ProblemCardDesktopProps,
   ProblemCardMobileProps,
+  ProblemCtaDesktopProps,
   SectionPillProps,
 } from '@/types/landing.types';
 
 const problem = ids.component.landing.problem;
 
-/** Reads a duration token from `:root` (e.g. `motion.duration.stepDelay`). */
-function getDurationTokenMs(cssVarName: string): number {
-  if (typeof window === 'undefined') return 120;
-  const raw = getComputedStyle(document.documentElement).getPropertyValue(cssVarName).trim();
-  const parsed = Number.parseInt(raw, 10);
-  return Number.isNaN(parsed) ? 120 : parsed;
+function getCardSurfaceStyle(
+  cardIndex: number,
+  revealedUpTo: number,
+  activeIndex: number | null,
+  cascadeRunning: boolean,
+  motionEngaged: boolean,
+  isHighlighted: boolean,
+): CSSProperties {
+  return getMotionCascadeCardSurfaceStyle({
+    cardIndex,
+    revealedUpTo,
+    activeIndex,
+    cascadeRunning,
+    motionEngaged,
+    isHighlighted,
+    shadowToken: PROBLEM_TOKENS.shadowCard,
+    baseStyle: PROBLEM_MOTION_STYLE,
+  });
 }
 
-function getCardSurfaceStyle(isHighlighted: boolean): CSSProperties {
+function getCardChromeTransitionStyle(): CSSProperties {
   return {
     ...PROBLEM_MOTION_STYLE,
-    transitionProperty: 'border-color, box-shadow, transform',
-    boxShadow: isHighlighted ? PROBLEM_TOKENS.shadowCard : 'none',
-    transform: isHighlighted ? 'translateY(calc(var(--spacing-4) * -1))' : 'translateY(0)',
+    transitionProperty: MOTION_TRANSITION_PROPERTIES,
   };
 }
 
@@ -59,7 +89,9 @@ function SectionPill({ pillTestId, labelTestId, variant = 'desktop' }: SectionPi
       />
       <span
         data-testid={labelTestId}
-        className="text-label-desktop-md-tag text-[var(--color-pill-problem-text)]"
+        className={
+          isMobile ? PROBLEM_SECTION_PILL_LABEL_MOBILE_CLASS : PROBLEM_SECTION_PILL_LABEL_DESKTOP_CLASS
+        }
       >
         The Problem
       </span>
@@ -80,11 +112,11 @@ function AccentBar({
       aria-hidden="true"
       className={[
         'h-[var(--spacing-4)] w-[var(--spacing-64)] rounded-full',
-        'transition-[background] duration-[var(--motion-duration-default)] ease-in',
         isHighlighted
           ? 'bg-[linear-gradient(to_right,var(--color-text-brand-navy),color-mix(in_srgb,var(--color-text-brand-navy)_55%,var(--color-text-brand-orange)))]'
           : `bg-[var(--color-action-primary-default-background)]${cascadeRunning ? '' : ` ${hoverAccent}`}`,
       ].join(' ')}
+      style={getCardChromeTransitionStyle()}
     />
   );
 }
@@ -103,11 +135,11 @@ function CardIcon({
       data-testid={iconTestId}
       className={[
         'flex shrink-0 items-center justify-center rounded-[var(--radius-6)]',
-        'transition-[width,height,box-shadow] duration-[var(--motion-duration-default)] ease-in',
         isHighlighted
           ? 'size-[var(--spacing-52)] shadow-[0_0_0_var(--spacing-3)_var(--color-border-warning)]'
           : `size-[var(--spacing-32)] shadow-none${cascadeRunning ? '' : ` ${hoverRing}`}`,
       ].join(' ')}
+      style={getCardChromeTransitionStyle()}
     >
       <Image
         data-testid={graphicTestId}
@@ -126,8 +158,12 @@ const cardBaseClass = PROBLEM_CARD_BASE_CLASS;
 
 function ProblemCardDesktop({
   card,
+  cardIndex,
+  revealedUpTo,
+  activeIndex,
   isHighlighted,
   cascadeRunning,
+  motionEngaged,
 }: ProblemCardDesktopProps) {
   return (
     <article
@@ -137,11 +173,17 @@ function ProblemCardDesktop({
         'group/card',
         cardBaseClass,
         'w-full max-w-[424px] flex-1 gap-[var(--spacing-24)] border px-[var(--spacing-28)] py-[var(--spacing-40)]',
-        'transition-[border-color,box-shadow,transform] duration-[var(--motion-duration-default)] ease-in',
         isHighlighted ? CARD_SHELL_HIGHLIGHT : CARD_SHELL_DEFAULT,
-        cascadeRunning ? '' : CARD_SHELL_HOVER,
+        cascadeRunning || motionEngaged ? '' : CARD_SHELL_HOVER,
       ].join(' ')}
-      style={getCardSurfaceStyle(isHighlighted)}
+      style={getCardSurfaceStyle(
+        cardIndex,
+        revealedUpTo,
+        activeIndex,
+        cascadeRunning,
+        motionEngaged,
+        isHighlighted,
+      )}
     >
       <CardIcon
         iconTestId={card.iconTestId}
@@ -153,10 +195,16 @@ function ProblemCardDesktop({
       <div
         data-testid={card.textBlockTestId}
         className="flex flex-col gap-[var(--spacing-8)]"
+        style={getMotionCascadeTextStyle(
+          isHighlighted,
+          cascadeRunning,
+          motionEngaged,
+          PROBLEM_MOTION_STYLE,
+        )}
       >
         <h3
           data-testid={card.headingTestId}
-          className="text-heading-desktop-h4 text-[var(--color-text-primary)]"
+          className={PROBLEM_CARD_TITLE_DESKTOP_CLASS}
         >
           {card.heading}
         </h3>
@@ -167,7 +215,7 @@ function ProblemCardDesktop({
         />
         <p
           data-testid={card.bodyTestId}
-          className="text-body-desktop-sm text-[var(--color-text-secondary)]"
+          className={PROBLEM_CARD_BODY_CLASS}
         >
           {card.body}
         </p>
@@ -196,14 +244,14 @@ function ProblemCardMobile({ card }: ProblemCardMobileProps) {
       <div className="flex flex-col gap-[var(--spacing-8)]">
         <h3
           data-testid={card.headingTestId}
-          className="text-heading-desktop-h4 text-[var(--color-text-primary)]"
+          className={PROBLEM_CARD_TITLE_MOBILE_CLASS}
         >
           {card.heading}
         </h3>
         {card.accentBarTestId ? <AccentBar testId={card.accentBarTestId} /> : null}
         <p
           data-testid={card.bodyTestId}
-          className="text-body-desktop-sm text-[var(--color-text-secondary)]"
+          className={PROBLEM_CARD_BODY_MOBILE_CLASS}
         >
           {card.body}
         </p>
@@ -212,23 +260,46 @@ function ProblemCardMobile({ card }: ProblemCardMobileProps) {
   );
 }
 
-function GradientBar({ testId }: GradientBarProps) {
+function GradientBar({ testId, isEmphasized = false }: GradientBarProps) {
   return (
     <span
       {...(testId ? { 'data-testid': testId } : {})}
       aria-hidden="true"
-      className="h-[var(--spacing-4)] w-[calc(var(--spacing-64)+var(--spacing-32))] rounded-full"
-      style={{ background: PROBLEM_TOKENS.gradientBarBg }}
+      className="h-[var(--spacing-4)] rounded-full"
+      style={{
+        ...PROBLEM_MOTION_STYLE,
+        transitionProperty: 'opacity, transform, width',
+        width: isEmphasized
+          ? 'calc(var(--spacing-64) + var(--spacing-32))'
+          : 'var(--spacing-64)',
+        opacity: isEmphasized ? 1 : 0.45,
+        transform: isEmphasized ? 'scaleX(1)' : 'scaleX(0.75)',
+        transformOrigin: 'center',
+        background: PROBLEM_TOKENS.gradientBarBg,
+      }}
     />
   );
 }
 
-function ProblemCtaDesktop() {
+function ProblemCtaDesktop({ isEmphasized = false, motionEngaged = false }: ProblemCtaDesktopProps) {
   return (
-    <div data-testid={problem.cta} className="flex flex-col items-center gap-[var(--spacing-12)]">
+    <div
+      data-testid={problem.cta}
+      className="flex flex-col items-center gap-[var(--spacing-12)]"
+      style={getMotionSlideRevealStyle(isEmphasized, PROBLEM_MOTION_STYLE, {
+        engaged: motionEngaged,
+        animateOpacity: false,
+        liftWhenRevealed: true,
+      })}
+    >
       <div
         data-testid={problem.ctaText}
         className="flex flex-row flex-wrap items-center justify-center gap-[var(--spacing-6)] text-center"
+        style={getMotionSlideRevealStyle(isEmphasized, PROBLEM_MOTION_STYLE, {
+          engaged: motionEngaged,
+          animateOpacity: false,
+          liftWhenRevealed: true,
+        })}
       >
         <span
           data-testid={problem.ctaLine1}
@@ -243,7 +314,7 @@ function ProblemCtaDesktop() {
           We built the alternative.
         </span>
       </div>
-      <GradientBar testId={problem.gradientBar} />
+      <GradientBar testId={problem.gradientBar} isEmphasized={isEmphasized} />
     </div>
   );
 }
@@ -270,63 +341,138 @@ function ProblemCtaMobile() {
   );
 }
 
-function ProblemCardsDesktop() {
-  const [sequenceIndex, setSequenceIndex] = useState<number | null>(null);
+function ProblemDesktopContent() {
+  const [revealedUpTo, setRevealedUpTo] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [headerEmphasized, setHeaderEmphasized] = useState(false);
+  const [ctaEmphasized, setCtaEmphasized] = useState(false);
   const [cascadeActive, setCascadeActive] = useState(false);
-  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
-  const hasPlayedRef = useRef(false);
-  const cascadeActiveRef = useRef(false);
+  const [motionEngaged, setMotionEngaged] = useState(false);
 
-  const clearSequence = useCallback(() => {
-    timersRef.current.forEach(clearTimeout);
-    timersRef.current = [];
-  }, []);
+  const playSequence = useCallback(
+    () =>
+      runRapidFourStepMotion([
+        () => {
+          beginMotionReveal(
+            () => {
+              setMotionEngaged(true);
+              setCascadeActive(true);
+              setRevealedUpTo(-1);
+              setActiveIndex(null);
+            },
+            () => {
+              setHeaderEmphasized(true);
+              setRevealedUpTo(0);
+              setActiveIndex(0);
+            },
+          );
+        },
+        () => {
+          setRevealedUpTo(1);
+          setActiveIndex(1);
+        },
+        () => {
+          setRevealedUpTo(2);
+          setActiveIndex(2);
+        },
+        () => {
+          setActiveIndex(null);
+          setCascadeActive(false);
+          setCtaEmphasized(true);
+        },
+      ]),
+    [],
+  );
 
-  const endCascade = useCallback(() => {
-    cascadeActiveRef.current = false;
-    setCascadeActive(false);
-    const motionDuration = getDurationTokenMs('--motion-duration-default');
-    timersRef.current.push(
-      setTimeout(() => setSequenceIndex(null), motionDuration),
-    );
-  }, []);
-
-  const playSequence = useCallback(() => {
-    if (hasPlayedRef.current) return;
-
-    hasPlayedRef.current = true;
-    clearSequence();
-    const stepDelay = getDurationTokenMs(PROBLEM_TOKENS.motionStepDelayVar);
-
-    cascadeActiveRef.current = true;
-    setCascadeActive(true);
-    setSequenceIndex(0);
-
-    timersRef.current.push(
-      setTimeout(() => setSequenceIndex(1), stepDelay),
-      setTimeout(() => {
-        setSequenceIndex(2);
-        endCascade();
-      }, stepDelay * 2),
-    );
-  }, [clearSequence, endCascade]);
-
-  useEffect(() => () => clearSequence(), [clearSequence]);
+  const triggerMotion = useOneWayMotion(playSequence);
 
   return (
     <div
-      data-testid={problem.cardsGrid}
-      className="flex w-full flex-wrap items-stretch justify-center gap-[var(--spacing-20)]"
-      onMouseEnter={playSequence}
+      data-testid={problem.motion.root}
+      data-motion-duration="motion.duration.default"
+      className="flex justify-center px-[var(--spacing-64)] py-[var(--spacing-40)]"
+      onMouseEnter={triggerMotion}
     >
-      {DESKTOP_CARDS.map((card, index) => (
-        <ProblemCardDesktop
-          key={card.cardTestId}
-          card={card}
-          isHighlighted={sequenceIndex === index}
-          cascadeRunning={cascadeActive}
-        />
-      ))}
+      <div
+        data-testid={problem.outerFrame}
+        className="flex w-full max-w-[1312px] flex-col items-center gap-[var(--spacing-40)]"
+      >
+        <div
+          data-testid={problem.innerFrame}
+          className="flex w-full flex-col items-center gap-[var(--spacing-40)]"
+        >
+            <div
+              data-testid={problem.headerWrap}
+              className="flex w-full max-w-[900px] flex-col items-center"
+              style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
+                engaged: motionEngaged,
+                animateOpacity: false,
+              })}
+            >
+              <div
+                data-testid={problem.sectionHeader}
+                className="flex flex-col items-center gap-[var(--spacing-16)] text-center"
+              >
+                <SectionPill
+                  pillTestId={problem.sectionPill}
+                  labelTestId={problem.sectionPillLabel}
+                />
+                <div
+                  data-testid={problem.headingBlock}
+                  className="flex flex-col items-center gap-[var(--spacing-8)]"
+                  style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
+                    engaged: motionEngaged,
+                    animateOpacity: false,
+                  })}
+                >
+                  <h2
+                    data-testid={problem.sectionHeading}
+                    className={LANDING_SECTION_HEADING_DESKTOP_CLASS}
+                    style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
+                      engaged: motionEngaged,
+                      animateOpacity: false,
+                    })}
+                  >
+                    The industry charges you
+                    <br />
+                    for every move you make.
+                  </h2>
+                  <p
+                    data-testid={problem.sectionSubtitle}
+                    className={LANDING_SECTION_SUBTITLE_CLASS}
+                    style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
+                      engaged: motionEngaged,
+                      animateOpacity: false,
+                      transitionDelay: MOTION_DELAY_STEP,
+                    })}
+                  >
+                    The travel industry runs on a broken model. Your agency is paying the price.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          <div
+            data-testid={problem.cardsGrid}
+            className="flex w-full flex-wrap items-stretch justify-center gap-[var(--spacing-20)]"
+          >
+            {DESKTOP_CARDS.map((card, index) => (
+              <ProblemCardDesktop
+                key={card.cardTestId}
+                card={card}
+                cardIndex={index}
+                revealedUpTo={revealedUpTo}
+                activeIndex={activeIndex}
+                isHighlighted={activeIndex === index}
+                cascadeRunning={cascadeActive}
+                motionEngaged={motionEngaged}
+              />
+            ))}
+          </div>
+
+          <ProblemCtaDesktop isEmphasized={ctaEmphasized} motionEngaged={motionEngaged} />
+        </div>
+      </div>
     </div>
   );
 }
@@ -341,53 +487,7 @@ export function ProblemSection() {
     >
       {/* Desktop — Figma 5164:6561 */}
       <div className="hidden min-[1440px]:block">
-        <div
-          data-testid={problem.outerFrame}
-          className="flex justify-center px-[var(--spacing-64)] py-[var(--spacing-40)]"
-        >
-          <div
-            data-testid={problem.innerFrame}
-            className="flex w-full max-w-[1312px] flex-col items-center gap-[var(--spacing-40)]"
-          >
-            <div
-              data-testid={problem.headerWrap}
-              className="flex w-full max-w-[900px] flex-col items-center"
-            >
-              <div
-                data-testid={problem.sectionHeader}
-                className="flex flex-col items-center gap-[var(--spacing-16)] text-center"
-              >
-                <SectionPill
-                  pillTestId={problem.sectionPill}
-                  labelTestId={problem.sectionPillLabel}
-                />
-                <div
-                  data-testid={problem.headingBlock}
-                  className="flex flex-col items-center gap-[var(--spacing-8)]"
-                >
-                  <h2
-                    data-testid={problem.sectionHeading}
-                    className="text-heading-desktop-h1 text-[var(--color-text-primary)]"
-                  >
-                    The industry charges you
-                    <br />
-                    for every move you make.
-                  </h2>
-                  <p
-                    data-testid={problem.sectionSubtitle}
-                    className="text-body-desktop-md text-[var(--color-text-secondary)]"
-                  >
-                    The travel industry runs on a broken model. Your agency is paying the price.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <ProblemCardsDesktop />
-
-            <ProblemCtaDesktop />
-          </div>
-        </div>
+        <ProblemDesktopContent />
       </div>
 
       {/* Mobile — Figma 5164:6571 */}
@@ -410,13 +510,13 @@ export function ProblemSection() {
           >
             <h2
               data-testid={problem.mobile.sectionHeading}
-              className="text-display-mobile-lg text-[var(--color-text-primary)]"
+              className={LANDING_SECTION_HEADING_MOBILE_CLASS}
             >
               The industry charges you for every move you make.
             </h2>
             <p
               data-testid={problem.mobile.sectionSubtitle}
-              className="text-body-desktop-md text-[var(--color-text-secondary)]"
+              className={LANDING_SECTION_SUBTITLE_CLASS}
             >
               The travel industry runs on outdated infrastructure that holds you back
             </p>

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Seed component entries from LP-001 figma checklist (navbar + hero + comparison + howItWorksTeaser slices).
+ * Seed component entries from LP-001 figma checklist (navbar + hero + comparison + howItWorksTeaser + featureGrid + socialProof slices).
  * ui-registry-build merges these into tokens/ui-registry.json.
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -46,6 +46,51 @@ function baseSlugFromName(name) {
     Rectangle: "rectangle",
     Frame: "frame",
     "The Choice": "sectionPillLabel",
+    FeatureGrid: "root",
+    "FeatureGrid — Light Modern": "root",
+    "FeatureGrid-animation": "root",
+    "SectionHeader/Features": "sectionHeader",
+    FeatureCardsGrid: "cardsGrid",
+    FeatureRow1: "featureRow1",
+    FeatureRow2: "featureRow2",
+    FeatureCard: "featureCard",
+    FooterBar: "footerBar",
+    "Button/Primary": "cta",
+    plane: "planeDecor",
+    plane2: "planeDecor2",
+    CtaRow: "ctaRow",
+    "Platform Features": "sectionPillLabel",
+    SocialProofSectionBig: "root",
+    "Social proof": "root",
+    "Social Proof": "sectionRoot",
+    SocialProofSection: "root",
+    NewPricingSection: "root",
+    "Own it": "root",
+    PricingSectionanimation: "root",
+    "SectionHeader/Pricing": "sectionHeader",
+    "Route Strip": "routeStrip",
+    RouteStrip: "routeStrip",
+    PricingCard: "pricingCard",
+    TrustStrip: "trustStrip",
+    "all-plans-bar": "allPlansBar",
+    "All Plans Strip": "allPlansStrip",
+    "clients-animaiton": "root",
+    "SectionHeader/SocialProof": "sectionHeader",
+    TestimonialBlock: "testimonialBlock",
+    TestimonialLogoCard: "testimonialLogoCard",
+    "logo-slot": "logoSlot",
+    TestimonialAuthor: "testimonialAuthor",
+    AvatarInitials: "avatarInitials",
+    SlideProgressBar: "slideProgressBar",
+    "Integrations Strip": "integrationsStrip",
+    "testimonials-row": "testimonialsRow",
+    "progress-wrap": "progressWrap",
+    "slide-numbers": "slideNumbers",
+    "header-wrap": "headerWrap",
+    "Vector/Variant21": "planeDecor",
+    "Heading 2": "heading",
+    Paragraph: "paragraph",
+    "accent-bar": "accentBar",
   };
   if (special[name]) return special[name];
 
@@ -157,6 +202,204 @@ function parseHiwChecklistEntries() {
       isCard ||
       /Link|CTA|Button|NavLink/i.test(name) ||
       /AccentBar|HIWCard|footer-note/i.test(name);
+
+    entries.push({
+      path,
+      description: isRoot ? currentSection.rootDescription : `${name} (${nodeId})`,
+      nodeId,
+      states: isInteractive ? ["default", "hover"] : ["default"],
+    });
+  }
+
+  return entries;
+}
+
+/**
+ * Parse Feature grid checklist sections into registry entries (GH#10).
+ * @returns {RegistryEntry[]}
+ */
+function parseFeatureGridChecklistEntries() {
+  const md = readFileSync(CHECKLIST_PATH, "utf8");
+  const lines = md.split("\n");
+
+  /** @type {Array<{ prefix: string[], endMarker: string, rootDescription: string }>} */
+  const sections = [
+    {
+      prefix: ["landing", "featureGrid"],
+      endMarker: "## FeatureGrid — Light Modern",
+      rootDescription: "Feature grid desktop (Gherkin: component.landing.featureGrid)",
+    },
+    {
+      prefix: ["landing", "featureGrid", "mobile"],
+      endMarker: "## FeatureGrid-animation",
+      rootDescription: "Feature grid mobile (Gherkin @393px)",
+    },
+    {
+      prefix: ["landing", "featureGrid", "motion"],
+      endMarker: "## Button/Secondary2",
+      rootDescription: "Feature grid motion prototype (Gherkin: 5404:6074)",
+    },
+  ];
+
+  /** @type {RegistryEntry[]} */
+  const entries = [];
+  let sectionIndex = -1;
+  let inFeatureGrid = false;
+  /** @type {Map<string, number>} */
+  const slugCounts = new Map();
+
+  for (const line of lines) {
+    if (line.startsWith("## FeatureGrid (nodeId: 5164:6562)")) {
+      inFeatureGrid = true;
+      sectionIndex = 0;
+      slugCounts.clear();
+      continue;
+    }
+    if (!inFeatureGrid) continue;
+
+    const section = sections[sectionIndex];
+    if (section && line.startsWith(section.endMarker)) {
+      sectionIndex += 1;
+      slugCounts.clear();
+      if (sectionIndex >= sections.length) {
+        inFeatureGrid = false;
+      }
+      continue;
+    }
+
+    const rowMatch = line.match(/^- \[ \] (.+?)  \(nodeId: ([^)]+)\)/);
+    if (!rowMatch || sectionIndex < 0 || sectionIndex >= sections.length) continue;
+
+    const [, rawName, nodeId] = rowMatch;
+    const name = rawName.replace(/  \(content:.*$/, "").trim();
+    const currentSection = sections[sectionIndex];
+
+    let leaf = baseSlugFromName(name);
+    if (leaf === "root" && entries.some((e) => e.nodeId === nodeId)) {
+      leaf = "sectionRoot";
+    }
+
+    const count = slugCounts.get(leaf) ?? 0;
+    slugCounts.set(leaf, count + 1);
+    if (count > 0) leaf = `${leaf}${count + 1}`;
+
+    const path = [...currentSection.prefix, leaf];
+    if (path.length > 4) {
+      throw new Error(`Registry path too deep: component.${path.join(".")} (${nodeId})`);
+    }
+
+    const isRoot =
+      (sectionIndex === 0 && nodeId === "5164:6562") ||
+      (sectionIndex === 1 && nodeId === "5164:6785") ||
+      (sectionIndex === 2 && nodeId === "5404:6074");
+
+    const isCard = /^FeatureCard$/i.test(name);
+    const isInteractive =
+      isRoot ||
+      isCard ||
+      /Button|CTA|AccentBar|FooterBar/i.test(name);
+
+    entries.push({
+      path,
+      description: isRoot ? currentSection.rootDescription : `${name} (${nodeId})`,
+      nodeId,
+      states: isInteractive ? ["default", "hover"] : ["default"],
+    });
+  }
+
+  return entries;
+}
+
+/**
+ * Parse Social proof checklist sections into registry entries (GH#9).
+ * @returns {RegistryEntry[]}
+ */
+function parseSocialProofChecklistEntries() {
+  const md = readFileSync(CHECKLIST_PATH, "utf8");
+  const lines = md.split("\n");
+
+  /** @type {Array<{ prefix: string[], endMarker: string, rootDescription: string }>} */
+  const sections = [
+    {
+      prefix: ["landing", "socialProof"],
+      endMarker: "## Social proof (nodeId: 5164:6836)",
+      rootDescription: "Social proof desktop (Gherkin: component.landing.socialProof)",
+    },
+    {
+      prefix: ["landing", "socialProof", "mobile"],
+      endMarker: "## SocialProofSection (nodeId: 5307:6608)",
+      rootDescription: "Social proof mobile (Gherkin @393px)",
+    },
+    {
+      prefix: ["landing", "socialProof", "motion"],
+      endMarker: "## clients-animaiton (nodeId: 5164:11204)",
+      rootDescription: "Social proof testimonials motion (Gherkin: 5307:6608)",
+    },
+    {
+      prefix: ["landing", "socialProof", "clientsMotion"],
+      endMarker: "## Button/Secondary2 (nodeId: 5164:10342)",
+      rootDescription: "Social proof clients strip motion (Gherkin: 5164:11204)",
+    },
+  ];
+
+  /** @type {RegistryEntry[]} */
+  const entries = [];
+  let sectionIndex = -1;
+  let inSocialProof = false;
+  /** @type {Map<string, number>} */
+  const slugCounts = new Map();
+
+  for (const line of lines) {
+    if (line.startsWith("## SocialProofSectionBig (nodeId: 5164:6568)")) {
+      inSocialProof = true;
+      sectionIndex = 0;
+      slugCounts.clear();
+      continue;
+    }
+    if (!inSocialProof) continue;
+
+    const section = sections[sectionIndex];
+    if (section && line.startsWith(section.endMarker)) {
+      sectionIndex += 1;
+      slugCounts.clear();
+      if (sectionIndex >= sections.length) {
+        inSocialProof = false;
+      }
+      continue;
+    }
+
+    const rowMatch = line.match(/^- \[ \] (.+?)  \(nodeId: ([^)]+)\)/);
+    if (!rowMatch || sectionIndex < 0 || sectionIndex >= sections.length) continue;
+
+    const [, rawName, nodeId] = rowMatch;
+    const name = rawName.replace(/  \(content:.*$/, "").trim();
+    const currentSection = sections[sectionIndex];
+
+    let leaf = baseSlugFromName(name);
+    if (leaf === "root" && entries.some((e) => e.nodeId === nodeId)) {
+      leaf = "sectionRoot";
+    }
+
+    const count = slugCounts.get(leaf) ?? 0;
+    slugCounts.set(leaf, count + 1);
+    if (count > 0) leaf = `${leaf}${count + 1}`;
+
+    const path = [...currentSection.prefix, leaf];
+    if (path.length > 4) {
+      throw new Error(`Registry path too deep: component.${path.join(".")} (${nodeId})`);
+    }
+
+    const isRoot =
+      (sectionIndex === 0 && nodeId === "5164:6568") ||
+      (sectionIndex === 1 && nodeId === "5164:6836") ||
+      (sectionIndex === 2 && nodeId === "5307:6608") ||
+      (sectionIndex === 3 && nodeId === "5164:11204");
+
+    const isBlock = /^TestimonialBlock$/i.test(name);
+    const isInteractive =
+      isRoot ||
+      isBlock ||
+      /SlideProgressBar|testimonials-row/i.test(name);
 
     entries.push({
       path,
@@ -640,7 +883,110 @@ const COMPARISON_FIRST_ENTRIES = [
   },
 ];
 
+/**
+ * Parse Pricing checklist sections into registry entries (GH#11).
+ * @returns {RegistryEntry[]}
+ */
+function parsePricingChecklistEntries() {
+  const md = readFileSync(CHECKLIST_PATH, "utf8");
+  const lines = md.split("\n");
+
+  /** @type {Array<{ prefix: string[], endMarker: string | null, rootDescription: string }>} */
+  const sections = [
+    {
+      prefix: ["landing", "pricing"],
+      endMarker: "## Own it (nodeId: 5164:6915)",
+      rootDescription: "Pricing section desktop (Gherkin: component.landing.pricing)",
+    },
+    {
+      prefix: ["landing", "pricing", "mobile"],
+      endMarker: "## PricingSectionanimation (nodeId: 5164:11487)",
+      rootDescription: "Pricing section mobile (Gherkin @393px)",
+    },
+    {
+      prefix: ["landing", "pricing", "motion"],
+      endMarker: null,
+      rootDescription: "Pricing section motion prototype (Gherkin: 5164:11487)",
+    },
+  ];
+
+  /** @type {RegistryEntry[]} */
+  const entries = [];
+  let sectionIndex = -1;
+  let inPricing = false;
+  /** @type {Map<string, number>} */
+  const slugCounts = new Map();
+
+  for (const line of lines) {
+    if (line.startsWith("## NewPricingSection (nodeId: 5164:6564)")) {
+      inPricing = true;
+      sectionIndex = 0;
+      slugCounts.clear();
+      continue;
+    }
+    if (!inPricing) continue;
+
+    const section = sections[sectionIndex];
+    if (section?.endMarker && line.startsWith(section.endMarker)) {
+      sectionIndex += 1;
+      slugCounts.clear();
+      if (sectionIndex >= sections.length) {
+        inPricing = false;
+      }
+      continue;
+    }
+
+    const rowMatch = line.match(/^- \[ \] (.+?)  \(nodeId: ([^)]+)\)/);
+    if (!rowMatch || sectionIndex < 0 || sectionIndex >= sections.length) continue;
+
+    const [, rawName, nodeId] = rowMatch;
+    const name = rawName.replace(/  \(content:.*$/, "").trim();
+    const currentSection = sections[sectionIndex];
+
+    let leaf = baseSlugFromName(name);
+    if (leaf === "root" && entries.some((e) => e.nodeId === nodeId)) {
+      leaf = "sectionRoot";
+    }
+
+    const count = slugCounts.get(leaf) ?? 0;
+    slugCounts.set(leaf, count + 1);
+    if (count > 0) leaf = `${leaf}${count + 1}`;
+
+    const path = [...currentSection.prefix, leaf];
+    if (path.length > 4) {
+      throw new Error(`Registry path too deep: component.${path.join(".")} (${nodeId})`);
+    }
+
+    const isRoot =
+      (sectionIndex === 0 && nodeId === "5164:6564") ||
+      (sectionIndex === 1 && nodeId === "5164:6915") ||
+      (sectionIndex === 2 && nodeId === "5164:11487");
+
+    const isInteractive =
+      isRoot ||
+      /^PricingCard$/i.test(name) ||
+      /^Route Strip$/i.test(name) ||
+      /^RouteStrip$/i.test(name) ||
+      /^Button\/Primary$/i.test(name) ||
+      /^TrustStrip$/i.test(name) ||
+      /^all-plans-bar$/i.test(name) ||
+      /^All Plans Strip$/i.test(name);
+
+    entries.push({
+      path,
+      description: isRoot ? currentSection.rootDescription : `${name} (${nodeId})`,
+      nodeId,
+      states: isInteractive ? ["default", "hover"] : ["default"],
+    });
+  }
+
+  return entries;
+}
+
 const HOW_IT_WORKS_TEASER_ENTRIES = parseHiwChecklistEntries();
+const FEATURE_GRID_ENTRIES = parseFeatureGridChecklistEntries();
+const SOCIAL_PROOF_ENTRIES = parseSocialProofChecklistEntries();
+const PRICING_ENTRIES = parsePricingChecklistEntries();
 
 const ENTRIES = [
   ...NAVBAR_ENTRIES,
@@ -648,6 +994,9 @@ const ENTRIES = [
   ...PROBLEM_ENTRIES,
   ...COMPARISON_FIRST_ENTRIES,
   ...HOW_IT_WORKS_TEASER_ENTRIES,
+  ...FEATURE_GRID_ENTRIES,
+  ...SOCIAL_PROOF_ENTRIES,
+  ...PRICING_ENTRIES,
 ];
 
 function setPath(tree, segments, leaf) {
@@ -670,7 +1019,7 @@ function setPath(tree, segments, leaf) {
 const registry = {
   $metadata: {
     version: "0.1.0",
-    description: "UI registry — LP-001 Navbar + Hero + Problem + Comparison₁ + HowItWorksTeaser slices (ui-registry-build 2026-07-02)",
+    description: "UI registry — LP-001 Navbar + Hero + Problem + Comparison₁ + HowItWorksTeaser + FeatureGrid + SocialProof + Pricing slices (ui-registry-build 2026-07-02)",
     pathGrammar: "<domain>.<segment>(.<segment>)+",
     owner: "MLtravel FE",
     gherkinAliases: {
@@ -683,6 +1032,9 @@ const registry = {
       "component.landing.problem": "component.landing.problem.root",
       "component.landing.comparisonFirst": "component.landing.comparisonFirst.root",
       "component.landing.howItWorksTeaser": "component.landing.howItWorksTeaser.root",
+      "component.landing.featureGrid": "component.landing.featureGrid.root",
+      "component.landing.socialProof": "component.landing.socialProof.root",
+      "component.landing.pricing": "component.landing.pricing.root",
     },
   },
   screen: {

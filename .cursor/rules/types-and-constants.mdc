@@ -1,0 +1,58 @@
+---
+description: Keep types and constants out of TSX — use types/ and constants/ folders
+globs: **/*.{tsx,ts}
+alwaysApply: true
+---
+
+# Types & Constants Separation
+
+TSX files are for UI only. Do not declare `interface`, `type`, or module-level `const` data in `.tsx` files.
+
+## Folder layout
+
+```
+types/
+  landing.types.ts      # all landing page interfaces
+  shared.types.ts       # all shared component interfaces
+  contact.types.ts      # one file per page/domain (add as needed)
+constants/
+  landing.constants.ts  # all landing page constants (same grouping)
+  shared.constants.ts
+```
+
+- **One `.types.ts` file per page or domain** — not one file per component.
+- Group related interfaces inside that file (hero, problem section, etc.) with a short comment.
+- Prefer **`interface`** for object/props shapes; use `type` only for unions, aliases, or mapped types.
+
+## What goes where
+
+| Artifact | Location | Example |
+|----------|----------|---------|
+| Props, config shapes | `types/<domain>.types.ts` | `HeroPrimaryCtaProps`, `DesktopCardConfig` |
+| Static data, class strings | `constants/<domain>.constants.ts` | `DESKTOP_CARDS`, `NAV_LINK_CLASS_NAME` |
+| Component markup & hooks | `*.tsx` | `ProblemSection.tsx` |
+
+## TSX rules
+
+```tsx
+// ❌ BAD — interfaces/constants in TSX
+interface FooProps { id: string }
+const ITEMS = [{ label: 'A' }] as const;
+export function Foo({ id }: FooProps) { ... }
+
+// ✅ GOOD — import from domain modules
+import type { FooProps } from '@/types/landing.types';
+import { ITEMS } from '@/constants/landing.constants';
+export function Foo({ id }: FooProps) { ... }
+```
+
+## Naming
+
+- Types file: `<domain>.types.ts` — export `PascalCase` interfaces (`HeroPrimaryCtaProps`, `DesktopCardConfig`).
+- Constants file: `<domain>.constants.ts` — use `SCREAMING_SNAKE_CASE` for exported constants.
+- Section comments inside a types file, e.g. `/** Landing page — problem section */`.
+
+## Exceptions
+
+- Config/build scripts (`playwright.config.ts`, `next.config.ts`) and generated files (`tokens/build/*`).
+- Test files may define local fixtures inline.

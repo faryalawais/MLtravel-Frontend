@@ -547,6 +547,2287 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.landing.howItWorksTeaser.motion.textBlock20` | Your brand. Your data. Your platform. (I5164:10412;5145:4986) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock20` |
 | `component.landing.howItWorksTeaser.motion.footerNote` | footer-note (I5164:10412;5404:10381) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-footerNote` |
 | `component.landing.howItWorksTeaser.motion.textBlock21` | How does the technical setup work? Read the full breakdown → (I5164:10412;5404:10382) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock21` |
+| `component.landing.howItWorksTeaser.motion.root2` | FeatureGrid (5164:6562) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root2` |
+| `component.landing.howItWorksTeaser.motion.planeDecor2` | plane (I5404:6074;5404:5707) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-planeDecor2` |
+| `component.landing.howItWorksTeaser.motion.headerWrap` | header-wrap (I5164:6562;3099:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-headerWrap` |
+| `component.landing.howItWorksTeaser.motion.sectionHeader` | SectionHeader/Features (I5164:6562;3099:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionHeader` |
+| `component.landing.howItWorksTeaser.motion.sectionPill2` | SectionPill (I5164:6562;3099:15;3131:1139) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPill2` |
+| `component.landing.howItWorksTeaser.motion.sectionPillLabel2` | Platform Features (I5164:6562;3099:15;3131:1139;3127:249) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPillLabel2` |
+| `component.landing.howItWorksTeaser.motion.headingBlock` | heading-block (I5164:6562;3099:15;3098:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-headingBlock` |
+| `component.landing.howItWorksTeaser.motion.frame2095585102` | Frame 2095585102 (I5164:6562;3099:15;3109:1164) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585102` |
+| `component.landing.howItWorksTeaser.motion.headingline1` | heading-line1 (I5164:6562;3099:15;3098:21) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-headingline1` |
+| `component.landing.howItWorksTeaser.motion.headingline2` | heading-line2 (I5164:6562;3099:15;3098:22) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-headingline2` |
+| `component.landing.howItWorksTeaser.motion.subtitle` | subtitle (I5164:6562;3099:15;3098:23) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-subtitle` |
+| `component.landing.howItWorksTeaser.motion.cardsGrid` | FeatureCardsGrid (I5164:6562;3099:25) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-cardsGrid` |
+| `component.landing.howItWorksTeaser.motion.featureRow1` | FeatureRow1 (I5164:6562;3099:26) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureRow1` |
+| `component.landing.howItWorksTeaser.motion.featureCard` | FeatureCard (I5164:6562;3113:38) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard` |
+| `component.landing.howItWorksTeaser.motion.textblock` | text-block (I5164:6562;3113:38;3112:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock` |
+| `component.landing.howItWorksTeaser.motion.titlerow` | title-row (I5164:6562;3113:38;3112:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titlerow` |
+| `component.landing.howItWorksTeaser.motion.title` | title (I5164:6562;3113:38;3112:16) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title` |
+| `component.landing.howItWorksTeaser.motion.badge` | badge (I5164:6562;3113:38;3112:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-badge` |
+| `component.landing.howItWorksTeaser.motion.badgelabel` | badge-label (I5164:6562;3113:38;3112:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-badgelabel` |
+| `component.landing.howItWorksTeaser.motion.accentBar4` | AccentBar (I5164:6562;3113:38;3112:19) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar4` |
+| `component.landing.howItWorksTeaser.motion.body` | body (I5164:6562;3113:38;3112:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body` |
+| `component.landing.howItWorksTeaser.motion.featureCard2` | FeatureCard (I5164:6562;3113:46) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard2` |
+| `component.landing.howItWorksTeaser.motion.textblock2` | text-block (I5164:6562;3113:46;3112:22) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock2` |
+| `component.landing.howItWorksTeaser.motion.titlerow2` | title-row (I5164:6562;3113:46;3112:23) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titlerow2` |
+| `component.landing.howItWorksTeaser.motion.title2` | title (I5164:6562;3113:46;3112:24) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title2` |
+| `component.landing.howItWorksTeaser.motion.badge2` | badge (I5164:6562;3113:46;3112:25) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-badge2` |
+| `component.landing.howItWorksTeaser.motion.badgelabel2` | badge-label (I5164:6562;3113:46;3112:26) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-badgelabel2` |
+| `component.landing.howItWorksTeaser.motion.accentBar5` | AccentBar (I5164:6562;3113:46;3112:27) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar5` |
+| `component.landing.howItWorksTeaser.motion.body2` | body (I5164:6562;3113:46;3112:28) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body2` |
+| `component.landing.howItWorksTeaser.motion.featureRow2` | FeatureRow2 (I5164:6562;3099:45) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureRow2` |
+| `component.landing.howItWorksTeaser.motion.featureCard3` | FeatureCard (I5164:6562;3113:70) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard3` |
+| `component.landing.howItWorksTeaser.motion.textblock3` | text-block (I5164:6562;3113:70;3112:30) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock3` |
+| `component.landing.howItWorksTeaser.motion.title3` | title (I5164:6562;3113:70;3112:31) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title3` |
+| `component.landing.howItWorksTeaser.motion.accentBar6` | AccentBar (I5164:6562;3113:70;3112:32) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar6` |
+| `component.landing.howItWorksTeaser.motion.body3` | body (I5164:6562;3113:70;3112:33) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body3` |
+| `component.landing.howItWorksTeaser.motion.featureCard4` | FeatureCard (I5164:6562;3113:75) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard4` |
+| `component.landing.howItWorksTeaser.motion.textblock4` | text-block (I5164:6562;3113:75;3112:35) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock4` |
+| `component.landing.howItWorksTeaser.motion.title4` | title (I5164:6562;3113:75;3112:36) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title4` |
+| `component.landing.howItWorksTeaser.motion.accentBar7` | AccentBar (I5164:6562;3113:75;3112:37) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar7` |
+| `component.landing.howItWorksTeaser.motion.body4` | body (I5164:6562;3113:75;3112:38) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body4` |
+| `component.landing.howItWorksTeaser.motion.featureCard5` | FeatureCard (I5164:6562;3113:80) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard5` |
+| `component.landing.howItWorksTeaser.motion.textblock5` | text-block (I5164:6562;3113:80;3112:40) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock5` |
+| `component.landing.howItWorksTeaser.motion.title5` | title (I5164:6562;3113:80;3112:41) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title5` |
+| `component.landing.howItWorksTeaser.motion.accentBar8` | AccentBar (I5164:6562;3113:80;3112:42) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar8` |
+| `component.landing.howItWorksTeaser.motion.body5` | body (I5164:6562;3113:80;3112:43) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body5` |
+| `component.landing.howItWorksTeaser.motion.featureCard6` | FeatureCard (I5164:6562;3113:85) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard6` |
+| `component.landing.howItWorksTeaser.motion.textblock6` | text-block (I5164:6562;3113:85;3112:45) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock6` |
+| `component.landing.howItWorksTeaser.motion.title6` | title (I5164:6562;3113:85;3112:46) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title6` |
+| `component.landing.howItWorksTeaser.motion.accentBar9` | AccentBar (I5164:6562;3113:85;3112:47) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar9` |
+| `component.landing.howItWorksTeaser.motion.body6` | body (I5164:6562;3113:85;3112:48) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body6` |
+| `component.landing.howItWorksTeaser.motion.footerBar` | FooterBar (I5164:6562;3099:66) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-footerBar` |
+| `component.landing.howItWorksTeaser.motion.tagline` | tagline (I5164:6562;3099:67) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-tagline` |
+| `component.landing.howItWorksTeaser.motion.cta` | Button/Primary (I5164:6562;3099:68) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-cta` |
+| `component.landing.howItWorksTeaser.motion.label` | label (I5164:6562;3099:68;2780:1424) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-label` |
+| `component.landing.howItWorksTeaser.motion.iconButton` | Icon/Button (I5164:6562;3099:68;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-iconButton` |
+| `component.landing.howItWorksTeaser.motion.graphic` | graphic (I5164:6562;3099:68;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-graphic` |
+| `component.landing.howItWorksTeaser.motion.group` | Group (I5164:6562;3099:68;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-group` |
+| `component.landing.howItWorksTeaser.motion.planeDecor` | plane (I5164:6562;3109:1186) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-planeDecor` |
+| `component.landing.howItWorksTeaser.motion.root3` | FeatureGrid — Light Modern (5164:6785) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root3` |
+| `component.landing.howItWorksTeaser.motion.frame1561553791` | Frame 1561553791 (5164:6786) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553791` |
+| `component.landing.howItWorksTeaser.motion.frame1561553790` | Frame 1561553790 (5164:6787) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553790` |
+| `component.landing.howItWorksTeaser.motion.container` | Container (5164:6788) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container` |
+| `component.landing.howItWorksTeaser.motion.sectionPill3` | SectionPill (5164:6789) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPill3` |
+| `component.landing.howItWorksTeaser.motion.sectionPillLabel3` | Platform Features (5164:6791) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPillLabel3` |
+| `component.landing.howItWorksTeaser.motion.heading` | Heading 2 (5164:6792) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-heading` |
+| `component.landing.howItWorksTeaser.motion.builtForSpeedPrecision` | Built for Speed, Precision, (5164:6793) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-builtForSpeedPrecision` |
+| `component.landing.howItWorksTeaser.motion.text` | Text (5164:6794) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-text` |
+| `component.landing.howItWorksTeaser.motion.andTotalControl` | and Total Control (5164:6795) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-andTotalControl` |
+| `component.landing.howItWorksTeaser.motion.paragraph` | Paragraph (5164:6796) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-paragraph` |
+| `component.landing.howItWorksTeaser.motion.textBlock22` | Travel companies worldwide trust FlightCore to pow (5164:6797) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock22` |
+| `component.landing.howItWorksTeaser.motion.cardsGrid2` | FeatureCardsGrid (5164:6798) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-cardsGrid2` |
+| `component.landing.howItWorksTeaser.motion.featureCard7` | FeatureCard (5164:6799) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard7` |
+| `component.landing.howItWorksTeaser.motion.titlerow3` | title-row (5164:6800) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titlerow3` |
+| `component.landing.howItWorksTeaser.motion.multisourceContent` | Multi-Source Content (5164:6801) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-multisourceContent` |
+| `component.landing.howItWorksTeaser.motion.frame14` | Frame (5164:6802) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame14` |
+| `component.landing.howItWorksTeaser.motion.n100Yours` | 100% Yours (5164:6803) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n100Yours` |
+| `component.landing.howItWorksTeaser.motion.frame15` | Frame (5164:6804) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame15` |
+| `component.landing.howItWorksTeaser.motion.textBlock23` | Pull live inventory from GDS and NDC simultaneously. One search surfaces every available fare — no source left behind. (5164:6805) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock23` |
+| `component.landing.howItWorksTeaser.motion.featureCard8` | FeatureCard (5164:6806) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard8` |
+| `component.landing.howItWorksTeaser.motion.titlerow4` | title-row (5164:6807) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titlerow4` |
+| `component.landing.howItWorksTeaser.motion.parallelSearch` | Parallel Search (5164:6808) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-parallelSearch` |
+| `component.landing.howItWorksTeaser.motion.frame16` | Frame (5164:6809) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame16` |
+| `component.landing.howItWorksTeaser.motion.n100ms` | <100ms (5164:6810) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n100ms` |
+| `component.landing.howItWorksTeaser.motion.frame17` | Frame (5164:6811) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame17` |
+| `component.landing.howItWorksTeaser.motion.textBlock24` | Fire searches across all connected airlines at once. Sub-second results, zero tab-switching. (5164:6812) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock24` |
+| `component.landing.howItWorksTeaser.motion.featureCard9` | FeatureCard (5164:6813) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard9` |
+| `component.landing.howItWorksTeaser.motion.titlerow5` | title-row (5164:6814) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titlerow5` |
+| `component.landing.howItWorksTeaser.motion.endtoendTicketing` | End-to-End Ticketing (5164:6815) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-endtoendTicketing` |
+| `component.landing.howItWorksTeaser.motion.accentBar10` | accent-bar (5164:6816) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-accentBar10` |
+| `component.landing.howItWorksTeaser.motion.textBlock25` | Search, book, hold, void, reissue — every ticketing action in one seamless workflow. (5164:6817) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock25` |
+| `component.landing.howItWorksTeaser.motion.featureCard10` | FeatureCard (5164:6818) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard10` |
+| `component.landing.howItWorksTeaser.motion.titlerow6` | title-row (5164:6819) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titlerow6` |
+| `component.landing.howItWorksTeaser.motion.cannedItineraries` | Canned Itineraries (5164:6820) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-cannedItineraries` |
+| `component.landing.howItWorksTeaser.motion.frame18` | Frame (5164:6821) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame18` |
+| `component.landing.howItWorksTeaser.motion.textBlock26` | Save frequent route segments for instant repeat searches. Built for corporate travel desks. (5164:6822) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock26` |
+| `component.landing.howItWorksTeaser.motion.featureCard11` | FeatureCard (5164:6823) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard11` |
+| `component.landing.howItWorksTeaser.motion.titlerow7` | title-row (5164:6824) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titlerow7` |
+| `component.landing.howItWorksTeaser.motion.churningValidation` | Churning Validation (5164:6825) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-churningValidation` |
+| `component.landing.howItWorksTeaser.motion.frame19` | Frame (5164:6826) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame19` |
+| `component.landing.howItWorksTeaser.motion.textBlock27` | Auto-detect duplicate PNRs and policy violations before they trigger costly ADM penalties. (5164:6827) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock27` |
+| `component.landing.howItWorksTeaser.motion.featureCard12` | FeatureCard (5164:6828) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard12` |
+| `component.landing.howItWorksTeaser.motion.titlerow8` | title-row (5164:6829) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titlerow8` |
+| `component.landing.howItWorksTeaser.motion.agencyOperations` | Agency Operations (5164:6830) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-agencyOperations` |
+| `component.landing.howItWorksTeaser.motion.frame20` | Frame (5164:6831) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20` |
+| `component.landing.howItWorksTeaser.motion.textBlock28` | Role-based access for agents and admins. Manage your team without IT dependency. (5164:6832) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock28` |
+| `component.landing.howItWorksTeaser.motion.ctaRow` | CtaRow (5164:6833) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-ctaRow` |
+| `component.landing.howItWorksTeaser.motion.textBlock29` | Aviation-grade infrastructure, ready in weeks, not years. (5164:6834) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock29` |
+| `component.landing.howItWorksTeaser.motion.cta2` | Button/Primary (5164:6835) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-cta2` |
+| `component.landing.howItWorksTeaser.motion.label2` | label (I5164:6835;2780:1424) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-label2` |
+| `component.landing.howItWorksTeaser.motion.iconButton2` | Icon/Button (I5164:6835;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-iconButton2` |
+| `component.landing.howItWorksTeaser.motion.graphic2` | graphic (I5164:6835;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-graphic2` |
+| `component.landing.howItWorksTeaser.motion.group2` | Group (I5164:6835;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-group2` |
+| `component.landing.howItWorksTeaser.motion.root4` | FeatureGrid-animation (5404:6074) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root4` |
+| `component.landing.howItWorksTeaser.motion.planeDecor22` | plane2 (I5404:6074;5404:5690) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-planeDecor22` |
+| `component.landing.howItWorksTeaser.motion.headerWrap2` | header-wrap (I5404:6074;5404:5693) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-headerWrap2` |
+| `component.landing.howItWorksTeaser.motion.sectionHeader2` | SectionHeader/Features (I5404:6074;5404:5694) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionHeader2` |
+| `component.landing.howItWorksTeaser.motion.sectionPill4` | SectionPill (I5404:6074;5404:5694;3131:1139) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPill4` |
+| `component.landing.howItWorksTeaser.motion.sectionPillLabel4` | Platform Features (I5404:6074;5404:5694;3131:1139;3127:249) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPillLabel4` |
+| `component.landing.howItWorksTeaser.motion.headingBlock2` | heading-block (I5404:6074;5404:5694;3098:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-headingBlock2` |
+| `component.landing.howItWorksTeaser.motion.frame20955851022` | Frame 2095585102 (I5404:6074;5404:5694;3109:1164) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851022` |
+| `component.landing.howItWorksTeaser.motion.headingline12` | heading-line1 (I5404:6074;5404:5694;3098:21) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-headingline12` |
+| `component.landing.howItWorksTeaser.motion.headingline22` | heading-line2 (I5404:6074;5404:5694;3098:22) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-headingline22` |
+| `component.landing.howItWorksTeaser.motion.subtitle2` | subtitle (I5404:6074;5404:5694;3098:23) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-subtitle2` |
+| `component.landing.howItWorksTeaser.motion.featureRow12` | FeatureRow1 (I5404:6074;5404:5696) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureRow12` |
+| `component.landing.howItWorksTeaser.motion.featureCard13` | FeatureCard (I5404:6074;5404:5697) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard13` |
+| `component.landing.howItWorksTeaser.motion.textblock7` | text-block (I5404:6074;5404:5697;3112:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock7` |
+| `component.landing.howItWorksTeaser.motion.titlerow9` | title-row (I5404:6074;5404:5697;3112:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titlerow9` |
+| `component.landing.howItWorksTeaser.motion.title7` | title (I5404:6074;5404:5697;3112:16) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title7` |
+| `component.landing.howItWorksTeaser.motion.badge3` | badge (I5404:6074;5404:5697;3112:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-badge3` |
+| `component.landing.howItWorksTeaser.motion.badgelabel3` | badge-label (I5404:6074;5404:5697;3112:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-badgelabel3` |
+| `component.landing.howItWorksTeaser.motion.accentBar11` | AccentBar (I5404:6074;5404:5697;3112:19) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar11` |
+| `component.landing.howItWorksTeaser.motion.body7` | body (I5404:6074;5404:5697;3112:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body7` |
+| `component.landing.howItWorksTeaser.motion.featureCard14` | FeatureCard (I5404:6074;5404:5698) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard14` |
+| `component.landing.howItWorksTeaser.motion.textblock8` | text-block (I5404:6074;5404:5698;3112:22) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock8` |
+| `component.landing.howItWorksTeaser.motion.titlerow10` | title-row (I5404:6074;5404:5698;3112:23) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titlerow10` |
+| `component.landing.howItWorksTeaser.motion.title8` | title (I5404:6074;5404:5698;3112:24) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title8` |
+| `component.landing.howItWorksTeaser.motion.badge4` | badge (I5404:6074;5404:5698;3112:25) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-badge4` |
+| `component.landing.howItWorksTeaser.motion.badgelabel4` | badge-label (I5404:6074;5404:5698;3112:26) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-badgelabel4` |
+| `component.landing.howItWorksTeaser.motion.accentBar12` | AccentBar (I5404:6074;5404:5698;3112:27) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar12` |
+| `component.landing.howItWorksTeaser.motion.body8` | body (I5404:6074;5404:5698;3112:28) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body8` |
+| `component.landing.howItWorksTeaser.motion.featureRow22` | FeatureRow2 (I5404:6074;5404:5699) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureRow22` |
+| `component.landing.howItWorksTeaser.motion.featureCard15` | FeatureCard (I5404:6074;5404:5700) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard15` |
+| `component.landing.howItWorksTeaser.motion.textblock9` | text-block (I5404:6074;5404:5700;3112:30) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock9` |
+| `component.landing.howItWorksTeaser.motion.title9` | title (I5404:6074;5404:5700;3112:31) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title9` |
+| `component.landing.howItWorksTeaser.motion.accentBar13` | AccentBar (I5404:6074;5404:5700;3112:32) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar13` |
+| `component.landing.howItWorksTeaser.motion.body9` | body (I5404:6074;5404:5700;3112:33) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body9` |
+| `component.landing.howItWorksTeaser.motion.featureCard16` | FeatureCard (I5404:6074;5404:5701) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard16` |
+| `component.landing.howItWorksTeaser.motion.textblock10` | text-block (I5404:6074;5404:5701;3112:35) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock10` |
+| `component.landing.howItWorksTeaser.motion.title10` | title (I5404:6074;5404:5701;3112:36) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title10` |
+| `component.landing.howItWorksTeaser.motion.accentBar14` | AccentBar (I5404:6074;5404:5701;3112:37) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar14` |
+| `component.landing.howItWorksTeaser.motion.body10` | body (I5404:6074;5404:5701;3112:38) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body10` |
+| `component.landing.howItWorksTeaser.motion.featureCard17` | FeatureCard (I5404:6074;5404:5702) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard17` |
+| `component.landing.howItWorksTeaser.motion.textblock11` | text-block (I5404:6074;5404:5702;3112:40) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock11` |
+| `component.landing.howItWorksTeaser.motion.title11` | title (I5404:6074;5404:5702;3112:41) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title11` |
+| `component.landing.howItWorksTeaser.motion.accentBar15` | AccentBar (I5404:6074;5404:5702;3112:42) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar15` |
+| `component.landing.howItWorksTeaser.motion.body11` | body (I5404:6074;5404:5702;3112:43) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body11` |
+| `component.landing.howItWorksTeaser.motion.featureCard18` | FeatureCard (I5404:6074;5404:5703) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-featureCard18` |
+| `component.landing.howItWorksTeaser.motion.textblock12` | text-block (I5404:6074;5404:5703;3112:45) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textblock12` |
+| `component.landing.howItWorksTeaser.motion.title12` | title (I5404:6074;5404:5703;3112:46) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-title12` |
+| `component.landing.howItWorksTeaser.motion.accentBar16` | AccentBar (I5404:6074;5404:5703;3112:47) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-accentBar16` |
+| `component.landing.howItWorksTeaser.motion.body12` | body (I5404:6074;5404:5703;3112:48) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-body12` |
+| `component.landing.howItWorksTeaser.motion.footerBar2` | FooterBar (I5404:6074;5404:5704) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-footerBar2` |
+| `component.landing.howItWorksTeaser.motion.tagline2` | tagline (I5404:6074;5404:5705) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-tagline2` |
+| `component.landing.howItWorksTeaser.motion.cta3` | Button/Primary (I5404:6074;5404:5706) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-cta3` |
+| `component.landing.howItWorksTeaser.motion.label3` | label (I5404:6074;5404:5706;2780:1424) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-label3` |
+| `component.landing.howItWorksTeaser.motion.iconButton3` | Icon/Button (I5404:6074;5404:5706;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-iconButton3` |
+| `component.landing.howItWorksTeaser.motion.graphic3` | graphic (I5404:6074;5404:5706;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-graphic3` |
+| `component.landing.howItWorksTeaser.motion.group3` | Group (I5404:6074;5404:5706;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-group3` |
+| `component.landing.howItWorksTeaser.motion.root5` | SocialProofSectionBig (5164:6568) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root5` |
+| `component.landing.howItWorksTeaser.motion.root6` | SocialProofSection (I5164:6568;5151:13742) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root6` |
+| `component.landing.howItWorksTeaser.motion.frame2095585154` | Frame 2095585154 (I5164:6568;5151:13742;5151:14400) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585154` |
+| `component.landing.howItWorksTeaser.motion.headerWrap3` | header-wrap (I5164:6568;5151:13742;5159:4999) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-headerWrap3` |
+| `component.landing.howItWorksTeaser.motion.sectionHeader3` | SectionHeader/SocialProof (I5164:6568;5151:13742;5159:5000) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionHeader3` |
+| `component.landing.howItWorksTeaser.motion.sectionPill5` | SectionPill (I5164:6568;5151:13742;5159:5000;3173:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPill5` |
+| `component.landing.howItWorksTeaser.motion.trustedByLeaders` | Trusted by Leaders (I5164:6568;5151:13742;5159:5000;3173:14;3171:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustedByLeaders` |
+| `component.landing.howItWorksTeaser.motion.frame2095585105` | Frame 2095585105 (I5164:6568;5151:13742;5159:5000;3174:1447) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585105` |
+| `component.landing.howItWorksTeaser.motion.textBlock30` | Built for Founders, Proven in Production (I5164:6568;5151:13742;5159:5000;3173:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock30` |
+| `component.landing.howItWorksTeaser.motion.textBlock31` | Travel companies worldwide trust MaqsoodTravel to power their booking platforms. (I5164:6568;5151:13742;5159:5000;3173:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock31` |
+| `component.landing.howItWorksTeaser.motion.frame2095585155` | Frame 2095585155 (I5164:6568;5151:13742;5151:14441) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585155` |
+| `component.landing.howItWorksTeaser.motion.testimonialsRow` | testimonials-row (I5164:6568;5151:13742;5159:5007) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-testimonialsRow` |
+| `component.landing.howItWorksTeaser.motion.testimonialBlock` | TestimonialBlock (I5164:6568;5151:13742;5159:5008) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-testimonialBlock` |
+| `component.landing.howItWorksTeaser.motion.testimonialLogoCard` | TestimonialLogoCard (I5164:6568;5151:13742;5159:5008;5159:23) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-testimonialLogoCard` |
+| `component.landing.howItWorksTeaser.motion.logoSlot` | logo-slot (I5164:6568;5151:13742;5159:5008;5159:23;5158:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-logoSlot` |
+| `component.landing.howItWorksTeaser.motion.companyLogo` | Company logo (I5164:6568;5151:13742;5159:5008;5159:23;5158:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-companyLogo` |
+| `component.landing.howItWorksTeaser.motion.textcol` | text-col (I5164:6568;5151:13742;5159:5008;5159:24) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textcol` |
+| `component.landing.howItWorksTeaser.motion.quote` | quote (I5164:6568;5151:13742;5159:5008;5151:13709) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-quote` |
+| `component.landing.howItWorksTeaser.motion.testimonialAuthor` | TestimonialAuthor (I5164:6568;5151:13742;5159:5008;5159:26) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-testimonialAuthor` |
+| `component.landing.howItWorksTeaser.motion.avatarInitials` | AvatarInitials (I5164:6568;5151:13742;5159:5008;5159:26;5159:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-avatarInitials` |
+| `component.landing.howItWorksTeaser.motion.lI` | LI (I5164:6568;5151:13742;5159:5008;5159:26;5159:14;3171:25) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-lI` |
+| `component.landing.howItWorksTeaser.motion.textcol2` | text-col (I5164:6568;5151:13742;5159:5008;5159:26;5159:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textcol2` |
+| `component.landing.howItWorksTeaser.motion.moazamArshad` | Moazam Arshad (I5164:6568;5151:13742;5159:5008;5159:26;5159:19) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-moazamArshad` |
+| `component.landing.howItWorksTeaser.motion.founderCeo` | Founder & CEO (I5164:6568;5151:13742;5159:5008;5159:26;5159:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-founderCeo` |
+| `component.landing.howItWorksTeaser.motion.ukbasedIataTravelAgency` | UK-based IATA travel agency (I5164:6568;5151:13742;5159:5008;5159:26;5159:21) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ukbasedIataTravelAgency` |
+| `component.landing.howItWorksTeaser.motion.testimonialBlock2` | TestimonialBlock (I5164:6568;5151:13742;5159:5023) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-testimonialBlock2` |
+| `component.landing.howItWorksTeaser.motion.testimonialLogoCard2` | TestimonialLogoCard (I5164:6568;5151:13742;5159:5023;5159:36) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-testimonialLogoCard2` |
+| `component.landing.howItWorksTeaser.motion.logoSlot2` | logo-slot (I5164:6568;5151:13742;5159:5023;5159:36;5158:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-logoSlot2` |
+| `component.landing.howItWorksTeaser.motion.companyLogo2` | Company logo (I5164:6568;5151:13742;5159:5023;5159:36;5158:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-companyLogo2` |
+| `component.landing.howItWorksTeaser.motion.textcol3` | text-col (I5164:6568;5151:13742;5159:5023;5159:37) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textcol3` |
+| `component.landing.howItWorksTeaser.motion.textBlock32` | "Switching off Amadeus felt risky. MaqqsedTravel had us connected to Sabre, NDC and Travelport in week one. We kept our existing contracts — nothing changed for our clients." (I5164:6568;5151:13742;5159:5023;5159:38) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock32` |
+| `component.landing.howItWorksTeaser.motion.testimonialAuthor2` | TestimonialAuthor (I5164:6568;5151:13742;5159:5023;5159:39) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-testimonialAuthor2` |
+| `component.landing.howItWorksTeaser.motion.avatarInitials2` | AvatarInitials (I5164:6568;5151:13742;5159:5023;5159:39;5159:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-avatarInitials2` |
+| `component.landing.howItWorksTeaser.motion.lI2` | LI (I5164:6568;5151:13742;5159:5023;5159:39;5159:14;3171:25) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-lI2` |
+| `component.landing.howItWorksTeaser.motion.textcol4` | text-col (I5164:6568;5151:13742;5159:5023;5159:39;5159:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textcol4` |
+| `component.landing.howItWorksTeaser.motion.moazamArshad2` | Moazam Arshad (I5164:6568;5151:13742;5159:5023;5159:39;5159:19) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-moazamArshad2` |
+| `component.landing.howItWorksTeaser.motion.founderCeo2` | Founder & CEO (I5164:6568;5151:13742;5159:5023;5159:39;5159:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-founderCeo2` |
+| `component.landing.howItWorksTeaser.motion.ukbasedIataTravelAgency2` | UK-based IATA travel agency (I5164:6568;5151:13742;5159:5023;5159:39;5159:21) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ukbasedIataTravelAgency2` |
+| `component.landing.howItWorksTeaser.motion.progressWrap` | progress-wrap (I5164:6568;5151:13742;5159:5038) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-progressWrap` |
+| `component.landing.howItWorksTeaser.motion.slideProgressBar` | SlideProgressBar (I5164:6568;5151:13742;5159:5039) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-slideProgressBar` |
+| `component.landing.howItWorksTeaser.motion.track` | track (I5164:6568;5151:13742;5159:5039;5158:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-track` |
+| `component.landing.howItWorksTeaser.motion.fill` | fill (I5164:6568;5151:13742;5159:5039;5158:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-fill` |
+| `component.landing.howItWorksTeaser.motion.slideNumbers` | slide-numbers (I5164:6568;5151:13742;5159:5039;5158:19) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-slideNumbers` |
+| `component.landing.howItWorksTeaser.motion.n1` | 1 (I5164:6568;5151:13742;5159:5039;5158:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n1` |
+| `component.landing.howItWorksTeaser.motion.n2` | 2 (I5164:6568;5151:13742;5159:5039;5158:21) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n2` |
+| `component.landing.howItWorksTeaser.motion.n3` | 3 (I5164:6568;5151:13742;5159:5039;5158:22) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n3` |
+| `component.landing.howItWorksTeaser.motion.integrationsStrip` | Integrations Strip (I5164:6568;5151:13791) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-integrationsStrip` |
+| `component.landing.howItWorksTeaser.motion.container2` | Container (I5164:6568;5151:13791;5151:13713) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container2` |
+| `component.landing.howItWorksTeaser.motion.paragraph2` | Paragraph (I5164:6568;5151:13791;5151:13714) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-paragraph2` |
+| `component.landing.howItWorksTeaser.motion.textBlock33` | Travel agencies worldwide trust MaqsoodTravel to power their booking platforms. (I5164:6568;5151:13791;5151:13715) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock33` |
+| `component.landing.howItWorksTeaser.motion.container3` | Container (I5164:6568;5151:13791;5151:13716) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container3` |
+| `component.landing.howItWorksTeaser.motion.container4` | Container (I5164:6568;5151:13791;5151:13717) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container4` |
+| `component.landing.howItWorksTeaser.motion.rectangle13` | Rectangle (I5164:6568;5151:13791;5151:13718) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle13` |
+| `component.landing.howItWorksTeaser.motion.frame58` | Frame 58 (I5164:6568;5151:13791;5151:13719) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame58` |
+| `component.landing.howItWorksTeaser.motion.image23` | image 23 (I5164:6568;5151:13791;5151:13720) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image23` |
+| `component.landing.howItWorksTeaser.motion.image14` | image 14 (I5164:6568;5151:13791;5151:13721) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image14` |
+| `component.landing.howItWorksTeaser.motion.frame54` | Frame 54 (I5164:6568;5151:13791;5151:13722) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame54` |
+| `component.landing.howItWorksTeaser.motion.image16` | image 16 (I5164:6568;5151:13791;5151:13723) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image16` |
+| `component.landing.howItWorksTeaser.motion.image13` | image 13 (I5164:6568;5151:13791;5151:13724) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image13` |
+| `component.landing.howItWorksTeaser.motion.frame60` | Frame 60 (I5164:6568;5151:13791;5151:13725) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame60` |
+| `component.landing.howItWorksTeaser.motion.image26` | image 26 (I5164:6568;5151:13791;5151:13726) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image26` |
+| `component.landing.howItWorksTeaser.motion.image12` | image 12 (I5164:6568;5151:13791;5151:13727) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image12` |
+| `component.landing.howItWorksTeaser.motion.frame55` | Frame 55 (I5164:6568;5151:13791;5151:13728) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame55` |
+| `component.landing.howItWorksTeaser.motion.image17` | image 17 (I5164:6568;5151:13791;5151:13729) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image17` |
+| `component.landing.howItWorksTeaser.motion.image19` | image 19 (I5164:6568;5151:13791;5151:13730) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image19` |
+| `component.landing.howItWorksTeaser.motion.frame56` | Frame 56 (I5164:6568;5151:13791;5151:13731) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame56` |
+| `component.landing.howItWorksTeaser.motion.image18` | image 18 (I5164:6568;5151:13791;5151:13732) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image18` |
+| `component.landing.howItWorksTeaser.motion.frame61` | Frame 61 (I5164:6568;5151:13791;5151:13733) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame61` |
+| `component.landing.howItWorksTeaser.motion.image25` | image 25 (I5164:6568;5151:13791;5151:13734) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image25` |
+| `component.landing.howItWorksTeaser.motion.image15` | image 15 (I5164:6568;5151:13791;5151:13735) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image15` |
+| `component.landing.howItWorksTeaser.motion.frame59` | Frame 59 (I5164:6568;5151:13791;5151:13736) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame59` |
+| `component.landing.howItWorksTeaser.motion.image24` | image 24 (I5164:6568;5151:13791;5151:13737) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image24` |
+| `component.landing.howItWorksTeaser.motion.frame62` | Frame 62 (I5164:6568;5151:13791;5151:13738) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame62` |
+| `component.landing.howItWorksTeaser.motion.image22` | image 22 (I5164:6568;5151:13791;5151:13739) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image22` |
+| `component.landing.howItWorksTeaser.motion.root7` | Social proof (5164:6836) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root7` |
+| `component.landing.howItWorksTeaser.motion.sectionRoot` | Social Proof (5164:6837) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionRoot` |
+| `component.landing.howItWorksTeaser.motion.container5` | Container (5164:6838) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container5` |
+| `component.landing.howItWorksTeaser.motion.sectionPill6` | SectionPill (5164:6839) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPill6` |
+| `component.landing.howItWorksTeaser.motion.trustedByLeaders2` | Trusted by Leaders (5164:6841) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustedByLeaders2` |
+| `component.landing.howItWorksTeaser.motion.heading2` | Heading 2 (5164:6842) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-heading2` |
+| `component.landing.howItWorksTeaser.motion.builtForFounders` | Built for Founders, (5164:6843) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-builtForFounders` |
+| `component.landing.howItWorksTeaser.motion.text2` | Text (5164:6844) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-text2` |
+| `component.landing.howItWorksTeaser.motion.provenInProduction` | Proven in Production (5164:6845) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-provenInProduction` |
+| `component.landing.howItWorksTeaser.motion.paragraph3` | Paragraph (5164:6846) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-paragraph3` |
+| `component.landing.howItWorksTeaser.motion.textBlock34` | Travel companies worldwide trust FlightCore to pow (5164:6847) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock34` |
+| `component.landing.howItWorksTeaser.motion.frame2095585138` | Frame 2095585138 (5164:6848) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585138` |
+| `component.landing.howItWorksTeaser.motion.logo` | Logo (5164:6849) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-logo` |
+| `component.landing.howItWorksTeaser.motion.image27` | image 27 (5164:6850) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image27` |
+| `component.landing.howItWorksTeaser.motion.frame2095585137` | Frame 2095585137 (5164:6851) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585137` |
+| `component.landing.howItWorksTeaser.motion.quote2` | quote (5164:6852) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-quote2` |
+| `component.landing.howItWorksTeaser.motion.container6` | Container (5164:6853) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container6` |
+| `component.landing.howItWorksTeaser.motion.frame1561553971` | Frame 1561553971 (5164:6854) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553971` |
+| `component.landing.howItWorksTeaser.motion.container7` | Container (5164:6855) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container7` |
+| `component.landing.howItWorksTeaser.motion.container8` | Container (5164:6856) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container8` |
+| `component.landing.howItWorksTeaser.motion.text3` | Text (5164:6857) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-text3` |
+| `component.landing.howItWorksTeaser.motion.mA` | MA (5164:6858) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-mA` |
+| `component.landing.howItWorksTeaser.motion.container9` | Container (5164:6859) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container9` |
+| `component.landing.howItWorksTeaser.motion.moazamArshad3` | Moazam Arshad (5164:6860) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-moazamArshad3` |
+| `component.landing.howItWorksTeaser.motion.founderCeo3` | Founder & CEO (5164:6861) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-founderCeo3` |
+| `component.landing.howItWorksTeaser.motion.paragraph4` | Paragraph (5164:6862) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-paragraph4` |
+| `component.landing.howItWorksTeaser.motion.ukbasedIataTravelAgency3` | UK-based IATA travel agency (5164:6863) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ukbasedIataTravelAgency3` |
+| `component.landing.howItWorksTeaser.motion.frame2095585139` | Frame 2095585139 (5164:6864) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585139` |
+| `component.landing.howItWorksTeaser.motion.logo2` | Logo (5164:6865) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-logo2` |
+| `component.landing.howItWorksTeaser.motion.textBlock35` | Screenshot 2026-06-17 at 2.20.54 PM 1 (5164:6866) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock35` |
+| `component.landing.howItWorksTeaser.motion.frame20955851372` | Frame 2095585137 (5164:6867) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851372` |
+| `component.landing.howItWorksTeaser.motion.quote3` | quote (5164:6868) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-quote3` |
+| `component.landing.howItWorksTeaser.motion.container10` | Container (5164:6869) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container10` |
+| `component.landing.howItWorksTeaser.motion.frame15615539712` | Frame 1561553971 (5164:6870) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame15615539712` |
+| `component.landing.howItWorksTeaser.motion.container11` | Container (5164:6871) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container11` |
+| `component.landing.howItWorksTeaser.motion.container12` | Container (5164:6872) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container12` |
+| `component.landing.howItWorksTeaser.motion.text4` | Text (5164:6873) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-text4` |
+| `component.landing.howItWorksTeaser.motion.lB` | LB (5164:6874) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-lB` |
+| `component.landing.howItWorksTeaser.motion.container13` | Container (5164:6875) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container13` |
+| `component.landing.howItWorksTeaser.motion.lanceBohlingArshad` | lance Bohling Arshad (5164:6876) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-lanceBohlingArshad` |
+| `component.landing.howItWorksTeaser.motion.founderCeo4` | Founder & CEO (5164:6877) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-founderCeo4` |
+| `component.landing.howItWorksTeaser.motion.paragraph5` | Paragraph (5164:6878) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-paragraph5` |
+| `component.landing.howItWorksTeaser.motion.ukbasedIataTravelAgency4` | UK-based IATA travel agency (5164:6879) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ukbasedIataTravelAgency4` |
+| `component.landing.howItWorksTeaser.motion.planeDecor3` | Vector/Variant21 (5164:6880) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-planeDecor3` |
+| `component.landing.howItWorksTeaser.motion.frame2095585144` | Frame 2095585144 (5164:6881) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585144` |
+| `component.landing.howItWorksTeaser.motion.frame2095585140` | Frame 2095585140 (5164:6882) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585140` |
+| `component.landing.howItWorksTeaser.motion.frame2095585141` | Frame 2095585141 (5164:6883) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585141` |
+| `component.landing.howItWorksTeaser.motion.frame2095585142` | Frame 2095585142 (5164:6884) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585142` |
+| `component.landing.howItWorksTeaser.motion.n12` | 1 (5164:6885) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n12` |
+| `component.landing.howItWorksTeaser.motion.n22` | 2 (5164:6886) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n22` |
+| `component.landing.howItWorksTeaser.motion.n32` | 3 (5164:6887) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n32` |
+| `component.landing.howItWorksTeaser.motion.container14` | Container (5164:6888) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container14` |
+| `component.landing.howItWorksTeaser.motion.container15` | Container (5164:6889) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container15` |
+| `component.landing.howItWorksTeaser.motion.paragraph6` | Paragraph (5164:6890) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-paragraph6` |
+| `component.landing.howItWorksTeaser.motion.textBlock36` | Travel agencies worldwide trust MaqsoodTravel to power their booking platforms. (5164:6891) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock36` |
+| `component.landing.howItWorksTeaser.motion.container16` | Container (5164:6892) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container16` |
+| `component.landing.howItWorksTeaser.motion.rectangle14` | Rectangle (5164:6893) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle14` |
+| `component.landing.howItWorksTeaser.motion.frame592` | Frame 59 (5164:6894) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame592` |
+| `component.landing.howItWorksTeaser.motion.image242` | image 24 (5164:6895) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image242` |
+| `component.landing.howItWorksTeaser.motion.frame582` | Frame 58 (5164:6896) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame582` |
+| `component.landing.howItWorksTeaser.motion.image232` | image 23 (5164:6897) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image232` |
+| `component.landing.howItWorksTeaser.motion.image142` | image 14 (5164:6898) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image142` |
+| `component.landing.howItWorksTeaser.motion.frame542` | Frame 54 (5164:6899) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame542` |
+| `component.landing.howItWorksTeaser.motion.image162` | image 16 (5164:6900) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image162` |
+| `component.landing.howItWorksTeaser.motion.image132` | image 13 (5164:6901) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image132` |
+| `component.landing.howItWorksTeaser.motion.frame552` | Frame 55 (5164:6902) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame552` |
+| `component.landing.howItWorksTeaser.motion.image172` | image 17 (5164:6903) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image172` |
+| `component.landing.howItWorksTeaser.motion.image122` | image 12 (5164:6904) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image122` |
+| `component.landing.howItWorksTeaser.motion.image192` | image 19 (5164:6905) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image192` |
+| `component.landing.howItWorksTeaser.motion.frame602` | Frame 60 (5164:6906) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame602` |
+| `component.landing.howItWorksTeaser.motion.image262` | image 26 (5164:6907) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image262` |
+| `component.landing.howItWorksTeaser.motion.frame562` | Frame 56 (5164:6908) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame562` |
+| `component.landing.howItWorksTeaser.motion.image182` | image 18 (5164:6909) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image182` |
+| `component.landing.howItWorksTeaser.motion.image152` | image 15 (5164:6910) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image152` |
+| `component.landing.howItWorksTeaser.motion.frame612` | Frame 61 (5164:6911) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame612` |
+| `component.landing.howItWorksTeaser.motion.image252` | image 25 (5164:6912) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image252` |
+| `component.landing.howItWorksTeaser.motion.frame622` | Frame 62 (5164:6913) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame622` |
+| `component.landing.howItWorksTeaser.motion.image222` | image 22 (5164:6914) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image222` |
+| `component.landing.howItWorksTeaser.motion.root8` | SocialProofSection (5307:6608) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root8` |
+| `component.landing.howItWorksTeaser.motion.sectionHeader4` | SectionHeader/SocialProof (5307:6609) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionHeader4` |
+| `component.landing.howItWorksTeaser.motion.sectionPill7` | SectionPill (I5307:6609;3173:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPill7` |
+| `component.landing.howItWorksTeaser.motion.trustedByLeaders3` | Trusted by Leaders (I5307:6609;3173:14;3171:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustedByLeaders3` |
+| `component.landing.howItWorksTeaser.motion.frame20955851052` | Frame 2095585105 (I5307:6609;3174:1447) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851052` |
+| `component.landing.howItWorksTeaser.motion.textBlock37` | Built for Founders, Proven in Production (I5307:6609;3173:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock37` |
+| `component.landing.howItWorksTeaser.motion.textBlock38` | Travel companies worldwide trust MaqsoodTravel to power their booking platforms. (I5307:6609;3173:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock38` |
+| `component.landing.howItWorksTeaser.motion.frame2095585106` | Frame 2095585106 (5307:6610) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585106` |
+| `component.landing.howItWorksTeaser.motion.frame2095585145` | Frame 2095585145 (5307:6611) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585145` |
+| `component.landing.howItWorksTeaser.motion.frame2095585143` | Frame 2095585143 (5307:6612) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585143` |
+| `component.landing.howItWorksTeaser.motion.frame20955851382` | Frame 2095585138 (5307:6613) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851382` |
+| `component.landing.howItWorksTeaser.motion.logo3` | Logo (5307:6614) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-logo3` |
+| `component.landing.howItWorksTeaser.motion.image272` | image 27 (5307:6615) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image272` |
+| `component.landing.howItWorksTeaser.motion.frame20955851373` | Frame 2095585137 (5307:6616) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851373` |
+| `component.landing.howItWorksTeaser.motion.quote4` | quote (5307:6617) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-quote4` |
+| `component.landing.howItWorksTeaser.motion.testimonialAuthor3` | TestimonialAuthor (5307:6618) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-testimonialAuthor3` |
+| `component.landing.howItWorksTeaser.motion.avatarInitials3` | AvatarInitials (5307:6619) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-avatarInitials3` |
+| `component.landing.howItWorksTeaser.motion.mA2` | MA (5307:6620) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-mA2` |
+| `component.landing.howItWorksTeaser.motion.textcol5` | text-col (5307:6621) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textcol5` |
+| `component.landing.howItWorksTeaser.motion.name` | name (5307:6622) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-name` |
+| `component.landing.howItWorksTeaser.motion.role` | role (5307:6623) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-role` |
+| `component.landing.howItWorksTeaser.motion.company` | company (5307:6624) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-company` |
+| `component.landing.howItWorksTeaser.motion.frame20955851392` | Frame 2095585139 (5307:6625) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851392` |
+| `component.landing.howItWorksTeaser.motion.logo4` | Logo (5307:6626) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-logo4` |
+| `component.landing.howItWorksTeaser.motion.textBlock39` | Screenshot 2026-06-17 at 2.20.54 PM 1 (5307:6627) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock39` |
+| `component.landing.howItWorksTeaser.motion.frame20955851374` | Frame 2095585137 (5307:6628) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851374` |
+| `component.landing.howItWorksTeaser.motion.quote5` | quote (5307:6629) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-quote5` |
+| `component.landing.howItWorksTeaser.motion.testimonialAuthor4` | TestimonialAuthor (5307:6630) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-testimonialAuthor4` |
+| `component.landing.howItWorksTeaser.motion.avatarInitials4` | AvatarInitials (5307:6631) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-avatarInitials4` |
+| `component.landing.howItWorksTeaser.motion.lB2` | LB (5307:6632) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-lB2` |
+| `component.landing.howItWorksTeaser.motion.textcol6` | text-col (5307:6633) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textcol6` |
+| `component.landing.howItWorksTeaser.motion.name2` | name (5307:6634) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-name2` |
+| `component.landing.howItWorksTeaser.motion.role2` | role (5307:6635) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-role2` |
+| `component.landing.howItWorksTeaser.motion.company2` | company (5307:6636) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-company2` |
+| `component.landing.howItWorksTeaser.motion.frame20955851442` | Frame 2095585144 (5307:6637) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851442` |
+| `component.landing.howItWorksTeaser.motion.frame20955851402` | Frame 2095585140 (5307:6638) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851402` |
+| `component.landing.howItWorksTeaser.motion.frame20955851412` | Frame 2095585141 (5307:6639) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851412` |
+| `component.landing.howItWorksTeaser.motion.frame20955851422` | Frame 2095585142 (5307:6640) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851422` |
+| `component.landing.howItWorksTeaser.motion.n13` | 1 (5307:6641) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n13` |
+| `component.landing.howItWorksTeaser.motion.n23` | 2 (5307:6642) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n23` |
+| `component.landing.howItWorksTeaser.motion.n33` | 3 (5307:6643) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n33` |
+| `component.landing.howItWorksTeaser.motion.vector` | Vector (5307:6644) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-vector` |
+| `component.landing.howItWorksTeaser.motion.root9` | clients-animaiton (5164:11204) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root9` |
+| `component.landing.howItWorksTeaser.motion.container17` | Container (I5164:11204;5164:11107) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container17` |
+| `component.landing.howItWorksTeaser.motion.container18` | Container (I5164:11204;5164:11108) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container18` |
+| `component.landing.howItWorksTeaser.motion.paragraph7` | Paragraph (I5164:11204;5164:11109) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-paragraph7` |
+| `component.landing.howItWorksTeaser.motion.textBlock40` | Travel agencies worldwide trust MaqsoodTravel to power their booking platforms. (I5164:11204;5164:11110) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock40` |
+| `component.landing.howItWorksTeaser.motion.container19` | Container (I5164:11204;5164:11111) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container19` |
+| `component.landing.howItWorksTeaser.motion.container20` | Container (I5164:11204;5164:11112) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-container20` |
+| `component.landing.howItWorksTeaser.motion.rectangle15` | Rectangle (I5164:11204;5164:11113) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle15` |
+| `component.landing.howItWorksTeaser.motion.frame583` | Frame 58 (I5164:11204;5164:11114) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame583` |
+| `component.landing.howItWorksTeaser.motion.image233` | image 23 (I5164:11204;5164:11115) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image233` |
+| `component.landing.howItWorksTeaser.motion.image143` | image 14 (I5164:11204;5164:11116) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image143` |
+| `component.landing.howItWorksTeaser.motion.frame543` | Frame 54 (I5164:11204;5164:11117) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame543` |
+| `component.landing.howItWorksTeaser.motion.image163` | image 16 (I5164:11204;5164:11118) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image163` |
+| `component.landing.howItWorksTeaser.motion.image133` | image 13 (I5164:11204;5164:11119) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image133` |
+| `component.landing.howItWorksTeaser.motion.frame603` | Frame 60 (I5164:11204;5164:11120) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame603` |
+| `component.landing.howItWorksTeaser.motion.image263` | image 26 (I5164:11204;5164:11121) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image263` |
+| `component.landing.howItWorksTeaser.motion.image123` | image 12 (I5164:11204;5164:11122) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image123` |
+| `component.landing.howItWorksTeaser.motion.frame553` | Frame 55 (I5164:11204;5164:11123) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame553` |
+| `component.landing.howItWorksTeaser.motion.image173` | image 17 (I5164:11204;5164:11124) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image173` |
+| `component.landing.howItWorksTeaser.motion.image193` | image 19 (I5164:11204;5164:11125) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image193` |
+| `component.landing.howItWorksTeaser.motion.frame563` | Frame 56 (I5164:11204;5164:11126) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame563` |
+| `component.landing.howItWorksTeaser.motion.image183` | image 18 (I5164:11204;5164:11127) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image183` |
+| `component.landing.howItWorksTeaser.motion.frame613` | Frame 61 (I5164:11204;5164:11128) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame613` |
+| `component.landing.howItWorksTeaser.motion.image253` | image 25 (I5164:11204;5164:11129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image253` |
+| `component.landing.howItWorksTeaser.motion.image153` | image 15 (I5164:11204;5164:11130) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image153` |
+| `component.landing.howItWorksTeaser.motion.frame593` | Frame 59 (I5164:11204;5164:11131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame593` |
+| `component.landing.howItWorksTeaser.motion.image243` | image 24 (I5164:11204;5164:11132) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image243` |
+| `component.landing.howItWorksTeaser.motion.frame623` | Frame 62 (I5164:11204;5164:11133) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame623` |
+| `component.landing.howItWorksTeaser.motion.image223` | image 22 (I5164:11204;5164:11134) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-image223` |
+| `component.landing.howItWorksTeaser.motion.root10` | NewPricingSection (5164:6564) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root10` |
+| `component.landing.howItWorksTeaser.motion.kuzu420map1475411` | kuzu420-map-14754 (1) 1 (I5164:6564;5151:11815) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-kuzu420map1475411` |
+| `component.landing.howItWorksTeaser.motion.frame2095585158` | Frame 2095585158 (I5164:6564;5164:6218) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585158` |
+| `component.landing.howItWorksTeaser.motion.sectionHeader5` | SectionHeader/Pricing (I5164:6564;5151:11816) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionHeader5` |
+| `component.landing.howItWorksTeaser.motion.sectionPill8` | SectionPill (I5164:6564;5151:11816;5023:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPill8` |
+| `component.landing.howItWorksTeaser.motion.simplePricing` | Simple Pricing (I5164:6564;5151:11816;5023:14;5018:3232) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-simplePricing` |
+| `component.landing.howItWorksTeaser.motion.h1block` | h1-block (I5164:6564;5151:11816;5023:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-h1block` |
+| `component.landing.howItWorksTeaser.motion.ownItDontRentIt` | Own it, Don't Rent it (I5164:6564;5151:11816;5023:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ownItDontRentIt` |
+| `component.landing.howItWorksTeaser.motion.textBlock41` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:6564;5151:11816;5023:19) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock41` |
+| `component.landing.howItWorksTeaser.motion.frame2095585157` | Frame 2095585157 (I5164:6564;5164:6100) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585157` |
+| `component.landing.howItWorksTeaser.motion.routeStrip` | Route Strip (I5164:6564;5151:11817) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-routeStrip` |
+| `component.landing.howItWorksTeaser.motion.textBlock42` | 🛫 From: Your Current Platform (I5164:6564;5151:11817;5018:3259) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock42` |
+| `component.landing.howItWorksTeaser.motion.textBlock43` | 🛬 To: Full Platform Ownership (I5164:6564;5151:11817;5018:3260) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock43` |
+| `component.landing.howItWorksTeaser.motion.textBlock44` | 🟢 https://app.lottiefiles.com/animation/de5f69ea-2680-40f5-812e-0c97e4fb9731 (I5164:6564;5151:11817;5147:6155) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock44` |
+| `component.landing.howItWorksTeaser.motion.maingroup` | main-group (I5164:6564;5151:11818) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-maingroup` |
+| `component.landing.howItWorksTeaser.motion.pricingCard` | PricingCard (I5164:6564;5151:11939) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingCard` |
+| `component.landing.howItWorksTeaser.motion.pricingCardHeader` | PricingCardHeader (I5164:6564;5151:11939;5151:11665) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingCardHeader` |
+| `component.landing.howItWorksTeaser.motion.leftblock` | left-block (I5164:6564;5151:11939;5151:11665;5021:27) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-leftblock` |
+| `component.landing.howItWorksTeaser.motion.boardingPassPlatformOwnership` | BOARDING PASS · PLATFORM OWNERSHIP (I5164:6564;5151:11939;5151:11665;5021:28) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-boardingPassPlatformOwnership` |
+| `component.landing.howItWorksTeaser.motion.titleblock` | title-block (I5164:6564;5151:11939;5151:11665;5021:29) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titleblock` |
+| `component.landing.howItWorksTeaser.motion.ownYourPlatform` | Own Your Platform (I5164:6564;5151:11939;5151:11665;5021:30) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ownYourPlatform` |
+| `component.landing.howItWorksTeaser.motion.textBlock45` | No per-booking fees. No revenue share. No surprises. Just one platform, fully yours. Priced to fit your agency. (I5164:6564;5151:11939;5151:11665;5021:31) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock45` |
+| `component.landing.howItWorksTeaser.motion.seatblock` | seat-block (I5164:6564;5151:11939;5151:11665;5021:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-seatblock` |
+| `component.landing.howItWorksTeaser.motion.sEAT` | SEAT (I5164:6564;5151:11939;5151:11665;5021:33) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sEAT` |
+| `component.landing.howItWorksTeaser.motion.n32A` | 32A (I5164:6564;5151:11939;5151:11665;5021:34) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n32A` |
+| `component.landing.howItWorksTeaser.motion.pricingbody` | pricing-body (I5164:6564;5151:11939;5151:11666) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingbody` |
+| `component.landing.howItWorksTeaser.motion.frame2095585112` | Frame 2095585112 (I5164:6564;5151:11939;5151:11810) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585112` |
+| `component.landing.howItWorksTeaser.motion.frame2095585110` | Frame 2095585110 (I5164:6564;5151:11939;5151:11791) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585110` |
+| `component.landing.howItWorksTeaser.motion.pricingTrackingLabel` | PricingTrackingLabel (I5164:6564;5151:11939;5151:11792) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingTrackingLabel` |
+| `component.landing.howItWorksTeaser.motion.onetimePlatformFee` | ONE-TIME PLATFORM FEE (I5164:6564;5151:11939;5151:11792;5151:9474) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-onetimePlatformFee` |
+| `component.landing.howItWorksTeaser.motion.priceDisplay` | PriceDisplay (I5164:6564;5151:11939;5151:11793) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-priceDisplay` |
+| `component.landing.howItWorksTeaser.motion.n3000` | $3,000 (I5164:6564;5151:11939;5151:11793;5151:11775) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n3000` |
+| `component.landing.howItWorksTeaser.motion.textBlock46` | One-time payment · No recurring platform costs (I5164:6564;5151:11939;5151:11793;5151:11776) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock46` |
+| `component.landing.howItWorksTeaser.motion.rectangle16` | Rectangle (I5164:6564;5151:11939;5151:11811) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle16` |
+| `component.landing.howItWorksTeaser.motion.frame2095585111` | Frame 2095585111 (I5164:6564;5151:11939;5151:11798) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame2095585111` |
+| `component.landing.howItWorksTeaser.motion.pricingTrackingLabel2` | PricingTrackingLabel (I5164:6564;5151:11939;5151:11799) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingTrackingLabel2` |
+| `component.landing.howItWorksTeaser.motion.optionalSupportAddon` | OPTIONAL SUPPORT ADD-ON (I5164:6564;5151:11939;5151:11799;5151:9476) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-optionalSupportAddon` |
+| `component.landing.howItWorksTeaser.motion.priceDisplay2` | PriceDisplay (I5164:6564;5151:11939;5151:11800) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-priceDisplay2` |
+| `component.landing.howItWorksTeaser.motion.pricerow` | price-row (I5164:6564;5151:11939;5151:11800;5151:11778) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricerow` |
+| `component.landing.howItWorksTeaser.motion.n250` | $250 (I5164:6564;5151:11939;5151:11800;5151:11779) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n250` |
+| `component.landing.howItWorksTeaser.motion.month` | /month (I5164:6564;5151:11939;5151:11800;5151:11780) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-month` |
+| `component.landing.howItWorksTeaser.motion.supportUpdatesCancelAnytime` | Support & updates · Cancel anytime (I5164:6564;5151:11939;5151:11800;5151:11781) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-supportUpdatesCancelAnytime` |
+| `component.landing.howItWorksTeaser.motion.dividerwrap` | divider-wrap (I5164:6564;5151:11939;5151:11670) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-dividerwrap` |
+| `component.landing.howItWorksTeaser.motion.hdivider` | h-divider (I5164:6564;5151:11939;5151:11671) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-hdivider` |
+| `component.landing.howItWorksTeaser.motion.checklistGrid` | ChecklistGrid (I5164:6564;5151:11939;5151:11672) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistGrid` |
+| `component.landing.howItWorksTeaser.motion.everythingIncluded` | Everything included: (I5164:6564;5151:11939;5151:11672;5021:36) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-everythingIncluded` |
+| `component.landing.howItWorksTeaser.motion.columns` | columns (I5164:6564;5151:11939;5151:11672;5021:37) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-columns` |
+| `component.landing.howItWorksTeaser.motion.col` | col (I5164:6564;5151:11939;5151:11672;5021:38) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-col` |
+| `component.landing.howItWorksTeaser.motion.checklistItem` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:39) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem` |
+| `component.landing.howItWorksTeaser.motion.frame1561553887` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:39;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553887` |
+| `component.landing.howItWorksTeaser.motion.frame15615538872` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:39;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame15615538872` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:39;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode` |
+| `component.landing.howItWorksTeaser.motion.checklistItem2` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:43) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem2` |
+| `component.landing.howItWorksTeaser.motion.frame15615538873` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:43;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame15615538873` |
+| `component.landing.howItWorksTeaser.motion.frame15615538874` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:43;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame15615538874` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode2` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:43;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode2` |
+| `component.landing.howItWorksTeaser.motion.col2` | col (I5164:6564;5151:11939;5151:11672;5021:47) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-col2` |
+| `component.landing.howItWorksTeaser.motion.checklistItem3` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:48) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem3` |
+| `component.landing.howItWorksTeaser.motion.frame15615538875` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:48;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame15615538875` |
+| `component.landing.howItWorksTeaser.motion.frame15615538876` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:48;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame15615538876` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode3` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:48;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode3` |
+| `component.landing.howItWorksTeaser.motion.checklistItem4` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:52) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem4` |
+| `component.landing.howItWorksTeaser.motion.frame15615538877` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:52;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame15615538877` |
+| `component.landing.howItWorksTeaser.motion.frame15615538878` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:52;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame15615538878` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode4` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:52;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode4` |
+| `component.landing.howItWorksTeaser.motion.col3` | col (I5164:6564;5151:11939;5151:11672;5021:56) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-col3` |
+| `component.landing.howItWorksTeaser.motion.checklistItem5` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:57) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem5` |
+| `component.landing.howItWorksTeaser.motion.frame15615538879` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:57;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame15615538879` |
+| `component.landing.howItWorksTeaser.motion.frame156155388710` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:57;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388710` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode5` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:57;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode5` |
+| `component.landing.howItWorksTeaser.motion.checklistItem6` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:61) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem6` |
+| `component.landing.howItWorksTeaser.motion.frame156155388711` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:61;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388711` |
+| `component.landing.howItWorksTeaser.motion.frame156155388712` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:61;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388712` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode6` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:61;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode6` |
+| `component.landing.howItWorksTeaser.motion.col4` | col (I5164:6564;5151:11939;5151:11672;5021:65) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-col4` |
+| `component.landing.howItWorksTeaser.motion.checklistItem7` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:66) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem7` |
+| `component.landing.howItWorksTeaser.motion.frame156155388713` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:66;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388713` |
+| `component.landing.howItWorksTeaser.motion.frame156155388714` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:66;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388714` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode7` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:66;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode7` |
+| `component.landing.howItWorksTeaser.motion.checklistItem8` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:70) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem8` |
+| `component.landing.howItWorksTeaser.motion.frame156155388715` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:70;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388715` |
+| `component.landing.howItWorksTeaser.motion.frame156155388716` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:70;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388716` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode8` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:70;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode8` |
+| `component.landing.howItWorksTeaser.motion.btnwrap` | btn-wrap (I5164:6564;5151:11939;5151:11673) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-btnwrap` |
+| `component.landing.howItWorksTeaser.motion.cta4` | Button/Primary (I5164:6564;5151:11939;5151:11674) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-cta4` |
+| `component.landing.howItWorksTeaser.motion.label4` | label (I5164:6564;5151:11939;5151:11674;2780:1424) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-label4` |
+| `component.landing.howItWorksTeaser.motion.iconButton4` | Icon/Button (I5164:6564;5151:11939;5151:11674;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-iconButton4` |
+| `component.landing.howItWorksTeaser.motion.graphic4` | graphic (I5164:6564;5151:11939;5151:11674;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-graphic4` |
+| `component.landing.howItWorksTeaser.motion.group4` | Group (I5164:6564;5151:11939;5151:11674;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-group4` |
+| `component.landing.howItWorksTeaser.motion.trustStrip` | TrustStrip (I5164:6564;5151:11820) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustStrip` |
+| `component.landing.howItWorksTeaser.motion.allPlansBar` | all-plans-bar (I5164:6564;5151:11820;5022:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-allPlansBar` |
+| `component.landing.howItWorksTeaser.motion.platformIncludes` | PLATFORM INCLUDES: (I5164:6564;5151:11820;5022:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-platformIncludes` |
+| `component.landing.howItWorksTeaser.motion.divider` | divider (I5164:6564;5151:11820;5022:16) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-divider` |
+| `component.landing.howItWorksTeaser.motion.trustStripItem` | TrustStripItem (I5164:6564;5151:11820;5022:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustStripItem` |
+| `component.landing.howItWorksTeaser.motion.textBlock47` | 🔒 (I5164:6564;5151:11820;5022:17;5021:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock47` |
+| `component.landing.howItWorksTeaser.motion.banklevelSecurity` | Bank-level security (I5164:6564;5151:11820;5022:17;5021:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-banklevelSecurity` |
+| `component.landing.howItWorksTeaser.motion.divider2` | divider (I5164:6564;5151:11820;5022:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-divider2` |
+| `component.landing.howItWorksTeaser.motion.trustStripItem2` | TrustStripItem (I5164:6564;5151:11820;5022:21) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustStripItem2` |
+| `component.landing.howItWorksTeaser.motion.node` | ✈ (I5164:6564;5151:11820;5022:21;5021:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-node` |
+| `component.landing.howItWorksTeaser.motion.gdsNdcCertified` | GDS & NDC certified (I5164:6564;5151:11820;5022:21;5021:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-gdsNdcCertified` |
+| `component.landing.howItWorksTeaser.motion.divider3` | divider (I5164:6564;5151:11820;5022:24) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-divider3` |
+| `component.landing.howItWorksTeaser.motion.trustStripItem3` | TrustStripItem (I5164:6564;5151:11820;5022:25) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustStripItem3` |
+| `component.landing.howItWorksTeaser.motion.textBlock48` | 👥 (I5164:6564;5151:11820;5022:25;5021:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock48` |
+| `component.landing.howItWorksTeaser.motion.trustedByAgencies` | Trusted by agencies (I5164:6564;5151:11820;5022:25;5021:21) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustedByAgencies` |
+| `component.landing.howItWorksTeaser.motion.divider4` | divider (I5164:6564;5151:11820;5022:28) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-divider4` |
+| `component.landing.howItWorksTeaser.motion.trustStripItem4` | TrustStripItem (I5164:6564;5151:11820;5022:29) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustStripItem4` |
+| `component.landing.howItWorksTeaser.motion.textBlock49` | 📞 (I5164:6564;5151:11820;5022:29;5021:23) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock49` |
+| `component.landing.howItWorksTeaser.motion.n247SupportAvailable` | 24/7 support available (I5164:6564;5151:11820;5022:29;5021:24) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n247SupportAvailable` |
+| `component.landing.howItWorksTeaser.motion.textBlock50` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:6564;5151:11820;5022:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock50` |
+| `component.landing.howItWorksTeaser.motion.root11` | Own it (5164:6915) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root11` |
+| `component.landing.howItWorksTeaser.motion.frame1561553980` | Frame 1561553980 (5164:6916) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553980` |
+| `component.landing.howItWorksTeaser.motion.frame1561553979` | Frame 1561553979 (5164:6917) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553979` |
+| `component.landing.howItWorksTeaser.motion.frame1561553964` | Frame 1561553964 (5164:6918) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553964` |
+| `component.landing.howItWorksTeaser.motion.sectionPill9` | SectionPill (5164:6919) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPill9` |
+| `component.landing.howItWorksTeaser.motion.simplePricing2` | Simple Pricing (5164:6921) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-simplePricing2` |
+| `component.landing.howItWorksTeaser.motion.headRow` | HeadRow (5164:6922) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-headRow` |
+| `component.landing.howItWorksTeaser.motion.ownIt` | Own it, (5164:6923) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ownIt` |
+| `component.landing.howItWorksTeaser.motion.dontRentIt` | Don't Rent it (5164:6924) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-dontRentIt` |
+| `component.landing.howItWorksTeaser.motion.textBlock51` | No per-transaction fees. No revenue sharing. Complete ownership. (5164:6925) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock51` |
+| `component.landing.howItWorksTeaser.motion.frame1561553978` | Frame 1561553978 (5164:6926) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553978` |
+| `component.landing.howItWorksTeaser.motion.routeStrip2` | RouteStrip (5164:6927) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-routeStrip2` |
+| `component.landing.howItWorksTeaser.motion.textBlock52` | 🛫 From: Your Current Platform (5164:6928) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock52` |
+| `component.landing.howItWorksTeaser.motion.loadingPlane1` | Loading Plane 1 (5164:6929) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-loadingPlane1` |
+| `component.landing.howItWorksTeaser.motion.textBlock53` | 🛬 To: Full Ownership (5164:6930) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock53` |
+| `component.landing.howItWorksTeaser.motion.pricingCard2` | PricingCard (5164:6931) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingCard2` |
+| `component.landing.howItWorksTeaser.motion.frame21` | Frame (5164:6932) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame21` |
+| `component.landing.howItWorksTeaser.motion.boardingPassPlatformOwnership2` | BOARDING PASS · PLATFORM OWNERSHIP (5164:6933) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-boardingPassPlatformOwnership2` |
+| `component.landing.howItWorksTeaser.motion.ownYourPlatform2` | Own Your Platform (5164:6934) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ownYourPlatform2` |
+| `component.landing.howItWorksTeaser.motion.textBlock54` | Complete source code. Production-ready. Yours forever. (5164:6935) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock54` |
+| `component.landing.howItWorksTeaser.motion.frame1561553874` | Frame 1561553874 (5164:6936) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553874` |
+| `component.landing.howItWorksTeaser.motion.sEAT2` | SEAT (5164:6937) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sEAT2` |
+| `component.landing.howItWorksTeaser.motion.n32A2` | 32A (5164:6938) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n32A2` |
+| `component.landing.howItWorksTeaser.motion.frame22` | Frame (5164:6939) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame22` |
+| `component.landing.howItWorksTeaser.motion.frame1561553966` | Frame 1561553966 (5164:6940) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553966` |
+| `component.landing.howItWorksTeaser.motion.frame1561553965` | Frame 1561553965 (5164:6941) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553965` |
+| `component.landing.howItWorksTeaser.motion.onetimePlatformFee2` | ONE-TIME PLATFORM FEE (5164:6942) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-onetimePlatformFee2` |
+| `component.landing.howItWorksTeaser.motion.n30002` | $3,000 (5164:6943) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n30002` |
+| `component.landing.howItWorksTeaser.motion.textBlock55` | One-time payment · No recurring platform costs (5164:6944) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock55` |
+| `component.landing.howItWorksTeaser.motion.frame23` | Frame (5164:6945) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame23` |
+| `component.landing.howItWorksTeaser.motion.frame1561553968` | Frame 1561553968 (5164:6946) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553968` |
+| `component.landing.howItWorksTeaser.motion.frame1561553967` | Frame 1561553967 (5164:6947) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553967` |
+| `component.landing.howItWorksTeaser.motion.optionalSupportAddon2` | OPTIONAL SUPPORT ADD-ON (5164:6948) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-optionalSupportAddon2` |
+| `component.landing.howItWorksTeaser.motion.frame24` | Frame (5164:6949) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame24` |
+| `component.landing.howItWorksTeaser.motion.n2502` | $250 (5164:6950) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n2502` |
+| `component.landing.howItWorksTeaser.motion.month2` | /month (5164:6951) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-month2` |
+| `component.landing.howItWorksTeaser.motion.supportUpdatesCancelAnytime2` | Support & updates · Cancel anytime (5164:6952) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-supportUpdatesCancelAnytime2` |
+| `component.landing.howItWorksTeaser.motion.frame25` | Frame (5164:6953) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame25` |
+| `component.landing.howItWorksTeaser.motion.frame26` | Frame (5164:6954) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame26` |
+| `component.landing.howItWorksTeaser.motion.frame1561553970` | Frame 1561553970 (5164:6955) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553970` |
+| `component.landing.howItWorksTeaser.motion.everythingIncluded2` | Everything included: (5164:6956) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-everythingIncluded2` |
+| `component.landing.howItWorksTeaser.motion.frame1561553969` | Frame 1561553969 (5164:6957) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553969` |
+| `component.landing.howItWorksTeaser.motion.frame27` | Frame (5164:6958) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame27` |
+| `component.landing.howItWorksTeaser.motion.frame28` | Frame (5164:6959) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame28` |
+| `component.landing.howItWorksTeaser.motion.frame156155388717` | Frame 1561553887 (5164:6960) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388717` |
+| `component.landing.howItWorksTeaser.motion.frame156155388718` | Frame 1561553887 (5164:6962) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388718` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode9` | Complete source code (5164:6964) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode9` |
+| `component.landing.howItWorksTeaser.motion.frame29` | Frame (5164:6965) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame29` |
+| `component.landing.howItWorksTeaser.motion.frame156155388719` | Frame 1561553887 (5164:6966) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388719` |
+| `component.landing.howItWorksTeaser.motion.frame156155388720` | Frame 1561553887 (5164:6968) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388720` |
+| `component.landing.howItWorksTeaser.motion.gdsNdcReady` | GDS & NDC ready (5164:6970) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-gdsNdcReady` |
+| `component.landing.howItWorksTeaser.motion.frame30` | Frame (5164:6971) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame30` |
+| `component.landing.howItWorksTeaser.motion.frame31` | Frame (5164:6972) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame31` |
+| `component.landing.howItWorksTeaser.motion.frame156155388721` | Frame 1561553887 (5164:6973) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388721` |
+| `component.landing.howItWorksTeaser.motion.frame156155388722` | Frame 1561553887 (5164:6975) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388722` |
+| `component.landing.howItWorksTeaser.motion.whitelabelEngine` | White-label engine (5164:6977) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-whitelabelEngine` |
+| `component.landing.howItWorksTeaser.motion.frame32` | Frame (5164:6978) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame32` |
+| `component.landing.howItWorksTeaser.motion.frame156155388723` | Frame 1561553887 (5164:6979) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388723` |
+| `component.landing.howItWorksTeaser.motion.frame156155388724` | Frame 1561553887 (5164:6981) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388724` |
+| `component.landing.howItWorksTeaser.motion.apiDocumentation` | API documentation (5164:6983) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-apiDocumentation` |
+| `component.landing.howItWorksTeaser.motion.frame33` | Frame (5164:6984) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame33` |
+| `component.landing.howItWorksTeaser.motion.frame34` | Frame (5164:6985) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame34` |
+| `component.landing.howItWorksTeaser.motion.frame156155388725` | Frame 1561553887 (5164:6986) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388725` |
+| `component.landing.howItWorksTeaser.motion.frame156155388726` | Frame 1561553887 (5164:6988) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388726` |
+| `component.landing.howItWorksTeaser.motion.multicurrency` | Multi-currency (5164:6990) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-multicurrency` |
+| `component.landing.howItWorksTeaser.motion.frame35` | Frame (5164:6991) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame35` |
+| `component.landing.howItWorksTeaser.motion.frame156155388727` | Frame 1561553887 (5164:6992) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388727` |
+| `component.landing.howItWorksTeaser.motion.frame156155388728` | Frame 1561553887 (5164:6994) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388728` |
+| `component.landing.howItWorksTeaser.motion.adminDashboard` | Admin dashboard (5164:6996) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-adminDashboard` |
+| `component.landing.howItWorksTeaser.motion.frame36` | Frame (5164:6997) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame36` |
+| `component.landing.howItWorksTeaser.motion.frame37` | Frame (5164:6998) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame37` |
+| `component.landing.howItWorksTeaser.motion.frame156155388729` | Frame 1561553887 (5164:6999) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388729` |
+| `component.landing.howItWorksTeaser.motion.frame156155388730` | Frame 1561553887 (5164:7001) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388730` |
+| `component.landing.howItWorksTeaser.motion.paymentProcessing` | Payment processing (5164:7003) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-paymentProcessing` |
+| `component.landing.howItWorksTeaser.motion.frame38` | Frame (5164:7004) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame38` |
+| `component.landing.howItWorksTeaser.motion.frame156155388731` | Frame 1561553887 (5164:7005) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388731` |
+| `component.landing.howItWorksTeaser.motion.frame156155388732` | Frame 1561553887 (5164:7007) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388732` |
+| `component.landing.howItWorksTeaser.motion.securityCertified` | Security certified (5164:7009) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-securityCertified` |
+| `component.landing.howItWorksTeaser.motion.cta5` | Button/Primary (5164:7010) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-cta5` |
+| `component.landing.howItWorksTeaser.motion.label5` | label (I5164:7010;2780:1424) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-label5` |
+| `component.landing.howItWorksTeaser.motion.iconButton5` | Icon/Button (I5164:7010;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-iconButton5` |
+| `component.landing.howItWorksTeaser.motion.graphic5` | graphic (I5164:7010;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-graphic5` |
+| `component.landing.howItWorksTeaser.motion.group5` | Group (I5164:7010;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-group5` |
+| `component.landing.howItWorksTeaser.motion.frame1561553908` | Frame 1561553908 (5164:7011) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553908` |
+| `component.landing.howItWorksTeaser.motion.allPlansStrip` | All Plans Strip (5164:7012) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-allPlansStrip` |
+| `component.landing.howItWorksTeaser.motion.platformIncludes2` | PLATFORM INCLUDES: (5164:7013) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-platformIncludes2` |
+| `component.landing.howItWorksTeaser.motion.rectangle17` | Rectangle (5164:7014) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle17` |
+| `component.landing.howItWorksTeaser.motion.frame1561553904` | Frame 1561553904 (5164:7015) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553904` |
+| `component.landing.howItWorksTeaser.motion.textBlock56` | 🔒 (5164:7016) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock56` |
+| `component.landing.howItWorksTeaser.motion.banklevelSecurity2` | Bank-level security (5164:7017) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-banklevelSecurity2` |
+| `component.landing.howItWorksTeaser.motion.rectangle18` | Rectangle (5164:7018) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle18` |
+| `component.landing.howItWorksTeaser.motion.frame1561553905` | Frame 1561553905 (5164:7019) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553905` |
+| `component.landing.howItWorksTeaser.motion.node2` | ✈ (5164:7020) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-node2` |
+| `component.landing.howItWorksTeaser.motion.gdsNdcCertified2` | GDS & NDC certified (5164:7021) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-gdsNdcCertified2` |
+| `component.landing.howItWorksTeaser.motion.rectangle19` | Rectangle (5164:7022) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle19` |
+| `component.landing.howItWorksTeaser.motion.frame1561553906` | Frame 1561553906 (5164:7023) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553906` |
+| `component.landing.howItWorksTeaser.motion.textBlock57` | 👥 (5164:7024) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock57` |
+| `component.landing.howItWorksTeaser.motion.trustedByAgencies2` | Trusted by agencies (5164:7025) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustedByAgencies2` |
+| `component.landing.howItWorksTeaser.motion.rectangle20` | Rectangle (5164:7026) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle20` |
+| `component.landing.howItWorksTeaser.motion.frame1561553907` | Frame 1561553907 (5164:7027) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame1561553907` |
+| `component.landing.howItWorksTeaser.motion.textBlock58` | 📞 (5164:7028) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock58` |
+| `component.landing.howItWorksTeaser.motion.n247SupportAvailable2` | 24/7 support available (5164:7029) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n247SupportAvailable2` |
+| `component.landing.howItWorksTeaser.motion.textBlock59` | No per-transaction fees. No revenue sharing. Complete ownership. (5164:7030) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock59` |
+| `component.landing.howItWorksTeaser.motion.root12` | PricingSectionanimation (5164:11487) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-root12` |
+| `component.landing.howItWorksTeaser.motion.kuzu420map14754112` | kuzu420-map-14754 (1) 1 (I5164:11487;5164:11235) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-kuzu420map14754112` |
+| `component.landing.howItWorksTeaser.motion.sectionHeader6` | SectionHeader/Pricing (I5164:11487;5164:11236) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionHeader6` |
+| `component.landing.howItWorksTeaser.motion.sectionPill10` | SectionPill (I5164:11487;5164:11236;5023:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sectionPill10` |
+| `component.landing.howItWorksTeaser.motion.simplePricing3` | Simple Pricing (I5164:11487;5164:11236;5023:14;5018:3232) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-simplePricing3` |
+| `component.landing.howItWorksTeaser.motion.h1block2` | h1-block (I5164:11487;5164:11236;5023:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-h1block2` |
+| `component.landing.howItWorksTeaser.motion.ownItDontRentIt2` | Own it, Don't Rent it (I5164:11487;5164:11236;5023:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ownItDontRentIt2` |
+| `component.landing.howItWorksTeaser.motion.textBlock60` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:11487;5164:11236;5023:19) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock60` |
+| `component.landing.howItWorksTeaser.motion.routeStrip3` | Route Strip (I5164:11487;5164:11237) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-routeStrip3` |
+| `component.landing.howItWorksTeaser.motion.textBlock61` | 🛫 From: Your Current Platform (I5164:11487;5164:11237;5018:3259) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock61` |
+| `component.landing.howItWorksTeaser.motion.textBlock62` | 🛬 To: Full Platform Ownership (I5164:11487;5164:11237;5018:3260) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock62` |
+| `component.landing.howItWorksTeaser.motion.textBlock63` | 🟢 https://app.lottiefiles.com/animation/de5f69ea-2680-40f5-812e-0c97e4fb9731 (I5164:11487;5164:11237;5147:6155) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock63` |
+| `component.landing.howItWorksTeaser.motion.maingroup2` | main-group (I5164:11487;5164:11238) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-maingroup2` |
+| `component.landing.howItWorksTeaser.motion.pricingCard3` | PricingCard (I5164:11487;5313:4280) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingCard3` |
+| `component.landing.howItWorksTeaser.motion.pricingCardHeader2` | PricingCardHeader (I5164:11487;5313:4280;5151:11665) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingCardHeader2` |
+| `component.landing.howItWorksTeaser.motion.leftblock2` | left-block (I5164:11487;5313:4280;5151:11665;5021:27) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-leftblock2` |
+| `component.landing.howItWorksTeaser.motion.boardingPassPlatformOwnership3` | BOARDING PASS · PLATFORM OWNERSHIP (I5164:11487;5313:4280;5151:11665;5021:28) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-boardingPassPlatformOwnership3` |
+| `component.landing.howItWorksTeaser.motion.titleblock2` | title-block (I5164:11487;5313:4280;5151:11665;5021:29) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-titleblock2` |
+| `component.landing.howItWorksTeaser.motion.ownYourPlatform3` | Own Your Platform (I5164:11487;5313:4280;5151:11665;5021:30) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-ownYourPlatform3` |
+| `component.landing.howItWorksTeaser.motion.textBlock64` | No per-booking fees. No revenue share. No surprises. Just one platform, fully yours. Priced to fit your agency. (I5164:11487;5313:4280;5151:11665;5021:31) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock64` |
+| `component.landing.howItWorksTeaser.motion.seatblock2` | seat-block (I5164:11487;5313:4280;5151:11665;5021:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-seatblock2` |
+| `component.landing.howItWorksTeaser.motion.sEAT3` | SEAT (I5164:11487;5313:4280;5151:11665;5021:33) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-sEAT3` |
+| `component.landing.howItWorksTeaser.motion.n32A3` | 32A (I5164:11487;5313:4280;5151:11665;5021:34) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n32A3` |
+| `component.landing.howItWorksTeaser.motion.pricingbody2` | pricing-body (I5164:11487;5313:4280;5151:11666) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingbody2` |
+| `component.landing.howItWorksTeaser.motion.frame20955851122` | Frame 2095585112 (I5164:11487;5313:4280;5151:11810) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851122` |
+| `component.landing.howItWorksTeaser.motion.frame20955851102` | Frame 2095585110 (I5164:11487;5313:4280;5151:11791) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851102` |
+| `component.landing.howItWorksTeaser.motion.pricingTrackingLabel3` | PricingTrackingLabel (I5164:11487;5313:4280;5151:11792) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingTrackingLabel3` |
+| `component.landing.howItWorksTeaser.motion.onetimePlatformFee3` | ONE-TIME PLATFORM FEE (I5164:11487;5313:4280;5151:11792;5151:9474) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-onetimePlatformFee3` |
+| `component.landing.howItWorksTeaser.motion.priceDisplay3` | PriceDisplay (I5164:11487;5313:4280;5151:11793) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-priceDisplay3` |
+| `component.landing.howItWorksTeaser.motion.n30003` | $3,000 (I5164:11487;5313:4280;5151:11793;5151:11775) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n30003` |
+| `component.landing.howItWorksTeaser.motion.textBlock65` | One-time payment · No recurring platform costs (I5164:11487;5313:4280;5151:11793;5151:11776) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock65` |
+| `component.landing.howItWorksTeaser.motion.rectangle21` | Rectangle (I5164:11487;5313:4280;5151:11811) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-rectangle21` |
+| `component.landing.howItWorksTeaser.motion.frame20955851112` | Frame 2095585111 (I5164:11487;5313:4280;5151:11798) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame20955851112` |
+| `component.landing.howItWorksTeaser.motion.pricingTrackingLabel4` | PricingTrackingLabel (I5164:11487;5313:4280;5151:11799) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricingTrackingLabel4` |
+| `component.landing.howItWorksTeaser.motion.optionalSupportAddon3` | OPTIONAL SUPPORT ADD-ON (I5164:11487;5313:4280;5151:11799;5151:9476) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-optionalSupportAddon3` |
+| `component.landing.howItWorksTeaser.motion.priceDisplay4` | PriceDisplay (I5164:11487;5313:4280;5151:11800) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-priceDisplay4` |
+| `component.landing.howItWorksTeaser.motion.pricerow2` | price-row (I5164:11487;5313:4280;5151:11800;5151:11778) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-pricerow2` |
+| `component.landing.howItWorksTeaser.motion.n2503` | $250 (I5164:11487;5313:4280;5151:11800;5151:11779) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n2503` |
+| `component.landing.howItWorksTeaser.motion.month3` | /month (I5164:11487;5313:4280;5151:11800;5151:11780) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-month3` |
+| `component.landing.howItWorksTeaser.motion.supportUpdatesCancelAnytime3` | Support & updates · Cancel anytime (I5164:11487;5313:4280;5151:11800;5151:11781) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-supportUpdatesCancelAnytime3` |
+| `component.landing.howItWorksTeaser.motion.dividerwrap2` | divider-wrap (I5164:11487;5313:4280;5151:11670) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-dividerwrap2` |
+| `component.landing.howItWorksTeaser.motion.hdivider2` | h-divider (I5164:11487;5313:4280;5151:11671) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-hdivider2` |
+| `component.landing.howItWorksTeaser.motion.checklistGrid2` | ChecklistGrid (I5164:11487;5313:4280;5151:11672) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistGrid2` |
+| `component.landing.howItWorksTeaser.motion.everythingIncluded3` | Everything included: (I5164:11487;5313:4280;5151:11672;5021:36) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-everythingIncluded3` |
+| `component.landing.howItWorksTeaser.motion.columns2` | columns (I5164:11487;5313:4280;5151:11672;5021:37) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-columns2` |
+| `component.landing.howItWorksTeaser.motion.col5` | col (I5164:11487;5313:4280;5151:11672;5021:38) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-col5` |
+| `component.landing.howItWorksTeaser.motion.checklistItem9` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:39) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem9` |
+| `component.landing.howItWorksTeaser.motion.frame156155388733` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:39;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388733` |
+| `component.landing.howItWorksTeaser.motion.frame156155388734` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:39;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388734` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode10` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:39;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode10` |
+| `component.landing.howItWorksTeaser.motion.checklistItem10` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:43) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem10` |
+| `component.landing.howItWorksTeaser.motion.frame156155388735` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:43;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388735` |
+| `component.landing.howItWorksTeaser.motion.frame156155388736` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:43;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388736` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode11` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:43;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode11` |
+| `component.landing.howItWorksTeaser.motion.col6` | col (I5164:11487;5313:4280;5151:11672;5021:47) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-col6` |
+| `component.landing.howItWorksTeaser.motion.checklistItem11` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:48) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem11` |
+| `component.landing.howItWorksTeaser.motion.frame156155388737` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:48;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388737` |
+| `component.landing.howItWorksTeaser.motion.frame156155388738` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:48;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388738` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode12` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:48;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode12` |
+| `component.landing.howItWorksTeaser.motion.checklistItem12` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:52) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem12` |
+| `component.landing.howItWorksTeaser.motion.frame156155388739` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:52;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388739` |
+| `component.landing.howItWorksTeaser.motion.frame156155388740` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:52;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388740` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode13` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:52;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode13` |
+| `component.landing.howItWorksTeaser.motion.col7` | col (I5164:11487;5313:4280;5151:11672;5021:56) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-col7` |
+| `component.landing.howItWorksTeaser.motion.checklistItem13` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:57) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem13` |
+| `component.landing.howItWorksTeaser.motion.frame156155388741` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:57;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388741` |
+| `component.landing.howItWorksTeaser.motion.frame156155388742` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:57;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388742` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode14` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:57;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode14` |
+| `component.landing.howItWorksTeaser.motion.checklistItem14` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:61) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem14` |
+| `component.landing.howItWorksTeaser.motion.frame156155388743` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:61;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388743` |
+| `component.landing.howItWorksTeaser.motion.frame156155388744` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:61;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388744` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode15` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:61;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode15` |
+| `component.landing.howItWorksTeaser.motion.col8` | col (I5164:11487;5313:4280;5151:11672;5021:65) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-col8` |
+| `component.landing.howItWorksTeaser.motion.checklistItem15` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:66) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem15` |
+| `component.landing.howItWorksTeaser.motion.frame156155388745` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:66;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388745` |
+| `component.landing.howItWorksTeaser.motion.frame156155388746` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:66;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388746` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode16` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:66;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode16` |
+| `component.landing.howItWorksTeaser.motion.checklistItem16` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:70) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-checklistItem16` |
+| `component.landing.howItWorksTeaser.motion.frame156155388747` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:70;5018:3129) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388747` |
+| `component.landing.howItWorksTeaser.motion.frame156155388748` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:70;5018:3131) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-frame156155388748` |
+| `component.landing.howItWorksTeaser.motion.completeSourceCode17` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:70;5020:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-completeSourceCode17` |
+| `component.landing.howItWorksTeaser.motion.btnwrap2` | btn-wrap (I5164:11487;5313:4280;5151:11673) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-btnwrap2` |
+| `component.landing.howItWorksTeaser.motion.cta6` | Button/Primary (I5164:11487;5313:4280;5151:11674) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-cta6` |
+| `component.landing.howItWorksTeaser.motion.label6` | label (I5164:11487;5313:4280;5151:11674;2780:1424) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-label6` |
+| `component.landing.howItWorksTeaser.motion.iconButton6` | Icon/Button (I5164:11487;5313:4280;5151:11674;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-howItWorksTeaser-motion-iconButton6` |
+| `component.landing.howItWorksTeaser.motion.graphic6` | graphic (I5164:11487;5313:4280;5151:11674;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-graphic6` |
+| `component.landing.howItWorksTeaser.motion.group6` | Group (I5164:11487;5313:4280;5151:11674;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-group6` |
+| `component.landing.howItWorksTeaser.motion.trustStrip2` | TrustStrip (I5164:11487;5164:11257) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustStrip2` |
+| `component.landing.howItWorksTeaser.motion.allPlansBar2` | all-plans-bar (I5164:11487;5164:11257;5022:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-allPlansBar2` |
+| `component.landing.howItWorksTeaser.motion.platformIncludes3` | PLATFORM INCLUDES: (I5164:11487;5164:11257;5022:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-platformIncludes3` |
+| `component.landing.howItWorksTeaser.motion.divider5` | divider (I5164:11487;5164:11257;5022:16) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-divider5` |
+| `component.landing.howItWorksTeaser.motion.trustStripItem5` | TrustStripItem (I5164:11487;5164:11257;5022:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustStripItem5` |
+| `component.landing.howItWorksTeaser.motion.textBlock66` | 🔒 (I5164:11487;5164:11257;5022:17;5021:14) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock66` |
+| `component.landing.howItWorksTeaser.motion.banklevelSecurity3` | Bank-level security (I5164:11487;5164:11257;5022:17;5021:15) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-banklevelSecurity3` |
+| `component.landing.howItWorksTeaser.motion.divider6` | divider (I5164:11487;5164:11257;5022:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-divider6` |
+| `component.landing.howItWorksTeaser.motion.trustStripItem6` | TrustStripItem (I5164:11487;5164:11257;5022:21) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustStripItem6` |
+| `component.landing.howItWorksTeaser.motion.node3` | ✈ (I5164:11487;5164:11257;5022:21;5021:17) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-node3` |
+| `component.landing.howItWorksTeaser.motion.gdsNdcCertified3` | GDS & NDC certified (I5164:11487;5164:11257;5022:21;5021:18) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-gdsNdcCertified3` |
+| `component.landing.howItWorksTeaser.motion.divider7` | divider (I5164:11487;5164:11257;5022:24) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-divider7` |
+| `component.landing.howItWorksTeaser.motion.trustStripItem7` | TrustStripItem (I5164:11487;5164:11257;5022:25) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustStripItem7` |
+| `component.landing.howItWorksTeaser.motion.textBlock67` | 👥 (I5164:11487;5164:11257;5022:25;5021:20) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock67` |
+| `component.landing.howItWorksTeaser.motion.trustedByAgencies3` | Trusted by agencies (I5164:11487;5164:11257;5022:25;5021:21) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustedByAgencies3` |
+| `component.landing.howItWorksTeaser.motion.divider8` | divider (I5164:11487;5164:11257;5022:28) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-divider8` |
+| `component.landing.howItWorksTeaser.motion.trustStripItem8` | TrustStripItem (I5164:11487;5164:11257;5022:29) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-trustStripItem8` |
+| `component.landing.howItWorksTeaser.motion.textBlock68` | 📞 (I5164:11487;5164:11257;5022:29;5021:23) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock68` |
+| `component.landing.howItWorksTeaser.motion.n247SupportAvailable3` | 24/7 support available (I5164:11487;5164:11257;5022:29;5021:24) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-n247SupportAvailable3` |
+| `component.landing.howItWorksTeaser.motion.textBlock69` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:11487;5164:11257;5022:32) | `screen.landing.home` | `default` | `component-landing-howItWorksTeaser-motion-textBlock69` |
+| `component.landing.featureGrid.root` | Feature grid desktop (Gherkin: component.landing.featureGrid) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-root` |
+| `component.landing.featureGrid.planeDecor2` | plane2 (I5164:6562;3109:1189) | `screen.landing.home` | `default` | `component-landing-featureGrid-planeDecor2` |
+| `component.landing.featureGrid.headerWrap` | header-wrap (I5164:6562;3099:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-headerWrap` |
+| `component.landing.featureGrid.sectionHeader` | SectionHeader/Features (I5164:6562;3099:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-sectionHeader` |
+| `component.landing.featureGrid.sectionPill` | SectionPill (I5164:6562;3099:15;3131:1139) | `screen.landing.home` | `default` | `component-landing-featureGrid-sectionPill` |
+| `component.landing.featureGrid.sectionPillLabel` | Platform Features (I5164:6562;3099:15;3131:1139;3127:249) | `screen.landing.home` | `default` | `component-landing-featureGrid-sectionPillLabel` |
+| `component.landing.featureGrid.headingBlock` | heading-block (I5164:6562;3099:15;3098:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-headingBlock` |
+| `component.landing.featureGrid.frame2095585102` | Frame 2095585102 (I5164:6562;3099:15;3109:1164) | `screen.landing.home` | `default` | `component-landing-featureGrid-frame2095585102` |
+| `component.landing.featureGrid.headingline1` | heading-line1 (I5164:6562;3099:15;3098:21) | `screen.landing.home` | `default` | `component-landing-featureGrid-headingline1` |
+| `component.landing.featureGrid.headingline2` | heading-line2 (I5164:6562;3099:15;3098:22) | `screen.landing.home` | `default` | `component-landing-featureGrid-headingline2` |
+| `component.landing.featureGrid.subtitle` | subtitle (I5164:6562;3099:15;3098:23) | `screen.landing.home` | `default` | `component-landing-featureGrid-subtitle` |
+| `component.landing.featureGrid.cardsGrid` | FeatureCardsGrid (I5164:6562;3099:25) | `screen.landing.home` | `default` | `component-landing-featureGrid-cardsGrid` |
+| `component.landing.featureGrid.featureRow1` | FeatureRow1 (I5164:6562;3099:26) | `screen.landing.home` | `default` | `component-landing-featureGrid-featureRow1` |
+| `component.landing.featureGrid.featureCard` | FeatureCard (I5164:6562;3113:38) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-featureCard` |
+| `component.landing.featureGrid.textblock` | text-block (I5164:6562;3113:38;3112:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-textblock` |
+| `component.landing.featureGrid.titlerow` | title-row (I5164:6562;3113:38;3112:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-titlerow` |
+| `component.landing.featureGrid.title` | title (I5164:6562;3113:38;3112:16) | `screen.landing.home` | `default` | `component-landing-featureGrid-title` |
+| `component.landing.featureGrid.badge` | badge (I5164:6562;3113:38;3112:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-badge` |
+| `component.landing.featureGrid.badgelabel` | badge-label (I5164:6562;3113:38;3112:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-badgelabel` |
+| `component.landing.featureGrid.accentBar` | AccentBar (I5164:6562;3113:38;3112:19) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-accentBar` |
+| `component.landing.featureGrid.body` | body (I5164:6562;3113:38;3112:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-body` |
+| `component.landing.featureGrid.featureCard2` | FeatureCard (I5164:6562;3113:46) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-featureCard2` |
+| `component.landing.featureGrid.textblock2` | text-block (I5164:6562;3113:46;3112:22) | `screen.landing.home` | `default` | `component-landing-featureGrid-textblock2` |
+| `component.landing.featureGrid.titlerow2` | title-row (I5164:6562;3113:46;3112:23) | `screen.landing.home` | `default` | `component-landing-featureGrid-titlerow2` |
+| `component.landing.featureGrid.title2` | title (I5164:6562;3113:46;3112:24) | `screen.landing.home` | `default` | `component-landing-featureGrid-title2` |
+| `component.landing.featureGrid.badge2` | badge (I5164:6562;3113:46;3112:25) | `screen.landing.home` | `default` | `component-landing-featureGrid-badge2` |
+| `component.landing.featureGrid.badgelabel2` | badge-label (I5164:6562;3113:46;3112:26) | `screen.landing.home` | `default` | `component-landing-featureGrid-badgelabel2` |
+| `component.landing.featureGrid.accentBar2` | AccentBar (I5164:6562;3113:46;3112:27) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-accentBar2` |
+| `component.landing.featureGrid.body2` | body (I5164:6562;3113:46;3112:28) | `screen.landing.home` | `default` | `component-landing-featureGrid-body2` |
+| `component.landing.featureGrid.featureRow2` | FeatureRow2 (I5164:6562;3099:45) | `screen.landing.home` | `default` | `component-landing-featureGrid-featureRow2` |
+| `component.landing.featureGrid.featureCard3` | FeatureCard (I5164:6562;3113:70) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-featureCard3` |
+| `component.landing.featureGrid.textblock3` | text-block (I5164:6562;3113:70;3112:30) | `screen.landing.home` | `default` | `component-landing-featureGrid-textblock3` |
+| `component.landing.featureGrid.title3` | title (I5164:6562;3113:70;3112:31) | `screen.landing.home` | `default` | `component-landing-featureGrid-title3` |
+| `component.landing.featureGrid.accentBar3` | AccentBar (I5164:6562;3113:70;3112:32) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-accentBar3` |
+| `component.landing.featureGrid.body3` | body (I5164:6562;3113:70;3112:33) | `screen.landing.home` | `default` | `component-landing-featureGrid-body3` |
+| `component.landing.featureGrid.featureCard4` | FeatureCard (I5164:6562;3113:75) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-featureCard4` |
+| `component.landing.featureGrid.textblock4` | text-block (I5164:6562;3113:75;3112:35) | `screen.landing.home` | `default` | `component-landing-featureGrid-textblock4` |
+| `component.landing.featureGrid.title4` | title (I5164:6562;3113:75;3112:36) | `screen.landing.home` | `default` | `component-landing-featureGrid-title4` |
+| `component.landing.featureGrid.accentBar4` | AccentBar (I5164:6562;3113:75;3112:37) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-accentBar4` |
+| `component.landing.featureGrid.body4` | body (I5164:6562;3113:75;3112:38) | `screen.landing.home` | `default` | `component-landing-featureGrid-body4` |
+| `component.landing.featureGrid.featureCard5` | FeatureCard (I5164:6562;3113:80) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-featureCard5` |
+| `component.landing.featureGrid.textblock5` | text-block (I5164:6562;3113:80;3112:40) | `screen.landing.home` | `default` | `component-landing-featureGrid-textblock5` |
+| `component.landing.featureGrid.title5` | title (I5164:6562;3113:80;3112:41) | `screen.landing.home` | `default` | `component-landing-featureGrid-title5` |
+| `component.landing.featureGrid.accentBar5` | AccentBar (I5164:6562;3113:80;3112:42) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-accentBar5` |
+| `component.landing.featureGrid.body5` | body (I5164:6562;3113:80;3112:43) | `screen.landing.home` | `default` | `component-landing-featureGrid-body5` |
+| `component.landing.featureGrid.featureCard6` | FeatureCard (I5164:6562;3113:85) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-featureCard6` |
+| `component.landing.featureGrid.textblock6` | text-block (I5164:6562;3113:85;3112:45) | `screen.landing.home` | `default` | `component-landing-featureGrid-textblock6` |
+| `component.landing.featureGrid.title6` | title (I5164:6562;3113:85;3112:46) | `screen.landing.home` | `default` | `component-landing-featureGrid-title6` |
+| `component.landing.featureGrid.accentBar6` | AccentBar (I5164:6562;3113:85;3112:47) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-accentBar6` |
+| `component.landing.featureGrid.body6` | body (I5164:6562;3113:85;3112:48) | `screen.landing.home` | `default` | `component-landing-featureGrid-body6` |
+| `component.landing.featureGrid.footerBar` | FooterBar (I5164:6562;3099:66) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-footerBar` |
+| `component.landing.featureGrid.tagline` | tagline (I5164:6562;3099:67) | `screen.landing.home` | `default` | `component-landing-featureGrid-tagline` |
+| `component.landing.featureGrid.cta` | Button/Primary (I5164:6562;3099:68) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-cta` |
+| `component.landing.featureGrid.label` | label (I5164:6562;3099:68;2780:1424) | `screen.landing.home` | `default` | `component-landing-featureGrid-label` |
+| `component.landing.featureGrid.iconButton` | Icon/Button (I5164:6562;3099:68;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-iconButton` |
+| `component.landing.featureGrid.graphic` | graphic (I5164:6562;3099:68;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-featureGrid-graphic` |
+| `component.landing.featureGrid.group` | Group (I5164:6562;3099:68;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-featureGrid-group` |
+| `component.landing.featureGrid.planeDecor` | plane (I5164:6562;3109:1186) | `screen.landing.home` | `default` | `component-landing-featureGrid-planeDecor` |
+| `component.landing.featureGrid.mobile.root` | Feature grid mobile (Gherkin @393px) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-mobile-root` |
+| `component.landing.featureGrid.mobile.frame1561553791` | Frame 1561553791 (5164:6786) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-frame1561553791` |
+| `component.landing.featureGrid.mobile.frame1561553790` | Frame 1561553790 (5164:6787) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-frame1561553790` |
+| `component.landing.featureGrid.mobile.container` | Container (5164:6788) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-container` |
+| `component.landing.featureGrid.mobile.sectionPill` | SectionPill (5164:6789) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-sectionPill` |
+| `component.landing.featureGrid.mobile.sectionPillLabel` | Platform Features (5164:6791) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-sectionPillLabel` |
+| `component.landing.featureGrid.mobile.heading` | Heading 2 (5164:6792) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-heading` |
+| `component.landing.featureGrid.mobile.builtForSpeedPrecision` | Built for Speed, Precision, (5164:6793) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-builtForSpeedPrecision` |
+| `component.landing.featureGrid.mobile.text` | Text (5164:6794) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-text` |
+| `component.landing.featureGrid.mobile.andTotalControl` | and Total Control (5164:6795) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-andTotalControl` |
+| `component.landing.featureGrid.mobile.paragraph` | Paragraph (5164:6796) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-paragraph` |
+| `component.landing.featureGrid.mobile.textBlock` | Travel companies worldwide trust FlightCore to pow (5164:6797) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-textBlock` |
+| `component.landing.featureGrid.mobile.cardsGrid` | FeatureCardsGrid (5164:6798) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-cardsGrid` |
+| `component.landing.featureGrid.mobile.featureCard` | FeatureCard (5164:6799) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-mobile-featureCard` |
+| `component.landing.featureGrid.mobile.titlerow` | title-row (5164:6800) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-titlerow` |
+| `component.landing.featureGrid.mobile.multisourceContent` | Multi-Source Content (5164:6801) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-multisourceContent` |
+| `component.landing.featureGrid.mobile.frame` | Frame (5164:6802) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-frame` |
+| `component.landing.featureGrid.mobile.n100Yours` | 100% Yours (5164:6803) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-n100Yours` |
+| `component.landing.featureGrid.mobile.frame2` | Frame (5164:6804) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-frame2` |
+| `component.landing.featureGrid.mobile.textBlock2` | Pull live inventory from GDS and NDC simultaneously. One search surfaces every available fare — no source left behind. (5164:6805) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-textBlock2` |
+| `component.landing.featureGrid.mobile.featureCard2` | FeatureCard (5164:6806) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-mobile-featureCard2` |
+| `component.landing.featureGrid.mobile.titlerow2` | title-row (5164:6807) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-titlerow2` |
+| `component.landing.featureGrid.mobile.parallelSearch` | Parallel Search (5164:6808) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-parallelSearch` |
+| `component.landing.featureGrid.mobile.frame3` | Frame (5164:6809) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-frame3` |
+| `component.landing.featureGrid.mobile.n100ms` | <100ms (5164:6810) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-n100ms` |
+| `component.landing.featureGrid.mobile.frame4` | Frame (5164:6811) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-frame4` |
+| `component.landing.featureGrid.mobile.textBlock3` | Fire searches across all connected airlines at once. Sub-second results, zero tab-switching. (5164:6812) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-textBlock3` |
+| `component.landing.featureGrid.mobile.featureCard3` | FeatureCard (5164:6813) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-mobile-featureCard3` |
+| `component.landing.featureGrid.mobile.titlerow3` | title-row (5164:6814) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-titlerow3` |
+| `component.landing.featureGrid.mobile.endtoendTicketing` | End-to-End Ticketing (5164:6815) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-endtoendTicketing` |
+| `component.landing.featureGrid.mobile.accentBar` | accent-bar (5164:6816) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-accentBar` |
+| `component.landing.featureGrid.mobile.textBlock4` | Search, book, hold, void, reissue — every ticketing action in one seamless workflow. (5164:6817) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-textBlock4` |
+| `component.landing.featureGrid.mobile.featureCard4` | FeatureCard (5164:6818) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-mobile-featureCard4` |
+| `component.landing.featureGrid.mobile.titlerow4` | title-row (5164:6819) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-titlerow4` |
+| `component.landing.featureGrid.mobile.cannedItineraries` | Canned Itineraries (5164:6820) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-cannedItineraries` |
+| `component.landing.featureGrid.mobile.frame5` | Frame (5164:6821) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-frame5` |
+| `component.landing.featureGrid.mobile.textBlock5` | Save frequent route segments for instant repeat searches. Built for corporate travel desks. (5164:6822) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-textBlock5` |
+| `component.landing.featureGrid.mobile.featureCard5` | FeatureCard (5164:6823) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-mobile-featureCard5` |
+| `component.landing.featureGrid.mobile.titlerow5` | title-row (5164:6824) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-titlerow5` |
+| `component.landing.featureGrid.mobile.churningValidation` | Churning Validation (5164:6825) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-churningValidation` |
+| `component.landing.featureGrid.mobile.frame6` | Frame (5164:6826) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-frame6` |
+| `component.landing.featureGrid.mobile.textBlock6` | Auto-detect duplicate PNRs and policy violations before they trigger costly ADM penalties. (5164:6827) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-textBlock6` |
+| `component.landing.featureGrid.mobile.featureCard6` | FeatureCard (5164:6828) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-mobile-featureCard6` |
+| `component.landing.featureGrid.mobile.titlerow6` | title-row (5164:6829) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-titlerow6` |
+| `component.landing.featureGrid.mobile.agencyOperations` | Agency Operations (5164:6830) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-agencyOperations` |
+| `component.landing.featureGrid.mobile.frame7` | Frame (5164:6831) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-frame7` |
+| `component.landing.featureGrid.mobile.textBlock7` | Role-based access for agents and admins. Manage your team without IT dependency. (5164:6832) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-textBlock7` |
+| `component.landing.featureGrid.mobile.ctaRow` | CtaRow (5164:6833) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-mobile-ctaRow` |
+| `component.landing.featureGrid.mobile.textBlock8` | Aviation-grade infrastructure, ready in weeks, not years. (5164:6834) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-textBlock8` |
+| `component.landing.featureGrid.mobile.cta` | Button/Primary (5164:6835) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-mobile-cta` |
+| `component.landing.featureGrid.mobile.label` | label (I5164:6835;2780:1424) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-label` |
+| `component.landing.featureGrid.mobile.iconButton` | Icon/Button (I5164:6835;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-mobile-iconButton` |
+| `component.landing.featureGrid.mobile.graphic` | graphic (I5164:6835;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-graphic` |
+| `component.landing.featureGrid.mobile.group` | Group (I5164:6835;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-featureGrid-mobile-group` |
+| `component.landing.featureGrid.motion.root` | Feature grid motion prototype (Gherkin: 5404:6074) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-root` |
+| `component.landing.featureGrid.motion.planeDecor2` | Vector/Variant21 (5164:6880) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-planeDecor2` |
+| `component.landing.featureGrid.motion.headerWrap` | header-wrap (I5404:6074;5404:5693) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-headerWrap` |
+| `component.landing.featureGrid.motion.sectionHeader` | SectionHeader/Features (I5404:6074;5404:5694) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionHeader` |
+| `component.landing.featureGrid.motion.sectionPill` | SectionPill (I5404:6074;5404:5694;3131:1139) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionPill` |
+| `component.landing.featureGrid.motion.sectionPillLabel` | Platform Features (I5404:6074;5404:5694;3131:1139;3127:249) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionPillLabel` |
+| `component.landing.featureGrid.motion.headingBlock` | heading-block (I5404:6074;5404:5694;3098:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-headingBlock` |
+| `component.landing.featureGrid.motion.frame2095585102` | Frame 2095585102 (I5404:6074;5404:5694;3109:1164) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585102` |
+| `component.landing.featureGrid.motion.headingline1` | heading-line1 (I5404:6074;5404:5694;3098:21) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-headingline1` |
+| `component.landing.featureGrid.motion.headingline2` | heading-line2 (I5404:6074;5404:5694;3098:22) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-headingline2` |
+| `component.landing.featureGrid.motion.subtitle` | subtitle (I5404:6074;5404:5694;3098:23) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-subtitle` |
+| `component.landing.featureGrid.motion.featureRow1` | FeatureRow1 (I5404:6074;5404:5696) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-featureRow1` |
+| `component.landing.featureGrid.motion.featureCard` | FeatureCard (I5404:6074;5404:5697) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-featureCard` |
+| `component.landing.featureGrid.motion.textblock` | text-block (I5404:6074;5404:5697;3112:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textblock` |
+| `component.landing.featureGrid.motion.titlerow` | title-row (I5404:6074;5404:5697;3112:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-titlerow` |
+| `component.landing.featureGrid.motion.title` | title (I5404:6074;5404:5697;3112:16) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-title` |
+| `component.landing.featureGrid.motion.badge` | badge (I5404:6074;5404:5697;3112:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-badge` |
+| `component.landing.featureGrid.motion.badgelabel` | badge-label (I5404:6074;5404:5697;3112:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-badgelabel` |
+| `component.landing.featureGrid.motion.accentBar` | AccentBar (I5404:6074;5404:5697;3112:19) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-accentBar` |
+| `component.landing.featureGrid.motion.body` | body (I5404:6074;5404:5697;3112:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-body` |
+| `component.landing.featureGrid.motion.featureCard2` | FeatureCard (I5404:6074;5404:5698) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-featureCard2` |
+| `component.landing.featureGrid.motion.textblock2` | text-block (I5404:6074;5404:5698;3112:22) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textblock2` |
+| `component.landing.featureGrid.motion.titlerow2` | title-row (I5404:6074;5404:5698;3112:23) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-titlerow2` |
+| `component.landing.featureGrid.motion.title2` | title (I5404:6074;5404:5698;3112:24) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-title2` |
+| `component.landing.featureGrid.motion.badge2` | badge (I5404:6074;5404:5698;3112:25) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-badge2` |
+| `component.landing.featureGrid.motion.badgelabel2` | badge-label (I5404:6074;5404:5698;3112:26) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-badgelabel2` |
+| `component.landing.featureGrid.motion.accentBar2` | AccentBar (I5404:6074;5404:5698;3112:27) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-accentBar2` |
+| `component.landing.featureGrid.motion.body2` | body (I5404:6074;5404:5698;3112:28) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-body2` |
+| `component.landing.featureGrid.motion.featureRow2` | FeatureRow2 (I5404:6074;5404:5699) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-featureRow2` |
+| `component.landing.featureGrid.motion.featureCard3` | FeatureCard (I5404:6074;5404:5700) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-featureCard3` |
+| `component.landing.featureGrid.motion.textblock3` | text-block (I5404:6074;5404:5700;3112:30) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textblock3` |
+| `component.landing.featureGrid.motion.title3` | title (I5404:6074;5404:5700;3112:31) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-title3` |
+| `component.landing.featureGrid.motion.accentBar3` | AccentBar (I5404:6074;5404:5700;3112:32) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-accentBar3` |
+| `component.landing.featureGrid.motion.body3` | body (I5404:6074;5404:5700;3112:33) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-body3` |
+| `component.landing.featureGrid.motion.featureCard4` | FeatureCard (I5404:6074;5404:5701) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-featureCard4` |
+| `component.landing.featureGrid.motion.textblock4` | text-block (I5404:6074;5404:5701;3112:35) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textblock4` |
+| `component.landing.featureGrid.motion.title4` | title (I5404:6074;5404:5701;3112:36) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-title4` |
+| `component.landing.featureGrid.motion.accentBar4` | AccentBar (I5404:6074;5404:5701;3112:37) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-accentBar4` |
+| `component.landing.featureGrid.motion.body4` | body (I5404:6074;5404:5701;3112:38) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-body4` |
+| `component.landing.featureGrid.motion.featureCard5` | FeatureCard (I5404:6074;5404:5702) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-featureCard5` |
+| `component.landing.featureGrid.motion.textblock5` | text-block (I5404:6074;5404:5702;3112:40) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textblock5` |
+| `component.landing.featureGrid.motion.title5` | title (I5404:6074;5404:5702;3112:41) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-title5` |
+| `component.landing.featureGrid.motion.accentBar5` | AccentBar (I5404:6074;5404:5702;3112:42) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-accentBar5` |
+| `component.landing.featureGrid.motion.body5` | body (I5404:6074;5404:5702;3112:43) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-body5` |
+| `component.landing.featureGrid.motion.featureCard6` | FeatureCard (I5404:6074;5404:5703) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-featureCard6` |
+| `component.landing.featureGrid.motion.textblock6` | text-block (I5404:6074;5404:5703;3112:45) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textblock6` |
+| `component.landing.featureGrid.motion.title6` | title (I5404:6074;5404:5703;3112:46) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-title6` |
+| `component.landing.featureGrid.motion.accentBar6` | AccentBar (I5404:6074;5404:5703;3112:47) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-accentBar6` |
+| `component.landing.featureGrid.motion.body6` | body (I5404:6074;5404:5703;3112:48) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-body6` |
+| `component.landing.featureGrid.motion.footerBar` | FooterBar (I5404:6074;5404:5704) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-footerBar` |
+| `component.landing.featureGrid.motion.tagline` | tagline (I5404:6074;5404:5705) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-tagline` |
+| `component.landing.featureGrid.motion.cta` | Button/Primary (I5404:6074;5404:5706) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-cta` |
+| `component.landing.featureGrid.motion.label` | label (I5404:6074;5404:5706;2780:1424) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-label` |
+| `component.landing.featureGrid.motion.iconButton` | Icon/Button (I5404:6074;5404:5706;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-iconButton` |
+| `component.landing.featureGrid.motion.graphic` | graphic (I5404:6074;5404:5706;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-graphic` |
+| `component.landing.featureGrid.motion.group` | Group (I5404:6074;5404:5706;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-group` |
+| `component.landing.featureGrid.motion.planeDecor` | plane (I5404:6074;5404:5707) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-planeDecor` |
+| `component.landing.featureGrid.motion.root2` | SocialProofSectionBig (5164:6568) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-root2` |
+| `component.landing.featureGrid.motion.root3` | SocialProofSection (I5164:6568;5151:13742) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-root3` |
+| `component.landing.featureGrid.motion.frame2095585154` | Frame 2095585154 (I5164:6568;5151:13742;5151:14400) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585154` |
+| `component.landing.featureGrid.motion.headerWrap2` | header-wrap (I5164:6568;5151:13742;5159:4999) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-headerWrap2` |
+| `component.landing.featureGrid.motion.sectionHeader2` | SectionHeader/SocialProof (I5164:6568;5151:13742;5159:5000) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionHeader2` |
+| `component.landing.featureGrid.motion.sectionPill2` | SectionPill (I5164:6568;5151:13742;5159:5000;3173:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionPill2` |
+| `component.landing.featureGrid.motion.trustedByLeaders` | Trusted by Leaders (I5164:6568;5151:13742;5159:5000;3173:14;3171:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustedByLeaders` |
+| `component.landing.featureGrid.motion.frame2095585105` | Frame 2095585105 (I5164:6568;5151:13742;5159:5000;3174:1447) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585105` |
+| `component.landing.featureGrid.motion.textBlock` | Built for Founders, Proven in Production (I5164:6568;5151:13742;5159:5000;3173:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock` |
+| `component.landing.featureGrid.motion.textBlock2` | Travel companies worldwide trust MaqsoodTravel to power their booking platforms. (I5164:6568;5151:13742;5159:5000;3173:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock2` |
+| `component.landing.featureGrid.motion.frame2095585155` | Frame 2095585155 (I5164:6568;5151:13742;5151:14441) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585155` |
+| `component.landing.featureGrid.motion.testimonialsRow` | testimonials-row (I5164:6568;5151:13742;5159:5007) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-testimonialsRow` |
+| `component.landing.featureGrid.motion.testimonialBlock` | TestimonialBlock (I5164:6568;5151:13742;5159:5008) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-testimonialBlock` |
+| `component.landing.featureGrid.motion.testimonialLogoCard` | TestimonialLogoCard (I5164:6568;5151:13742;5159:5008;5159:23) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-testimonialLogoCard` |
+| `component.landing.featureGrid.motion.logoSlot` | logo-slot (I5164:6568;5151:13742;5159:5008;5159:23;5158:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-logoSlot` |
+| `component.landing.featureGrid.motion.companyLogo` | Company logo (I5164:6568;5151:13742;5159:5008;5159:23;5158:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-companyLogo` |
+| `component.landing.featureGrid.motion.textcol` | text-col (I5164:6568;5151:13742;5159:5008;5159:24) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textcol` |
+| `component.landing.featureGrid.motion.quote` | quote (I5164:6568;5151:13742;5159:5008;5151:13709) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-quote` |
+| `component.landing.featureGrid.motion.testimonialAuthor` | TestimonialAuthor (I5164:6568;5151:13742;5159:5008;5159:26) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-testimonialAuthor` |
+| `component.landing.featureGrid.motion.avatarInitials` | AvatarInitials (I5164:6568;5151:13742;5159:5008;5159:26;5159:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-avatarInitials` |
+| `component.landing.featureGrid.motion.lI` | LI (I5164:6568;5151:13742;5159:5008;5159:26;5159:14;3171:25) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-lI` |
+| `component.landing.featureGrid.motion.textcol2` | text-col (I5164:6568;5151:13742;5159:5008;5159:26;5159:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textcol2` |
+| `component.landing.featureGrid.motion.moazamArshad` | Moazam Arshad (I5164:6568;5151:13742;5159:5008;5159:26;5159:19) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-moazamArshad` |
+| `component.landing.featureGrid.motion.founderCeo` | Founder & CEO (I5164:6568;5151:13742;5159:5008;5159:26;5159:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-founderCeo` |
+| `component.landing.featureGrid.motion.ukbasedIataTravelAgency` | UK-based IATA travel agency (I5164:6568;5151:13742;5159:5008;5159:26;5159:21) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-ukbasedIataTravelAgency` |
+| `component.landing.featureGrid.motion.testimonialBlock2` | TestimonialBlock (I5164:6568;5151:13742;5159:5023) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-testimonialBlock2` |
+| `component.landing.featureGrid.motion.testimonialLogoCard2` | TestimonialLogoCard (I5164:6568;5151:13742;5159:5023;5159:36) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-testimonialLogoCard2` |
+| `component.landing.featureGrid.motion.logoSlot2` | logo-slot (I5164:6568;5151:13742;5159:5023;5159:36;5158:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-logoSlot2` |
+| `component.landing.featureGrid.motion.companyLogo2` | Company logo (I5164:6568;5151:13742;5159:5023;5159:36;5158:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-companyLogo2` |
+| `component.landing.featureGrid.motion.textcol3` | text-col (I5164:6568;5151:13742;5159:5023;5159:37) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textcol3` |
+| `component.landing.featureGrid.motion.textBlock3` | "Switching off Amadeus felt risky. MaqqsedTravel had us connected to Sabre, NDC and Travelport in week one. We kept our existing contracts — nothing changed for our clients." (I5164:6568;5151:13742;5159:5023;5159:38) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock3` |
+| `component.landing.featureGrid.motion.testimonialAuthor2` | TestimonialAuthor (I5164:6568;5151:13742;5159:5023;5159:39) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-testimonialAuthor2` |
+| `component.landing.featureGrid.motion.avatarInitials2` | AvatarInitials (I5164:6568;5151:13742;5159:5023;5159:39;5159:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-avatarInitials2` |
+| `component.landing.featureGrid.motion.lI2` | LI (I5164:6568;5151:13742;5159:5023;5159:39;5159:14;3171:25) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-lI2` |
+| `component.landing.featureGrid.motion.textcol4` | text-col (I5164:6568;5151:13742;5159:5023;5159:39;5159:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textcol4` |
+| `component.landing.featureGrid.motion.moazamArshad2` | Moazam Arshad (I5164:6568;5151:13742;5159:5023;5159:39;5159:19) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-moazamArshad2` |
+| `component.landing.featureGrid.motion.founderCeo2` | Founder & CEO (I5164:6568;5151:13742;5159:5023;5159:39;5159:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-founderCeo2` |
+| `component.landing.featureGrid.motion.ukbasedIataTravelAgency2` | UK-based IATA travel agency (I5164:6568;5151:13742;5159:5023;5159:39;5159:21) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-ukbasedIataTravelAgency2` |
+| `component.landing.featureGrid.motion.progressWrap` | progress-wrap (I5164:6568;5151:13742;5159:5038) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-progressWrap` |
+| `component.landing.featureGrid.motion.slideProgressBar` | SlideProgressBar (I5164:6568;5151:13742;5159:5039) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-slideProgressBar` |
+| `component.landing.featureGrid.motion.track` | track (I5164:6568;5151:13742;5159:5039;5158:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-track` |
+| `component.landing.featureGrid.motion.fill` | fill (I5164:6568;5151:13742;5159:5039;5158:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-fill` |
+| `component.landing.featureGrid.motion.slideNumbers` | slide-numbers (I5164:6568;5151:13742;5159:5039;5158:19) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-slideNumbers` |
+| `component.landing.featureGrid.motion.n1` | 1 (I5164:6568;5151:13742;5159:5039;5158:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n1` |
+| `component.landing.featureGrid.motion.n2` | 2 (I5164:6568;5151:13742;5159:5039;5158:21) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n2` |
+| `component.landing.featureGrid.motion.n3` | 3 (I5164:6568;5151:13742;5159:5039;5158:22) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n3` |
+| `component.landing.featureGrid.motion.integrationsStrip` | Integrations Strip (I5164:6568;5151:13791) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-integrationsStrip` |
+| `component.landing.featureGrid.motion.container` | Container (I5164:6568;5151:13791;5151:13713) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container` |
+| `component.landing.featureGrid.motion.paragraph` | Paragraph (I5164:6568;5151:13791;5151:13714) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-paragraph` |
+| `component.landing.featureGrid.motion.textBlock4` | Travel agencies worldwide trust MaqsoodTravel to power their booking platforms. (I5164:6568;5151:13791;5151:13715) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock4` |
+| `component.landing.featureGrid.motion.container2` | Container (I5164:6568;5151:13791;5151:13716) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container2` |
+| `component.landing.featureGrid.motion.container3` | Container (I5164:6568;5151:13791;5151:13717) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container3` |
+| `component.landing.featureGrid.motion.rectangle` | Rectangle (I5164:6568;5151:13791;5151:13718) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-rectangle` |
+| `component.landing.featureGrid.motion.frame58` | Frame 58 (I5164:6568;5151:13791;5151:13719) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame58` |
+| `component.landing.featureGrid.motion.image23` | image 23 (I5164:6568;5151:13791;5151:13720) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image23` |
+| `component.landing.featureGrid.motion.image14` | image 14 (I5164:6568;5151:13791;5151:13721) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image14` |
+| `component.landing.featureGrid.motion.frame54` | Frame 54 (I5164:6568;5151:13791;5151:13722) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame54` |
+| `component.landing.featureGrid.motion.image16` | image 16 (I5164:6568;5151:13791;5151:13723) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image16` |
+| `component.landing.featureGrid.motion.image13` | image 13 (I5164:6568;5151:13791;5151:13724) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image13` |
+| `component.landing.featureGrid.motion.frame60` | Frame 60 (I5164:6568;5151:13791;5151:13725) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame60` |
+| `component.landing.featureGrid.motion.image26` | image 26 (I5164:6568;5151:13791;5151:13726) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image26` |
+| `component.landing.featureGrid.motion.image12` | image 12 (I5164:6568;5151:13791;5151:13727) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image12` |
+| `component.landing.featureGrid.motion.frame55` | Frame 55 (I5164:6568;5151:13791;5151:13728) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame55` |
+| `component.landing.featureGrid.motion.image17` | image 17 (I5164:6568;5151:13791;5151:13729) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image17` |
+| `component.landing.featureGrid.motion.image19` | image 19 (I5164:6568;5151:13791;5151:13730) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image19` |
+| `component.landing.featureGrid.motion.frame56` | Frame 56 (I5164:6568;5151:13791;5151:13731) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame56` |
+| `component.landing.featureGrid.motion.image18` | image 18 (I5164:6568;5151:13791;5151:13732) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image18` |
+| `component.landing.featureGrid.motion.frame61` | Frame 61 (I5164:6568;5151:13791;5151:13733) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame61` |
+| `component.landing.featureGrid.motion.image25` | image 25 (I5164:6568;5151:13791;5151:13734) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image25` |
+| `component.landing.featureGrid.motion.image15` | image 15 (I5164:6568;5151:13791;5151:13735) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image15` |
+| `component.landing.featureGrid.motion.frame59` | Frame 59 (I5164:6568;5151:13791;5151:13736) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame59` |
+| `component.landing.featureGrid.motion.image24` | image 24 (I5164:6568;5151:13791;5151:13737) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image24` |
+| `component.landing.featureGrid.motion.frame62` | Frame 62 (I5164:6568;5151:13791;5151:13738) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame62` |
+| `component.landing.featureGrid.motion.image22` | image 22 (I5164:6568;5151:13791;5151:13739) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image22` |
+| `component.landing.featureGrid.motion.root4` | Social proof (5164:6836) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-root4` |
+| `component.landing.featureGrid.motion.sectionRoot` | Social Proof (5164:6837) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionRoot` |
+| `component.landing.featureGrid.motion.container4` | Container (5164:6838) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container4` |
+| `component.landing.featureGrid.motion.sectionPill3` | SectionPill (5164:6839) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionPill3` |
+| `component.landing.featureGrid.motion.trustedByLeaders2` | Trusted by Leaders (5164:6841) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustedByLeaders2` |
+| `component.landing.featureGrid.motion.heading` | Heading 2 (5164:6842) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-heading` |
+| `component.landing.featureGrid.motion.builtForFounders` | Built for Founders, (5164:6843) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-builtForFounders` |
+| `component.landing.featureGrid.motion.text` | Text (5164:6844) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-text` |
+| `component.landing.featureGrid.motion.provenInProduction` | Proven in Production (5164:6845) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-provenInProduction` |
+| `component.landing.featureGrid.motion.paragraph2` | Paragraph (5164:6846) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-paragraph2` |
+| `component.landing.featureGrid.motion.textBlock5` | Travel companies worldwide trust FlightCore to pow (5164:6847) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock5` |
+| `component.landing.featureGrid.motion.frame2095585138` | Frame 2095585138 (5164:6848) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585138` |
+| `component.landing.featureGrid.motion.logo` | Logo (5164:6849) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-logo` |
+| `component.landing.featureGrid.motion.image27` | image 27 (5164:6850) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image27` |
+| `component.landing.featureGrid.motion.frame2095585137` | Frame 2095585137 (5164:6851) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585137` |
+| `component.landing.featureGrid.motion.quote2` | quote (5164:6852) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-quote2` |
+| `component.landing.featureGrid.motion.container5` | Container (5164:6853) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container5` |
+| `component.landing.featureGrid.motion.frame1561553971` | Frame 1561553971 (5164:6854) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553971` |
+| `component.landing.featureGrid.motion.container6` | Container (5164:6855) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container6` |
+| `component.landing.featureGrid.motion.container7` | Container (5164:6856) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container7` |
+| `component.landing.featureGrid.motion.text2` | Text (5164:6857) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-text2` |
+| `component.landing.featureGrid.motion.mA` | MA (5164:6858) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-mA` |
+| `component.landing.featureGrid.motion.container8` | Container (5164:6859) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container8` |
+| `component.landing.featureGrid.motion.moazamArshad3` | Moazam Arshad (5164:6860) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-moazamArshad3` |
+| `component.landing.featureGrid.motion.founderCeo3` | Founder & CEO (5164:6861) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-founderCeo3` |
+| `component.landing.featureGrid.motion.paragraph3` | Paragraph (5164:6862) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-paragraph3` |
+| `component.landing.featureGrid.motion.ukbasedIataTravelAgency3` | UK-based IATA travel agency (5164:6863) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-ukbasedIataTravelAgency3` |
+| `component.landing.featureGrid.motion.frame2095585139` | Frame 2095585139 (5164:6864) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585139` |
+| `component.landing.featureGrid.motion.logo2` | Logo (5164:6865) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-logo2` |
+| `component.landing.featureGrid.motion.textBlock6` | Screenshot 2026-06-17 at 2.20.54 PM 1 (5164:6866) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock6` |
+| `component.landing.featureGrid.motion.frame20955851372` | Frame 2095585137 (5164:6867) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851372` |
+| `component.landing.featureGrid.motion.quote3` | quote (5164:6868) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-quote3` |
+| `component.landing.featureGrid.motion.container9` | Container (5164:6869) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container9` |
+| `component.landing.featureGrid.motion.frame15615539712` | Frame 1561553971 (5164:6870) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame15615539712` |
+| `component.landing.featureGrid.motion.container10` | Container (5164:6871) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container10` |
+| `component.landing.featureGrid.motion.container11` | Container (5164:6872) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container11` |
+| `component.landing.featureGrid.motion.text3` | Text (5164:6873) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-text3` |
+| `component.landing.featureGrid.motion.lB` | LB (5164:6874) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-lB` |
+| `component.landing.featureGrid.motion.container12` | Container (5164:6875) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container12` |
+| `component.landing.featureGrid.motion.lanceBohlingArshad` | lance Bohling Arshad (5164:6876) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-lanceBohlingArshad` |
+| `component.landing.featureGrid.motion.founderCeo4` | Founder & CEO (5164:6877) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-founderCeo4` |
+| `component.landing.featureGrid.motion.paragraph4` | Paragraph (5164:6878) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-paragraph4` |
+| `component.landing.featureGrid.motion.ukbasedIataTravelAgency4` | UK-based IATA travel agency (5164:6879) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-ukbasedIataTravelAgency4` |
+| `component.landing.featureGrid.motion.frame2095585144` | Frame 2095585144 (5164:6881) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585144` |
+| `component.landing.featureGrid.motion.frame2095585140` | Frame 2095585140 (5164:6882) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585140` |
+| `component.landing.featureGrid.motion.frame2095585141` | Frame 2095585141 (5164:6883) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585141` |
+| `component.landing.featureGrid.motion.frame2095585142` | Frame 2095585142 (5164:6884) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585142` |
+| `component.landing.featureGrid.motion.n12` | 1 (5164:6885) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n12` |
+| `component.landing.featureGrid.motion.n22` | 2 (5164:6886) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n22` |
+| `component.landing.featureGrid.motion.n32` | 3 (5164:6887) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n32` |
+| `component.landing.featureGrid.motion.container13` | Container (5164:6888) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container13` |
+| `component.landing.featureGrid.motion.container14` | Container (5164:6889) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container14` |
+| `component.landing.featureGrid.motion.paragraph5` | Paragraph (5164:6890) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-paragraph5` |
+| `component.landing.featureGrid.motion.textBlock7` | Travel agencies worldwide trust MaqsoodTravel to power their booking platforms. (5164:6891) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock7` |
+| `component.landing.featureGrid.motion.container15` | Container (5164:6892) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container15` |
+| `component.landing.featureGrid.motion.rectangle2` | Rectangle (5164:6893) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-rectangle2` |
+| `component.landing.featureGrid.motion.frame592` | Frame 59 (5164:6894) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame592` |
+| `component.landing.featureGrid.motion.image242` | image 24 (5164:6895) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image242` |
+| `component.landing.featureGrid.motion.frame582` | Frame 58 (5164:6896) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame582` |
+| `component.landing.featureGrid.motion.image232` | image 23 (5164:6897) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image232` |
+| `component.landing.featureGrid.motion.image142` | image 14 (5164:6898) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image142` |
+| `component.landing.featureGrid.motion.frame542` | Frame 54 (5164:6899) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame542` |
+| `component.landing.featureGrid.motion.image162` | image 16 (5164:6900) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image162` |
+| `component.landing.featureGrid.motion.image132` | image 13 (5164:6901) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image132` |
+| `component.landing.featureGrid.motion.frame552` | Frame 55 (5164:6902) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame552` |
+| `component.landing.featureGrid.motion.image172` | image 17 (5164:6903) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image172` |
+| `component.landing.featureGrid.motion.image122` | image 12 (5164:6904) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image122` |
+| `component.landing.featureGrid.motion.image192` | image 19 (5164:6905) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image192` |
+| `component.landing.featureGrid.motion.frame602` | Frame 60 (5164:6906) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame602` |
+| `component.landing.featureGrid.motion.image262` | image 26 (5164:6907) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image262` |
+| `component.landing.featureGrid.motion.frame562` | Frame 56 (5164:6908) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame562` |
+| `component.landing.featureGrid.motion.image182` | image 18 (5164:6909) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image182` |
+| `component.landing.featureGrid.motion.image152` | image 15 (5164:6910) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image152` |
+| `component.landing.featureGrid.motion.frame612` | Frame 61 (5164:6911) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame612` |
+| `component.landing.featureGrid.motion.image252` | image 25 (5164:6912) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image252` |
+| `component.landing.featureGrid.motion.frame622` | Frame 62 (5164:6913) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame622` |
+| `component.landing.featureGrid.motion.image222` | image 22 (5164:6914) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image222` |
+| `component.landing.featureGrid.motion.root5` | SocialProofSection (5307:6608) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-root5` |
+| `component.landing.featureGrid.motion.sectionHeader3` | SectionHeader/SocialProof (5307:6609) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionHeader3` |
+| `component.landing.featureGrid.motion.sectionPill4` | SectionPill (I5307:6609;3173:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionPill4` |
+| `component.landing.featureGrid.motion.trustedByLeaders3` | Trusted by Leaders (I5307:6609;3173:14;3171:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustedByLeaders3` |
+| `component.landing.featureGrid.motion.frame20955851052` | Frame 2095585105 (I5307:6609;3174:1447) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851052` |
+| `component.landing.featureGrid.motion.textBlock8` | Built for Founders, Proven in Production (I5307:6609;3173:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock8` |
+| `component.landing.featureGrid.motion.textBlock9` | Travel companies worldwide trust MaqsoodTravel to power their booking platforms. (I5307:6609;3173:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock9` |
+| `component.landing.featureGrid.motion.frame2095585106` | Frame 2095585106 (5307:6610) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585106` |
+| `component.landing.featureGrid.motion.frame2095585145` | Frame 2095585145 (5307:6611) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585145` |
+| `component.landing.featureGrid.motion.frame2095585143` | Frame 2095585143 (5307:6612) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585143` |
+| `component.landing.featureGrid.motion.frame20955851382` | Frame 2095585138 (5307:6613) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851382` |
+| `component.landing.featureGrid.motion.logo3` | Logo (5307:6614) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-logo3` |
+| `component.landing.featureGrid.motion.image272` | image 27 (5307:6615) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image272` |
+| `component.landing.featureGrid.motion.frame20955851373` | Frame 2095585137 (5307:6616) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851373` |
+| `component.landing.featureGrid.motion.quote4` | quote (5307:6617) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-quote4` |
+| `component.landing.featureGrid.motion.testimonialAuthor3` | TestimonialAuthor (5307:6618) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-testimonialAuthor3` |
+| `component.landing.featureGrid.motion.avatarInitials3` | AvatarInitials (5307:6619) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-avatarInitials3` |
+| `component.landing.featureGrid.motion.mA2` | MA (5307:6620) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-mA2` |
+| `component.landing.featureGrid.motion.textcol5` | text-col (5307:6621) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textcol5` |
+| `component.landing.featureGrid.motion.name` | name (5307:6622) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-name` |
+| `component.landing.featureGrid.motion.role` | role (5307:6623) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-role` |
+| `component.landing.featureGrid.motion.company` | company (5307:6624) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-company` |
+| `component.landing.featureGrid.motion.frame20955851392` | Frame 2095585139 (5307:6625) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851392` |
+| `component.landing.featureGrid.motion.logo4` | Logo (5307:6626) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-logo4` |
+| `component.landing.featureGrid.motion.textBlock10` | Screenshot 2026-06-17 at 2.20.54 PM 1 (5307:6627) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock10` |
+| `component.landing.featureGrid.motion.frame20955851374` | Frame 2095585137 (5307:6628) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851374` |
+| `component.landing.featureGrid.motion.quote5` | quote (5307:6629) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-quote5` |
+| `component.landing.featureGrid.motion.testimonialAuthor4` | TestimonialAuthor (5307:6630) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-testimonialAuthor4` |
+| `component.landing.featureGrid.motion.avatarInitials4` | AvatarInitials (5307:6631) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-avatarInitials4` |
+| `component.landing.featureGrid.motion.lB2` | LB (5307:6632) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-lB2` |
+| `component.landing.featureGrid.motion.textcol6` | text-col (5307:6633) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textcol6` |
+| `component.landing.featureGrid.motion.name2` | name (5307:6634) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-name2` |
+| `component.landing.featureGrid.motion.role2` | role (5307:6635) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-role2` |
+| `component.landing.featureGrid.motion.company2` | company (5307:6636) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-company2` |
+| `component.landing.featureGrid.motion.frame20955851442` | Frame 2095585144 (5307:6637) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851442` |
+| `component.landing.featureGrid.motion.frame20955851402` | Frame 2095585140 (5307:6638) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851402` |
+| `component.landing.featureGrid.motion.frame20955851412` | Frame 2095585141 (5307:6639) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851412` |
+| `component.landing.featureGrid.motion.frame20955851422` | Frame 2095585142 (5307:6640) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851422` |
+| `component.landing.featureGrid.motion.n13` | 1 (5307:6641) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n13` |
+| `component.landing.featureGrid.motion.n23` | 2 (5307:6642) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n23` |
+| `component.landing.featureGrid.motion.n33` | 3 (5307:6643) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n33` |
+| `component.landing.featureGrid.motion.vector` | Vector (5307:6644) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-vector` |
+| `component.landing.featureGrid.motion.root6` | clients-animaiton (5164:11204) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-root6` |
+| `component.landing.featureGrid.motion.container16` | Container (I5164:11204;5164:11107) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container16` |
+| `component.landing.featureGrid.motion.container17` | Container (I5164:11204;5164:11108) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container17` |
+| `component.landing.featureGrid.motion.paragraph6` | Paragraph (I5164:11204;5164:11109) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-paragraph6` |
+| `component.landing.featureGrid.motion.textBlock11` | Travel agencies worldwide trust MaqsoodTravel to power their booking platforms. (I5164:11204;5164:11110) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock11` |
+| `component.landing.featureGrid.motion.container18` | Container (I5164:11204;5164:11111) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container18` |
+| `component.landing.featureGrid.motion.container19` | Container (I5164:11204;5164:11112) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-container19` |
+| `component.landing.featureGrid.motion.rectangle3` | Rectangle (I5164:11204;5164:11113) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-rectangle3` |
+| `component.landing.featureGrid.motion.frame583` | Frame 58 (I5164:11204;5164:11114) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame583` |
+| `component.landing.featureGrid.motion.image233` | image 23 (I5164:11204;5164:11115) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image233` |
+| `component.landing.featureGrid.motion.image143` | image 14 (I5164:11204;5164:11116) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image143` |
+| `component.landing.featureGrid.motion.frame543` | Frame 54 (I5164:11204;5164:11117) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame543` |
+| `component.landing.featureGrid.motion.image163` | image 16 (I5164:11204;5164:11118) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image163` |
+| `component.landing.featureGrid.motion.image133` | image 13 (I5164:11204;5164:11119) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image133` |
+| `component.landing.featureGrid.motion.frame603` | Frame 60 (I5164:11204;5164:11120) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame603` |
+| `component.landing.featureGrid.motion.image263` | image 26 (I5164:11204;5164:11121) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image263` |
+| `component.landing.featureGrid.motion.image123` | image 12 (I5164:11204;5164:11122) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image123` |
+| `component.landing.featureGrid.motion.frame553` | Frame 55 (I5164:11204;5164:11123) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame553` |
+| `component.landing.featureGrid.motion.image173` | image 17 (I5164:11204;5164:11124) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image173` |
+| `component.landing.featureGrid.motion.image193` | image 19 (I5164:11204;5164:11125) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image193` |
+| `component.landing.featureGrid.motion.frame563` | Frame 56 (I5164:11204;5164:11126) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame563` |
+| `component.landing.featureGrid.motion.image183` | image 18 (I5164:11204;5164:11127) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image183` |
+| `component.landing.featureGrid.motion.frame613` | Frame 61 (I5164:11204;5164:11128) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame613` |
+| `component.landing.featureGrid.motion.image253` | image 25 (I5164:11204;5164:11129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image253` |
+| `component.landing.featureGrid.motion.image153` | image 15 (I5164:11204;5164:11130) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image153` |
+| `component.landing.featureGrid.motion.frame593` | Frame 59 (I5164:11204;5164:11131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame593` |
+| `component.landing.featureGrid.motion.image243` | image 24 (I5164:11204;5164:11132) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image243` |
+| `component.landing.featureGrid.motion.frame623` | Frame 62 (I5164:11204;5164:11133) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame623` |
+| `component.landing.featureGrid.motion.image223` | image 22 (I5164:11204;5164:11134) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-image223` |
+| `component.landing.featureGrid.motion.root7` | NewPricingSection (5164:6564) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-root7` |
+| `component.landing.featureGrid.motion.kuzu420map1475411` | kuzu420-map-14754 (1) 1 (I5164:6564;5151:11815) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-kuzu420map1475411` |
+| `component.landing.featureGrid.motion.frame2095585158` | Frame 2095585158 (I5164:6564;5164:6218) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585158` |
+| `component.landing.featureGrid.motion.sectionHeader4` | SectionHeader/Pricing (I5164:6564;5151:11816) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionHeader4` |
+| `component.landing.featureGrid.motion.sectionPill5` | SectionPill (I5164:6564;5151:11816;5023:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionPill5` |
+| `component.landing.featureGrid.motion.simplePricing` | Simple Pricing (I5164:6564;5151:11816;5023:14;5018:3232) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-simplePricing` |
+| `component.landing.featureGrid.motion.h1block` | h1-block (I5164:6564;5151:11816;5023:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-h1block` |
+| `component.landing.featureGrid.motion.ownItDontRentIt` | Own it, Don't Rent it (I5164:6564;5151:11816;5023:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-ownItDontRentIt` |
+| `component.landing.featureGrid.motion.textBlock12` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:6564;5151:11816;5023:19) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock12` |
+| `component.landing.featureGrid.motion.frame2095585157` | Frame 2095585157 (I5164:6564;5164:6100) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585157` |
+| `component.landing.featureGrid.motion.routeStrip` | Route Strip (I5164:6564;5151:11817) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-routeStrip` |
+| `component.landing.featureGrid.motion.textBlock13` | 🛫 From: Your Current Platform (I5164:6564;5151:11817;5018:3259) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock13` |
+| `component.landing.featureGrid.motion.textBlock14` | 🛬 To: Full Platform Ownership (I5164:6564;5151:11817;5018:3260) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock14` |
+| `component.landing.featureGrid.motion.textBlock15` | 🟢 https://app.lottiefiles.com/animation/de5f69ea-2680-40f5-812e-0c97e4fb9731 (I5164:6564;5151:11817;5147:6155) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock15` |
+| `component.landing.featureGrid.motion.maingroup` | main-group (I5164:6564;5151:11818) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-maingroup` |
+| `component.landing.featureGrid.motion.pricingCard` | PricingCard (I5164:6564;5151:11939) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingCard` |
+| `component.landing.featureGrid.motion.pricingCardHeader` | PricingCardHeader (I5164:6564;5151:11939;5151:11665) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingCardHeader` |
+| `component.landing.featureGrid.motion.leftblock` | left-block (I5164:6564;5151:11939;5151:11665;5021:27) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-leftblock` |
+| `component.landing.featureGrid.motion.boardingPassPlatformOwnership` | BOARDING PASS · PLATFORM OWNERSHIP (I5164:6564;5151:11939;5151:11665;5021:28) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-boardingPassPlatformOwnership` |
+| `component.landing.featureGrid.motion.titleblock` | title-block (I5164:6564;5151:11939;5151:11665;5021:29) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-titleblock` |
+| `component.landing.featureGrid.motion.ownYourPlatform` | Own Your Platform (I5164:6564;5151:11939;5151:11665;5021:30) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-ownYourPlatform` |
+| `component.landing.featureGrid.motion.textBlock16` | No per-booking fees. No revenue share. No surprises. Just one platform, fully yours. Priced to fit your agency. (I5164:6564;5151:11939;5151:11665;5021:31) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock16` |
+| `component.landing.featureGrid.motion.seatblock` | seat-block (I5164:6564;5151:11939;5151:11665;5021:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-seatblock` |
+| `component.landing.featureGrid.motion.sEAT` | SEAT (I5164:6564;5151:11939;5151:11665;5021:33) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sEAT` |
+| `component.landing.featureGrid.motion.n32A` | 32A (I5164:6564;5151:11939;5151:11665;5021:34) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n32A` |
+| `component.landing.featureGrid.motion.pricingbody` | pricing-body (I5164:6564;5151:11939;5151:11666) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingbody` |
+| `component.landing.featureGrid.motion.frame2095585112` | Frame 2095585112 (I5164:6564;5151:11939;5151:11810) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585112` |
+| `component.landing.featureGrid.motion.frame2095585110` | Frame 2095585110 (I5164:6564;5151:11939;5151:11791) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585110` |
+| `component.landing.featureGrid.motion.pricingTrackingLabel` | PricingTrackingLabel (I5164:6564;5151:11939;5151:11792) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingTrackingLabel` |
+| `component.landing.featureGrid.motion.onetimePlatformFee` | ONE-TIME PLATFORM FEE (I5164:6564;5151:11939;5151:11792;5151:9474) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-onetimePlatformFee` |
+| `component.landing.featureGrid.motion.priceDisplay` | PriceDisplay (I5164:6564;5151:11939;5151:11793) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-priceDisplay` |
+| `component.landing.featureGrid.motion.n3000` | $3,000 (I5164:6564;5151:11939;5151:11793;5151:11775) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n3000` |
+| `component.landing.featureGrid.motion.textBlock17` | One-time payment · No recurring platform costs (I5164:6564;5151:11939;5151:11793;5151:11776) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock17` |
+| `component.landing.featureGrid.motion.rectangle4` | Rectangle (I5164:6564;5151:11939;5151:11811) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-rectangle4` |
+| `component.landing.featureGrid.motion.frame2095585111` | Frame 2095585111 (I5164:6564;5151:11939;5151:11798) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2095585111` |
+| `component.landing.featureGrid.motion.pricingTrackingLabel2` | PricingTrackingLabel (I5164:6564;5151:11939;5151:11799) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingTrackingLabel2` |
+| `component.landing.featureGrid.motion.optionalSupportAddon` | OPTIONAL SUPPORT ADD-ON (I5164:6564;5151:11939;5151:11799;5151:9476) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-optionalSupportAddon` |
+| `component.landing.featureGrid.motion.priceDisplay2` | PriceDisplay (I5164:6564;5151:11939;5151:11800) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-priceDisplay2` |
+| `component.landing.featureGrid.motion.pricerow` | price-row (I5164:6564;5151:11939;5151:11800;5151:11778) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricerow` |
+| `component.landing.featureGrid.motion.n250` | $250 (I5164:6564;5151:11939;5151:11800;5151:11779) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n250` |
+| `component.landing.featureGrid.motion.month` | /month (I5164:6564;5151:11939;5151:11800;5151:11780) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-month` |
+| `component.landing.featureGrid.motion.supportUpdatesCancelAnytime` | Support & updates · Cancel anytime (I5164:6564;5151:11939;5151:11800;5151:11781) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-supportUpdatesCancelAnytime` |
+| `component.landing.featureGrid.motion.dividerwrap` | divider-wrap (I5164:6564;5151:11939;5151:11670) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-dividerwrap` |
+| `component.landing.featureGrid.motion.hdivider` | h-divider (I5164:6564;5151:11939;5151:11671) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-hdivider` |
+| `component.landing.featureGrid.motion.checklistGrid` | ChecklistGrid (I5164:6564;5151:11939;5151:11672) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistGrid` |
+| `component.landing.featureGrid.motion.everythingIncluded` | Everything included: (I5164:6564;5151:11939;5151:11672;5021:36) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-everythingIncluded` |
+| `component.landing.featureGrid.motion.columns` | columns (I5164:6564;5151:11939;5151:11672;5021:37) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-columns` |
+| `component.landing.featureGrid.motion.col` | col (I5164:6564;5151:11939;5151:11672;5021:38) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-col` |
+| `component.landing.featureGrid.motion.checklistItem` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:39) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem` |
+| `component.landing.featureGrid.motion.frame1561553887` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:39;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553887` |
+| `component.landing.featureGrid.motion.frame15615538872` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:39;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame15615538872` |
+| `component.landing.featureGrid.motion.completeSourceCode` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:39;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode` |
+| `component.landing.featureGrid.motion.checklistItem2` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:43) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem2` |
+| `component.landing.featureGrid.motion.frame15615538873` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:43;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame15615538873` |
+| `component.landing.featureGrid.motion.frame15615538874` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:43;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame15615538874` |
+| `component.landing.featureGrid.motion.completeSourceCode2` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:43;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode2` |
+| `component.landing.featureGrid.motion.col2` | col (I5164:6564;5151:11939;5151:11672;5021:47) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-col2` |
+| `component.landing.featureGrid.motion.checklistItem3` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:48) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem3` |
+| `component.landing.featureGrid.motion.frame15615538875` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:48;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame15615538875` |
+| `component.landing.featureGrid.motion.frame15615538876` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:48;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame15615538876` |
+| `component.landing.featureGrid.motion.completeSourceCode3` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:48;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode3` |
+| `component.landing.featureGrid.motion.checklistItem4` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:52) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem4` |
+| `component.landing.featureGrid.motion.frame15615538877` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:52;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame15615538877` |
+| `component.landing.featureGrid.motion.frame15615538878` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:52;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame15615538878` |
+| `component.landing.featureGrid.motion.completeSourceCode4` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:52;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode4` |
+| `component.landing.featureGrid.motion.col3` | col (I5164:6564;5151:11939;5151:11672;5021:56) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-col3` |
+| `component.landing.featureGrid.motion.checklistItem5` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:57) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem5` |
+| `component.landing.featureGrid.motion.frame15615538879` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:57;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame15615538879` |
+| `component.landing.featureGrid.motion.frame156155388710` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:57;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388710` |
+| `component.landing.featureGrid.motion.completeSourceCode5` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:57;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode5` |
+| `component.landing.featureGrid.motion.checklistItem6` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:61) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem6` |
+| `component.landing.featureGrid.motion.frame156155388711` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:61;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388711` |
+| `component.landing.featureGrid.motion.frame156155388712` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:61;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388712` |
+| `component.landing.featureGrid.motion.completeSourceCode6` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:61;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode6` |
+| `component.landing.featureGrid.motion.col4` | col (I5164:6564;5151:11939;5151:11672;5021:65) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-col4` |
+| `component.landing.featureGrid.motion.checklistItem7` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:66) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem7` |
+| `component.landing.featureGrid.motion.frame156155388713` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:66;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388713` |
+| `component.landing.featureGrid.motion.frame156155388714` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:66;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388714` |
+| `component.landing.featureGrid.motion.completeSourceCode7` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:66;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode7` |
+| `component.landing.featureGrid.motion.checklistItem8` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:70) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem8` |
+| `component.landing.featureGrid.motion.frame156155388715` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:70;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388715` |
+| `component.landing.featureGrid.motion.frame156155388716` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:70;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388716` |
+| `component.landing.featureGrid.motion.completeSourceCode8` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:70;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode8` |
+| `component.landing.featureGrid.motion.btnwrap` | btn-wrap (I5164:6564;5151:11939;5151:11673) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-btnwrap` |
+| `component.landing.featureGrid.motion.cta2` | Button/Primary (I5164:6564;5151:11939;5151:11674) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-cta2` |
+| `component.landing.featureGrid.motion.label2` | label (I5164:6564;5151:11939;5151:11674;2780:1424) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-label2` |
+| `component.landing.featureGrid.motion.iconButton2` | Icon/Button (I5164:6564;5151:11939;5151:11674;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-iconButton2` |
+| `component.landing.featureGrid.motion.graphic2` | graphic (I5164:6564;5151:11939;5151:11674;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-graphic2` |
+| `component.landing.featureGrid.motion.group2` | Group (I5164:6564;5151:11939;5151:11674;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-group2` |
+| `component.landing.featureGrid.motion.trustStrip` | TrustStrip (I5164:6564;5151:11820) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustStrip` |
+| `component.landing.featureGrid.motion.allPlansBar` | all-plans-bar (I5164:6564;5151:11820;5022:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-allPlansBar` |
+| `component.landing.featureGrid.motion.platformIncludes` | PLATFORM INCLUDES: (I5164:6564;5151:11820;5022:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-platformIncludes` |
+| `component.landing.featureGrid.motion.divider` | divider (I5164:6564;5151:11820;5022:16) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-divider` |
+| `component.landing.featureGrid.motion.trustStripItem` | TrustStripItem (I5164:6564;5151:11820;5022:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustStripItem` |
+| `component.landing.featureGrid.motion.textBlock18` | 🔒 (I5164:6564;5151:11820;5022:17;5021:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock18` |
+| `component.landing.featureGrid.motion.banklevelSecurity` | Bank-level security (I5164:6564;5151:11820;5022:17;5021:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-banklevelSecurity` |
+| `component.landing.featureGrid.motion.divider2` | divider (I5164:6564;5151:11820;5022:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-divider2` |
+| `component.landing.featureGrid.motion.trustStripItem2` | TrustStripItem (I5164:6564;5151:11820;5022:21) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustStripItem2` |
+| `component.landing.featureGrid.motion.node` | ✈ (I5164:6564;5151:11820;5022:21;5021:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-node` |
+| `component.landing.featureGrid.motion.gdsNdcCertified` | GDS & NDC certified (I5164:6564;5151:11820;5022:21;5021:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-gdsNdcCertified` |
+| `component.landing.featureGrid.motion.divider3` | divider (I5164:6564;5151:11820;5022:24) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-divider3` |
+| `component.landing.featureGrid.motion.trustStripItem3` | TrustStripItem (I5164:6564;5151:11820;5022:25) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustStripItem3` |
+| `component.landing.featureGrid.motion.textBlock19` | 👥 (I5164:6564;5151:11820;5022:25;5021:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock19` |
+| `component.landing.featureGrid.motion.trustedByAgencies` | Trusted by agencies (I5164:6564;5151:11820;5022:25;5021:21) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustedByAgencies` |
+| `component.landing.featureGrid.motion.divider4` | divider (I5164:6564;5151:11820;5022:28) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-divider4` |
+| `component.landing.featureGrid.motion.trustStripItem4` | TrustStripItem (I5164:6564;5151:11820;5022:29) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustStripItem4` |
+| `component.landing.featureGrid.motion.textBlock20` | 📞 (I5164:6564;5151:11820;5022:29;5021:23) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock20` |
+| `component.landing.featureGrid.motion.n247SupportAvailable` | 24/7 support available (I5164:6564;5151:11820;5022:29;5021:24) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n247SupportAvailable` |
+| `component.landing.featureGrid.motion.textBlock21` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:6564;5151:11820;5022:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock21` |
+| `component.landing.featureGrid.motion.root8` | Own it (5164:6915) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-root8` |
+| `component.landing.featureGrid.motion.frame1561553980` | Frame 1561553980 (5164:6916) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553980` |
+| `component.landing.featureGrid.motion.frame1561553979` | Frame 1561553979 (5164:6917) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553979` |
+| `component.landing.featureGrid.motion.frame1561553964` | Frame 1561553964 (5164:6918) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553964` |
+| `component.landing.featureGrid.motion.sectionPill6` | SectionPill (5164:6919) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionPill6` |
+| `component.landing.featureGrid.motion.simplePricing2` | Simple Pricing (5164:6921) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-simplePricing2` |
+| `component.landing.featureGrid.motion.headRow` | HeadRow (5164:6922) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-headRow` |
+| `component.landing.featureGrid.motion.ownIt` | Own it, (5164:6923) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-ownIt` |
+| `component.landing.featureGrid.motion.dontRentIt` | Don't Rent it (5164:6924) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-dontRentIt` |
+| `component.landing.featureGrid.motion.textBlock22` | No per-transaction fees. No revenue sharing. Complete ownership. (5164:6925) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock22` |
+| `component.landing.featureGrid.motion.frame1561553978` | Frame 1561553978 (5164:6926) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553978` |
+| `component.landing.featureGrid.motion.routeStrip2` | RouteStrip (5164:6927) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-routeStrip2` |
+| `component.landing.featureGrid.motion.textBlock23` | 🛫 From: Your Current Platform (5164:6928) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock23` |
+| `component.landing.featureGrid.motion.loadingPlane1` | Loading Plane 1 (5164:6929) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-loadingPlane1` |
+| `component.landing.featureGrid.motion.textBlock24` | 🛬 To: Full Ownership (5164:6930) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock24` |
+| `component.landing.featureGrid.motion.pricingCard2` | PricingCard (5164:6931) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingCard2` |
+| `component.landing.featureGrid.motion.frame` | Frame (5164:6932) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame` |
+| `component.landing.featureGrid.motion.boardingPassPlatformOwnership2` | BOARDING PASS · PLATFORM OWNERSHIP (5164:6933) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-boardingPassPlatformOwnership2` |
+| `component.landing.featureGrid.motion.ownYourPlatform2` | Own Your Platform (5164:6934) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-ownYourPlatform2` |
+| `component.landing.featureGrid.motion.textBlock25` | Complete source code. Production-ready. Yours forever. (5164:6935) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock25` |
+| `component.landing.featureGrid.motion.frame1561553874` | Frame 1561553874 (5164:6936) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553874` |
+| `component.landing.featureGrid.motion.sEAT2` | SEAT (5164:6937) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sEAT2` |
+| `component.landing.featureGrid.motion.n32A2` | 32A (5164:6938) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n32A2` |
+| `component.landing.featureGrid.motion.frame2` | Frame (5164:6939) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame2` |
+| `component.landing.featureGrid.motion.frame1561553966` | Frame 1561553966 (5164:6940) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553966` |
+| `component.landing.featureGrid.motion.frame1561553965` | Frame 1561553965 (5164:6941) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553965` |
+| `component.landing.featureGrid.motion.onetimePlatformFee2` | ONE-TIME PLATFORM FEE (5164:6942) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-onetimePlatformFee2` |
+| `component.landing.featureGrid.motion.n30002` | $3,000 (5164:6943) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n30002` |
+| `component.landing.featureGrid.motion.textBlock26` | One-time payment · No recurring platform costs (5164:6944) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock26` |
+| `component.landing.featureGrid.motion.frame3` | Frame (5164:6945) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame3` |
+| `component.landing.featureGrid.motion.frame1561553968` | Frame 1561553968 (5164:6946) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553968` |
+| `component.landing.featureGrid.motion.frame1561553967` | Frame 1561553967 (5164:6947) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553967` |
+| `component.landing.featureGrid.motion.optionalSupportAddon2` | OPTIONAL SUPPORT ADD-ON (5164:6948) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-optionalSupportAddon2` |
+| `component.landing.featureGrid.motion.frame4` | Frame (5164:6949) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame4` |
+| `component.landing.featureGrid.motion.n2502` | $250 (5164:6950) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n2502` |
+| `component.landing.featureGrid.motion.month2` | /month (5164:6951) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-month2` |
+| `component.landing.featureGrid.motion.supportUpdatesCancelAnytime2` | Support & updates · Cancel anytime (5164:6952) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-supportUpdatesCancelAnytime2` |
+| `component.landing.featureGrid.motion.frame5` | Frame (5164:6953) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame5` |
+| `component.landing.featureGrid.motion.frame6` | Frame (5164:6954) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame6` |
+| `component.landing.featureGrid.motion.frame1561553970` | Frame 1561553970 (5164:6955) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553970` |
+| `component.landing.featureGrid.motion.everythingIncluded2` | Everything included: (5164:6956) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-everythingIncluded2` |
+| `component.landing.featureGrid.motion.frame1561553969` | Frame 1561553969 (5164:6957) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553969` |
+| `component.landing.featureGrid.motion.frame7` | Frame (5164:6958) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame7` |
+| `component.landing.featureGrid.motion.frame8` | Frame (5164:6959) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame8` |
+| `component.landing.featureGrid.motion.frame156155388717` | Frame 1561553887 (5164:6960) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388717` |
+| `component.landing.featureGrid.motion.frame156155388718` | Frame 1561553887 (5164:6962) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388718` |
+| `component.landing.featureGrid.motion.completeSourceCode9` | Complete source code (5164:6964) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode9` |
+| `component.landing.featureGrid.motion.frame9` | Frame (5164:6965) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame9` |
+| `component.landing.featureGrid.motion.frame156155388719` | Frame 1561553887 (5164:6966) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388719` |
+| `component.landing.featureGrid.motion.frame156155388720` | Frame 1561553887 (5164:6968) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388720` |
+| `component.landing.featureGrid.motion.gdsNdcReady` | GDS & NDC ready (5164:6970) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-gdsNdcReady` |
+| `component.landing.featureGrid.motion.frame10` | Frame (5164:6971) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame10` |
+| `component.landing.featureGrid.motion.frame11` | Frame (5164:6972) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame11` |
+| `component.landing.featureGrid.motion.frame156155388721` | Frame 1561553887 (5164:6973) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388721` |
+| `component.landing.featureGrid.motion.frame156155388722` | Frame 1561553887 (5164:6975) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388722` |
+| `component.landing.featureGrid.motion.whitelabelEngine` | White-label engine (5164:6977) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-whitelabelEngine` |
+| `component.landing.featureGrid.motion.frame12` | Frame (5164:6978) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame12` |
+| `component.landing.featureGrid.motion.frame156155388723` | Frame 1561553887 (5164:6979) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388723` |
+| `component.landing.featureGrid.motion.frame156155388724` | Frame 1561553887 (5164:6981) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388724` |
+| `component.landing.featureGrid.motion.apiDocumentation` | API documentation (5164:6983) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-apiDocumentation` |
+| `component.landing.featureGrid.motion.frame13` | Frame (5164:6984) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame13` |
+| `component.landing.featureGrid.motion.frame14` | Frame (5164:6985) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame14` |
+| `component.landing.featureGrid.motion.frame156155388725` | Frame 1561553887 (5164:6986) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388725` |
+| `component.landing.featureGrid.motion.frame156155388726` | Frame 1561553887 (5164:6988) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388726` |
+| `component.landing.featureGrid.motion.multicurrency` | Multi-currency (5164:6990) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-multicurrency` |
+| `component.landing.featureGrid.motion.frame15` | Frame (5164:6991) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame15` |
+| `component.landing.featureGrid.motion.frame156155388727` | Frame 1561553887 (5164:6992) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388727` |
+| `component.landing.featureGrid.motion.frame156155388728` | Frame 1561553887 (5164:6994) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388728` |
+| `component.landing.featureGrid.motion.adminDashboard` | Admin dashboard (5164:6996) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-adminDashboard` |
+| `component.landing.featureGrid.motion.frame16` | Frame (5164:6997) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame16` |
+| `component.landing.featureGrid.motion.frame17` | Frame (5164:6998) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame17` |
+| `component.landing.featureGrid.motion.frame156155388729` | Frame 1561553887 (5164:6999) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388729` |
+| `component.landing.featureGrid.motion.frame156155388730` | Frame 1561553887 (5164:7001) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388730` |
+| `component.landing.featureGrid.motion.paymentProcessing` | Payment processing (5164:7003) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-paymentProcessing` |
+| `component.landing.featureGrid.motion.frame18` | Frame (5164:7004) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame18` |
+| `component.landing.featureGrid.motion.frame156155388731` | Frame 1561553887 (5164:7005) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388731` |
+| `component.landing.featureGrid.motion.frame156155388732` | Frame 1561553887 (5164:7007) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388732` |
+| `component.landing.featureGrid.motion.securityCertified` | Security certified (5164:7009) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-securityCertified` |
+| `component.landing.featureGrid.motion.cta3` | Button/Primary (5164:7010) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-cta3` |
+| `component.landing.featureGrid.motion.label3` | label (I5164:7010;2780:1424) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-label3` |
+| `component.landing.featureGrid.motion.iconButton3` | Icon/Button (I5164:7010;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-iconButton3` |
+| `component.landing.featureGrid.motion.graphic3` | graphic (I5164:7010;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-graphic3` |
+| `component.landing.featureGrid.motion.group3` | Group (I5164:7010;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-group3` |
+| `component.landing.featureGrid.motion.frame1561553908` | Frame 1561553908 (5164:7011) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553908` |
+| `component.landing.featureGrid.motion.allPlansStrip` | All Plans Strip (5164:7012) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-allPlansStrip` |
+| `component.landing.featureGrid.motion.platformIncludes2` | PLATFORM INCLUDES: (5164:7013) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-platformIncludes2` |
+| `component.landing.featureGrid.motion.rectangle5` | Rectangle (5164:7014) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-rectangle5` |
+| `component.landing.featureGrid.motion.frame1561553904` | Frame 1561553904 (5164:7015) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553904` |
+| `component.landing.featureGrid.motion.textBlock27` | 🔒 (5164:7016) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock27` |
+| `component.landing.featureGrid.motion.banklevelSecurity2` | Bank-level security (5164:7017) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-banklevelSecurity2` |
+| `component.landing.featureGrid.motion.rectangle6` | Rectangle (5164:7018) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-rectangle6` |
+| `component.landing.featureGrid.motion.frame1561553905` | Frame 1561553905 (5164:7019) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553905` |
+| `component.landing.featureGrid.motion.node2` | ✈ (5164:7020) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-node2` |
+| `component.landing.featureGrid.motion.gdsNdcCertified2` | GDS & NDC certified (5164:7021) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-gdsNdcCertified2` |
+| `component.landing.featureGrid.motion.rectangle7` | Rectangle (5164:7022) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-rectangle7` |
+| `component.landing.featureGrid.motion.frame1561553906` | Frame 1561553906 (5164:7023) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553906` |
+| `component.landing.featureGrid.motion.textBlock28` | 👥 (5164:7024) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock28` |
+| `component.landing.featureGrid.motion.trustedByAgencies2` | Trusted by agencies (5164:7025) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustedByAgencies2` |
+| `component.landing.featureGrid.motion.rectangle8` | Rectangle (5164:7026) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-rectangle8` |
+| `component.landing.featureGrid.motion.frame1561553907` | Frame 1561553907 (5164:7027) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame1561553907` |
+| `component.landing.featureGrid.motion.textBlock29` | 📞 (5164:7028) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock29` |
+| `component.landing.featureGrid.motion.n247SupportAvailable2` | 24/7 support available (5164:7029) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n247SupportAvailable2` |
+| `component.landing.featureGrid.motion.textBlock30` | No per-transaction fees. No revenue sharing. Complete ownership. (5164:7030) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock30` |
+| `component.landing.featureGrid.motion.root9` | PricingSectionanimation (5164:11487) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-root9` |
+| `component.landing.featureGrid.motion.kuzu420map14754112` | kuzu420-map-14754 (1) 1 (I5164:11487;5164:11235) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-kuzu420map14754112` |
+| `component.landing.featureGrid.motion.sectionHeader5` | SectionHeader/Pricing (I5164:11487;5164:11236) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionHeader5` |
+| `component.landing.featureGrid.motion.sectionPill7` | SectionPill (I5164:11487;5164:11236;5023:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sectionPill7` |
+| `component.landing.featureGrid.motion.simplePricing3` | Simple Pricing (I5164:11487;5164:11236;5023:14;5018:3232) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-simplePricing3` |
+| `component.landing.featureGrid.motion.h1block2` | h1-block (I5164:11487;5164:11236;5023:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-h1block2` |
+| `component.landing.featureGrid.motion.ownItDontRentIt2` | Own it, Don't Rent it (I5164:11487;5164:11236;5023:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-ownItDontRentIt2` |
+| `component.landing.featureGrid.motion.textBlock31` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:11487;5164:11236;5023:19) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock31` |
+| `component.landing.featureGrid.motion.routeStrip3` | Route Strip (I5164:11487;5164:11237) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-routeStrip3` |
+| `component.landing.featureGrid.motion.textBlock32` | 🛫 From: Your Current Platform (I5164:11487;5164:11237;5018:3259) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock32` |
+| `component.landing.featureGrid.motion.textBlock33` | 🛬 To: Full Platform Ownership (I5164:11487;5164:11237;5018:3260) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock33` |
+| `component.landing.featureGrid.motion.textBlock34` | 🟢 https://app.lottiefiles.com/animation/de5f69ea-2680-40f5-812e-0c97e4fb9731 (I5164:11487;5164:11237;5147:6155) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock34` |
+| `component.landing.featureGrid.motion.maingroup2` | main-group (I5164:11487;5164:11238) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-maingroup2` |
+| `component.landing.featureGrid.motion.pricingCard3` | PricingCard (I5164:11487;5313:4280) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingCard3` |
+| `component.landing.featureGrid.motion.pricingCardHeader2` | PricingCardHeader (I5164:11487;5313:4280;5151:11665) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingCardHeader2` |
+| `component.landing.featureGrid.motion.leftblock2` | left-block (I5164:11487;5313:4280;5151:11665;5021:27) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-leftblock2` |
+| `component.landing.featureGrid.motion.boardingPassPlatformOwnership3` | BOARDING PASS · PLATFORM OWNERSHIP (I5164:11487;5313:4280;5151:11665;5021:28) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-boardingPassPlatformOwnership3` |
+| `component.landing.featureGrid.motion.titleblock2` | title-block (I5164:11487;5313:4280;5151:11665;5021:29) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-titleblock2` |
+| `component.landing.featureGrid.motion.ownYourPlatform3` | Own Your Platform (I5164:11487;5313:4280;5151:11665;5021:30) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-ownYourPlatform3` |
+| `component.landing.featureGrid.motion.textBlock35` | No per-booking fees. No revenue share. No surprises. Just one platform, fully yours. Priced to fit your agency. (I5164:11487;5313:4280;5151:11665;5021:31) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock35` |
+| `component.landing.featureGrid.motion.seatblock2` | seat-block (I5164:11487;5313:4280;5151:11665;5021:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-seatblock2` |
+| `component.landing.featureGrid.motion.sEAT3` | SEAT (I5164:11487;5313:4280;5151:11665;5021:33) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-sEAT3` |
+| `component.landing.featureGrid.motion.n32A3` | 32A (I5164:11487;5313:4280;5151:11665;5021:34) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n32A3` |
+| `component.landing.featureGrid.motion.pricingbody2` | pricing-body (I5164:11487;5313:4280;5151:11666) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingbody2` |
+| `component.landing.featureGrid.motion.frame20955851122` | Frame 2095585112 (I5164:11487;5313:4280;5151:11810) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851122` |
+| `component.landing.featureGrid.motion.frame20955851102` | Frame 2095585110 (I5164:11487;5313:4280;5151:11791) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851102` |
+| `component.landing.featureGrid.motion.pricingTrackingLabel3` | PricingTrackingLabel (I5164:11487;5313:4280;5151:11792) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingTrackingLabel3` |
+| `component.landing.featureGrid.motion.onetimePlatformFee3` | ONE-TIME PLATFORM FEE (I5164:11487;5313:4280;5151:11792;5151:9474) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-onetimePlatformFee3` |
+| `component.landing.featureGrid.motion.priceDisplay3` | PriceDisplay (I5164:11487;5313:4280;5151:11793) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-priceDisplay3` |
+| `component.landing.featureGrid.motion.n30003` | $3,000 (I5164:11487;5313:4280;5151:11793;5151:11775) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n30003` |
+| `component.landing.featureGrid.motion.textBlock36` | One-time payment · No recurring platform costs (I5164:11487;5313:4280;5151:11793;5151:11776) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock36` |
+| `component.landing.featureGrid.motion.rectangle9` | Rectangle (I5164:11487;5313:4280;5151:11811) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-rectangle9` |
+| `component.landing.featureGrid.motion.frame20955851112` | Frame 2095585111 (I5164:11487;5313:4280;5151:11798) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame20955851112` |
+| `component.landing.featureGrid.motion.pricingTrackingLabel4` | PricingTrackingLabel (I5164:11487;5313:4280;5151:11799) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricingTrackingLabel4` |
+| `component.landing.featureGrid.motion.optionalSupportAddon3` | OPTIONAL SUPPORT ADD-ON (I5164:11487;5313:4280;5151:11799;5151:9476) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-optionalSupportAddon3` |
+| `component.landing.featureGrid.motion.priceDisplay4` | PriceDisplay (I5164:11487;5313:4280;5151:11800) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-priceDisplay4` |
+| `component.landing.featureGrid.motion.pricerow2` | price-row (I5164:11487;5313:4280;5151:11800;5151:11778) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-pricerow2` |
+| `component.landing.featureGrid.motion.n2503` | $250 (I5164:11487;5313:4280;5151:11800;5151:11779) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n2503` |
+| `component.landing.featureGrid.motion.month3` | /month (I5164:11487;5313:4280;5151:11800;5151:11780) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-month3` |
+| `component.landing.featureGrid.motion.supportUpdatesCancelAnytime3` | Support & updates · Cancel anytime (I5164:11487;5313:4280;5151:11800;5151:11781) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-supportUpdatesCancelAnytime3` |
+| `component.landing.featureGrid.motion.dividerwrap2` | divider-wrap (I5164:11487;5313:4280;5151:11670) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-dividerwrap2` |
+| `component.landing.featureGrid.motion.hdivider2` | h-divider (I5164:11487;5313:4280;5151:11671) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-hdivider2` |
+| `component.landing.featureGrid.motion.checklistGrid2` | ChecklistGrid (I5164:11487;5313:4280;5151:11672) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistGrid2` |
+| `component.landing.featureGrid.motion.everythingIncluded3` | Everything included: (I5164:11487;5313:4280;5151:11672;5021:36) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-everythingIncluded3` |
+| `component.landing.featureGrid.motion.columns2` | columns (I5164:11487;5313:4280;5151:11672;5021:37) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-columns2` |
+| `component.landing.featureGrid.motion.col5` | col (I5164:11487;5313:4280;5151:11672;5021:38) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-col5` |
+| `component.landing.featureGrid.motion.checklistItem9` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:39) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem9` |
+| `component.landing.featureGrid.motion.frame156155388733` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:39;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388733` |
+| `component.landing.featureGrid.motion.frame156155388734` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:39;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388734` |
+| `component.landing.featureGrid.motion.completeSourceCode10` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:39;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode10` |
+| `component.landing.featureGrid.motion.checklistItem10` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:43) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem10` |
+| `component.landing.featureGrid.motion.frame156155388735` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:43;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388735` |
+| `component.landing.featureGrid.motion.frame156155388736` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:43;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388736` |
+| `component.landing.featureGrid.motion.completeSourceCode11` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:43;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode11` |
+| `component.landing.featureGrid.motion.col6` | col (I5164:11487;5313:4280;5151:11672;5021:47) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-col6` |
+| `component.landing.featureGrid.motion.checklistItem11` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:48) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem11` |
+| `component.landing.featureGrid.motion.frame156155388737` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:48;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388737` |
+| `component.landing.featureGrid.motion.frame156155388738` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:48;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388738` |
+| `component.landing.featureGrid.motion.completeSourceCode12` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:48;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode12` |
+| `component.landing.featureGrid.motion.checklistItem12` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:52) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem12` |
+| `component.landing.featureGrid.motion.frame156155388739` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:52;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388739` |
+| `component.landing.featureGrid.motion.frame156155388740` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:52;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388740` |
+| `component.landing.featureGrid.motion.completeSourceCode13` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:52;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode13` |
+| `component.landing.featureGrid.motion.col7` | col (I5164:11487;5313:4280;5151:11672;5021:56) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-col7` |
+| `component.landing.featureGrid.motion.checklistItem13` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:57) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem13` |
+| `component.landing.featureGrid.motion.frame156155388741` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:57;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388741` |
+| `component.landing.featureGrid.motion.frame156155388742` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:57;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388742` |
+| `component.landing.featureGrid.motion.completeSourceCode14` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:57;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode14` |
+| `component.landing.featureGrid.motion.checklistItem14` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:61) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem14` |
+| `component.landing.featureGrid.motion.frame156155388743` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:61;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388743` |
+| `component.landing.featureGrid.motion.frame156155388744` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:61;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388744` |
+| `component.landing.featureGrid.motion.completeSourceCode15` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:61;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode15` |
+| `component.landing.featureGrid.motion.col8` | col (I5164:11487;5313:4280;5151:11672;5021:65) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-col8` |
+| `component.landing.featureGrid.motion.checklistItem15` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:66) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem15` |
+| `component.landing.featureGrid.motion.frame156155388745` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:66;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388745` |
+| `component.landing.featureGrid.motion.frame156155388746` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:66;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388746` |
+| `component.landing.featureGrid.motion.completeSourceCode16` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:66;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode16` |
+| `component.landing.featureGrid.motion.checklistItem16` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:70) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-checklistItem16` |
+| `component.landing.featureGrid.motion.frame156155388747` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:70;5018:3129) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388747` |
+| `component.landing.featureGrid.motion.frame156155388748` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:70;5018:3131) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-frame156155388748` |
+| `component.landing.featureGrid.motion.completeSourceCode17` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:70;5020:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-completeSourceCode17` |
+| `component.landing.featureGrid.motion.btnwrap2` | btn-wrap (I5164:11487;5313:4280;5151:11673) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-btnwrap2` |
+| `component.landing.featureGrid.motion.cta4` | Button/Primary (I5164:11487;5313:4280;5151:11674) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-cta4` |
+| `component.landing.featureGrid.motion.label4` | label (I5164:11487;5313:4280;5151:11674;2780:1424) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-label4` |
+| `component.landing.featureGrid.motion.iconButton4` | Icon/Button (I5164:11487;5313:4280;5151:11674;2780:1425) | `screen.landing.home` | `default`, `hover` | `component-landing-featureGrid-motion-iconButton4` |
+| `component.landing.featureGrid.motion.graphic4` | graphic (I5164:11487;5313:4280;5151:11674;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-graphic4` |
+| `component.landing.featureGrid.motion.group4` | Group (I5164:11487;5313:4280;5151:11674;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-group4` |
+| `component.landing.featureGrid.motion.trustStrip2` | TrustStrip (I5164:11487;5164:11257) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustStrip2` |
+| `component.landing.featureGrid.motion.allPlansBar2` | all-plans-bar (I5164:11487;5164:11257;5022:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-allPlansBar2` |
+| `component.landing.featureGrid.motion.platformIncludes3` | PLATFORM INCLUDES: (I5164:11487;5164:11257;5022:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-platformIncludes3` |
+| `component.landing.featureGrid.motion.divider5` | divider (I5164:11487;5164:11257;5022:16) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-divider5` |
+| `component.landing.featureGrid.motion.trustStripItem5` | TrustStripItem (I5164:11487;5164:11257;5022:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustStripItem5` |
+| `component.landing.featureGrid.motion.textBlock37` | 🔒 (I5164:11487;5164:11257;5022:17;5021:14) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock37` |
+| `component.landing.featureGrid.motion.banklevelSecurity3` | Bank-level security (I5164:11487;5164:11257;5022:17;5021:15) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-banklevelSecurity3` |
+| `component.landing.featureGrid.motion.divider6` | divider (I5164:11487;5164:11257;5022:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-divider6` |
+| `component.landing.featureGrid.motion.trustStripItem6` | TrustStripItem (I5164:11487;5164:11257;5022:21) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustStripItem6` |
+| `component.landing.featureGrid.motion.node3` | ✈ (I5164:11487;5164:11257;5022:21;5021:17) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-node3` |
+| `component.landing.featureGrid.motion.gdsNdcCertified3` | GDS & NDC certified (I5164:11487;5164:11257;5022:21;5021:18) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-gdsNdcCertified3` |
+| `component.landing.featureGrid.motion.divider7` | divider (I5164:11487;5164:11257;5022:24) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-divider7` |
+| `component.landing.featureGrid.motion.trustStripItem7` | TrustStripItem (I5164:11487;5164:11257;5022:25) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustStripItem7` |
+| `component.landing.featureGrid.motion.textBlock38` | 👥 (I5164:11487;5164:11257;5022:25;5021:20) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock38` |
+| `component.landing.featureGrid.motion.trustedByAgencies3` | Trusted by agencies (I5164:11487;5164:11257;5022:25;5021:21) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustedByAgencies3` |
+| `component.landing.featureGrid.motion.divider8` | divider (I5164:11487;5164:11257;5022:28) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-divider8` |
+| `component.landing.featureGrid.motion.trustStripItem8` | TrustStripItem (I5164:11487;5164:11257;5022:29) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-trustStripItem8` |
+| `component.landing.featureGrid.motion.textBlock39` | 📞 (I5164:11487;5164:11257;5022:29;5021:23) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock39` |
+| `component.landing.featureGrid.motion.n247SupportAvailable3` | 24/7 support available (I5164:11487;5164:11257;5022:29;5021:24) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-n247SupportAvailable3` |
+| `component.landing.featureGrid.motion.textBlock40` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:11487;5164:11257;5022:32) | `screen.landing.home` | `default` | `component-landing-featureGrid-motion-textBlock40` |
+| `component.landing.socialProof.root` | Social proof desktop (Gherkin: component.landing.socialProof) | `screen.landing.home` | `default`, `hover` | `component-landing-socialProof-root` |
+| `component.landing.socialProof.root2` | SocialProofSection (I5164:6568;5151:13742) | `screen.landing.home` | `default` | `component-landing-socialProof-root2` |
+| `component.landing.socialProof.frame2095585154` | Frame 2095585154 (I5164:6568;5151:13742;5151:14400) | `screen.landing.home` | `default` | `component-landing-socialProof-frame2095585154` |
+| `component.landing.socialProof.headerWrap` | header-wrap (I5164:6568;5151:13742;5159:4999) | `screen.landing.home` | `default` | `component-landing-socialProof-headerWrap` |
+| `component.landing.socialProof.sectionHeader` | SectionHeader/SocialProof (I5164:6568;5151:13742;5159:5000) | `screen.landing.home` | `default` | `component-landing-socialProof-sectionHeader` |
+| `component.landing.socialProof.sectionPill` | SectionPill (I5164:6568;5151:13742;5159:5000;3173:14) | `screen.landing.home` | `default` | `component-landing-socialProof-sectionPill` |
+| `component.landing.socialProof.trustedByLeaders` | Trusted by Leaders (I5164:6568;5151:13742;5159:5000;3173:14;3171:15) | `screen.landing.home` | `default` | `component-landing-socialProof-trustedByLeaders` |
+| `component.landing.socialProof.frame2095585105` | Frame 2095585105 (I5164:6568;5151:13742;5159:5000;3174:1447) | `screen.landing.home` | `default` | `component-landing-socialProof-frame2095585105` |
+| `component.landing.socialProof.textBlock` | Built for Founders, Proven in Production (I5164:6568;5151:13742;5159:5000;3173:17) | `screen.landing.home` | `default` | `component-landing-socialProof-textBlock` |
+| `component.landing.socialProof.textBlock2` | Travel companies worldwide trust MaqsoodTravel to power their booking platforms. (I5164:6568;5151:13742;5159:5000;3173:18) | `screen.landing.home` | `default` | `component-landing-socialProof-textBlock2` |
+| `component.landing.socialProof.frame2095585155` | Frame 2095585155 (I5164:6568;5151:13742;5151:14441) | `screen.landing.home` | `default` | `component-landing-socialProof-frame2095585155` |
+| `component.landing.socialProof.testimonialsRow` | testimonials-row (I5164:6568;5151:13742;5159:5007) | `screen.landing.home` | `default`, `hover` | `component-landing-socialProof-testimonialsRow` |
+| `component.landing.socialProof.testimonialBlock` | TestimonialBlock (I5164:6568;5151:13742;5159:5008) | `screen.landing.home` | `default`, `hover` | `component-landing-socialProof-testimonialBlock` |
+| `component.landing.socialProof.testimonialLogoCard` | TestimonialLogoCard (I5164:6568;5151:13742;5159:5008;5159:23) | `screen.landing.home` | `default` | `component-landing-socialProof-testimonialLogoCard` |
+| `component.landing.socialProof.logoSlot` | logo-slot (I5164:6568;5151:13742;5159:5008;5159:23;5158:14) | `screen.landing.home` | `default` | `component-landing-socialProof-logoSlot` |
+| `component.landing.socialProof.companyLogo` | Company logo (I5164:6568;5151:13742;5159:5008;5159:23;5158:15) | `screen.landing.home` | `default` | `component-landing-socialProof-companyLogo` |
+| `component.landing.socialProof.textcol` | text-col (I5164:6568;5151:13742;5159:5008;5159:24) | `screen.landing.home` | `default` | `component-landing-socialProof-textcol` |
+| `component.landing.socialProof.quote` | quote (I5164:6568;5151:13742;5159:5008;5151:13709) | `screen.landing.home` | `default` | `component-landing-socialProof-quote` |
+| `component.landing.socialProof.testimonialAuthor` | TestimonialAuthor (I5164:6568;5151:13742;5159:5008;5159:26) | `screen.landing.home` | `default` | `component-landing-socialProof-testimonialAuthor` |
+| `component.landing.socialProof.avatarInitials` | AvatarInitials (I5164:6568;5151:13742;5159:5008;5159:26;5159:14) | `screen.landing.home` | `default` | `component-landing-socialProof-avatarInitials` |
+| `component.landing.socialProof.lI` | LI (I5164:6568;5151:13742;5159:5008;5159:26;5159:14;3171:25) | `screen.landing.home` | `default` | `component-landing-socialProof-lI` |
+| `component.landing.socialProof.textcol2` | text-col (I5164:6568;5151:13742;5159:5008;5159:26;5159:18) | `screen.landing.home` | `default` | `component-landing-socialProof-textcol2` |
+| `component.landing.socialProof.moazamArshad` | Moazam Arshad (I5164:6568;5151:13742;5159:5008;5159:26;5159:19) | `screen.landing.home` | `default` | `component-landing-socialProof-moazamArshad` |
+| `component.landing.socialProof.founderCeo` | Founder & CEO (I5164:6568;5151:13742;5159:5008;5159:26;5159:20) | `screen.landing.home` | `default` | `component-landing-socialProof-founderCeo` |
+| `component.landing.socialProof.ukbasedIataTravelAgency` | UK-based IATA travel agency (I5164:6568;5151:13742;5159:5008;5159:26;5159:21) | `screen.landing.home` | `default` | `component-landing-socialProof-ukbasedIataTravelAgency` |
+| `component.landing.socialProof.testimonialBlock2` | TestimonialBlock (I5164:6568;5151:13742;5159:5023) | `screen.landing.home` | `default`, `hover` | `component-landing-socialProof-testimonialBlock2` |
+| `component.landing.socialProof.testimonialLogoCard2` | TestimonialLogoCard (I5164:6568;5151:13742;5159:5023;5159:36) | `screen.landing.home` | `default` | `component-landing-socialProof-testimonialLogoCard2` |
+| `component.landing.socialProof.logoSlot2` | logo-slot (I5164:6568;5151:13742;5159:5023;5159:36;5158:14) | `screen.landing.home` | `default` | `component-landing-socialProof-logoSlot2` |
+| `component.landing.socialProof.companyLogo2` | Company logo (I5164:6568;5151:13742;5159:5023;5159:36;5158:15) | `screen.landing.home` | `default` | `component-landing-socialProof-companyLogo2` |
+| `component.landing.socialProof.textcol3` | text-col (I5164:6568;5151:13742;5159:5023;5159:37) | `screen.landing.home` | `default` | `component-landing-socialProof-textcol3` |
+| `component.landing.socialProof.textBlock3` | "Switching off Amadeus felt risky. MaqqsedTravel had us connected to Sabre, NDC and Travelport in week one. We kept our existing contracts — nothing changed for our clients." (I5164:6568;5151:13742;5159:5023;5159:38) | `screen.landing.home` | `default` | `component-landing-socialProof-textBlock3` |
+| `component.landing.socialProof.testimonialAuthor2` | TestimonialAuthor (I5164:6568;5151:13742;5159:5023;5159:39) | `screen.landing.home` | `default` | `component-landing-socialProof-testimonialAuthor2` |
+| `component.landing.socialProof.avatarInitials2` | AvatarInitials (I5164:6568;5151:13742;5159:5023;5159:39;5159:14) | `screen.landing.home` | `default` | `component-landing-socialProof-avatarInitials2` |
+| `component.landing.socialProof.lI2` | LI (I5164:6568;5151:13742;5159:5023;5159:39;5159:14;3171:25) | `screen.landing.home` | `default` | `component-landing-socialProof-lI2` |
+| `component.landing.socialProof.textcol4` | text-col (I5164:6568;5151:13742;5159:5023;5159:39;5159:18) | `screen.landing.home` | `default` | `component-landing-socialProof-textcol4` |
+| `component.landing.socialProof.moazamArshad2` | Moazam Arshad (I5164:6568;5151:13742;5159:5023;5159:39;5159:19) | `screen.landing.home` | `default` | `component-landing-socialProof-moazamArshad2` |
+| `component.landing.socialProof.founderCeo2` | Founder & CEO (I5164:6568;5151:13742;5159:5023;5159:39;5159:20) | `screen.landing.home` | `default` | `component-landing-socialProof-founderCeo2` |
+| `component.landing.socialProof.ukbasedIataTravelAgency2` | UK-based IATA travel agency (I5164:6568;5151:13742;5159:5023;5159:39;5159:21) | `screen.landing.home` | `default` | `component-landing-socialProof-ukbasedIataTravelAgency2` |
+| `component.landing.socialProof.progressWrap` | progress-wrap (I5164:6568;5151:13742;5159:5038) | `screen.landing.home` | `default` | `component-landing-socialProof-progressWrap` |
+| `component.landing.socialProof.slideProgressBar` | SlideProgressBar (I5164:6568;5151:13742;5159:5039) | `screen.landing.home` | `default`, `hover` | `component-landing-socialProof-slideProgressBar` |
+| `component.landing.socialProof.track` | track (I5164:6568;5151:13742;5159:5039;5158:17) | `screen.landing.home` | `default` | `component-landing-socialProof-track` |
+| `component.landing.socialProof.fill` | fill (I5164:6568;5151:13742;5159:5039;5158:18) | `screen.landing.home` | `default` | `component-landing-socialProof-fill` |
+| `component.landing.socialProof.slideNumbers` | slide-numbers (I5164:6568;5151:13742;5159:5039;5158:19) | `screen.landing.home` | `default` | `component-landing-socialProof-slideNumbers` |
+| `component.landing.socialProof.n1` | 1 (I5164:6568;5151:13742;5159:5039;5158:20) | `screen.landing.home` | `default` | `component-landing-socialProof-n1` |
+| `component.landing.socialProof.n2` | 2 (I5164:6568;5151:13742;5159:5039;5158:21) | `screen.landing.home` | `default` | `component-landing-socialProof-n2` |
+| `component.landing.socialProof.n3` | 3 (I5164:6568;5151:13742;5159:5039;5158:22) | `screen.landing.home` | `default` | `component-landing-socialProof-n3` |
+| `component.landing.socialProof.integrationsStrip` | Integrations Strip (I5164:6568;5151:13791) | `screen.landing.home` | `default` | `component-landing-socialProof-integrationsStrip` |
+| `component.landing.socialProof.container` | Container (I5164:6568;5151:13791;5151:13713) | `screen.landing.home` | `default` | `component-landing-socialProof-container` |
+| `component.landing.socialProof.paragraph` | Paragraph (I5164:6568;5151:13791;5151:13714) | `screen.landing.home` | `default` | `component-landing-socialProof-paragraph` |
+| `component.landing.socialProof.textBlock4` | Travel agencies worldwide trust MaqsoodTravel to power their booking platforms. (I5164:6568;5151:13791;5151:13715) | `screen.landing.home` | `default` | `component-landing-socialProof-textBlock4` |
+| `component.landing.socialProof.container2` | Container (I5164:6568;5151:13791;5151:13716) | `screen.landing.home` | `default` | `component-landing-socialProof-container2` |
+| `component.landing.socialProof.container3` | Container (I5164:6568;5151:13791;5151:13717) | `screen.landing.home` | `default` | `component-landing-socialProof-container3` |
+| `component.landing.socialProof.rectangle` | Rectangle (I5164:6568;5151:13791;5151:13718) | `screen.landing.home` | `default` | `component-landing-socialProof-rectangle` |
+| `component.landing.socialProof.frame58` | Frame 58 (I5164:6568;5151:13791;5151:13719) | `screen.landing.home` | `default` | `component-landing-socialProof-frame58` |
+| `component.landing.socialProof.image23` | image 23 (I5164:6568;5151:13791;5151:13720) | `screen.landing.home` | `default` | `component-landing-socialProof-image23` |
+| `component.landing.socialProof.image14` | image 14 (I5164:6568;5151:13791;5151:13721) | `screen.landing.home` | `default` | `component-landing-socialProof-image14` |
+| `component.landing.socialProof.frame54` | Frame 54 (I5164:6568;5151:13791;5151:13722) | `screen.landing.home` | `default` | `component-landing-socialProof-frame54` |
+| `component.landing.socialProof.image16` | image 16 (I5164:6568;5151:13791;5151:13723) | `screen.landing.home` | `default` | `component-landing-socialProof-image16` |
+| `component.landing.socialProof.image13` | image 13 (I5164:6568;5151:13791;5151:13724) | `screen.landing.home` | `default` | `component-landing-socialProof-image13` |
+| `component.landing.socialProof.frame60` | Frame 60 (I5164:6568;5151:13791;5151:13725) | `screen.landing.home` | `default` | `component-landing-socialProof-frame60` |
+| `component.landing.socialProof.image26` | image 26 (I5164:6568;5151:13791;5151:13726) | `screen.landing.home` | `default` | `component-landing-socialProof-image26` |
+| `component.landing.socialProof.image12` | image 12 (I5164:6568;5151:13791;5151:13727) | `screen.landing.home` | `default` | `component-landing-socialProof-image12` |
+| `component.landing.socialProof.frame55` | Frame 55 (I5164:6568;5151:13791;5151:13728) | `screen.landing.home` | `default` | `component-landing-socialProof-frame55` |
+| `component.landing.socialProof.image17` | image 17 (I5164:6568;5151:13791;5151:13729) | `screen.landing.home` | `default` | `component-landing-socialProof-image17` |
+| `component.landing.socialProof.image19` | image 19 (I5164:6568;5151:13791;5151:13730) | `screen.landing.home` | `default` | `component-landing-socialProof-image19` |
+| `component.landing.socialProof.frame56` | Frame 56 (I5164:6568;5151:13791;5151:13731) | `screen.landing.home` | `default` | `component-landing-socialProof-frame56` |
+| `component.landing.socialProof.image18` | image 18 (I5164:6568;5151:13791;5151:13732) | `screen.landing.home` | `default` | `component-landing-socialProof-image18` |
+| `component.landing.socialProof.frame61` | Frame 61 (I5164:6568;5151:13791;5151:13733) | `screen.landing.home` | `default` | `component-landing-socialProof-frame61` |
+| `component.landing.socialProof.image25` | image 25 (I5164:6568;5151:13791;5151:13734) | `screen.landing.home` | `default` | `component-landing-socialProof-image25` |
+| `component.landing.socialProof.image15` | image 15 (I5164:6568;5151:13791;5151:13735) | `screen.landing.home` | `default` | `component-landing-socialProof-image15` |
+| `component.landing.socialProof.frame59` | Frame 59 (I5164:6568;5151:13791;5151:13736) | `screen.landing.home` | `default` | `component-landing-socialProof-frame59` |
+| `component.landing.socialProof.image24` | image 24 (I5164:6568;5151:13791;5151:13737) | `screen.landing.home` | `default` | `component-landing-socialProof-image24` |
+| `component.landing.socialProof.frame62` | Frame 62 (I5164:6568;5151:13791;5151:13738) | `screen.landing.home` | `default` | `component-landing-socialProof-frame62` |
+| `component.landing.socialProof.image22` | image 22 (I5164:6568;5151:13791;5151:13739) | `screen.landing.home` | `default` | `component-landing-socialProof-image22` |
+| `component.landing.socialProof.mobile.root` | Social proof mobile (Gherkin @393px) | `screen.landing.home` | `default`, `hover` | `component-landing-socialProof-mobile-root` |
+| `component.landing.socialProof.mobile.sectionRoot` | Social Proof (5164:6837) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-sectionRoot` |
+| `component.landing.socialProof.mobile.container` | Container (5164:6838) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container` |
+| `component.landing.socialProof.mobile.sectionPill` | SectionPill (5164:6839) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-sectionPill` |
+| `component.landing.socialProof.mobile.trustedByLeaders` | Trusted by Leaders (5164:6841) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-trustedByLeaders` |
+| `component.landing.socialProof.mobile.heading` | Heading 2 (5164:6842) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-heading` |
+| `component.landing.socialProof.mobile.builtForFounders` | Built for Founders, (5164:6843) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-builtForFounders` |
+| `component.landing.socialProof.mobile.text` | Text (5164:6844) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-text` |
+| `component.landing.socialProof.mobile.provenInProduction` | Proven in Production (5164:6845) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-provenInProduction` |
+| `component.landing.socialProof.mobile.paragraph` | Paragraph (5164:6846) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-paragraph` |
+| `component.landing.socialProof.mobile.textBlock` | Travel companies worldwide trust FlightCore to pow (5164:6847) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-textBlock` |
+| `component.landing.socialProof.mobile.frame2095585138` | Frame 2095585138 (5164:6848) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame2095585138` |
+| `component.landing.socialProof.mobile.logo` | Logo (5164:6849) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-logo` |
+| `component.landing.socialProof.mobile.image27` | image 27 (5164:6850) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image27` |
+| `component.landing.socialProof.mobile.frame2095585137` | Frame 2095585137 (5164:6851) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame2095585137` |
+| `component.landing.socialProof.mobile.quote` | quote (5164:6852) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-quote` |
+| `component.landing.socialProof.mobile.container2` | Container (5164:6853) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container2` |
+| `component.landing.socialProof.mobile.frame1561553971` | Frame 1561553971 (5164:6854) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame1561553971` |
+| `component.landing.socialProof.mobile.container3` | Container (5164:6855) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container3` |
+| `component.landing.socialProof.mobile.container4` | Container (5164:6856) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container4` |
+| `component.landing.socialProof.mobile.text2` | Text (5164:6857) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-text2` |
+| `component.landing.socialProof.mobile.mA` | MA (5164:6858) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-mA` |
+| `component.landing.socialProof.mobile.container5` | Container (5164:6859) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container5` |
+| `component.landing.socialProof.mobile.moazamArshad` | Moazam Arshad (5164:6860) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-moazamArshad` |
+| `component.landing.socialProof.mobile.founderCeo` | Founder & CEO (5164:6861) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-founderCeo` |
+| `component.landing.socialProof.mobile.paragraph2` | Paragraph (5164:6862) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-paragraph2` |
+| `component.landing.socialProof.mobile.ukbasedIataTravelAgency` | UK-based IATA travel agency (5164:6863) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-ukbasedIataTravelAgency` |
+| `component.landing.socialProof.mobile.frame2095585139` | Frame 2095585139 (5164:6864) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame2095585139` |
+| `component.landing.socialProof.mobile.logo2` | Logo (5164:6865) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-logo2` |
+| `component.landing.socialProof.mobile.textBlock2` | Screenshot 2026-06-17 at 2.20.54 PM 1 (5164:6866) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-textBlock2` |
+| `component.landing.socialProof.mobile.frame20955851372` | Frame 2095585137 (5164:6867) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame20955851372` |
+| `component.landing.socialProof.mobile.quote2` | quote (5164:6868) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-quote2` |
+| `component.landing.socialProof.mobile.container6` | Container (5164:6869) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container6` |
+| `component.landing.socialProof.mobile.frame15615539712` | Frame 1561553971 (5164:6870) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame15615539712` |
+| `component.landing.socialProof.mobile.container7` | Container (5164:6871) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container7` |
+| `component.landing.socialProof.mobile.container8` | Container (5164:6872) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container8` |
+| `component.landing.socialProof.mobile.text3` | Text (5164:6873) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-text3` |
+| `component.landing.socialProof.mobile.lB` | LB (5164:6874) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-lB` |
+| `component.landing.socialProof.mobile.container9` | Container (5164:6875) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container9` |
+| `component.landing.socialProof.mobile.lanceBohlingArshad` | lance Bohling Arshad (5164:6876) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-lanceBohlingArshad` |
+| `component.landing.socialProof.mobile.founderCeo2` | Founder & CEO (5164:6877) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-founderCeo2` |
+| `component.landing.socialProof.mobile.paragraph3` | Paragraph (5164:6878) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-paragraph3` |
+| `component.landing.socialProof.mobile.ukbasedIataTravelAgency2` | UK-based IATA travel agency (5164:6879) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-ukbasedIataTravelAgency2` |
+| `component.landing.socialProof.mobile.planeDecor` | Vector/Variant21 (5164:6880) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-planeDecor` |
+| `component.landing.socialProof.mobile.frame2095585144` | Frame 2095585144 (5164:6881) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame2095585144` |
+| `component.landing.socialProof.mobile.frame2095585140` | Frame 2095585140 (5164:6882) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame2095585140` |
+| `component.landing.socialProof.mobile.frame2095585141` | Frame 2095585141 (5164:6883) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame2095585141` |
+| `component.landing.socialProof.mobile.frame2095585142` | Frame 2095585142 (5164:6884) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame2095585142` |
+| `component.landing.socialProof.mobile.n1` | 1 (5164:6885) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-n1` |
+| `component.landing.socialProof.mobile.n2` | 2 (5164:6886) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-n2` |
+| `component.landing.socialProof.mobile.n3` | 3 (5164:6887) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-n3` |
+| `component.landing.socialProof.mobile.container10` | Container (5164:6888) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container10` |
+| `component.landing.socialProof.mobile.container11` | Container (5164:6889) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container11` |
+| `component.landing.socialProof.mobile.paragraph4` | Paragraph (5164:6890) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-paragraph4` |
+| `component.landing.socialProof.mobile.textBlock3` | Travel agencies worldwide trust MaqsoodTravel to power their booking platforms. (5164:6891) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-textBlock3` |
+| `component.landing.socialProof.mobile.container12` | Container (5164:6892) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-container12` |
+| `component.landing.socialProof.mobile.rectangle` | Rectangle (5164:6893) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-rectangle` |
+| `component.landing.socialProof.mobile.frame59` | Frame 59 (5164:6894) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame59` |
+| `component.landing.socialProof.mobile.image24` | image 24 (5164:6895) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image24` |
+| `component.landing.socialProof.mobile.frame58` | Frame 58 (5164:6896) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame58` |
+| `component.landing.socialProof.mobile.image23` | image 23 (5164:6897) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image23` |
+| `component.landing.socialProof.mobile.image14` | image 14 (5164:6898) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image14` |
+| `component.landing.socialProof.mobile.frame54` | Frame 54 (5164:6899) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame54` |
+| `component.landing.socialProof.mobile.image16` | image 16 (5164:6900) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image16` |
+| `component.landing.socialProof.mobile.image13` | image 13 (5164:6901) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image13` |
+| `component.landing.socialProof.mobile.frame55` | Frame 55 (5164:6902) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame55` |
+| `component.landing.socialProof.mobile.image17` | image 17 (5164:6903) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image17` |
+| `component.landing.socialProof.mobile.image12` | image 12 (5164:6904) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image12` |
+| `component.landing.socialProof.mobile.image19` | image 19 (5164:6905) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image19` |
+| `component.landing.socialProof.mobile.frame60` | Frame 60 (5164:6906) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame60` |
+| `component.landing.socialProof.mobile.image26` | image 26 (5164:6907) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image26` |
+| `component.landing.socialProof.mobile.frame56` | Frame 56 (5164:6908) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame56` |
+| `component.landing.socialProof.mobile.image18` | image 18 (5164:6909) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image18` |
+| `component.landing.socialProof.mobile.image15` | image 15 (5164:6910) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image15` |
+| `component.landing.socialProof.mobile.frame61` | Frame 61 (5164:6911) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame61` |
+| `component.landing.socialProof.mobile.image25` | image 25 (5164:6912) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image25` |
+| `component.landing.socialProof.mobile.frame62` | Frame 62 (5164:6913) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-frame62` |
+| `component.landing.socialProof.mobile.image22` | image 22 (5164:6914) | `screen.landing.home` | `default` | `component-landing-socialProof-mobile-image22` |
+| `component.landing.socialProof.motion.root` | Social proof testimonials motion (Gherkin: 5307:6608) | `screen.landing.home` | `default`, `hover` | `component-landing-socialProof-motion-root` |
+| `component.landing.socialProof.motion.sectionHeader` | SectionHeader/SocialProof (5307:6609) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-sectionHeader` |
+| `component.landing.socialProof.motion.sectionPill` | SectionPill (I5307:6609;3173:14) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-sectionPill` |
+| `component.landing.socialProof.motion.trustedByLeaders` | Trusted by Leaders (I5307:6609;3173:14;3171:15) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-trustedByLeaders` |
+| `component.landing.socialProof.motion.frame2095585105` | Frame 2095585105 (I5307:6609;3174:1447) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585105` |
+| `component.landing.socialProof.motion.textBlock` | Built for Founders, Proven in Production (I5307:6609;3173:17) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-textBlock` |
+| `component.landing.socialProof.motion.textBlock2` | Travel companies worldwide trust MaqsoodTravel to power their booking platforms. (I5307:6609;3173:18) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-textBlock2` |
+| `component.landing.socialProof.motion.frame2095585106` | Frame 2095585106 (5307:6610) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585106` |
+| `component.landing.socialProof.motion.frame2095585145` | Frame 2095585145 (5307:6611) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585145` |
+| `component.landing.socialProof.motion.frame2095585143` | Frame 2095585143 (5307:6612) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585143` |
+| `component.landing.socialProof.motion.frame2095585138` | Frame 2095585138 (5307:6613) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585138` |
+| `component.landing.socialProof.motion.logo` | Logo (5307:6614) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-logo` |
+| `component.landing.socialProof.motion.image27` | image 27 (5307:6615) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-image27` |
+| `component.landing.socialProof.motion.frame2095585137` | Frame 2095585137 (5307:6616) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585137` |
+| `component.landing.socialProof.motion.quote` | quote (5307:6617) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-quote` |
+| `component.landing.socialProof.motion.testimonialAuthor` | TestimonialAuthor (5307:6618) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-testimonialAuthor` |
+| `component.landing.socialProof.motion.avatarInitials` | AvatarInitials (5307:6619) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-avatarInitials` |
+| `component.landing.socialProof.motion.mA` | MA (5307:6620) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-mA` |
+| `component.landing.socialProof.motion.textcol` | text-col (5307:6621) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-textcol` |
+| `component.landing.socialProof.motion.name` | name (5307:6622) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-name` |
+| `component.landing.socialProof.motion.role` | role (5307:6623) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-role` |
+| `component.landing.socialProof.motion.company` | company (5307:6624) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-company` |
+| `component.landing.socialProof.motion.frame2095585139` | Frame 2095585139 (5307:6625) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585139` |
+| `component.landing.socialProof.motion.logo2` | Logo (5307:6626) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-logo2` |
+| `component.landing.socialProof.motion.textBlock3` | Screenshot 2026-06-17 at 2.20.54 PM 1 (5307:6627) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-textBlock3` |
+| `component.landing.socialProof.motion.frame20955851372` | Frame 2095585137 (5307:6628) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame20955851372` |
+| `component.landing.socialProof.motion.quote2` | quote (5307:6629) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-quote2` |
+| `component.landing.socialProof.motion.testimonialAuthor2` | TestimonialAuthor (5307:6630) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-testimonialAuthor2` |
+| `component.landing.socialProof.motion.avatarInitials2` | AvatarInitials (5307:6631) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-avatarInitials2` |
+| `component.landing.socialProof.motion.lB` | LB (5307:6632) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-lB` |
+| `component.landing.socialProof.motion.textcol2` | text-col (5307:6633) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-textcol2` |
+| `component.landing.socialProof.motion.name2` | name (5307:6634) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-name2` |
+| `component.landing.socialProof.motion.role2` | role (5307:6635) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-role2` |
+| `component.landing.socialProof.motion.company2` | company (5307:6636) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-company2` |
+| `component.landing.socialProof.motion.frame2095585144` | Frame 2095585144 (5307:6637) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585144` |
+| `component.landing.socialProof.motion.frame2095585140` | Frame 2095585140 (5307:6638) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585140` |
+| `component.landing.socialProof.motion.frame2095585141` | Frame 2095585141 (5307:6639) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585141` |
+| `component.landing.socialProof.motion.frame2095585142` | Frame 2095585142 (5307:6640) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-frame2095585142` |
+| `component.landing.socialProof.motion.n1` | 1 (5307:6641) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-n1` |
+| `component.landing.socialProof.motion.n2` | 2 (5307:6642) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-n2` |
+| `component.landing.socialProof.motion.n3` | 3 (5307:6643) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-n3` |
+| `component.landing.socialProof.motion.vector` | Vector (5307:6644) | `screen.landing.home` | `default` | `component-landing-socialProof-motion-vector` |
+| `component.landing.socialProof.clientsMotion.root` | Social proof clients strip motion (Gherkin: 5164:11204) | `screen.landing.home` | `default`, `hover` | `component-landing-socialProof-clientsMotion-root` |
+| `component.landing.socialProof.clientsMotion.container` | Container (I5164:11204;5164:11107) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-container` |
+| `component.landing.socialProof.clientsMotion.container2` | Container (I5164:11204;5164:11108) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-container2` |
+| `component.landing.socialProof.clientsMotion.paragraph` | Paragraph (I5164:11204;5164:11109) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-paragraph` |
+| `component.landing.socialProof.clientsMotion.textBlock` | Travel agencies worldwide trust MaqsoodTravel to power their booking platforms. (I5164:11204;5164:11110) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock` |
+| `component.landing.socialProof.clientsMotion.container3` | Container (I5164:11204;5164:11111) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-container3` |
+| `component.landing.socialProof.clientsMotion.container4` | Container (I5164:11204;5164:11112) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-container4` |
+| `component.landing.socialProof.clientsMotion.rectangle` | Rectangle (I5164:11204;5164:11113) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-rectangle` |
+| `component.landing.socialProof.clientsMotion.frame58` | Frame 58 (I5164:11204;5164:11114) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame58` |
+| `component.landing.socialProof.clientsMotion.image23` | image 23 (I5164:11204;5164:11115) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image23` |
+| `component.landing.socialProof.clientsMotion.image14` | image 14 (I5164:11204;5164:11116) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image14` |
+| `component.landing.socialProof.clientsMotion.frame54` | Frame 54 (I5164:11204;5164:11117) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame54` |
+| `component.landing.socialProof.clientsMotion.image16` | image 16 (I5164:11204;5164:11118) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image16` |
+| `component.landing.socialProof.clientsMotion.image13` | image 13 (I5164:11204;5164:11119) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image13` |
+| `component.landing.socialProof.clientsMotion.frame60` | Frame 60 (I5164:11204;5164:11120) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame60` |
+| `component.landing.socialProof.clientsMotion.image26` | image 26 (I5164:11204;5164:11121) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image26` |
+| `component.landing.socialProof.clientsMotion.image12` | image 12 (I5164:11204;5164:11122) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image12` |
+| `component.landing.socialProof.clientsMotion.frame55` | Frame 55 (I5164:11204;5164:11123) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame55` |
+| `component.landing.socialProof.clientsMotion.image17` | image 17 (I5164:11204;5164:11124) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image17` |
+| `component.landing.socialProof.clientsMotion.image19` | image 19 (I5164:11204;5164:11125) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image19` |
+| `component.landing.socialProof.clientsMotion.frame56` | Frame 56 (I5164:11204;5164:11126) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame56` |
+| `component.landing.socialProof.clientsMotion.image18` | image 18 (I5164:11204;5164:11127) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image18` |
+| `component.landing.socialProof.clientsMotion.frame61` | Frame 61 (I5164:11204;5164:11128) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame61` |
+| `component.landing.socialProof.clientsMotion.image25` | image 25 (I5164:11204;5164:11129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image25` |
+| `component.landing.socialProof.clientsMotion.image15` | image 15 (I5164:11204;5164:11130) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image15` |
+| `component.landing.socialProof.clientsMotion.frame59` | Frame 59 (I5164:11204;5164:11131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame59` |
+| `component.landing.socialProof.clientsMotion.image24` | image 24 (I5164:11204;5164:11132) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image24` |
+| `component.landing.socialProof.clientsMotion.frame62` | Frame 62 (I5164:11204;5164:11133) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame62` |
+| `component.landing.socialProof.clientsMotion.image22` | image 22 (I5164:11204;5164:11134) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-image22` |
+| `component.landing.socialProof.clientsMotion.root2` | NewPricingSection (5164:6564) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-root2` |
+| `component.landing.socialProof.clientsMotion.kuzu420map1475411` | kuzu420-map-14754 (1) 1 (I5164:6564;5151:11815) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-kuzu420map1475411` |
+| `component.landing.socialProof.clientsMotion.frame2095585158` | Frame 2095585158 (I5164:6564;5164:6218) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame2095585158` |
+| `component.landing.socialProof.clientsMotion.sectionHeader` | SectionHeader/Pricing (I5164:6564;5151:11816) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-sectionHeader` |
+| `component.landing.socialProof.clientsMotion.sectionPill` | SectionPill (I5164:6564;5151:11816;5023:14) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-sectionPill` |
+| `component.landing.socialProof.clientsMotion.simplePricing` | Simple Pricing (I5164:6564;5151:11816;5023:14;5018:3232) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-simplePricing` |
+| `component.landing.socialProof.clientsMotion.h1block` | h1-block (I5164:6564;5151:11816;5023:17) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-h1block` |
+| `component.landing.socialProof.clientsMotion.ownItDontRentIt` | Own it, Don't Rent it (I5164:6564;5151:11816;5023:18) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-ownItDontRentIt` |
+| `component.landing.socialProof.clientsMotion.textBlock2` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:6564;5151:11816;5023:19) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock2` |
+| `component.landing.socialProof.clientsMotion.frame2095585157` | Frame 2095585157 (I5164:6564;5164:6100) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame2095585157` |
+| `component.landing.socialProof.clientsMotion.routeStrip` | Route Strip (I5164:6564;5151:11817) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-routeStrip` |
+| `component.landing.socialProof.clientsMotion.textBlock3` | 🛫 From: Your Current Platform (I5164:6564;5151:11817;5018:3259) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock3` |
+| `component.landing.socialProof.clientsMotion.textBlock4` | 🛬 To: Full Platform Ownership (I5164:6564;5151:11817;5018:3260) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock4` |
+| `component.landing.socialProof.clientsMotion.textBlock5` | 🟢 https://app.lottiefiles.com/animation/de5f69ea-2680-40f5-812e-0c97e4fb9731 (I5164:6564;5151:11817;5147:6155) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock5` |
+| `component.landing.socialProof.clientsMotion.maingroup` | main-group (I5164:6564;5151:11818) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-maingroup` |
+| `component.landing.socialProof.clientsMotion.pricingCard` | PricingCard (I5164:6564;5151:11939) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingCard` |
+| `component.landing.socialProof.clientsMotion.pricingCardHeader` | PricingCardHeader (I5164:6564;5151:11939;5151:11665) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingCardHeader` |
+| `component.landing.socialProof.clientsMotion.leftblock` | left-block (I5164:6564;5151:11939;5151:11665;5021:27) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-leftblock` |
+| `component.landing.socialProof.clientsMotion.boardingPassPlatformOwnership` | BOARDING PASS · PLATFORM OWNERSHIP (I5164:6564;5151:11939;5151:11665;5021:28) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-boardingPassPlatformOwnership` |
+| `component.landing.socialProof.clientsMotion.titleblock` | title-block (I5164:6564;5151:11939;5151:11665;5021:29) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-titleblock` |
+| `component.landing.socialProof.clientsMotion.ownYourPlatform` | Own Your Platform (I5164:6564;5151:11939;5151:11665;5021:30) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-ownYourPlatform` |
+| `component.landing.socialProof.clientsMotion.textBlock6` | No per-booking fees. No revenue share. No surprises. Just one platform, fully yours. Priced to fit your agency. (I5164:6564;5151:11939;5151:11665;5021:31) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock6` |
+| `component.landing.socialProof.clientsMotion.seatblock` | seat-block (I5164:6564;5151:11939;5151:11665;5021:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-seatblock` |
+| `component.landing.socialProof.clientsMotion.sEAT` | SEAT (I5164:6564;5151:11939;5151:11665;5021:33) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-sEAT` |
+| `component.landing.socialProof.clientsMotion.n32A` | 32A (I5164:6564;5151:11939;5151:11665;5021:34) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n32A` |
+| `component.landing.socialProof.clientsMotion.pricingbody` | pricing-body (I5164:6564;5151:11939;5151:11666) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingbody` |
+| `component.landing.socialProof.clientsMotion.frame2095585112` | Frame 2095585112 (I5164:6564;5151:11939;5151:11810) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame2095585112` |
+| `component.landing.socialProof.clientsMotion.frame2095585110` | Frame 2095585110 (I5164:6564;5151:11939;5151:11791) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame2095585110` |
+| `component.landing.socialProof.clientsMotion.pricingTrackingLabel` | PricingTrackingLabel (I5164:6564;5151:11939;5151:11792) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingTrackingLabel` |
+| `component.landing.socialProof.clientsMotion.onetimePlatformFee` | ONE-TIME PLATFORM FEE (I5164:6564;5151:11939;5151:11792;5151:9474) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-onetimePlatformFee` |
+| `component.landing.socialProof.clientsMotion.priceDisplay` | PriceDisplay (I5164:6564;5151:11939;5151:11793) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-priceDisplay` |
+| `component.landing.socialProof.clientsMotion.n3000` | $3,000 (I5164:6564;5151:11939;5151:11793;5151:11775) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n3000` |
+| `component.landing.socialProof.clientsMotion.textBlock7` | One-time payment · No recurring platform costs (I5164:6564;5151:11939;5151:11793;5151:11776) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock7` |
+| `component.landing.socialProof.clientsMotion.rectangle2` | Rectangle (I5164:6564;5151:11939;5151:11811) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-rectangle2` |
+| `component.landing.socialProof.clientsMotion.frame2095585111` | Frame 2095585111 (I5164:6564;5151:11939;5151:11798) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame2095585111` |
+| `component.landing.socialProof.clientsMotion.pricingTrackingLabel2` | PricingTrackingLabel (I5164:6564;5151:11939;5151:11799) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingTrackingLabel2` |
+| `component.landing.socialProof.clientsMotion.optionalSupportAddon` | OPTIONAL SUPPORT ADD-ON (I5164:6564;5151:11939;5151:11799;5151:9476) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-optionalSupportAddon` |
+| `component.landing.socialProof.clientsMotion.priceDisplay2` | PriceDisplay (I5164:6564;5151:11939;5151:11800) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-priceDisplay2` |
+| `component.landing.socialProof.clientsMotion.pricerow` | price-row (I5164:6564;5151:11939;5151:11800;5151:11778) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricerow` |
+| `component.landing.socialProof.clientsMotion.n250` | $250 (I5164:6564;5151:11939;5151:11800;5151:11779) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n250` |
+| `component.landing.socialProof.clientsMotion.month` | /month (I5164:6564;5151:11939;5151:11800;5151:11780) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-month` |
+| `component.landing.socialProof.clientsMotion.supportUpdatesCancelAnytime` | Support & updates · Cancel anytime (I5164:6564;5151:11939;5151:11800;5151:11781) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-supportUpdatesCancelAnytime` |
+| `component.landing.socialProof.clientsMotion.dividerwrap` | divider-wrap (I5164:6564;5151:11939;5151:11670) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-dividerwrap` |
+| `component.landing.socialProof.clientsMotion.hdivider` | h-divider (I5164:6564;5151:11939;5151:11671) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-hdivider` |
+| `component.landing.socialProof.clientsMotion.checklistGrid` | ChecklistGrid (I5164:6564;5151:11939;5151:11672) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistGrid` |
+| `component.landing.socialProof.clientsMotion.everythingIncluded` | Everything included: (I5164:6564;5151:11939;5151:11672;5021:36) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-everythingIncluded` |
+| `component.landing.socialProof.clientsMotion.columns` | columns (I5164:6564;5151:11939;5151:11672;5021:37) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-columns` |
+| `component.landing.socialProof.clientsMotion.col` | col (I5164:6564;5151:11939;5151:11672;5021:38) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-col` |
+| `component.landing.socialProof.clientsMotion.checklistItem` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:39) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem` |
+| `component.landing.socialProof.clientsMotion.frame1561553887` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:39;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553887` |
+| `component.landing.socialProof.clientsMotion.frame15615538872` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:39;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame15615538872` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:39;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode` |
+| `component.landing.socialProof.clientsMotion.checklistItem2` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:43) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem2` |
+| `component.landing.socialProof.clientsMotion.frame15615538873` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:43;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame15615538873` |
+| `component.landing.socialProof.clientsMotion.frame15615538874` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:43;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame15615538874` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode2` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:43;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode2` |
+| `component.landing.socialProof.clientsMotion.col2` | col (I5164:6564;5151:11939;5151:11672;5021:47) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-col2` |
+| `component.landing.socialProof.clientsMotion.checklistItem3` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:48) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem3` |
+| `component.landing.socialProof.clientsMotion.frame15615538875` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:48;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame15615538875` |
+| `component.landing.socialProof.clientsMotion.frame15615538876` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:48;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame15615538876` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode3` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:48;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode3` |
+| `component.landing.socialProof.clientsMotion.checklistItem4` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:52) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem4` |
+| `component.landing.socialProof.clientsMotion.frame15615538877` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:52;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame15615538877` |
+| `component.landing.socialProof.clientsMotion.frame15615538878` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:52;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame15615538878` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode4` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:52;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode4` |
+| `component.landing.socialProof.clientsMotion.col3` | col (I5164:6564;5151:11939;5151:11672;5021:56) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-col3` |
+| `component.landing.socialProof.clientsMotion.checklistItem5` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:57) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem5` |
+| `component.landing.socialProof.clientsMotion.frame15615538879` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:57;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame15615538879` |
+| `component.landing.socialProof.clientsMotion.frame156155388710` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:57;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388710` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode5` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:57;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode5` |
+| `component.landing.socialProof.clientsMotion.checklistItem6` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:61) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem6` |
+| `component.landing.socialProof.clientsMotion.frame156155388711` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:61;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388711` |
+| `component.landing.socialProof.clientsMotion.frame156155388712` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:61;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388712` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode6` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:61;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode6` |
+| `component.landing.socialProof.clientsMotion.col4` | col (I5164:6564;5151:11939;5151:11672;5021:65) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-col4` |
+| `component.landing.socialProof.clientsMotion.checklistItem7` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:66) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem7` |
+| `component.landing.socialProof.clientsMotion.frame156155388713` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:66;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388713` |
+| `component.landing.socialProof.clientsMotion.frame156155388714` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:66;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388714` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode7` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:66;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode7` |
+| `component.landing.socialProof.clientsMotion.checklistItem8` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:70) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem8` |
+| `component.landing.socialProof.clientsMotion.frame156155388715` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:70;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388715` |
+| `component.landing.socialProof.clientsMotion.frame156155388716` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:70;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388716` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode8` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:70;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode8` |
+| `component.landing.socialProof.clientsMotion.btnwrap` | btn-wrap (I5164:6564;5151:11939;5151:11673) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-btnwrap` |
+| `component.landing.socialProof.clientsMotion.cta` | Button/Primary (I5164:6564;5151:11939;5151:11674) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-cta` |
+| `component.landing.socialProof.clientsMotion.label` | label (I5164:6564;5151:11939;5151:11674;2780:1424) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-label` |
+| `component.landing.socialProof.clientsMotion.iconButton` | Icon/Button (I5164:6564;5151:11939;5151:11674;2780:1425) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-iconButton` |
+| `component.landing.socialProof.clientsMotion.graphic` | graphic (I5164:6564;5151:11939;5151:11674;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-graphic` |
+| `component.landing.socialProof.clientsMotion.group` | Group (I5164:6564;5151:11939;5151:11674;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-group` |
+| `component.landing.socialProof.clientsMotion.trustStrip` | TrustStrip (I5164:6564;5151:11820) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustStrip` |
+| `component.landing.socialProof.clientsMotion.allPlansBar` | all-plans-bar (I5164:6564;5151:11820;5022:14) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-allPlansBar` |
+| `component.landing.socialProof.clientsMotion.platformIncludes` | PLATFORM INCLUDES: (I5164:6564;5151:11820;5022:15) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-platformIncludes` |
+| `component.landing.socialProof.clientsMotion.divider` | divider (I5164:6564;5151:11820;5022:16) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-divider` |
+| `component.landing.socialProof.clientsMotion.trustStripItem` | TrustStripItem (I5164:6564;5151:11820;5022:17) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustStripItem` |
+| `component.landing.socialProof.clientsMotion.textBlock8` | 🔒 (I5164:6564;5151:11820;5022:17;5021:14) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock8` |
+| `component.landing.socialProof.clientsMotion.banklevelSecurity` | Bank-level security (I5164:6564;5151:11820;5022:17;5021:15) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-banklevelSecurity` |
+| `component.landing.socialProof.clientsMotion.divider2` | divider (I5164:6564;5151:11820;5022:20) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-divider2` |
+| `component.landing.socialProof.clientsMotion.trustStripItem2` | TrustStripItem (I5164:6564;5151:11820;5022:21) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustStripItem2` |
+| `component.landing.socialProof.clientsMotion.node` | ✈ (I5164:6564;5151:11820;5022:21;5021:17) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-node` |
+| `component.landing.socialProof.clientsMotion.gdsNdcCertified` | GDS & NDC certified (I5164:6564;5151:11820;5022:21;5021:18) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-gdsNdcCertified` |
+| `component.landing.socialProof.clientsMotion.divider3` | divider (I5164:6564;5151:11820;5022:24) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-divider3` |
+| `component.landing.socialProof.clientsMotion.trustStripItem3` | TrustStripItem (I5164:6564;5151:11820;5022:25) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustStripItem3` |
+| `component.landing.socialProof.clientsMotion.textBlock9` | 👥 (I5164:6564;5151:11820;5022:25;5021:20) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock9` |
+| `component.landing.socialProof.clientsMotion.trustedByAgencies` | Trusted by agencies (I5164:6564;5151:11820;5022:25;5021:21) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustedByAgencies` |
+| `component.landing.socialProof.clientsMotion.divider4` | divider (I5164:6564;5151:11820;5022:28) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-divider4` |
+| `component.landing.socialProof.clientsMotion.trustStripItem4` | TrustStripItem (I5164:6564;5151:11820;5022:29) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustStripItem4` |
+| `component.landing.socialProof.clientsMotion.textBlock10` | 📞 (I5164:6564;5151:11820;5022:29;5021:23) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock10` |
+| `component.landing.socialProof.clientsMotion.n247SupportAvailable` | 24/7 support available (I5164:6564;5151:11820;5022:29;5021:24) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n247SupportAvailable` |
+| `component.landing.socialProof.clientsMotion.textBlock11` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:6564;5151:11820;5022:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock11` |
+| `component.landing.socialProof.clientsMotion.root3` | Own it (5164:6915) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-root3` |
+| `component.landing.socialProof.clientsMotion.frame1561553980` | Frame 1561553980 (5164:6916) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553980` |
+| `component.landing.socialProof.clientsMotion.frame1561553979` | Frame 1561553979 (5164:6917) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553979` |
+| `component.landing.socialProof.clientsMotion.frame1561553964` | Frame 1561553964 (5164:6918) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553964` |
+| `component.landing.socialProof.clientsMotion.sectionPill2` | SectionPill (5164:6919) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-sectionPill2` |
+| `component.landing.socialProof.clientsMotion.simplePricing2` | Simple Pricing (5164:6921) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-simplePricing2` |
+| `component.landing.socialProof.clientsMotion.headRow` | HeadRow (5164:6922) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-headRow` |
+| `component.landing.socialProof.clientsMotion.ownIt` | Own it, (5164:6923) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-ownIt` |
+| `component.landing.socialProof.clientsMotion.dontRentIt` | Don't Rent it (5164:6924) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-dontRentIt` |
+| `component.landing.socialProof.clientsMotion.textBlock12` | No per-transaction fees. No revenue sharing. Complete ownership. (5164:6925) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock12` |
+| `component.landing.socialProof.clientsMotion.frame1561553978` | Frame 1561553978 (5164:6926) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553978` |
+| `component.landing.socialProof.clientsMotion.routeStrip2` | RouteStrip (5164:6927) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-routeStrip2` |
+| `component.landing.socialProof.clientsMotion.textBlock13` | 🛫 From: Your Current Platform (5164:6928) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock13` |
+| `component.landing.socialProof.clientsMotion.loadingPlane1` | Loading Plane 1 (5164:6929) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-loadingPlane1` |
+| `component.landing.socialProof.clientsMotion.textBlock14` | 🛬 To: Full Ownership (5164:6930) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock14` |
+| `component.landing.socialProof.clientsMotion.pricingCard2` | PricingCard (5164:6931) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingCard2` |
+| `component.landing.socialProof.clientsMotion.frame` | Frame (5164:6932) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame` |
+| `component.landing.socialProof.clientsMotion.boardingPassPlatformOwnership2` | BOARDING PASS · PLATFORM OWNERSHIP (5164:6933) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-boardingPassPlatformOwnership2` |
+| `component.landing.socialProof.clientsMotion.ownYourPlatform2` | Own Your Platform (5164:6934) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-ownYourPlatform2` |
+| `component.landing.socialProof.clientsMotion.textBlock15` | Complete source code. Production-ready. Yours forever. (5164:6935) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock15` |
+| `component.landing.socialProof.clientsMotion.frame1561553874` | Frame 1561553874 (5164:6936) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553874` |
+| `component.landing.socialProof.clientsMotion.sEAT2` | SEAT (5164:6937) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-sEAT2` |
+| `component.landing.socialProof.clientsMotion.n32A2` | 32A (5164:6938) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n32A2` |
+| `component.landing.socialProof.clientsMotion.frame2` | Frame (5164:6939) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame2` |
+| `component.landing.socialProof.clientsMotion.frame1561553966` | Frame 1561553966 (5164:6940) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553966` |
+| `component.landing.socialProof.clientsMotion.frame1561553965` | Frame 1561553965 (5164:6941) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553965` |
+| `component.landing.socialProof.clientsMotion.onetimePlatformFee2` | ONE-TIME PLATFORM FEE (5164:6942) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-onetimePlatformFee2` |
+| `component.landing.socialProof.clientsMotion.n30002` | $3,000 (5164:6943) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n30002` |
+| `component.landing.socialProof.clientsMotion.textBlock16` | One-time payment · No recurring platform costs (5164:6944) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock16` |
+| `component.landing.socialProof.clientsMotion.frame3` | Frame (5164:6945) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame3` |
+| `component.landing.socialProof.clientsMotion.frame1561553968` | Frame 1561553968 (5164:6946) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553968` |
+| `component.landing.socialProof.clientsMotion.frame1561553967` | Frame 1561553967 (5164:6947) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553967` |
+| `component.landing.socialProof.clientsMotion.optionalSupportAddon2` | OPTIONAL SUPPORT ADD-ON (5164:6948) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-optionalSupportAddon2` |
+| `component.landing.socialProof.clientsMotion.frame4` | Frame (5164:6949) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame4` |
+| `component.landing.socialProof.clientsMotion.n2502` | $250 (5164:6950) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n2502` |
+| `component.landing.socialProof.clientsMotion.month2` | /month (5164:6951) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-month2` |
+| `component.landing.socialProof.clientsMotion.supportUpdatesCancelAnytime2` | Support & updates · Cancel anytime (5164:6952) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-supportUpdatesCancelAnytime2` |
+| `component.landing.socialProof.clientsMotion.frame5` | Frame (5164:6953) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame5` |
+| `component.landing.socialProof.clientsMotion.frame6` | Frame (5164:6954) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame6` |
+| `component.landing.socialProof.clientsMotion.frame1561553970` | Frame 1561553970 (5164:6955) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553970` |
+| `component.landing.socialProof.clientsMotion.everythingIncluded2` | Everything included: (5164:6956) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-everythingIncluded2` |
+| `component.landing.socialProof.clientsMotion.frame1561553969` | Frame 1561553969 (5164:6957) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553969` |
+| `component.landing.socialProof.clientsMotion.frame7` | Frame (5164:6958) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame7` |
+| `component.landing.socialProof.clientsMotion.frame8` | Frame (5164:6959) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame8` |
+| `component.landing.socialProof.clientsMotion.frame156155388717` | Frame 1561553887 (5164:6960) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388717` |
+| `component.landing.socialProof.clientsMotion.frame156155388718` | Frame 1561553887 (5164:6962) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388718` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode9` | Complete source code (5164:6964) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode9` |
+| `component.landing.socialProof.clientsMotion.frame9` | Frame (5164:6965) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame9` |
+| `component.landing.socialProof.clientsMotion.frame156155388719` | Frame 1561553887 (5164:6966) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388719` |
+| `component.landing.socialProof.clientsMotion.frame156155388720` | Frame 1561553887 (5164:6968) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388720` |
+| `component.landing.socialProof.clientsMotion.gdsNdcReady` | GDS & NDC ready (5164:6970) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-gdsNdcReady` |
+| `component.landing.socialProof.clientsMotion.frame10` | Frame (5164:6971) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame10` |
+| `component.landing.socialProof.clientsMotion.frame11` | Frame (5164:6972) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame11` |
+| `component.landing.socialProof.clientsMotion.frame156155388721` | Frame 1561553887 (5164:6973) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388721` |
+| `component.landing.socialProof.clientsMotion.frame156155388722` | Frame 1561553887 (5164:6975) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388722` |
+| `component.landing.socialProof.clientsMotion.whitelabelEngine` | White-label engine (5164:6977) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-whitelabelEngine` |
+| `component.landing.socialProof.clientsMotion.frame12` | Frame (5164:6978) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame12` |
+| `component.landing.socialProof.clientsMotion.frame156155388723` | Frame 1561553887 (5164:6979) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388723` |
+| `component.landing.socialProof.clientsMotion.frame156155388724` | Frame 1561553887 (5164:6981) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388724` |
+| `component.landing.socialProof.clientsMotion.apiDocumentation` | API documentation (5164:6983) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-apiDocumentation` |
+| `component.landing.socialProof.clientsMotion.frame13` | Frame (5164:6984) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame13` |
+| `component.landing.socialProof.clientsMotion.frame14` | Frame (5164:6985) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame14` |
+| `component.landing.socialProof.clientsMotion.frame156155388725` | Frame 1561553887 (5164:6986) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388725` |
+| `component.landing.socialProof.clientsMotion.frame156155388726` | Frame 1561553887 (5164:6988) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388726` |
+| `component.landing.socialProof.clientsMotion.multicurrency` | Multi-currency (5164:6990) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-multicurrency` |
+| `component.landing.socialProof.clientsMotion.frame15` | Frame (5164:6991) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame15` |
+| `component.landing.socialProof.clientsMotion.frame156155388727` | Frame 1561553887 (5164:6992) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388727` |
+| `component.landing.socialProof.clientsMotion.frame156155388728` | Frame 1561553887 (5164:6994) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388728` |
+| `component.landing.socialProof.clientsMotion.adminDashboard` | Admin dashboard (5164:6996) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-adminDashboard` |
+| `component.landing.socialProof.clientsMotion.frame16` | Frame (5164:6997) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame16` |
+| `component.landing.socialProof.clientsMotion.frame17` | Frame (5164:6998) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame17` |
+| `component.landing.socialProof.clientsMotion.frame156155388729` | Frame 1561553887 (5164:6999) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388729` |
+| `component.landing.socialProof.clientsMotion.frame156155388730` | Frame 1561553887 (5164:7001) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388730` |
+| `component.landing.socialProof.clientsMotion.paymentProcessing` | Payment processing (5164:7003) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-paymentProcessing` |
+| `component.landing.socialProof.clientsMotion.frame18` | Frame (5164:7004) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame18` |
+| `component.landing.socialProof.clientsMotion.frame156155388731` | Frame 1561553887 (5164:7005) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388731` |
+| `component.landing.socialProof.clientsMotion.frame156155388732` | Frame 1561553887 (5164:7007) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388732` |
+| `component.landing.socialProof.clientsMotion.securityCertified` | Security certified (5164:7009) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-securityCertified` |
+| `component.landing.socialProof.clientsMotion.cta2` | Button/Primary (5164:7010) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-cta2` |
+| `component.landing.socialProof.clientsMotion.label2` | label (I5164:7010;2780:1424) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-label2` |
+| `component.landing.socialProof.clientsMotion.iconButton2` | Icon/Button (I5164:7010;2780:1425) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-iconButton2` |
+| `component.landing.socialProof.clientsMotion.graphic2` | graphic (I5164:7010;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-graphic2` |
+| `component.landing.socialProof.clientsMotion.group2` | Group (I5164:7010;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-group2` |
+| `component.landing.socialProof.clientsMotion.frame1561553908` | Frame 1561553908 (5164:7011) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553908` |
+| `component.landing.socialProof.clientsMotion.allPlansStrip` | All Plans Strip (5164:7012) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-allPlansStrip` |
+| `component.landing.socialProof.clientsMotion.platformIncludes2` | PLATFORM INCLUDES: (5164:7013) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-platformIncludes2` |
+| `component.landing.socialProof.clientsMotion.rectangle3` | Rectangle (5164:7014) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-rectangle3` |
+| `component.landing.socialProof.clientsMotion.frame1561553904` | Frame 1561553904 (5164:7015) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553904` |
+| `component.landing.socialProof.clientsMotion.textBlock17` | 🔒 (5164:7016) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock17` |
+| `component.landing.socialProof.clientsMotion.banklevelSecurity2` | Bank-level security (5164:7017) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-banklevelSecurity2` |
+| `component.landing.socialProof.clientsMotion.rectangle4` | Rectangle (5164:7018) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-rectangle4` |
+| `component.landing.socialProof.clientsMotion.frame1561553905` | Frame 1561553905 (5164:7019) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553905` |
+| `component.landing.socialProof.clientsMotion.node2` | ✈ (5164:7020) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-node2` |
+| `component.landing.socialProof.clientsMotion.gdsNdcCertified2` | GDS & NDC certified (5164:7021) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-gdsNdcCertified2` |
+| `component.landing.socialProof.clientsMotion.rectangle5` | Rectangle (5164:7022) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-rectangle5` |
+| `component.landing.socialProof.clientsMotion.frame1561553906` | Frame 1561553906 (5164:7023) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553906` |
+| `component.landing.socialProof.clientsMotion.textBlock18` | 👥 (5164:7024) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock18` |
+| `component.landing.socialProof.clientsMotion.trustedByAgencies2` | Trusted by agencies (5164:7025) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustedByAgencies2` |
+| `component.landing.socialProof.clientsMotion.rectangle6` | Rectangle (5164:7026) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-rectangle6` |
+| `component.landing.socialProof.clientsMotion.frame1561553907` | Frame 1561553907 (5164:7027) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame1561553907` |
+| `component.landing.socialProof.clientsMotion.textBlock19` | 📞 (5164:7028) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock19` |
+| `component.landing.socialProof.clientsMotion.n247SupportAvailable2` | 24/7 support available (5164:7029) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n247SupportAvailable2` |
+| `component.landing.socialProof.clientsMotion.textBlock20` | No per-transaction fees. No revenue sharing. Complete ownership. (5164:7030) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock20` |
+| `component.landing.socialProof.clientsMotion.root4` | PricingSectionanimation (5164:11487) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-root4` |
+| `component.landing.socialProof.clientsMotion.kuzu420map14754112` | kuzu420-map-14754 (1) 1 (I5164:11487;5164:11235) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-kuzu420map14754112` |
+| `component.landing.socialProof.clientsMotion.sectionHeader2` | SectionHeader/Pricing (I5164:11487;5164:11236) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-sectionHeader2` |
+| `component.landing.socialProof.clientsMotion.sectionPill3` | SectionPill (I5164:11487;5164:11236;5023:14) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-sectionPill3` |
+| `component.landing.socialProof.clientsMotion.simplePricing3` | Simple Pricing (I5164:11487;5164:11236;5023:14;5018:3232) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-simplePricing3` |
+| `component.landing.socialProof.clientsMotion.h1block2` | h1-block (I5164:11487;5164:11236;5023:17) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-h1block2` |
+| `component.landing.socialProof.clientsMotion.ownItDontRentIt2` | Own it, Don't Rent it (I5164:11487;5164:11236;5023:18) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-ownItDontRentIt2` |
+| `component.landing.socialProof.clientsMotion.textBlock21` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:11487;5164:11236;5023:19) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock21` |
+| `component.landing.socialProof.clientsMotion.routeStrip3` | Route Strip (I5164:11487;5164:11237) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-routeStrip3` |
+| `component.landing.socialProof.clientsMotion.textBlock22` | 🛫 From: Your Current Platform (I5164:11487;5164:11237;5018:3259) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock22` |
+| `component.landing.socialProof.clientsMotion.textBlock23` | 🛬 To: Full Platform Ownership (I5164:11487;5164:11237;5018:3260) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock23` |
+| `component.landing.socialProof.clientsMotion.textBlock24` | 🟢 https://app.lottiefiles.com/animation/de5f69ea-2680-40f5-812e-0c97e4fb9731 (I5164:11487;5164:11237;5147:6155) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock24` |
+| `component.landing.socialProof.clientsMotion.maingroup2` | main-group (I5164:11487;5164:11238) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-maingroup2` |
+| `component.landing.socialProof.clientsMotion.pricingCard3` | PricingCard (I5164:11487;5313:4280) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingCard3` |
+| `component.landing.socialProof.clientsMotion.pricingCardHeader2` | PricingCardHeader (I5164:11487;5313:4280;5151:11665) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingCardHeader2` |
+| `component.landing.socialProof.clientsMotion.leftblock2` | left-block (I5164:11487;5313:4280;5151:11665;5021:27) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-leftblock2` |
+| `component.landing.socialProof.clientsMotion.boardingPassPlatformOwnership3` | BOARDING PASS · PLATFORM OWNERSHIP (I5164:11487;5313:4280;5151:11665;5021:28) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-boardingPassPlatformOwnership3` |
+| `component.landing.socialProof.clientsMotion.titleblock2` | title-block (I5164:11487;5313:4280;5151:11665;5021:29) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-titleblock2` |
+| `component.landing.socialProof.clientsMotion.ownYourPlatform3` | Own Your Platform (I5164:11487;5313:4280;5151:11665;5021:30) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-ownYourPlatform3` |
+| `component.landing.socialProof.clientsMotion.textBlock25` | No per-booking fees. No revenue share. No surprises. Just one platform, fully yours. Priced to fit your agency. (I5164:11487;5313:4280;5151:11665;5021:31) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock25` |
+| `component.landing.socialProof.clientsMotion.seatblock2` | seat-block (I5164:11487;5313:4280;5151:11665;5021:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-seatblock2` |
+| `component.landing.socialProof.clientsMotion.sEAT3` | SEAT (I5164:11487;5313:4280;5151:11665;5021:33) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-sEAT3` |
+| `component.landing.socialProof.clientsMotion.n32A3` | 32A (I5164:11487;5313:4280;5151:11665;5021:34) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n32A3` |
+| `component.landing.socialProof.clientsMotion.pricingbody2` | pricing-body (I5164:11487;5313:4280;5151:11666) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingbody2` |
+| `component.landing.socialProof.clientsMotion.frame20955851122` | Frame 2095585112 (I5164:11487;5313:4280;5151:11810) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame20955851122` |
+| `component.landing.socialProof.clientsMotion.frame20955851102` | Frame 2095585110 (I5164:11487;5313:4280;5151:11791) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame20955851102` |
+| `component.landing.socialProof.clientsMotion.pricingTrackingLabel3` | PricingTrackingLabel (I5164:11487;5313:4280;5151:11792) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingTrackingLabel3` |
+| `component.landing.socialProof.clientsMotion.onetimePlatformFee3` | ONE-TIME PLATFORM FEE (I5164:11487;5313:4280;5151:11792;5151:9474) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-onetimePlatformFee3` |
+| `component.landing.socialProof.clientsMotion.priceDisplay3` | PriceDisplay (I5164:11487;5313:4280;5151:11793) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-priceDisplay3` |
+| `component.landing.socialProof.clientsMotion.n30003` | $3,000 (I5164:11487;5313:4280;5151:11793;5151:11775) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n30003` |
+| `component.landing.socialProof.clientsMotion.textBlock26` | One-time payment · No recurring platform costs (I5164:11487;5313:4280;5151:11793;5151:11776) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock26` |
+| `component.landing.socialProof.clientsMotion.rectangle7` | Rectangle (I5164:11487;5313:4280;5151:11811) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-rectangle7` |
+| `component.landing.socialProof.clientsMotion.frame20955851112` | Frame 2095585111 (I5164:11487;5313:4280;5151:11798) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame20955851112` |
+| `component.landing.socialProof.clientsMotion.pricingTrackingLabel4` | PricingTrackingLabel (I5164:11487;5313:4280;5151:11799) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricingTrackingLabel4` |
+| `component.landing.socialProof.clientsMotion.optionalSupportAddon3` | OPTIONAL SUPPORT ADD-ON (I5164:11487;5313:4280;5151:11799;5151:9476) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-optionalSupportAddon3` |
+| `component.landing.socialProof.clientsMotion.priceDisplay4` | PriceDisplay (I5164:11487;5313:4280;5151:11800) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-priceDisplay4` |
+| `component.landing.socialProof.clientsMotion.pricerow2` | price-row (I5164:11487;5313:4280;5151:11800;5151:11778) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-pricerow2` |
+| `component.landing.socialProof.clientsMotion.n2503` | $250 (I5164:11487;5313:4280;5151:11800;5151:11779) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n2503` |
+| `component.landing.socialProof.clientsMotion.month3` | /month (I5164:11487;5313:4280;5151:11800;5151:11780) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-month3` |
+| `component.landing.socialProof.clientsMotion.supportUpdatesCancelAnytime3` | Support & updates · Cancel anytime (I5164:11487;5313:4280;5151:11800;5151:11781) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-supportUpdatesCancelAnytime3` |
+| `component.landing.socialProof.clientsMotion.dividerwrap2` | divider-wrap (I5164:11487;5313:4280;5151:11670) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-dividerwrap2` |
+| `component.landing.socialProof.clientsMotion.hdivider2` | h-divider (I5164:11487;5313:4280;5151:11671) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-hdivider2` |
+| `component.landing.socialProof.clientsMotion.checklistGrid2` | ChecklistGrid (I5164:11487;5313:4280;5151:11672) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistGrid2` |
+| `component.landing.socialProof.clientsMotion.everythingIncluded3` | Everything included: (I5164:11487;5313:4280;5151:11672;5021:36) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-everythingIncluded3` |
+| `component.landing.socialProof.clientsMotion.columns2` | columns (I5164:11487;5313:4280;5151:11672;5021:37) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-columns2` |
+| `component.landing.socialProof.clientsMotion.col5` | col (I5164:11487;5313:4280;5151:11672;5021:38) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-col5` |
+| `component.landing.socialProof.clientsMotion.checklistItem9` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:39) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem9` |
+| `component.landing.socialProof.clientsMotion.frame156155388733` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:39;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388733` |
+| `component.landing.socialProof.clientsMotion.frame156155388734` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:39;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388734` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode10` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:39;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode10` |
+| `component.landing.socialProof.clientsMotion.checklistItem10` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:43) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem10` |
+| `component.landing.socialProof.clientsMotion.frame156155388735` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:43;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388735` |
+| `component.landing.socialProof.clientsMotion.frame156155388736` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:43;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388736` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode11` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:43;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode11` |
+| `component.landing.socialProof.clientsMotion.col6` | col (I5164:11487;5313:4280;5151:11672;5021:47) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-col6` |
+| `component.landing.socialProof.clientsMotion.checklistItem11` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:48) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem11` |
+| `component.landing.socialProof.clientsMotion.frame156155388737` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:48;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388737` |
+| `component.landing.socialProof.clientsMotion.frame156155388738` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:48;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388738` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode12` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:48;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode12` |
+| `component.landing.socialProof.clientsMotion.checklistItem12` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:52) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem12` |
+| `component.landing.socialProof.clientsMotion.frame156155388739` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:52;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388739` |
+| `component.landing.socialProof.clientsMotion.frame156155388740` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:52;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388740` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode13` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:52;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode13` |
+| `component.landing.socialProof.clientsMotion.col7` | col (I5164:11487;5313:4280;5151:11672;5021:56) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-col7` |
+| `component.landing.socialProof.clientsMotion.checklistItem13` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:57) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem13` |
+| `component.landing.socialProof.clientsMotion.frame156155388741` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:57;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388741` |
+| `component.landing.socialProof.clientsMotion.frame156155388742` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:57;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388742` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode14` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:57;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode14` |
+| `component.landing.socialProof.clientsMotion.checklistItem14` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:61) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem14` |
+| `component.landing.socialProof.clientsMotion.frame156155388743` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:61;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388743` |
+| `component.landing.socialProof.clientsMotion.frame156155388744` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:61;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388744` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode15` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:61;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode15` |
+| `component.landing.socialProof.clientsMotion.col8` | col (I5164:11487;5313:4280;5151:11672;5021:65) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-col8` |
+| `component.landing.socialProof.clientsMotion.checklistItem15` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:66) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem15` |
+| `component.landing.socialProof.clientsMotion.frame156155388745` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:66;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388745` |
+| `component.landing.socialProof.clientsMotion.frame156155388746` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:66;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388746` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode16` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:66;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode16` |
+| `component.landing.socialProof.clientsMotion.checklistItem16` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:70) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-checklistItem16` |
+| `component.landing.socialProof.clientsMotion.frame156155388747` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:70;5018:3129) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388747` |
+| `component.landing.socialProof.clientsMotion.frame156155388748` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:70;5018:3131) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-frame156155388748` |
+| `component.landing.socialProof.clientsMotion.completeSourceCode17` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:70;5020:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-completeSourceCode17` |
+| `component.landing.socialProof.clientsMotion.btnwrap2` | btn-wrap (I5164:11487;5313:4280;5151:11673) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-btnwrap2` |
+| `component.landing.socialProof.clientsMotion.cta3` | Button/Primary (I5164:11487;5313:4280;5151:11674) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-cta3` |
+| `component.landing.socialProof.clientsMotion.label3` | label (I5164:11487;5313:4280;5151:11674;2780:1424) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-label3` |
+| `component.landing.socialProof.clientsMotion.iconButton3` | Icon/Button (I5164:11487;5313:4280;5151:11674;2780:1425) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-iconButton3` |
+| `component.landing.socialProof.clientsMotion.graphic3` | graphic (I5164:11487;5313:4280;5151:11674;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-graphic3` |
+| `component.landing.socialProof.clientsMotion.group3` | Group (I5164:11487;5313:4280;5151:11674;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-group3` |
+| `component.landing.socialProof.clientsMotion.trustStrip2` | TrustStrip (I5164:11487;5164:11257) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustStrip2` |
+| `component.landing.socialProof.clientsMotion.allPlansBar2` | all-plans-bar (I5164:11487;5164:11257;5022:14) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-allPlansBar2` |
+| `component.landing.socialProof.clientsMotion.platformIncludes3` | PLATFORM INCLUDES: (I5164:11487;5164:11257;5022:15) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-platformIncludes3` |
+| `component.landing.socialProof.clientsMotion.divider5` | divider (I5164:11487;5164:11257;5022:16) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-divider5` |
+| `component.landing.socialProof.clientsMotion.trustStripItem5` | TrustStripItem (I5164:11487;5164:11257;5022:17) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustStripItem5` |
+| `component.landing.socialProof.clientsMotion.textBlock27` | 🔒 (I5164:11487;5164:11257;5022:17;5021:14) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock27` |
+| `component.landing.socialProof.clientsMotion.banklevelSecurity3` | Bank-level security (I5164:11487;5164:11257;5022:17;5021:15) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-banklevelSecurity3` |
+| `component.landing.socialProof.clientsMotion.divider6` | divider (I5164:11487;5164:11257;5022:20) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-divider6` |
+| `component.landing.socialProof.clientsMotion.trustStripItem6` | TrustStripItem (I5164:11487;5164:11257;5022:21) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustStripItem6` |
+| `component.landing.socialProof.clientsMotion.node3` | ✈ (I5164:11487;5164:11257;5022:21;5021:17) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-node3` |
+| `component.landing.socialProof.clientsMotion.gdsNdcCertified3` | GDS & NDC certified (I5164:11487;5164:11257;5022:21;5021:18) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-gdsNdcCertified3` |
+| `component.landing.socialProof.clientsMotion.divider7` | divider (I5164:11487;5164:11257;5022:24) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-divider7` |
+| `component.landing.socialProof.clientsMotion.trustStripItem7` | TrustStripItem (I5164:11487;5164:11257;5022:25) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustStripItem7` |
+| `component.landing.socialProof.clientsMotion.textBlock28` | 👥 (I5164:11487;5164:11257;5022:25;5021:20) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock28` |
+| `component.landing.socialProof.clientsMotion.trustedByAgencies3` | Trusted by agencies (I5164:11487;5164:11257;5022:25;5021:21) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustedByAgencies3` |
+| `component.landing.socialProof.clientsMotion.divider8` | divider (I5164:11487;5164:11257;5022:28) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-divider8` |
+| `component.landing.socialProof.clientsMotion.trustStripItem8` | TrustStripItem (I5164:11487;5164:11257;5022:29) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-trustStripItem8` |
+| `component.landing.socialProof.clientsMotion.textBlock29` | 📞 (I5164:11487;5164:11257;5022:29;5021:23) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock29` |
+| `component.landing.socialProof.clientsMotion.n247SupportAvailable3` | 24/7 support available (I5164:11487;5164:11257;5022:29;5021:24) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-n247SupportAvailable3` |
+| `component.landing.socialProof.clientsMotion.textBlock30` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:11487;5164:11257;5022:32) | `screen.landing.home` | `default` | `component-landing-socialProof-clientsMotion-textBlock30` |
+| `component.landing.pricing.root` | Pricing section desktop (Gherkin: component.landing.pricing) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-root` |
+| `component.landing.pricing.kuzu420map1475411` | kuzu420-map-14754 (1) 1 (I5164:6564;5151:11815) | `screen.landing.home` | `default` | `component-landing-pricing-kuzu420map1475411` |
+| `component.landing.pricing.frame2095585158` | Frame 2095585158 (I5164:6564;5164:6218) | `screen.landing.home` | `default` | `component-landing-pricing-frame2095585158` |
+| `component.landing.pricing.sectionHeader` | SectionHeader/Pricing (I5164:6564;5151:11816) | `screen.landing.home` | `default` | `component-landing-pricing-sectionHeader` |
+| `component.landing.pricing.sectionPill` | SectionPill (I5164:6564;5151:11816;5023:14) | `screen.landing.home` | `default` | `component-landing-pricing-sectionPill` |
+| `component.landing.pricing.simplePricing` | Simple Pricing (I5164:6564;5151:11816;5023:14;5018:3232) | `screen.landing.home` | `default` | `component-landing-pricing-simplePricing` |
+| `component.landing.pricing.h1block` | h1-block (I5164:6564;5151:11816;5023:17) | `screen.landing.home` | `default` | `component-landing-pricing-h1block` |
+| `component.landing.pricing.ownItDontRentIt` | Own it, Don't Rent it (I5164:6564;5151:11816;5023:18) | `screen.landing.home` | `default` | `component-landing-pricing-ownItDontRentIt` |
+| `component.landing.pricing.textBlock` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:6564;5151:11816;5023:19) | `screen.landing.home` | `default` | `component-landing-pricing-textBlock` |
+| `component.landing.pricing.frame2095585157` | Frame 2095585157 (I5164:6564;5164:6100) | `screen.landing.home` | `default` | `component-landing-pricing-frame2095585157` |
+| `component.landing.pricing.routeStrip` | Route Strip (I5164:6564;5151:11817) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-routeStrip` |
+| `component.landing.pricing.textBlock2` | 🛫 From: Your Current Platform (I5164:6564;5151:11817;5018:3259) | `screen.landing.home` | `default` | `component-landing-pricing-textBlock2` |
+| `component.landing.pricing.textBlock3` | 🛬 To: Full Platform Ownership (I5164:6564;5151:11817;5018:3260) | `screen.landing.home` | `default` | `component-landing-pricing-textBlock3` |
+| `component.landing.pricing.textBlock4` | 🟢 https://app.lottiefiles.com/animation/de5f69ea-2680-40f5-812e-0c97e4fb9731 (I5164:6564;5151:11817;5147:6155) | `screen.landing.home` | `default` | `component-landing-pricing-textBlock4` |
+| `component.landing.pricing.maingroup` | main-group (I5164:6564;5151:11818) | `screen.landing.home` | `default` | `component-landing-pricing-maingroup` |
+| `component.landing.pricing.pricingCard` | PricingCard (I5164:6564;5151:11939) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-pricingCard` |
+| `component.landing.pricing.pricingCardHeader` | PricingCardHeader (I5164:6564;5151:11939;5151:11665) | `screen.landing.home` | `default` | `component-landing-pricing-pricingCardHeader` |
+| `component.landing.pricing.leftblock` | left-block (I5164:6564;5151:11939;5151:11665;5021:27) | `screen.landing.home` | `default` | `component-landing-pricing-leftblock` |
+| `component.landing.pricing.boardingPassPlatformOwnership` | BOARDING PASS · PLATFORM OWNERSHIP (I5164:6564;5151:11939;5151:11665;5021:28) | `screen.landing.home` | `default` | `component-landing-pricing-boardingPassPlatformOwnership` |
+| `component.landing.pricing.titleblock` | title-block (I5164:6564;5151:11939;5151:11665;5021:29) | `screen.landing.home` | `default` | `component-landing-pricing-titleblock` |
+| `component.landing.pricing.ownYourPlatform` | Own Your Platform (I5164:6564;5151:11939;5151:11665;5021:30) | `screen.landing.home` | `default` | `component-landing-pricing-ownYourPlatform` |
+| `component.landing.pricing.textBlock5` | No per-booking fees. No revenue share. No surprises. Just one platform, fully yours. Priced to fit your agency. (I5164:6564;5151:11939;5151:11665;5021:31) | `screen.landing.home` | `default` | `component-landing-pricing-textBlock5` |
+| `component.landing.pricing.seatblock` | seat-block (I5164:6564;5151:11939;5151:11665;5021:32) | `screen.landing.home` | `default` | `component-landing-pricing-seatblock` |
+| `component.landing.pricing.sEAT` | SEAT (I5164:6564;5151:11939;5151:11665;5021:33) | `screen.landing.home` | `default` | `component-landing-pricing-sEAT` |
+| `component.landing.pricing.n32A` | 32A (I5164:6564;5151:11939;5151:11665;5021:34) | `screen.landing.home` | `default` | `component-landing-pricing-n32A` |
+| `component.landing.pricing.pricingbody` | pricing-body (I5164:6564;5151:11939;5151:11666) | `screen.landing.home` | `default` | `component-landing-pricing-pricingbody` |
+| `component.landing.pricing.frame2095585112` | Frame 2095585112 (I5164:6564;5151:11939;5151:11810) | `screen.landing.home` | `default` | `component-landing-pricing-frame2095585112` |
+| `component.landing.pricing.frame2095585110` | Frame 2095585110 (I5164:6564;5151:11939;5151:11791) | `screen.landing.home` | `default` | `component-landing-pricing-frame2095585110` |
+| `component.landing.pricing.pricingTrackingLabel` | PricingTrackingLabel (I5164:6564;5151:11939;5151:11792) | `screen.landing.home` | `default` | `component-landing-pricing-pricingTrackingLabel` |
+| `component.landing.pricing.onetimePlatformFee` | ONE-TIME PLATFORM FEE (I5164:6564;5151:11939;5151:11792;5151:9474) | `screen.landing.home` | `default` | `component-landing-pricing-onetimePlatformFee` |
+| `component.landing.pricing.priceDisplay` | PriceDisplay (I5164:6564;5151:11939;5151:11793) | `screen.landing.home` | `default` | `component-landing-pricing-priceDisplay` |
+| `component.landing.pricing.n3000` | $3,000 (I5164:6564;5151:11939;5151:11793;5151:11775) | `screen.landing.home` | `default` | `component-landing-pricing-n3000` |
+| `component.landing.pricing.textBlock6` | One-time payment · No recurring platform costs (I5164:6564;5151:11939;5151:11793;5151:11776) | `screen.landing.home` | `default` | `component-landing-pricing-textBlock6` |
+| `component.landing.pricing.rectangle` | Rectangle (I5164:6564;5151:11939;5151:11811) | `screen.landing.home` | `default` | `component-landing-pricing-rectangle` |
+| `component.landing.pricing.frame2095585111` | Frame 2095585111 (I5164:6564;5151:11939;5151:11798) | `screen.landing.home` | `default` | `component-landing-pricing-frame2095585111` |
+| `component.landing.pricing.pricingTrackingLabel2` | PricingTrackingLabel (I5164:6564;5151:11939;5151:11799) | `screen.landing.home` | `default` | `component-landing-pricing-pricingTrackingLabel2` |
+| `component.landing.pricing.optionalSupportAddon` | OPTIONAL SUPPORT ADD-ON (I5164:6564;5151:11939;5151:11799;5151:9476) | `screen.landing.home` | `default` | `component-landing-pricing-optionalSupportAddon` |
+| `component.landing.pricing.priceDisplay2` | PriceDisplay (I5164:6564;5151:11939;5151:11800) | `screen.landing.home` | `default` | `component-landing-pricing-priceDisplay2` |
+| `component.landing.pricing.pricerow` | price-row (I5164:6564;5151:11939;5151:11800;5151:11778) | `screen.landing.home` | `default` | `component-landing-pricing-pricerow` |
+| `component.landing.pricing.n250` | $250 (I5164:6564;5151:11939;5151:11800;5151:11779) | `screen.landing.home` | `default` | `component-landing-pricing-n250` |
+| `component.landing.pricing.month` | /month (I5164:6564;5151:11939;5151:11800;5151:11780) | `screen.landing.home` | `default` | `component-landing-pricing-month` |
+| `component.landing.pricing.supportUpdatesCancelAnytime` | Support & updates · Cancel anytime (I5164:6564;5151:11939;5151:11800;5151:11781) | `screen.landing.home` | `default` | `component-landing-pricing-supportUpdatesCancelAnytime` |
+| `component.landing.pricing.dividerwrap` | divider-wrap (I5164:6564;5151:11939;5151:11670) | `screen.landing.home` | `default` | `component-landing-pricing-dividerwrap` |
+| `component.landing.pricing.hdivider` | h-divider (I5164:6564;5151:11939;5151:11671) | `screen.landing.home` | `default` | `component-landing-pricing-hdivider` |
+| `component.landing.pricing.checklistGrid` | ChecklistGrid (I5164:6564;5151:11939;5151:11672) | `screen.landing.home` | `default` | `component-landing-pricing-checklistGrid` |
+| `component.landing.pricing.everythingIncluded` | Everything included: (I5164:6564;5151:11939;5151:11672;5021:36) | `screen.landing.home` | `default` | `component-landing-pricing-everythingIncluded` |
+| `component.landing.pricing.columns` | columns (I5164:6564;5151:11939;5151:11672;5021:37) | `screen.landing.home` | `default` | `component-landing-pricing-columns` |
+| `component.landing.pricing.col` | col (I5164:6564;5151:11939;5151:11672;5021:38) | `screen.landing.home` | `default` | `component-landing-pricing-col` |
+| `component.landing.pricing.checklistItem` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:39) | `screen.landing.home` | `default` | `component-landing-pricing-checklistItem` |
+| `component.landing.pricing.frame1561553887` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:39;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-frame1561553887` |
+| `component.landing.pricing.frame15615538872` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:39;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-frame15615538872` |
+| `component.landing.pricing.completeSourceCode` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:39;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-completeSourceCode` |
+| `component.landing.pricing.checklistItem2` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:43) | `screen.landing.home` | `default` | `component-landing-pricing-checklistItem2` |
+| `component.landing.pricing.frame15615538873` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:43;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-frame15615538873` |
+| `component.landing.pricing.frame15615538874` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:43;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-frame15615538874` |
+| `component.landing.pricing.completeSourceCode2` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:43;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-completeSourceCode2` |
+| `component.landing.pricing.col2` | col (I5164:6564;5151:11939;5151:11672;5021:47) | `screen.landing.home` | `default` | `component-landing-pricing-col2` |
+| `component.landing.pricing.checklistItem3` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:48) | `screen.landing.home` | `default` | `component-landing-pricing-checklistItem3` |
+| `component.landing.pricing.frame15615538875` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:48;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-frame15615538875` |
+| `component.landing.pricing.frame15615538876` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:48;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-frame15615538876` |
+| `component.landing.pricing.completeSourceCode3` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:48;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-completeSourceCode3` |
+| `component.landing.pricing.checklistItem4` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:52) | `screen.landing.home` | `default` | `component-landing-pricing-checklistItem4` |
+| `component.landing.pricing.frame15615538877` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:52;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-frame15615538877` |
+| `component.landing.pricing.frame15615538878` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:52;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-frame15615538878` |
+| `component.landing.pricing.completeSourceCode4` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:52;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-completeSourceCode4` |
+| `component.landing.pricing.col3` | col (I5164:6564;5151:11939;5151:11672;5021:56) | `screen.landing.home` | `default` | `component-landing-pricing-col3` |
+| `component.landing.pricing.checklistItem5` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:57) | `screen.landing.home` | `default` | `component-landing-pricing-checklistItem5` |
+| `component.landing.pricing.frame15615538879` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:57;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-frame15615538879` |
+| `component.landing.pricing.frame156155388710` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:57;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-frame156155388710` |
+| `component.landing.pricing.completeSourceCode5` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:57;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-completeSourceCode5` |
+| `component.landing.pricing.checklistItem6` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:61) | `screen.landing.home` | `default` | `component-landing-pricing-checklistItem6` |
+| `component.landing.pricing.frame156155388711` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:61;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-frame156155388711` |
+| `component.landing.pricing.frame156155388712` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:61;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-frame156155388712` |
+| `component.landing.pricing.completeSourceCode6` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:61;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-completeSourceCode6` |
+| `component.landing.pricing.col4` | col (I5164:6564;5151:11939;5151:11672;5021:65) | `screen.landing.home` | `default` | `component-landing-pricing-col4` |
+| `component.landing.pricing.checklistItem7` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:66) | `screen.landing.home` | `default` | `component-landing-pricing-checklistItem7` |
+| `component.landing.pricing.frame156155388713` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:66;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-frame156155388713` |
+| `component.landing.pricing.frame156155388714` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:66;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-frame156155388714` |
+| `component.landing.pricing.completeSourceCode7` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:66;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-completeSourceCode7` |
+| `component.landing.pricing.checklistItem8` | ChecklistItem (I5164:6564;5151:11939;5151:11672;5021:70) | `screen.landing.home` | `default` | `component-landing-pricing-checklistItem8` |
+| `component.landing.pricing.frame156155388715` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:70;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-frame156155388715` |
+| `component.landing.pricing.frame156155388716` | Frame 1561553887 (I5164:6564;5151:11939;5151:11672;5021:70;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-frame156155388716` |
+| `component.landing.pricing.completeSourceCode8` | Complete source code (I5164:6564;5151:11939;5151:11672;5021:70;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-completeSourceCode8` |
+| `component.landing.pricing.btnwrap` | btn-wrap (I5164:6564;5151:11939;5151:11673) | `screen.landing.home` | `default` | `component-landing-pricing-btnwrap` |
+| `component.landing.pricing.cta` | Button/Primary (I5164:6564;5151:11939;5151:11674) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-cta` |
+| `component.landing.pricing.label` | label (I5164:6564;5151:11939;5151:11674;2780:1424) | `screen.landing.home` | `default` | `component-landing-pricing-label` |
+| `component.landing.pricing.iconButton` | Icon/Button (I5164:6564;5151:11939;5151:11674;2780:1425) | `screen.landing.home` | `default` | `component-landing-pricing-iconButton` |
+| `component.landing.pricing.graphic` | graphic (I5164:6564;5151:11939;5151:11674;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-pricing-graphic` |
+| `component.landing.pricing.group` | Group (I5164:6564;5151:11939;5151:11674;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-pricing-group` |
+| `component.landing.pricing.trustStrip` | TrustStrip (I5164:6564;5151:11820) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-trustStrip` |
+| `component.landing.pricing.allPlansBar` | all-plans-bar (I5164:6564;5151:11820;5022:14) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-allPlansBar` |
+| `component.landing.pricing.platformIncludes` | PLATFORM INCLUDES: (I5164:6564;5151:11820;5022:15) | `screen.landing.home` | `default` | `component-landing-pricing-platformIncludes` |
+| `component.landing.pricing.divider` | divider (I5164:6564;5151:11820;5022:16) | `screen.landing.home` | `default` | `component-landing-pricing-divider` |
+| `component.landing.pricing.trustStripItem` | TrustStripItem (I5164:6564;5151:11820;5022:17) | `screen.landing.home` | `default` | `component-landing-pricing-trustStripItem` |
+| `component.landing.pricing.textBlock7` | 🔒 (I5164:6564;5151:11820;5022:17;5021:14) | `screen.landing.home` | `default` | `component-landing-pricing-textBlock7` |
+| `component.landing.pricing.banklevelSecurity` | Bank-level security (I5164:6564;5151:11820;5022:17;5021:15) | `screen.landing.home` | `default` | `component-landing-pricing-banklevelSecurity` |
+| `component.landing.pricing.divider2` | divider (I5164:6564;5151:11820;5022:20) | `screen.landing.home` | `default` | `component-landing-pricing-divider2` |
+| `component.landing.pricing.trustStripItem2` | TrustStripItem (I5164:6564;5151:11820;5022:21) | `screen.landing.home` | `default` | `component-landing-pricing-trustStripItem2` |
+| `component.landing.pricing.node` | ✈ (I5164:6564;5151:11820;5022:21;5021:17) | `screen.landing.home` | `default` | `component-landing-pricing-node` |
+| `component.landing.pricing.gdsNdcCertified` | GDS & NDC certified (I5164:6564;5151:11820;5022:21;5021:18) | `screen.landing.home` | `default` | `component-landing-pricing-gdsNdcCertified` |
+| `component.landing.pricing.divider3` | divider (I5164:6564;5151:11820;5022:24) | `screen.landing.home` | `default` | `component-landing-pricing-divider3` |
+| `component.landing.pricing.trustStripItem3` | TrustStripItem (I5164:6564;5151:11820;5022:25) | `screen.landing.home` | `default` | `component-landing-pricing-trustStripItem3` |
+| `component.landing.pricing.textBlock8` | 👥 (I5164:6564;5151:11820;5022:25;5021:20) | `screen.landing.home` | `default` | `component-landing-pricing-textBlock8` |
+| `component.landing.pricing.trustedByAgencies` | Trusted by agencies (I5164:6564;5151:11820;5022:25;5021:21) | `screen.landing.home` | `default` | `component-landing-pricing-trustedByAgencies` |
+| `component.landing.pricing.divider4` | divider (I5164:6564;5151:11820;5022:28) | `screen.landing.home` | `default` | `component-landing-pricing-divider4` |
+| `component.landing.pricing.trustStripItem4` | TrustStripItem (I5164:6564;5151:11820;5022:29) | `screen.landing.home` | `default` | `component-landing-pricing-trustStripItem4` |
+| `component.landing.pricing.textBlock9` | 📞 (I5164:6564;5151:11820;5022:29;5021:23) | `screen.landing.home` | `default` | `component-landing-pricing-textBlock9` |
+| `component.landing.pricing.n247SupportAvailable` | 24/7 support available (I5164:6564;5151:11820;5022:29;5021:24) | `screen.landing.home` | `default` | `component-landing-pricing-n247SupportAvailable` |
+| `component.landing.pricing.textBlock10` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:6564;5151:11820;5022:32) | `screen.landing.home` | `default` | `component-landing-pricing-textBlock10` |
+| `component.landing.pricing.mobile.root` | Pricing section mobile (Gherkin @393px) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-mobile-root` |
+| `component.landing.pricing.mobile.frame1561553980` | Frame 1561553980 (5164:6916) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553980` |
+| `component.landing.pricing.mobile.frame1561553979` | Frame 1561553979 (5164:6917) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553979` |
+| `component.landing.pricing.mobile.frame1561553964` | Frame 1561553964 (5164:6918) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553964` |
+| `component.landing.pricing.mobile.sectionPill` | SectionPill (5164:6919) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-sectionPill` |
+| `component.landing.pricing.mobile.simplePricing` | Simple Pricing (5164:6921) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-simplePricing` |
+| `component.landing.pricing.mobile.headRow` | HeadRow (5164:6922) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-headRow` |
+| `component.landing.pricing.mobile.ownIt` | Own it, (5164:6923) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-ownIt` |
+| `component.landing.pricing.mobile.dontRentIt` | Don't Rent it (5164:6924) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-dontRentIt` |
+| `component.landing.pricing.mobile.textBlock` | No per-transaction fees. No revenue sharing. Complete ownership. (5164:6925) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-textBlock` |
+| `component.landing.pricing.mobile.frame1561553978` | Frame 1561553978 (5164:6926) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553978` |
+| `component.landing.pricing.mobile.routeStrip` | RouteStrip (5164:6927) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-mobile-routeStrip` |
+| `component.landing.pricing.mobile.textBlock2` | 🛫 From: Your Current Platform (5164:6928) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-textBlock2` |
+| `component.landing.pricing.mobile.loadingPlane1` | Loading Plane 1 (5164:6929) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-loadingPlane1` |
+| `component.landing.pricing.mobile.textBlock3` | 🛬 To: Full Ownership (5164:6930) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-textBlock3` |
+| `component.landing.pricing.mobile.pricingCard` | PricingCard (5164:6931) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-mobile-pricingCard` |
+| `component.landing.pricing.mobile.frame` | Frame (5164:6932) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame` |
+| `component.landing.pricing.mobile.boardingPassPlatformOwnership` | BOARDING PASS · PLATFORM OWNERSHIP (5164:6933) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-boardingPassPlatformOwnership` |
+| `component.landing.pricing.mobile.ownYourPlatform` | Own Your Platform (5164:6934) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-ownYourPlatform` |
+| `component.landing.pricing.mobile.textBlock4` | Complete source code. Production-ready. Yours forever. (5164:6935) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-textBlock4` |
+| `component.landing.pricing.mobile.frame1561553874` | Frame 1561553874 (5164:6936) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553874` |
+| `component.landing.pricing.mobile.sEAT` | SEAT (5164:6937) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-sEAT` |
+| `component.landing.pricing.mobile.n32A` | 32A (5164:6938) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-n32A` |
+| `component.landing.pricing.mobile.frame2` | Frame (5164:6939) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame2` |
+| `component.landing.pricing.mobile.frame1561553966` | Frame 1561553966 (5164:6940) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553966` |
+| `component.landing.pricing.mobile.frame1561553965` | Frame 1561553965 (5164:6941) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553965` |
+| `component.landing.pricing.mobile.onetimePlatformFee` | ONE-TIME PLATFORM FEE (5164:6942) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-onetimePlatformFee` |
+| `component.landing.pricing.mobile.n3000` | $3,000 (5164:6943) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-n3000` |
+| `component.landing.pricing.mobile.textBlock5` | One-time payment · No recurring platform costs (5164:6944) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-textBlock5` |
+| `component.landing.pricing.mobile.frame3` | Frame (5164:6945) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame3` |
+| `component.landing.pricing.mobile.frame1561553968` | Frame 1561553968 (5164:6946) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553968` |
+| `component.landing.pricing.mobile.frame1561553967` | Frame 1561553967 (5164:6947) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553967` |
+| `component.landing.pricing.mobile.optionalSupportAddon` | OPTIONAL SUPPORT ADD-ON (5164:6948) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-optionalSupportAddon` |
+| `component.landing.pricing.mobile.frame4` | Frame (5164:6949) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame4` |
+| `component.landing.pricing.mobile.n250` | $250 (5164:6950) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-n250` |
+| `component.landing.pricing.mobile.month` | /month (5164:6951) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-month` |
+| `component.landing.pricing.mobile.supportUpdatesCancelAnytime` | Support & updates · Cancel anytime (5164:6952) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-supportUpdatesCancelAnytime` |
+| `component.landing.pricing.mobile.frame5` | Frame (5164:6953) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame5` |
+| `component.landing.pricing.mobile.frame6` | Frame (5164:6954) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame6` |
+| `component.landing.pricing.mobile.frame1561553970` | Frame 1561553970 (5164:6955) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553970` |
+| `component.landing.pricing.mobile.everythingIncluded` | Everything included: (5164:6956) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-everythingIncluded` |
+| `component.landing.pricing.mobile.frame1561553969` | Frame 1561553969 (5164:6957) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553969` |
+| `component.landing.pricing.mobile.frame7` | Frame (5164:6958) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame7` |
+| `component.landing.pricing.mobile.frame8` | Frame (5164:6959) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame8` |
+| `component.landing.pricing.mobile.frame1561553887` | Frame 1561553887 (5164:6960) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553887` |
+| `component.landing.pricing.mobile.frame15615538872` | Frame 1561553887 (5164:6962) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame15615538872` |
+| `component.landing.pricing.mobile.completeSourceCode` | Complete source code (5164:6964) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-completeSourceCode` |
+| `component.landing.pricing.mobile.frame9` | Frame (5164:6965) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame9` |
+| `component.landing.pricing.mobile.frame15615538873` | Frame 1561553887 (5164:6966) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame15615538873` |
+| `component.landing.pricing.mobile.frame15615538874` | Frame 1561553887 (5164:6968) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame15615538874` |
+| `component.landing.pricing.mobile.gdsNdcReady` | GDS & NDC ready (5164:6970) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-gdsNdcReady` |
+| `component.landing.pricing.mobile.frame10` | Frame (5164:6971) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame10` |
+| `component.landing.pricing.mobile.frame11` | Frame (5164:6972) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame11` |
+| `component.landing.pricing.mobile.frame15615538875` | Frame 1561553887 (5164:6973) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame15615538875` |
+| `component.landing.pricing.mobile.frame15615538876` | Frame 1561553887 (5164:6975) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame15615538876` |
+| `component.landing.pricing.mobile.whitelabelEngine` | White-label engine (5164:6977) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-whitelabelEngine` |
+| `component.landing.pricing.mobile.frame12` | Frame (5164:6978) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame12` |
+| `component.landing.pricing.mobile.frame15615538877` | Frame 1561553887 (5164:6979) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame15615538877` |
+| `component.landing.pricing.mobile.frame15615538878` | Frame 1561553887 (5164:6981) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame15615538878` |
+| `component.landing.pricing.mobile.apiDocumentation` | API documentation (5164:6983) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-apiDocumentation` |
+| `component.landing.pricing.mobile.frame13` | Frame (5164:6984) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame13` |
+| `component.landing.pricing.mobile.frame14` | Frame (5164:6985) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame14` |
+| `component.landing.pricing.mobile.frame15615538879` | Frame 1561553887 (5164:6986) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame15615538879` |
+| `component.landing.pricing.mobile.frame156155388710` | Frame 1561553887 (5164:6988) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame156155388710` |
+| `component.landing.pricing.mobile.multicurrency` | Multi-currency (5164:6990) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-multicurrency` |
+| `component.landing.pricing.mobile.frame15` | Frame (5164:6991) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame15` |
+| `component.landing.pricing.mobile.frame156155388711` | Frame 1561553887 (5164:6992) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame156155388711` |
+| `component.landing.pricing.mobile.frame156155388712` | Frame 1561553887 (5164:6994) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame156155388712` |
+| `component.landing.pricing.mobile.adminDashboard` | Admin dashboard (5164:6996) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-adminDashboard` |
+| `component.landing.pricing.mobile.frame16` | Frame (5164:6997) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame16` |
+| `component.landing.pricing.mobile.frame17` | Frame (5164:6998) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame17` |
+| `component.landing.pricing.mobile.frame156155388713` | Frame 1561553887 (5164:6999) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame156155388713` |
+| `component.landing.pricing.mobile.frame156155388714` | Frame 1561553887 (5164:7001) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame156155388714` |
+| `component.landing.pricing.mobile.paymentProcessing` | Payment processing (5164:7003) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-paymentProcessing` |
+| `component.landing.pricing.mobile.frame18` | Frame (5164:7004) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame18` |
+| `component.landing.pricing.mobile.frame156155388715` | Frame 1561553887 (5164:7005) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame156155388715` |
+| `component.landing.pricing.mobile.frame156155388716` | Frame 1561553887 (5164:7007) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame156155388716` |
+| `component.landing.pricing.mobile.securityCertified` | Security certified (5164:7009) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-securityCertified` |
+| `component.landing.pricing.mobile.cta` | Button/Primary (5164:7010) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-mobile-cta` |
+| `component.landing.pricing.mobile.label` | label (I5164:7010;2780:1424) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-label` |
+| `component.landing.pricing.mobile.iconButton` | Icon/Button (I5164:7010;2780:1425) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-iconButton` |
+| `component.landing.pricing.mobile.graphic` | graphic (I5164:7010;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-graphic` |
+| `component.landing.pricing.mobile.group` | Group (I5164:7010;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-group` |
+| `component.landing.pricing.mobile.frame1561553908` | Frame 1561553908 (5164:7011) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553908` |
+| `component.landing.pricing.mobile.allPlansStrip` | All Plans Strip (5164:7012) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-mobile-allPlansStrip` |
+| `component.landing.pricing.mobile.platformIncludes` | PLATFORM INCLUDES: (5164:7013) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-platformIncludes` |
+| `component.landing.pricing.mobile.rectangle` | Rectangle (5164:7014) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-rectangle` |
+| `component.landing.pricing.mobile.frame1561553904` | Frame 1561553904 (5164:7015) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553904` |
+| `component.landing.pricing.mobile.textBlock6` | 🔒 (5164:7016) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-textBlock6` |
+| `component.landing.pricing.mobile.banklevelSecurity` | Bank-level security (5164:7017) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-banklevelSecurity` |
+| `component.landing.pricing.mobile.rectangle2` | Rectangle (5164:7018) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-rectangle2` |
+| `component.landing.pricing.mobile.frame1561553905` | Frame 1561553905 (5164:7019) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553905` |
+| `component.landing.pricing.mobile.node` | ✈ (5164:7020) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-node` |
+| `component.landing.pricing.mobile.gdsNdcCertified` | GDS & NDC certified (5164:7021) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-gdsNdcCertified` |
+| `component.landing.pricing.mobile.rectangle3` | Rectangle (5164:7022) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-rectangle3` |
+| `component.landing.pricing.mobile.frame1561553906` | Frame 1561553906 (5164:7023) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553906` |
+| `component.landing.pricing.mobile.textBlock7` | 👥 (5164:7024) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-textBlock7` |
+| `component.landing.pricing.mobile.trustedByAgencies` | Trusted by agencies (5164:7025) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-trustedByAgencies` |
+| `component.landing.pricing.mobile.rectangle4` | Rectangle (5164:7026) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-rectangle4` |
+| `component.landing.pricing.mobile.frame1561553907` | Frame 1561553907 (5164:7027) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-frame1561553907` |
+| `component.landing.pricing.mobile.textBlock8` | 📞 (5164:7028) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-textBlock8` |
+| `component.landing.pricing.mobile.n247SupportAvailable` | 24/7 support available (5164:7029) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-n247SupportAvailable` |
+| `component.landing.pricing.mobile.textBlock9` | No per-transaction fees. No revenue sharing. Complete ownership. (5164:7030) | `screen.landing.home` | `default` | `component-landing-pricing-mobile-textBlock9` |
+| `component.landing.pricing.motion.root` | Pricing section motion prototype (Gherkin: 5164:11487) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-motion-root` |
+| `component.landing.pricing.motion.kuzu420map1475411` | kuzu420-map-14754 (1) 1 (I5164:11487;5164:11235) | `screen.landing.home` | `default` | `component-landing-pricing-motion-kuzu420map1475411` |
+| `component.landing.pricing.motion.sectionHeader` | SectionHeader/Pricing (I5164:11487;5164:11236) | `screen.landing.home` | `default` | `component-landing-pricing-motion-sectionHeader` |
+| `component.landing.pricing.motion.sectionPill` | SectionPill (I5164:11487;5164:11236;5023:14) | `screen.landing.home` | `default` | `component-landing-pricing-motion-sectionPill` |
+| `component.landing.pricing.motion.simplePricing` | Simple Pricing (I5164:11487;5164:11236;5023:14;5018:3232) | `screen.landing.home` | `default` | `component-landing-pricing-motion-simplePricing` |
+| `component.landing.pricing.motion.h1block` | h1-block (I5164:11487;5164:11236;5023:17) | `screen.landing.home` | `default` | `component-landing-pricing-motion-h1block` |
+| `component.landing.pricing.motion.ownItDontRentIt` | Own it, Don't Rent it (I5164:11487;5164:11236;5023:18) | `screen.landing.home` | `default` | `component-landing-pricing-motion-ownItDontRentIt` |
+| `component.landing.pricing.motion.textBlock` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:11487;5164:11236;5023:19) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock` |
+| `component.landing.pricing.motion.routeStrip` | Route Strip (I5164:11487;5164:11237) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-motion-routeStrip` |
+| `component.landing.pricing.motion.textBlock2` | 🛫 From: Your Current Platform (I5164:11487;5164:11237;5018:3259) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock2` |
+| `component.landing.pricing.motion.textBlock3` | 🛬 To: Full Platform Ownership (I5164:11487;5164:11237;5018:3260) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock3` |
+| `component.landing.pricing.motion.textBlock4` | 🟢 https://app.lottiefiles.com/animation/de5f69ea-2680-40f5-812e-0c97e4fb9731 (I5164:11487;5164:11237;5147:6155) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock4` |
+| `component.landing.pricing.motion.maingroup` | main-group (I5164:11487;5164:11238) | `screen.landing.home` | `default` | `component-landing-pricing-motion-maingroup` |
+| `component.landing.pricing.motion.pricingCard` | PricingCard (I5164:11487;5313:4280) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-motion-pricingCard` |
+| `component.landing.pricing.motion.pricingCardHeader` | PricingCardHeader (I5164:11487;5313:4280;5151:11665) | `screen.landing.home` | `default` | `component-landing-pricing-motion-pricingCardHeader` |
+| `component.landing.pricing.motion.leftblock` | left-block (I5164:11487;5313:4280;5151:11665;5021:27) | `screen.landing.home` | `default` | `component-landing-pricing-motion-leftblock` |
+| `component.landing.pricing.motion.boardingPassPlatformOwnership` | BOARDING PASS · PLATFORM OWNERSHIP (I5164:11487;5313:4280;5151:11665;5021:28) | `screen.landing.home` | `default` | `component-landing-pricing-motion-boardingPassPlatformOwnership` |
+| `component.landing.pricing.motion.titleblock` | title-block (I5164:11487;5313:4280;5151:11665;5021:29) | `screen.landing.home` | `default` | `component-landing-pricing-motion-titleblock` |
+| `component.landing.pricing.motion.ownYourPlatform` | Own Your Platform (I5164:11487;5313:4280;5151:11665;5021:30) | `screen.landing.home` | `default` | `component-landing-pricing-motion-ownYourPlatform` |
+| `component.landing.pricing.motion.textBlock5` | No per-booking fees. No revenue share. No surprises. Just one platform, fully yours. Priced to fit your agency. (I5164:11487;5313:4280;5151:11665;5021:31) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock5` |
+| `component.landing.pricing.motion.seatblock` | seat-block (I5164:11487;5313:4280;5151:11665;5021:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-seatblock` |
+| `component.landing.pricing.motion.sEAT` | SEAT (I5164:11487;5313:4280;5151:11665;5021:33) | `screen.landing.home` | `default` | `component-landing-pricing-motion-sEAT` |
+| `component.landing.pricing.motion.n32A` | 32A (I5164:11487;5313:4280;5151:11665;5021:34) | `screen.landing.home` | `default` | `component-landing-pricing-motion-n32A` |
+| `component.landing.pricing.motion.pricingbody` | pricing-body (I5164:11487;5313:4280;5151:11666) | `screen.landing.home` | `default` | `component-landing-pricing-motion-pricingbody` |
+| `component.landing.pricing.motion.frame2095585112` | Frame 2095585112 (I5164:11487;5313:4280;5151:11810) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame2095585112` |
+| `component.landing.pricing.motion.frame2095585110` | Frame 2095585110 (I5164:11487;5313:4280;5151:11791) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame2095585110` |
+| `component.landing.pricing.motion.pricingTrackingLabel` | PricingTrackingLabel (I5164:11487;5313:4280;5151:11792) | `screen.landing.home` | `default` | `component-landing-pricing-motion-pricingTrackingLabel` |
+| `component.landing.pricing.motion.onetimePlatformFee` | ONE-TIME PLATFORM FEE (I5164:11487;5313:4280;5151:11792;5151:9474) | `screen.landing.home` | `default` | `component-landing-pricing-motion-onetimePlatformFee` |
+| `component.landing.pricing.motion.priceDisplay` | PriceDisplay (I5164:11487;5313:4280;5151:11793) | `screen.landing.home` | `default` | `component-landing-pricing-motion-priceDisplay` |
+| `component.landing.pricing.motion.n3000` | $3,000 (I5164:11487;5313:4280;5151:11793;5151:11775) | `screen.landing.home` | `default` | `component-landing-pricing-motion-n3000` |
+| `component.landing.pricing.motion.textBlock6` | One-time payment · No recurring platform costs (I5164:11487;5313:4280;5151:11793;5151:11776) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock6` |
+| `component.landing.pricing.motion.rectangle` | Rectangle (I5164:11487;5313:4280;5151:11811) | `screen.landing.home` | `default` | `component-landing-pricing-motion-rectangle` |
+| `component.landing.pricing.motion.frame2095585111` | Frame 2095585111 (I5164:11487;5313:4280;5151:11798) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame2095585111` |
+| `component.landing.pricing.motion.pricingTrackingLabel2` | PricingTrackingLabel (I5164:11487;5313:4280;5151:11799) | `screen.landing.home` | `default` | `component-landing-pricing-motion-pricingTrackingLabel2` |
+| `component.landing.pricing.motion.optionalSupportAddon` | OPTIONAL SUPPORT ADD-ON (I5164:11487;5313:4280;5151:11799;5151:9476) | `screen.landing.home` | `default` | `component-landing-pricing-motion-optionalSupportAddon` |
+| `component.landing.pricing.motion.priceDisplay2` | PriceDisplay (I5164:11487;5313:4280;5151:11800) | `screen.landing.home` | `default` | `component-landing-pricing-motion-priceDisplay2` |
+| `component.landing.pricing.motion.pricerow` | price-row (I5164:11487;5313:4280;5151:11800;5151:11778) | `screen.landing.home` | `default` | `component-landing-pricing-motion-pricerow` |
+| `component.landing.pricing.motion.n250` | $250 (I5164:11487;5313:4280;5151:11800;5151:11779) | `screen.landing.home` | `default` | `component-landing-pricing-motion-n250` |
+| `component.landing.pricing.motion.month` | /month (I5164:11487;5313:4280;5151:11800;5151:11780) | `screen.landing.home` | `default` | `component-landing-pricing-motion-month` |
+| `component.landing.pricing.motion.supportUpdatesCancelAnytime` | Support & updates · Cancel anytime (I5164:11487;5313:4280;5151:11800;5151:11781) | `screen.landing.home` | `default` | `component-landing-pricing-motion-supportUpdatesCancelAnytime` |
+| `component.landing.pricing.motion.dividerwrap` | divider-wrap (I5164:11487;5313:4280;5151:11670) | `screen.landing.home` | `default` | `component-landing-pricing-motion-dividerwrap` |
+| `component.landing.pricing.motion.hdivider` | h-divider (I5164:11487;5313:4280;5151:11671) | `screen.landing.home` | `default` | `component-landing-pricing-motion-hdivider` |
+| `component.landing.pricing.motion.checklistGrid` | ChecklistGrid (I5164:11487;5313:4280;5151:11672) | `screen.landing.home` | `default` | `component-landing-pricing-motion-checklistGrid` |
+| `component.landing.pricing.motion.everythingIncluded` | Everything included: (I5164:11487;5313:4280;5151:11672;5021:36) | `screen.landing.home` | `default` | `component-landing-pricing-motion-everythingIncluded` |
+| `component.landing.pricing.motion.columns` | columns (I5164:11487;5313:4280;5151:11672;5021:37) | `screen.landing.home` | `default` | `component-landing-pricing-motion-columns` |
+| `component.landing.pricing.motion.col` | col (I5164:11487;5313:4280;5151:11672;5021:38) | `screen.landing.home` | `default` | `component-landing-pricing-motion-col` |
+| `component.landing.pricing.motion.checklistItem` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:39) | `screen.landing.home` | `default` | `component-landing-pricing-motion-checklistItem` |
+| `component.landing.pricing.motion.frame1561553887` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:39;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame1561553887` |
+| `component.landing.pricing.motion.frame15615538872` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:39;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame15615538872` |
+| `component.landing.pricing.motion.completeSourceCode` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:39;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-completeSourceCode` |
+| `component.landing.pricing.motion.checklistItem2` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:43) | `screen.landing.home` | `default` | `component-landing-pricing-motion-checklistItem2` |
+| `component.landing.pricing.motion.frame15615538873` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:43;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame15615538873` |
+| `component.landing.pricing.motion.frame15615538874` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:43;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame15615538874` |
+| `component.landing.pricing.motion.completeSourceCode2` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:43;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-completeSourceCode2` |
+| `component.landing.pricing.motion.col2` | col (I5164:11487;5313:4280;5151:11672;5021:47) | `screen.landing.home` | `default` | `component-landing-pricing-motion-col2` |
+| `component.landing.pricing.motion.checklistItem3` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:48) | `screen.landing.home` | `default` | `component-landing-pricing-motion-checklistItem3` |
+| `component.landing.pricing.motion.frame15615538875` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:48;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame15615538875` |
+| `component.landing.pricing.motion.frame15615538876` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:48;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame15615538876` |
+| `component.landing.pricing.motion.completeSourceCode3` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:48;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-completeSourceCode3` |
+| `component.landing.pricing.motion.checklistItem4` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:52) | `screen.landing.home` | `default` | `component-landing-pricing-motion-checklistItem4` |
+| `component.landing.pricing.motion.frame15615538877` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:52;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame15615538877` |
+| `component.landing.pricing.motion.frame15615538878` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:52;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame15615538878` |
+| `component.landing.pricing.motion.completeSourceCode4` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:52;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-completeSourceCode4` |
+| `component.landing.pricing.motion.col3` | col (I5164:11487;5313:4280;5151:11672;5021:56) | `screen.landing.home` | `default` | `component-landing-pricing-motion-col3` |
+| `component.landing.pricing.motion.checklistItem5` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:57) | `screen.landing.home` | `default` | `component-landing-pricing-motion-checklistItem5` |
+| `component.landing.pricing.motion.frame15615538879` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:57;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame15615538879` |
+| `component.landing.pricing.motion.frame156155388710` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:57;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame156155388710` |
+| `component.landing.pricing.motion.completeSourceCode5` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:57;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-completeSourceCode5` |
+| `component.landing.pricing.motion.checklistItem6` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:61) | `screen.landing.home` | `default` | `component-landing-pricing-motion-checklistItem6` |
+| `component.landing.pricing.motion.frame156155388711` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:61;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame156155388711` |
+| `component.landing.pricing.motion.frame156155388712` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:61;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame156155388712` |
+| `component.landing.pricing.motion.completeSourceCode6` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:61;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-completeSourceCode6` |
+| `component.landing.pricing.motion.col4` | col (I5164:11487;5313:4280;5151:11672;5021:65) | `screen.landing.home` | `default` | `component-landing-pricing-motion-col4` |
+| `component.landing.pricing.motion.checklistItem7` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:66) | `screen.landing.home` | `default` | `component-landing-pricing-motion-checklistItem7` |
+| `component.landing.pricing.motion.frame156155388713` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:66;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame156155388713` |
+| `component.landing.pricing.motion.frame156155388714` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:66;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame156155388714` |
+| `component.landing.pricing.motion.completeSourceCode7` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:66;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-completeSourceCode7` |
+| `component.landing.pricing.motion.checklistItem8` | ChecklistItem (I5164:11487;5313:4280;5151:11672;5021:70) | `screen.landing.home` | `default` | `component-landing-pricing-motion-checklistItem8` |
+| `component.landing.pricing.motion.frame156155388715` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:70;5018:3129) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame156155388715` |
+| `component.landing.pricing.motion.frame156155388716` | Frame 1561553887 (I5164:11487;5313:4280;5151:11672;5021:70;5018:3131) | `screen.landing.home` | `default` | `component-landing-pricing-motion-frame156155388716` |
+| `component.landing.pricing.motion.completeSourceCode8` | Complete source code (I5164:11487;5313:4280;5151:11672;5021:70;5020:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-completeSourceCode8` |
+| `component.landing.pricing.motion.btnwrap` | btn-wrap (I5164:11487;5313:4280;5151:11673) | `screen.landing.home` | `default` | `component-landing-pricing-motion-btnwrap` |
+| `component.landing.pricing.motion.cta` | Button/Primary (I5164:11487;5313:4280;5151:11674) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-motion-cta` |
+| `component.landing.pricing.motion.label` | label (I5164:11487;5313:4280;5151:11674;2780:1424) | `screen.landing.home` | `default` | `component-landing-pricing-motion-label` |
+| `component.landing.pricing.motion.iconButton` | Icon/Button (I5164:11487;5313:4280;5151:11674;2780:1425) | `screen.landing.home` | `default` | `component-landing-pricing-motion-iconButton` |
+| `component.landing.pricing.motion.graphic` | graphic (I5164:11487;5313:4280;5151:11674;2780:1425;2780:1499) | `screen.landing.home` | `default` | `component-landing-pricing-motion-graphic` |
+| `component.landing.pricing.motion.group` | Group (I5164:11487;5313:4280;5151:11674;2780:1425;2780:1591) | `screen.landing.home` | `default` | `component-landing-pricing-motion-group` |
+| `component.landing.pricing.motion.trustStrip` | TrustStrip (I5164:11487;5164:11257) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-motion-trustStrip` |
+| `component.landing.pricing.motion.allPlansBar` | all-plans-bar (I5164:11487;5164:11257;5022:14) | `screen.landing.home` | `default`, `hover` | `component-landing-pricing-motion-allPlansBar` |
+| `component.landing.pricing.motion.platformIncludes` | PLATFORM INCLUDES: (I5164:11487;5164:11257;5022:15) | `screen.landing.home` | `default` | `component-landing-pricing-motion-platformIncludes` |
+| `component.landing.pricing.motion.divider` | divider (I5164:11487;5164:11257;5022:16) | `screen.landing.home` | `default` | `component-landing-pricing-motion-divider` |
+| `component.landing.pricing.motion.trustStripItem` | TrustStripItem (I5164:11487;5164:11257;5022:17) | `screen.landing.home` | `default` | `component-landing-pricing-motion-trustStripItem` |
+| `component.landing.pricing.motion.textBlock7` | 🔒 (I5164:11487;5164:11257;5022:17;5021:14) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock7` |
+| `component.landing.pricing.motion.banklevelSecurity` | Bank-level security (I5164:11487;5164:11257;5022:17;5021:15) | `screen.landing.home` | `default` | `component-landing-pricing-motion-banklevelSecurity` |
+| `component.landing.pricing.motion.divider2` | divider (I5164:11487;5164:11257;5022:20) | `screen.landing.home` | `default` | `component-landing-pricing-motion-divider2` |
+| `component.landing.pricing.motion.trustStripItem2` | TrustStripItem (I5164:11487;5164:11257;5022:21) | `screen.landing.home` | `default` | `component-landing-pricing-motion-trustStripItem2` |
+| `component.landing.pricing.motion.node` | ✈ (I5164:11487;5164:11257;5022:21;5021:17) | `screen.landing.home` | `default` | `component-landing-pricing-motion-node` |
+| `component.landing.pricing.motion.gdsNdcCertified` | GDS & NDC certified (I5164:11487;5164:11257;5022:21;5021:18) | `screen.landing.home` | `default` | `component-landing-pricing-motion-gdsNdcCertified` |
+| `component.landing.pricing.motion.divider3` | divider (I5164:11487;5164:11257;5022:24) | `screen.landing.home` | `default` | `component-landing-pricing-motion-divider3` |
+| `component.landing.pricing.motion.trustStripItem3` | TrustStripItem (I5164:11487;5164:11257;5022:25) | `screen.landing.home` | `default` | `component-landing-pricing-motion-trustStripItem3` |
+| `component.landing.pricing.motion.textBlock8` | 👥 (I5164:11487;5164:11257;5022:25;5021:20) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock8` |
+| `component.landing.pricing.motion.trustedByAgencies` | Trusted by agencies (I5164:11487;5164:11257;5022:25;5021:21) | `screen.landing.home` | `default` | `component-landing-pricing-motion-trustedByAgencies` |
+| `component.landing.pricing.motion.divider4` | divider (I5164:11487;5164:11257;5022:28) | `screen.landing.home` | `default` | `component-landing-pricing-motion-divider4` |
+| `component.landing.pricing.motion.trustStripItem4` | TrustStripItem (I5164:11487;5164:11257;5022:29) | `screen.landing.home` | `default` | `component-landing-pricing-motion-trustStripItem4` |
+| `component.landing.pricing.motion.textBlock9` | 📞 (I5164:11487;5164:11257;5022:29;5021:23) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock9` |
+| `component.landing.pricing.motion.n247SupportAvailable` | 24/7 support available (I5164:11487;5164:11257;5022:29;5021:24) | `screen.landing.home` | `default` | `component-landing-pricing-motion-n247SupportAvailable` |
+| `component.landing.pricing.motion.textBlock10` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:11487;5164:11257;5022:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock10` |
 
 ---
 

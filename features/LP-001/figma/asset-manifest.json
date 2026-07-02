@@ -3,7 +3,7 @@
     "feature": "LP-001",
     "frame": "5164:6559",
     "figmaFileKey": "h6BqI1ZRMSJxR7jESNF0Ep",
-    "generatedAt": "2026-07-01"
+    "generatedAt": "2026-07-02"
   },
   "assets": [
     {
@@ -102,6 +102,217 @@
       "localPath": "public/images/hiw-card-visual-3.png",
       "type": "png",
       "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6562;3109:1189",
+      "nodeName": "Feature grid decorative plane (top)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6562;3109:1189&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-feature-grid-plane-top.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6562;3109:1186",
+      "nodeName": "Feature grid decorative plane (bottom)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6562;3109:1186&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-feature-grid-plane-bottom.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13742;5159:5008;5159:23;5158:14",
+      "nodeName": "Social proof testimonial company logo A",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13742;5159:5008;5159:23;5158:14&format=png&scale=2",
+      "localPath": "public/images/social-proof-testimonial-logo-a.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13742;5159:5023;5159:36;5158:14",
+      "nodeName": "Social proof testimonial company logo B",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13742;5159:5023;5159:36;5158:14&format=png&scale=2",
+      "localPath": "public/images/social-proof-testimonial-logo-b.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13742;5151:13905",
+      "nodeName": "Social proof decorative plane",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13742;5151:13905&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-social-proof-plane.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13742;5159:5008;5159:26;5159:14;3171:23",
+      "nodeName": "Avatar initials glow ring",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13742;5159:5008;5159:26;5159:14;3171:23&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-avatar-glow.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13742;5159:5008;5159:26;5159:14;3171:24",
+      "nodeName": "Avatar initials circle fill",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13742;5159:5008;5159:26;5159:14;3171:24&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-avatar-circle.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13718",
+      "nodeName": "Social proof client logo 01",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13718&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-01.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13720",
+      "nodeName": "Social proof client logo 02",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13720&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-02.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13721",
+      "nodeName": "Social proof client logo 03",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13721&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-03.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13723",
+      "nodeName": "Social proof client logo 04",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13723&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-04.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13724",
+      "nodeName": "Social proof client logo 05",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13724&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-05.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13726",
+      "nodeName": "Social proof client logo 06",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13726&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-06.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13727",
+      "nodeName": "Social proof client logo 07",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13727&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-07.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13729",
+      "nodeName": "Social proof client logo 08",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13729&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-08.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13730",
+      "nodeName": "Social proof client logo 09",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13730&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-09.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13732",
+      "nodeName": "Social proof client logo 10",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13732&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-10.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13734",
+      "nodeName": "Social proof client logo 11",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13734&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-11.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13735",
+      "nodeName": "Social proof client logo 12",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13735&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-12.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13737",
+      "nodeName": "Social proof client logo 13",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13737&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-13.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6568;5151:13791;5151:13739",
+      "nodeName": "Social proof client logo 14",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6568;5151:13791;5151:13739&format=png&scale=2",
+      "localPath": "public/images/social-proof-client-14.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "5164:6564",
+      "nodeName": "Pricing section background (desktop IMAGE fill)",
+      "imageRef": "51024fdbd8ea22bbac9222723ee88ccfc2cb13bc",
+      "localPath": "public/images/pricing-section-bg-desktop.png",
+      "type": "png",
+      "dataSource": "static",
+      "note": "Frame root IMAGE fill; downloaded via GET /v1/files/:key/images (not node render)."
+    },
+    {
+      "nodeId": "5164:6915",
+      "nodeName": "Pricing section background (mobile IMAGE fill)",
+      "imageRef": "dd6eee55b9813d2f6897c7fb0c8eed63c5f46012",
+      "localPath": "public/images/pricing-section-bg-mobile.png",
+      "type": "png",
+      "dataSource": "static",
+      "note": "Frame root IMAGE fill; downloaded via GET /v1/files/:key/images (not node render)."
+    },
+    {
+      "nodeId": "I5164:6564;5151:11815",
+      "nodeName": "Pricing section map decoration",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6564;5151:11815&format=png&scale=2",
+      "localPath": "public/images/pricing-map-decoration.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5164:6564;5151:11817;5147:6155",
+      "nodeName": "Pricing route strip loading plane",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6564;5151:11817;5147:6155&format=png&scale=2",
+      "localPath": "public/images/pricing-route-plane.png",
+      "type": "png",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "5018:3129",
+      "nodeName": "Pricing checklist check icon (ChecklistItem master)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=5018:3129&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-pricing-checklist-check.svg",
+      "type": "svg",
+      "dataSource": "static",
+      "note": "Exported from ChecklistItem icon frame master; instance IDs do not render via REST."
     }
   ]
 }
