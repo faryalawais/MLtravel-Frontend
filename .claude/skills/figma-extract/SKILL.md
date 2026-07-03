@@ -291,6 +291,12 @@ npm run build:spec-from-cache -- <id>
 
 # 4. derive the composition tree from the cache (offline, 0 MCP)
 npm run build:layout -- <id>
+
+# 5. MOTION — animation chain walk + motion artifacts (docs/motion-pipeline-plan.md)
+npm run figma:motion-chain-walk -- --feature <id>
+# refresh every missing destinationId from chain-walk-report, then re-run step 5
+npm run build:motion-from-cache -- <id>
+npm run validate:motion-chains -- <id>   # must exit 0 before design-contract
 ```
 
 After step 3, `spec.json` carries `boundVariables` per node from REST. Run
@@ -314,6 +320,113 @@ extracted as separate REST/MCP chunks — one cache file per entry:
 `figma:extract:rest` writes this file automatically. `build:spec-from-cache`
 uses it for section order. Shared chrome (nav/footer) lives in
 `features/_shared/figma/nodes/` — record `(shared)` rows in the checklist.
+
+### Animation chain walk (mandatory when `*-animation` in slice-roots)
+
+**Authoritative docs:** `docs/motion-guideline.md` (overview) · `docs/motion-pipeline-plan.md` (extract algorithms).
+
+Motion is **not done** until every animation twin has a **closed** chain — meaning
+**every variant state** is cached as its own `nodes/<nodeId>.json`, not just state 1.
+
+#### Two motion kinds (extract both)
+
+| Kind | Figma signal | Extract | FE (fe-implement) |
+|------|--------------|---------|-------------------|
+| **Interactive** | `interactions[]` on `*-animation` variant chain | Chain walk + `motion-chains.json` + `motion-diffs.json` | `useOneWayMotion` + pattern runner + helpers |
+| **Ambient** | `gifRef` on IMAGE fill (often on **static** slice) | `asset-manifest.json` + disk file | `<Image unoptimized />` — no hover handler |
+
+#### Mandatory extract checklist (per `*-animation` slice-root)
+
+`/figma-extract` is **not complete** for a feature with animation twins until **every row** passes:
+
+| # | Requirement | Output |
+|---|-------------|--------|
+| 1 | Slice-root cached | `nodes/<id>.json` state 1 + root `interactions[]` or `transitionNodeID` |
+| 2 | **Every `destinationId` in chain** cached | `nodes/<dest>.json` for states 2…N |
+| 3 | Chain closed | `chain-walk-report.json` + `motion-chains.json` `status: "closed"` |
+| 4 | Every transition recorded | trigger, durationMs, easing, delayMs in `motion-chains.json` |
+| 5 | Layer diffs built | `motion-diffs.json` per consecutive state pair |
+| 6 | Reference PNG per state (min: state 1 + terminal) | `reference-<slug>-animation-state-N.png` |
+| 7 | Registry paths for moving layers | `component.*.motion.*` in `ui-registry.json` |
+| 8 | All `gifRef` downloaded | `asset-manifest.json` + `validate:assets` |
+| 9 | `componentProperties` on animation INSTANCE (MCP gap-fill) | checklist `(variants: Property 1=1)` |
+| 10 | Reconciliation table in `notes.md` | one row per state per twin |
+| 11 | Nested `interactions[]` scanned on **full subtree** | `triggerNodeId` on each transition |
+| 12 | Non-root entry triggers documented | e.g. hero CTA `ON_HOVER` → `trigger.targetNodeId` |
+| 13 | `componentProperties` diff state 1 vs terminal | accent/size variant changes in notes.md |
+| 14 | Unknown duration/delay flagged | `durationToken: null` → `validate:motion-chains` FAIL |
+| 15 | Every Animations-page twin in `slice-roots.json` | no orphan `*-animation` frames |
+
+#### npm procedure (after REST steps 1–4)
+
+```bash
+# A. Discover chains + list missing variant nodes
+npm run figma:motion-chain-walk -- --feature <id>
+# writes features/<id>/figma/chain-walk-report.json
+
+# B. Refresh EVERY missing destinationId (repeat until chain walk exits 0)
+npm run figma:refresh-node -- --feature <id> --refresh-node <destinationId>
+# Re-run A until: "All animation chains closed."
+
+# C. MCP gap-fill when REST has transitionNodeID but empty interactions[]
+#    (Navbar pattern) — merge prototype into nodes/<id>.json; set $meta.prototypeSource: "mcp"
+
+# D. Per-state reference PNGs (minimum: state 1 + terminal per twin)
+npm run figma:export-image -- --feature <id>
+# Target naming: reference-<slug>-animation-state-<N>.png per motion-chains states[].referencePng
+
+# E. Build motion artifacts (offline)
+npm run build:motion-from-cache -- <id>
+# writes motion-chains.json + motion-diffs.json
+
+# F. Gate — full feature (all chains closed)
+npm run validate:motion-chains -- <id>
+
+# G. Gate — single slice while others incomplete (pilot testing)
+npm run validate:motion-chains -- <id> --chain Pricing-animation
+```
+
+#### `notes.md` reconciliation block (append per animation twin)
+
+```markdown
+### Motion extract — ProblemSection-animation
+| State | nodeId | Cached | interactions out | Reference PNG |
+|-------|--------|--------|------------------|---------------|
+| 1 | 5164:10344 | ✓ | → 5145:4440 MOUSE_ENTER 700ms | reference-problem-animation-state-1.png |
+| 2 | 5145:4440 | ✓ | → 5145:4442 AFTER_TIMEOUT 120ms | reference-problem-animation-state-2.png |
+| … | … | … | … | … |
+Chain status: **closed** | motion-chains built | validate:motion-chains: pass
+```
+
+#### Trigger normalization (record in motion-chains.json)
+
+| Figma trigger | Canonical | FE event |
+|---------------|-----------|----------|
+| `MOUSE_ENTER` | `MOUSE_ENTER` | `onMouseEnter` on `trigger.targetTestId` |
+| `ON_HOVER` | `MOUSE_ENTER` | same (hero CTA child pattern) |
+| `AFTER_TIMEOUT` | `AFTER_TIMEOUT` | `runSteppedMotion` / pattern runner timers |
+| `MOUSE_LEAVE` | ignored | one-way product rule — do not wire reverse |
+| `ON_CLICK` / unsupported | **STOP** | report — extend catalog first |
+
+#### Hard rules
+
+- **BLOCK** `design-contract` / `fe-implement` if any chain `status: incomplete` (full gate).
+- **Never** read or depend on `tokens/MOTION-SPEC.md` — `motion-chains.json` + `motion-diffs.json` + `motion-state-poses.json` are the agent contract.
+- **Never** guess timing or which layers move — rebuild from cache only.
+- Scan **subtree** `interactions[]`, not only slice-root (nested triggers).
+- **Desktop motion by default** — mobile static unless `*-mobile-animation` twin exists in slice-roots.
+
+#### Artifacts written by motion extract
+
+```
+features/<id>/figma/
+├── chain-walk-report.json      # missing destinationIds per twin
+├── motion-chains.json          # timing, pattern, runner, every state nodeId
+├── motion-diffs.json           # per-layer Smart Animate deltas per transition
+├── motion-state-poses.json     # per-state translateYpx matrix; initialRender rule
+├── nodes/<every-state>.json    # one file per variant state in chain
+└── reference-*-animation-state-*.png
+```
 
 ### MCP driver path (Phase 2 of dual-source — when get_design_context works)
 
@@ -932,6 +1045,11 @@ non-empty array of distinct lowerCamelCase strings.
   **every INSTANCE of a component set in checklist shows `(variants: …)`** when
   Figma uses variants; and `validate:figma-extract`, `build:layout`,
   `validate:layout` all exit 0.
+- **Motion (when `*-animation` in slice-roots):** `chain-walk-report.json`,
+  `motion-chains.json`, `motion-diffs.json` exist; **every chain state** has
+  `nodes/<state-nodeId>.json` on disk; `notes.md` has per-twin motion
+  reconciliation tables; `validate:motion-chains` exits 0 before downstream skills.
+  See `docs/motion-guideline.md`.
 
 ## Failure handling
 If the Figma MCP is unavailable, or the file/frame URL is wrong, **stop and

@@ -24,7 +24,12 @@ BE must be fully implemented and the OpenAPI spec published before this starts.
 - `features/<fe-jira-id>/figma/layout.json` — the composition tree (where each
   component sits on the page)
 - `features/<fe-jira-id>/figma/` — `spec.json`, `reference-<section>.png`,
+  `reference-*-animation-state-*.png` (per-state motion baselines),
   `asset-manifest.json`, `run-report.json`
+- `features/<fe-jira-id>/figma/motion-chains.json` — timing, pattern, runner,
+  every chain state (when feature has animation twins)
+- `features/<fe-jira-id>/figma/motion-diffs.json` — per-layer Smart Animate
+  deltas per transition (when feature has animation twins)
 - `features/<parent-id>/<parent-id>.feature` (`@fe` scenarios only)
 - `docs/openapi/paths/<be-jira-id>.yaml` — the published BE API contract
 - `tokens/ui-registry.json` — component paths and token bindings
@@ -185,6 +190,62 @@ for dimensions, footer direction, accent colours, or card sizes. If you catch
 yourself reusing `max-w-[424px]`, a shared accent-bar colour, or a centered
 footer column from a sibling → stop and read the Feature grid (or current
 slice) cache first.
+
+**Motion implementation (animated desktop slices only).** Authoritative docs:
+`docs/motion-guideline.md` (patterns + examples) ·
+`docs/motion-pipeline-plan.md` step 17.
+
+**Pre-code motion checklist (write in chat before opening `.tsx` for this slice):**
+```
+□ Do NOT read tokens/MOTION-SPEC.md
+□ motion-chains.json — chain for this slice: status "closed" (or subgraph closed)
+□ motion-diffs.json — all diffs for this chain / subgraphId
+□ motion-state-poses.json — per-state translateYpx; initialRender staticTwin vs animationState1
+□ Every transition: trigger, delayMs, durationToken, easingToken from motion-chains
+□ Every moving layer: testId in ui-registry.json (component.*.motion.*)
+□ Custom translateY px (custom: true) → constants/motion.constants.ts only — never inline in TSX
+□ If initialRender is staticTwin: pre-hover layout = flex/natural flow matching static frame — NOT animation state 1
+□ Staged-sequence timing: cumulative duration+delay between steps — not delay × stepIndex
+□ If any state node missing from nodes/ → figma:refresh-node before coding
+□ contract.md **Motion** block matches motion-chains.json (pattern, runner, trigger)
+□ Bind each motion-diffs row → helper + data-testid — not sibling TSX
+□ gifRef ambient → asset-manifest path + <Image unoptimized /> — no hover handler
+□ reference-*-animation-state-*.png available for Step 7 spot-check
+□ prefers-reduced-motion: show terminal state, skip runner (when useReducedMotion exists)
+```
+
+**Pattern → code (mechanical — from `motion-chains.json` `pattern` field):**
+
+| `pattern` | Runner / wiring |
+|-----------|-----------------|
+| `simple-one-step` | `useOneWayMotion(() => setRevealed(true))` + `getMotionRevealStyle` / slide helpers from diffs |
+| `rapid-four-step` | `useOneWayMotion(() => runRapidFourStepMotion([...]))` — step callbacks from motion-diffs `stepIndex` |
+| `staged-sequence` | `useOneWayMotion(() => runHeroMotion(...))` or `runFeatureGridMotion(...)` per chain `runner` |
+| `ambient-gif` | `<Image unoptimized src={…} />` — no `useOneWayMotion` |
+| `custom` | Read full subgraph in motion-chains + step table in contract.md; **human APPROVE** before coding |
+
+**Hybrid sections:** when one slice has multiple `chains[]` with different
+`subgraphId` (e.g. SocialProof integrations + carousel), wire each subgraph
+independently — do not collapse into one pattern.
+
+**Token discipline for motion:** never emit `translateY(${fromPx}px)` or raw
+`700ms` from diffs in TSX — use mapped `token` → `var(--spacing-*)` /
+`var(--motion-duration-*)` or helpers in `constants/motion.constants.ts`.
+When `motion-diffs` marks `custom: true` (no spacing token for 370/284 etc.),
+define named constants in `motion.constants.ts` sourced from `motion-state-poses.json`.
+
+**Step 7 motion review (mandatory for animated slices):** after automated gates,
+hover the slice at 1440px desktop and compare end-state to
+`reference-<slug>-animation-state-terminal.png` (or highest state index PNG).
+For multi-step patterns (`rapid-four-step`, `staged-sequence`), spot-check
+intermediate states against `reference-*-animation-state-2.png` etc. if the
+cascade looks wrong. Static `test:visual` screenshots capture **pre-hover**
+layout only — they do not prove motion fidelity.
+
+**Violation routing (motion):** wrong timing, pattern, or layer binding →
+`/figma-extract` chain walk + `build:motion-from-cache`, not ad-hoc CSS.
+Wrong Motion block → `/design-contract`. Missing motion testId →
+`/ui-registry-build` → `/registry-validate` then rebuild diffs.
 
 **Pre-code variant checklist (write in chat before opening `.tsx`):**
 For each repeated Figma component (FeatureCard, AccentBar, SectionPill, etc.):
@@ -404,10 +465,16 @@ After Step 6 automated gates pass (or are reported as partially scaffolded),
 |------|--------|
 | validate:figma-extract | pass / fail |
 | validate:contract | pass / fail |
+| validate:motion-chains (if animated slice) | pass / not applicable |
 | test:e2e (`--grep GH#<N>`) | pass / not scaffolded |
-| test:visual (slice screenshots) | pass / baseline pending / not scaffolded |
+| test:visual (slice screenshots — pre-hover) | pass / baseline pending / not scaffolded |
 | test:visual (typography spec) | pass / not scaffolded |
 | build + typecheck | pass / fail |
+
+### Motion review (animated slices only)
+- **Pattern:** `<from motion-chains.json>`
+- **End-state ref:** `reference-<slug>-animation-state-<N>.png`
+- **Action:** hover slice in browser; compare to reference PNG(s); note any layer drift
 
 ### Known deviations (from contract / Figma)
 - <list each, or "none documented">
@@ -433,6 +500,8 @@ slices without a review between each one.
    | Missing / wrong tokens | `/design-tokens` |
    | Registry path or test-id drift | `/ui-registry-build` → `/registry-validate` |
    | Contract anatomy / §4 token wrong | `/design-contract` |
+   | Wrong motion timing / pattern / layer binding | `/figma-extract` chain walk + `build:motion-from-cache` (never `MOTION-SPEC.md`) |
+   | Wrong Motion block in contract | `/design-contract` after rebuild 12b |
    | Component layout / styling / responsiveness | stay in `/fe-implement` |
    | BDD steps missing | `/bdd-scaffold` |
    | Visual baselines | `/visual-regression` |
@@ -550,3 +619,7 @@ EOF
   call `get_design_context` per component, and never extract the full frame — the
   single-session driver in `figma-extract` already did that once and cached it
   (`docs/figma-single-pass-extract-plan.md` §6, §12).
+- **Motion wiring comes from JSON only.** Never read `tokens/MOTION-SPEC.md`.
+  Pattern, timing, and layer helpers must trace to `motion-chains.json` +
+  `motion-diffs.json`. Wrong motion → re-extract + `build:motion-from-cache`,
+  not sibling-section cloning or ad-hoc CSS.

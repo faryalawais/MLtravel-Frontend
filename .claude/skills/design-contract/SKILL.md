@@ -36,10 +36,26 @@ written down. That is this skill's job.
   ```bash
   npm run validate:figma-extract -- <id>   # every checklist nodeId is cached; no placeholder reference; figmaLastModified consistent
   npm run validate:layout        -- <id>   # every layout.json leaf slug resolves; gaps/padding are tokens
+  npm run validate:motion-chains -- <id>   # all *-animation chains closed; motion-diffs token-mapped (skip if no animation twins)
   ```
-  If either exits non-zero → **STOP**. The extract is incomplete or the
-  composition tree is invalid; re-run `figma-extract` / `build:layout`. Do not
+  If any exits non-zero → **STOP**. The extract is incomplete or the
+  composition tree is invalid; re-run `figma-extract` / `build:layout` /
+  `figma:motion-chain-walk` + `build:motion-from-cache`. Do not
   write `contract.md` against a partial extract.
+- **Motion inputs (0 MCP, read from disk):** `features/<id>/figma/motion-chains.json`,
+  `motion-diffs.json`, and `chain-walk-report.json`. Copy per-slice **Motion** blocks
+  into `contract.md` §2 (pattern, runner, trigger testId, key diff rows). List
+  `ambientMotion[]` gifRef rows in anatomy. **Authoritative docs:**
+  `docs/motion-guideline.md` · `docs/motion-pipeline-plan.md` step 16.
+  **Never** read `tokens/MOTION-SPEC.md`.
+- **Motion gate (MANDATORY when animation twins exist):**
+  ```bash
+  npm run validate:motion-chains -- <id>   # all chains closed before full contract
+  ```
+  For incremental slice work while other chains are incomplete, the implementor may
+  use `npm run validate:motion-chains -- <id> --chain <AnimationName>` — but
+  **design-contract must not be written** until `validate:motion-chains -- <id>`
+  (no `--chain`) exits 0 unless the user explicitly approves a partial contract.
 - **Downloaded assets check (MANDATORY).** After verifying `notes.md` exists,
   read it and check for a "Downloaded assets" section. For every IMAGE, ICON,
   LOGO, BADGE, ILLUSTRATION, or VECTOR node visible in the Figma frame:
@@ -197,6 +213,65 @@ Fill in `contract-template.md` (in this skill's folder) for the feature:
    "orange circle logo", "Google Play icon"). The anatomy entry for an asset
    node must be: `<Image src="/icons/badge-google-play.svg" alt="..." width={N}
    height={N} />` — an implementable spec, not a prose description.
+
+   **Motion blocks (mandatory for every animated section).** Read
+   `features/<id>/figma/motion-chains.json`, `motion-diffs.json`,
+   `motion-state-poses.json`, and `chain-walk-report.json` (0 MCP). For **each**
+   chain with `status: "closed"` (and each `subgraphId` when a section is hybrid),
+   append the following **inside §2** beside that section's anatomy — sourced
+   from JSON only, never from `tokens/MOTION-SPEC.md` or memory:
+
+   **Per interactive chain — copy from `motion-chains.json`:**
+   ```markdown
+   **Motion (motion-chains · `<sliceRootNodeId>`):** pattern `<pattern>` ·
+   status `closed` · subgraph `<subgraphId>` (omit line if single graph) —
+   `<trigger.event>` on `<trigger.targetTestId>` → state N;
+   `<durationToken>` + `<easingToken>`; one-way, no mouse-leave.
+   Runner: `<runner>`.
+   ```
+
+   **Per interactive chain — summarize key rows from `motion-diffs.json`:**
+   ```markdown
+   **Motion bindings (motion-diffs):**
+   | Step | testId | Helper | Change |
+   |------|--------|--------|--------|
+   | 0 | `component.landing.pricing.motion.mainGroup` | `getMotionRevealStyle` | translateY spacing.24 → 0 |
+   ```
+   List only layers with non-empty `changes` — do not paste full JSON.
+
+   **Per interactive chain — state pose table from `motion-state-poses.json`:**
+   ```markdown
+   **Motion state poses (motion-state-poses):**
+   | State | Layer | translateYpx | testId |
+   |-------|-------|--------------|--------|
+   | 1 | Frame 1561553827 | 370 | component.landing.hero.motion.textColumn |
+   ```
+   Include `initialRender: staticTwin` when present — documents that page load
+   matches the static frame, not animation state 1.
+
+   **Hybrid sections (e.g. SocialProof):** when `motion-chains.json` has
+   multiple `chains[]` entries for one slice-root, write **one Motion block
+   per `subgraphId`** — integrations strip (`simple-one-step`) and carousel
+   (`custom`) are independent; do not collapse into one pattern.
+
+   **`pattern: custom`:** add a step table in the Motion block (step index,
+   delayMs/durationToken, layers affected) copied from `motion-chains` +
+   `motion-diffs`; note "requires human APPROVE before fe-implement codes
+   custom runner".
+
+   **Per `ambientMotion[]` / `gifRef` layer (ambient — often on static slice):**
+   ```markdown
+   ├─ Route plane  (nodeId I5164:6564;5151:11817;5147:6155)
+   │  — ambient GIF `public/images/pricing-route-plane-desktop.gif` (gifRef …)
+   │  — autoplay; `<Image unoptimized />`; not hover-driven
+   ```
+   List every `gifRef` from `asset-manifest.json` with `type: gif` in anatomy.
+
+   **BLOCK:** any chain `status: "incomplete"` in `chain-walk-report.json` or
+   `motion-chains.json` → do not write `contract.md` (re-run step 12 chain
+   walk). If `motion-chains` disagrees with legacy `tokens/MOTION-SPEC.md` →
+   **motion-chains wins**.
+
 3. **Layout & spacing** — direction, gaps, padding, alignment, sizing.
    Every value expressed as an **exact** design token from
    `reports/tokens-report.md`. "Exact" means the token's resolved px value
@@ -372,6 +447,9 @@ feature's `design_contract` field in `backlog.yaml`, and advance its `status`
    reconciliation table is missing or shows MCP ✗ for any slice-root → **STOP**.
    Re-run `/figma-extract` before contracting. A REST-only extract cannot
    produce an exact contract for component-set variants.
+8. **Motion JSON is the only motion input.** Never read `tokens/MOTION-SPEC.md`.
+   Every animated section's Motion block must trace to `motion-chains.json` +
+   `motion-diffs.json` + `motion-state-poses.json`. Incomplete chains block the contract.
 
 ## Success criteria
 - `contract.md` exists with all sections populated.
@@ -384,4 +462,7 @@ feature's `design_contract` field in `backlog.yaml`, and advance its `status`
 - Every IMAGE, ICON, LOGO, BADGE, or ILLUSTRATION in §2 anatomy references
   an actual `public/` file path — no word-only descriptions of visual assets.
 - Every `public/` path referenced in the anatomy exists on disk.
+- **Motion (when `*-animation` twins exist):** every closed chain has a §2
+  **Motion** block + **Motion bindings** table; every `gifRef` is in anatomy;
+  `npm run validate:motion-chains -- <id>` exits 0.
 - Backlog status is `contracted`.
