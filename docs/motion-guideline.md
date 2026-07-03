@@ -383,10 +383,3 @@ Short human summary — sourced from JSON, not written from scratch:
 | Animation looks wrong in browser | `/fe-implement` Step 7 — or fix upstream JSON, not guess in CSS |
 
 ---
-
-## Related docs
-
-| Doc | Use for |
-|-----|---------|
-| `docs/feature-pipeline-quickref.md` | Full pipeline order and gates |
-| `docs/motion-pipeline-plan.md` | Extract algorithms, validation, scripts, edge cases |

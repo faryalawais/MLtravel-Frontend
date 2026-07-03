@@ -7,6 +7,11 @@ export function parseTranslateX(transform: string): number {
     return 0;
   }
 
+  const translateFn = transform.match(/translateX\(([-\d.e]+)px\)/);
+  if (translateFn) {
+    return Number.parseFloat(translateFn[1]);
+  }
+
   const matrix2d = transform.match(
     /^matrix\(\s*[-\d.e]+\s*,\s*[-\d.e]+\s*,\s*[-\d.e]+\s*,\s*[-\d.e]+\s*,\s*([-\d.e]+)\s*,\s*([-\d.e]+)\s*\)$/,
   );

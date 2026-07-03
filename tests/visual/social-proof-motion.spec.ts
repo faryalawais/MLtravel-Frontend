@@ -13,8 +13,12 @@ const sp = ids.component.landing.socialProof;
 const DESKTOP_WIDTH = 1440;
 
 async function getCarouselTranslateX(page: import('@playwright/test').Page): Promise<number> {
-  const row = page.getByTestId(sp.testimonialsRow);
-  const transform = await row.locator('> div').first().evaluate((el) => getComputedStyle(el).transform);
+  const track = page.getByTestId(sp.testimonialsRow).locator('> div').first();
+  const transform = await track.evaluate((el) => {
+    const inline = el.style.transform;
+    if (inline) return inline;
+    return getComputedStyle(el).transform;
+  });
   return Math.abs(parseTranslateX(transform));
 }
 
@@ -80,7 +84,7 @@ test.describe('GH#9 — Social proof motion (fixture)', () => {
       .poll(
         async () =>
           Math.abs((await getFirstLogoScale(page)) - SOCIAL_PROOF_CLIENTS_LOGO_SCALE_TERMINAL) < 0.02,
-        { timeout: transitionMs + 400, intervals: [50] },
+        { timeout: transitionMs * 2 + 500, intervals: [50] },
       )
       .toBe(true);
   });

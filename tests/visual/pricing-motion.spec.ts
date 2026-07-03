@@ -55,7 +55,7 @@ test.describe('GH#11 — Pricing motion (fixture)', () => {
 
     await expect
       .poll(async () => isTranslateYNear(await getMainGroupTranslateY(page), 0), {
-        timeout: transitionMs + 400,
+        timeout: transitionMs * 2 + 500,
         intervals: [50],
       })
       .toBe(true);

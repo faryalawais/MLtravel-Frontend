@@ -1,6 +1,6 @@
 # START HERE — MLtravel Frontend
 
-**Status:** Phase 1 · **LP-001** — `prd-v2-approved` · F-002 / F-003 — `brief-created`  
+**Status:** Phase 1 · **LP-001** — `fe-implemented` · F-002 / F-003 — `brief-created`  
 **Figma file:** `h6BqI1ZRMSJxR7jESNF0Ep` — [ML Travel Project (faryal-updated)](https://www.figma.com/design/h6BqI1ZRMSJxR7jESNF0Ep/ML-Travel-Project--faryal-updated-?p=f&m=dev) (frame links are per feature — see LP-001 / F-002 / F-003 briefs)
 **Pipeline:** [`docs/feature-pipeline-quickref.md`](./feature-pipeline-quickref.md)
 

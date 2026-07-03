@@ -48,14 +48,14 @@ test.describe('GH#6 — Comparison motion (fixture)', () => {
       .poll(
         async () =>
           isTranslateYNear(await getTicketTranslateY(page), COMPARISON_MOTION_MAIN_GROUP_OFFSET_PX),
-        { timeout: 200, intervals: [16] },
+        { timeout: 600, intervals: [32] },
       )
       .toBe(true);
 
-    // Terminal — matches static twin (translateY 0)
+    // Terminal — entry snap (0ms) then Smart Animate (700ms) after step 1
     await expect
       .poll(async () => isTranslateYNear(await getTicketTranslateY(page), 0), {
-        timeout: transitionMs + 400,
+        timeout: transitionMs * 2 + 500,
         intervals: [50],
       })
       .toBe(true);

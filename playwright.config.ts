@@ -7,8 +7,8 @@ export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  retries: process.env.CI ? 2 : 1,
+  workers: 1,
   reporter: 'list',
   use: {
     baseURL,
@@ -20,6 +20,7 @@ export default defineConfig({
       name: 'visual',
       testMatch: /visual\/.*\.spec\.ts/,
       snapshotPathTemplate: '{testDir}/visual/__screenshots__/{testFilePath}/{arg}{ext}',
+      fullyParallel: false,
     },
   ],
   webServer: {

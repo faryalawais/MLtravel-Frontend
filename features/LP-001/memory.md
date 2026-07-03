@@ -4,8 +4,8 @@
 - **Parent ticket:** LP-001
 - **FE ticket:** LP-001-FE
 - **BE ticket:** LP-001-BE
-- **Status:** gherkins-ready
-- **Last updated:** 2026-07-02
+- **Status:** fe-implemented
+- **Last updated:** 2026-07-03
 - **Figma file key:** `h6BqI1ZRMSJxR7jESNF0Ep`
 - **Figma anchor:** `5164:6346` (landing page only — not used for F-002 / F-003)
 
@@ -196,9 +196,9 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 <!-- Written by: design-contract on 2026-07-01 -->
 <!-- Updated: 2026-07-02 — Social proof GH#9 contracted -->
 <!-- validate:figma-coverage: passed · validate:contract: passed -->
-**Scope:** Navbar (#3) + Hero (#4) + Problem (#5) + Comparison₁ (#6) + How-it-works teaser (#7) + Feature grid (#10) + Social proof (#9) — `features/LP-001/contract.md`  
-**Branch:** `feature/LP-001-FE`  
-**Next:** Human **APPROVE** GH#9 Social proof slice, then `/figma-extract` GH#11 Pricing
+**Scope:** Navbar (#3) + Hero (#4) + Problem (#5) + Comparison₁ (#6) + How-it-works teaser (#7) + Feature grid (#10) + Social proof (#9) + Pricing (#11) + Footer (#12) — `features/LP-001/contract.md`  
+**Branch:** `fix/Animations`  
+**Next:** None — LP-001 FE complete. Push branch and open PR when ready.
 
 ---
 
@@ -212,13 +212,14 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - test:visual: not scaffolded yet
 - typecheck: passed (`npx tsc --noEmit`, `next build`)
 - token-lint: not scaffolded yet
-- Deviations from contract: `#pricing` anchor is empty stub until Pricing slice (GH#11); Product link uses `#product` pending section anchor
+- Deviations from contract: none blocking ship (see per-slice notes below)
 
 ### FE notes — Hero GH#4
+<!-- Human review: APPROVED 2026-07-03 -->
 <!-- Written by: fe-implement on 2026-07-01 -->
 <!-- Motion re-wire from motion-diffs: 2026-07-03 -->
 - Components implemented: `HeroSection`, `HeroPrimaryCta`
-- **Motion (2026-07-03):** `getHeroColumnMotionStyle` + `motion.textColumn` / `motion.ctaColumn` wired from `motion-diffs.json` (370→0 text, 370→284 CTA); product/stats static; `tests/visual/hero-motion.spec.ts`; state PNGs `reference-hero-animation-state-{1,2,3}.png` via `npm run figma:capture-hero-motion`
+- **Motion (2026-07-03):** `getHeroColumnMotionStyle` + `runHeroMotion`; `tests/visual/hero-motion.spec.ts`; state PNGs `reference-hero-animation-state-{1,2,3}.png`
 - ui-registry: 66 entries (navbar 38 + hero 28); `build:layout` updated
 - Hero contract appended to `features/LP-001/contract.md`
 - Product image: `public/images/hero-product.png` (Figma `I5164:6560;5160:5290`)
@@ -257,21 +258,41 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - Deviations: center perforated divider omitted vs contract/Figma anatomy (human request)
 
 ### FE notes — Social proof GH#9
+<!-- Human review: APPROVED 2026-07-03 -->
 <!-- Written by: fe-implement on 2026-07-02 -->
 - Components implemented: `SocialProofSection` (desktop testimonials row + integrations strip; mobile horizontal-scroll cards); wired on `app/page.tsx` after `FeatureGridSection`
 - Assets: testimonial logos, 14 client logos, avatar glow/circle SVGs, decorative plane, section pill dot
 - Typography utilities added: `text-body-desktop-testimonial`, `text-body-mobile-testimonial`, `text-label-desktop-xs-semibold`, `text-heading-mobile-h1`
 - test:e2e: passed (`--grep GH#9`, 2 scenarios)
-- test:visual: social proof desktop/mobile baselines established (pending human approval)
+- test:visual: social proof desktop/mobile baselines updated 2026-07-03
 - test:visual typography: social proof header + quote desktop passed
 - typecheck + `next build`: passed
 - Motion: one-way testimonials hover (700ms) on section enter; integrations strip logo emphasis on strip enter
-- Deviations: slide carousel is static (2 blocks visible, progress shows slide 1); third testimonial not in Figma extract as separate block
+- Deviations: carousel simplified to 3 slides (21 Figma states); auto-advance on hover
+
+### FE notes — Feature grid GH#10
+<!-- Human review: APPROVED 2026-07-03 -->
+- **Motion (2026-07-03):** `getFeatureGridContentMotionStyle` + card cascade; `tests/visual/feature-grid-motion.spec.ts`
+
+### FE notes — Pricing GH#11
+<!-- Human review: APPROVED 2026-07-03 -->
+- Components implemented: `PricingSection` (desktop + mobile); `id="pricing"` anchor; wired on `app/page.tsx`
+- **Motion (2026-07-03):** `getPricingMainGroupMotionStyle` + `runSimpleOneStepMotion`; `tests/visual/pricing-motion.spec.ts`
+- test:visual: pricing desktop/mobile baselines updated 2026-07-03
+
+### FE notes — Footer GH#12
+<!-- Human review: APPROVED 2026-07-03 -->
+- Components implemented: `SiteFooter` in `app/layout.tsx` (desktop + mobile)
+- **Motion (2026-07-03):** `runFooterLinkEmphasisMotion` on `footer.motion.root`; chain closed via `motion-inferred-overlays.json`; `tests/visual/footer-motion.spec.ts`
 
 ---
 
 ## Gate Results
-<!-- To be written by: impl-gate -->
+<!-- Written by: impl-gate 2026-07-03 -->
+- `validate:motion-chains -- LP-001` — PASS (9/9 chains closed)
+- `test:e2e` — PASS (31 scenarios)
+- `test:visual` + `*-motion.spec.ts` — PASS (34 visual + motion; workers=1, retries=1)
+- Human APPROVE — all slices GH#1–#12 recorded 2026-07-03
 
 ---
 
@@ -318,12 +339,13 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-02** — `/figma-extract` GH#9 Social proof — nodes `5164:6568`, `5164:6836`, `5307:6608`, `5164:11204`; 20 assets exported; `validate:figma-extract` pass (clients-animation-alt @4×).
 - **2026-07-02** — `/ui-registry-build` GH#9 Social proof — 224 `socialProof.*` paths; registry total 1534; `ui-registry:validate` + `validate:layout` pass (28 leaf slugs).
 - **2026-07-02** — Reverted GH#8 Comparison₂ artifacts (registry, contract, figma cache, slice-roots).
-- **2026-07-02** — `/fe-implement` GH#10 Feature grid — `FeatureGridSection`; typography constants + plane positioning; e2e/visual/typography gates pass; **human APPROVE pending**.
+- **2026-07-02** — `/fe-implement` GH#10 Feature grid — `FeatureGridSection`; typography constants + plane positioning; e2e/visual/typography gates pass; human **APPROVED** 2026-07-03.
 - **2026-07-02** — `/design-contract` GH#9 Social proof — contract §2 + slice appendix; added `spacing.120` primitive; 19 assets in `notes.md`; Gherkin sub-component visibility steps; `validate:figma-coverage` + `validate:contract` pass.
-- **2026-07-02** — `/fe-implement` GH#9 Social proof — `SocialProofSection`; wired after `FeatureGridSection`; e2e/visual/typography gates pass; **human APPROVE pending**.
+- **2026-07-02** — `/fe-implement` GH#9 Social proof — `SocialProofSection`; wired after `FeatureGridSection`; e2e/visual/typography gates pass; human **APPROVED** 2026-07-03.
 - **2026-07-03** — `/fe-implement` GH#6 Comparison motion re-wire — `getComparisonMainGroupMotionStyle` (Frame 2095585108 translateY 1028→232); `runSimpleOneStepMotion`; page load = static twin `5164:6566`; CTA block fixed at ty=632; `comparison-motion.spec.ts` pass.
 - **2026-07-03** — `/fe-implement` GH#7 HIW motion re-wire — `getHiwFooterMotionStyle` (footer-note translateY 725→644); card cascade retained via `getMotionCascadeCardSurfaceStyle`; `hiw-motion.spec.ts` pass.
 - **2026-07-03** — `/fe-implement` GH#10 Feature grid motion re-wire — `getFeatureGridContentMotionStyle` on cards+footer wrapper (flex-safe); card cascade retained; settles to static twin; `feature-grid-motion.spec.ts` pass.
 - **2026-07-03** — `/fe-implement` GH#9 Social proof motion re-wire — carousel `useOneWayMotion` on `socialProof.motion.root` + `getMotionSlideRevealStyle`; clients strip `runSimpleOneStepMotion` + `getSocialProofClientsLogoMotionStyle` on `clientsMotion.root`; `social-proof-motion.spec.ts` pass.
 - **2026-07-03** — `/fe-implement` GH#11 Pricing motion re-wire — `getPricingMainGroupMotionStyle` on `maingroup` (868→58 offset 810px); header `getMotionSlideRevealStyle`; `pricing-motion.spec.ts` pass.
 - **2026-07-03** — `/fe-implement` GH#12 Footer motion re-wire — `runFooterLinkEmphasisMotion` on `footer.motion.root`; chain closed via `motion-inferred-overlays.json`; `footer-motion.spec.ts` pass.
+- **2026-07-03** — LP-001 closure pass — fixed `runSimpleOneStepMotion` dwell timing; motion + visual baselines green; contract + memory updated; status → **fe-implemented**.

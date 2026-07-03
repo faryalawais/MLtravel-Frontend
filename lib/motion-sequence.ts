@@ -128,15 +128,14 @@ export function runSimpleOneStepMotion(
   onTerminal: () => void,
 ): () => void {
   const timers: ReturnType<typeof setTimeout>[] = [];
+  const transitionMs = getDurationTokenMs(MOTION_DURATION_DEFAULT_VAR, 700);
 
   timers.push(
     setTimeout(() => {
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           onEntrySnap();
-          requestAnimationFrame(() => {
-            requestAnimationFrame(onTerminal);
-          });
+          timers.push(setTimeout(onTerminal, transitionMs));
         });
       });
     }, 32),
