@@ -965,6 +965,10 @@ export const PRICING_PILL_LABEL_MOBILE_CLASS =
 export const PRICING_ROUTE_STRIP_CLASS =
   'flex w-full max-w-[868px] items-center justify-between rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-navy)] bg-[color-mix(in_srgb,var(--color-text-brand-navy)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-6)]';
 
+export const PRICING_ROUTE_PLANE_DESKTOP_SRC = '/images/pricing-route-plane-desktop.gif';
+
+export const PRICING_ROUTE_PLANE_MOBILE_SRC = '/images/pricing-route-plane-mobile.gif';
+
 export const PRICING_ROUTE_LABEL_DESKTOP_CLASS =
   'text-label-desktop-sm-semibold text-[var(--color-text-secondary)]';
 

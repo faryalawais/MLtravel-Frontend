@@ -52,6 +52,8 @@ import {
   PRICING_ROUTE_FROM,
   PRICING_ROUTE_LABEL_DESKTOP_CLASS,
   PRICING_ROUTE_LABEL_MOBILE_CLASS,
+  PRICING_ROUTE_PLANE_DESKTOP_SRC,
+  PRICING_ROUTE_PLANE_MOBILE_SRC,
   PRICING_ROUTE_STRIP_CLASS,
   PRICING_ROUTE_TO_DESKTOP,
   PRICING_ROUTE_TO_MOBILE,
@@ -132,6 +134,7 @@ function PricingRouteStrip({
   planeTestId,
   toTestId,
   toLabel,
+  planeSrc,
   planeWidth,
   planeHeight,
   labelClass,
@@ -141,6 +144,7 @@ function PricingRouteStrip({
   planeTestId: string;
   toTestId: string;
   toLabel: string;
+  planeSrc: string;
   planeWidth: number;
   planeHeight: number;
   labelClass: string;
@@ -152,10 +156,11 @@ function PricingRouteStrip({
       </span>
       <Image
         data-testid={planeTestId}
-        src="/images/pricing-route-plane.png"
+        src={planeSrc}
         alt=""
         width={planeWidth}
         height={planeHeight}
+        unoptimized
         className="mx-[var(--spacing-8)] h-auto shrink-0"
         aria-hidden="true"
       />
@@ -512,6 +517,7 @@ function PricingDesktopPanel() {
                 planeTestId={pr.textBlock3}
                 toTestId={pr.textBlock4}
                 toLabel={PRICING_ROUTE_TO_DESKTOP}
+                planeSrc={PRICING_ROUTE_PLANE_DESKTOP_SRC}
                 planeWidth={150}
                 planeHeight={22}
                 labelClass={PRICING_ROUTE_LABEL_DESKTOP_CLASS}
@@ -572,6 +578,7 @@ function PricingMobilePanel() {
             planeTestId={prMobile.loadingPlane1}
             toTestId={prMobile.textBlock3}
             toLabel={PRICING_ROUTE_TO_MOBILE}
+            planeSrc={PRICING_ROUTE_PLANE_MOBILE_SRC}
             planeWidth={72}
             planeHeight={10}
             labelClass={PRICING_ROUTE_LABEL_MOBILE_CLASS}

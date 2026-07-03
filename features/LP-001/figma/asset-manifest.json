@@ -299,11 +299,21 @@
     },
     {
       "nodeId": "I5164:6564;5151:11817;5147:6155",
-      "nodeName": "Pricing route strip loading plane",
-      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6564;5151:11817;5147:6155&format=png&scale=2",
-      "localPath": "public/images/pricing-route-plane.png",
-      "type": "png",
-      "dataSource": "static"
+      "nodeName": "Pricing route strip loading plane (desktop GIF)",
+      "gifRef": "7626e0b6c8132870012027b291d55c440610ed54",
+      "localPath": "public/images/pricing-route-plane-desktop.gif",
+      "type": "gif",
+      "dataSource": "static",
+      "note": "Lottie/GIF fill from Figma gifRef; plane animates left→right on dotted track."
+    },
+    {
+      "nodeId": "5164:6929",
+      "nodeName": "Pricing route strip loading plane (mobile GIF)",
+      "gifRef": "1630699e053e31c45765839d63c047ee53a798f9",
+      "localPath": "public/images/pricing-route-plane-mobile.gif",
+      "type": "gif",
+      "dataSource": "static",
+      "note": "Lottie/GIF fill from Figma gifRef; plane animates left→right on dotted track."
     },
     {
       "nodeId": "5018:3129",
