@@ -59,6 +59,23 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.navbar.motion.ctaLabel` | Motion frame CTA label | `screen.landing.home` | `default` | `component-navbar-motion-ctaLabel` |
 | `component.navbar.motion.ctaIcon` | Motion frame CTA icon | `screen.landing.home` | `default` | `component-navbar-motion-ctaIcon` |
 | `component.navbar.motion.ctaGraphic` | Motion frame CTA graphic | `screen.landing.home` | `default` | `component-navbar-motion-ctaGraphic` |
+| `component.footer.root` | Shared site footer desktop (Gherkin: component.footer) | `screen.landing.home` | `default`, `hover` | `component-footer-root` |
+| `component.footer.brandCol` | Footer brand column | `screen.landing.home` | `default` | `component-footer-brandCol` |
+| `component.footer.brandHeader` | Footer brand header row | `screen.landing.home` | `default` | `component-footer-brandHeader` |
+| `component.footer.logoIcon` | Footer logo icon | `screen.landing.home` | `default` | `component-footer-logoIcon` |
+| `component.footer.brandLabel` | Footer brand label MaqsoodTravel | `screen.landing.home` | `default` | `component-footer-brandLabel` |
+| `component.footer.tagline` | Footer brand tagline | `screen.landing.home` | `default` | `component-footer-tagline` |
+| `component.footer.navCols` | Footer navigation columns | `screen.landing.home` | `default` | `component-footer-navCols` |
+| `component.footer.productCol` | Footer Product column | `screen.landing.home` | `default` | `component-footer-productCol` |
+| `component.footer.companyCol` | Footer Company column | `screen.landing.home` | `default` | `component-footer-companyCol` |
+| `component.footer.bottomRow` | Footer bottom legal row | `screen.landing.home` | `default` | `component-footer-bottomRow` |
+| `component.footer.copyright` | Footer copyright line | `screen.landing.home` | `default` | `component-footer-copyright` |
+| `component.footer.legalLinks` | Footer legal links row | `screen.landing.home` | `default`, `hover` | `component-footer-legalLinks` |
+| `component.footer.mobile.root` | Shared site footer mobile (Gherkin: component.footer @393px) | `screen.landing.home` | `default`, `hover` | `component-footer-mobile-root` |
+| `component.footer.mobile.brandCol` | Footer mobile brand block | `screen.landing.home` | `default` | `component-footer-mobile-brandCol` |
+| `component.footer.mobile.navCols` | Footer mobile nav columns | `screen.landing.home` | `default` | `component-footer-mobile-navCols` |
+| `component.footer.mobile.bottomRow` | Footer mobile bottom row | `screen.landing.home` | `default` | `component-footer-mobile-bottomRow` |
+| `component.footer.motion.root` | Footer motion prototype (Gherkin: motion matches 5164:10371) | `screen.landing.home` | `default`, `hover` | `component-footer-motion-root` |
 | `component.landing.hero.root` | Hero section desktop (Gherkin: component.landing.hero) | `screen.landing.home` | `default`, `hover` | `component-landing-hero-root` |
 | `component.landing.hero.heroTop` | Hero top row — copy + product image | `screen.landing.home` | `default` | `component-landing-hero-heroTop` |
 | `component.landing.hero.textBlock` | Hero text block | `screen.landing.home` | `default` | `component-landing-hero-textBlock` |

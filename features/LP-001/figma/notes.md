@@ -197,3 +197,11 @@ Bound variables are present on REST cache nodes (`boundVariables` in `spec.json`
 2. `/ui-registry-build` + `/registry-validate`  
 3. `/design-contract` — Navbar slice  
 4. Repeat `figma:extract:rest` per backlog section for Hero → Footer
+
+## Footer slice (GH#12)
+
+- **Desktop (`5164:6565`):** brand column + Product/Company nav columns + bottom legal row.
+- **Mobile (`5164:7038`):** stacked brand, Developers/Company columns, legal row.
+- **Motion (`5164:10371`):** mobile link hover emphasis (1-step, 700ms).
+- **Shared:** `component.footer` in `app/layout.tsx` on `/`, `/contact`, `/how-it-works`.
+- **Refs:** `reference-footer.png`, `reference-footermobile.png`, `reference-footer-animation.png`
