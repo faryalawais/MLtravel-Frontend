@@ -475,6 +475,12 @@ export const HIW_CARD_VISUAL_IMAGES = {
   step3: '/images/hiw-card-visual-3.png',
 } as const;
 
+/** Full-width card visual — both dimensions auto so Next/Image aspect-ratio check passes. */
+export const HIW_CARD_VISUAL_IMAGE_STYLE: CSSProperties = {
+  width: '100%',
+  height: 'auto',
+};
+
 export const HIW_DESKTOP_CARDS = [
   {
     cardTestId: hiw.hiwCard,
@@ -927,6 +933,16 @@ export const SOCIAL_PROOF_CLIENT_LOGOS: SocialProofClientLogoConfig[] = [
   { src: '/images/social-proof-client-14.png', testId: spMobile.image24 },
 ];
 
+export const SOCIAL_PROOF_CLIENT_LOGO_IMAGE_CLASS = 'object-contain';
+
+/** Constrain logo box — width/height auto so rendered size differs from width/height props. */
+export const SOCIAL_PROOF_CLIENT_LOGO_IMAGE_STYLE: CSSProperties = {
+  width: 'auto',
+  height: 'auto',
+  maxHeight: 'var(--spacing-32)',
+  maxWidth: 'var(--spacing-96)',
+};
+
 /** Landing page — pricing section (GH#11, Figma 5164:6564 / 5164:6915 / 5164:11487) */
 const pr = ids.component.landing.pricing;
 const prMobile = pr.mobile;
@@ -939,16 +955,35 @@ export const PRICING_TOKENS = {
   motionEasingDefault: 'var(--motion-easing-default)',
 } as const;
 
-export const PRICING_DESKTOP_FRAME_CLASS = 'relative mx-auto w-full max-w-[1440px]';
+export const PRICING_DESKTOP_ROOT_CLASS =
+  'relative hidden h-[844px] w-full overflow-hidden min-[1440px]:block';
 
-export const PRICING_SECTION_BG_DESKTOP_CLASS =
-  'bg-[var(--color-background-page)] bg-[image:url(/images/pricing-section-bg-desktop.png)] bg-cover bg-center bg-no-repeat';
+export const PRICING_DESKTOP_FRAME_CLASS = 'relative mx-auto h-full w-full max-w-[1440px]';
 
-export const PRICING_SECTION_BG_MOBILE_CLASS =
-  'bg-[var(--color-background-page)] bg-[image:url(/images/pricing-section-bg-mobile.png)] bg-cover bg-center bg-no-repeat';
+export const PRICING_SECTION_BG_DESKTOP_SRC = '/images/pricing-section-bg-desktop.png';
+
+export const PRICING_SECTION_BG_MOBILE_SRC = '/images/pricing-section-bg-mobile.png';
+
+export const PRICING_MAP_DECORATION_SRC = '/images/pricing-map-decoration.gif';
+
+export const PRICING_SECTION_BG_SHELL_CLASS = 'pointer-events-none absolute inset-0 z-0';
+
+export const PRICING_SECTION_BG_IMAGE_CLASS = 'size-full object-cover object-center';
+
+export const PRICING_SECTION_BG_MOBILE_WRAPPER_CLASS =
+  'relative isolate h-[864px] w-full overflow-hidden min-[1440px]:hidden';
+
+export const PRICING_SECTION_BG_MOBILE_INNER_CLASS =
+  'relative z-10 flex h-full flex-col gap-[var(--spacing-20)] overflow-hidden px-[var(--spacing-16)] pb-[var(--spacing-32)] pt-[var(--spacing-32)]';
+
+export const PRICING_DESKTOP_CONTENT_CLASS =
+  'relative z-10 flex h-full flex-col px-[286px] py-[var(--spacing-40)]';
 
 export const PRICING_MAP_DECORATION_CLASS =
-  'pointer-events-none absolute left-[8%] top-[var(--spacing-64)] z-0 h-auto w-[213px] max-w-[15%]';
+  'pointer-events-none absolute left-[111px] top-[415px] z-[1] h-[120px] w-[213px] object-cover';
+
+export const PRICING_SECTION_PILL_DOT_CLASS =
+  'size-[7px] shrink-0 rounded-full bg-[var(--color-text-brand-teal)]';
 
 export const PRICING_SECTION_PILL_DESKTOP_CLASS =
   'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border border-[var(--color-border-brand-teal)] bg-[color-mix(in_srgb,var(--color-text-brand-teal)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]';
@@ -963,11 +998,32 @@ export const PRICING_PILL_LABEL_MOBILE_CLASS =
   '[font-family:var(--typography-label-mobile-xs-semibold-font-family)] [font-size:var(--typography-label-mobile-xs-semibold-font-size)] [font-weight:var(--typography-label-mobile-xs-semibold-font-weight)] [line-height:var(--typography-label-mobile-xs-semibold-line-height)] text-[var(--color-text-brand-teal)]';
 
 export const PRICING_ROUTE_STRIP_CLASS =
-  'flex w-full max-w-[868px] items-center justify-between rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-navy)] bg-[color-mix(in_srgb,var(--color-text-brand-navy)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-6)]';
+  'relative h-[var(--spacing-44)] w-full overflow-hidden rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-navy)] bg-[color-mix(in_srgb,var(--color-text-brand-navy)_8%,transparent)]';
+
+export const PRICING_ROUTE_STRIP_MOBILE_CLASS =
+  'flex h-[26px] w-full items-center justify-between overflow-hidden rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-navy)] bg-[color-mix(in_srgb,var(--color-text-brand-navy)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-6)]';
+
+export const PRICING_ROUTE_FROM_DESKTOP_CLASS =
+  'absolute left-[31.7px] top-[calc(50%-7px)] -translate-y-1/2 whitespace-pre';
+
+export const PRICING_ROUTE_FROM_MOBILE_CLASS = 'shrink-0 whitespace-pre';
+
+export const PRICING_ROUTE_TO_DESKTOP_CLASS =
+  'absolute right-[209.7px] top-[calc(50%-7px)] -translate-y-1/2 translate-x-full whitespace-pre text-label-desktop-sm-semibold text-[var(--color-text-brand-navy)]';
+
+export const PRICING_ROUTE_TO_MOBILE_CLASS =
+  'shrink-0 whitespace-pre [font-family:var(--typography-label-mobile-xs-medium-font-family)] [font-size:var(--typography-label-mobile-xs-medium-font-size)] [font-weight:var(--typography-label-mobile-xs-medium-font-weight)] [line-height:var(--typography-label-mobile-xs-medium-line-height)] text-[var(--color-text-brand-navy)]';
+
+export const PRICING_ROUTE_PLANE_TRACK_DESKTOP_CLASS =
+  'pointer-events-none absolute left-1/2 top-[calc(50%+0.5px)] h-[22px] w-[150px] -translate-x-1/2 -translate-y-1/2';
+
+export const PRICING_ROUTE_PLANE_TRACK_MOBILE_CLASS = 'pointer-events-none relative h-[10px] w-[72px] shrink-0';
 
 export const PRICING_ROUTE_PLANE_DESKTOP_SRC = '/images/pricing-route-plane-desktop.gif';
 
 export const PRICING_ROUTE_PLANE_MOBILE_SRC = '/images/pricing-route-plane-mobile.gif';
+
+export const PRICING_ROUTE_PLANE_IMAGE_CLASS = 'pointer-events-none size-full object-cover';
 
 export const PRICING_ROUTE_LABEL_DESKTOP_CLASS =
   'text-label-desktop-sm-semibold text-[var(--color-text-secondary)]';

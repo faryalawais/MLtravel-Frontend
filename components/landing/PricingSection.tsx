@@ -33,9 +33,12 @@ import {
   PRICING_CHECKLIST_ITEMS_MOBILE,
   PRICING_CTA_LABEL,
   PRICING_DESKTOP_FRAME_CLASS,
+  PRICING_DESKTOP_ROOT_CLASS,
   PRICING_HEADING_LINE1,
   PRICING_HEADING_LINE2,
+  PRICING_DESKTOP_CONTENT_CLASS,
   PRICING_MAP_DECORATION_CLASS,
+  PRICING_MAP_DECORATION_SRC,
   PRICING_MOTION_STYLE,
   PRICING_PILL_LABEL,
   PRICING_PILL_LABEL_DESKTOP_CLASS,
@@ -50,16 +53,29 @@ import {
   PRICING_PRICE_SECONDARY_DESKTOP_CLASS,
   PRICING_PRICE_SECONDARY_MOBILE_CLASS,
   PRICING_ROUTE_FROM,
+  PRICING_ROUTE_FROM_DESKTOP_CLASS,
+  PRICING_ROUTE_FROM_MOBILE_CLASS,
   PRICING_ROUTE_LABEL_DESKTOP_CLASS,
   PRICING_ROUTE_LABEL_MOBILE_CLASS,
   PRICING_ROUTE_PLANE_DESKTOP_SRC,
+  PRICING_ROUTE_PLANE_IMAGE_CLASS,
   PRICING_ROUTE_PLANE_MOBILE_SRC,
+  PRICING_ROUTE_PLANE_TRACK_DESKTOP_CLASS,
+  PRICING_ROUTE_PLANE_TRACK_MOBILE_CLASS,
   PRICING_ROUTE_STRIP_CLASS,
+  PRICING_ROUTE_STRIP_MOBILE_CLASS,
   PRICING_ROUTE_TO_DESKTOP,
+  PRICING_ROUTE_TO_DESKTOP_CLASS,
   PRICING_ROUTE_TO_MOBILE,
-  PRICING_SECTION_BG_DESKTOP_CLASS,
-  PRICING_SECTION_BG_MOBILE_CLASS,
+  PRICING_ROUTE_TO_MOBILE_CLASS,
+  PRICING_SECTION_BG_DESKTOP_SRC,
+  PRICING_SECTION_BG_IMAGE_CLASS,
+  PRICING_SECTION_BG_SHELL_CLASS,
+  PRICING_SECTION_BG_MOBILE_INNER_CLASS,
+  PRICING_SECTION_BG_MOBILE_SRC,
+  PRICING_SECTION_BG_MOBILE_WRAPPER_CLASS,
   PRICING_SECTION_PILL_DESKTOP_CLASS,
+  PRICING_SECTION_PILL_DOT_CLASS,
   PRICING_SECTION_PILL_MOBILE_CLASS,
   PRICING_SECTION_SUBTITLE,
   PRICING_SEAT_LABEL_CLASS,
@@ -97,14 +113,7 @@ function PricingSectionPill({ pillTestId, labelTestId, variant = 'desktop' }: Pr
       data-testid={pillTestId}
       className={isMobile ? PRICING_SECTION_PILL_MOBILE_CLASS : PRICING_SECTION_PILL_DESKTOP_CLASS}
     >
-      <Image
-        src="/icons/icon-section-pill-dot.svg"
-        alt=""
-        width={7}
-        height={7}
-        aria-hidden="true"
-        className="shrink-0"
-      />
+      <span aria-hidden="true" className={PRICING_SECTION_PILL_DOT_CLASS} />
       <span
         data-testid={labelTestId}
         className={isMobile ? PRICING_PILL_LABEL_MOBILE_CLASS : PRICING_PILL_LABEL_DESKTOP_CLASS}
@@ -138,6 +147,7 @@ function PricingRouteStrip({
   planeWidth,
   planeHeight,
   labelClass,
+  variant = 'desktop',
 }: {
   routeStripTestId: string;
   fromTestId: string;
@@ -148,23 +158,41 @@ function PricingRouteStrip({
   planeWidth: number;
   planeHeight: number;
   labelClass: string;
+  variant?: 'desktop' | 'mobile';
 }) {
+  const isMobile = variant === 'mobile';
+
   return (
-    <div data-testid={routeStripTestId} className={PRICING_ROUTE_STRIP_CLASS}>
-      <span data-testid={fromTestId} className={labelClass}>
+    <div
+      data-testid={routeStripTestId}
+      className={isMobile ? PRICING_ROUTE_STRIP_MOBILE_CLASS : PRICING_ROUTE_STRIP_CLASS}
+    >
+      <span
+        data-testid={fromTestId}
+        className={`${isMobile ? PRICING_ROUTE_FROM_MOBILE_CLASS : PRICING_ROUTE_FROM_DESKTOP_CLASS} ${labelClass}`}
+      >
         {PRICING_ROUTE_FROM}
       </span>
-      <Image
-        data-testid={planeTestId}
-        src={planeSrc}
-        alt=""
-        width={planeWidth}
-        height={planeHeight}
-        unoptimized
-        className="mx-[var(--spacing-8)] h-auto shrink-0"
-        aria-hidden="true"
-      />
-      <span data-testid={toTestId} className={labelClass}>
+      <div
+        className={
+          isMobile ? PRICING_ROUTE_PLANE_TRACK_MOBILE_CLASS : PRICING_ROUTE_PLANE_TRACK_DESKTOP_CLASS
+        }
+      >
+        <Image
+          data-testid={planeTestId}
+          src={planeSrc}
+          alt=""
+          width={planeWidth}
+          height={planeHeight}
+          unoptimized
+          className={PRICING_ROUTE_PLANE_IMAGE_CLASS}
+          aria-hidden="true"
+        />
+      </div>
+      <span
+        data-testid={toTestId}
+        className={isMobile ? PRICING_ROUTE_TO_MOBILE_CLASS : PRICING_ROUTE_TO_DESKTOP_CLASS}
+      >
         {toLabel}
       </span>
     </div>
@@ -464,26 +492,35 @@ function PricingDesktopPanel() {
     getMotionRevealStyle(revealed, PRICING_MOTION_STYLE, options);
 
   return (
-    <div data-testid={pr.root} className={`hidden min-[1440px]:block ${PRICING_SECTION_BG_DESKTOP_CLASS}`}>
+    <div data-testid={pr.root} className={PRICING_DESKTOP_ROOT_CLASS}>
+      <div className={PRICING_SECTION_BG_SHELL_CLASS} aria-hidden="true">
+        <Image
+          src={PRICING_SECTION_BG_DESKTOP_SRC}
+          alt=""
+          fill
+          className={PRICING_SECTION_BG_IMAGE_CLASS}
+          sizes="100vw"
+        />
+      </div>
       <div className={PRICING_DESKTOP_FRAME_CLASS}>
+        <Image
+          data-testid={pr.kuzu420map1475411}
+          src={PRICING_MAP_DECORATION_SRC}
+          alt=""
+          width={213}
+          height={120}
+          unoptimized
+          className={PRICING_MAP_DECORATION_CLASS}
+          aria-hidden="true"
+        />
         <div
           data-testid={pr.motion.root}
-          className="relative flex flex-col items-center py-[var(--spacing-40)]"
+          className={PRICING_DESKTOP_CONTENT_CLASS}
           onMouseEnter={triggerReveal}
         >
-          <Image
-            data-testid={pr.kuzu420map1475411}
-            src="/images/pricing-map-decoration.png"
-            alt=""
-            width={213}
-            height={120}
-            className={PRICING_MAP_DECORATION_CLASS}
-            aria-hidden="true"
-          />
-
           <div
             data-testid={pr.frame2095585158}
-            className="relative z-10 flex w-full max-w-[868px] flex-col items-center gap-[var(--spacing-40)]"
+            className="flex min-h-0 flex-1 flex-col items-center gap-[var(--spacing-40)]"
           >
             <div
               data-testid={pr.sectionHeader}
@@ -547,10 +584,17 @@ function PricingDesktopPanel() {
 
 function PricingMobilePanel() {
   return (
-    <div
-      data-testid={prMobile.root}
-      className={`flex flex-col gap-[var(--spacing-20)] px-[var(--spacing-16)] pb-[var(--spacing-32)] pt-[var(--spacing-32)] min-[1440px]:hidden ${PRICING_SECTION_BG_MOBILE_CLASS}`}
-    >
+    <div data-testid={prMobile.root} className={PRICING_SECTION_BG_MOBILE_WRAPPER_CLASS}>
+      <div className={PRICING_SECTION_BG_SHELL_CLASS} aria-hidden="true">
+        <Image
+          src={PRICING_SECTION_BG_MOBILE_SRC}
+          alt=""
+          fill
+          className={PRICING_SECTION_BG_IMAGE_CLASS}
+          sizes="100vw"
+        />
+      </div>
+      <div className={PRICING_SECTION_BG_MOBILE_INNER_CLASS}>
       <div data-testid={prMobile.frame1561553979} className="flex flex-col gap-[var(--spacing-20)]">
         <div data-testid={prMobile.frame1561553964} className="flex flex-col items-center gap-[var(--spacing-8)] text-center">
           <PricingSectionPill
@@ -582,6 +626,7 @@ function PricingMobilePanel() {
             planeWidth={72}
             planeHeight={10}
             labelClass={PRICING_ROUTE_LABEL_MOBILE_CLASS}
+            variant="mobile"
           />
 
           <PricingCardMobile
@@ -594,6 +639,7 @@ function PricingMobilePanel() {
       </div>
 
       <PricingTrustStripMobile />
+      </div>
     </div>
   );
 }
@@ -603,7 +649,7 @@ export function PricingSection() {
     <section
       id="pricing"
       aria-label="Pricing"
-      className="scroll-mt-[var(--spacing-64)]"
+      className="scroll-mt-[var(--spacing-64)] overflow-hidden"
     >
       <PricingDesktopPanel />
       <PricingMobilePanel />

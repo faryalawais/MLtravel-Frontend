@@ -16,6 +16,8 @@ import {
   LANDING_SECTION_SUBTITLE_CLASS,
   PROBLEM_MOTION_STYLE,
   SOCIAL_PROOF_CAROUSEL_TRANSITION_STYLE,
+  SOCIAL_PROOF_CLIENT_LOGO_IMAGE_CLASS,
+  SOCIAL_PROOF_CLIENT_LOGO_IMAGE_STYLE,
   SOCIAL_PROOF_CLIENT_LOGOS,
   SOCIAL_PROOF_DESKTOP_FRAME_CLASS,
   SOCIAL_PROOF_DESKTOP_SLIDE_STEP_PX,
@@ -387,8 +389,8 @@ function IntegrationsStrip({
               alt=""
               width={92}
               height={32}
-              className="h-auto max-h-[var(--spacing-32)] w-auto max-w-[var(--spacing-96)] object-contain"
-              style={RESPONSIVE_IMAGE_DIMENSION_STYLE}
+              className={SOCIAL_PROOF_CLIENT_LOGO_IMAGE_CLASS}
+              style={SOCIAL_PROOF_CLIENT_LOGO_IMAGE_STYLE}
             />
           </div>
         ))}

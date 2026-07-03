@@ -235,3 +235,46 @@ test.describe('GH#11 — Pricing', () => {
     await expect(page).toHaveURL(/\/contact/);
   });
 });
+
+test.describe('GH#12 — Footer', () => {
+  test('footer visible at 1440px on landing', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/');
+    const footer = page.getByTestId(ids.component.footer.root);
+    await footer.scrollIntoViewIfNeeded();
+    await expect(footer).toBeVisible();
+    await expect(footer.getByTestId(ids.component.footer.brandLabel)).toBeVisible();
+    await expect(footer.getByTestId(ids.component.footer.productCol)).toBeVisible();
+    await expect(footer.getByTestId(ids.component.footer.companyCol)).toBeVisible();
+    await expect(footer.getByTestId(ids.component.footer.copyright)).toBeVisible();
+  });
+
+  test('footer visible on contact and how-it-works', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+
+    await page.goto('/contact');
+    await expect(page.getByTestId(ids.component.footer.root)).toBeVisible();
+
+    await page.goto('/how-it-works');
+    await expect(page.getByTestId(ids.component.footer.root)).toBeVisible();
+  });
+
+  test('footer visible at 393px on landing', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 1200 });
+    await page.goto('/');
+    const footer = page.getByTestId(ids.component.footer.mobile.root);
+    await footer.scrollIntoViewIfNeeded();
+    await expect(footer).toBeVisible();
+    await expect(footer.getByTestId(ids.component.footer.mobile.navCols)).toBeVisible();
+    await expect(footer.getByTestId(ids.component.footer.mobile.bottomRow)).toBeVisible();
+    await expect(footer.getByTestId(ids.component.footer.motion.root)).toBeVisible();
+  });
+
+  test('Contact link navigates to /contact', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.footer.root).scrollIntoViewIfNeeded();
+    await page.getByTestId(`${ids.component.footer.companyCol}-contact`).click();
+    await expect(page).toHaveURL(/\/contact/);
+  });
+});

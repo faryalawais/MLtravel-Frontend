@@ -291,11 +291,12 @@
     },
     {
       "nodeId": "I5164:6564;5151:11815",
-      "nodeName": "Pricing section map decoration",
-      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5164:6564;5151:11815&format=png&scale=2",
-      "localPath": "public/images/pricing-map-decoration.png",
-      "type": "png",
-      "dataSource": "static"
+      "nodeName": "Pricing section map decoration (animated path GIF)",
+      "imageRef": "1b9428ea366790a1015ce20ad4906d5b2111674e",
+      "localPath": "public/images/pricing-map-decoration.gif",
+      "type": "gif",
+      "dataSource": "static",
+      "note": "IMAGE fill imageRef; animated dashed route path. Display at 213×120 per Figma. Do not use node PNG render."
     },
     {
       "nodeId": "I5164:6564;5151:11817;5147:6155",

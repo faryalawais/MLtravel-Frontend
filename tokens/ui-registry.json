@@ -16,7 +16,8 @@
       "component.landing.howItWorksTeaser": "component.landing.howItWorksTeaser.root",
       "component.landing.featureGrid": "component.landing.featureGrid.root",
       "component.landing.socialProof": "component.landing.socialProof.root",
-      "component.landing.pricing": "component.landing.pricing.root"
+      "component.landing.pricing": "component.landing.pricing.root",
+      "component.footer": "component.footer.root"
     }
   },
   "screen": {
@@ -393,6 +394,170 @@
           "$figmaNode": "I5164:10342;2780:1466;2780:1505",
           "$states": [
             "default"
+          ],
+          "$tokens": {}
+        }
+      }
+    },
+    "footer": {
+      "root": {
+        "$description": "Shared site footer desktop (Gherkin: component.footer)",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "5164:6565",
+        "$states": [
+          "default",
+          "hover"
+        ],
+        "$tokens": {},
+        "$shared": true
+      },
+      "brandCol": {
+        "$description": "Footer brand column",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:17",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "brandHeader": {
+        "$description": "Footer brand header row",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:18",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "logoIcon": {
+        "$description": "Footer logo icon",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:19",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "brandLabel": {
+        "$description": "Footer brand label MaqsoodTravel",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:19",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "tagline": {
+        "$description": "Footer brand tagline",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:20",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "navCols": {
+        "$description": "Footer navigation columns",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:21",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "productCol": {
+        "$description": "Footer Product column",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:22",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "companyCol": {
+        "$description": "Footer Company column",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:34",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "bottomRow": {
+        "$description": "Footer bottom legal row",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:46",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "copyright": {
+        "$description": "Footer copyright line",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:47",
+        "$states": [
+          "default"
+        ],
+        "$tokens": {}
+      },
+      "legalLinks": {
+        "$description": "Footer legal links row",
+        "$screen": "screen.landing.home",
+        "$figmaNode": "I5164:6565;3152:48",
+        "$states": [
+          "default",
+          "hover"
+        ],
+        "$tokens": {}
+      },
+      "mobile": {
+        "root": {
+          "$description": "Shared site footer mobile (Gherkin: component.footer @393px)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:7038",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "brandCol": {
+          "$description": "Footer mobile brand block",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:7038;3152:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "navCols": {
+          "$description": "Footer mobile nav columns",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:7038;3152:15",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "bottomRow": {
+          "$description": "Footer mobile bottom row",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "I5164:7038;3152:16",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        }
+      },
+      "motion": {
+        "root": {
+          "$description": "Footer motion prototype (Gherkin: motion matches 5164:10371)",
+          "$screen": "screen.landing.home",
+          "$figmaNode": "5164:10371",
+          "$states": [
+            "default",
+            "hover"
           ],
           "$tokens": {}
         }

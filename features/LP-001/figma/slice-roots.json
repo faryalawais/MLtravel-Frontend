@@ -126,6 +126,21 @@
       "nodeId": "5164:11487",
       "name": "Pricing-animation",
       "source": "explicit"
+    },
+    {
+      "nodeId": "5164:6565",
+      "name": "Footer",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:7038",
+      "name": "FooterMobile",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5164:10371",
+      "name": "Footer-animation",
+      "source": "explicit"
     }
   ]
 }

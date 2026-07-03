@@ -51,6 +51,23 @@ export const testIds = {
   "component.navbar.motion.ctaLabel": "component-navbar-motion-ctaLabel",
   "component.navbar.motion.ctaIcon": "component-navbar-motion-ctaIcon",
   "component.navbar.motion.ctaGraphic": "component-navbar-motion-ctaGraphic",
+  "component.footer.root": "component-footer-root",
+  "component.footer.brandCol": "component-footer-brandCol",
+  "component.footer.brandHeader": "component-footer-brandHeader",
+  "component.footer.logoIcon": "component-footer-logoIcon",
+  "component.footer.brandLabel": "component-footer-brandLabel",
+  "component.footer.tagline": "component-footer-tagline",
+  "component.footer.navCols": "component-footer-navCols",
+  "component.footer.productCol": "component-footer-productCol",
+  "component.footer.companyCol": "component-footer-companyCol",
+  "component.footer.bottomRow": "component-footer-bottomRow",
+  "component.footer.copyright": "component-footer-copyright",
+  "component.footer.legalLinks": "component-footer-legalLinks",
+  "component.footer.mobile.root": "component-footer-mobile-root",
+  "component.footer.mobile.brandCol": "component-footer-mobile-brandCol",
+  "component.footer.mobile.navCols": "component-footer-mobile-navCols",
+  "component.footer.mobile.bottomRow": "component-footer-mobile-bottomRow",
+  "component.footer.motion.root": "component-footer-motion-root",
   "component.landing.hero.root": "component-landing-hero-root",
   "component.landing.hero.heroTop": "component-landing-hero-heroTop",
   "component.landing.hero.textBlock": "component-landing-hero-textBlock",
@@ -2881,6 +2898,29 @@ export const ids = {
         "ctaLabel": "component-navbar-motion-ctaLabel",
         "ctaIcon": "component-navbar-motion-ctaIcon",
         "ctaGraphic": "component-navbar-motion-ctaGraphic"
+      }
+    },
+    "footer": {
+      "root": "component-footer-root",
+      "brandCol": "component-footer-brandCol",
+      "brandHeader": "component-footer-brandHeader",
+      "logoIcon": "component-footer-logoIcon",
+      "brandLabel": "component-footer-brandLabel",
+      "tagline": "component-footer-tagline",
+      "navCols": "component-footer-navCols",
+      "productCol": "component-footer-productCol",
+      "companyCol": "component-footer-companyCol",
+      "bottomRow": "component-footer-bottomRow",
+      "copyright": "component-footer-copyright",
+      "legalLinks": "component-footer-legalLinks",
+      "mobile": {
+        "root": "component-footer-mobile-root",
+        "brandCol": "component-footer-mobile-brandCol",
+        "navCols": "component-footer-mobile-navCols",
+        "bottomRow": "component-footer-mobile-bottomRow"
+      },
+      "motion": {
+        "root": "component-footer-motion-root"
       }
     },
     "landing": {

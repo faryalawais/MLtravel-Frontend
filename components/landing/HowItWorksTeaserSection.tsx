@@ -7,6 +7,7 @@ import {
   HIW_DESKTOP_CARDS,
   HIW_MOBILE_CARDS,
   HIW_CARD_BODY_CLASS,
+  HIW_CARD_VISUAL_IMAGE_STYLE,
   HIW_SECTION_SUBTITLE,
   LANDING_SECTION_HEADING_ACCENT_CLASS,
   LANDING_SECTION_HEADING_DESKTOP_CLASS,
@@ -25,7 +26,6 @@ import {
   getMotionSlideRevealStyle,
   MOTION_DELAY_STEP,
   MOTION_TRANSITION_PROPERTIES,
-  RESPONSIVE_IMAGE_DIMENSION_STYLE,
 } from '@/constants/motion.constants';
 import { runRapidFourStepMotion } from '@/lib/motion-sequence';
 import { useOneWayMotion } from '@/lib/use-one-way-motion';
@@ -170,8 +170,8 @@ function CardVisualImage({ card }: { card: HiwCardConfig }) {
       alt=""
       width={424}
       height={184}
-      className="h-auto w-full"
-      style={RESPONSIVE_IMAGE_DIMENSION_STYLE}
+      className="object-contain"
+      style={HIW_CARD_VISUAL_IMAGE_STYLE}
       aria-hidden="true"
     />
   );

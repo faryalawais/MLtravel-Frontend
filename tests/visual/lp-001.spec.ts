@@ -150,4 +150,24 @@ test.describe('LP-001 visual regression', () => {
       { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
     );
   });
+
+  test('footer desktop 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 400 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.footer.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.footer.root)).toHaveScreenshot(
+      'footer-desktop.png',
+      { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
+    );
+  });
+
+  test('footer mobile 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 500 });
+    await page.goto('/');
+    await page.getByTestId(ids.component.footer.mobile.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(ids.component.footer.mobile.root)).toHaveScreenshot(
+      'footer-mobile.png',
+      { maxDiffPixelRatio: MAX_DIFF_PIXEL_RATIO },
+    );
+  });
 });
