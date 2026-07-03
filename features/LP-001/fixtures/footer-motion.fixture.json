@@ -1,0 +1,45 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "ghIssue": 12,
+    "chain": "Footer-animation",
+    "animationNodeId": "5164:10371",
+    "staticTwinNodeId": "5164:7038",
+    "pattern": "inferred-link-emphasis",
+    "runner": "runFooterLinkEmphasisMotion",
+    "chainStatus": "closed",
+    "inferred": true,
+    "initialRender": "staticTwin",
+    "source": "motion-chains.json + motion-diffs.json + motion-inferred-overlays.json"
+  },
+  "figmaStates": [
+    { "index": 1, "nodeId": "5164:10371", "label": "idle" },
+    { "index": 2, "nodeId": "5164:7038", "label": "emphasized" }
+  ],
+  "transitions": [
+    {
+      "stepIndex": 0,
+      "trigger": "MOUSE_ENTER",
+      "durationMs": 700,
+      "delayMs": 0,
+      "delayToken": null
+    }
+  ],
+  "motionDiffsExpected": [
+    {
+      "layer": "FooterNavLink",
+      "helper": "getFooterNavLinkMotionStyle",
+      "fontWeight": { "from": 400, "to": 600, "custom": true }
+    }
+  ],
+  "implementationExpected": {
+    "trigger": "onMouseEnter on component.footer.motion.root",
+    "mobileOnly": true,
+    "helper": "getFooterNavLinkMotionStyle",
+    "emphasisClass": "FOOTER_NAV_LINK_EMPHASIS_CLASS",
+    "steps": [
+      { "index": 0, "action": "emphasizeFirstLinks" },
+      { "index": 1, "action": "clearEmphasisAfterDwell" }
+    ]
+  }
+}

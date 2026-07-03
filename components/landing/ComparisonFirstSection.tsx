@@ -34,7 +34,8 @@ import {
   MAQSOOD_DESKTOP_ROWS,
   MAQSOOD_MOBILE_ROWS,
 } from '@/constants/landing.constants';
-import { getMotionRevealStyle } from '@/constants/motion.constants';
+import { getComparisonMainGroupMotionStyle, type ComparisonMotionStep } from '@/constants/motion.constants';
+import { runSimpleOneStepMotion } from '@/lib/motion-sequence';
 import { useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
@@ -398,15 +399,23 @@ function MaqsoodCardDesktop({ revealed }: { revealed: boolean }) {
   );
 }
 
-function GiantTicketDesktop({ revealed }: { revealed: boolean }) {
+function GiantTicketDesktop({ motionStep }: { motionStep: ComparisonMotionStep }) {
+  const motionRevealed = motionStep >= 1;
+
   return (
     <div
       data-testid={comparison.giantTicket}
       className="relative flex w-full flex-row items-stretch overflow-hidden rounded-[var(--radius-panel)] border border-[var(--color-border-subtle)] bg-[var(--color-background-surface)]"
       style={{
-        ...COMPARISON_MOTION_STYLE,
-        transitionProperty: 'box-shadow',
-        boxShadow: revealed ? COMPARISON_TOKENS.shadowTicketReveal : COMPARISON_TOKENS.shadowTicket,
+        ...getComparisonMainGroupMotionStyle(
+          motionStep >= 0,
+          motionStep >= 1,
+          COMPARISON_MOTION_STYLE,
+        ),
+        transitionProperty: 'transform, box-shadow',
+        boxShadow: motionRevealed
+          ? COMPARISON_TOKENS.shadowTicketReveal
+          : COMPARISON_TOKENS.shadowTicket,
       }}
     >
       <div
@@ -414,8 +423,8 @@ function GiantTicketDesktop({ revealed }: { revealed: boolean }) {
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-0 z-10 size-[calc(var(--spacing-32)+var(--spacing-4))] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--color-background-page)]"
       />
-      <IndustryCardDesktop revealed={revealed} />
-      <MaqsoodCardDesktop revealed={revealed} />
+      <IndustryCardDesktop revealed={motionRevealed} />
+      <MaqsoodCardDesktop revealed={motionRevealed} />
     </div>
   );
 }
@@ -550,7 +559,6 @@ function ComparisonCtaBlock({
   iconTestId,
   graphicTestId,
   blockTestId,
-  revealed = false,
 }: {
   footnoteTestId: string;
   footnoteVariant?: 'desktop' | 'mobile';
@@ -559,13 +567,11 @@ function ComparisonCtaBlock({
   iconTestId: string;
   graphicTestId?: string;
   blockTestId: string;
-  revealed?: boolean;
 }) {
   return (
     <div
       data-testid={blockTestId}
       className="flex w-full flex-col items-center gap-[var(--spacing-16)] text-center"
-      style={getMotionRevealStyle(revealed, COMPARISON_MOTION_STYLE)}
     >
       <ComparisonFootnote testId={footnoteTestId} variant={footnoteVariant} />
       <ComparisonDemoCta
@@ -579,14 +585,16 @@ function ComparisonCtaBlock({
 }
 
 export function ComparisonFirstSection() {
-  const [revealed, setRevealed] = useState(false);
+  const [motionStep, setMotionStep] = useState<ComparisonMotionStep>(-1);
 
-  const playReveal = useCallback(() => {
-    setRevealed(true);
-    return () => undefined;
+  const playComparisonMotion = useCallback(() => {
+    return runSimpleOneStepMotion(
+      () => setMotionStep(0),
+      () => setMotionStep(1),
+    );
   }, []);
 
-  const triggerReveal = useOneWayMotion(playReveal);
+  const triggerMotion = useOneWayMotion(playComparisonMotion);
 
   return (
     <section
@@ -599,7 +607,7 @@ export function ComparisonFirstSection() {
         <div
           data-testid={comparison.motion.root}
           className="flex justify-center px-[var(--spacing-64)] py-[var(--spacing-40)]"
-          onMouseEnter={triggerReveal}
+          onMouseEnter={triggerMotion}
         >
           <div
             data-testid={comparison.columnsFrame}
@@ -608,7 +616,6 @@ export function ComparisonFirstSection() {
             <div
               data-testid={comparison.sectionHeader}
               className="flex w-full max-w-[1035px] flex-col items-center gap-[var(--spacing-16)] text-center"
-              style={getMotionRevealStyle(revealed, COMPARISON_MOTION_STYLE)}
             >
               <ComparisonSectionPill
                 pillTestId={comparison.sectionPill}
@@ -617,12 +624,10 @@ export function ComparisonFirstSection() {
               <div
                 data-testid={comparison.headingBlock}
                 className="flex flex-col items-center gap-[var(--spacing-8)]"
-                style={getMotionRevealStyle(revealed, COMPARISON_MOTION_STYLE)}
               >
                 <h2
                   data-testid={comparison.sectionHeading}
                   className={LANDING_SECTION_HEADING_DESKTOP_CLASS}
-                  style={getMotionRevealStyle(revealed, COMPARISON_MOTION_STYLE)}
                 >
                   Dependency or{' '}
                   <span className={LANDING_SECTION_HEADING_ACCENT_CLASS}>Ownership</span>
@@ -630,9 +635,6 @@ export function ComparisonFirstSection() {
                 <p
                   data-testid={comparison.sectionSubtitle}
                   className={LANDING_SECTION_SUBTITLE_CLASS}
-                  style={getMotionRevealStyle(revealed, COMPARISON_MOTION_STYLE, {
-                    transitionDelay: 'var(--motion-duration-step-delay)',
-                  })}
                 >
                   The travel industry runs on outdated models built for their profit, not yours. Choose
                   differently.
@@ -640,7 +642,7 @@ export function ComparisonFirstSection() {
               </div>
             </div>
 
-            <GiantTicketDesktop revealed={revealed} />
+            <GiantTicketDesktop motionStep={motionStep} />
 
             <ComparisonCtaBlock
               blockTestId={comparison.ctaBlock}
@@ -650,7 +652,6 @@ export function ComparisonFirstSection() {
               labelTestId={comparison.ctaLabel}
               iconTestId={comparison.ctaIcon}
               graphicTestId={comparison.ctaGraphic}
-              revealed={revealed}
             />
           </div>
         </div>

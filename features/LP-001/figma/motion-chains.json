@@ -1,0 +1,1097 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "generatedAt": "2026-07-03T12:08:28.689Z",
+    "source": "build-motion-from-cache"
+  },
+  "globalRules": {
+    "oneWay": true,
+    "defaultTransition": "SMART_ANIMATE",
+    "interactionPolicy": "ignore"
+  },
+  "chains": [
+    {
+      "name": "hero-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "HeroSection",
+        "nodeId": "5164:6560"
+      },
+      "animationNodeId": "5164:10343",
+      "status": "closed",
+      "kind": "interactive",
+      "pattern": "staged-sequence",
+      "runner": "runHeroMotion",
+      "baseStyle": "HERO_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.landing.hero.motion.root",
+        "targetNodeId": "5164:10343"
+      },
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:10343",
+          "label": "idle",
+          "referencePng": "reference-hero-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5132:5424",
+          "label": "state-2",
+          "referencePng": "reference-hero-animation-state-2.png"
+        },
+        {
+          "index": 3,
+          "nodeId": "5132:5423",
+          "label": "state-3",
+          "referencePng": "reference-hero-animation-state-3.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5164:10343",
+          "to": "5132:5424",
+          "trigger": "MOUSE_ENTER",
+          "rawTrigger": "MOUSE_ENTER",
+          "triggerNodeId": "5164:10343",
+          "triggerNodeName": "hero-animation",
+          "delayMs": 0,
+          "delayToken": null,
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5132:5424",
+          "to": "5132:5423",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5132:5424",
+          "triggerNodeName": "Property 1=2",
+          "delayMs": 300,
+          "delayToken": "motion.duration.autoAdvance",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE"
+        }
+      ]
+    },
+    {
+      "name": "problem-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "ProblemSection",
+        "nodeId": "5164:6561"
+      },
+      "animationNodeId": "5164:10344",
+      "status": "closed",
+      "kind": "interactive",
+      "pattern": "rapid-four-step",
+      "runner": "runRapidFourStepMotion",
+      "baseStyle": "DEFAULT_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.landing.problem.motion.root",
+        "targetNodeId": "5164:10344"
+      },
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:10344",
+          "label": "idle",
+          "referencePng": "reference-problem-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5145:4440",
+          "label": "state-2",
+          "referencePng": "reference-problem-animation-state-2.png"
+        },
+        {
+          "index": 3,
+          "nodeId": "5145:4438",
+          "label": "state-3",
+          "referencePng": "reference-problem-animation-state-3.png"
+        },
+        {
+          "index": 4,
+          "nodeId": "5145:4439",
+          "label": "state-4",
+          "referencePng": "reference-problem-animation-state-4.png"
+        },
+        {
+          "index": 5,
+          "nodeId": "5145:4437",
+          "label": "state-5",
+          "referencePng": "reference-problem-animation-state-5.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5164:10344",
+          "to": "5145:4440",
+          "trigger": "MOUSE_ENTER",
+          "rawTrigger": "MOUSE_ENTER",
+          "triggerNodeId": "5164:10344",
+          "triggerNodeName": "ProblemSection-animation",
+          "delayMs": 0,
+          "delayToken": null,
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5145:4440",
+          "to": "5145:4438",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5145:4440",
+          "triggerNodeName": "Property 1=2",
+          "delayMs": 120,
+          "delayToken": "motion.duration.stepDelay",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5145:4438",
+          "to": "5145:4439",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5145:4438",
+          "triggerNodeName": "Property 1=3",
+          "delayMs": 120,
+          "delayToken": "motion.duration.stepDelay",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5145:4439",
+          "to": "5145:4437",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5145:4439",
+          "triggerNodeName": "Property 1=4",
+          "delayMs": 120,
+          "delayToken": "motion.duration.stepDelay",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        }
+      ]
+    },
+    {
+      "name": "comparison-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": null,
+        "nodeId": null
+      },
+      "animationNodeId": "5164:10411",
+      "status": "closed",
+      "kind": "interactive",
+      "pattern": "simple-one-step",
+      "runner": "useOneWayMotion",
+      "baseStyle": "DEFAULT_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.landing.comparisonFirst.motion.root",
+        "targetNodeId": "5164:10411"
+      },
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:10411",
+          "label": "idle",
+          "referencePng": "reference-comparison-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5145:4767",
+          "label": "state-2",
+          "referencePng": "reference-comparison-animation-state-2.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5164:10411",
+          "to": "5145:4767",
+          "trigger": "MOUSE_ENTER",
+          "rawTrigger": "MOUSE_ENTER",
+          "triggerNodeId": "5164:10411",
+          "triggerNodeName": "ComparisonSection-animation",
+          "delayMs": 0,
+          "delayToken": null,
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        }
+      ]
+    },
+    {
+      "name": "HowItWorks-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "HowItWorksSection",
+        "nodeId": "5164:6567"
+      },
+      "animationNodeId": "5164:10412",
+      "status": "closed",
+      "kind": "interactive",
+      "pattern": "rapid-four-step",
+      "runner": "runRapidFourStepMotion",
+      "baseStyle": "DEFAULT_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.landing.howItWorksTeaser.motion.root",
+        "targetNodeId": "5164:10412"
+      },
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:10412",
+          "label": "idle",
+          "referencePng": "reference-howitworks-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5147:5418",
+          "label": "state-2",
+          "referencePng": "reference-howitworks-animation-state-2.png"
+        },
+        {
+          "index": 3,
+          "nodeId": "5147:5417",
+          "label": "state-3",
+          "referencePng": "reference-howitworks-animation-state-3.png"
+        },
+        {
+          "index": 4,
+          "nodeId": "5147:5416",
+          "label": "state-4",
+          "referencePng": "reference-howitworks-animation-state-4.png"
+        },
+        {
+          "index": 5,
+          "nodeId": "5147:5415",
+          "label": "state-5",
+          "referencePng": "reference-howitworks-animation-state-5.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5164:10412",
+          "to": "5147:5418",
+          "trigger": "MOUSE_ENTER",
+          "rawTrigger": "MOUSE_ENTER",
+          "triggerNodeId": "5164:10412",
+          "triggerNodeName": "HowItWorks-animation",
+          "delayMs": 0,
+          "delayToken": null,
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5147:5418",
+          "to": "5147:5417",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5147:5418",
+          "triggerNodeName": "Property 1=2",
+          "delayMs": 120,
+          "delayToken": "motion.duration.stepDelay",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5147:5417",
+          "to": "5147:5416",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5147:5417",
+          "triggerNodeName": "Property 1=3",
+          "delayMs": 120,
+          "delayToken": "motion.duration.stepDelay",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5147:5416",
+          "to": "5147:5415",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5147:5416",
+          "triggerNodeName": "Property 1=4",
+          "delayMs": 120,
+          "delayToken": "motion.duration.stepDelay",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        }
+      ]
+    },
+    {
+      "name": "FeatureGrid-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "FeatureGrid",
+        "nodeId": "5164:6562"
+      },
+      "animationNodeId": "5404:6074",
+      "status": "closed",
+      "kind": "interactive",
+      "pattern": "staged-sequence",
+      "runner": "runFeatureGridMotion",
+      "baseStyle": "DEFAULT_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.landing.featureGrid.motion.root",
+        "targetNodeId": "5404:6074"
+      },
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5404:6074",
+          "label": "idle",
+          "referencePng": "reference-featuregrid-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5404:5947",
+          "label": "state-2",
+          "referencePng": "reference-featuregrid-animation-state-2.png"
+        },
+        {
+          "index": 3,
+          "nodeId": "5404:5948",
+          "label": "state-3",
+          "referencePng": "reference-featuregrid-animation-state-3.png"
+        },
+        {
+          "index": 4,
+          "nodeId": "5404:5946",
+          "label": "state-4",
+          "referencePng": "reference-featuregrid-animation-state-4.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5404:6074",
+          "to": "5404:5947",
+          "trigger": "MOUSE_ENTER",
+          "rawTrigger": "MOUSE_ENTER",
+          "triggerNodeId": "5404:6074",
+          "triggerNodeName": "FeatureGrid-animation",
+          "delayMs": 0,
+          "delayToken": null,
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5404:5947",
+          "to": "5404:5948",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5404:5947",
+          "triggerNodeName": "Property 1=2",
+          "delayMs": 300,
+          "delayToken": "motion.duration.autoAdvance",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5404:5948",
+          "to": "5404:5946",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5404:5948",
+          "triggerNodeName": "Property 1=3",
+          "delayMs": 300,
+          "delayToken": "motion.duration.autoAdvance",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        }
+      ]
+    },
+    {
+      "name": "SocialProof-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "SocialProofMobile",
+        "nodeId": "5164:6836"
+      },
+      "animationNodeId": "5307:6608",
+      "status": "closed",
+      "kind": "interactive",
+      "pattern": "custom",
+      "runner": "useOneWayMotion",
+      "baseStyle": "DEFAULT_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.landing.socialProof.motion.root",
+        "targetNodeId": "5307:6644"
+      },
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5307:6608",
+          "label": "idle",
+          "referencePng": "reference-socialproof-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "2554:1720",
+          "label": "state-2",
+          "referencePng": "reference-socialproof-animation-state-2.png"
+        },
+        {
+          "index": 3,
+          "nodeId": "2554:1718",
+          "label": "state-3",
+          "referencePng": "reference-socialproof-animation-state-3.png"
+        },
+        {
+          "index": 4,
+          "nodeId": "2554:1716",
+          "label": "state-4",
+          "referencePng": "reference-socialproof-animation-state-4.png"
+        },
+        {
+          "index": 5,
+          "nodeId": "2554:1714",
+          "label": "state-5",
+          "referencePng": "reference-socialproof-animation-state-5.png"
+        },
+        {
+          "index": 6,
+          "nodeId": "2554:1712",
+          "label": "state-6",
+          "referencePng": "reference-socialproof-animation-state-6.png"
+        },
+        {
+          "index": 7,
+          "nodeId": "2554:1710",
+          "label": "state-7",
+          "referencePng": "reference-socialproof-animation-state-7.png"
+        },
+        {
+          "index": 8,
+          "nodeId": "2554:1708",
+          "label": "state-8",
+          "referencePng": "reference-socialproof-animation-state-8.png"
+        },
+        {
+          "index": 9,
+          "nodeId": "2554:1706",
+          "label": "state-9",
+          "referencePng": "reference-socialproof-animation-state-9.png"
+        },
+        {
+          "index": 10,
+          "nodeId": "2554:1704",
+          "label": "state-10",
+          "referencePng": "reference-socialproof-animation-state-10.png"
+        },
+        {
+          "index": 11,
+          "nodeId": "2554:1702",
+          "label": "state-11",
+          "referencePng": "reference-socialproof-animation-state-11.png"
+        },
+        {
+          "index": 12,
+          "nodeId": "2554:1700",
+          "label": "state-12",
+          "referencePng": "reference-socialproof-animation-state-12.png"
+        },
+        {
+          "index": 13,
+          "nodeId": "2554:1698",
+          "label": "state-13",
+          "referencePng": "reference-socialproof-animation-state-13.png"
+        },
+        {
+          "index": 14,
+          "nodeId": "2554:1696",
+          "label": "state-14",
+          "referencePng": "reference-socialproof-animation-state-14.png"
+        },
+        {
+          "index": 15,
+          "nodeId": "2554:1694",
+          "label": "state-15",
+          "referencePng": "reference-socialproof-animation-state-15.png"
+        },
+        {
+          "index": 16,
+          "nodeId": "2554:1692",
+          "label": "state-16",
+          "referencePng": "reference-socialproof-animation-state-16.png"
+        },
+        {
+          "index": 17,
+          "nodeId": "2554:1690",
+          "label": "state-17",
+          "referencePng": "reference-socialproof-animation-state-17.png"
+        },
+        {
+          "index": 18,
+          "nodeId": "2554:1688",
+          "label": "state-18",
+          "referencePng": "reference-socialproof-animation-state-18.png"
+        },
+        {
+          "index": 19,
+          "nodeId": "2554:1686",
+          "label": "state-19",
+          "referencePng": "reference-socialproof-animation-state-19.png"
+        },
+        {
+          "index": 20,
+          "nodeId": "2554:1684",
+          "label": "state-20",
+          "referencePng": "reference-socialproof-animation-state-20.png"
+        },
+        {
+          "index": 21,
+          "nodeId": "2554:1722",
+          "label": "state-21",
+          "referencePng": "reference-socialproof-animation-state-21.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5307:6608",
+          "to": "2554:1720",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5307:6644",
+          "triggerNodeName": "Vector",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1720",
+          "to": "2554:1718",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1720",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1718",
+          "to": "2554:1716",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1718",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1716",
+          "to": "2554:1714",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1716",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1714",
+          "to": "2554:1712",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1714",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1712",
+          "to": "2554:1710",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1712",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1710",
+          "to": "2554:1708",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1710",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1708",
+          "to": "2554:1706",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1708",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1706",
+          "to": "2554:1704",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1706",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1704",
+          "to": "2554:1702",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1704",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1702",
+          "to": "2554:1700",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1702",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1700",
+          "to": "2554:1698",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1700",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1698",
+          "to": "2554:1696",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1698",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1696",
+          "to": "2554:1694",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1696",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1694",
+          "to": "2554:1692",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1694",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1692",
+          "to": "2554:1690",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1692",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1690",
+          "to": "2554:1688",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1690",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1688",
+          "to": "2554:1686",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1688",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1686",
+          "to": "2554:1684",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1686",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        },
+        {
+          "from": "2554:1684",
+          "to": "2554:1722",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "2554:1684",
+          "triggerNodeName": "Property 1=Default",
+          "delayMs": 10,
+          "delayToken": null,
+          "durationMs": 40,
+          "durationToken": null,
+          "easing": "EASE_OUT",
+          "easingToken": "motion.easing.hero",
+          "transitionType": "SMART_ANIMATE",
+          "customApproved": true
+        }
+      ]
+    },
+    {
+      "name": "SocialProof-animation-alt",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "SocialProofMobile",
+        "nodeId": "5164:6836"
+      },
+      "animationNodeId": "5164:11204",
+      "status": "closed",
+      "kind": "interactive",
+      "pattern": "simple-one-step",
+      "runner": "useOneWayMotion",
+      "baseStyle": "DEFAULT_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.landing.socialProof.clientsMotion.root",
+        "targetNodeId": "5164:11204"
+      },
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:11204",
+          "label": "idle",
+          "referencePng": "reference-socialproof-alt-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5164:11167",
+          "label": "state-2",
+          "referencePng": "reference-socialproof-alt-animation-state-2.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5164:11204",
+          "to": "5164:11167",
+          "trigger": "MOUSE_ENTER",
+          "rawTrigger": "MOUSE_ENTER",
+          "triggerNodeId": "5164:11204",
+          "triggerNodeName": "clients-animaiton",
+          "delayMs": 0,
+          "delayToken": null,
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        }
+      ]
+    },
+    {
+      "name": "Pricing-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "NewPricingSection",
+        "nodeId": "5164:6564"
+      },
+      "animationNodeId": "5164:11487",
+      "status": "closed",
+      "kind": "interactive",
+      "pattern": "simple-one-step",
+      "runner": "useOneWayMotion",
+      "baseStyle": "DEFAULT_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.landing.pricing.motion.root",
+        "targetNodeId": "5164:11487"
+      },
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:11487",
+          "label": "idle",
+          "referencePng": "reference-pricing-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5164:11482",
+          "label": "state-2",
+          "referencePng": "reference-pricing-animation-state-2.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5164:11487",
+          "to": "5164:11482",
+          "trigger": "MOUSE_ENTER",
+          "rawTrigger": "MOUSE_ENTER",
+          "triggerNodeId": "5164:11487",
+          "triggerNodeName": "PricingSectionanimation",
+          "delayMs": 0,
+          "delayToken": null,
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        }
+      ]
+    },
+    {
+      "name": "Footer-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "FooterMobile",
+        "nodeId": "5164:7038"
+      },
+      "animationNodeId": "5164:10371",
+      "status": "closed",
+      "inferred": true,
+      "kind": "interactive",
+      "pattern": "inferred-link-emphasis",
+      "runner": "runFooterLinkEmphasisMotion",
+      "baseStyle": "DEFAULT_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.footer.motion.root",
+        "targetNodeId": "5164:10371"
+      },
+      "missingNodeIds": [],
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:10371",
+          "label": "idle",
+          "referencePng": "reference-footer-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5164:7038",
+          "label": "emphasized",
+          "referencePng": "reference-footer-animation-state-2.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5164:10371",
+          "to": "5164:7038",
+          "trigger": "MOUSE_ENTER",
+          "triggerNodeId": "5164:10371",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "delayMs": 0,
+          "delayToken": null
+        }
+      ]
+    }
+  ],
+  "ambientMotion": [
+    {
+      "nodeId": "I5164:11361;5147:6155",
+      "gifRef": "7626e0b6c8132870012027b291d55c440610ed54",
+      "width": 150,
+      "height": 22
+    },
+    {
+      "nodeId": "I5164:11487;5164:11237;5147:6155",
+      "gifRef": "7626e0b6c8132870012027b291d55c440610ed54",
+      "width": 150,
+      "height": 22
+    },
+    {
+      "nodeId": "I5164:6564;5151:11817;5147:6155",
+      "gifRef": "7626e0b6c8132870012027b291d55c440610ed54",
+      "width": 150,
+      "height": 22
+    },
+    {
+      "nodeId": "5164:6929",
+      "gifRef": "1630699e053e31c45765839d63c047ee53a798f9",
+      "width": 72,
+      "height": 10
+    }
+  ]
+}

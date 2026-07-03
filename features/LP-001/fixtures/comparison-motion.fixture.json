@@ -1,0 +1,48 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "ghIssue": 6,
+    "chain": "comparison-animation",
+    "animationNodeId": "5164:10411",
+    "staticTwinNodeId": "5164:6566",
+    "pattern": "simple-one-step",
+    "runner": "useOneWayMotion",
+    "initialRender": "staticTwin",
+    "source": "motion-chains.json + motion-diffs.json + motion-state-poses.json"
+  },
+  "figmaStates": [
+    { "index": 1, "nodeId": "5164:10411", "label": "idle" },
+    { "index": 2, "nodeId": "5145:4767", "label": "state-2" }
+  ],
+  "transitions": [
+    {
+      "stepIndex": 0,
+      "trigger": "MOUSE_ENTER",
+      "durationMs": 700,
+      "delayMs": 0,
+      "delayToken": null
+    }
+  ],
+  "motionDiffsExpected": [
+    {
+      "layer": "Frame 2095585108",
+      "helper": "getComparisonMainGroupMotionStyle",
+      "translateY": { "fromPx": 1028, "toPx": 232, "custom": true }
+    }
+  ],
+  "mainGroupPoses": {
+    "entryPx": 1028,
+    "staticPx": 212,
+    "terminalPx": 232,
+    "offsetFromStaticPx": 816
+  },
+  "implementationExpected": {
+    "trigger": "onMouseEnter on component.landing.comparisonFirst.motion.root",
+    "desktopOnly": true,
+    "steps": [
+      { "index": 0, "action": "snapMainGroupEntry" },
+      { "index": 1, "action": "animateMainGroupTerminal" }
+    ],
+    "ctaBlockFixed": true
+  }
+}

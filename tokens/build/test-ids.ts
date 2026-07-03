@@ -96,6 +96,8 @@ export const testIds = {
   "component.landing.hero.mobile.cta": "component-landing-hero-mobile-cta",
   "component.landing.hero.motion.root": "component-landing-hero-motion-root",
   "component.landing.hero.motion.cta": "component-landing-hero-motion-cta",
+  "component.landing.hero.motion.textColumn": "component-landing-hero-motion-textColumn",
+  "component.landing.hero.motion.ctaColumn": "component-landing-hero-motion-ctaColumn",
   "component.landing.problem.root": "component-landing-problem-root",
   "component.landing.problem.outerFrame": "component-landing-problem-outerFrame",
   "component.landing.problem.innerFrame": "component-landing-problem-innerFrame",
@@ -2955,7 +2957,9 @@ export const ids = {
         },
         "motion": {
           "root": "component-landing-hero-motion-root",
-          "cta": "component-landing-hero-motion-cta"
+          "cta": "component-landing-hero-motion-cta",
+          "textColumn": "component-landing-hero-motion-textColumn",
+          "ctaColumn": "component-landing-hero-motion-ctaColumn"
         }
       },
       "problem": {

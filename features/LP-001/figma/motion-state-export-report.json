@@ -1,0 +1,137 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "generatedAt": "2026-07-03T09:41:04.862Z",
+    "source": "export-motion-state-pngs"
+  },
+  "exported": 20,
+  "skipped": 0,
+  "entries": [
+    {
+      "chain": "SocialProof-animation",
+      "state": 1,
+      "file": "reference-socialproof-animation-state-1.png",
+      "status": "exists"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 2,
+      "file": "reference-socialproof-animation-state-2.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 3,
+      "file": "reference-socialproof-animation-state-3.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 4,
+      "file": "reference-socialproof-animation-state-4.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 5,
+      "file": "reference-socialproof-animation-state-5.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 6,
+      "file": "reference-socialproof-animation-state-6.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 7,
+      "file": "reference-socialproof-animation-state-7.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 8,
+      "file": "reference-socialproof-animation-state-8.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 9,
+      "file": "reference-socialproof-animation-state-9.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 10,
+      "file": "reference-socialproof-animation-state-10.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 11,
+      "file": "reference-socialproof-animation-state-11.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 12,
+      "file": "reference-socialproof-animation-state-12.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 13,
+      "file": "reference-socialproof-animation-state-13.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 14,
+      "file": "reference-socialproof-animation-state-14.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 15,
+      "file": "reference-socialproof-animation-state-15.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 16,
+      "file": "reference-socialproof-animation-state-16.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 17,
+      "file": "reference-socialproof-animation-state-17.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 18,
+      "file": "reference-socialproof-animation-state-18.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 19,
+      "file": "reference-socialproof-animation-state-19.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 20,
+      "file": "reference-socialproof-animation-state-20.png",
+      "status": "exported"
+    },
+    {
+      "chain": "SocialProof-animation",
+      "state": 21,
+      "file": "reference-socialproof-animation-state-21.png",
+      "status": "exported"
+    }
+  ]
+}

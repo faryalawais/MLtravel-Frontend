@@ -14,7 +14,6 @@ import {
   LANDING_SECTION_HEADING_DESKTOP_CLASS,
   LANDING_SECTION_HEADING_MOBILE_CLASS,
   LANDING_SECTION_SUBTITLE_CLASS,
-  PROBLEM_MOTION_STYLE,
   SOCIAL_PROOF_CAROUSEL_TRANSITION_STYLE,
   SOCIAL_PROOF_CLIENT_LOGO_IMAGE_CLASS,
   SOCIAL_PROOF_CLIENT_LOGO_IMAGE_STYLE,
@@ -45,12 +44,15 @@ import {
   SOCIAL_PROOF_TOKENS,
 } from '@/constants/landing.constants';
 import {
-  getMotionRevealStyle,
   getMotionSlideRevealStyle,
   getSocialProofCarouselAdvanceMs,
   getSocialProofCarouselSlideMs,
+  getSocialProofClientsLogoMotionStyle,
+  type SocialProofClientsMotionStep,
   RESPONSIVE_IMAGE_DIMENSION_STYLE,
 } from '@/constants/motion.constants';
+import { runSimpleOneStepMotion } from '@/lib/motion-sequence';
+import { useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
   SocialProofSectionPillProps,
@@ -58,12 +60,9 @@ import type {
 } from '@/types/landing.types';
 
 const sp = ids.component.landing.socialProof;
+const spMotion = sp.motion;
+const spClients = sp.clientsMotion;
 const spMobile = sp.mobile;
-
-const SOCIAL_PROOF_INTEGRATIONS_MOTION_STYLE: CSSProperties = {
-  ...PROBLEM_MOTION_STYLE,
-  transitionProperty: 'transform',
-};
 
 const SOCIAL_PROOF_DESKTOP_TRACK = [
   ...SOCIAL_PROOF_DESKTOP_TESTIMONIALS,
@@ -339,16 +338,17 @@ function IntegrationsStrip({
   testId,
   taglineTestId,
   gridTestId,
-  motionActive,
+  clientsMotionStep,
   variant = 'desktop',
 }: {
   testId: string;
   taglineTestId: string;
   gridTestId: string;
-  motionActive: boolean;
+  clientsMotionStep: SocialProofClientsMotionStep;
   variant?: 'desktop' | 'mobile';
 }) {
   const isMobile = variant === 'mobile';
+  const taglineRevealed = clientsMotionStep >= 0;
 
   return (
     <section
@@ -362,7 +362,7 @@ function IntegrationsStrip({
       <p
         data-testid={taglineTestId}
         className={`text-center ${SOCIAL_PROOF_INTEGRATIONS_TAGLINE_CLASS}`}
-        style={getMotionRevealStyle(motionActive, SOCIAL_PROOF_MOTION_STYLE)}
+        style={getMotionSlideRevealStyle(taglineRevealed, SOCIAL_PROOF_MOTION_STYLE)}
       >
         {SOCIAL_PROOF_INTEGRATIONS_TAGLINE}
       </p>
@@ -378,10 +378,7 @@ function IntegrationsStrip({
           <div
             key={logo.src}
             className="flex h-[var(--spacing-32)] items-center justify-center px-[var(--spacing-8)]"
-            style={{
-              ...SOCIAL_PROOF_INTEGRATIONS_MOTION_STYLE,
-              transform: motionActive ? 'scale(1.04)' : 'scale(1)',
-            }}
+            style={getSocialProofClientsLogoMotionStyle(clientsMotionStep)}
           >
             <Image
               data-testid={logo.testId}
@@ -403,14 +400,12 @@ export function SocialProofSection() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [carouselTransitionEnabled, setCarouselTransitionEnabled] = useState(true);
   const [testimonialsMotionActive, setTestimonialsMotionActive] = useState(false);
-  const [integrationsMotionActive, setIntegrationsMotionActive] = useState(false);
+  const [clientsMotionStep, setClientsMotionStep] = useState<SocialProofClientsMotionStep>(-1);
 
   const mobileScrollRef = useRef<HTMLDivElement>(null);
   const carouselStartedRef = useRef(false);
   const carouselAutoPausedRef = useRef(false);
   const autoAdvanceTimerRef = useRef<number | null>(null);
-  const testimonialsMotionPlayedRef = useRef(false);
-  const integrationsMotionPlayedRef = useRef(false);
   const isScrollingFromStateRef = useRef(false);
 
   const desktopOffset = activeSlide * SOCIAL_PROOF_DESKTOP_SLIDE_STEP_PX;
@@ -434,10 +429,34 @@ export function SocialProofSection() {
   }, []);
 
   const playTestimonialsMotion = useCallback(() => {
-    if (testimonialsMotionPlayedRef.current) return;
-    testimonialsMotionPlayedRef.current = true;
     setTestimonialsMotionActive(true);
+
+    const timers: ReturnType<typeof setTimeout>[] = [];
+
+    if (!carouselStartedRef.current && !carouselAutoPausedRef.current) {
+      carouselStartedRef.current = true;
+      timers.push(
+        setTimeout(() => {
+          goToSlide(1);
+        }, 32),
+      );
+    }
+
+    return () => {
+      timers.forEach((timer) => clearTimeout(timer));
+    };
+  }, [goToSlide]);
+
+  const triggerTestimonialsMotion = useOneWayMotion(playTestimonialsMotion);
+
+  const playClientsMotion = useCallback(() => {
+    return runSimpleOneStepMotion(
+      () => setClientsMotionStep(0),
+      () => setClientsMotionStep(1),
+    );
   }, []);
+
+  const triggerClientsMotion = useOneWayMotion(playClientsMotion);
 
   const selectSlideManually = useCallback(
     (index: number) => {
@@ -447,13 +466,6 @@ export function SocialProofSection() {
     },
     [goToSlide],
   );
-
-  const startCarousel = useCallback(() => {
-    playTestimonialsMotion();
-    if (carouselStartedRef.current || carouselAutoPausedRef.current) return;
-    carouselStartedRef.current = true;
-    goToSlide(1);
-  }, [goToSlide, playTestimonialsMotion]);
 
   const handleDesktopTransitionEnd = useCallback(() => {
     if (activeSlide !== SOCIAL_PROOF_SLIDE_COUNT - 1) return;
@@ -466,12 +478,6 @@ export function SocialProofSection() {
       });
     });
   }, [activeSlide]);
-
-  const playIntegrationsMotion = useCallback(() => {
-    if (integrationsMotionPlayedRef.current) return;
-    integrationsMotionPlayedRef.current = true;
-    setIntegrationsMotionActive(true);
-  }, []);
 
   useEffect(() => {
     clearAutoAdvance();
@@ -525,10 +531,12 @@ export function SocialProofSection() {
         <div className={SOCIAL_PROOF_DESKTOP_FRAME_CLASS}>
           <div className="relative flex flex-col gap-[var(--spacing-40)] pb-[var(--spacing-40)]">
             <div
+              data-testid={spMotion.root}
               className="relative flex flex-col items-center gap-[var(--spacing-40)] px-[var(--spacing-64)] pt-[var(--spacing-64)]"
-              onMouseEnter={startCarousel}
+              onMouseEnter={triggerTestimonialsMotion}
             >
               <Image
+                data-testid={spMotion.vector}
                 src="/icons/icon-social-proof-plane.svg"
                 alt=""
                 width={92}
@@ -540,7 +548,7 @@ export function SocialProofSection() {
                 <div
                   data-testid={sp.sectionHeader}
                   className="flex w-full max-w-[1312px] flex-col items-center gap-[var(--spacing-16)] text-center"
-                  style={getMotionRevealStyle(testimonialsMotionActive, SOCIAL_PROOF_MOTION_STYLE)}
+                  style={getMotionSlideRevealStyle(testimonialsMotionActive, SOCIAL_PROOF_MOTION_STYLE)}
                 >
                   <SocialProofSectionPill
                     pillTestId={sp.sectionPill}
@@ -549,12 +557,12 @@ export function SocialProofSection() {
                   <div
                     data-testid={sp.textBlock}
                     className="flex flex-col items-center gap-[var(--spacing-8)]"
-                    style={getMotionRevealStyle(testimonialsMotionActive, SOCIAL_PROOF_MOTION_STYLE)}
+                    style={getMotionSlideRevealStyle(testimonialsMotionActive, SOCIAL_PROOF_MOTION_STYLE)}
                   >
                     <div
                       data-testid={sp.textBlock2}
                       className={`flex flex-col items-center ${LANDING_SECTION_HEADING_DESKTOP_CLASS}`}
-                      style={getMotionRevealStyle(testimonialsMotionActive, SOCIAL_PROOF_MOTION_STYLE)}
+                      style={getMotionSlideRevealStyle(testimonialsMotionActive, SOCIAL_PROOF_MOTION_STYLE)}
                     >
                       <span>{SOCIAL_PROOF_HEADING_LINE1}</span>
                       <span className={LANDING_SECTION_HEADING_ACCENT_CLASS}>{SOCIAL_PROOF_HEADING_LINE2}</span>
@@ -562,7 +570,7 @@ export function SocialProofSection() {
                     <p
                       data-testid={sp.paragraph}
                       className={LANDING_SECTION_SUBTITLE_CLASS}
-                      style={getMotionRevealStyle(testimonialsMotionActive, SOCIAL_PROOF_MOTION_STYLE, {
+                      style={getMotionSlideRevealStyle(testimonialsMotionActive, SOCIAL_PROOF_MOTION_STYLE, {
                         transitionDelay: 'var(--motion-duration-step-delay)',
                       })}
                     >
@@ -575,7 +583,7 @@ export function SocialProofSection() {
               <div
               data-testid={sp.frame2095585155}
               className="relative z-10 flex w-full max-w-[1440px] flex-col"
-              style={getMotionRevealStyle(testimonialsMotionActive, SOCIAL_PROOF_MOTION_STYLE, {
+              style={getMotionSlideRevealStyle(testimonialsMotionActive, SOCIAL_PROOF_MOTION_STYLE, {
                 idleOpacity: 0.92,
               })}
             >
@@ -618,12 +626,15 @@ export function SocialProofSection() {
               </div>
             </div>
 
-            <div onMouseEnter={playIntegrationsMotion}>
+            <div
+              data-testid={spClients.root}
+              onMouseEnter={triggerClientsMotion}
+            >
               <IntegrationsStrip
                 testId={sp.integrationsStrip}
                 taglineTestId={sp.textBlock4}
                 gridTestId={sp.container3}
-                motionActive={integrationsMotionActive}
+                clientsMotionStep={clientsMotionStep}
               />
             </div>
           </div>
@@ -698,7 +709,7 @@ export function SocialProofSection() {
             testId={spMobile.container11}
             taglineTestId={spMobile.paragraph4}
             gridTestId={spMobile.container12}
-            motionActive={false}
+            clientsMotionStep={-1}
             variant="mobile"
           />
         </div>

@@ -1,0 +1,75 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "ghIssue": 10,
+    "chain": "FeatureGrid-animation",
+    "animationNodeId": "5404:6074",
+    "staticTwinNodeId": "5164:6562",
+    "pattern": "staged-sequence",
+    "runner": "runFeatureGridMotion",
+    "initialRender": "staticTwin",
+    "source": "motion-chains.json + motion-diffs.json + motion-state-poses.json"
+  },
+  "figmaStates": [
+    { "index": 1, "nodeId": "5404:6074", "label": "idle" },
+    { "index": 2, "nodeId": "5404:5947", "label": "state-2" },
+    { "index": 3, "nodeId": "5404:5948", "label": "state-3" },
+    { "index": 4, "nodeId": "5404:5946", "label": "state-4" }
+  ],
+  "transitions": [
+    {
+      "stepIndex": 0,
+      "trigger": "MOUSE_ENTER",
+      "durationMs": 700,
+      "delayMs": 0,
+      "delayToken": null
+    },
+    {
+      "stepIndex": 1,
+      "trigger": "AFTER_TIMEOUT",
+      "durationMs": 700,
+      "delayMs": 300,
+      "delayToken": "motion.duration.autoAdvance"
+    },
+    {
+      "stepIndex": 2,
+      "trigger": "AFTER_TIMEOUT",
+      "durationMs": 700,
+      "delayMs": 300,
+      "delayToken": "motion.duration.autoAdvance"
+    }
+  ],
+  "motionDiffsExpected": [
+    {
+      "layer": "FeatureRow1",
+      "helper": "getFeatureGridContentMotionStyle",
+      "translateY": { "fromPx": 734, "toPx": 284, "custom": true }
+    },
+    {
+      "layer": "FeatureRow2",
+      "helper": "getFeatureGridContentMotionStyle",
+      "translateY": { "fromPx": 914, "toPx": 734, "custom": false }
+    },
+    {
+      "layer": "FooterBar",
+      "helper": "getFeatureGridContentMotionStyle",
+      "translateY": { "fromPx": 1096, "toPx": 916, "custom": false }
+    }
+  ],
+  "contentPoses": {
+    "entryOffsetPx": 734,
+    "state2Px": 284,
+    "state3Px": 284,
+    "settledPx": 0
+  },
+  "implementationExpected": {
+    "trigger": "onMouseEnter on component.landing.featureGrid.motion.root",
+    "desktopOnly": true,
+    "motionTarget": "component.landing.featureGrid.cardsGrid (rows + footer wrapper)",
+    "steps": [
+      { "index": 0, "action": "snapAllLayersEntryThenState2" },
+      { "index": 1, "action": "row2State3" },
+      { "index": 2, "action": "terminalState4" }
+    ]
+  }
+}

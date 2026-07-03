@@ -21,6 +21,7 @@ import {
 } from '@/constants/landing.constants';
 import {
   beginMotionReveal,
+  getHiwFooterMotionStyle,
   getMotionCascadeCardSurfaceStyle,
   getMotionCascadeTextStyle,
   getMotionSlideRevealStyle,
@@ -294,15 +295,13 @@ function HiwCardMobile({ card }: HiwCardMobileProps) {
 }
 
 function HiwFooterLink({ isEmphasized = false, motionEngaged = false }: HiwFooterLinkProps) {
+  const footerTestId = motionEngaged ? hiw.motion.footerNote : hiw.footerNote;
+
   return (
     <div
-      data-testid={hiw.footerNote}
+      data-testid={footerTestId}
       className="flex w-full justify-center text-center"
-      style={getMotionSlideRevealStyle(isEmphasized, PROBLEM_MOTION_STYLE, {
-        engaged: motionEngaged,
-        animateOpacity: false,
-        liftWhenRevealed: true,
-      })}
+      style={getHiwFooterMotionStyle(motionEngaged, isEmphasized, PROBLEM_MOTION_STYLE)}
     >
       <Link
         href="/how-it-works"

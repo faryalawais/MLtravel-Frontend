@@ -1,0 +1,48 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "ghIssue": 11,
+    "chain": "Pricing-animation",
+    "animationNodeId": "5164:11487",
+    "staticTwinNodeId": "5164:6564",
+    "pattern": "simple-one-step",
+    "runner": "useOneWayMotion",
+    "initialRender": "staticTwin",
+    "source": "motion-chains.json + motion-diffs.json + motion-state-poses.json"
+  },
+  "figmaStates": [
+    { "index": 1, "nodeId": "5164:11487", "label": "idle" },
+    { "index": 2, "nodeId": "5164:11482", "label": "state-2" }
+  ],
+  "transitions": [
+    {
+      "stepIndex": 0,
+      "trigger": "MOUSE_ENTER",
+      "durationMs": 700,
+      "delayMs": 0,
+      "delayToken": null
+    }
+  ],
+  "motionDiffsExpected": [
+    {
+      "layer": "main-group",
+      "helper": "getPricingMainGroupMotionStyle",
+      "translateY": { "fromPx": 868, "toPx": 270, "custom": true }
+    }
+  ],
+  "mainGroupPoses": {
+    "entryPx": 868,
+    "staticPx": 58,
+    "terminalPx": 270,
+    "offsetFromStaticPx": 810
+  },
+  "implementationExpected": {
+    "trigger": "onMouseEnter on component.landing.pricing.motion.root",
+    "desktopOnly": true,
+    "steps": [
+      { "index": 0, "action": "snapMainGroupEntry" },
+      { "index": 1, "action": "animateMainGroupTerminal" }
+    ],
+    "headerReveal": "getMotionSlideRevealStyle"
+  }
+}

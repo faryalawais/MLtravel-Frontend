@@ -18,6 +18,31 @@
 
 Reference PNGs: `reference-comparisonsectionfirst.png`, `reference-comparisonmobilefirst.png`, `reference-comparison-animation.png`, `reference-howitworkssection.png`, `reference-howitworksmobile.png`, `reference-howitworks-animation.png`, `reference-featuregrid.png`, `reference-featuregridmobile.png`, `reference-featuregrid-animation.png`, `reference-socialproofsectionbig.png`, `reference-socialproofmobile.png`, `reference-socialproof-animation.png`, `reference-socialproof-animation-alt.png`, `reference-newpricingsection.png`, `reference-pricingmobile.png`, `reference-pricing-animation.png`.
 
+## Hero slice (#4) — motion reconciliation
+
+- **Desktop static (`5164:6560`):** `HeroTextBlock` flex column — headline, subcopy, CTA row, proof line with `itemSpacing` 24 between text and CTA cluster.
+- **Motion (`5164:10343` — hero-animation):** 3 states, 2 transitions; `motion-chains` pattern `staged-sequence`, runner `runHeroMotion`.
+- **initialRender:** `staticTwin` — page load matches `5164:6560` (flex `gap-24`), **not** animation state 1 (y=370).
+
+### Motion extract — hero-animation
+
+| State | nodeId | Cached | interactions out | Reference PNG |
+|-------|--------|--------|------------------|---------------|
+| 1 idle | `5164:10343` | ✓ | → `5132:5424` MOUSE_ENTER 700ms | reference-hero-animation-state-1.png |
+| 2 | `5132:5424` | ✓ | → `5132:5423` AFTER_TIMEOUT 300ms | reference-hero-animation-state-2.png |
+| 3 terminal | `5132:5423` | ✓ | — | reference-hero-animation-state-3.png |
+
+**State poses (translateYpx):**
+
+| Layer | State 1 | State 2 | State 3 |
+|-------|---------|---------|---------|
+| Frame 1561553827 (text) | 370 | 0 | 0 |
+| Frame 1561553830 (CTA+proof) | 370 | 370 | 284 |
+| ProductImage | 44 | 44 | 44 |
+| Frame 2095585156 (stats/logos) | 474 | 474 | 474 |
+
+Chain status: **closed** | `build:motion-from-cache` | `validate:motion-chains --chain hero-animation`: pass
+
 ## Pricing slice (#11) — 2026-07-02
 
 - **Desktop (`5164:6564` — NewPricingSection):** SectionHeader pill “Simple Pricing”, H2 “Own it, Don't Rent it”, RouteStrip (from → to with loading plane), boarding-pass `PricingCard` ($3,000 platform fee + $250/mo add-on), 8-item `ChecklistGrid`, Book A Demo CTA, `TrustStrip` platform-includes bar.

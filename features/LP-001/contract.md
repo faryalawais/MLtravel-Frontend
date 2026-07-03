@@ -121,7 +121,7 @@ Navbar  (nodeId 5164:10334) — motion prototype; same subtree as desktop
    └─ graphic  (nodeId I5164:10342;2780:1466;2780:1505)
 ```
 
-**Motion (MOTION-SPEC + `5164:10334`):** `MOUSE_ENTER` on CTA triggers hover transition — duration `motion.duration.default` (700ms), easing `motion.easing.default` (ease-in). One-way; no mouse-leave reverse.
+**Motion (component-variant · `5164:10334`):** No prototype chain — `Button/Secondary2` hover frame documents CTA padding/background transition. `onMouseEnter` on `component.navbar.cta`; `motion.duration.default` + `motion.easing.default`; one-way. Implemented via `NavbarCta` token styles (not `motion-chains.json`).
 
 ### Desktop — HeroSection (`5164:6560`, 1440×680)
 
@@ -165,7 +165,13 @@ hero-animation  (nodeId 5164:10343) — motion prototype
 └─ Frame 2095585156  (nodeId I5164:10343;5132:5275) — stats + logos motion cluster
 ```
 
-**Motion (MOTION-SPEC + `5164:10343`):** Primary CTA hover — `motion.duration.default` (700ms).
+**Motion (motion-chains · `5164:10343`):** pattern `staged-sequence` · status `closed` — `onMouseEnter` on `component.landing.hero.motion.root` → 3 states; `motion.duration.default` + `motion.easing.hero`; auto-advance step uses `motion.duration.autoAdvance` (300ms). Runner: `runHeroMotion`. One-way.
+
+**Motion bindings (motion-diffs):**
+| Step | Layer | testId | Helper | Change |
+|------|-------|--------|--------|--------|
+| 0 | Frame 1561553827 | `component.landing.hero.motion.textColumn` | `getHeroColumnMotionStyle` | translateY 370→0 |
+| 1 | Frame 1561553830 | `component.landing.hero.motion.ctaColumn` | `getHeroColumnMotionStyle` | translateY 370→284 |
 
 ### Desktop — ProblemSection (`5164:6561`, 1440×652)
 
@@ -229,7 +235,12 @@ ProblemSection-animation  (nodeId 5164:10344) — motion prototype
 └─ gradient-bar  (nodeId I5164:10344;5145:4212)
 ```
 
-**Motion (MOTION-SPEC + `5164:10344`):** ProblemCard hover — border/shadow transition; duration `motion.duration.default` (700ms).
+**Motion (motion-chains · `5164:10344`):** pattern `rapid-four-step` · status `closed` — `onMouseEnter` on `component.landing.problem.motion.root` → 5 states; hover 700ms then 3× auto @ `motion.duration.stepDelay` (120ms). Runner: `runRapidFourStepMotion`. One-way.
+
+**Motion bindings (motion-diffs):**
+| Step | Layer | Helper | Change |
+|------|-------|--------|--------|
+| 3 | ProblemCTA | `getMotionSlideRevealStyle` | translateY custom 692→592 |
 
 ### Desktop — ComparisonSection (`5164:6566`, 1440×988)
 
@@ -324,7 +335,12 @@ ComparisonSection-animation  (nodeId 5164:10411) — motion prototype
 └─ cta-block  (nodeId I5164:10411;5145:4501) / Button/Primary  (nodeId I5164:10411;5145:4504)
 ```
 
-**Motion (MOTION-SPEC + `5164:10411`):** `MOUSE_ENTER` on section — one-step hover reveal (700ms ease-in); GiantTicket / card stack holds final state. No mouse-leave reverse.
+**Motion (motion-chains · `5164:10411`):** pattern `simple-one-step` · status `closed` — `onMouseEnter` on `component.landing.comparisonFirst.motion.root` → state 2; `motion.duration.default` + `motion.easing.default`. One-way.
+
+**Motion bindings (motion-diffs):**
+| Step | Layer | Helper | Change |
+|------|-------|--------|--------|
+| 0 | Frame 2095585108 | `getMotionSlideRevealStyle` | translateY custom 1028→232 |
 
 ### Desktop — HowItWorksSection (`5164:6567`, 1440×686)
 
@@ -395,7 +411,12 @@ HowItWorks-animation  (nodeId 5164:10412) — motion prototype
    └─ How does the technical setup work? Read the full breakdown →  (nodeId I5164:10412;5404:10382)
 ```
 
-**Motion (MOTION-SPEC + `5164:10412`):** 4-step cascade — `MOUSE_ENTER` triggers state 1→2 (`motion.duration.default` 700ms ease-in), then auto-advance states 2→3→4→5 with `motion.duration.stepDelay` (120ms) between steps. Same pattern as ProblemSection (`5164:10344`). Each HIWCard receives hover border/shadow emphasis on its active cascade step. No mouse-leave reverse.
+**Motion (motion-chains · `5164:10412`):** pattern `rapid-four-step` · status `closed` — `onMouseEnter` on `component.landing.howItWorksTeaser.motion.root` → 5 states; hover 700ms then 3× auto @ `motion.duration.stepDelay` (120ms). Runner: `runRapidFourStepMotion`. One-way.
+
+**Motion bindings (motion-diffs):**
+| Step | Layer | Helper | Change |
+|------|-------|--------|--------|
+| 3 | footer-note | `getMotionSlideRevealStyle` | translateY custom 725→644 |
 
 ### Desktop — FeatureGrid (`5164:6562`, 1440×734)
 
@@ -451,7 +472,14 @@ FeatureGrid-animation  (nodeId 5404:6074) — motion prototype
 └─ FooterBar  (nodeId I5404:6074;5404:5704) — tagline + Button/Primary  (nodeId I5404:6074;5404:5706)
 ```
 
-**Motion (MOTION-SPEC + `5404:6074`):** 4-step cascade — `MOUSE_ENTER` triggers state 1→2 (`motion.duration.default` 700ms ease-in), then auto-advance 2→3→4 with `motion.duration.stepDelay` (300ms) between steps. Feature cards highlight sequentially; no mouse-leave reverse.
+**Motion (motion-chains · `5404:6074`):** pattern `staged-sequence` · status `closed` — `onMouseEnter` on `component.landing.featureGrid.motion.root` → 4 states; hover 700ms then 2× auto @ `motion.duration.autoAdvance` (300ms). Runner: `runFeatureGridMotion`. One-way.
+
+**Motion bindings (motion-diffs):**
+| Step | testId | Helper | Change |
+|------|--------|--------|--------|
+| 0 | `…featureGrid.motion.featureRow1` | `getMotionSlideRevealStyle` | translateY custom |
+| 0 | `…featureGrid.motion.featureRow2` | `getMotionSlideRevealStyle` | translateY spacing.180 |
+| 0 | `…featureGrid.motion.footerBar` | `getMotionSlideRevealStyle` | translateY spacing.180 |
 
 ### Variant matrix — Social proof (cache + checklist)
 
@@ -538,7 +566,9 @@ SocialProofSection  (nodeId 5307:6608) — testimonials motion prototype
 └─ Vector  (nodeId 5307:6644) — decorative plane
 ```
 
-**Motion (MOTION-SPEC §8 + `5307:6608`):** 1-step reveal — `MOUSE_ENTER` on section triggers state 1→2 (`motion.duration.default` 700ms ease-in); holds on state 2. Testimonial row / progress emphasis per motion frame. No mouse-leave reverse.
+**Motion (motion-chains · `5307:6608`):** pattern `custom` · status `incomplete` — Figma uses `AFTER_TIMEOUT` carousel on child node (not section `MOUSE_ENTER`); MCP gap-fill required before chain closes. Subgraph: testimonials carousel.
+
+**Motion (motion-chains · `5164:11204`):** pattern `simple-one-step` · status `closed` — `onMouseEnter` on integrations strip → state 2; `motion.duration.default`. One-way.
 
 ### Animation — clients-animaiton (`5164:11204`, 1440×159)
 
@@ -547,7 +577,7 @@ clients-animaiton  (nodeId 5164:11204, variants: Property 1=1) — integrations 
 └─ Integrations strip — tagline + 14 client logos (same assets as desktop strip)
 ```
 
-**Motion (MOTION-SPEC §5 + `5164:11204`):** 1-step reveal — `MOUSE_ENTER` triggers state 1→2 (700ms ease-in); holds on state 2. Logo grid emphasis / opacity per motion variant.
+**Motion (motion-chains · `5164:11204`):** pattern `simple-one-step` · status `closed` — `onMouseEnter` on integrations strip (`clients-animaiton`) → state 2; `motion.duration.default`. One-way. (Listed above with testimonials subgraph.)
 
 ### Variant matrix — Pricing (cache + checklist)
 
@@ -634,7 +664,12 @@ PricingSectionanimation  (nodeId 5164:11487, variants: Property 1=1) — motion 
 └─ main-group  (nodeId I5164:11487;5164:11238) — PricingCard + TrustStrip (offset Y for motion state 2)
 ```
 
-**Motion (MOTION-SPEC §6 + `5164:11487`):** 1-step reveal — `MOUSE_ENTER` on section triggers state 1→2 (`motion.duration.default` 700ms ease-in); holds on state 2. Card cluster slides into final position per motion frame. No mouse-leave reverse.
+**Motion (motion-chains · `5164:11487`):** pattern `simple-one-step` · status `closed` — `onMouseEnter` on `component.landing.pricing.motion.root` → state 2; `motion.duration.default` + `motion.easing.default`. One-way.
+
+**Motion bindings (motion-diffs):**
+| Step | testId | Helper | Change |
+|------|--------|--------|--------|
+| 0 | `…pricing.motion.maingroup` | `getMotionSlideRevealStyle` | translateY custom 868→270 |
 
 **Page order:** Renders immediately after `component.landing.socialProof` on `/`.
 

@@ -5,11 +5,11 @@ import {
   MOTION_DURATION_DEFAULT_VAR,
 } from '@/lib/motion-tokens';
 
-/** Semantic step-delay tokens (MOTION-SPEC). */
+/** Semantic step-delay tokens (motion-chains / primitives). */
 export const MOTION_DELAY_STEP = 'var(--motion-duration-step-delay)';
 export const MOTION_DELAY_AUTO_ADVANCE = 'var(--motion-duration-auto-advance)';
 
-/** Cross-page motion token references (MOTION-SPEC + primitives/semantics). */
+/** Cross-page motion token references (primitives/semantics). */
 export const MOTION_TOKEN_REFS = {
   durationDefault: 'var(--motion-duration-default)',
   easingDefault: 'var(--motion-easing-default)',
@@ -18,13 +18,13 @@ export const MOTION_TOKEN_REFS = {
   autoAdvanceVar: '--motion-duration-auto-advance',
 } as const;
 
-/** Default section motion — ease-in, 700ms (MOTION-SPEC). */
+/** Default section motion — ease-in, 700ms (motion-chains default). */
 export const DEFAULT_MOTION_STYLE: CSSProperties = {
   transitionDuration: MOTION_TOKEN_REFS.durationDefault,
   transitionTimingFunction: MOTION_TOKEN_REFS.easingDefault,
 };
 
-/** Hero-only motion — ease-out, 700ms (MOTION-SPEC §1). */
+/** Hero-only motion — ease-out, 700ms (hero-animation chain). */
 export const HERO_MOTION_STYLE: CSSProperties = {
   transitionDuration: MOTION_TOKEN_REFS.durationDefault,
   transitionTimingFunction: MOTION_TOKEN_REFS.easingHero,
@@ -35,6 +35,324 @@ export const MOTION_REVEAL_CASCADE_MUTED_OPACITY = 0.55;
 
 /** Hero cluster idle opacity before first step. */
 export const MOTION_REVEAL_HERO_IDLE_OPACITY = 0.88;
+
+/** Problem CTA — motion-state-poses / motion-diffs (ProblemCTA translateY). */
+export const PROBLEM_MOTION_CTA_POSE_ENTRY_PX = 692;
+export const PROBLEM_MOTION_CTA_POSE_TERMINAL_PX = 592;
+/** Offset from static-twin position while cascade runs (entry − terminal). */
+export const PROBLEM_MOTION_CTA_OFFSET_PX =
+  PROBLEM_MOTION_CTA_POSE_ENTRY_PX - PROBLEM_MOTION_CTA_POSE_TERMINAL_PX;
+
+export type ProblemMotionStep = 0 | 1 | 2 | 3;
+
+/** Comparison ticket frame — motion-state-poses / motion-diffs (Frame 2095585108 translateY). */
+export const COMPARISON_MOTION_MAIN_GROUP_POSE_ENTRY_PX = 1028;
+export const COMPARISON_MOTION_MAIN_GROUP_POSE_STATIC_PX = 212;
+export const COMPARISON_MOTION_MAIN_GROUP_POSE_TERMINAL_PX = 232;
+/** Entry offset from static-twin pose while the slide runs (entry − static). */
+export const COMPARISON_MOTION_MAIN_GROUP_OFFSET_PX =
+  COMPARISON_MOTION_MAIN_GROUP_POSE_ENTRY_PX - COMPARISON_MOTION_MAIN_GROUP_POSE_STATIC_PX;
+
+export type ComparisonMotionStep = -1 | 0 | 1;
+
+/** Pricing main-group — motion-state-poses / motion-diffs (main-group translateY). */
+export const PRICING_MOTION_MAIN_GROUP_POSE_ENTRY_PX = 868;
+export const PRICING_MOTION_MAIN_GROUP_POSE_STATIC_PX = 58;
+export const PRICING_MOTION_MAIN_GROUP_POSE_TERMINAL_PX = 270;
+/** Entry offset from static-twin pose while the slide runs (entry − static). */
+export const PRICING_MOTION_MAIN_GROUP_OFFSET_PX =
+  PRICING_MOTION_MAIN_GROUP_POSE_ENTRY_PX - PRICING_MOTION_MAIN_GROUP_POSE_STATIC_PX;
+
+export type PricingMotionStep = ComparisonMotionStep;
+
+export function getPricingMainGroupTransform(
+  motionEngaged: boolean,
+  motionSettled: boolean,
+): string {
+  if (!motionEngaged || motionSettled) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  return `translateY(${PRICING_MOTION_MAIN_GROUP_OFFSET_PX}px)`;
+}
+
+/** Main card + trust strip slide for pricing simple-one-step (motion-chains Pricing-animation). */
+export function getPricingMainGroupMotionStyle(
+  motionEngaged: boolean,
+  motionSettled: boolean,
+  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
+): CSSProperties {
+  const snapEntry = motionEngaged && !motionSettled;
+
+  return {
+    ...baseStyle,
+    transitionProperty: 'transform',
+    transitionDuration: snapEntry
+      ? '0ms'
+      : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    transform: getPricingMainGroupTransform(motionEngaged, motionSettled),
+  };
+}
+
+export function getComparisonMainGroupTransform(
+  motionEngaged: boolean,
+  motionSettled: boolean,
+): string {
+  if (!motionEngaged || motionSettled) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  return `translateY(${COMPARISON_MOTION_MAIN_GROUP_OFFSET_PX}px)`;
+}
+
+/** Main ticket group slide for comparison simple-one-step (motion-chains comparison-animation). */
+export function getComparisonMainGroupMotionStyle(
+  motionEngaged: boolean,
+  motionSettled: boolean,
+  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
+): CSSProperties {
+  const snapEntry = motionEngaged && !motionSettled;
+
+  return {
+    ...baseStyle,
+    transitionProperty: 'transform',
+    transitionDuration: snapEntry
+      ? '0ms'
+      : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    transform: getComparisonMainGroupTransform(motionEngaged, motionSettled),
+  };
+}
+
+export function getProblemCtaTransform(motionEngaged: boolean, settled: boolean): string {
+  if (!motionEngaged || settled) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  return `translateY(${PROBLEM_MOTION_CTA_OFFSET_PX}px)`;
+}
+
+/** CTA column style for problem rapid-four-step (motion-chains problem-animation). */
+export function getProblemCtaMotionStyle(
+  motionEngaged: boolean,
+  settled: boolean,
+  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
+): CSSProperties {
+  return {
+    ...baseStyle,
+    transitionProperty: 'transform',
+    transitionDuration: baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    transform: getProblemCtaTransform(motionEngaged, settled),
+  };
+}
+
+/** HIW footer-note — motion-state-poses / motion-diffs (footer-note translateY). */
+export const HIW_MOTION_FOOTER_POSE_ENTRY_PX = 725;
+export const HIW_MOTION_FOOTER_POSE_TERMINAL_PX = 644;
+export const HIW_MOTION_FOOTER_POSE_STATIC_PX = 410;
+/** Offset from static-twin position while cascade runs (entry − terminal). */
+export const HIW_MOTION_FOOTER_OFFSET_PX =
+  HIW_MOTION_FOOTER_POSE_ENTRY_PX - HIW_MOTION_FOOTER_POSE_TERMINAL_PX;
+
+export function getHiwFooterTransform(motionEngaged: boolean, settled: boolean): string {
+  if (!motionEngaged || settled) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  return `translateY(${HIW_MOTION_FOOTER_OFFSET_PX}px)`;
+}
+
+/** Footer link style for HIW rapid-four-step (motion-chains HowItWorks-animation). */
+export function getHiwFooterMotionStyle(
+  motionEngaged: boolean,
+  settled: boolean,
+  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
+): CSSProperties {
+  return {
+    ...baseStyle,
+    transitionProperty: 'transform',
+    transitionDuration: baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    transform: getHiwFooterTransform(motionEngaged, settled),
+  };
+}
+
+/** Feature grid content block — rows + footer move as one unit (flex-safe; per-row transform breaks footer gap). */
+export const FEATURE_GRID_CONTENT_POSE_ENTRY_PX = 734;
+export const FEATURE_GRID_CONTENT_POSE_STATE2_PX = 284;
+export const FEATURE_GRID_CONTENT_POSE_STATE3_PX = 284;
+
+export type FeatureGridMotionStep = -1 | 0 | 1 | 2 | 3;
+
+/** Row visibility for feature-grid staged-sequence (row1 then full row2 — not per-card). */
+export type FeatureGridRevealedRow = 0 | 1 | 2;
+
+export function getFeatureGridRowRevealStyle(
+  motionEngaged: boolean,
+  revealedRow: FeatureGridRevealedRow,
+  row: 1 | 2,
+  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
+): CSSProperties {
+  if (!motionEngaged) {
+    return {};
+  }
+
+  const isVisible = row === 1 ? revealedRow >= 1 : revealedRow >= 2;
+  const snapHidden = motionEngaged && !isVisible;
+
+  return {
+    ...baseStyle,
+    transitionProperty: 'opacity, transform, max-height',
+    transitionDuration: snapHidden
+      ? '0ms'
+      : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? MOTION_SLIDE_REST_TRANSFORM : MOTION_SLIDE_PENDING_TRANSFORM,
+    maxHeight: isVisible ? '800px' : '0px',
+    overflow: 'hidden',
+    pointerEvents: isVisible ? 'auto' : 'none',
+  };
+}
+
+/** Card shell — highlight/lift only; row wrappers control visibility (FeatureGrid-animation). */
+export function getFeatureGridCardSurfaceStyle(
+  motionEngaged: boolean,
+  isHighlighted: boolean,
+  cascadeRunning: boolean,
+  shadowToken: string = 'var(--shadow-card)',
+  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
+): CSSProperties {
+  const motionBase: CSSProperties = {
+    ...baseStyle,
+    transitionProperty: MOTION_CARD_TRANSITION_PROPERTIES,
+    transitionTimingFunction: MOTION_TOKEN_REFS.easingDefault,
+    transitionDuration: MOTION_TOKEN_REFS.durationDefault,
+    opacity: 1,
+    boxShadow: 'none',
+    transform: MOTION_SLIDE_REST_TRANSFORM,
+  };
+
+  if (!motionEngaged || !cascadeRunning || !isHighlighted) {
+    return motionBase;
+  }
+
+  return {
+    ...motionBase,
+    transform: MOTION_SLIDE_LIFT_TRANSFORM,
+    boxShadow: shadowToken,
+  };
+}
+
+export function getFeatureGridContentOffsetPx(
+  motionEngaged: boolean,
+  motionStep: FeatureGridMotionStep,
+): number {
+  if (!motionEngaged || motionStep < 0) {
+    return 0;
+  }
+
+  if (motionStep === 0) {
+    return FEATURE_GRID_CONTENT_POSE_ENTRY_PX;
+  }
+
+  if (motionStep === 1) {
+    return FEATURE_GRID_CONTENT_POSE_STATE2_PX;
+  }
+
+  return 0;
+}
+
+/** Staged slide for feature-grid cards + footer block (motion-chains FeatureGrid-animation). */
+export function getFeatureGridContentMotionStyle(
+  motionEngaged: boolean,
+  motionStep: FeatureGridMotionStep,
+  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
+): CSSProperties {
+  const snapEntry = motionEngaged && motionStep === 0;
+
+  return {
+    ...baseStyle,
+    transitionProperty: 'transform',
+    transitionDuration: snapEntry
+      ? '0ms'
+      : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    transform: `translateY(${getFeatureGridContentOffsetPx(motionEngaged, motionStep)}px)`,
+  };
+}
+
+/** Hero motion — Figma Frame 1561553827 / 1561553830 translateY poses (motion-diffs). */
+export const HERO_MOTION_COLUMN_OFFSET_PX = 370;
+/** Figma nominal terminal CTA translateY (state 3); runtime uses measured text height + gap. */
+export const HERO_MOTION_CTA_PARTIAL_OFFSET_PX = 284;
+/** Figma Frame 1561553827 height at 645px width (fallback when not yet measured). */
+export const HERO_MOTION_TEXT_COLUMN_HEIGHT_PX = 260;
+/** Figma HeroTextBlock itemSpacing between copy and CTA cluster (spacing-24). */
+export const HERO_MOTION_TEXT_CTA_GAP_PX = 24;
+/** Figma Frame 1561553830 height (CTA row + proof line). */
+export const HERO_MOTION_CTA_CLUSTER_HEIGHT_PX = 82;
+/** Figma copy cluster clip height (Frame 2095585146). */
+export const HERO_MOTION_COPY_CLUSTER_MIN_HEIGHT_PX = 366;
+
+export type HeroMotionStep = 0 | 1 | 2;
+
+/** Terminal CTA translateY from shared origin — text column height + gap (matches static flex). */
+export function getHeroCtaTerminalOffsetPx(textColumnHeightPx: number): number {
+  return textColumnHeightPx + HERO_MOTION_TEXT_CTA_GAP_PX;
+}
+
+export function getHeroTextColumnTransform(
+  motionEngaged: boolean,
+  step: HeroMotionStep,
+): string {
+  if (!motionEngaged) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  return step >= 1
+    ? MOTION_SLIDE_REST_TRANSFORM
+    : `translateY(${HERO_MOTION_COLUMN_OFFSET_PX}px)`;
+}
+
+export function getHeroCtaColumnTransform(
+  motionEngaged: boolean,
+  step: HeroMotionStep,
+  ctaTerminalOffsetPx: number = HERO_MOTION_CTA_PARTIAL_OFFSET_PX,
+): string {
+  if (!motionEngaged) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  if (step >= 2) {
+    return `translateY(${ctaTerminalOffsetPx}px)`;
+  }
+
+  return `translateY(${HERO_MOTION_COLUMN_OFFSET_PX}px)`;
+}
+
+/** Column wrapper style for hero staged-sequence (motion-chains hero-animation). */
+export function getHeroColumnMotionStyle(
+  motionEngaged: boolean,
+  step: HeroMotionStep,
+  column: 'text' | 'cta',
+  options: {
+    baseStyle?: CSSProperties;
+    ctaTerminalOffsetPx?: number;
+  } = {},
+): CSSProperties {
+  const { baseStyle = HERO_MOTION_STYLE, ctaTerminalOffsetPx = HERO_MOTION_CTA_PARTIAL_OFFSET_PX } =
+    options;
+  const snapEntry = motionEngaged && step === 0;
+
+  return {
+    ...baseStyle,
+    transitionProperty: 'transform',
+    transitionDuration: snapEntry
+      ? '0ms'
+      : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    transform:
+      column === 'text'
+        ? getHeroTextColumnTransform(motionEngaged, step)
+        : getHeroCtaColumnTransform(motionEngaged, step, ctaTerminalOffsetPx),
+  };
+}
 
 /** Smart Animate slide-up entry offset (spacing token). */
 export const MOTION_SLIDE_ENTRY_TRANSFORM = 'translateY(var(--spacing-24))';
@@ -218,6 +536,42 @@ export const RESPONSIVE_IMAGE_DIMENSION_STYLE: CSSProperties = {
   width: 'auto',
   height: 'auto',
 };
+
+/** Clients strip logo scale at terminal pose (SocialProof-animation-alt). */
+export const SOCIAL_PROOF_CLIENTS_LOGO_SCALE_TERMINAL = 1.04;
+
+export type SocialProofClientsMotionStep = -1 | 0 | 1;
+
+/** Logo cell scale — simple-one-step on clientsMotion.root (700ms ease-in). */
+export function getSocialProofClientsLogoMotionStyle(
+  motionStep: SocialProofClientsMotionStep,
+  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
+): CSSProperties {
+  const motionEngaged = motionStep >= 0;
+  const motionSettled = motionStep >= 1;
+
+  return {
+    ...baseStyle,
+    transitionProperty: 'transform',
+    transform:
+      motionEngaged && motionSettled
+        ? `scale(${SOCIAL_PROOF_CLIENTS_LOGO_SCALE_TERMINAL})`
+        : 'scale(1)',
+  };
+}
+
+/** Footer mobile nav link emphasis — inferred from notes.md (700ms, no REST prototype). */
+export const FOOTER_NAV_LINK_EMPHASIS_CLASS =
+  '!font-semibold text-[var(--color-text-brand-navy)] underline';
+
+export function getFooterNavLinkMotionStyle(
+  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
+): CSSProperties {
+  return {
+    ...baseStyle,
+    transitionProperty: 'color, font-weight, text-decoration',
+  };
+}
 
 /** Social proof testimonial carousel slide — 2× motion.duration.default (1400ms). */
 export const SOCIAL_PROOF_CAROUSEL_SLIDE_DURATION =

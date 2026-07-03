@@ -25,6 +25,7 @@ import {
   beginMotionReveal,
   getMotionCascadeCardSurfaceStyle,
   getMotionCascadeTextStyle,
+  getProblemCtaMotionStyle,
   getMotionSlideRevealStyle,
   MOTION_DELAY_STEP,
   MOTION_TRANSITION_PROPERTIES,
@@ -282,24 +283,17 @@ function GradientBar({ testId, isEmphasized = false }: GradientBarProps) {
 }
 
 function ProblemCtaDesktop({ isEmphasized = false, motionEngaged = false }: ProblemCtaDesktopProps) {
+  const ctaTestId = motionEngaged ? problem.motion.cta : problem.cta;
+
   return (
     <div
-      data-testid={problem.cta}
+      data-testid={ctaTestId}
       className="flex flex-col items-center gap-[var(--spacing-12)]"
-      style={getMotionSlideRevealStyle(isEmphasized, PROBLEM_MOTION_STYLE, {
-        engaged: motionEngaged,
-        animateOpacity: false,
-        liftWhenRevealed: true,
-      })}
+      style={getProblemCtaMotionStyle(motionEngaged, isEmphasized, PROBLEM_MOTION_STYLE)}
     >
       <div
         data-testid={problem.ctaText}
         className="flex flex-row flex-wrap items-center justify-center gap-[var(--spacing-6)] text-center"
-        style={getMotionSlideRevealStyle(isEmphasized, PROBLEM_MOTION_STYLE, {
-          engaged: motionEngaged,
-          animateOpacity: false,
-          liftWhenRevealed: true,
-        })}
       >
         <span
           data-testid={problem.ctaLine1}

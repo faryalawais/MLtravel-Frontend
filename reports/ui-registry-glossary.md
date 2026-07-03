@@ -104,6 +104,8 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.landing.hero.mobile.cta` | Mobile primary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-hero-mobile-cta` |
 | `component.landing.hero.motion.root` | Hero motion prototype (Gherkin: motion 5164:10343) | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-root` |
 | `component.landing.hero.motion.cta` | Motion frame primary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-cta` |
+| `component.landing.hero.motion.textColumn` | Hero motion text column — Figma Frame 1561553827 | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-textColumn` |
+| `component.landing.hero.motion.ctaColumn` | Hero motion CTA column — Figma Frame 1561553830 | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-ctaColumn` |
 | `component.landing.problem.root` | Problem section desktop (Gherkin: component.landing.problem) | `screen.landing.home` | `default`, `hover` | `component-landing-problem-root` |
 | `component.landing.problem.outerFrame` | Problem outer layout frame | `screen.landing.home` | `default` | `component-landing-problem-outerFrame` |
 | `component.landing.problem.innerFrame` | Problem inner layout frame | `screen.landing.home` | `default` | `component-landing-problem-innerFrame` |

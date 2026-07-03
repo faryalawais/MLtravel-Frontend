@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef } from 'react';
 
-/** One-way MOTION-SPEC trigger — plays once per mount, cleans up timers on unmount. */
+/** One-way motion trigger — plays once per mount, cleans up timers on unmount. */
 export function useOneWayMotion(play: () => () => void): () => void {
   const hasPlayedRef = useRef(false);
   const cancelRef = useRef<(() => void) | null>(null);

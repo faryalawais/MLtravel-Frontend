@@ -825,6 +825,28 @@
               "hover"
             ],
             "$tokens": {}
+          },
+          "textColumn": {
+            "$description": "Hero motion text column — Figma Frame 1561553827",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "I5164:10343;5132:5203",
+            "$figmaLayerName": "Frame 1561553827",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "ctaColumn": {
+            "$description": "Hero motion CTA column — Figma Frame 1561553830",
+            "$screen": "screen.landing.home",
+            "$figmaNode": "5132:5280",
+            "$figmaLayerName": "Frame 1561553830",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
           }
         }
       },

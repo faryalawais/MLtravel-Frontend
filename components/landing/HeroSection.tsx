@@ -2,24 +2,20 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useState, type CSSProperties, type ReactNode } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import {
   DESKTOP_STATS,
   LOGO_PARTNERS,
   MOBILE_STATS,
 } from '@/constants/landing.constants';
 import {
-  beginMotionReveal,
-  getMotionSlideRevealStyle,
-  getMotionStaggerDelay,
-  HERO_MOTION_STYLE,
-  MOTION_DELAY_AUTO_ADVANCE,
-  MOTION_DELAY_STEP,
-  MOTION_REVEAL_HERO_IDLE_OPACITY,
-  MOTION_SLIDE_ENTRY_TRANSFORM,
-  MOTION_SLIDE_LIFT_TRANSFORM,
-  MOTION_SLIDE_REST_TRANSFORM,
-  MOTION_TRANSITION_PROPERTIES,
+  getHeroColumnMotionStyle,
+  getHeroCtaTerminalOffsetPx,
+  HERO_MOTION_COPY_CLUSTER_MIN_HEIGHT_PX,
+  HERO_MOTION_CTA_CLUSTER_HEIGHT_PX,
+  HERO_MOTION_CTA_PARTIAL_OFFSET_PX,
+  HERO_MOTION_TEXT_COLUMN_HEIGHT_PX,
+  type HeroMotionStep,
 } from '@/constants/motion.constants';
 import { runHeroMotion } from '@/lib/motion-sequence';
 import { useOneWayMotion } from '@/lib/use-one-way-motion';
@@ -27,29 +23,11 @@ import { ids } from '@/tokens/build/test-ids';
 import type { HeroOptionalClassNameProps } from '@/types/landing.types';
 import { HeroPrimaryCta } from './HeroPrimaryCta';
 
-const heroSlideStyle = (
-  revealed: boolean,
-  motionEngaged: boolean,
-  transitionDelay = '0ms',
-): CSSProperties =>
-  getMotionSlideRevealStyle(revealed, HERO_MOTION_STYLE, {
-    idleOpacity: MOTION_REVEAL_HERO_IDLE_OPACITY,
-    engaged: motionEngaged,
-    transitionDelay,
-  });
-
-function HeroHeadingDesktop({
-  motionActive = false,
-  motionEngaged = false,
-}: {
-  motionActive?: boolean;
-  motionEngaged?: boolean;
-}) {
+function HeroHeadingDesktop() {
   return (
     <h1
       data-testid={ids.component.landing.hero.heading}
       className="text-display-desktop-lg text-[var(--color-text-primary)]"
-      style={heroSlideStyle(motionActive, motionEngaged)}
     >
       Why sell under someone else&apos;s name when you can{' '}
       <span className="text-[var(--color-text-brand-navy)]">Build your Own Travel system</span>
@@ -69,18 +47,11 @@ function HeroHeadingMobile() {
   );
 }
 
-function HeroSubheading({
-  motionActive = false,
-  motionEngaged = false,
-}: {
-  motionActive?: boolean;
-  motionEngaged?: boolean;
-}) {
+function HeroSubheading() {
   return (
     <p
       data-testid={ids.component.landing.hero.subheading}
       className="text-body-desktop-md text-[var(--color-text-secondary)]"
-      style={heroSlideStyle(motionActive, motionEngaged, MOTION_DELAY_AUTO_ADVANCE)}
     >
       MaqsoodTravel gives IATA-certified travel agencies a fully branded booking platform.
       Multi-source search across Sabre, Amadeus and Travelport, zero per-booking fees, and
@@ -89,30 +60,9 @@ function HeroSubheading({
   );
 }
 
-function HeroCtaMotionWrap({
-  children,
-  motionActive = false,
-  motionEngaged = false,
-}: {
-  children: ReactNode;
-  motionActive?: boolean;
-  motionEngaged?: boolean;
-}) {
+function HeroSecondaryCta() {
   return (
-    <div style={heroSlideStyle(motionActive, motionEngaged)}>{children}</div>
-  );
-}
-
-function HeroSecondaryCta({
-  motionActive = false,
-  motionEngaged = false,
-}: {
-  motionActive?: boolean;
-  motionEngaged?: boolean;
-}) {
-  return (
-    <HeroCtaMotionWrap motionActive={motionActive} motionEngaged={motionEngaged}>
-      <Link
+    <Link
       href="#pricing"
       data-testid={ids.component.landing.hero.secondaryCta}
       className="inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-6)] border border-[var(--color-border-brand-navy)] bg-[var(--color-background-page)] px-[var(--spacing-28)] py-[var(--spacing-12)] text-label-desktop-lg text-[var(--color-action-secondary-default-label)] transition-colors hover:bg-[var(--color-action-secondary-hover-background)] hover:text-[var(--color-action-secondary-hover-label)] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]"
@@ -127,20 +77,14 @@ function HeroSecondaryCta({
         aria-hidden="true"
       />
     </Link>
-    </HeroCtaMotionWrap>
   );
 }
 
-function HeroProofLine({
-  className = '',
-  motionActive = false,
-  motionEngaged = false,
-}: HeroOptionalClassNameProps & { motionActive?: boolean; motionEngaged?: boolean }) {
+function HeroProofLine({ className = '' }: HeroOptionalClassNameProps) {
   return (
     <p
       data-testid={ids.component.landing.hero.proofLine}
       className={`text-body-desktop-xs text-[var(--color-text-secondary)] ${className}`}
-      style={heroSlideStyle(motionActive, motionEngaged, MOTION_DELAY_AUTO_ADVANCE)}
     >
       Agencies save an average of $1,200/month in platform fee within their first month of going
       live.
@@ -148,32 +92,11 @@ function HeroProofLine({
   );
 }
 
-function HeroProductImage({
-  className = '',
-  motionActive = false,
-  motionEngaged = false,
-  snapPending = false,
-}: HeroOptionalClassNameProps & {
-  motionActive?: boolean;
-  motionEngaged?: boolean;
-  snapPending?: boolean;
-}) {
+function HeroProductImage({ className = '' }: HeroOptionalClassNameProps) {
   return (
     <div
       data-testid={ids.component.landing.hero.productImage}
       className={`relative overflow-hidden rounded-[var(--radius-20)] bg-[var(--color-surface-muted)] ${className}`}
-      style={{
-        ...HERO_MOTION_STYLE,
-        transitionProperty: MOTION_TRANSITION_PROPERTIES,
-        transitionDuration: snapPending ? '0ms' : HERO_MOTION_STYLE.transitionDuration,
-        boxShadow: motionActive ? 'var(--shadow-card)' : 'none',
-        opacity: motionActive ? 1 : MOTION_REVEAL_HERO_IDLE_OPACITY,
-        transform: !motionEngaged
-          ? MOTION_SLIDE_REST_TRANSFORM
-          : motionActive
-            ? MOTION_SLIDE_LIFT_TRANSFORM
-            : MOTION_SLIDE_ENTRY_TRANSFORM,
-      }}
     >
       <Image
         src="/images/hero-product.png"
@@ -196,31 +119,17 @@ function StatBar() {
   );
 }
 
-function HeroStatsDesktop({
-  motionEngaged = false,
-  revealed = false,
-}: {
-  motionEngaged?: boolean;
-  revealed?: boolean;
-}) {
-  const snapPending = motionEngaged && !revealed;
-
+function HeroStatsDesktop() {
   return (
     <div
       data-testid={ids.component.landing.hero.statsStrip}
       className="grid grid-cols-4 divide-x divide-[var(--color-border-default)] border-y border-[var(--color-border-default)] bg-[var(--color-background-surface)] px-[var(--spacing-180)] py-[var(--spacing-24)]"
     >
-      {DESKTOP_STATS.map((stat, index) => (
+      {DESKTOP_STATS.map((stat) => (
         <div
           key={stat.testId}
           data-testid={stat.testId}
           className="flex flex-col items-center justify-center gap-[var(--spacing-12)] px-[var(--spacing-12)] text-center"
-          style={getMotionSlideRevealStyle(revealed, HERO_MOTION_STYLE, {
-            engaged: motionEngaged,
-            animateOpacity: false,
-            snapPending,
-            transitionDelay: getMotionStaggerDelay(index),
-          })}
         >
           <div className="flex flex-col items-center gap-[var(--spacing-6)]">
             <span className="text-display-desktop-stat text-[var(--color-text-primary)]">
@@ -301,35 +210,36 @@ function HeroLogosStrip() {
 
 function HeroDesktopMotion() {
   const hero = ids.component.landing.hero;
+  const textBlockRef = useRef<HTMLDivElement>(null);
+  const textColumnRef = useRef<HTMLDivElement>(null);
   const [motionEngaged, setMotionEngaged] = useState(false);
-  const [motionStep, setMotionStep] = useState(0);
-  const [visualMotionEngaged, setVisualMotionEngaged] = useState(false);
-  const [visualRevealed, setVisualRevealed] = useState(false);
-
-  const playMotion = useCallback(
-    () =>
-      runHeroMotion(
-        () => setMotionEngaged(true),
-        () => setMotionStep(1),
-        () => setMotionStep(2),
-        () => {
-          beginMotionReveal(
-            () => {
-              setVisualMotionEngaged(true);
-              setMotionStep(3);
-            },
-            () => setVisualRevealed(true),
-          );
-        },
-      ),
-    [],
+  const [motionStep, setMotionStep] = useState<HeroMotionStep>(0);
+  const [ctaTerminalOffsetPx, setCtaTerminalOffsetPx] = useState(
+    HERO_MOTION_CTA_PARTIAL_OFFSET_PX,
+  );
+  const [clusterMinHeightPx, setClusterMinHeightPx] = useState(
+    HERO_MOTION_COPY_CLUSTER_MIN_HEIGHT_PX,
   );
 
-  const triggerMotion = useOneWayMotion(playMotion);
+  const playMotion = useCallback(() => {
+    const textHeight =
+      textColumnRef.current?.offsetHeight ?? HERO_MOTION_TEXT_COLUMN_HEIGHT_PX;
+    const terminalOffset = getHeroCtaTerminalOffsetPx(textHeight);
+    const clusterHeight = textBlockRef.current?.offsetHeight ?? clusterMinHeightPx;
 
-  const textActive = motionStep >= 1;
-  const ctaActive = motionStep >= 2;
-  const visualSnapPending = visualMotionEngaged && !visualRevealed;
+    setCtaTerminalOffsetPx(terminalOffset);
+    setClusterMinHeightPx(
+      Math.max(clusterHeight, terminalOffset + HERO_MOTION_CTA_CLUSTER_HEIGHT_PX),
+    );
+    setMotionEngaged(true);
+    setMotionStep(0);
+    return runHeroMotion(
+      () => setMotionStep(1),
+      () => setMotionStep(2),
+    );
+  }, []);
+
+  const triggerMotion = useOneWayMotion(playMotion);
 
   return (
     <div
@@ -342,59 +252,92 @@ function HeroDesktopMotion() {
         className="flex items-start justify-between px-[var(--spacing-64)] pt-[var(--spacing-44)]"
       >
         <div
+          ref={textBlockRef}
           data-testid={hero.textBlock}
-          className="flex max-w-[645px] flex-col gap-[var(--spacing-24)]"
+          className={`relative w-[645px] max-w-full shrink-0 ${motionEngaged ? 'overflow-hidden' : ''}`}
+          style={
+            motionEngaged ? { minHeight: `${clusterMinHeightPx}px` } : undefined
+          }
         >
-          <div
-            data-testid={hero.headingGroup}
-            className="flex flex-col gap-[var(--spacing-8)]"
-          >
-            <HeroHeadingDesktop motionActive={textActive} motionEngaged={motionEngaged} />
-            <HeroSubheading motionActive={textActive} motionEngaged={motionEngaged} />
-          </div>
-          <div data-testid={hero.ctaGroup} className="flex flex-col gap-[var(--spacing-12)]">
-            <div
-              data-testid={hero.ctaRow}
-              className="flex flex-wrap items-center gap-[var(--spacing-20)]"
-            >
-              <HeroCtaMotionWrap motionActive={ctaActive} motionEngaged={motionEngaged}>
-                <HeroPrimaryCta
-                  testId={hero.cta}
-                  labelTestId={hero.ctaLabel}
-                  iconTestId={hero.ctaIcon}
-                  graphicTestId={hero.ctaGraphic}
-                  href="/contact"
-                  emphasized={ctaActive}
-                  useHeroEasing
-                />
-              </HeroCtaMotionWrap>
-              <HeroSecondaryCta motionActive={ctaActive} motionEngaged={motionEngaged} />
+          {motionEngaged ? (
+            <>
+              <div
+                data-testid={hero.motion.textColumn}
+                className="absolute left-0 top-0 z-10 w-full"
+                style={getHeroColumnMotionStyle(motionEngaged, motionStep, 'text')}
+              >
+                <div
+                  data-testid={hero.headingGroup}
+                  className="flex flex-col gap-[var(--spacing-8)]"
+                >
+                  <HeroHeadingDesktop />
+                  <HeroSubheading />
+                </div>
+              </div>
+              <div
+                data-testid={hero.motion.ctaColumn}
+                className="absolute left-0 top-0 z-0 w-full"
+                style={getHeroColumnMotionStyle(motionEngaged, motionStep, 'cta', {
+                  ctaTerminalOffsetPx,
+                })}
+              >
+                <div data-testid={hero.ctaGroup} className="flex flex-col gap-[var(--spacing-12)]">
+                  <div
+                    data-testid={hero.ctaRow}
+                    className="flex flex-wrap items-center gap-[var(--spacing-20)]"
+                  >
+                    <HeroPrimaryCta
+                      testId={hero.cta}
+                      labelTestId={hero.ctaLabel}
+                      iconTestId={hero.ctaIcon}
+                      graphicTestId={hero.ctaGraphic}
+                      href="/contact"
+                      emphasized={motionStep >= 2}
+                      useHeroEasing
+                    />
+                    <HeroSecondaryCta />
+                  </div>
+                  <HeroProofLine />
+                </div>
+              </div>
+            </>
+          ) : (
+            <div className="flex flex-col gap-[var(--spacing-24)]">
+              <div ref={textColumnRef} data-testid={hero.motion.textColumn}>
+                <div
+                  data-testid={hero.headingGroup}
+                  className="flex flex-col gap-[var(--spacing-8)]"
+                >
+                  <HeroHeadingDesktop />
+                  <HeroSubheading />
+                </div>
+              </div>
+              <div data-testid={hero.motion.ctaColumn}>
+                <div data-testid={hero.ctaGroup} className="flex flex-col gap-[var(--spacing-12)]">
+                  <div
+                    data-testid={hero.ctaRow}
+                    className="flex flex-wrap items-center gap-[var(--spacing-20)]"
+                  >
+                    <HeroPrimaryCta
+                      testId={hero.cta}
+                      labelTestId={hero.ctaLabel}
+                      iconTestId={hero.ctaIcon}
+                      graphicTestId={hero.ctaGraphic}
+                      href="/contact"
+                    />
+                    <HeroSecondaryCta />
+                  </div>
+                  <HeroProofLine />
+                </div>
+              </div>
             </div>
-            <HeroProofLine motionActive={ctaActive} motionEngaged={motionEngaged} />
-          </div>
+          )}
         </div>
-        <HeroProductImage
-          className="h-[400px] w-[536px] shrink-0"
-          motionActive={visualRevealed}
-          motionEngaged={visualMotionEngaged}
-          snapPending={visualSnapPending}
-        />
+        <HeroProductImage className="h-[400px] w-[536px] shrink-0" />
       </div>
-      <div
-        data-testid={hero.bottomFrame}
-        className="flex flex-col"
-      >
-        <HeroStatsDesktop motionEngaged={visualMotionEngaged} revealed={visualRevealed} />
-        <div
-          style={getMotionSlideRevealStyle(visualRevealed, HERO_MOTION_STYLE, {
-            idleOpacity: MOTION_REVEAL_HERO_IDLE_OPACITY,
-            engaged: visualMotionEngaged,
-            snapPending: visualSnapPending,
-            transitionDelay: `calc(4 * ${MOTION_DELAY_STEP})`,
-          })}
-        >
-          <HeroLogosStrip />
-        </div>
+      <div data-testid={hero.bottomFrame} className="flex flex-col">
+        <HeroStatsDesktop />
+        <HeroLogosStrip />
       </div>
     </div>
   );

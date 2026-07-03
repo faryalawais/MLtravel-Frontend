@@ -1,0 +1,73 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "ghIssue": 7,
+    "chain": "HowItWorks-animation",
+    "animationNodeId": "5164:10412",
+    "staticTwinNodeId": "5164:6567",
+    "pattern": "rapid-four-step",
+    "runner": "runRapidFourStepMotion",
+    "initialRender": "staticTwin",
+    "source": "motion-chains.json + motion-diffs.json + motion-state-poses.json"
+  },
+  "figmaStates": [
+    { "index": 1, "nodeId": "5164:10412", "label": "idle" },
+    { "index": 2, "nodeId": "5147:5418", "label": "state-2" },
+    { "index": 3, "nodeId": "5147:5417", "label": "state-3" },
+    { "index": 4, "nodeId": "5147:5416", "label": "state-4" },
+    { "index": 5, "nodeId": "5147:5415", "label": "state-5" }
+  ],
+  "transitions": [
+    {
+      "stepIndex": 0,
+      "trigger": "MOUSE_ENTER",
+      "durationMs": 700,
+      "delayMs": 0,
+      "delayToken": null
+    },
+    {
+      "stepIndex": 1,
+      "trigger": "AFTER_TIMEOUT",
+      "durationMs": 700,
+      "delayMs": 120,
+      "delayToken": "motion.duration.stepDelay"
+    },
+    {
+      "stepIndex": 2,
+      "trigger": "AFTER_TIMEOUT",
+      "durationMs": 700,
+      "delayMs": 120,
+      "delayToken": "motion.duration.stepDelay"
+    },
+    {
+      "stepIndex": 3,
+      "trigger": "AFTER_TIMEOUT",
+      "durationMs": 700,
+      "delayMs": 120,
+      "delayToken": "motion.duration.stepDelay"
+    }
+  ],
+  "motionDiffsExpected": [
+    {
+      "layer": "footer-note",
+      "helper": "getHiwFooterMotionStyle",
+      "translateY": { "fromPx": 725, "toPx": 644, "custom": true }
+    }
+  ],
+  "footerPoses": {
+    "entryPx": 725,
+    "terminalPx": 644,
+    "staticPx": 410,
+    "offsetFromStaticPx": 81
+  },
+  "implementationExpected": {
+    "trigger": "onMouseEnter on component.landing.howItWorksTeaser.motion.root",
+    "desktopOnly": true,
+    "steps": [
+      { "index": 0, "reveal": "card1" },
+      { "index": 1, "reveal": "card2" },
+      { "index": 2, "reveal": "card3" },
+      { "index": 3, "reveal": "footerTerminal" }
+    ]
+  }
+}

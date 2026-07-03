@@ -1,0 +1,118 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "description": "Closed-chain overlays when REST prototype interactions are missing but behaviour is documented in figma/notes.md"
+  },
+  "overlays": [
+    {
+      "chainName": "Footer-animation",
+      "reason": "REST cache on 5164:10371 has empty interactions[]; mobile nav link emphasis documented in figma/notes.md",
+      "chain": {
+        "name": "Footer-animation",
+        "subgraphId": "primary",
+        "staticTwin": {
+          "name": "FooterMobile",
+          "nodeId": "5164:7038"
+        },
+        "animationNodeId": "5164:10371",
+        "status": "closed",
+        "inferred": true,
+        "kind": "interactive",
+        "pattern": "inferred-link-emphasis",
+        "runner": "runFooterLinkEmphasisMotion",
+        "baseStyle": "DEFAULT_MOTION_STYLE",
+        "trigger": {
+          "event": "onMouseEnter",
+          "targetTestId": "component.footer.motion.root",
+          "targetNodeId": "5164:10371"
+        },
+        "missingNodeIds": [],
+        "states": [
+          {
+            "index": 1,
+            "nodeId": "5164:10371",
+            "label": "idle",
+            "referencePng": "reference-footer-animation-state-1.png"
+          },
+          {
+            "index": 2,
+            "nodeId": "5164:7038",
+            "label": "emphasized",
+            "referencePng": "reference-footer-animation-state-2.png"
+          }
+        ],
+        "transitions": [
+          {
+            "from": "5164:10371",
+            "to": "5164:7038",
+            "trigger": "MOUSE_ENTER",
+            "triggerNodeId": "5164:10371",
+            "durationMs": 700,
+            "durationToken": "motion.duration.default",
+            "easing": "EASE_IN",
+            "easingToken": "motion.easing.default",
+            "delayMs": 0,
+            "delayToken": null
+          }
+        ]
+      },
+      "diff": {
+        "chain": "Footer-animation",
+        "subgraphId": "primary",
+        "from": "5164:10371",
+        "to": "5164:7038",
+        "trigger": "MOUSE_ENTER",
+        "durationToken": "motion.duration.default",
+        "easingToken": "motion.easing.default",
+        "layers": [
+          {
+            "name": "FooterNavLink",
+            "nodeIdA": "5164:10371",
+            "nodeIdB": "5164:7038",
+            "testId": "component.footer.motion.root",
+            "stepIndex": 0,
+            "changes": {
+              "fontWeight": {
+                "from": 400,
+                "to": 600,
+                "custom": true,
+                "semantic": "emphasis"
+              }
+            },
+            "helper": "getFooterNavLinkMotionStyle"
+          }
+        ]
+      },
+      "poses": {
+        "name": "Footer-animation",
+        "subgraphId": "primary",
+        "staticTwin": {
+          "name": "FooterMobile",
+          "nodeId": "5164:7038"
+        },
+        "initialRender": "staticTwin",
+        "terminalStateIndex": 2,
+        "states": [
+          {
+            "index": 1,
+            "nodeId": "5164:10371",
+            "label": "idle",
+            "layers": {}
+          },
+          {
+            "index": 2,
+            "nodeId": "5164:7038",
+            "label": "emphasized",
+            "layers": {
+              "FooterNavLink": {
+                "testId": "component.footer.motion.root",
+                "emphasis": true,
+                "custom": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

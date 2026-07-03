@@ -1,0 +1,70 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "ghIssue": 9,
+    "chains": ["SocialProof-animation", "SocialProof-animation-alt"],
+    "source": "motion-chains.json + motion-state-poses.json"
+  },
+  "carousel": {
+    "chain": "SocialProof-animation",
+    "animationNodeId": "5307:6608",
+    "staticTwinNodeId": "5164:6836",
+    "pattern": "custom",
+    "runner": "useOneWayMotion",
+    "initialRender": "staticTwin",
+    "figmaStates": 21,
+    "trigger": {
+      "event": "onMouseEnter",
+      "targetTestId": "component.landing.socialProof.motion.root",
+      "targetNodeId": "5307:6644"
+    },
+    "carouselTiming": {
+      "slideDurationMs": 1400,
+      "advancePauseMs": 600,
+      "slideCount": 3,
+      "desktopSlideStepPx": 988
+    },
+    "implementationExpected": {
+      "trigger": "onMouseEnter on component.landing.socialProof.motion.root",
+      "desktopOnly": true,
+      "headerReveal": "getMotionSlideRevealStyle",
+      "carousel": "translateX auto-advance 3 slides"
+    }
+  },
+  "clientsStrip": {
+    "chain": "SocialProof-animation-alt",
+    "animationNodeId": "5164:11204",
+    "staticTwinNodeId": "5164:6836",
+    "pattern": "simple-one-step",
+    "runner": "useOneWayMotion",
+    "initialRender": "staticTwin",
+    "figmaStates": [
+      { "index": 1, "nodeId": "5164:11204", "label": "idle" },
+      { "index": 2, "nodeId": "5164:11167", "label": "state-2" }
+    ],
+    "transitions": [
+      {
+        "stepIndex": 0,
+        "trigger": "MOUSE_ENTER",
+        "durationMs": 700,
+        "delayMs": 0,
+        "delayToken": null
+      }
+    ],
+    "motionDiffsExpected": [
+      {
+        "layer": "client logos",
+        "helper": "getSocialProofClientsLogoMotionStyle",
+        "scale": { "from": 1, "to": 1.04 }
+      }
+    ],
+    "implementationExpected": {
+      "trigger": "onMouseEnter on component.landing.socialProof.clientsMotion.root",
+      "desktopOnly": true,
+      "steps": [
+        { "index": 0, "action": "snapLogoEngage" },
+        { "index": 1, "action": "animateLogoTerminal" }
+      ]
+    }
+  }
+}

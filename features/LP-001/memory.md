@@ -216,7 +216,9 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 
 ### FE notes — Hero GH#4
 <!-- Written by: fe-implement on 2026-07-01 -->
+<!-- Motion re-wire from motion-diffs: 2026-07-03 -->
 - Components implemented: `HeroSection`, `HeroPrimaryCta`
+- **Motion (2026-07-03):** `getHeroColumnMotionStyle` + `motion.textColumn` / `motion.ctaColumn` wired from `motion-diffs.json` (370→0 text, 370→284 CTA); product/stats static; `tests/visual/hero-motion.spec.ts`; state PNGs `reference-hero-animation-state-{1,2,3}.png` via `npm run figma:capture-hero-motion`
 - ui-registry: 66 entries (navbar 38 + hero 28); `build:layout` updated
 - Hero contract appended to `features/LP-001/contract.md`
 - Product image: `public/images/hero-product.png` (Figma `I5164:6560;5160:5290`)
@@ -227,10 +229,12 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 ### FE notes — Problem GH#5
 <!-- Written by: fe-implement on 2026-07-01 -->
 <!-- Human review: APPROVED 2026-07-01 -->
+<!-- Motion re-wire from motion-diffs: 2026-07-03 -->
 - Components implemented: `ProblemSection` (desktop + mobile); wired on `app/page.tsx` with `id="product"`
 - ui-registry: 137 entries (+71 problem); `build:layout` updated
 - Problem contract appended to `features/LP-001/contract.md`
 - Card icons: `public/icons/icon-problem-card-{1,2,3}.svg`
+- **Motion (2026-07-03):** `runChainedTransitionMotion` (700ms + 120ms step delay); `getProblemCtaMotionStyle` for ProblemCTA 692→592; card cascade via `getMotionCascadeCardSurfaceStyle`; `tests/visual/problem-motion.spec.ts`
 - Shadow token fix: `tokens/sd.config.mjs` — `--shadow-card` now valid rgba
 - test:e2e: passed (13 scenarios incl. GH#5 smoke + product nav scroll)
 - test:visual: problem desktop/mobile baselines added
@@ -280,7 +284,7 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-01** — `/prd-update` — `docs/features/LP-001/prd-v2.md` written (Figma REST analysis; mobile node IDs mapped; section order corrected).
 - **2026-07-01** — `/prd-review` — PRD v2 **approved** by human. Next: `/ticket-generate`.
 - **2026-07-01** — `/ticket-generate` — FE `LP-001-FE`, BE `LP-001-BE`. Next: `/to-issues`.
-- **2026-07-01** — `/to-issues` — 12 GitHub issues published; index in `features/LP-001/tickets/issues.md`.
+- **2026-07-01** — `/to-issues` — 12 GitHub issues published for LP-001 slices.
 - **2026-07-01** — `/scenario-review` — Gherkins approved by human.
 - **2026-07-01** — `/gherkin-validate` — all 6 checks passed. Planning gate complete for LP-001.
 - **2026-07-01** — `/openapi-author` — LP-001-BE OpenAPI fragment + api-registry written.
@@ -317,3 +321,9 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 - **2026-07-02** — `/fe-implement` GH#10 Feature grid — `FeatureGridSection`; typography constants + plane positioning; e2e/visual/typography gates pass; **human APPROVE pending**.
 - **2026-07-02** — `/design-contract` GH#9 Social proof — contract §2 + slice appendix; added `spacing.120` primitive; 19 assets in `notes.md`; Gherkin sub-component visibility steps; `validate:figma-coverage` + `validate:contract` pass.
 - **2026-07-02** — `/fe-implement` GH#9 Social proof — `SocialProofSection`; wired after `FeatureGridSection`; e2e/visual/typography gates pass; **human APPROVE pending**.
+- **2026-07-03** — `/fe-implement` GH#6 Comparison motion re-wire — `getComparisonMainGroupMotionStyle` (Frame 2095585108 translateY 1028→232); `runSimpleOneStepMotion`; page load = static twin `5164:6566`; CTA block fixed at ty=632; `comparison-motion.spec.ts` pass.
+- **2026-07-03** — `/fe-implement` GH#7 HIW motion re-wire — `getHiwFooterMotionStyle` (footer-note translateY 725→644); card cascade retained via `getMotionCascadeCardSurfaceStyle`; `hiw-motion.spec.ts` pass.
+- **2026-07-03** — `/fe-implement` GH#10 Feature grid motion re-wire — `getFeatureGridContentMotionStyle` on cards+footer wrapper (flex-safe); card cascade retained; settles to static twin; `feature-grid-motion.spec.ts` pass.
+- **2026-07-03** — `/fe-implement` GH#9 Social proof motion re-wire — carousel `useOneWayMotion` on `socialProof.motion.root` + `getMotionSlideRevealStyle`; clients strip `runSimpleOneStepMotion` + `getSocialProofClientsLogoMotionStyle` on `clientsMotion.root`; `social-proof-motion.spec.ts` pass.
+- **2026-07-03** — `/fe-implement` GH#11 Pricing motion re-wire — `getPricingMainGroupMotionStyle` on `maingroup` (868→58 offset 810px); header `getMotionSlideRevealStyle`; `pricing-motion.spec.ts` pass.
+- **2026-07-03** — `/fe-implement` GH#12 Footer motion re-wire — `runFooterLinkEmphasisMotion` on `footer.motion.root`; chain closed via `motion-inferred-overlays.json`; `footer-motion.spec.ts` pass.

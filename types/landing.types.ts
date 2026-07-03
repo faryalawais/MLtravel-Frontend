@@ -196,7 +196,6 @@ export interface FeatureGridCardConfig {
 export interface FeatureGridCardDesktopProps {
   card: FeatureGridCardConfig;
   cardIndex: number;
-  revealedUpTo: number;
   activeIndex: number | null;
   isHighlighted: boolean;
   cascadeRunning: boolean;

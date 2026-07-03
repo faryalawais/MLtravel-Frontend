@@ -1,0 +1,381 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "generatedAt": "2026-07-03T12:08:28.690Z",
+    "source": "build-motion-from-cache"
+  },
+  "diffs": [
+    {
+      "chain": "hero-animation",
+      "subgraphId": "primary",
+      "from": "5164:10343",
+      "to": "5132:5424",
+      "trigger": "MOUSE_ENTER",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.hero",
+      "layers": [
+        {
+          "name": "Frame 1561553827",
+          "nodeIdA": "I5164:10343;5132:5203",
+          "nodeIdB": "5132:5277",
+          "testId": "component.landing.hero.motion.textColumn",
+          "stepIndex": 0,
+          "changes": {
+            "translateY": {
+              "fromPx": 370,
+              "toPx": 0,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getHeroColumnMotionStyle"
+        }
+      ]
+    },
+    {
+      "chain": "hero-animation",
+      "subgraphId": "primary",
+      "from": "5132:5424",
+      "to": "5132:5423",
+      "trigger": "AFTER_TIMEOUT",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.hero",
+      "layers": [
+        {
+          "name": "Frame 1561553830",
+          "nodeIdA": "5132:5280",
+          "nodeIdB": "5132:5353",
+          "testId": "component.landing.hero.motion.ctaColumn",
+          "stepIndex": 1,
+          "changes": {
+            "translateY": {
+              "fromPx": 370,
+              "toPx": 284,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getHeroColumnMotionStyle"
+        }
+      ]
+    },
+    {
+      "chain": "problem-animation",
+      "subgraphId": "primary",
+      "from": "5145:4439",
+      "to": "5145:4437",
+      "trigger": "AFTER_TIMEOUT",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.default",
+      "layers": [
+        {
+          "name": "ProblemCTA",
+          "nodeIdA": "5145:4349",
+          "nodeIdB": "5145:4396",
+          "testId": null,
+          "stepIndex": 3,
+          "changes": {
+            "translateY": {
+              "fromPx": 692,
+              "toPx": 592,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getProblemCtaMotionStyle"
+        }
+      ]
+    },
+    {
+      "chain": "comparison-animation",
+      "subgraphId": "primary",
+      "from": "5164:10411",
+      "to": "5145:4767",
+      "trigger": "MOUSE_ENTER",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.default",
+      "layers": [
+        {
+          "name": "Frame 2095585108",
+          "nodeIdA": "I5164:10411;5145:4499",
+          "nodeIdB": "5145:4633",
+          "testId": null,
+          "stepIndex": 0,
+          "changes": {
+            "translateY": {
+              "fromPx": 1028,
+              "toPx": 232,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getComparisonMainGroupMotionStyle"
+        }
+      ]
+    },
+    {
+      "chain": "HowItWorks-animation",
+      "subgraphId": "primary",
+      "from": "5147:5416",
+      "to": "5147:5415",
+      "trigger": "AFTER_TIMEOUT",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.default",
+      "layers": [
+        {
+          "name": "footer-note",
+          "nodeIdA": "5404:10394",
+          "nodeIdB": "5404:10397",
+          "testId": null,
+          "stepIndex": 3,
+          "changes": {
+            "translateY": {
+              "fromPx": 725,
+              "toPx": 644,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getHiwFooterMotionStyle"
+        }
+      ]
+    },
+    {
+      "chain": "FeatureGrid-animation",
+      "subgraphId": "primary",
+      "from": "5404:6074",
+      "to": "5404:5947",
+      "trigger": "MOUSE_ENTER",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.default",
+      "layers": [
+        {
+          "name": "FeatureRow1",
+          "nodeIdA": "I5404:6074;5404:5696",
+          "nodeIdB": "5404:5760",
+          "testId": "component.landing.featureGrid.motion.featureRow1",
+          "stepIndex": 0,
+          "changes": {
+            "translateY": {
+              "fromPx": 734,
+              "toPx": 284,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getFeatureGridContentMotionStyle"
+        },
+        {
+          "name": "FeatureRow2",
+          "nodeIdA": "I5404:6074;5404:5699",
+          "nodeIdB": "5404:5763",
+          "testId": "component.landing.featureGrid.motion.featureRow2",
+          "stepIndex": 0,
+          "changes": {
+            "translateY": {
+              "fromPx": 914,
+              "toPx": 734,
+              "token": "spacing.180",
+              "custom": false
+            }
+          },
+          "helper": "getFeatureGridContentMotionStyle"
+        },
+        {
+          "name": "FooterBar",
+          "nodeIdA": "I5404:6074;5404:5704",
+          "nodeIdB": "5404:5768",
+          "testId": "component.landing.featureGrid.motion.footerBar",
+          "stepIndex": 0,
+          "changes": {
+            "translateY": {
+              "fromPx": 1096,
+              "toPx": 916,
+              "token": "spacing.180",
+              "custom": false
+            }
+          },
+          "helper": "getFeatureGridContentMotionStyle"
+        }
+      ]
+    },
+    {
+      "chain": "FeatureGrid-animation",
+      "subgraphId": "primary",
+      "from": "5404:5947",
+      "to": "5404:5948",
+      "trigger": "AFTER_TIMEOUT",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.default",
+      "layers": [
+        {
+          "name": "FeatureRow2",
+          "nodeIdA": "5404:5763",
+          "nodeIdB": "5404:5827",
+          "testId": null,
+          "stepIndex": 1,
+          "changes": {
+            "translateY": {
+              "fromPx": 734,
+              "toPx": 457,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getFeatureGridContentMotionStyle"
+        }
+      ]
+    },
+    {
+      "chain": "FeatureGrid-animation",
+      "subgraphId": "primary",
+      "from": "5404:5948",
+      "to": "5404:5946",
+      "trigger": "AFTER_TIMEOUT",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.default",
+      "layers": [
+        {
+          "name": "FeatureRow2",
+          "nodeIdA": "5404:5827",
+          "nodeIdB": "5404:5891",
+          "testId": null,
+          "stepIndex": 2,
+          "changes": {
+            "translateY": {
+              "fromPx": 457,
+              "toPx": 464,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getFeatureGridContentMotionStyle"
+        },
+        {
+          "name": "FooterBar",
+          "nodeIdA": "5404:5832",
+          "nodeIdB": "5404:5896",
+          "testId": null,
+          "stepIndex": 2,
+          "changes": {
+            "translateY": {
+              "fromPx": 916,
+              "toPx": 646,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getFeatureGridContentMotionStyle"
+        }
+      ]
+    },
+    {
+      "chain": "SocialProof-animation",
+      "subgraphId": "primary",
+      "from": "2554:1720",
+      "to": "2554:1718",
+      "trigger": "AFTER_TIMEOUT",
+      "durationToken": null,
+      "easingToken": "motion.easing.hero",
+      "layers": [
+        {
+          "name": "Property 1=Default",
+          "nodeIdA": "2554:1720",
+          "nodeIdB": "2554:1718",
+          "testId": null,
+          "stepIndex": 1,
+          "changes": {
+            "translateY": {
+              "fromPx": 22,
+              "toPx": 20,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getMotionSlideRevealStyle"
+        }
+      ]
+    },
+    {
+      "chain": "SocialProof-animation",
+      "subgraphId": "primary",
+      "from": "2554:1716",
+      "to": "2554:1714",
+      "trigger": "AFTER_TIMEOUT",
+      "durationToken": null,
+      "easingToken": "motion.easing.hero",
+      "layers": [
+        {
+          "name": "Property 1=Default",
+          "nodeIdA": "2554:1716",
+          "nodeIdB": "2554:1714",
+          "testId": null,
+          "stepIndex": 3,
+          "changes": {
+            "translateY": {
+              "fromPx": 20,
+              "toPx": 22,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getMotionSlideRevealStyle"
+        }
+      ]
+    },
+    {
+      "chain": "Pricing-animation",
+      "subgraphId": "primary",
+      "from": "5164:11487",
+      "to": "5164:11482",
+      "trigger": "MOUSE_ENTER",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.default",
+      "layers": [
+        {
+          "name": "main-group",
+          "nodeIdA": "I5164:11487;5164:11238",
+          "nodeIdB": "5164:11362",
+          "testId": "component.landing.pricing.motion.maingroup",
+          "stepIndex": 0,
+          "changes": {
+            "translateY": {
+              "fromPx": 868,
+              "toPx": 270,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getMotionSlideRevealStyle"
+        }
+      ]
+    },
+    {
+      "chain": "Footer-animation",
+      "subgraphId": "primary",
+      "from": "5164:10371",
+      "to": "5164:7038",
+      "trigger": "MOUSE_ENTER",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.default",
+      "layers": [
+        {
+          "name": "FooterNavLink",
+          "nodeIdA": "5164:10371",
+          "nodeIdB": "5164:7038",
+          "testId": "component.footer.motion.root",
+          "stepIndex": 0,
+          "changes": {
+            "fontWeight": {
+              "from": 400,
+              "to": 600,
+              "custom": true,
+              "semantic": "emphasis"
+            }
+          },
+          "helper": "getFooterNavLinkMotionStyle"
+        }
+      ]
+    }
+  ]
+}

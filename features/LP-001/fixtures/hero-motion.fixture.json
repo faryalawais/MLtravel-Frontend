@@ -1,0 +1,186 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "ghIssue": 4,
+    "chain": "hero-animation",
+    "animationNodeId": "5164:10343",
+    "staticTwinNodeId": "5164:6560",
+    "pattern": "staged-sequence",
+    "runner": "runHeroMotion",
+    "source": "figma cache nodes + motion-chains.json + motion-diffs.json",
+    "generatedAt": "2026-07-03"
+  },
+  "figmaStates": [
+    {
+      "index": 1,
+      "nodeId": "5164:10343",
+      "label": "idle",
+      "cacheFile": "features/LP-001/figma/nodes/5164-10343.json",
+      "referencePngExpected": "reference-hero-animation-state-1.png",
+      "referencePngOnDisk": true
+    },
+    {
+      "index": 2,
+      "nodeId": "5132:5424",
+      "label": "state-2",
+      "variant": "Property 1=2",
+      "cacheFile": "features/LP-001/figma/nodes/5132-5424.json",
+      "referencePngExpected": "reference-hero-animation-state-2.png",
+      "referencePngOnDisk": true
+    },
+    {
+      "index": 3,
+      "nodeId": "5132:5423",
+      "label": "state-3",
+      "variant": "Property 1=3",
+      "cacheFile": "features/LP-001/figma/nodes/5132-5423.json",
+      "referencePngExpected": "reference-hero-animation-state-3.png",
+      "referencePngOnDisk": true
+    }
+  ],
+  "transitions": [
+    {
+      "stepIndex": 0,
+      "from": "5164:10343",
+      "to": "5132:5424",
+      "trigger": "MOUSE_ENTER",
+      "triggerTarget": "component.landing.hero.motion.root",
+      "durationToken": "motion.duration.default",
+      "durationMs": 700,
+      "easingToken": "motion.easing.hero",
+      "delayToken": null,
+      "delayMs": 0
+    },
+    {
+      "stepIndex": 1,
+      "from": "5132:5424",
+      "to": "5132:5423",
+      "trigger": "AFTER_TIMEOUT",
+      "delayToken": "motion.duration.autoAdvance",
+      "delayMs": 300,
+      "durationToken": "motion.duration.default",
+      "durationMs": 700,
+      "easingToken": "motion.easing.hero"
+    }
+  ],
+  "layerGroups": [
+    {
+      "figmaName": "Frame 1561553827",
+      "semanticRole": "textColumn",
+      "contains": ["headline (TEXT)", "subcopy (TEXT)"],
+      "mapsToTestIds": [
+        "component.landing.hero.heading",
+        "component.landing.hero.subheading"
+      ],
+      "posesByState": [
+        { "stateIndex": 1, "translateYpx": 370 },
+        { "stateIndex": 2, "translateYpx": 0 },
+        { "stateIndex": 3, "translateYpx": 0 }
+      ]
+    },
+    {
+      "figmaName": "Frame 1561553830",
+      "semanticRole": "ctaAndProofColumn",
+      "contains": ["heroCtA (FRAME)", "proof line (TEXT)"],
+      "mapsToTestIds": [
+        "component.landing.hero.ctaGroup",
+        "component.landing.hero.ctaRow",
+        "component.landing.hero.proofLine"
+      ],
+      "posesByState": [
+        { "stateIndex": 1, "translateYpx": 370 },
+        { "stateIndex": 2, "translateYpx": 370 },
+        { "stateIndex": 3, "translateYpx": 284 }
+      ]
+    },
+    {
+      "figmaName": "ProductImage",
+      "semanticRole": "productScreenshot",
+      "mapsToTestIds": ["component.landing.hero.productImage"],
+      "posesByState": [
+        { "stateIndex": 1, "translateYpx": 44 },
+        { "stateIndex": 2, "translateYpx": 44 },
+        { "stateIndex": 3, "translateYpx": 44 }
+      ],
+      "note": "Does not move between animation states in Figma cache"
+    },
+    {
+      "figmaName": "Frame 2095585156",
+      "semanticRole": "statsAndLogos",
+      "mapsToTestIds": [
+        "component.landing.hero.bottomFrame",
+        "component.landing.hero.statsStrip",
+        "component.landing.hero.logosStrip"
+      ],
+      "posesByState": [
+        { "stateIndex": 1, "translateYpx": 474 },
+        { "stateIndex": 2, "translateYpx": 474 },
+        { "stateIndex": 3, "translateYpx": 474 }
+      ],
+      "note": "Does not move between animation states in Figma cache"
+    }
+  ],
+  "motionDiffsExpected": [
+    {
+      "from": "5164:10343",
+      "to": "5132:5424",
+      "layer": "Frame 1561553827",
+      "helper": "getHeroColumnMotionStyle",
+      "translateY": { "fromPx": 370, "toPx": 0, "token": null, "custom": true }
+    },
+    {
+      "from": "5132:5424",
+      "to": "5132:5423",
+      "layer": "Frame 1561553830",
+      "helper": "getHeroColumnMotionStyle",
+      "translateY": { "fromPx": 370, "toPx": 284, "token": null, "custom": true }
+    }
+  ],
+  "implementationExpected": {
+    "trigger": "onMouseEnter on component.landing.hero.motion.root",
+    "desktopOnly": true,
+    "mobileMotion": false,
+    "initialRender": "staticTwin",
+    "staticTwinLayout": "flex column gap-24 — no translateY on columns before hover",
+    "steps": [
+      {
+        "after": "hover",
+        "delayMs": 0,
+        "reveal": ["textColumn"],
+        "description": "Headline + subcopy slide from y=370 to y=0"
+      },
+      {
+        "after": "hover",
+        "delayMs": 300,
+        "reveal": ["ctaAndProofColumn"],
+        "partial": true,
+        "description": "CTA row + proof line slide from y=370 to y=284 (not fully 0 in Figma state 3)"
+      }
+    ],
+    "shouldNotAnimateFromFigma": ["productScreenshot", "statsAndLogos"]
+  },
+  "implementationActual": {
+    "file": "components/landing/HeroSection.tsx",
+    "runner": "runHeroMotion",
+    "motionStep": "0 idle | 1 text revealed | 2 CTA partial",
+    "helpers": ["getHeroColumnMotionStyle"],
+    "testIds": [
+      "component.landing.hero.motion.textColumn",
+      "component.landing.hero.motion.ctaColumn"
+    ],
+    "wiredFromMotionDiffs": true,
+    "productImageAnimates": false,
+    "statsLogosAnimate": false,
+    "referencePngs": [
+      "reference-hero-animation-state-1.png",
+      "reference-hero-animation-state-2.png",
+      "reference-hero-animation-state-3.png"
+    ]
+  },
+  "gaps": [],
+  "verificationCommands": [
+    "npm run validate:motion-chains -- LP-001 --chain hero-animation",
+    "npm run test:e2e -- --grep 'GH#4'",
+    "npm run test:visual -- --grep hero"
+  ]
+}

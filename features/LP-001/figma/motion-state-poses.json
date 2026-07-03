@@ -1,0 +1,708 @@
+{
+  "$meta": {
+    "feature": "LP-001",
+    "generatedAt": "2026-07-03T12:08:28.690Z",
+    "source": "build-motion-from-cache"
+  },
+  "chains": [
+    {
+      "name": "hero-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "HeroSection",
+        "nodeId": "5164:6560"
+      },
+      "initialRender": "staticTwin",
+      "terminalStateIndex": 3,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:10343",
+          "label": "idle",
+          "layers": {
+            "Frame 1561553827": {
+              "nodeId": "I5164:10343;5132:5203",
+              "translateYpx": 370,
+              "opacity": 1,
+              "testId": "component.landing.hero.motion.textColumn"
+            },
+            "Frame 1561553830": {
+              "nodeId": "I5164:10343;5132:5206",
+              "translateYpx": 370,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 2,
+          "nodeId": "5132:5424",
+          "label": "state-2",
+          "layers": {
+            "Frame 1561553827": {
+              "nodeId": "5132:5277",
+              "translateYpx": 0,
+              "opacity": 1
+            },
+            "Frame 1561553830": {
+              "nodeId": "5132:5280",
+              "translateYpx": 370,
+              "opacity": 1,
+              "testId": "component.landing.hero.motion.ctaColumn"
+            }
+          }
+        },
+        {
+          "index": 3,
+          "nodeId": "5132:5423",
+          "label": "state-3",
+          "layers": {
+            "Frame 1561553827": {
+              "nodeId": "5132:5350",
+              "translateYpx": 0,
+              "opacity": 1
+            },
+            "Frame 1561553830": {
+              "nodeId": "5132:5353",
+              "translateYpx": 284,
+              "opacity": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "problem-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "ProblemSection",
+        "nodeId": "5164:6561"
+      },
+      "initialRender": "staticTwin",
+      "terminalStateIndex": 5,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:10344",
+          "label": "idle",
+          "layers": {
+            "ProblemCTA": {
+              "nodeId": "I5164:10344;5145:4208",
+              "translateYpx": 692,
+              "opacity": 1,
+              "testId": "component.landing.problem.motion.cta"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "nodeId": "5145:4440",
+          "label": "state-2",
+          "layers": {
+            "ProblemCTA": {
+              "nodeId": "5145:4255",
+              "translateYpx": 692,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 3,
+          "nodeId": "5145:4438",
+          "label": "state-3",
+          "layers": {
+            "ProblemCTA": {
+              "nodeId": "5145:4302",
+              "translateYpx": 692,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 4,
+          "nodeId": "5145:4439",
+          "label": "state-4",
+          "layers": {
+            "ProblemCTA": {
+              "nodeId": "5145:4349",
+              "translateYpx": 692,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 5,
+          "nodeId": "5145:4437",
+          "label": "state-5",
+          "layers": {
+            "ProblemCTA": {
+              "nodeId": "5145:4396",
+              "translateYpx": 592,
+              "opacity": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "comparison-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": null,
+        "nodeId": null
+      },
+      "initialRender": "animationState1",
+      "terminalStateIndex": 2,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:10411",
+          "label": "idle",
+          "layers": {
+            "Frame 2095585108": {
+              "nodeId": "I5164:10411;5145:4499",
+              "translateYpx": 1028,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 2,
+          "nodeId": "5145:4767",
+          "label": "state-2",
+          "layers": {
+            "Frame 2095585108": {
+              "nodeId": "5145:4633",
+              "translateYpx": 232,
+              "opacity": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "HowItWorks-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "HowItWorksSection",
+        "nodeId": "5164:6567"
+      },
+      "initialRender": "staticTwin",
+      "terminalStateIndex": 5,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:10412",
+          "label": "idle",
+          "layers": {
+            "footer-note": {
+              "nodeId": "I5164:10412;5404:10381",
+              "translateYpx": 725,
+              "opacity": 1,
+              "testId": "component.landing.howItWorksTeaser.motion.footerNote"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "nodeId": "5147:5418",
+          "label": "state-2",
+          "layers": {
+            "footer-note": {
+              "nodeId": "5404:10388",
+              "translateYpx": 725,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 3,
+          "nodeId": "5147:5417",
+          "label": "state-3",
+          "layers": {
+            "footer-note": {
+              "nodeId": "5404:10391",
+              "translateYpx": 725,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 4,
+          "nodeId": "5147:5416",
+          "label": "state-4",
+          "layers": {
+            "footer-note": {
+              "nodeId": "5404:10394",
+              "translateYpx": 725,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 5,
+          "nodeId": "5147:5415",
+          "label": "state-5",
+          "layers": {
+            "footer-note": {
+              "nodeId": "5404:10397",
+              "translateYpx": 644,
+              "opacity": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "FeatureGrid-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "FeatureGrid",
+        "nodeId": "5164:6562"
+      },
+      "initialRender": "staticTwin",
+      "terminalStateIndex": 4,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5404:6074",
+          "label": "idle",
+          "layers": {
+            "FeatureRow1": {
+              "nodeId": "I5404:6074;5404:5696",
+              "translateYpx": 734,
+              "opacity": 1,
+              "testId": "component.landing.featureGrid.motion.featureRow1"
+            },
+            "FeatureRow2": {
+              "nodeId": "I5404:6074;5404:5699",
+              "translateYpx": 914,
+              "opacity": 1,
+              "testId": "component.landing.featureGrid.motion.featureRow2"
+            },
+            "FooterBar": {
+              "nodeId": "I5404:6074;5404:5704",
+              "translateYpx": 1096,
+              "opacity": 1,
+              "testId": "component.landing.featureGrid.motion.footerBar"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "nodeId": "5404:5947",
+          "label": "state-2",
+          "layers": {
+            "FeatureRow1": {
+              "nodeId": "5404:5760",
+              "translateYpx": 284,
+              "opacity": 1
+            },
+            "FeatureRow2": {
+              "nodeId": "5404:5763",
+              "translateYpx": 734,
+              "opacity": 1
+            },
+            "FooterBar": {
+              "nodeId": "5404:5768",
+              "translateYpx": 916,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 3,
+          "nodeId": "5404:5948",
+          "label": "state-3",
+          "layers": {
+            "FeatureRow1": {
+              "nodeId": "5404:5824",
+              "translateYpx": 284,
+              "opacity": 1
+            },
+            "FeatureRow2": {
+              "nodeId": "5404:5827",
+              "translateYpx": 457,
+              "opacity": 1
+            },
+            "FooterBar": {
+              "nodeId": "5404:5832",
+              "translateYpx": 916,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 4,
+          "nodeId": "5404:5946",
+          "label": "state-4",
+          "layers": {
+            "FeatureRow1": {
+              "nodeId": "5404:5888",
+              "translateYpx": 284,
+              "opacity": 1
+            },
+            "FeatureRow2": {
+              "nodeId": "5404:5891",
+              "translateYpx": 464,
+              "opacity": 1
+            },
+            "FooterBar": {
+              "nodeId": "5404:5896",
+              "translateYpx": 646,
+              "opacity": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SocialProof-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "SocialProofMobile",
+        "nodeId": "5164:6836"
+      },
+      "initialRender": "staticTwin",
+      "terminalStateIndex": 21,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5307:6608",
+          "label": "idle",
+          "layers": {}
+        },
+        {
+          "index": 2,
+          "nodeId": "2554:1720",
+          "label": "state-2",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1720",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 3,
+          "nodeId": "2554:1718",
+          "label": "state-3",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1718",
+              "translateYpx": 20,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 4,
+          "nodeId": "2554:1716",
+          "label": "state-4",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1716",
+              "translateYpx": 20,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 5,
+          "nodeId": "2554:1714",
+          "label": "state-5",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1714",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 6,
+          "nodeId": "2554:1712",
+          "label": "state-6",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1712",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 7,
+          "nodeId": "2554:1710",
+          "label": "state-7",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1710",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 8,
+          "nodeId": "2554:1708",
+          "label": "state-8",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1708",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 9,
+          "nodeId": "2554:1706",
+          "label": "state-9",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1706",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 10,
+          "nodeId": "2554:1704",
+          "label": "state-10",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1704",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 11,
+          "nodeId": "2554:1702",
+          "label": "state-11",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1702",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 12,
+          "nodeId": "2554:1700",
+          "label": "state-12",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1700",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 13,
+          "nodeId": "2554:1698",
+          "label": "state-13",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1698",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 14,
+          "nodeId": "2554:1696",
+          "label": "state-14",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1696",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 15,
+          "nodeId": "2554:1694",
+          "label": "state-15",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1694",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 16,
+          "nodeId": "2554:1692",
+          "label": "state-16",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1692",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 17,
+          "nodeId": "2554:1690",
+          "label": "state-17",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1690",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 18,
+          "nodeId": "2554:1688",
+          "label": "state-18",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1688",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 19,
+          "nodeId": "2554:1686",
+          "label": "state-19",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1686",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 20,
+          "nodeId": "2554:1684",
+          "label": "state-20",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1684",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        },
+        {
+          "index": 21,
+          "nodeId": "2554:1722",
+          "label": "state-21",
+          "layers": {
+            "Property 1=Default": {
+              "nodeId": "2554:1722",
+              "translateYpx": 22,
+              "opacity": 0.5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SocialProof-animation-alt",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "SocialProofMobile",
+        "nodeId": "5164:6836"
+      },
+      "initialRender": "staticTwin",
+      "terminalStateIndex": 2,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:11204",
+          "label": "idle",
+          "layers": {}
+        },
+        {
+          "index": 2,
+          "nodeId": "5164:11167",
+          "label": "state-2",
+          "layers": {}
+        }
+      ]
+    },
+    {
+      "name": "Pricing-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "NewPricingSection",
+        "nodeId": "5164:6564"
+      },
+      "initialRender": "staticTwin",
+      "terminalStateIndex": 2,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:11487",
+          "label": "idle",
+          "layers": {
+            "main-group": {
+              "nodeId": "I5164:11487;5164:11238",
+              "translateYpx": 868,
+              "opacity": 1,
+              "testId": "component.landing.pricing.motion.maingroup"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "nodeId": "5164:11482",
+          "label": "state-2",
+          "layers": {
+            "main-group": {
+              "nodeId": "5164:11362",
+              "translateYpx": 270,
+              "opacity": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Footer-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "FooterMobile",
+        "nodeId": "5164:7038"
+      },
+      "initialRender": "staticTwin",
+      "terminalStateIndex": 2,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5164:10371",
+          "label": "idle",
+          "layers": {}
+        },
+        {
+          "index": 2,
+          "nodeId": "5164:7038",
+          "label": "emphasized",
+          "layers": {
+            "FooterNavLink": {
+              "testId": "component.footer.motion.root",
+              "emphasis": true,
+              "custom": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

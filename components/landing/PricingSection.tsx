@@ -97,7 +97,8 @@ import {
   PRICING_TRUST_LABEL_CLASS,
   PRICING_TRUST_LABEL_MOBILE_CLASS,
 } from '@/constants/landing.constants';
-import { getMotionRevealStyle } from '@/constants/motion.constants';
+import { getMotionSlideRevealStyle, getPricingMainGroupMotionStyle, type PricingMotionStep } from '@/constants/motion.constants';
+import { runSimpleOneStepMotion } from '@/lib/motion-sequence';
 import { useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type { PricingSectionPillProps } from '@/types/landing.types';
@@ -479,17 +480,22 @@ function PricingCardMobile({
 }
 
 function PricingDesktopPanel() {
-  const [revealed, setRevealed] = useState(false);
+  const [motionStep, setMotionStep] = useState<PricingMotionStep>(-1);
 
-  const playReveal = useCallback(() => {
-    setRevealed(true);
-    return () => undefined;
+  const playPricingMotion = useCallback(() => {
+    return runSimpleOneStepMotion(
+      () => setMotionStep(0),
+      () => setMotionStep(1),
+    );
   }, []);
 
-  const triggerReveal = useOneWayMotion(playReveal);
+  const triggerMotion = useOneWayMotion(playPricingMotion);
 
-  const motionStyle = (options?: { transitionDelay?: string; idleOpacity?: number }): CSSProperties =>
-    getMotionRevealStyle(revealed, PRICING_MOTION_STYLE, options);
+  const motionEngaged = motionStep >= 0;
+  const motionSettled = motionStep >= 1;
+
+  const headerStyle = (options?: { transitionDelay?: string }): CSSProperties =>
+    getMotionSlideRevealStyle(motionEngaged, PRICING_MOTION_STYLE, options);
 
   return (
     <div data-testid={pr.root} className={PRICING_DESKTOP_ROOT_CLASS}>
@@ -516,7 +522,7 @@ function PricingDesktopPanel() {
         <div
           data-testid={pr.motion.root}
           className={PRICING_DESKTOP_CONTENT_CLASS}
-          onMouseEnter={triggerReveal}
+          onMouseEnter={triggerMotion}
         >
           <div
             data-testid={pr.frame2095585158}
@@ -525,19 +531,19 @@ function PricingDesktopPanel() {
             <div
               data-testid={pr.sectionHeader}
               className="flex flex-col items-center gap-[var(--spacing-12)] text-center"
-              style={motionStyle()}
+              style={headerStyle()}
             >
               <PricingSectionPill pillTestId={pr.sectionPill} labelTestId={pr.simplePricing} />
               <div data-testid={pr.h1block} className="flex flex-col items-center gap-[var(--spacing-8)]">
                 <h2
                   data-testid={pr.ownItDontRentIt}
                   className={LANDING_SECTION_HEADING_DESKTOP_CLASS}
-                  style={motionStyle()}
+                  style={headerStyle()}
                 >
                   {PRICING_HEADING_LINE1}{' '}
                   <span className={LANDING_SECTION_HEADING_ACCENT_CLASS}>{PRICING_HEADING_LINE2}</span>
                 </h2>
-                <p data-testid={pr.textBlock} className={LANDING_SECTION_SUBTITLE_CLASS} style={motionStyle()}>
+                <p data-testid={pr.textBlock} className={LANDING_SECTION_SUBTITLE_CLASS} style={headerStyle()}>
                   {PRICING_SECTION_SUBTITLE}
                 </p>
               </div>
@@ -546,7 +552,7 @@ function PricingDesktopPanel() {
             <div
               data-testid={pr.frame2095585157}
               className="flex w-full flex-col items-center gap-[14px]"
-              style={motionStyle({ idleOpacity: 0.92 })}
+              style={headerStyle({ transitionDelay: 'var(--motion-duration-step-delay)' })}
             >
               <PricingRouteStrip
                 routeStripTestId={pr.routeStrip}
@@ -563,14 +569,14 @@ function PricingDesktopPanel() {
               <div
                 data-testid={pr.maingroup}
                 className="flex w-full flex-col items-center gap-[var(--spacing-24)]"
-                style={motionStyle({ transitionDelay: 'var(--motion-duration-step-delay)' })}
+                style={getPricingMainGroupMotionStyle(motionEngaged, motionSettled, PRICING_MOTION_STYLE)}
               >
                 <PricingCardDesktop
                   ctaTestId={pr.cta}
                   labelTestId={pr.label}
                   iconTestId={pr.iconButton}
                   graphicTestId={pr.graphic}
-                  emphasized={revealed}
+                  emphasized={motionSettled}
                 />
                 <PricingTrustStripDesktop footnoteTestId={pr.textBlock10} />
               </div>

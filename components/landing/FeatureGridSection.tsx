@@ -28,11 +28,15 @@ import {
 } from '@/constants/landing.constants';
 import {
   beginMotionReveal,
-  getMotionCascadeCardSurfaceStyle,
+  getFeatureGridCardSurfaceStyle,
+  getFeatureGridContentMotionStyle,
+  getFeatureGridRowRevealStyle,
   getMotionCascadeTextStyle,
   getMotionSlideRevealStyle,
   MOTION_DELAY_AUTO_ADVANCE,
   MOTION_TRANSITION_PROPERTIES,
+  type FeatureGridMotionStep,
+  type FeatureGridRevealedRow,
 } from '@/constants/motion.constants';
 import { HeroPrimaryCta } from '@/components/landing/HeroPrimaryCta';
 import { runFeatureGridMotion } from '@/lib/motion-sequence';
@@ -58,23 +62,17 @@ const FEATURE_GRID_CARD_SHELL_HOVER =
   'hover:border-[var(--color-border-brand-navy)] hover:shadow-[var(--shadow-card)] hover:-translate-y-[var(--spacing-4)]';
 
 function getCardSurfaceStyle(
-  cardIndex: number,
-  revealedUpTo: number,
-  activeIndex: number | null,
-  cascadeRunning: boolean,
   motionEngaged: boolean,
   isHighlighted: boolean,
+  cascadeRunning: boolean,
 ): CSSProperties {
-  return getMotionCascadeCardSurfaceStyle({
-    cardIndex,
-    revealedUpTo,
-    activeIndex,
-    cascadeRunning,
+  return getFeatureGridCardSurfaceStyle(
     motionEngaged,
     isHighlighted,
-    shadowToken: PROBLEM_TOKENS.shadowCard,
-    baseStyle: PROBLEM_MOTION_STYLE,
-  });
+    cascadeRunning,
+    PROBLEM_TOKENS.shadowCard,
+    PROBLEM_MOTION_STYLE,
+  );
 }
 
 function getCardChromeTransitionStyle(): CSSProperties {
@@ -179,7 +177,6 @@ function getDesktopCardPaddingClass(size: FeatureGridCardConfig['size']): string
 function FeatureGridCardDesktop({
   card,
   cardIndex,
-  revealedUpTo,
   activeIndex,
   isHighlighted,
   cascadeRunning,
@@ -197,14 +194,7 @@ function FeatureGridCardDesktop({
         isHighlighted ? FEATURE_GRID_CARD_SHELL_HIGHLIGHT : FEATURE_GRID_CARD_SHELL_DEFAULT,
         cascadeRunning || motionEngaged ? '' : FEATURE_GRID_CARD_SHELL_HOVER,
       ].join(' ')}
-      style={getCardSurfaceStyle(
-        cardIndex,
-        revealedUpTo,
-        activeIndex,
-        cascadeRunning,
-        motionEngaged,
-        isHighlighted,
-      )}
+      style={getCardSurfaceStyle(motionEngaged, isHighlighted, cascadeRunning)}
     >
       <div
         data-testid={card.textBlockTestId}
@@ -300,12 +290,12 @@ function FeatureGridCardMobile({ card }: FeatureGridCardMobileProps) {
 }
 
 function FeatureGridCardsDesktop({
-  revealedUpTo,
+  revealedRow,
   activeIndex,
   cascadeActive,
   motionEngaged,
 }: {
-  revealedUpTo: number;
+  revealedRow: FeatureGridRevealedRow;
   activeIndex: number | null;
   cascadeActive: boolean;
   motionEngaged: boolean;
@@ -314,20 +304,17 @@ function FeatureGridCardsDesktop({
   const row2 = FEATURE_GRID_DESKTOP_CARDS.slice(2);
 
   return (
-    <div
-      data-testid={fg.cardsGrid}
-      className="flex w-full flex-col gap-[var(--spacing-20)]"
-    >
+    <div className="flex w-full flex-col gap-[var(--spacing-20)]">
       <div
         data-testid={fg.featureRow1}
         className="flex w-full flex-wrap items-stretch justify-center gap-[var(--spacing-20)]"
+        style={getFeatureGridRowRevealStyle(motionEngaged, revealedRow, 1, PROBLEM_MOTION_STYLE)}
       >
         {row1.map((card, index) => (
           <FeatureGridCardDesktop
             key={card.cardTestId}
             card={card}
             cardIndex={index}
-            revealedUpTo={revealedUpTo}
             activeIndex={activeIndex}
             isHighlighted={isCardHighlighted(index, activeIndex)}
             cascadeRunning={cascadeActive}
@@ -338,13 +325,13 @@ function FeatureGridCardsDesktop({
       <div
         data-testid={fg.featureRow2}
         className="flex w-full flex-wrap items-stretch justify-center gap-[var(--spacing-20)]"
+        style={getFeatureGridRowRevealStyle(motionEngaged, revealedRow, 2, PROBLEM_MOTION_STYLE)}
       >
         {row2.map((card, index) => (
           <FeatureGridCardDesktop
             key={card.cardTestId}
             card={card}
             cardIndex={index + 2}
-            revealedUpTo={revealedUpTo}
             activeIndex={activeIndex}
             isHighlighted={isCardHighlighted(index + 2, activeIndex)}
             cascadeRunning={cascadeActive}
@@ -357,12 +344,12 @@ function FeatureGridCardsDesktop({
 }
 
 function FeatureGridDesktopPanel() {
-  const [revealedUpTo, setRevealedUpTo] = useState(-1);
+  const [revealedRow, setRevealedRow] = useState<FeatureGridRevealedRow>(0);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [headerEmphasized, setHeaderEmphasized] = useState(false);
-  const [footerEmphasized, setFooterEmphasized] = useState(false);
   const [cascadeActive, setCascadeActive] = useState(false);
   const [motionEngaged, setMotionEngaged] = useState(false);
+  const [motionStep, setMotionStep] = useState<FeatureGridMotionStep>(-1);
 
   const playSequence = useCallback(
     () =>
@@ -371,25 +358,28 @@ function FeatureGridDesktopPanel() {
           beginMotionReveal(
             () => {
               setMotionEngaged(true);
+              setMotionStep(0);
+              setRevealedRow(0);
               setCascadeActive(true);
-              setRevealedUpTo(-1);
               setActiveIndex(null);
             },
             () => {
+              setMotionStep(1);
+              setRevealedRow(1);
               setHeaderEmphasized(true);
-              setRevealedUpTo(1);
               setActiveIndex(0);
             },
           );
         },
         () => {
-          setRevealedUpTo(3);
+          setMotionStep(2);
+          setRevealedRow(2);
           setActiveIndex(2);
         },
         () => {
-          setRevealedUpTo(5);
+          setMotionStep(3);
+          setRevealedRow(2);
           setActiveIndex(null);
-          setFooterEmphasized(true);
           setCascadeActive(false);
         },
       ]),
@@ -474,13 +464,23 @@ function FeatureGridDesktopPanel() {
               </div>
             </div>
 
-            <FeatureGridCardsDesktop
-              revealedUpTo={revealedUpTo}
-              activeIndex={activeIndex}
-              cascadeActive={cascadeActive}
-              motionEngaged={motionEngaged}
-            />
-            <FeatureGridFooter isEmphasized={footerEmphasized} motionEngaged={motionEngaged} />
+            <div
+              data-testid={fg.cardsGrid}
+              className="flex w-full flex-col gap-[var(--spacing-40)]"
+              style={getFeatureGridContentMotionStyle(
+                motionEngaged,
+                motionStep,
+                PROBLEM_MOTION_STYLE,
+              )}
+            >
+              <FeatureGridCardsDesktop
+                revealedRow={revealedRow}
+                activeIndex={activeIndex}
+                cascadeActive={cascadeActive}
+                motionEngaged={motionEngaged}
+              />
+              <FeatureGridFooter motionEngaged={motionEngaged} motionStep={motionStep} />
+            </div>
           </div>
         </div>
       </div>
@@ -490,12 +490,12 @@ function FeatureGridDesktopPanel() {
 
 function FeatureGridFooter({
   variant = 'desktop',
-  isEmphasized = false,
   motionEngaged = false,
+  motionStep = -1,
 }: {
   variant?: 'desktop' | 'mobile';
-  isEmphasized?: boolean;
   motionEngaged?: boolean;
+  motionStep?: FeatureGridMotionStep;
 }) {
   const isMobile = variant === 'mobile';
   const ctaTestId = isMobile ? fgMobile.cta : fg.cta;
@@ -513,27 +513,10 @@ function FeatureGridFooter({
           ? 'flex w-full flex-col items-center gap-[var(--spacing-16)]'
           : 'flex w-full flex-row items-center justify-between gap-[var(--spacing-16)] py-[var(--spacing-20)]'
       }
-      style={
-        isMobile
-          ? undefined
-          : getMotionSlideRevealStyle(isEmphasized, PROBLEM_MOTION_STYLE, {
-              engaged: motionEngaged,
-              animateOpacity: false,
-              liftWhenRevealed: true,
-            })
-      }
     >
       <p
         data-testid={taglineTestId}
         className={`text-body-desktop-md text-[var(--color-text-secondary)] ${isMobile ? 'text-center' : 'text-left'}`}
-        style={
-          isMobile
-            ? undefined
-            : getMotionSlideRevealStyle(isEmphasized, PROBLEM_MOTION_STYLE, {
-                engaged: motionEngaged,
-                liftWhenRevealed: true,
-              })
-        }
       >
         {FEATURE_GRID_TAGLINE}
       </p>
@@ -545,7 +528,7 @@ function FeatureGridFooter({
         href="/contact"
         label={FEATURE_GRID_CTA_LABEL}
         className={isMobile ? 'w-full justify-center' : ''}
-        emphasized={isEmphasized}
+        emphasized={motionStep >= 3}
       />
     </div>
   );

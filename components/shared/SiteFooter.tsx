@@ -30,7 +30,6 @@ import {
   FOOTER_MOBILE_INNER_CLASS,
   FOOTER_MOBILE_NAV_ROW_CLASS,
   FOOTER_MOBILE_SHELL_CLASS,
-  FOOTER_MOTION_STYLE,
   FOOTER_NAV_COL_CLASS,
   FOOTER_NAV_COLS_CLASS,
   FOOTER_NAV_HEADING_DESKTOP_CLASS,
@@ -41,6 +40,11 @@ import {
   FOOTER_TAGLINE,
   FOOTER_TAGLINE_CLASS,
 } from '@/constants/shared.constants';
+import {
+  FOOTER_NAV_LINK_EMPHASIS_CLASS,
+  getFooterNavLinkMotionStyle,
+} from '@/constants/motion.constants';
+import { runFooterLinkEmphasisMotion } from '@/lib/motion-sequence';
 import { useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type { FooterNavColumnConfig, FooterNavLinkProps } from '@/types/shared.types';
@@ -62,11 +66,9 @@ function FooterNavLink({
       data-testid={link.linkTestId}
       className={[
         isMobile ? FOOTER_NAV_LINK_MOBILE_CLASS : FOOTER_NAV_LINK_CLASS,
-        emphasized && motionEngaged
-          ? 'font-semibold text-[var(--color-text-brand-navy)] underline'
-          : '',
+        emphasized && motionEngaged ? FOOTER_NAV_LINK_EMPHASIS_CLASS : '',
       ].join(' ')}
-      style={FOOTER_MOTION_STYLE}
+      style={getFooterNavLinkMotionStyle()}
     >
       <span data-testid={link.labelTestId}>{link.label}</span>
     </Link>
@@ -213,21 +215,24 @@ function FooterMobile() {
   const [emphasizedLinkIndex, setEmphasizedLinkIndex] = useState<number | null>(null);
 
   const playMotion = useCallback(() => {
-    setMotionEngaged(true);
-    setEmphasizedLinkIndex(0);
-    const timer = window.setTimeout(() => setEmphasizedLinkIndex(null), 700);
-    return () => window.clearTimeout(timer);
+    return runFooterLinkEmphasisMotion(
+      () => {
+        setMotionEngaged(true);
+        setEmphasizedLinkIndex(0);
+      },
+      () => setEmphasizedLinkIndex(null),
+    );
   }, []);
 
   const triggerMotion = useOneWayMotion(playMotion);
 
   return (
-    <footer
-      data-testid={ftMobile.root}
-      className={FOOTER_MOBILE_SHELL_CLASS}
-      onMouseEnter={triggerMotion}
-    >
-      <div data-testid={ft.motion.root} className={FOOTER_MOBILE_INNER_CLASS}>
+    <footer data-testid={ftMobile.root} className={FOOTER_MOBILE_SHELL_CLASS}>
+      <div
+        data-testid={ft.motion.root}
+        className={FOOTER_MOBILE_INNER_CLASS}
+        onMouseEnter={triggerMotion}
+      >
         <FooterBrandBlock brandColTestId={ftMobile.brandCol} variant="mobile" />
         <div data-testid={ftMobile.navCols} className={FOOTER_MOBILE_NAV_ROW_CLASS}>
           {FOOTER_MOBILE_COLUMNS.map((column) => (

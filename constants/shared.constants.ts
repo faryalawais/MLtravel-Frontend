@@ -135,11 +135,6 @@ export const FOOTER_MOBILE_INNER_CLASS =
 /** Figma Frame 8 — two columns space-between across 361px. */
 export const FOOTER_MOBILE_NAV_ROW_CLASS = 'flex w-full flex-row items-start justify-between';
 
-export const FOOTER_MOTION_STYLE = {
-  transitionDuration: 'var(--motion-duration-default)',
-  transitionTimingFunction: 'var(--motion-easing-default)',
-} as const;
-
 const ft = ids.component.footer;
 const ftMobile = ft.mobile;
 

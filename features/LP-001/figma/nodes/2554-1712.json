@@ -1,0 +1,119 @@
+{
+  "$meta": {
+    "nodeId": "2554:1712",
+    "nodeName": "Property 1=Default",
+    "cachedAt": "2026-07-03",
+    "source": "figma-rest-files-nodes",
+    "figmaFileKey": "h6BqI1ZRMSJxR7jESNF0Ep",
+    "figmaLastModified": "2026-07-02T12:52:45Z"
+  },
+  "raw": {
+    "id": "2554:1712",
+    "name": "Property 1=Default",
+    "type": "COMPONENT",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "opacity": 0.5,
+    "clipsContent": false,
+    "background": [
+      {
+        "blendMode": "NORMAL",
+        "visible": false,
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    ],
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "visible": false,
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    ],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "a": 0
+    },
+    "fillGeometry": [],
+    "strokeGeometry": [],
+    "absoluteBoundingBox": {
+      "x": 47496,
+      "y": 6527,
+      "width": 91.63239288330078,
+      "height": 95.8280029296875
+    },
+    "absoluteRenderBounds": {
+      "x": 47496,
+      "y": 6527,
+      "width": 91.6328125,
+      "height": 95.828125
+    },
+    "constraints": {
+      "vertical": "TOP",
+      "horizontal": "LEFT"
+    },
+    "relativeTransform": [
+      [
+        1,
+        0,
+        1660
+      ],
+      [
+        0,
+        1,
+        22
+      ]
+    ],
+    "size": {
+      "x": 91.63239288330078,
+      "y": 95.8280029296875
+    },
+    "effects": [],
+    "transitionNodeID": "2554:1710",
+    "transitionDuration": 40,
+    "transitionEasing": "EASE_OUT",
+    "interactions": [
+      {
+        "trigger": {
+          "type": "AFTER_TIMEOUT",
+          "timeout": 0.009999999776482582
+        },
+        "actions": [
+          {
+            "type": "NODE",
+            "destinationId": "2554:1710",
+            "navigation": "CHANGE_TO",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.03999999910593033
+            },
+            "resetVideoPosition": false
+          }
+        ]
+      }
+    ],
+    "complexStrokeProperties": {
+      "strokeType": "BASIC"
+    }
+  }
+}
