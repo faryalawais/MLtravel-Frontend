@@ -9,6 +9,7 @@
 |-----|---------|--------------|----------------|--------|
 | #18 | Hero | `5217:6699` | `5217:7073` → reuse `component.landing.hero` (`hiw-page`) | ✓ extracted |
 | #19 | Three-step teaser | reuse `5164:6567` / `5164:6690` | LP-001 cache | ✓ reuse (no HIW re-extract) |
+| #20 | Mid CTA | `5217:6701` | absent on mobile | ✓ extracted |
 
 ## Slice 1 — Hero (#18)
 
@@ -82,6 +83,33 @@ Chain status: **closed** | `motion-chains.json` built | `validate:motion-chains`
 Pattern: `staged-sequence` / `runHeroMotion` | static twin: `5217:6699` | `initialRender`: `staticTwin`
 
 Registry motion paths: `component.howItWorks.hero.motion.root`, `.headGroup`, `.ctaGroup`
+
+## Slice 3 — Mid CTA (#20)
+
+| Item | Value |
+|------|-------|
+| Slice-root | `5217:6701` S4-MidCTA |
+| Reference PNG | `reference-s4-midcta.png` |
+| Registry paths | 7 under `component.howItWorks.midCta.*` |
+| Mobile | **omit** — not in `5217:6715` mobile frame |
+
+### Dual-source reconciliation
+
+| slice-root | REST | MCP | instanceVariants | action |
+|------------|------|-----|------------------|--------|
+| `5217:6701` | ✓ `5217-6701.json` | — | ✓ `Button/Primary` State=Default, IconPosition=Right | REST sufficient |
+
+### Token mapping (slice 3 — mid CTA)
+
+| Node path | Property | Figma value | Token used | Exact? |
+|-----------|----------|-------------|------------|--------|
+| S4-MidCTA | background | page wash | `color.background.page` | YES |
+| Frame | max-width | 868px | layout constant | YES |
+| Frame | padding-x / padding-y | 20 / 24 | `spacing.20` / `spacing.24` | YES |
+| Frame | radius | 16px | `radius.surface` (LP-001 trust-bar pattern) | pattern match |
+| Frame | fill / stroke | subtle + border | `color.background.subtle` / `color.border.default` | YES |
+| Copy | typography | 24/32 Satoshi Medium | `typography.heading.desktop.h3-sm` | YES |
+| Button/Primary | reuse | LP-001 | `HeroPrimaryCta` | YES |
 
 ## Missing tokens
 

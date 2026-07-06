@@ -135,6 +135,28 @@ HIWHeroSection  (nodeId 5217:6699, 1440×504)  [component.howItWorks.hero]  data
 
 > Contract detail for mobile hero anatomy: see LP-001 contract §2 Hero mobile (`5164:7080`) — HIW page applies variant trimming only.
 
+### GH#18 — Motion prototype sections (extract cache only — not rendered)
+
+> Animation twin chain `5404:6760` → `5409:11417` → `5409:11462`. Implemented via `component.howItWorks.hero.motion.*` — see §5b. Static slice: `5217:6699`.
+
+```
+Property 1=1  (nodeId 5404:6760)  [component.howItWorks.hero.motion.root]
+Property 1=Variant2  (nodeId 5409:11417)  [component.howItWorks.hero.motion.root]
+Property 1=Variant3  (nodeId 5409:11462)  [component.howItWorks.hero.motion.root]
+```
+
+### GH#20 — S4-MidCTA (`5217:6701`, desktop only)
+
+```
+S4-MidCTA  (nodeId 5217:6701, 1440×96)  [component.howItWorks.midCta]  data-testid · lg+ only
+└─ Frame  (nodeId 5217:6702, 868×96)  [component.howItWorks.midCta.card]
+   ├─ Seen enough? Let's show you a live demo.  (nodeId 5217:6703)  [component.howItWorks.midCta.copy]
+   └─ Button/Primary  (nodeId 5217:6704, variants: State=Default, IconPosition=Right)  [component.howItWorks.midCta.demoCta]
+      ├─ label  (nodeId I5217:6704;2780:1424) — "Book A Demo"
+      └─ Icon/Button  (nodeId I5217:6704;2780:1425, Icon=Plane Arrow)
+         └─ graphic  (nodeId I5217:6704;2780:1425;2780:1499)
+```
+
 ## 3. Layout & spacing — Hero (GH#18)
 
 | Container | Direction | Gap | Padding | Align / justify | Notes |
@@ -251,7 +273,7 @@ HIWHeroSection  (nodeId 5217:6699, 1440×504)  [component.howItWorks.hero]  data
 
 ---
 
-> **Next contract append:** GH#20 mid CTA after `figma-extract` slice 3.
+> **Next contract append:** GH#21 six-week timeline after `figma-extract` slice 4.
 
 ### GH#19 — Three-step teaser (reuse)
 
@@ -260,5 +282,53 @@ HIWHeroSection  (nodeId 5217:6699, 1440×504)  [component.howItWorks.hero]  data
 | Component | Reuse `component.landing.howItWorksTeaser` |
 | Desktop Figma | `5164:6567` (LP-001 extract) |
 | Mobile Figma | `5164:6690` (LP-001 extract) |
-| HIW variant | `showFooterLink={false}` on `/how-it-works` |
+| HIW variant | `showFooterLink={false}` on `/how-it-works` — hides learn-more link only; onboarding note *All three steps completed within your 6-week onboarding.* remains via `textBlock21` |
 | Motion | LP-001 `HowItWorks-animation` / `component.landing.howItWorksTeaser.motion.*` unchanged |
+
+### GH#20 — Mid CTA (desktop only)
+
+| Item | Value |
+|------|-------|
+| Slice-root | `5217:6701` S4-MidCTA |
+| Reference PNG | `reference-s4-midcta.png` |
+| Registry | `component.howItWorks.midCta.*` |
+| Mobile | **omit** — not present on `5217:6715` |
+| CTA | Reuse `HeroPrimaryCta` → `/contact` · label *Book A Demo* |
+
+#### Anatomy — `component.howItWorks.midCta` [5217:6701]
+
+```
+S4-MidCTA  (nodeId 5217:6701, 1440×96)  [component.howItWorks.midCta]  desktop lg+ only
+└─ Frame  (nodeId 5217:6702, 868×96)  [component.howItWorks.midCta.card]
+   ├─ Seen enough? Let's show you a live demo.  (nodeId 5217:6703)  [component.howItWorks.midCta.copy]
+   └─ Button/Primary  (nodeId 5217:6704, variants: State=Default, IconPosition=Right)  [component.howItWorks.midCta.demoCta]
+      ├─ label  (nodeId I5217:6704;2780:1424)  "Book A Demo"
+      └─ Icon/Button  (nodeId I5217:6704;2780:1425, Icon=Plane Arrow)
+```
+
+#### Layout & tokens
+
+| Region | Property | Figma | Token |
+|--------|----------|-------|-------|
+| S4-MidCTA | width | 1440px | full width · `color.background.page` |
+| Frame | max-width | 868px | centered · `max-w-[868px]` |
+| Frame | padding | 20×24 | `spacing.20` / `spacing.24` |
+| Frame | radius | 16px | `radius.surface` (LP-001 trust-bar pattern) |
+| Frame | fill / stroke | subtle surface + border | `color.background.subtle` / `color.border.default` |
+| Copy | typography | 24/32 Satoshi Medium | `typography.heading.desktop.h3-sm` |
+| Button/Primary | reuse | LP-001 | `HeroPrimaryCta` |
+
+#### States
+
+| Path | State | Behaviour |
+|------|-------|-----------|
+| `component.howItWorks.midCta.demoCta` | hover | LP-001 `HeroPrimaryCta` primary hover tokens |
+
+#### Responsive
+
+| Viewport | Behaviour |
+|----------|-----------|
+| ≥1024px (`lg`) | Section visible — matches `5217:6701` |
+| &lt;1024px | `component.howItWorks.midCta` not rendered |
+
+> **Next contract append:** GH#21 six-week timeline after `figma-extract` slice 4.

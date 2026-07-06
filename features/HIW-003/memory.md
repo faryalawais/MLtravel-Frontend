@@ -164,6 +164,8 @@ Slices #19–#25 append in later contract passes after figma-extract per slice.
 - Human review: APPROVED on 2026-07-06 (GH#18)
 - GH#19: `HowItWorksTeaserSection` on `/how-it-works` with `showFooterLink={false}` (reuse LP-001 `5164:6567` / `5164:6690`)
 - Human review: APPROVED on 2026-07-06 (GH#19)
+- GH#19 patch: onboarding note visible on HIW route; `HiwFooterMotionSlot` reserves space during cascade (overlap fix)
+- GH#20: `HowItWorksMidCtaSection` desktop band `5217:6701` + `HeroPrimaryCta` → `/contact`; hidden below `lg`
 
 <!-- To be written by: be-implement -->
 

@@ -13,6 +13,11 @@
       "source": "explicit",
       "motionTwin": true,
       "staticTwinNodeId": "5217:6699"
+    },
+    {
+      "nodeId": "5217:6701",
+      "name": "S4-MidCTA",
+      "source": "explicit"
     }
   ]
 }

@@ -40,3 +40,14 @@ test.describe('HIW-003 visual — GH#19 teaser', () => {
     );
   });
 });
+
+test.describe('HIW-003 visual — GH#20 mid CTA', () => {
+  const midCta = ids.component.howItWorks.midCta;
+
+  test('hiw mid cta desktop 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+    await page.getByTestId(midCta.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(midCta.root)).toHaveScreenshot('hiw-mid-cta-desktop.png');
+  });
+});

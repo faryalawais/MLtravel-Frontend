@@ -24,7 +24,8 @@
       "component.contact.embedFallback": "component.contact.embedFallback.root",
       "component.contact.fallback": "component.contact.fallback.root",
       "component.contact.fallback.emailCta": "component.contact.fallback.emailCta",
-      "component.howItWorks.hero": "component.howItWorks.hero.root"
+      "component.howItWorks.hero": "component.howItWorks.hero.root",
+      "component.howItWorks.midCta": "component.howItWorks.midCta.root"
     }
   },
   "screen": {
@@ -26322,6 +26323,72 @@
             ],
             "$tokens": {}
           }
+        }
+      },
+      "midCta": {
+        "root": {
+          "$description": "HIW mid-page demo CTA band (Gherkin: component.howItWorks.midCta)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5217:6701",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "card": {
+          "$description": "Mid CTA inner card (5217:6702)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5217:6702",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "copy": {
+          "$description": "Mid CTA headline copy",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5217:6703",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "demoCta": {
+          "$description": "Button/Primary (5217:6704)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5217:6704",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "label": {
+          "$description": "Mid CTA button label",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6704;2780:1424",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaIcon": {
+          "$description": "Mid CTA button icon wrapper",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6704;2780:1425",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "graphic": {
+          "$description": "Mid CTA plane arrow graphic",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6704;2780:1425;2780:1499",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
         }
       }
     }

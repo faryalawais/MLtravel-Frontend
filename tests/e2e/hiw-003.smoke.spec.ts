@@ -54,6 +54,9 @@ test.describe('HIW-003 smoke', () => {
     await expect(page.getByTestId(teaser.hiwCard)).toBeVisible();
     await expect(page.getByTestId(teaser.footerNote)).toBeHidden();
     await expect(page.getByTestId(teaser.motion.footerNote)).toBeHidden();
+    await expect(page.getByTestId(teaser.textBlock21)).toHaveText(
+      'All three steps completed within your 6-week onboarding.',
+    );
   });
 
   test('GH#19 — mobile teaser without footer link at 393px', async ({ page }) => {
@@ -65,5 +68,32 @@ test.describe('HIW-003 smoke', () => {
     await expect(page.getByTestId(teaser.mobile.hiwStack)).toBeVisible();
     await expect(page.getByTestId(teaser.footerNote)).toBeHidden();
     await expect(page.getByTestId(teaser.motion.footerNote)).toBeHidden();
+    await expect(page.getByTestId(teaser.textBlock21)).toHaveText(
+      'All three steps completed within your 6-week onboarding.',
+    );
+  });
+
+  test('GH#20 — desktop mid CTA at 1440px', async ({ page }) => {
+    const midCta = ids.component.howItWorks.midCta;
+
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(midCta.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(midCta.root)).toBeVisible();
+    await expect(page.getByTestId(midCta.copy)).toHaveText(
+      "Seen enough? Let's show you a live demo.",
+    );
+    await page.getByTestId(midCta.demoCta).click();
+    await expect(page).toHaveURL(/\/contact/);
+  });
+
+  test('GH#20 — mid CTA hidden on mobile at 393px', async ({ page }) => {
+    const midCta = ids.component.howItWorks.midCta;
+
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+
+    await expect(page.getByTestId(midCta.root)).toBeHidden();
   });
 });

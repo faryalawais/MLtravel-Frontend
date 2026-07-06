@@ -14,6 +14,16 @@ export const HIW_HERO_PROOF_LINE =
 
 export const HIW_HERO_DEMO_CTA_LABEL = 'Book A Free Demo';
 
+export const HIW_MID_CTA_COPY = "Seen enough? Let's show you a live demo.";
+
+export const HIW_MID_CTA_DEMO_LABEL = 'Book A Demo';
+
+export const HIW_MID_CTA_CARD_CLASS =
+  'flex w-full max-w-[868px] items-center justify-between rounded-[var(--radius-surface)] border border-[var(--color-border-default)] bg-[var(--color-background-subtle)] px-[var(--spacing-20)] py-[var(--spacing-24)]';
+
+export const HIW_MID_CTA_COPY_CLASS =
+  'text-heading-desktop-h3-sm text-[var(--color-text-primary)]';
+
 /** Figma HIWHeroTextBlock height (5217-6699 cache). */
 export const HIW_HERO_TEXT_BLOCK_MIN_HEIGHT_PX = 280;
 

@@ -2905,6 +2905,13 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.howItWorks.hero.motion.root` | HIW hero motion prototype (Gherkin: HIW-hero-animation 5404:6760) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-hero-motion-root` |
 | `component.howItWorks.hero.motion.headGroup` | HIW hero motion head-group layer | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-motion-headGroup` |
 | `component.howItWorks.hero.motion.ctaGroup` | HIW hero motion cta-group layer | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-motion-ctaGroup` |
+| `component.howItWorks.midCta.root` | HIW mid-page demo CTA band (Gherkin: component.howItWorks.midCta) | `screen.howItWorks.page` | `default` | `component-howItWorks-midCta-root` |
+| `component.howItWorks.midCta.card` | Mid CTA inner card (5217:6702) | `screen.howItWorks.page` | `default` | `component-howItWorks-midCta-card` |
+| `component.howItWorks.midCta.copy` | Mid CTA headline copy | `screen.howItWorks.page` | `default` | `component-howItWorks-midCta-copy` |
+| `component.howItWorks.midCta.demoCta` | Button/Primary (5217:6704) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-midCta-demoCta` |
+| `component.howItWorks.midCta.label` | Mid CTA button label | `screen.howItWorks.page` | `default` | `component-howItWorks-midCta-label` |
+| `component.howItWorks.midCta.ctaIcon` | Mid CTA button icon wrapper | `screen.howItWorks.page` | `default` | `component-howItWorks-midCta-ctaIcon` |
+| `component.howItWorks.midCta.graphic` | Mid CTA plane arrow graphic | `screen.howItWorks.page` | `default` | `component-howItWorks-midCta-graphic` |
 
 ---
 

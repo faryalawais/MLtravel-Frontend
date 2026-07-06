@@ -4,6 +4,30 @@
   "version": "2026-07-06",
   "figmaLastModified": "2026-07-02T12:52:45Z",
   "root": {
-    "slug": "component.howItWorks.hero.root"
+    "type": "stack",
+    "direction": "vertical",
+    "children": [
+      {
+        "slug": "component.howItWorks.hero.root"
+      },
+      {
+        "slug": "component.howItWorks.hero.motion.root"
+      },
+      {
+        "type": "stack",
+        "direction": "vertical",
+        "align": "center",
+        "children": [
+          {
+            "type": "stack",
+            "children": [
+              {
+                "slug": "component.howItWorks.hero.motion.ctaGroup"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

@@ -2896,7 +2896,14 @@ export const testIds = {
   "component.howItWorks.hero.globalInventory": "component-howItWorks-hero-globalInventory",
   "component.howItWorks.hero.motion.root": "component-howItWorks-hero-motion-root",
   "component.howItWorks.hero.motion.headGroup": "component-howItWorks-hero-motion-headGroup",
-  "component.howItWorks.hero.motion.ctaGroup": "component-howItWorks-hero-motion-ctaGroup"
+  "component.howItWorks.hero.motion.ctaGroup": "component-howItWorks-hero-motion-ctaGroup",
+  "component.howItWorks.midCta.root": "component-howItWorks-midCta-root",
+  "component.howItWorks.midCta.card": "component-howItWorks-midCta-card",
+  "component.howItWorks.midCta.copy": "component-howItWorks-midCta-copy",
+  "component.howItWorks.midCta.demoCta": "component-howItWorks-midCta-demoCta",
+  "component.howItWorks.midCta.label": "component-howItWorks-midCta-label",
+  "component.howItWorks.midCta.ctaIcon": "component-howItWorks-midCta-ctaIcon",
+  "component.howItWorks.midCta.graphic": "component-howItWorks-midCta-graphic"
 } as const;
 
 export type RegistryPath = keyof typeof testIds;
@@ -5874,6 +5881,15 @@ export const ids = {
           "headGroup": "component-howItWorks-hero-motion-headGroup",
           "ctaGroup": "component-howItWorks-hero-motion-ctaGroup"
         }
+      },
+      "midCta": {
+        "root": "component-howItWorks-midCta-root",
+        "card": "component-howItWorks-midCta-card",
+        "copy": "component-howItWorks-midCta-copy",
+        "demoCta": "component-howItWorks-midCta-demoCta",
+        "label": "component-howItWorks-midCta-label",
+        "ctaIcon": "component-howItWorks-midCta-ctaIcon",
+        "graphic": "component-howItWorks-midCta-graphic"
       }
     }
   }

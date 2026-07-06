@@ -1,4 +1,5 @@
 import { HowItWorksHeroSection } from '@/components/how-it-works/HowItWorksHeroSection';
+import { HowItWorksMidCtaSection } from '@/components/how-it-works/HowItWorksMidCtaSection';
 import { HeroSection } from '@/components/landing/HeroSection';
 import { HowItWorksTeaserSection } from '@/components/landing/HowItWorksTeaserSection';
 import { ids } from '@/tokens/build/test-ids';
@@ -9,6 +10,7 @@ export default function HowItWorksPage() {
       <HowItWorksHeroSection />
       <HeroSection layout="hiw-page" />
       <HowItWorksTeaserSection showFooterLink={false} />
+      <HowItWorksMidCtaSection />
     </div>
   );
 }
