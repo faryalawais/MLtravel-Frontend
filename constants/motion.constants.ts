@@ -293,6 +293,61 @@ export const HERO_MOTION_COPY_CLUSTER_MIN_HEIGHT_PX = 366;
 
 export type HeroMotionStep = 0 | 1 | 2;
 
+/** HIW hero motion — motion-state-poses / motion-diffs (head-group + cta-group translateY). */
+export const HIW_HERO_MOTION_HEAD_ENTRY_PX = 384;
+export const HIW_HERO_MOTION_HEAD_TERMINAL_PX = 52;
+export const HIW_HERO_MOTION_CTA_ENTRY_PX = 584;
+export const HIW_HERO_MOTION_CTA_TERMINAL_PX = 252;
+export const HIW_HERO_MOTION_LAYER_OFFSET_PX =
+  HIW_HERO_MOTION_HEAD_ENTRY_PX - HIW_HERO_MOTION_HEAD_TERMINAL_PX;
+
+export type HiwHeroMotionStep = 0 | 1 | 2;
+
+export function getHiwHeroHeadGroupTransform(
+  motionEngaged: boolean,
+  step: HiwHeroMotionStep,
+): string {
+  if (!motionEngaged || step >= 1) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  return `translateY(${HIW_HERO_MOTION_LAYER_OFFSET_PX}px)`;
+}
+
+export function getHiwHeroCtaGroupTransform(
+  motionEngaged: boolean,
+  step: HiwHeroMotionStep,
+): string {
+  if (!motionEngaged || step >= 2) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  return `translateY(${HIW_HERO_MOTION_LAYER_OFFSET_PX}px)`;
+}
+
+/** Layer wrapper style for HIW hero staged-sequence (motion-chains HIW-hero-animation). */
+export function getHiwHeroLayerMotionStyle(
+  motionEngaged: boolean,
+  step: HiwHeroMotionStep,
+  layer: 'head' | 'cta',
+  baseStyle: CSSProperties = HERO_MOTION_STYLE,
+): CSSProperties {
+  const snapEntry = motionEngaged && step === 0;
+  const transform =
+    layer === 'head'
+      ? getHiwHeroHeadGroupTransform(motionEngaged, step)
+      : getHiwHeroCtaGroupTransform(motionEngaged, step);
+
+  return {
+    ...baseStyle,
+    transitionProperty: 'transform',
+    transitionDuration: snapEntry
+      ? '0ms'
+      : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    transform,
+  };
+}
+
 /** Terminal CTA translateY from shared origin — text column height + gap (matches static flex). */
 export function getHeroCtaTerminalOffsetPx(textColumnHeightPx: number): number {
   return textColumnHeightPx + HERO_MOTION_TEXT_CTA_GAP_PX;

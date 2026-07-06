@@ -1,0 +1,74 @@
+{
+  "$meta": {
+    "feature": "HIW-003",
+    "generatedAt": "2026-07-06T12:13:14.684Z",
+    "source": "build-motion-from-cache"
+  },
+  "chains": [
+    {
+      "name": "HIW-hero-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "HIWHeroSection",
+        "nodeId": "5217:6699"
+      },
+      "initialRender": "staticTwin",
+      "terminalStateIndex": 3,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5404:6760",
+          "label": "idle",
+          "layers": {
+            "head-group": {
+              "nodeId": "5409:11322",
+              "translateYpx": 384,
+              "opacity": 1,
+              "testId": "component.howItWorks.hero.motion.headGroup"
+            },
+            "cta-group": {
+              "nodeId": "5409:11325",
+              "translateYpx": 584,
+              "opacity": 1
+            }
+          }
+        },
+        {
+          "index": 2,
+          "nodeId": "5409:11417",
+          "label": "state-2",
+          "layers": {
+            "head-group": {
+              "nodeId": "5409:11419",
+              "translateYpx": 52,
+              "opacity": 1
+            },
+            "cta-group": {
+              "nodeId": "5409:11422",
+              "translateYpx": 584,
+              "opacity": 1,
+              "testId": "component.howItWorks.hero.motion.ctaGroup"
+            }
+          }
+        },
+        {
+          "index": 3,
+          "nodeId": "5409:11462",
+          "label": "state-3",
+          "layers": {
+            "head-group": {
+              "nodeId": "5409:11464",
+              "translateYpx": 52,
+              "opacity": 1
+            },
+            "cta-group": {
+              "nodeId": "5409:11467",
+              "translateYpx": 252,
+              "opacity": 1
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -2857,6 +2857,54 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.landing.pricing.motion.textBlock9` | 📞 (I5164:11487;5164:11257;5022:29;5021:23) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock9` |
 | `component.landing.pricing.motion.n247SupportAvailable` | 24/7 support available (I5164:11487;5164:11257;5022:29;5021:24) | `screen.landing.home` | `default` | `component-landing-pricing-motion-n247SupportAvailable` |
 | `component.landing.pricing.motion.textBlock10` | No per-transaction fees. No revenue sharing. Complete ownership. (I5164:11487;5164:11257;5022:32) | `screen.landing.home` | `default` | `component-landing-pricing-motion-textBlock10` |
+| `component.howItWorks.hero.root` | HIW desktop hero (Gherkin: component.howItWorks.hero) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-hero-root` |
+| `component.howItWorks.hero.s1Hero` | S1-Hero (I5217:6699;5218:6543) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-s1Hero` |
+| `component.howItWorks.hero.textBlock` | HIWHeroTextBlock (I5217:6699;5218:6544) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-textBlock` |
+| `component.howItWorks.hero.headGroup` | head-group (I5217:6699;5218:6544;5218:10) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-headGroup` |
+| `component.howItWorks.hero.textBlock2` | See exactly how your agency goes live in 6 weeks. (I5217:6699;5218:6544;5218:11) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-textBlock2` |
+| `component.howItWorks.hero.textBlock3` | From your first call to agents searching every GDS from one screen. Here is every step, every week. (I5217:6699;5218:6544;5218:12) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-textBlock3` |
+| `component.howItWorks.hero.ctaGroup` | cta-group (I5217:6699;5218:6544;5218:13) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-hero-ctaGroup` |
+| `component.howItWorks.hero.demoCta` | Button/Primary (I5217:6699;5218:6544;5218:14) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-hero-demoCta` |
+| `component.howItWorks.hero.label` | label (I5217:6699;5218:6544;5218:14;2780:1424) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-label` |
+| `component.howItWorks.hero.ctaIcon` | Icon/Button (I5217:6699;5218:6544;5218:14;2780:1425) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-hero-ctaIcon` |
+| `component.howItWorks.hero.graphic` | graphic (I5217:6699;5218:6544;5218:14;2780:1425;2780:1499) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-graphic` |
+| `component.howItWorks.hero.group` | Group (I5217:6699;5218:6544;5218:14;2780:1425;2780:1591) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-group` |
+| `component.howItWorks.hero.textBlock4` | No per-transaction fees. No revenue sharing. Complete ownership. (I5217:6699;5218:6544;5218:23) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-textBlock4` |
+| `component.howItWorks.hero.statsStrip` | HeroStatsStrip (I5217:6699;5218:6556) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-statsStrip` |
+| `component.howItWorks.hero.statItem` | HeroStatItem (I5217:6699;5218:6556;5160:5221) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-hero-statItem` |
+| `component.howItWorks.hero.valBlock` | val-block (I5217:6699;5218:6556;5160:5221;5160:14) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-valBlock` |
+| `component.howItWorks.hero.textBlock5` | $1,200/mo (I5217:6699;5218:6556;5160:5221;5160:15) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-textBlock5` |
+| `component.howItWorks.hero.bar` | bar (I5217:6699;5218:6556;5160:5221;5160:16) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-bar` |
+| `component.howItWorks.hero.labelBlock` | label-block (I5217:6699;5218:6556;5160:5221;5160:17) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-labelBlock` |
+| `component.howItWorks.hero.savedInFees` | SAVED IN FEES (I5217:6699;5218:6556;5160:5221;5160:18) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-savedInFees` |
+| `component.howItWorks.hero.multipleClients` | Multiple Clients (I5217:6699;5218:6556;5160:5221;5160:19) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-multipleClients` |
+| `component.howItWorks.hero.divider` | divider (I5217:6699;5218:6556;5160:5228) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-divider` |
+| `component.howItWorks.hero.statItem2` | HeroStatItem (I5217:6699;5218:6556;5160:5229) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-hero-statItem2` |
+| `component.howItWorks.hero.valBlock2` | val-block (I5217:6699;5218:6556;5160:5229;5160:21) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-valBlock2` |
+| `component.howItWorks.hero.textBlock6` | 40% (I5217:6699;5218:6556;5160:5229;5160:22) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-textBlock6` |
+| `component.howItWorks.hero.bar2` | bar (I5217:6699;5218:6556;5160:5229;5160:23) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-bar2` |
+| `component.howItWorks.hero.labelBlock2` | label-block (I5217:6699;5218:6556;5160:5229;5160:24) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-labelBlock2` |
+| `component.howItWorks.hero.fasterPerBooking` | FASTER PER BOOKING (I5217:6699;5218:6556;5160:5229;5160:25) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-fasterPerBooking` |
+| `component.howItWorks.hero.postmigrationMeasure` | Post-migration measure (I5217:6699;5218:6556;5160:5229;5160:26) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-postmigrationMeasure` |
+| `component.howItWorks.hero.divider2` | divider (I5217:6699;5218:6556;5160:5236) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-divider2` |
+| `component.howItWorks.hero.statItem3` | HeroStatItem (I5217:6699;5218:6556;5160:5237) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-hero-statItem3` |
+| `component.howItWorks.hero.valBlock3` | val-block (I5217:6699;5218:6556;5160:5237;5160:28) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-valBlock3` |
+| `component.howItWorks.hero.n6Weeks` | 6 Weeks (I5217:6699;5218:6556;5160:5237;5160:29) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-n6Weeks` |
+| `component.howItWorks.hero.bar3` | bar (I5217:6699;5218:6556;5160:5237;5160:30) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-bar3` |
+| `component.howItWorks.hero.labelBlock3` | label-block (I5217:6699;5218:6556;5160:5237;5160:31) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-labelBlock3` |
+| `component.howItWorks.hero.toGoLive` | TO GO LIVE (I5217:6699;5218:6556;5160:5237;5160:32) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-toGoLive` |
+| `component.howItWorks.hero.dedicatedOnboarding` | Dedicated Onboarding (I5217:6699;5218:6556;5160:5237;5160:33) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-dedicatedOnboarding` |
+| `component.howItWorks.hero.divider3` | divider (I5217:6699;5218:6556;5160:5244) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-divider3` |
+| `component.howItWorks.hero.statItem4` | HeroStatItem (I5217:6699;5218:6556;5160:5245) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-hero-statItem4` |
+| `component.howItWorks.hero.valBlock4` | val-block (I5217:6699;5218:6556;5160:5245;5160:35) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-valBlock4` |
+| `component.howItWorks.hero.n500` | 500+ (I5217:6699;5218:6556;5160:5245;5160:36) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-n500` |
+| `component.howItWorks.hero.bar4` | bar (I5217:6699;5218:6556;5160:5245;5160:37) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-bar4` |
+| `component.howItWorks.hero.labelBlock4` | label-block (I5217:6699;5218:6556;5160:5245;5160:38) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-labelBlock4` |
+| `component.howItWorks.hero.airlinesConnected` | AIRLINES CONNECTED (I5217:6699;5218:6556;5160:5245;5160:39) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-airlinesConnected` |
+| `component.howItWorks.hero.globalInventory` | Global inventory (I5217:6699;5218:6556;5160:5245;5160:40) | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-globalInventory` |
+| `component.howItWorks.hero.motion.root` | HIW hero motion prototype (Gherkin: HIW-hero-animation 5404:6760) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-hero-motion-root` |
+| `component.howItWorks.hero.motion.headGroup` | HIW hero motion head-group layer | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-motion-headGroup` |
+| `component.howItWorks.hero.motion.ctaGroup` | HIW hero motion cta-group layer | `screen.howItWorks.page` | `default` | `component-howItWorks-hero-motion-ctaGroup` |
 
 ---
 

@@ -1,0 +1,18 @@
+{
+  "frame": "5217:6697",
+  "frameName": "HIW-Desktop",
+  "sliceRoots": [
+    {
+      "nodeId": "5217:6699",
+      "name": "HIWHeroSection",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5404:6760",
+      "name": "HIW-hero-animation",
+      "source": "explicit",
+      "motionTwin": true,
+      "staticTwinNodeId": "5217:6699"
+    }
+  ]
+}

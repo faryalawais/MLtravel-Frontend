@@ -9,6 +9,12 @@ import {
   MOBILE_STATS,
 } from '@/constants/landing.constants';
 import {
+  HIW_HERO_DEMO_CTA_LABEL,
+  HIW_HERO_HEADLINE,
+  HIW_HERO_PROOF_LINE,
+  HIW_HERO_SUBCOPY,
+} from '@/constants/how-it-works.constants';
+import {
   getHeroColumnMotionStyle,
   getHeroCtaTerminalOffsetPx,
   HERO_MOTION_COPY_CLUSTER_MIN_HEIGHT_PX,
@@ -20,10 +26,21 @@ import {
 import { runHeroMotion } from '@/lib/motion-sequence';
 import { useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
-import type { HeroOptionalClassNameProps } from '@/types/landing.types';
+import type { HeroOptionalClassNameProps, HeroSectionProps } from '@/types/landing.types';
 import { HeroPrimaryCta } from './HeroPrimaryCta';
 
-function HeroHeadingDesktop() {
+function HeroHeadingDesktop({ layout = 'default' }: { layout?: 'default' | 'hiw-page' }) {
+  if (layout === 'hiw-page') {
+    return (
+      <h1
+        data-testid={ids.component.landing.hero.heading}
+        className="text-display-desktop-lg text-[var(--color-text-primary)]"
+      >
+        {HIW_HERO_HEADLINE}
+      </h1>
+    );
+  }
+
   return (
     <h1
       data-testid={ids.component.landing.hero.heading}
@@ -35,7 +52,18 @@ function HeroHeadingDesktop() {
   );
 }
 
-function HeroHeadingMobile() {
+function HeroHeadingMobile({ layout = 'default' }: { layout?: 'default' | 'hiw-page' }) {
+  if (layout === 'hiw-page') {
+    return (
+      <h1
+        data-testid={ids.component.landing.hero.heading}
+        className="text-display-mobile-lg text-[var(--color-text-primary)]"
+      >
+        {HIW_HERO_HEADLINE}
+      </h1>
+    );
+  }
+
   return (
     <h1
       data-testid={ids.component.landing.hero.heading}
@@ -47,7 +75,18 @@ function HeroHeadingMobile() {
   );
 }
 
-function HeroSubheading() {
+function HeroSubheading({ layout = 'default' }: { layout?: 'default' | 'hiw-page' }) {
+  if (layout === 'hiw-page') {
+    return (
+      <p
+        data-testid={ids.component.landing.hero.subheading}
+        className="text-body-desktop-md text-[var(--color-text-secondary)]"
+      >
+        {HIW_HERO_SUBCOPY}
+      </p>
+    );
+  }
+
   return (
     <p
       data-testid={ids.component.landing.hero.subheading}
@@ -80,14 +119,21 @@ function HeroSecondaryCta() {
   );
 }
 
-function HeroProofLine({ className = '' }: HeroOptionalClassNameProps) {
+function HeroProofLine({
+  className = '',
+  layout = 'default',
+}: HeroOptionalClassNameProps & { layout?: 'default' | 'hiw-page' }) {
+  const copy =
+    layout === 'hiw-page'
+      ? HIW_HERO_PROOF_LINE
+      : 'Agencies save an average of $1,200/month in platform fee within their first month of going live.';
+
   return (
     <p
       data-testid={ids.component.landing.hero.proofLine}
       className={`text-body-desktop-xs text-[var(--color-text-secondary)] ${className}`}
     >
-      Agencies save an average of $1,200/month in platform fee within their first month of going
-      live.
+      {copy}
     </p>
   );
 }
@@ -343,21 +389,24 @@ function HeroDesktopMotion() {
   );
 }
 
-export function HeroSection() {
+export function HeroSection({ layout = 'default' }: HeroSectionProps) {
   const hero = ids.component.landing.hero;
+  const isHiwPage = layout === 'hiw-page';
+  const primaryCtaLabel = isHiwPage ? HIW_HERO_DEMO_CTA_LABEL : undefined;
 
   return (
     <section
       data-testid={hero.root}
+      data-layout={layout}
       aria-label="Hero"
-      className="bg-[var(--color-background-page)]"
+      className={`bg-[var(--color-background-page)] ${isHiwPage ? 'lg:hidden' : ''}`}
     >
-      <HeroDesktopMotion />
+      {!isHiwPage ? <HeroDesktopMotion /> : null}
 
-      {/* Mobile — Figma 5164:7080 */}
+      {/* Mobile — Figma 5164:7080 or HIW 5217:7073 */}
       <div
         data-testid={hero.mobile.root}
-        className="flex flex-col min-[1440px]:hidden"
+        className={`flex flex-col ${isHiwPage ? 'lg:hidden' : 'min-[1440px]:hidden'}`}
       >
         <div
           data-testid={hero.mobile.banner}
@@ -368,13 +417,13 @@ export function HeroSection() {
               data-testid={hero.headingGroup}
               className="flex flex-col gap-[var(--spacing-8)]"
             >
-              <HeroHeadingMobile />
-              <HeroSubheading />
+              <HeroHeadingMobile layout={layout} />
+              <HeroSubheading layout={layout} />
             </div>
             <div data-testid={hero.ctaGroup} className="flex flex-col gap-[var(--spacing-12)]">
               <div
                 data-testid={hero.ctaRow}
-                className="flex flex-col gap-[var(--spacing-12)] sm:flex-row sm:flex-wrap"
+                className={`flex flex-col gap-[var(--spacing-12)] ${isHiwPage ? '' : 'sm:flex-row sm:flex-wrap'}`}
               >
                 <HeroPrimaryCta
                   testId={hero.mobile.cta}
@@ -382,18 +431,21 @@ export function HeroSection() {
                   iconTestId={hero.ctaIcon}
                   graphicTestId={hero.ctaGraphic}
                   href="/contact"
+                  label={primaryCtaLabel}
                   className="w-full justify-center sm:w-auto"
                 />
-                <HeroSecondaryCta />
+                {isHiwPage ? null : <HeroSecondaryCta />}
               </div>
-              <HeroProofLine />
+              <HeroProofLine layout={layout} />
             </div>
           </div>
-          <HeroProductImage className="aspect-[536/400] w-full max-w-[361px]" />
+          {isHiwPage ? null : (
+            <HeroProductImage className="aspect-[536/400] w-full max-w-[361px]" />
+          )}
         </div>
         <div data-testid={hero.bottomFrame}>
           <HeroStatsMobile />
-          <HeroLogosStrip />
+          {isHiwPage ? null : <HeroLogosStrip />}
         </div>
       </div>
     </section>

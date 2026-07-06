@@ -1,0 +1,63 @@
+{
+  "$meta": {
+    "feature": "HIW-003",
+    "generatedAt": "2026-07-06T12:13:14.684Z",
+    "source": "build-motion-from-cache"
+  },
+  "diffs": [
+    {
+      "chain": "HIW-hero-animation",
+      "subgraphId": "primary",
+      "from": "5404:6760",
+      "to": "5409:11417",
+      "trigger": "MOUSE_ENTER",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.default",
+      "layers": [
+        {
+          "name": "head-group",
+          "nodeIdA": "5409:11322",
+          "nodeIdB": "5409:11419",
+          "testId": "component.howItWorks.hero.motion.headGroup",
+          "stepIndex": 0,
+          "changes": {
+            "translateY": {
+              "fromPx": 384,
+              "toPx": 52,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getMotionSlideRevealStyle"
+        }
+      ]
+    },
+    {
+      "chain": "HIW-hero-animation",
+      "subgraphId": "primary",
+      "from": "5409:11417",
+      "to": "5409:11462",
+      "trigger": "AFTER_TIMEOUT",
+      "durationToken": "motion.duration.default",
+      "easingToken": "motion.easing.default",
+      "layers": [
+        {
+          "name": "cta-group",
+          "nodeIdA": "5409:11422",
+          "nodeIdB": "5409:11467",
+          "testId": "component.howItWorks.hero.motion.ctaGroup",
+          "stepIndex": 1,
+          "changes": {
+            "translateY": {
+              "fromPx": 584,
+              "toPx": 252,
+              "token": null,
+              "custom": true
+            }
+          },
+          "helper": "getMotionSlideRevealStyle"
+        }
+      ]
+    }
+  ]
+}

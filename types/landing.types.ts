@@ -16,6 +16,12 @@ export interface HeroOptionalClassNameProps {
   className?: string;
 }
 
+export type HeroSectionLayout = 'default' | 'hiw-page';
+
+export interface HeroSectionProps {
+  layout?: HeroSectionLayout;
+}
+
 /** Landing page — problem section */
 export interface DesktopCardConfig {
   cardTestId: string;

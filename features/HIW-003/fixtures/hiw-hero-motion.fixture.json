@@ -1,0 +1,40 @@
+{
+  "chain": "HIW-hero-animation",
+  "pattern": "staged-sequence",
+  "runner": "runHeroMotion",
+  "figmaStates": [
+    { "index": 1, "nodeId": "5404:6760", "label": "idle" },
+    { "index": 2, "nodeId": "5409:11417", "label": "state-2" },
+    { "index": 3, "nodeId": "5409:11462", "label": "state-3" }
+  ],
+  "transitions": [
+    {
+      "from": "5404:6760",
+      "to": "5409:11417",
+      "trigger": "MOUSE_ENTER",
+      "durationMs": 700,
+      "delayMs": 0
+    },
+    {
+      "from": "5409:11417",
+      "to": "5409:11462",
+      "trigger": "AFTER_TIMEOUT",
+      "durationMs": 700,
+      "delayMs": 300
+    }
+  ],
+  "motionDiffsExpected": [
+    {
+      "layer": "head-group",
+      "testId": "component.howItWorks.hero.motion.headGroup",
+      "helper": "getHiwHeroLayerMotionStyle",
+      "translateY": { "fromPx": 384, "toPx": 52 }
+    },
+    {
+      "layer": "cta-group",
+      "testId": "component.howItWorks.hero.motion.ctaGroup",
+      "helper": "getHiwHeroLayerMotionStyle",
+      "translateY": { "fromPx": 584, "toPx": 252 }
+    }
+  ]
+}

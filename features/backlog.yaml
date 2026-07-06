@@ -1,7 +1,7 @@
 # features/backlog.yaml
 # One parent feature per page → feature-split → .1 API / .2 UI
 #
-# LP-001 Landing · CP-002 Contact Us · F-003 How It Works
+# LP-001 Landing · CP-002 Contact Us · HIW-003 How It Works
 # Shared: design tokens (tokens/), Navbar/Footer from LP-001
 #
 # START: /grill-me per feature, then prd-author per feature
@@ -18,12 +18,12 @@ features:
       value proposition so I can decide whether to book a demo.
     acceptance_criteria:
       - "Guest can view the full landing page matching Figma at desktop and mobile breakpoints"
-      - "Navbar links to /contact (CP-002) and /how-it-works (F-003) routes"
+      - "Navbar links to /contact (CP-002) and /how-it-works (HIW-003) routes"
       - "Hero CTA navigates to /contact"
       - "All sections render: hero, problem, comparison, how-it-works, features, social proof, pricing, footer"
       - "Each slice ships desktop + mobile together; motion per MOTION-SPEC where Figma shows it"
       - "Layout uses design tokens only — no raw hex or px"
-      - "Shared Navbar and Footer reused on CP-002 and F-003 — no duplicate components"
+      - "Shared Navbar and Footer reused on CP-002 and HIW-003 — no duplicate components"
       - "Strict pixel match to Figma; spacing targets post-design Figma updates"
       - "MUST feature-split → LP-001.1 API (health stub), LP-001.2 UI"
     priority: 1
@@ -74,23 +74,27 @@ features:
       - "screen.contact.*"
       - "component.contact.*"
 
-  - id: F-003
+  - id: HIW-003
     title: "How It Works"
-    persona: Travel agency decision-maker
+    persona: All users — visitors, prospects, agency owners, operations leads
     slice: parent
     story: >-
-      As a prospect I want to understand the onboarding process so I know
-      what switching to ML Travel involves.
+      As a visitor I want to understand how ML Travel works so I know the
+      product value and onboarding flow before booking a demo.
     acceptance_criteria:
-      - "Guest can view the how-it-works page matching HIW-Desktop"
+      - "Guest can view the how-it-works page matching Figma desktop and mobile frames"
+      - "Section animations match Figma dev-mode motion spec"
       - "FAQ section expands and collapses"
       - "Mid-page and final CTAs link to contact / demo booking (CP-002)"
-      - "MUST feature-split → F-003.1 API (if any), F-003.2 UI"
+      - "MUST feature-split → HIW-003.1 API (if any), HIW-003.2 UI"
     priority: 3
-    status: pending
+    status: contracted
+    design_contract: features/HIW-003/contract.md
     depends_on: [LP-001]
     figma_frames:
+      - { name: "HIW (anchor)", node_id: "5217:6696" }
       - { name: "HIW-Desktop", node_id: "5217:6697" }
+      - { name: "HIW-Mobile", node_id: "5217:6715" }
       - { name: "HIWHeroSection", node_id: "5217:6699" }
       - { name: "HowItWorksSection", node_id: "5217:6700" }
       - { name: "SixWeekSection", node_id: "5217:6705" }

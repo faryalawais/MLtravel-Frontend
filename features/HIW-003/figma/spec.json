@@ -1,0 +1,1662 @@
+{
+  "$meta": {
+    "feature": "HIW-003",
+    "frame": "5217:6697",
+    "frameName": "HIWHeroSection",
+    "figmaFile": "h6BqI1ZRMSJxR7jESNF0Ep",
+    "generatedAt": "2026-07-06",
+    "extractionMethod": "build-spec-from-cache (REST nodes/*.json only)",
+    "source": "figma-rest-files-nodes",
+    "figmaLastModified": "2026-07-02T12:52:45Z",
+    "cacheFiles": 1,
+    "note": "No legacy MCP spec.json content — derived solely from nodes/ cache."
+  },
+  "sections": [
+    {
+      "name": "HIWHeroSection",
+      "nodeId": "5217:6699",
+      "dimensions": {
+        "width": 1440,
+        "height": 504
+      },
+      "layout": {
+        "direction": "column",
+        "align": "center"
+      },
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5425:8541"
+        },
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5425:8541"
+        },
+        "paddingTop": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5425:8541"
+        },
+        "paddingRight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5425:8541"
+        },
+        "paddingBottom": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5425:8541"
+        },
+        "rectangleCornerRadii": {
+          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5425:8556"
+          },
+          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5425:8556"
+          },
+          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5425:8556"
+          },
+          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5425:8556"
+          }
+        },
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3003:14"
+          }
+        ]
+      },
+      "layers": [
+        {
+          "name": "S1-Hero",
+          "nodeId": "I5217:6699;5218:6543",
+          "dimensions": {
+            "width": 1440,
+            "height": 384
+          },
+          "layout": {
+            "direction": "column",
+            "padding": {
+              "y": "52px"
+            },
+            "align": "center"
+          },
+          "boundVariables": {
+            "itemSpacing": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "paddingLeft": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "paddingRight": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "rectangleCornerRadii": {
+              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              }
+            }
+          },
+          "layers": [
+            {
+              "name": "HIWHeroTextBlock",
+              "nodeId": "I5217:6699;5218:6544",
+              "dimensions": {
+                "width": 642,
+                "height": 280
+              },
+              "layout": {
+                "direction": "column",
+                "gap": "24px",
+                "align": "center"
+              },
+              "boundVariables": {
+                "itemSpacing": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8551"
+                },
+                "paddingLeft": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingTop": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingRight": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingBottom": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                }
+              },
+              "layers": [
+                {
+                  "name": "head-group",
+                  "nodeId": "I5217:6699;5218:6544;5218:10",
+                  "dimensions": {
+                    "width": 642,
+                    "height": 176
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": "8px",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8546"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "See exactly how your agency goes live in 6 weeks.",
+                      "nodeId": "I5217:6699;5218:6544;5218:11",
+                      "dimensions": {
+                        "width": 642,
+                        "height": 120
+                      },
+                      "type": "text",
+                      "content": "See exactly how your agency goes live in 6 weeks.",
+                      "typography": {
+                        "fontSize": 48,
+                        "fontWeight": 700,
+                        "lineHeightPx": 60
+                      }
+                    },
+                    {
+                      "name": "From your first call to agents searching every GDS from one screen. Here is every step, every week.",
+                      "nodeId": "I5217:6699;5218:6544;5218:12",
+                      "dimensions": {
+                        "width": 642,
+                        "height": 48
+                      },
+                      "type": "text",
+                      "content": "From your first call to agents searching every GDS from one screen.\nHere is every step, every week.",
+                      "typography": {
+                        "fontSize": 16,
+                        "fontWeight": 400,
+                        "lineHeightPx": 24
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "cta-group",
+                  "nodeId": "I5217:6699;5218:6544;5218:13",
+                  "dimensions": {
+                    "width": 410,
+                    "height": 80
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": "12px",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8548"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "Button/Primary",
+                      "nodeId": "I5217:6699;5218:6544;5218:14",
+                      "dimensions": {
+                        "width": 229,
+                        "height": 48
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": "6px",
+                        "padding": {
+                          "x": "32px",
+                          "y": "12px"
+                        },
+                        "align": "center"
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8545"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8553"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8548"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8553"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8548"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8560"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8560"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8560"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8560"
+                          }
+                        },
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:35"
+                          }
+                        ]
+                      },
+                      "instanceVariants": {
+                        "State": "Default",
+                        "IconPosition": "Right"
+                      },
+                      "layers": [
+                        {
+                          "name": "label",
+                          "nodeId": "I5217:6699;5218:6544;5218:14;2780:1424",
+                          "dimensions": {
+                            "width": 139,
+                            "height": 24
+                          },
+                          "type": "text",
+                          "content": "Book A Free Demo",
+                          "typography": {
+                            "fontSize": 16,
+                            "fontWeight": 600,
+                            "lineHeightPx": 24
+                          }
+                        },
+                        {
+                          "name": "Icon/Button",
+                          "nodeId": "I5217:6699;5218:6544;5218:14;2780:1425",
+                          "dimensions": {
+                            "width": 20,
+                            "height": 20
+                          },
+                          "boundVariables": {
+                            "itemSpacing": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingLeft": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingTop": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingRight": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingBottom": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "rectangleCornerRadii": {
+                              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              }
+                            }
+                          },
+                          "instanceVariants": {
+                            "Icon": "Plane Arrow"
+                          },
+                          "layers": [
+                            {
+                              "name": "graphic",
+                              "nodeId": "I5217:6699;5218:6544;5218:14;2780:1425;2780:1499",
+                              "dimensions": {
+                                "width": 20,
+                                "height": 20
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  }
+                                }
+                              },
+                              "layers": [
+                                {
+                                  "name": "Group",
+                                  "nodeId": "I5217:6699;5218:6544;5218:14;2780:1425;2780:1591",
+                                  "dimensions": {
+                                    "width": 19,
+                                    "height": 18
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "No per-transaction fees. No revenue sharing. Complete ownership.",
+                      "nodeId": "I5217:6699;5218:6544;5218:23",
+                      "dimensions": {
+                        "width": 410,
+                        "height": 20
+                      },
+                      "type": "text",
+                      "content": "No per-transaction fees. No revenue sharing. Complete ownership.",
+                      "typography": {
+                        "fontSize": 13,
+                        "fontWeight": 400,
+                        "lineHeightPx": 20
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HeroStatsStrip",
+          "nodeId": "I5217:6699;5218:6556",
+          "dimensions": {
+            "width": 1441,
+            "height": 120
+          },
+          "layout": {
+            "direction": "row",
+            "padding": {
+              "x": "180px"
+            },
+            "align": "center",
+            "justify": "space-between"
+          },
+          "boundVariables": {
+            "itemSpacing": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "paddingTop": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "paddingBottom": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "rectangleCornerRadii": {
+              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              }
+            },
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:3003:15"
+              }
+            ],
+            "strokes": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:3003:29"
+              }
+            ]
+          },
+          "layers": [
+            {
+              "name": "HeroStatItem",
+              "nodeId": "I5217:6699;5218:6556;5160:5221",
+              "dimensions": {
+                "width": 139,
+                "height": 68
+              },
+              "layout": {
+                "direction": "column",
+                "gap": "8px",
+                "align": "center"
+              },
+              "boundVariables": {
+                "itemSpacing": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8546"
+                },
+                "paddingLeft": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingTop": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingRight": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingBottom": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                }
+              },
+              "instanceVariants": {
+                "Stat": "Fees"
+              },
+              "layers": [
+                {
+                  "name": "val-block",
+                  "nodeId": "I5217:6699;5218:6556;5160:5221;5160:14",
+                  "dimensions": {
+                    "width": 139,
+                    "height": 38
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": "2px",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "$1,200/mo",
+                      "nodeId": "I5217:6699;5218:6556;5160:5221;5160:15",
+                      "dimensions": {
+                        "width": 139,
+                        "height": 32
+                      },
+                      "type": "text",
+                      "content": "$1,200/mo",
+                      "typography": {
+                        "fontSize": 28,
+                        "fontWeight": 700,
+                        "lineHeightPx": 32
+                      }
+                    },
+                    {
+                      "name": "bar",
+                      "nodeId": "I5217:6699;5218:6556;5160:5221;5160:16",
+                      "dimensions": {
+                        "width": 32,
+                        "height": 4
+                      },
+                      "boundVariables": {
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          }
+                        },
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:35"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "label-block",
+                  "nodeId": "I5217:6699;5218:6556;5160:5221;5160:17",
+                  "dimensions": {
+                    "width": 107,
+                    "height": 22
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "SAVED IN FEES",
+                      "nodeId": "I5217:6699;5218:6556;5160:5221;5160:18",
+                      "dimensions": {
+                        "width": 107,
+                        "height": 22
+                      },
+                      "type": "text",
+                      "content": "SAVED IN FEES",
+                      "typography": {
+                        "fontSize": 16,
+                        "fontWeight": 500,
+                        "lineHeightPx": 22
+                      }
+                    },
+                    {
+                      "name": "Multiple Clients",
+                      "nodeId": "I5217:6699;5218:6556;5160:5221;5160:19",
+                      "dimensions": {
+                        "width": 95,
+                        "height": 20
+                      },
+                      "type": "text",
+                      "content": "Multiple Clients",
+                      "typography": {
+                        "fontSize": 13,
+                        "fontWeight": 400,
+                        "lineHeightPx": 20
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "divider",
+              "nodeId": "I5217:6699;5218:6556;5160:5228",
+              "dimensions": {
+                "width": 1,
+                "height": 120
+              },
+              "boundVariables": {
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                },
+                "fills": [
+                  {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:3003:29"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "HeroStatItem",
+              "nodeId": "I5217:6699;5218:6556;5160:5229",
+              "dimensions": {
+                "width": 162,
+                "height": 68
+              },
+              "layout": {
+                "direction": "column",
+                "gap": "8px",
+                "align": "center"
+              },
+              "boundVariables": {
+                "itemSpacing": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8546"
+                },
+                "paddingLeft": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingTop": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingRight": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingBottom": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                }
+              },
+              "instanceVariants": {
+                "Stat": "Speed"
+              },
+              "layers": [
+                {
+                  "name": "val-block",
+                  "nodeId": "I5217:6699;5218:6556;5160:5229;5160:21",
+                  "dimensions": {
+                    "width": 64,
+                    "height": 38
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": "2px",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "40%",
+                      "nodeId": "I5217:6699;5218:6556;5160:5229;5160:22",
+                      "dimensions": {
+                        "width": 64,
+                        "height": 32
+                      },
+                      "type": "text",
+                      "content": "40%",
+                      "typography": {
+                        "fontSize": 28,
+                        "fontWeight": 700,
+                        "lineHeightPx": 32
+                      }
+                    },
+                    {
+                      "name": "bar",
+                      "nodeId": "I5217:6699;5218:6556;5160:5229;5160:23",
+                      "dimensions": {
+                        "width": 32,
+                        "height": 4
+                      },
+                      "boundVariables": {
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          }
+                        },
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:35"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "label-block",
+                  "nodeId": "I5217:6699;5218:6556;5160:5229;5160:24",
+                  "dimensions": {
+                    "width": 162,
+                    "height": 22
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "FASTER PER BOOKING",
+                      "nodeId": "I5217:6699;5218:6556;5160:5229;5160:25",
+                      "dimensions": {
+                        "width": 162,
+                        "height": 22
+                      },
+                      "type": "text",
+                      "content": "FASTER PER BOOKING",
+                      "typography": {
+                        "fontSize": 16,
+                        "fontWeight": 500,
+                        "lineHeightPx": 22
+                      }
+                    },
+                    {
+                      "name": "Post-migration measure",
+                      "nodeId": "I5217:6699;5218:6556;5160:5229;5160:26",
+                      "dimensions": {
+                        "width": 148,
+                        "height": 20
+                      },
+                      "type": "text",
+                      "content": "Post-migration measure",
+                      "typography": {
+                        "fontSize": 13,
+                        "fontWeight": 400,
+                        "lineHeightPx": 20
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "divider",
+              "nodeId": "I5217:6699;5218:6556;5160:5236",
+              "dimensions": {
+                "width": 1,
+                "height": 120
+              },
+              "boundVariables": {
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                },
+                "fills": [
+                  {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:3003:29"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "HeroStatItem",
+              "nodeId": "I5217:6699;5218:6556;5160:5237",
+              "dimensions": {
+                "width": 109,
+                "height": 68
+              },
+              "layout": {
+                "direction": "column",
+                "gap": "8px",
+                "align": "center"
+              },
+              "boundVariables": {
+                "itemSpacing": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8546"
+                },
+                "paddingLeft": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingTop": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingRight": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingBottom": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                }
+              },
+              "instanceVariants": {
+                "Stat": "GoLive"
+              },
+              "layers": [
+                {
+                  "name": "val-block",
+                  "nodeId": "I5217:6699;5218:6556;5160:5237;5160:28",
+                  "dimensions": {
+                    "width": 109,
+                    "height": 38
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": "2px",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "6 Weeks",
+                      "nodeId": "I5217:6699;5218:6556;5160:5237;5160:29",
+                      "dimensions": {
+                        "width": 109,
+                        "height": 32
+                      },
+                      "type": "text",
+                      "content": "6 Weeks",
+                      "typography": {
+                        "fontSize": 28,
+                        "fontWeight": 700,
+                        "lineHeightPx": 32
+                      }
+                    },
+                    {
+                      "name": "bar",
+                      "nodeId": "I5217:6699;5218:6556;5160:5237;5160:30",
+                      "dimensions": {
+                        "width": 32,
+                        "height": 4
+                      },
+                      "boundVariables": {
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          }
+                        },
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:35"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "label-block",
+                  "nodeId": "I5217:6699;5218:6556;5160:5237;5160:31",
+                  "dimensions": {
+                    "width": 84,
+                    "height": 22
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "TO GO LIVE",
+                      "nodeId": "I5217:6699;5218:6556;5160:5237;5160:32",
+                      "dimensions": {
+                        "width": 84,
+                        "height": 22
+                      },
+                      "type": "text",
+                      "content": "TO GO LIVE",
+                      "typography": {
+                        "fontSize": 16,
+                        "fontWeight": 500,
+                        "lineHeightPx": 22
+                      }
+                    },
+                    {
+                      "name": "Dedicated Onboarding",
+                      "nodeId": "I5217:6699;5218:6556;5160:5237;5160:33",
+                      "dimensions": {
+                        "width": 139,
+                        "height": 20
+                      },
+                      "type": "text",
+                      "content": "Dedicated Onboarding",
+                      "typography": {
+                        "fontSize": 13,
+                        "fontWeight": 400,
+                        "lineHeightPx": 20
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "divider",
+              "nodeId": "I5217:6699;5218:6556;5160:5244",
+              "dimensions": {
+                "width": 1,
+                "height": 120
+              },
+              "boundVariables": {
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                },
+                "fills": [
+                  {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:3003:29"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "HeroStatItem",
+              "nodeId": "I5217:6699;5218:6556;5160:5245",
+              "dimensions": {
+                "width": 164,
+                "height": 68
+              },
+              "layout": {
+                "direction": "column",
+                "gap": "8px",
+                "align": "center"
+              },
+              "boundVariables": {
+                "itemSpacing": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8546"
+                },
+                "paddingLeft": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingTop": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingRight": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingBottom": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                }
+              },
+              "instanceVariants": {
+                "Stat": "Airlines"
+              },
+              "layers": [
+                {
+                  "name": "val-block",
+                  "nodeId": "I5217:6699;5218:6556;5160:5245;5160:35",
+                  "dimensions": {
+                    "width": 74,
+                    "height": 38
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": "2px",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "500+",
+                      "nodeId": "I5217:6699;5218:6556;5160:5245;5160:36",
+                      "dimensions": {
+                        "width": 74,
+                        "height": 32
+                      },
+                      "type": "text",
+                      "content": "500+",
+                      "typography": {
+                        "fontSize": 28,
+                        "fontWeight": 700,
+                        "lineHeightPx": 32
+                      }
+                    },
+                    {
+                      "name": "bar",
+                      "nodeId": "I5217:6699;5218:6556;5160:5245;5160:37",
+                      "dimensions": {
+                        "width": 32,
+                        "height": 4
+                      },
+                      "boundVariables": {
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8563"
+                          }
+                        },
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:35"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "label-block",
+                  "nodeId": "I5217:6699;5218:6556;5160:5245;5160:38",
+                  "dimensions": {
+                    "width": 164,
+                    "height": 22
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "AIRLINES CONNECTED",
+                      "nodeId": "I5217:6699;5218:6556;5160:5245;5160:39",
+                      "dimensions": {
+                        "width": 164,
+                        "height": 22
+                      },
+                      "type": "text",
+                      "content": "AIRLINES CONNECTED",
+                      "typography": {
+                        "fontSize": 16,
+                        "fontWeight": 500,
+                        "lineHeightPx": 22
+                      }
+                    },
+                    {
+                      "name": "Global inventory",
+                      "nodeId": "I5217:6699;5218:6556;5160:5245;5160:40",
+                      "dimensions": {
+                        "width": 100,
+                        "height": 20
+                      },
+                      "type": "text",
+                      "content": "Global inventory",
+                      "typography": {
+                        "fontSize": 13,
+                        "fontWeight": 400,
+                        "lineHeightPx": 20
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

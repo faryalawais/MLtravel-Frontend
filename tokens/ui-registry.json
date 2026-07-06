@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "version": "0.1.0",
-    "description": "UI registry — LP-001 Navbar + Hero + Problem + Comparison₁ + HowItWorksTeaser + FeatureGrid + SocialProof + Pricing slices (ui-registry-build 2026-07-02)",
+    "description": "UI registry — LP-001 Navbar + Hero + Problem + Comparison₁ + HowItWorksTeaser + FeatureGrid + SocialProof + Pricing slices (ui-registry-build 2026-07-02) + HIW-003 howItWorks.hero slice",
     "pathGrammar": "<domain>.<segment>(.<segment>)+",
     "owner": "MLtravel FE",
     "gherkinAliases": {
@@ -23,7 +23,8 @@
       "component.contact.embedSkeleton": "component.contact.embedSkeleton.root",
       "component.contact.embedFallback": "component.contact.embedFallback.root",
       "component.contact.fallback": "component.contact.fallback.root",
-      "component.contact.fallback.emailCta": "component.contact.fallback.emailCta"
+      "component.contact.fallback.emailCta": "component.contact.fallback.emailCta",
+      "component.howItWorks.hero": "component.howItWorks.hero.root"
     }
   },
   "screen": {
@@ -40,7 +41,8 @@
     },
     "howItWorks": {
       "page": {
-        "$description": "How it works at /how-it-works (Gherkin: screen.howItWorks)"
+        "$description": "How it works at /how-it-works (Gherkin: screen.howItWorks)",
+        "$figmaNode": "5217:6697"
       }
     }
   },
@@ -25866,6 +25868,455 @@
             "$description": "No per-transaction fees. No revenue sharing. Complete ownership. (I5164:11487;5164:11257;5022:32)",
             "$screen": "screen.landing.home",
             "$figmaNode": "I5164:11487;5164:11257;5022:32",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "hero": {
+        "root": {
+          "$description": "HIW desktop hero (Gherkin: component.howItWorks.hero)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5217:6699",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "s1Hero": {
+          "$description": "S1-Hero (I5217:6699;5218:6543)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6543",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock": {
+          "$description": "HIWHeroTextBlock (I5217:6699;5218:6544)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "headGroup": {
+          "$description": "head-group (I5217:6699;5218:6544;5218:10)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544;5218:10",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock2": {
+          "$description": "See exactly how your agency goes live in 6 weeks. (I5217:6699;5218:6544;5218:11)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544;5218:11",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock3": {
+          "$description": "From your first call to agents searching every GDS from one screen. Here is every step, every week. (I5217:6699;5218:6544;5218:12)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544;5218:12",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaGroup": {
+          "$description": "cta-group (I5217:6699;5218:6544;5218:13)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544;5218:13",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "demoCta": {
+          "$description": "Button/Primary (I5217:6699;5218:6544;5218:14)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544;5218:14",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "label": {
+          "$description": "label (I5217:6699;5218:6544;5218:14;2780:1424)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544;5218:14;2780:1424",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "ctaIcon": {
+          "$description": "Icon/Button (I5217:6699;5218:6544;5218:14;2780:1425)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544;5218:14;2780:1425",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "graphic": {
+          "$description": "graphic (I5217:6699;5218:6544;5218:14;2780:1425;2780:1499)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544;5218:14;2780:1425;2780:1499",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "group": {
+          "$description": "Group (I5217:6699;5218:6544;5218:14;2780:1425;2780:1591)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544;5218:14;2780:1425;2780:1591",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock4": {
+          "$description": "No per-transaction fees. No revenue sharing. Complete ownership. (I5217:6699;5218:6544;5218:23)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6544;5218:23",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "statsStrip": {
+          "$description": "HeroStatsStrip (I5217:6699;5218:6556)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "statItem": {
+          "$description": "HeroStatItem (I5217:6699;5218:6556;5160:5221)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5221",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "valBlock": {
+          "$description": "val-block (I5217:6699;5218:6556;5160:5221;5160:14)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5221;5160:14",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock5": {
+          "$description": "$1,200/mo (I5217:6699;5218:6556;5160:5221;5160:15)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5221;5160:15",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "bar": {
+          "$description": "bar (I5217:6699;5218:6556;5160:5221;5160:16)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5221;5160:16",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "labelBlock": {
+          "$description": "label-block (I5217:6699;5218:6556;5160:5221;5160:17)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5221;5160:17",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "savedInFees": {
+          "$description": "SAVED IN FEES (I5217:6699;5218:6556;5160:5221;5160:18)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5221;5160:18",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "multipleClients": {
+          "$description": "Multiple Clients (I5217:6699;5218:6556;5160:5221;5160:19)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5221;5160:19",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "divider": {
+          "$description": "divider (I5217:6699;5218:6556;5160:5228)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5228",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "statItem2": {
+          "$description": "HeroStatItem (I5217:6699;5218:6556;5160:5229)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5229",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "valBlock2": {
+          "$description": "val-block (I5217:6699;5218:6556;5160:5229;5160:21)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5229;5160:21",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "textBlock6": {
+          "$description": "40% (I5217:6699;5218:6556;5160:5229;5160:22)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5229;5160:22",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "bar2": {
+          "$description": "bar (I5217:6699;5218:6556;5160:5229;5160:23)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5229;5160:23",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "labelBlock2": {
+          "$description": "label-block (I5217:6699;5218:6556;5160:5229;5160:24)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5229;5160:24",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "fasterPerBooking": {
+          "$description": "FASTER PER BOOKING (I5217:6699;5218:6556;5160:5229;5160:25)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5229;5160:25",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "postmigrationMeasure": {
+          "$description": "Post-migration measure (I5217:6699;5218:6556;5160:5229;5160:26)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5229;5160:26",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "divider2": {
+          "$description": "divider (I5217:6699;5218:6556;5160:5236)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5236",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "statItem3": {
+          "$description": "HeroStatItem (I5217:6699;5218:6556;5160:5237)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5237",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "valBlock3": {
+          "$description": "val-block (I5217:6699;5218:6556;5160:5237;5160:28)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5237;5160:28",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "n6Weeks": {
+          "$description": "6 Weeks (I5217:6699;5218:6556;5160:5237;5160:29)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5237;5160:29",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "bar3": {
+          "$description": "bar (I5217:6699;5218:6556;5160:5237;5160:30)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5237;5160:30",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "labelBlock3": {
+          "$description": "label-block (I5217:6699;5218:6556;5160:5237;5160:31)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5237;5160:31",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "toGoLive": {
+          "$description": "TO GO LIVE (I5217:6699;5218:6556;5160:5237;5160:32)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5237;5160:32",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "dedicatedOnboarding": {
+          "$description": "Dedicated Onboarding (I5217:6699;5218:6556;5160:5237;5160:33)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5237;5160:33",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "divider3": {
+          "$description": "divider (I5217:6699;5218:6556;5160:5244)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5244",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "statItem4": {
+          "$description": "HeroStatItem (I5217:6699;5218:6556;5160:5245)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5245",
+          "$states": [
+            "default",
+            "hover"
+          ],
+          "$tokens": {}
+        },
+        "valBlock4": {
+          "$description": "val-block (I5217:6699;5218:6556;5160:5245;5160:35)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5245;5160:35",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "n500": {
+          "$description": "500+ (I5217:6699;5218:6556;5160:5245;5160:36)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5245;5160:36",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "bar4": {
+          "$description": "bar (I5217:6699;5218:6556;5160:5245;5160:37)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5245;5160:37",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "labelBlock4": {
+          "$description": "label-block (I5217:6699;5218:6556;5160:5245;5160:38)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5245;5160:38",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "airlinesConnected": {
+          "$description": "AIRLINES CONNECTED (I5217:6699;5218:6556;5160:5245;5160:39)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5245;5160:39",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "globalInventory": {
+          "$description": "Global inventory (I5217:6699;5218:6556;5160:5245;5160:40)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5217:6699;5218:6556;5160:5245;5160:40",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "motion": {
+          "root": {
+            "$description": "HIW hero motion prototype (Gherkin: HIW-hero-animation 5404:6760)",
+            "$screen": "screen.howItWorks.page",
+            "$figmaNode": "5404:6760",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          },
+          "headGroup": {
+            "$description": "HIW hero motion head-group layer",
+            "$screen": "screen.howItWorks.page",
+            "$figmaNode": "5409:11322",
+            "$figmaLayerName": "head-group",
+            "$states": [
+              "default"
+            ],
+            "$tokens": {}
+          },
+          "ctaGroup": {
+            "$description": "HIW hero motion cta-group layer",
+            "$screen": "screen.howItWorks.page",
+            "$figmaNode": "5409:11422",
+            "$figmaLayerName": "cta-group",
             "$states": [
               "default"
             ],

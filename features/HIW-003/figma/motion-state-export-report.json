@@ -1,0 +1,29 @@
+{
+  "$meta": {
+    "feature": "HIW-003",
+    "generatedAt": "2026-07-06T12:13:24.175Z",
+    "source": "export-motion-state-pngs"
+  },
+  "exported": 3,
+  "skipped": 0,
+  "entries": [
+    {
+      "chain": "HIW-hero-animation",
+      "state": 1,
+      "file": "reference-hiw-hero-animation-state-1.png",
+      "status": "exported"
+    },
+    {
+      "chain": "HIW-hero-animation",
+      "state": 2,
+      "file": "reference-hiw-hero-animation-state-2.png",
+      "status": "exported"
+    },
+    {
+      "chain": "HIW-hero-animation",
+      "state": 3,
+      "file": "reference-hiw-hero-animation-state-3.png",
+      "status": "exported"
+    }
+  ]
+}

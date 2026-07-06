@@ -1,0 +1,70 @@
+{
+  "$meta": {
+    "feature": "HIW-003",
+    "generatedAt": "2026-07-06T12:05:30.859Z",
+    "source": "motion-chain-walk"
+  },
+  "twins": [
+    {
+      "name": "HIW-hero-animation",
+      "sliceRoot": "5404:6760",
+      "status": "closed",
+      "stateCount": 3,
+      "cachedCount": 3,
+      "missingNodeIds": [],
+      "error": null,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5404:6760",
+          "label": "idle",
+          "referencePng": "reference-hiw-hero-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5409:11417",
+          "label": "state-2",
+          "referencePng": "reference-hiw-hero-animation-state-2.png"
+        },
+        {
+          "index": 3,
+          "nodeId": "5409:11462",
+          "label": "state-3",
+          "referencePng": "reference-hiw-hero-animation-state-3.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5404:6760",
+          "to": "5409:11417",
+          "trigger": "MOUSE_ENTER",
+          "rawTrigger": "MOUSE_ENTER",
+          "triggerNodeId": "5404:6760",
+          "triggerNodeName": "Property 1=1",
+          "delayMs": 0,
+          "delayToken": null,
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5409:11417",
+          "to": "5409:11462",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5409:11417",
+          "triggerNodeName": "Property 1=Variant2",
+          "delayMs": 300,
+          "delayToken": "motion.duration.autoAdvance",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        }
+      ]
+    }
+  ]
+}
