@@ -1,0 +1,55 @@
+{
+  "frame": "5185:4332",
+  "frameName": "Choose day",
+  "sliceRoots": [
+    {
+      "nodeId": "5198:3440",
+      "name": "ContactHero",
+      "source": "ui-registry"
+    },
+    {
+      "nodeId": "5186:4368",
+      "name": "CalendlyEmbedSlot",
+      "source": "ui-registry"
+    },
+    {
+      "nodeId": "5198:3429",
+      "name": "EmailFallback",
+      "source": "ui-registry"
+    }
+  ],
+  "referenceFrames": [
+    {
+      "nodeId": "5186:4533",
+      "name": "Choose hour (embed sizing ref)",
+      "source": "embed-reference",
+      "cache": "nodes/5186-4533.json",
+      "note": "Calendly mock only — not ML Travel CSS. Navbar rows in checklist are LP-001 shared chrome."
+    },
+    {
+      "nodeId": "5186:4857",
+      "name": "Details (embed sizing ref)",
+      "source": "embed-reference",
+      "cache": "nodes/5186-4857.json"
+    },
+    {
+      "nodeId": "5198:4102",
+      "name": "Summary (Calendly admin copy ref)",
+      "source": "calendly-copy-ref",
+      "cache": "nodes/5198-4102.json",
+      "note": "Ops/Calendly admin strings — not rebuilt in React."
+    }
+  ],
+  "frameMetaOnly": {
+    "nodeId": "5185:4332",
+    "name": "Choose day (full page)",
+    "reason": "No nodes/5185-4332.json — full-frame cache duplicated hero/embed/fallback in layout.json and re-exported Navbar INSTANCE. Page chrome = 3 slice-roots + LP-001 navbar/footer."
+  },
+  "excluded": [
+    {
+      "nodeId": "5198:3487",
+      "name": "Designer placeholder note",
+      "reason": "Not a layout frame — excluded per PRD"
+    }
+  ]
+}

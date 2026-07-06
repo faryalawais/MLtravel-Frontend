@@ -1,0 +1,21 @@
+{
+  "screen": "screen.contact.page",
+  "figmaNodeId": "5185:4332",
+  "version": "2026-07-06",
+  "figmaLastModified": "2026-07-02T12:52:45Z",
+  "root": {
+    "type": "stack",
+    "direction": "vertical",
+    "children": [
+      {
+        "slug": "component.contact.hero.root"
+      },
+      {
+        "slug": "component.contact.embed.root"
+      },
+      {
+        "slug": "component.contact.fallback.root"
+      }
+    ]
+  }
+}

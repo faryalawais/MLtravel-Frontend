@@ -1,0 +1,19 @@
+{
+  "$meta": {
+    "feature": "CP-002",
+    "frame": "5185:4332",
+    "figmaFileKey": "h6BqI1ZRMSJxR7jESNF0Ep",
+    "generatedAt": "2026-07-06"
+  },
+  "assets": [
+    {
+      "nodeId": "I5198:3433;2780:1463;2780:1591",
+      "nodeName": "Email fallback CTA — Plane Arrow (navy)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=2780:1506&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-button-arrow.svg",
+      "type": "svg",
+      "dataSource": "static",
+      "note": "Reuses LP-001 Button/Secondary2 arrow master (Icon=Plane Arrow on 5198:3433)."
+    }
+  ]
+}

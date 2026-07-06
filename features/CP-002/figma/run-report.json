@@ -1,0 +1,79 @@
+{
+  "$meta": {
+    "feature": "CP-002",
+    "frame": "5185:4332",
+    "figmaFileKey": "h6BqI1ZRMSJxR7jESNF0Ep",
+    "figmaLastModified": "2026-07-02T12:52:45Z",
+    "extractedAt": "2026-07-06"
+  },
+  "extractionMethod": "dual-source (figma:extract:rest + MCP get_design_context)",
+  "calls": [
+    {
+      "nodeId": "5198:3440",
+      "name": "ContactHero",
+      "source": "rest",
+      "outcome": "ok"
+    },
+    {
+      "nodeId": "5186:4368",
+      "name": "CalendlyEmbedSlot",
+      "source": "rest",
+      "outcome": "ok"
+    },
+    {
+      "nodeId": "5198:3429",
+      "name": "EmailFallback",
+      "source": "rest",
+      "outcome": "ok"
+    },
+    {
+      "nodeId": "5198:3440",
+      "name": "ContactHero",
+      "source": "mcp",
+      "tool": "get_design_context",
+      "outcome": "ok"
+    },
+    {
+      "nodeId": "5186:4368",
+      "name": "CalendlyEmbedSlot",
+      "source": "mcp",
+      "tool": "get_design_context",
+      "outcome": "ok"
+    },
+    {
+      "nodeId": "5198:3429",
+      "name": "EmailFallback",
+      "source": "mcp",
+      "tool": "get_design_context",
+      "outcome": "ok"
+    },
+    {
+      "nodeId": "5185:4332",
+      "name": "Choose day (full page)",
+      "source": "rest",
+      "outcome": "ok",
+      "note": "referenceFrames — restored after cleanup"
+    },
+    {
+      "nodeId": "5186:4533",
+      "name": "Choose hour",
+      "source": "rest",
+      "outcome": "ok",
+      "note": "referenceFrames"
+    },
+    {
+      "nodeId": "5186:4857",
+      "name": "Details",
+      "source": "rest",
+      "outcome": "ok",
+      "note": "referenceFrames"
+    },
+    {
+      "nodeId": "5198:4102",
+      "name": "Summary",
+      "source": "rest",
+      "outcome": "ok",
+      "note": "referenceFrames"
+    }
+  ]
+}
