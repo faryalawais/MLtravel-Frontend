@@ -464,6 +464,10 @@ const hiw = ids.component.landing.howItWorksTeaser;
 export const HIW_FOOTER_LINK_TEXT =
   'How does the technical setup work? Read the full breakdown →';
 
+/** HIW page footer note — Figma `5217:6700` (no learn-more link on `/how-it-works`). */
+export const HIW_ONBOARDING_NOTE_TEXT =
+  'All three steps completed within your 6-week onboarding.';
+
 export const HIW_SECTION_HEADING = 'From contract to booking in three steps.';
 
 export const HIW_SECTION_SUBTITLE =

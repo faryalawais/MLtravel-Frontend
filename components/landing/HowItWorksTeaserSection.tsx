@@ -2,12 +2,13 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useState, type CSSProperties } from 'react';
+import { useCallback, useState, type CSSProperties, type ReactNode } from 'react';
 import {
   HIW_DESKTOP_CARDS,
   HIW_MOBILE_CARDS,
   HIW_CARD_BODY_CLASS,
   HIW_CARD_VISUAL_IMAGE_STYLE,
+  HIW_ONBOARDING_NOTE_TEXT,
   HIW_SECTION_SUBTITLE,
   LANDING_SECTION_HEADING_ACCENT_CLASS,
   LANDING_SECTION_HEADING_DESKTOP_CLASS,
@@ -25,6 +26,7 @@ import {
   getMotionCascadeCardSurfaceStyle,
   getMotionCascadeTextStyle,
   getMotionSlideRevealStyle,
+  HIW_MOTION_FOOTER_OFFSET_PX,
   MOTION_DELAY_STEP,
   MOTION_TRANSITION_PROPERTIES,
 } from '@/constants/motion.constants';
@@ -295,14 +297,58 @@ function HiwCardMobile({ card }: HiwCardMobileProps) {
   );
 }
 
+function HiwFooterMotionSlot({
+  isEmphasized = false,
+  motionEngaged = false,
+  footerTestId,
+  children,
+}: HiwFooterLinkProps & { footerTestId?: string; children: ReactNode }) {
+  const animating = motionEngaged && !isEmphasized;
+
+  return (
+    <div
+      className="flex w-full justify-center"
+      style={{
+        paddingBottom: animating ? HIW_MOTION_FOOTER_OFFSET_PX : 0,
+        transitionProperty: 'padding-bottom',
+        transitionDuration: PROBLEM_MOTION_STYLE.transitionDuration,
+      }}
+    >
+      <div
+        data-testid={footerTestId}
+        className="flex w-full justify-center text-center"
+        style={getHiwFooterMotionStyle(motionEngaged, isEmphasized, PROBLEM_MOTION_STYLE)}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function HiwOnboardingNote({
+  isEmphasized = false,
+  motionEngaged = false,
+}: HiwFooterLinkProps) {
+  return (
+    <HiwFooterMotionSlot isEmphasized={isEmphasized} motionEngaged={motionEngaged}>
+      <p
+        data-testid={hiw.textBlock21}
+        className="text-body-desktop-sm text-[var(--color-text-secondary)]"
+      >
+        {HIW_ONBOARDING_NOTE_TEXT}
+      </p>
+    </HiwFooterMotionSlot>
+  );
+}
+
 function HiwFooterLink({ isEmphasized = false, motionEngaged = false }: HiwFooterLinkProps) {
   const footerTestId = motionEngaged ? hiw.motion.footerNote : hiw.footerNote;
 
   return (
-    <div
-      data-testid={footerTestId}
-      className="flex w-full justify-center text-center"
-      style={getHiwFooterMotionStyle(motionEngaged, isEmphasized, PROBLEM_MOTION_STYLE)}
+    <HiwFooterMotionSlot
+      isEmphasized={isEmphasized}
+      motionEngaged={motionEngaged}
+      footerTestId={footerTestId}
     >
       <Link
         href="/how-it-works"
@@ -322,7 +368,27 @@ function HiwFooterLink({ isEmphasized = false, motionEngaged = false }: HiwFoote
           />
         </span>
       </Link>
-    </div>
+    </HiwFooterMotionSlot>
+  );
+}
+
+function HiwTeaserFooter({
+  showFooterLink,
+  footerEmphasized,
+  motionEngaged,
+}: {
+  showFooterLink: boolean;
+  footerEmphasized: boolean;
+  motionEngaged: boolean;
+}) {
+  if (showFooterLink) {
+    return (
+      <HiwFooterLink isEmphasized={footerEmphasized} motionEngaged={motionEngaged} />
+    );
+  }
+
+  return (
+    <HiwOnboardingNote isEmphasized={footerEmphasized} motionEngaged={motionEngaged} />
   );
 }
 
@@ -519,9 +585,11 @@ export function HowItWorksTeaserSection({ showFooterLink = true }: HowItWorksTea
       </div>
 
       <div className="flex justify-center px-[var(--spacing-16)] pb-[var(--spacing-28)] min-[1440px]:px-[var(--spacing-64)] min-[1440px]:pb-[var(--spacing-40)]">
-        {showFooterLink ? (
-          <HiwFooterLink isEmphasized={footerEmphasized} motionEngaged={motionEngaged} />
-        ) : null}
+        <HiwTeaserFooter
+          showFooterLink={showFooterLink}
+          footerEmphasized={footerEmphasized}
+          motionEngaged={motionEngaged}
+        />
       </div>
     </section>
   );

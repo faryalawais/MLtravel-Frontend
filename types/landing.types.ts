@@ -98,7 +98,7 @@ export interface HiwFooterLinkProps {
 }
 
 export interface HowItWorksTeaserSectionProps {
-  /** When false, hides the “Read the full breakdown” footer (HIW page). */
+  /** When false, hides the learn-more link on `/how-it-works` but keeps the onboarding note. */
   showFooterLink?: boolean;
 }
 
