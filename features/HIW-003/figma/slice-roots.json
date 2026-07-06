@@ -18,6 +18,17 @@
       "nodeId": "5217:6701",
       "name": "S4-MidCTA",
       "source": "explicit"
+    },
+    {
+      "nodeId": "5217:6705",
+      "name": "SixWeekSection",
+      "source": "explicit"
+    },
+    {
+      "nodeId": "5217:6812",
+      "name": "SixWeekSection-mobile",
+      "source": "explicit",
+      "mobileFrame": "5217:6715"
     }
   ]
 }

@@ -2912,6 +2912,19 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.howItWorks.midCta.label` | Mid CTA button label | `screen.howItWorks.page` | `default` | `component-howItWorks-midCta-label` |
 | `component.howItWorks.midCta.ctaIcon` | Mid CTA button icon wrapper | `screen.howItWorks.page` | `default` | `component-howItWorks-midCta-ctaIcon` |
 | `component.howItWorks.midCta.graphic` | Mid CTA plane arrow graphic | `screen.howItWorks.page` | `default` | `component-howItWorks-midCta-graphic` |
+| `component.howItWorks.sixWeek.root` | Six-week onboarding section desktop (Gherkin: component.howItWorks.sixWeek) | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-root` |
+| `component.howItWorks.sixWeek.mobile` | Six-week timeline mobile stack (5217:6812) | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-mobile` |
+| `component.howItWorks.sixWeek.onboardingSection` | Onboarding band with header + week cards (I5217:6705;5223:6674) | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-onboardingSection` |
+| `component.howItWorks.sixWeek.sectionHeader` | SectionHeader/HowItWorks pill + heading | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-sectionHeader` |
+| `component.howItWorks.sixWeek.sectionPill` | 6-week Onboarding pill (Type=Onboarding) | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-sectionPill` |
+| `component.howItWorks.sixWeek.heading` | Live in 6 weeks headline | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-heading` |
+| `component.howItWorks.sixWeek.subheading` | Onboarding subcopy | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-subheading` |
+| `component.howItWorks.sixWeek.timelineTrack` | Desktop horizontal timeline track | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-timelineTrack` |
+| `component.howItWorks.sixWeek.weekCard1` | OnboardingCard Week=1 | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-weekCard1` |
+| `component.howItWorks.sixWeek.weekCard2` | OnboardingCard Week=2-3 | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-weekCard2` |
+| `component.howItWorks.sixWeek.weekCard3` | OnboardingCard Week=4-5 | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-weekCard3` |
+| `component.howItWorks.sixWeek.weekCard4` | OnboardingCard Week=GoLive | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-weekCard4` |
+| `component.howItWorks.sixWeek.socialProofStrip` | Desktop testimonial + benefit stack (bundled in 5217:6705; GH#22/23 scope) | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-socialProofStrip` |
 
 ---
 

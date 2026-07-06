@@ -8,7 +8,7 @@
     "extractionMethod": "build-spec-from-cache (REST nodes/*.json only)",
     "source": "figma-rest-files-nodes",
     "figmaLastModified": "2026-07-02T12:52:45Z",
-    "cacheFiles": 5,
+    "cacheFiles": 7,
     "note": "No legacy MCP spec.json content — derived solely from nodes/ cache."
   },
   "sections": [
@@ -3331,6 +3331,4099 @@
                             "width": 19,
                             "height": 18
                           }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SixWeekSection",
+      "nodeId": "5217:6705",
+      "dimensions": {
+        "width": 1440,
+        "height": 874
+      },
+      "layout": {
+        "direction": "column",
+        "gap": "60px",
+        "align": "center"
+      },
+      "boundVariables": {
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5425:8541"
+        },
+        "paddingTop": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5425:8541"
+        },
+        "paddingRight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5425:8541"
+        },
+        "paddingBottom": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5425:8541"
+        },
+        "rectangleCornerRadii": {
+          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5425:8556"
+          },
+          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5425:8556"
+          },
+          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5425:8556"
+          },
+          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5425:8556"
+          }
+        },
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3003:14"
+          }
+        ]
+      },
+      "layers": [
+        {
+          "name": "OnboardingSection",
+          "nodeId": "I5217:6705;5223:6674",
+          "dimensions": {
+            "width": 1440,
+            "height": 454
+          },
+          "layout": {
+            "direction": "column",
+            "gap": "40px",
+            "padding": {
+              "y": "40px"
+            },
+            "align": "center"
+          },
+          "boundVariables": {
+            "itemSpacing": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8554"
+            },
+            "paddingLeft": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "paddingTop": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8554"
+            },
+            "paddingRight": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "paddingBottom": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8554"
+            },
+            "rectangleCornerRadii": {
+              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              }
+            },
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:3003:17"
+              }
+            ]
+          },
+          "layers": [
+            {
+              "name": "SectionHeader/HowItWorks",
+              "nodeId": "I5217:6705;5223:6674;5223:10",
+              "dimensions": {
+                "width": 822,
+                "height": 132
+              },
+              "layout": {
+                "direction": "column",
+                "gap": "16px",
+                "align": "center"
+              },
+              "boundVariables": {
+                "itemSpacing": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8549"
+                },
+                "paddingLeft": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingTop": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingRight": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingBottom": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                }
+              },
+              "layers": [
+                {
+                  "name": "SectionPill",
+                  "nodeId": "I5217:6705;5223:6674;5223:10;5151:13131",
+                  "dimensions": {
+                    "width": 187,
+                    "height": 32
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": "8px",
+                    "padding": {
+                      "x": "16px",
+                      "y": "8px"
+                    },
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8546"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8549"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8546"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8549"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8546"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8564"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8564"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8564"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8564"
+                      }
+                    },
+                    "strokes": [
+                      {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:3003:30"
+                      }
+                    ]
+                  },
+                  "instanceVariants": {
+                    "Type": "Onboarding"
+                  },
+                  "layers": [
+                    {
+                      "name": "6-week Onboarding",
+                      "nodeId": "I5217:6705;5223:6674;5223:10;5151:13131;5217:5003",
+                      "dimensions": {
+                        "width": 140,
+                        "height": 16
+                      },
+                      "type": "text",
+                      "content": "6-week Onboarding",
+                      "typography": {
+                        "fontSize": 14,
+                        "fontWeight": 600,
+                        "lineHeightPx": 16
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "heading-block",
+                  "nodeId": "I5217:6705;5223:6674;5223:10;5155:17",
+                  "dimensions": {
+                    "width": 822,
+                    "height": 84
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": "8px",
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8546"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "From contract to booking in three steps.",
+                      "nodeId": "I5217:6705;5223:6674;5223:10;5155:18",
+                      "dimensions": {
+                        "width": 822,
+                        "height": 52
+                      },
+                      "type": "text",
+                      "content": "Live in 6 weeks. Here's exactly what happens.",
+                      "typography": {
+                        "fontSize": 40,
+                        "fontWeight": 700,
+                        "lineHeightPx": 52
+                      }
+                    },
+                    {
+                      "name": "We handle the technical complexity. Your agents just search and book.",
+                      "nodeId": "I5217:6705;5223:6674;5223:10;5155:19",
+                      "dimensions": {
+                        "width": 700,
+                        "height": 24
+                      },
+                      "type": "text",
+                      "content": "We handle the technical complexity. Your agents just search and book.",
+                      "typography": {
+                        "fontSize": 16,
+                        "fontWeight": 400,
+                        "lineHeightPx": 24
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "cards-wrap",
+              "nodeId": "I5217:6705;5223:6674;5223:19",
+              "dimensions": {
+                "width": 1436,
+                "height": 202
+              },
+              "layout": {
+                "direction": "column",
+                "gap": "24px",
+                "padding": {
+                  "x": "60px"
+                }
+              },
+              "boundVariables": {
+                "itemSpacing": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8551"
+                },
+                "paddingTop": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingBottom": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                }
+              },
+              "layers": [
+                {
+                  "name": "timeline-track",
+                  "nodeId": "I5217:6705;5223:6674;5223:20",
+                  "dimensions": {
+                    "width": 1316,
+                    "height": 14
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "track-bg",
+                      "nodeId": "I5217:6705;5223:6674;5223:21",
+                      "dimensions": {
+                        "width": 1316,
+                        "height": 2
+                      },
+                      "boundVariables": {
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "cards-row",
+                  "nodeId": "I5217:6705;5223:6674;5223:26",
+                  "dimensions": {
+                    "width": 1316,
+                    "height": 164
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": "20px"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8550"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "widgets": [
+                    {
+                      "name": "OnboardingCard",
+                      "nodeId": "I5217:6705;5223:6674;5223:27",
+                      "dimensions": {
+                        "width": 314,
+                        "height": 164
+                      },
+                      "layout": {
+                        "direction": "column"
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          }
+                        },
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:14"
+                          }
+                        ],
+                        "strokes": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:29"
+                          }
+                        ]
+                      },
+                      "instanceVariants": {
+                        "Week": "1"
+                      },
+                      "layers": [
+                        {
+                          "name": "card-content",
+                          "nodeId": "I5217:6705;5223:6674;5223:27;5222:10",
+                          "dimensions": {
+                            "width": 314,
+                            "height": 164
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": "8px",
+                            "padding": {
+                              "x": "24px",
+                              "y": "16px"
+                            }
+                          },
+                          "boundVariables": {
+                            "itemSpacing": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8546"
+                            },
+                            "paddingLeft": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "paddingTop": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8549"
+                            },
+                            "paddingRight": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "paddingBottom": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "rectangleCornerRadii": {
+                              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              }
+                            }
+                          },
+                          "layers": [
+                            {
+                              "name": "badge",
+                              "nodeId": "I5217:6705;5223:6674;5223:27;5222:11",
+                              "dimensions": {
+                                "width": 55,
+                                "height": 24
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "padding": {
+                                  "x": "8px",
+                                  "y": "5px"
+                                }
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8546"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8544"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8546"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8544"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  }
+                                }
+                              },
+                              "instanceVariants": {
+                                "Type": "Navy"
+                              },
+                              "layers": [
+                                {
+                                  "name": "WEEK 1",
+                                  "nodeId": "I5217:6705;5223:6674;5223:27;5222:11;5221:10",
+                                  "dimensions": {
+                                    "width": 39,
+                                    "height": 14
+                                  },
+                                  "type": "text",
+                                  "content": "WEEK 1",
+                                  "typography": {
+                                    "fontSize": 9,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 14
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "main-block",
+                              "nodeId": "I5217:6705;5223:6674;5223:27;5222:13",
+                              "dimensions": {
+                                "width": 266,
+                                "height": 92
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": "12px"
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8548"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  }
+                                }
+                              },
+                              "layers": [
+                                {
+                                  "name": "GDS & NDC Integration",
+                                  "nodeId": "I5217:6705;5223:6674;5223:27;5222:14",
+                                  "dimensions": {
+                                    "width": 266,
+                                    "height": 24
+                                  },
+                                  "type": "text",
+                                  "content": "GDS & NDC Integration",
+                                  "typography": {
+                                    "fontSize": 18,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 24
+                                  }
+                                },
+                                {
+                                  "name": "AccentBar",
+                                  "nodeId": "I5217:6705;5223:6674;5223:27;5222:15",
+                                  "dimensions": {
+                                    "width": 64,
+                                    "height": 4
+                                  },
+                                  "boundVariables": {
+                                    "itemSpacing": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingLeft": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingTop": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingRight": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingBottom": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "rectangleCornerRadii": {
+                                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      }
+                                    }
+                                  },
+                                  "instanceVariants": {
+                                    "Accent": "Navy"
+                                  }
+                                },
+                                {
+                                  "name": "We connect to your existing contracts. All sources live and tested.",
+                                  "nodeId": "I5217:6705;5223:6674;5223:27;5222:16",
+                                  "dimensions": {
+                                    "width": 266,
+                                    "height": 40
+                                  },
+                                  "type": "text",
+                                  "content": "We connect to your existing contracts. All sources live and tested.",
+                                  "typography": {
+                                    "fontSize": 13,
+                                    "fontWeight": 400,
+                                    "lineHeightPx": 20
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "OnboardingCard",
+                      "nodeId": "I5217:6705;5223:6674;5223:36",
+                      "dimensions": {
+                        "width": 314,
+                        "height": 164
+                      },
+                      "layout": {
+                        "direction": "column"
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          }
+                        },
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:14"
+                          }
+                        ],
+                        "strokes": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:29"
+                          }
+                        ]
+                      },
+                      "instanceVariants": {
+                        "Week": "2-3"
+                      },
+                      "layers": [
+                        {
+                          "name": "card-content",
+                          "nodeId": "I5217:6705;5223:6674;5223:36;5222:18",
+                          "dimensions": {
+                            "width": 314,
+                            "height": 164
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": "8px",
+                            "padding": {
+                              "x": "24px",
+                              "y": "16px"
+                            }
+                          },
+                          "boundVariables": {
+                            "itemSpacing": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8546"
+                            },
+                            "paddingLeft": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "paddingTop": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8549"
+                            },
+                            "paddingRight": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "paddingBottom": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "rectangleCornerRadii": {
+                              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              }
+                            }
+                          },
+                          "layers": [
+                            {
+                              "name": "badge",
+                              "nodeId": "I5217:6705;5223:6674;5223:36;5222:19",
+                              "dimensions": {
+                                "width": 55,
+                                "height": 24
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "padding": {
+                                  "x": "8px",
+                                  "y": "5px"
+                                }
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8546"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8544"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8546"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8544"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  }
+                                }
+                              },
+                              "instanceVariants": {
+                                "Type": "Navy"
+                              },
+                              "layers": [
+                                {
+                                  "name": "WEEK 1",
+                                  "nodeId": "I5217:6705;5223:6674;5223:36;5222:19;5221:10",
+                                  "dimensions": {
+                                    "width": 39,
+                                    "height": 14
+                                  },
+                                  "type": "text",
+                                  "content": "WEEK 1",
+                                  "typography": {
+                                    "fontSize": 9,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 14
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "main-block",
+                              "nodeId": "I5217:6705;5223:6674;5223:36;5222:21",
+                              "dimensions": {
+                                "width": 266,
+                                "height": 92
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": "12px"
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8548"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  }
+                                }
+                              },
+                              "layers": [
+                                {
+                                  "name": "Platform Build & Brand",
+                                  "nodeId": "I5217:6705;5223:6674;5223:36;5222:22",
+                                  "dimensions": {
+                                    "width": 266,
+                                    "height": 24
+                                  },
+                                  "type": "text",
+                                  "content": "Platform Build & Brand",
+                                  "typography": {
+                                    "fontSize": 18,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 24
+                                  }
+                                },
+                                {
+                                  "name": "AccentBar",
+                                  "nodeId": "I5217:6705;5223:6674;5223:36;5222:23",
+                                  "dimensions": {
+                                    "width": 64,
+                                    "height": 4
+                                  },
+                                  "boundVariables": {
+                                    "itemSpacing": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingLeft": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingTop": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingRight": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingBottom": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "rectangleCornerRadii": {
+                                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      }
+                                    }
+                                  },
+                                  "instanceVariants": {
+                                    "Accent": "Navy"
+                                  }
+                                },
+                                {
+                                  "name": "White-label applied. Your logo, branding, and domain configured.",
+                                  "nodeId": "I5217:6705;5223:6674;5223:36;5222:24",
+                                  "dimensions": {
+                                    "width": 266,
+                                    "height": 40
+                                  },
+                                  "type": "text",
+                                  "content": "White-label applied. Your logo, branding, and domain configured.",
+                                  "typography": {
+                                    "fontSize": 13,
+                                    "fontWeight": 400,
+                                    "lineHeightPx": 20
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "OnboardingCard",
+                      "nodeId": "I5217:6705;5223:6674;5223:45",
+                      "dimensions": {
+                        "width": 314,
+                        "height": 164
+                      },
+                      "layout": {
+                        "direction": "column"
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          }
+                        },
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:14"
+                          }
+                        ],
+                        "strokes": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:29"
+                          }
+                        ]
+                      },
+                      "instanceVariants": {
+                        "Week": "4-5"
+                      },
+                      "layers": [
+                        {
+                          "name": "card-content",
+                          "nodeId": "I5217:6705;5223:6674;5223:45;5222:26",
+                          "dimensions": {
+                            "width": 314,
+                            "height": 164
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": "8px",
+                            "padding": {
+                              "x": "24px",
+                              "y": "16px"
+                            }
+                          },
+                          "boundVariables": {
+                            "itemSpacing": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8546"
+                            },
+                            "paddingLeft": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "paddingTop": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8549"
+                            },
+                            "paddingRight": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "paddingBottom": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "rectangleCornerRadii": {
+                              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              }
+                            }
+                          },
+                          "layers": [
+                            {
+                              "name": "badge",
+                              "nodeId": "I5217:6705;5223:6674;5223:45;5222:27",
+                              "dimensions": {
+                                "width": 55,
+                                "height": 24
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "padding": {
+                                  "x": "8px",
+                                  "y": "5px"
+                                }
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8546"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8544"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8546"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8544"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  }
+                                }
+                              },
+                              "instanceVariants": {
+                                "Type": "Navy"
+                              },
+                              "layers": [
+                                {
+                                  "name": "WEEK 1",
+                                  "nodeId": "I5217:6705;5223:6674;5223:45;5222:27;5221:10",
+                                  "dimensions": {
+                                    "width": 39,
+                                    "height": 14
+                                  },
+                                  "type": "text",
+                                  "content": "WEEK 1",
+                                  "typography": {
+                                    "fontSize": 9,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 14
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "main-block",
+                              "nodeId": "I5217:6705;5223:6674;5223:45;5222:29",
+                              "dimensions": {
+                                "width": 266,
+                                "height": 92
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": "12px"
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8548"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  }
+                                }
+                              },
+                              "layers": [
+                                {
+                                  "name": "Testing & QA",
+                                  "nodeId": "I5217:6705;5223:6674;5223:45;5222:30",
+                                  "dimensions": {
+                                    "width": 266,
+                                    "height": 24
+                                  },
+                                  "type": "text",
+                                  "content": "Testing & QA",
+                                  "typography": {
+                                    "fontSize": 18,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 24
+                                  }
+                                },
+                                {
+                                  "name": "AccentBar",
+                                  "nodeId": "I5217:6705;5223:6674;5223:45;5222:31",
+                                  "dimensions": {
+                                    "width": 64,
+                                    "height": 4
+                                  },
+                                  "boundVariables": {
+                                    "itemSpacing": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingLeft": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingTop": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingRight": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingBottom": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "rectangleCornerRadii": {
+                                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      }
+                                    }
+                                  },
+                                  "instanceVariants": {
+                                    "Accent": "Navy"
+                                  }
+                                },
+                                {
+                                  "name": "All fare sources validated. Full booking flow tested end-to-end.",
+                                  "nodeId": "I5217:6705;5223:6674;5223:45;5222:32",
+                                  "dimensions": {
+                                    "width": 266,
+                                    "height": 40
+                                  },
+                                  "type": "text",
+                                  "content": "All fare sources validated. Full booking flow tested end-to-end.",
+                                  "typography": {
+                                    "fontSize": 13,
+                                    "fontWeight": 400,
+                                    "lineHeightPx": 20
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "OnboardingCard",
+                      "nodeId": "I5217:6705;5223:6674;5223:54",
+                      "dimensions": {
+                        "width": 314,
+                        "height": 164
+                      },
+                      "layout": {
+                        "direction": "column"
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8562"
+                          }
+                        },
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:14"
+                          }
+                        ],
+                        "strokes": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:29"
+                          }
+                        ]
+                      },
+                      "instanceVariants": {
+                        "Week": "GoLive"
+                      },
+                      "layers": [
+                        {
+                          "name": "card-content",
+                          "nodeId": "I5217:6705;5223:6674;5223:54;5222:34",
+                          "dimensions": {
+                            "width": 314,
+                            "height": 164
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": "8px",
+                            "padding": {
+                              "x": "24px",
+                              "y": "16px"
+                            }
+                          },
+                          "boundVariables": {
+                            "itemSpacing": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8546"
+                            },
+                            "paddingLeft": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "paddingTop": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8549"
+                            },
+                            "paddingRight": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "paddingBottom": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8551"
+                            },
+                            "rectangleCornerRadii": {
+                              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              }
+                            }
+                          },
+                          "layers": [
+                            {
+                              "name": "badge",
+                              "nodeId": "I5217:6705;5223:6674;5223:54;5222:35",
+                              "dimensions": {
+                                "width": 63,
+                                "height": 24
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "padding": {
+                                  "x": "8px",
+                                  "y": "5px"
+                                }
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8546"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8544"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8546"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8544"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8558"
+                                  }
+                                }
+                              },
+                              "instanceVariants": {
+                                "Type": "Green"
+                              },
+                              "layers": [
+                                {
+                                  "name": "WEEK 06",
+                                  "nodeId": "I5217:6705;5223:6674;5223:54;5222:35;5221:12",
+                                  "dimensions": {
+                                    "width": 47,
+                                    "height": 14
+                                  },
+                                  "type": "text",
+                                  "content": "WEEK 06",
+                                  "typography": {
+                                    "fontSize": 9,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 14
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "main-block",
+                              "nodeId": "I5217:6705;5223:6674;5223:54;5222:37",
+                              "dimensions": {
+                                "width": 266,
+                                "height": 92
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": "12px"
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8548"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  }
+                                }
+                              },
+                              "layers": [
+                                {
+                                  "name": "Go Live 🚀",
+                                  "nodeId": "I5217:6705;5223:6674;5223:54;5222:38",
+                                  "dimensions": {
+                                    "width": 266,
+                                    "height": 24
+                                  },
+                                  "type": "text",
+                                  "content": "Go Live 🚀",
+                                  "typography": {
+                                    "fontSize": 18,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 24
+                                  }
+                                },
+                                {
+                                  "name": "AccentBar",
+                                  "nodeId": "I5217:6705;5223:6674;5223:54;5222:39",
+                                  "dimensions": {
+                                    "width": 64,
+                                    "height": 4
+                                  },
+                                  "boundVariables": {
+                                    "itemSpacing": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingLeft": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingTop": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingRight": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "paddingBottom": {
+                                      "type": "VARIABLE_ALIAS",
+                                      "id": "VariableID:5425:8541"
+                                    },
+                                    "rectangleCornerRadii": {
+                                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      },
+                                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                        "type": "VARIABLE_ALIAS",
+                                        "id": "VariableID:5425:8564"
+                                      }
+                                    }
+                                  },
+                                  "instanceVariants": {
+                                    "Accent": "Teal"
+                                  }
+                                },
+                                {
+                                  "name": "Platform launches under your brand. 30-day support included.",
+                                  "nodeId": "I5217:6705;5223:6674;5223:54;5222:40",
+                                  "dimensions": {
+                                    "width": 266,
+                                    "height": 40
+                                  },
+                                  "type": "text",
+                                  "content": "Platform launches under your brand. 30-day support included.",
+                                  "typography": {
+                                    "fontSize": 13,
+                                    "fontWeight": 400,
+                                    "lineHeightPx": 20
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SocialProofStrip",
+          "nodeId": "I5217:6705;5223:6722",
+          "dimensions": {
+            "width": 1440,
+            "height": 360
+          },
+          "boundVariables": {
+            "itemSpacing": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "paddingLeft": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "paddingTop": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "paddingRight": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "paddingBottom": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5425:8541"
+            },
+            "rectangleCornerRadii": {
+              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              },
+              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5425:8556"
+              }
+            },
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:3003:14"
+              }
+            ]
+          },
+          "layers": [
+            {
+              "name": "TestimonialBlock",
+              "nodeId": "I5217:6705;5223:6722;5217:6114",
+              "dimensions": {
+                "width": 868,
+                "height": 280
+              },
+              "layout": {
+                "direction": "row",
+                "gap": "20px",
+                "align": "center"
+              },
+              "boundVariables": {
+                "itemSpacing": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8550"
+                },
+                "paddingLeft": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingTop": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingRight": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingBottom": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                }
+              },
+              "instanceVariants": {
+                "Variant": "A"
+              },
+              "widgets": [
+                {
+                  "name": "TestimonialLogoCard",
+                  "nodeId": "I5217:6705;5223:6722;5217:6114;5159:23",
+                  "dimensions": {
+                    "width": 313,
+                    "height": 280
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "logo-slot",
+                      "nodeId": "I5217:6705;5223:6722;5217:6114;5159:23;5158:14",
+                      "dimensions": {
+                        "width": 240,
+                        "height": 80
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "align": "center"
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8558"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8558"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8558"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8558"
+                          }
+                        }
+                      },
+                      "layers": [
+                        {
+                          "name": "Company logo",
+                          "nodeId": "I5217:6705;5223:6722;5217:6114;5159:23;5158:15",
+                          "dimensions": {
+                            "width": 75,
+                            "height": 13
+                          },
+                          "type": "text",
+                          "content": "Company logo",
+                          "typography": {
+                            "fontSize": 11,
+                            "fontWeight": 400,
+                            "lineHeightPx": 13.3125
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "text-col",
+                  "nodeId": "I5217:6705;5223:6722;5217:6114;5159:24",
+                  "dimensions": {
+                    "width": 535,
+                    "height": 280
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": "60px",
+                    "justify": "space-between"
+                  },
+                  "boundVariables": {
+                    "paddingLeft": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingTop": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingRight": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "paddingBottom": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8541"
+                    },
+                    "rectangleCornerRadii": {
+                      "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      },
+                      "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:5425:8556"
+                      }
+                    }
+                  },
+                  "layers": [
+                    {
+                      "name": "quote",
+                      "nodeId": "I5217:6705;5223:6722;5217:6114;5151:13709",
+                      "dimensions": {
+                        "width": 535,
+                        "height": 160
+                      },
+                      "type": "text",
+                      "content": "“We were paying for three separate tools that barely talked to each other. MaqqsedTravel replaced all of them. Our agents now search every GDS from one screen, under our own brand. We were live in under 6 weeks.”",
+                      "typography": {
+                        "fontSize": 24,
+                        "fontWeight": 500,
+                        "lineHeightPx": 32
+                      }
+                    },
+                    {
+                      "name": "TestimonialAuthor",
+                      "nodeId": "I5217:6705;5223:6722;5217:6114;5159:26",
+                      "dimensions": {
+                        "width": 219,
+                        "height": 60
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": "16px"
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8549"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          }
+                        }
+                      },
+                      "layers": [
+                        {
+                          "name": "AvatarInitials",
+                          "nodeId": "I5217:6705;5223:6722;5217:6114;5159:26;5159:14",
+                          "dimensions": {
+                            "width": 48,
+                            "height": 48
+                          },
+                          "boundVariables": {
+                            "itemSpacing": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingLeft": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingTop": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingRight": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingBottom": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "rectangleCornerRadii": {
+                              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              }
+                            }
+                          },
+                          "layers": [
+                            {
+                              "name": "LI",
+                              "nodeId": "I5217:6705;5223:6722;5217:6114;5159:26;5159:14;3171:25",
+                              "dimensions": {
+                                "width": 15,
+                                "height": 24
+                              },
+                              "type": "text",
+                              "content": "LI",
+                              "typography": {
+                                "fontSize": 18,
+                                "fontWeight": 700,
+                                "lineHeightPx": 24
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text-col",
+                          "nodeId": "I5217:6705;5223:6722;5217:6114;5159:26;5159:18",
+                          "dimensions": {
+                            "width": 155,
+                            "height": 60
+                          },
+                          "layout": {
+                            "direction": "column"
+                          },
+                          "boundVariables": {
+                            "itemSpacing": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingLeft": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingTop": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingRight": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingBottom": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "rectangleCornerRadii": {
+                              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              }
+                            }
+                          },
+                          "layers": [
+                            {
+                              "name": "Moazam Arshad",
+                              "nodeId": "I5217:6705;5223:6722;5217:6114;5159:26;5159:19",
+                              "dimensions": {
+                                "width": 122,
+                                "height": 24
+                              },
+                              "type": "text",
+                              "content": "Moazam Arshad",
+                              "typography": {
+                                "fontSize": 16,
+                                "fontWeight": 600,
+                                "lineHeightPx": 24
+                              }
+                            },
+                            {
+                              "name": "Founder & CEO",
+                              "nodeId": "I5217:6705;5223:6722;5217:6114;5159:26;5159:20",
+                              "dimensions": {
+                                "width": 108,
+                                "height": 20
+                              },
+                              "type": "text",
+                              "content": "Founder & CEO",
+                              "typography": {
+                                "fontSize": 14,
+                                "fontWeight": 500,
+                                "lineHeightPx": 20
+                              }
+                            },
+                            {
+                              "name": "UK-based IATA travel agency",
+                              "nodeId": "I5217:6705;5223:6722;5217:6114;5159:26;5159:21",
+                              "dimensions": {
+                                "width": 155,
+                                "height": 16
+                              },
+                              "type": "text",
+                              "content": "UK-based IATA travel agency",
+                              "typography": {
+                                "fontSize": 11,
+                                "fontWeight": 600,
+                                "lineHeightPx": 16
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "benefit-stack",
+              "nodeId": "I5217:6705;5223:6722;5223:6654",
+              "dimensions": {
+                "width": 422,
+                "height": 271
+              },
+              "layout": {
+                "direction": "column",
+                "gap": "20px"
+              },
+              "boundVariables": {
+                "itemSpacing": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8550"
+                },
+                "paddingLeft": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingTop": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingRight": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "paddingBottom": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5425:8541"
+                },
+                "rectangleCornerRadii": {
+                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  },
+                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:5425:8556"
+                  }
+                }
+              },
+              "layers": [
+                {
+                  "name": "BenefitCard",
+                  "nodeId": "I5217:6705;5223:6722;5223:6655",
+                  "dimensions": {
+                    "width": 422,
+                    "height": 77
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": "10px",
+                    "padding": {
+                      "x": "18px",
+                      "y": "18px"
+                    },
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8547"
+                    },
+                    "fills": [
+                      {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:3003:14"
+                      }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:3003:29"
+                      }
+                    ]
+                  },
+                  "instanceVariants": {
+                    "Type": "Fees"
+                  },
+                  "layers": [
+                    {
+                      "name": "icon1",
+                      "nodeId": "I5217:6705;5223:6722;5223:6655;5217:5926",
+                      "dimensions": {
+                        "width": 40,
+                        "height": 40
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          }
+                        }
+                      },
+                      "layers": [
+                        {
+                          "name": "Frame 2095585136",
+                          "nodeId": "I5217:6705;5223:6722;5223:6655;5217:5927",
+                          "dimensions": {
+                            "width": 18,
+                            "height": 18
+                          },
+                          "boundVariables": {
+                            "itemSpacing": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingLeft": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingTop": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingRight": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingBottom": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "rectangleCornerRadii": {
+                              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              }
+                            }
+                          },
+                          "layers": [
+                            {
+                              "name": "Frame 2095585134",
+                              "nodeId": "I5217:6705;5223:6722;5223:6655;5217:5928",
+                              "dimensions": {
+                                "width": 16,
+                                "height": 14
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "text-col",
+                      "nodeId": "I5217:6705;5223:6722;5223:6655;5221:17",
+                      "dimensions": {
+                        "width": 168,
+                        "height": 41
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": "8px"
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8546"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          }
+                        }
+                      },
+                      "layers": [
+                        {
+                          "name": "Zero booking fees",
+                          "nodeId": "I5217:6705;5223:6722;5223:6655;5221:18",
+                          "dimensions": {
+                            "width": 127,
+                            "height": 16
+                          },
+                          "type": "text",
+                          "content": "Zero booking fees",
+                          "typography": {
+                            "fontSize": 14,
+                            "fontWeight": 600,
+                            "lineHeightPx": 16
+                          }
+                        },
+                        {
+                          "name": "Pay once. Keep every margin.",
+                          "nodeId": "I5217:6705;5223:6722;5223:6655;5221:19",
+                          "dimensions": {
+                            "width": 168,
+                            "height": 17
+                          },
+                          "type": "text",
+                          "content": "Pay once. Keep every margin.",
+                          "typography": {
+                            "fontSize": 12,
+                            "fontWeight": 400,
+                            "lineHeightPx": 17
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "BenefitCard",
+                  "nodeId": "I5217:6705;5223:6722;5223:6661",
+                  "dimensions": {
+                    "width": 422,
+                    "height": 77
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": "10px",
+                    "padding": {
+                      "x": "18px",
+                      "y": "18px"
+                    },
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8547"
+                    },
+                    "fills": [
+                      {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:3003:14"
+                      }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:3003:29"
+                      }
+                    ]
+                  },
+                  "instanceVariants": {
+                    "Type": "WhiteLabel"
+                  },
+                  "layers": [
+                    {
+                      "name": "icon2",
+                      "nodeId": "I5217:6705;5223:6722;5223:6661;5217:5939",
+                      "dimensions": {
+                        "width": 40,
+                        "height": 40
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          }
+                        }
+                      },
+                      "layers": [
+                        {
+                          "name": "Frame 2095585136",
+                          "nodeId": "I5217:6705;5223:6722;5223:6661;5217:5940",
+                          "dimensions": {
+                            "width": 18,
+                            "height": 18
+                          },
+                          "boundVariables": {
+                            "itemSpacing": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingLeft": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingTop": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingRight": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingBottom": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "rectangleCornerRadii": {
+                              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              }
+                            }
+                          },
+                          "layers": [
+                            {
+                              "name": "Frame 2095585134",
+                              "nodeId": "I5217:6705;5223:6722;5223:6661;5217:5941",
+                              "dimensions": {
+                                "width": 16,
+                                "height": 14
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "text-col",
+                      "nodeId": "I5217:6705;5223:6722;5223:6661;5221:23",
+                      "dimensions": {
+                        "width": 230,
+                        "height": 41
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": "8px"
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8546"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          }
+                        }
+                      },
+                      "layers": [
+                        {
+                          "name": "Full white-label",
+                          "nodeId": "I5217:6705;5223:6722;5223:6661;5221:24",
+                          "dimensions": {
+                            "width": 108,
+                            "height": 16
+                          },
+                          "type": "text",
+                          "content": "Full white-label",
+                          "typography": {
+                            "fontSize": 14,
+                            "fontWeight": 600,
+                            "lineHeightPx": 16
+                          }
+                        },
+                        {
+                          "name": "Your brand on every screen and domain.",
+                          "nodeId": "I5217:6705;5223:6722;5223:6661;5221:25",
+                          "dimensions": {
+                            "width": 230,
+                            "height": 17
+                          },
+                          "type": "text",
+                          "content": "Your brand on every screen and domain.",
+                          "typography": {
+                            "fontSize": 12,
+                            "fontWeight": 400,
+                            "lineHeightPx": 17
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "BenefitCard",
+                  "nodeId": "I5217:6705;5223:6722;5223:6667",
+                  "dimensions": {
+                    "width": 422,
+                    "height": 77
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": "10px",
+                    "padding": {
+                      "x": "18px",
+                      "y": "18px"
+                    },
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "itemSpacing": {
+                      "type": "VARIABLE_ALIAS",
+                      "id": "VariableID:5425:8547"
+                    },
+                    "fills": [
+                      {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:3003:14"
+                      }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:3003:29"
+                      }
+                    ]
+                  },
+                  "instanceVariants": {
+                    "Type": "MultiGDS"
+                  },
+                  "layers": [
+                    {
+                      "name": "icon3",
+                      "nodeId": "I5217:6705;5223:6722;5223:6667;5217:5952",
+                      "dimensions": {
+                        "width": 40,
+                        "height": 40
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8561"
+                          }
+                        }
+                      },
+                      "layers": [
+                        {
+                          "name": "Frame 2095585135",
+                          "nodeId": "I5217:6705;5223:6722;5223:6667;5217:5953",
+                          "dimensions": {
+                            "width": 18,
+                            "height": 18
+                          },
+                          "boundVariables": {
+                            "itemSpacing": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingLeft": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingTop": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingRight": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "paddingBottom": {
+                              "type": "VARIABLE_ALIAS",
+                              "id": "VariableID:5425:8541"
+                            },
+                            "rectangleCornerRadii": {
+                              "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              },
+                              "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                "type": "VARIABLE_ALIAS",
+                                "id": "VariableID:5425:8556"
+                              }
+                            }
+                          },
+                          "layers": [
+                            {
+                              "name": "Frame 2095585134",
+                              "nodeId": "I5217:6705;5223:6722;5223:6667;5217:5954",
+                              "dimensions": {
+                                "width": 16,
+                                "height": 14
+                              },
+                              "boundVariables": {
+                                "itemSpacing": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingLeft": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingTop": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingRight": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "paddingBottom": {
+                                  "type": "VARIABLE_ALIAS",
+                                  "id": "VariableID:5425:8541"
+                                },
+                                "rectangleCornerRadii": {
+                                  "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  },
+                                  "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                    "type": "VARIABLE_ALIAS",
+                                    "id": "VariableID:5425:8556"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "text-col",
+                      "nodeId": "I5217:6705;5223:6722;5223:6667;5221:29",
+                      "dimensions": {
+                        "width": 201,
+                        "height": 41
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": "8px"
+                      },
+                      "boundVariables": {
+                        "itemSpacing": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8546"
+                        },
+                        "paddingLeft": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingTop": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingRight": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "paddingBottom": {
+                          "type": "VARIABLE_ALIAS",
+                          "id": "VariableID:5425:8541"
+                        },
+                        "rectangleCornerRadii": {
+                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          },
+                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:5425:8556"
+                          }
+                        }
+                      },
+                      "layers": [
+                        {
+                          "name": "Multi-GDS search",
+                          "nodeId": "I5217:6705;5223:6722;5223:6667;5221:30",
+                          "dimensions": {
+                            "width": 125,
+                            "height": 16
+                          },
+                          "type": "text",
+                          "content": "Multi-GDS search",
+                          "typography": {
+                            "fontSize": 14,
+                            "fontWeight": 600,
+                            "lineHeightPx": 16
+                          }
+                        },
+                        {
+                          "name": "All sources simultaneously, one list.",
+                          "nodeId": "I5217:6705;5223:6722;5223:6667;5221:31",
+                          "dimensions": {
+                            "width": 201,
+                            "height": 17
+                          },
+                          "type": "text",
+                          "content": "All sources simultaneously, one list.",
+                          "typography": {
+                            "fontSize": 12,
+                            "fontWeight": 400,
+                            "lineHeightPx": 17
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HowItWorksSection",
+      "nodeId": "5217:6812",
+      "dimensions": {
+        "width": 393,
+        "height": 946
+      },
+      "layout": {
+        "direction": "row",
+        "gap": "10px",
+        "padding": {
+          "x": "16px",
+          "y": "40px"
+        },
+        "align": "center"
+      },
+      "boundVariables": {
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3003:17"
+          }
+        ]
+      },
+      "layers": [
+        {
+          "name": "Frame 2095585161",
+          "nodeId": "5217:6813",
+          "dimensions": {
+            "width": 361,
+            "height": 866
+          },
+          "layout": {
+            "direction": "column",
+            "gap": "32px"
+          },
+          "layers": [
+            {
+              "name": "SectionHeader/HowItWorks",
+              "nodeId": "5217:6814",
+              "dimensions": {
+                "width": 361,
+                "height": 174
+              },
+              "layout": {
+                "direction": "column",
+                "gap": "16px",
+                "align": "center"
+              },
+              "layers": [
+                {
+                  "name": "SectionPill",
+                  "nodeId": "5217:6815",
+                  "dimensions": {
+                    "width": 139,
+                    "height": 30
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": "6px",
+                    "padding": {
+                      "x": "12px",
+                      "y": "8px"
+                    },
+                    "align": "center"
+                  },
+                  "boundVariables": {
+                    "strokes": [
+                      {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:3003:30"
+                      }
+                    ]
+                  },
+                  "layers": [
+                    {
+                      "name": "6-week Onboarding",
+                      "nodeId": "5217:6817",
+                      "dimensions": {
+                        "width": 102,
+                        "height": 14
+                      },
+                      "type": "text",
+                      "content": "6-week Onboarding",
+                      "typography": {
+                        "fontSize": 10,
+                        "fontWeight": 600,
+                        "lineHeightPx": 14
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "heading-block",
+                  "nodeId": "5217:6818",
+                  "dimensions": {
+                    "width": 361,
+                    "height": 128
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": "8px",
+                    "align": "center"
+                  },
+                  "layers": [
+                    {
+                      "name": "Live in 6 weeks. Here's exactly what happens.",
+                      "nodeId": "5217:6819",
+                      "dimensions": {
+                        "width": 361,
+                        "height": 80
+                      },
+                      "type": "text",
+                      "content": "Live in 6 weeks. Here's exactly what happens.",
+                      "typography": {
+                        "fontSize": 32,
+                        "fontWeight": 700,
+                        "lineHeightPx": 40
+                      }
+                    },
+                    {
+                      "name": "We handle the technical complexity. Your agents just search and book.",
+                      "nodeId": "5217:6820",
+                      "dimensions": {
+                        "width": 361,
+                        "height": 40
+                      },
+                      "type": "text",
+                      "content": "We handle the technical complexity. Your agents just search and book.",
+                      "typography": {
+                        "fontSize": 14,
+                        "fontWeight": 400,
+                        "lineHeightPx": 20
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Frame 2095585160",
+              "nodeId": "5217:6821",
+              "dimensions": {
+                "width": 361,
+                "height": 660
+              },
+              "layout": {
+                "direction": "row",
+                "gap": "6px",
+                "align": "center",
+                "justify": "space-between"
+              },
+              "widgets": [
+                {
+                  "name": "Frame 2095585132",
+                  "nodeId": "5217:6822",
+                  "dimensions": {
+                    "width": 10,
+                    "height": 660
+                  },
+                  "layers": [
+                    {
+                      "name": "Rectangle",
+                      "nodeId": "5217:6823",
+                      "dimensions": {
+                        "width": 2,
+                        "height": 660
+                      }
+                    },
+                    {
+                      "name": "Frame 2095585131",
+                      "nodeId": "5217:6824",
+                      "dimensions": {
+                        "width": 10,
+                        "height": 508
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": "156px",
+                        "align": "center"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Frame 2095585130",
+                  "nodeId": "5217:6829",
+                  "dimensions": {
+                    "width": 345,
+                    "height": 660
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": "20px",
+                    "align": "center"
+                  },
+                  "layers": [
+                    {
+                      "name": "card-content",
+                      "nodeId": "5217:6830",
+                      "dimensions": {
+                        "width": 345,
+                        "height": 150
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": "8px",
+                        "padding": {
+                          "x": "16px",
+                          "y": "20px"
+                        }
+                      },
+                      "boundVariables": {
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:14"
+                          }
+                        ],
+                        "strokes": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:29"
+                          }
+                        ]
+                      },
+                      "layers": [
+                        {
+                          "name": "Frame 2095585149",
+                          "nodeId": "5217:6831",
+                          "dimensions": {
+                            "width": 329,
+                            "height": 110
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": "8px"
+                          },
+                          "layers": [
+                            {
+                              "name": "Frame",
+                              "nodeId": "5217:6832",
+                              "dimensions": {
+                                "width": 47,
+                                "height": 20
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": "10px",
+                                "padding": {
+                                  "x": "8px",
+                                  "y": "5px"
+                                },
+                                "align": "center"
+                              },
+                              "layers": [
+                                {
+                                  "name": "WEEK 1",
+                                  "nodeId": "5217:6833",
+                                  "dimensions": {
+                                    "width": 35,
+                                    "height": 10
+                                  },
+                                  "type": "text",
+                                  "content": "WEEK 1",
+                                  "typography": {
+                                    "fontSize": 8,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 10
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 2095585133",
+                              "nodeId": "5217:6834",
+                              "dimensions": {
+                                "width": 329,
+                                "height": 82
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": "6px"
+                              },
+                              "layers": [
+                                {
+                                  "name": "Frame 2095585130",
+                                  "nodeId": "5217:6835",
+                                  "dimensions": {
+                                    "width": 329,
+                                    "height": 82
+                                  },
+                                  "layout": {
+                                    "direction": "column",
+                                    "gap": "12px"
+                                  },
+                                  "layers": [
+                                    {
+                                      "name": "GDS & NDC Integration",
+                                      "nodeId": "5217:6836",
+                                      "dimensions": {
+                                        "width": 329,
+                                        "height": 22
+                                      },
+                                      "type": "text",
+                                      "content": "GDS & NDC Integration",
+                                      "typography": {
+                                        "fontSize": 16,
+                                        "fontWeight": 700,
+                                        "lineHeightPx": 22
+                                      }
+                                    },
+                                    {
+                                      "name": "accent-bar",
+                                      "nodeId": "5217:6837",
+                                      "dimensions": {
+                                        "width": 64,
+                                        "height": 4
+                                      }
+                                    },
+                                    {
+                                      "name": "We connect to your existing contracts. All sources live and tested.",
+                                      "nodeId": "5217:6838",
+                                      "dimensions": {
+                                        "width": 329,
+                                        "height": 32
+                                      },
+                                      "type": "text",
+                                      "content": "We connect to your existing contracts. All sources live and tested.",
+                                      "typography": {
+                                        "fontSize": 12,
+                                        "fontWeight": 400,
+                                        "lineHeightPx": 16
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "card-content",
+                      "nodeId": "5217:6839",
+                      "dimensions": {
+                        "width": 345,
+                        "height": 150
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": "8px",
+                        "padding": {
+                          "x": "16px",
+                          "y": "20px"
+                        }
+                      },
+                      "boundVariables": {
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:14"
+                          }
+                        ],
+                        "strokes": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:29"
+                          }
+                        ]
+                      },
+                      "layers": [
+                        {
+                          "name": "Frame 2095585149",
+                          "nodeId": "5217:6840",
+                          "dimensions": {
+                            "width": 329,
+                            "height": 110
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": "8px"
+                          },
+                          "layers": [
+                            {
+                              "name": "Frame",
+                              "nodeId": "5217:6841",
+                              "dimensions": {
+                                "width": 63,
+                                "height": 20
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": "10px",
+                                "padding": {
+                                  "x": "8px",
+                                  "y": "5px"
+                                },
+                                "align": "center"
+                              },
+                              "layers": [
+                                {
+                                  "name": "WEEK 2-3",
+                                  "nodeId": "5217:6842",
+                                  "dimensions": {
+                                    "width": 47,
+                                    "height": 10
+                                  },
+                                  "type": "text",
+                                  "content": "WEEK 2-3",
+                                  "typography": {
+                                    "fontSize": 8,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 10
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 2095585133",
+                              "nodeId": "5217:6843",
+                              "dimensions": {
+                                "width": 329,
+                                "height": 82
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": "6px"
+                              },
+                              "layers": [
+                                {
+                                  "name": "Frame 2095585130",
+                                  "nodeId": "5217:6844",
+                                  "dimensions": {
+                                    "width": 329,
+                                    "height": 82
+                                  },
+                                  "layout": {
+                                    "direction": "column",
+                                    "gap": "12px"
+                                  },
+                                  "layers": [
+                                    {
+                                      "name": "Platform Build & Brand",
+                                      "nodeId": "5217:6845",
+                                      "dimensions": {
+                                        "width": 329,
+                                        "height": 22
+                                      },
+                                      "type": "text",
+                                      "content": "Platform Build & Brand",
+                                      "typography": {
+                                        "fontSize": 16,
+                                        "fontWeight": 700,
+                                        "lineHeightPx": 22
+                                      }
+                                    },
+                                    {
+                                      "name": "accent-bar",
+                                      "nodeId": "5217:6846",
+                                      "dimensions": {
+                                        "width": 64,
+                                        "height": 4
+                                      }
+                                    },
+                                    {
+                                      "name": "White-label applied. Your logo, branding, and domain configured.",
+                                      "nodeId": "5217:6847",
+                                      "dimensions": {
+                                        "width": 329,
+                                        "height": 32
+                                      },
+                                      "type": "text",
+                                      "content": "White-label applied. Your logo, branding, and domain configured.",
+                                      "typography": {
+                                        "fontSize": 12,
+                                        "fontWeight": 400,
+                                        "lineHeightPx": 16
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "card-content",
+                      "nodeId": "5217:6848",
+                      "dimensions": {
+                        "width": 345,
+                        "height": 150
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": "8px",
+                        "padding": {
+                          "x": "16px",
+                          "y": "20px"
+                        }
+                      },
+                      "boundVariables": {
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:14"
+                          }
+                        ],
+                        "strokes": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:29"
+                          }
+                        ]
+                      },
+                      "layers": [
+                        {
+                          "name": "Frame 2095585149",
+                          "nodeId": "5217:6849",
+                          "dimensions": {
+                            "width": 329,
+                            "height": 110
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": "8px"
+                          },
+                          "layers": [
+                            {
+                              "name": "Frame",
+                              "nodeId": "5217:6850",
+                              "dimensions": {
+                                "width": 63,
+                                "height": 20
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": "10px",
+                                "padding": {
+                                  "x": "8px",
+                                  "y": "5px"
+                                },
+                                "align": "center"
+                              },
+                              "layers": [
+                                {
+                                  "name": "WEEK 4-5",
+                                  "nodeId": "5217:6851",
+                                  "dimensions": {
+                                    "width": 47,
+                                    "height": 10
+                                  },
+                                  "type": "text",
+                                  "content": "WEEK 4-5",
+                                  "typography": {
+                                    "fontSize": 8,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 10
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 2095585133",
+                              "nodeId": "5217:6852",
+                              "dimensions": {
+                                "width": 329,
+                                "height": 82
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": "6px"
+                              },
+                              "layers": [
+                                {
+                                  "name": "Frame 2095585130",
+                                  "nodeId": "5217:6853",
+                                  "dimensions": {
+                                    "width": 329,
+                                    "height": 82
+                                  },
+                                  "layout": {
+                                    "direction": "column",
+                                    "gap": "12px"
+                                  },
+                                  "layers": [
+                                    {
+                                      "name": "Testing & QA",
+                                      "nodeId": "5217:6854",
+                                      "dimensions": {
+                                        "width": 329,
+                                        "height": 22
+                                      },
+                                      "type": "text",
+                                      "content": "Testing & QA",
+                                      "typography": {
+                                        "fontSize": 16,
+                                        "fontWeight": 700,
+                                        "lineHeightPx": 22
+                                      }
+                                    },
+                                    {
+                                      "name": "accent-bar",
+                                      "nodeId": "5217:6855",
+                                      "dimensions": {
+                                        "width": 64,
+                                        "height": 4
+                                      }
+                                    },
+                                    {
+                                      "name": "All fare sources validated. Full booking flow tested end-to-end.",
+                                      "nodeId": "5217:6856",
+                                      "dimensions": {
+                                        "width": 329,
+                                        "height": 32
+                                      },
+                                      "type": "text",
+                                      "content": "All fare sources validated. Full booking flow tested end-to-end.",
+                                      "typography": {
+                                        "fontSize": 12,
+                                        "fontWeight": 400,
+                                        "lineHeightPx": 16
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "card-content",
+                      "nodeId": "5217:6857",
+                      "dimensions": {
+                        "width": 345,
+                        "height": 150
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": "8px",
+                        "padding": {
+                          "x": "16px",
+                          "y": "20px"
+                        }
+                      },
+                      "boundVariables": {
+                        "fills": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:14"
+                          }
+                        ],
+                        "strokes": [
+                          {
+                            "type": "VARIABLE_ALIAS",
+                            "id": "VariableID:3003:29"
+                          }
+                        ]
+                      },
+                      "layers": [
+                        {
+                          "name": "Frame 2095585149",
+                          "nodeId": "5217:6858",
+                          "dimensions": {
+                            "width": 329,
+                            "height": 110
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": "8px"
+                          },
+                          "layers": [
+                            {
+                              "name": "Frame",
+                              "nodeId": "5217:6859",
+                              "dimensions": {
+                                "width": 52,
+                                "height": 20
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": "10px",
+                                "padding": {
+                                  "x": "8px",
+                                  "y": "5px"
+                                },
+                                "align": "center"
+                              },
+                              "layers": [
+                                {
+                                  "name": "WEEK 6",
+                                  "nodeId": "5217:6860",
+                                  "dimensions": {
+                                    "width": 36,
+                                    "height": 10
+                                  },
+                                  "type": "text",
+                                  "content": "WEEK 6",
+                                  "typography": {
+                                    "fontSize": 8,
+                                    "fontWeight": 700,
+                                    "lineHeightPx": 10
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 2095585133",
+                              "nodeId": "5217:6861",
+                              "dimensions": {
+                                "width": 329,
+                                "height": 82
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": "6px"
+                              },
+                              "layers": [
+                                {
+                                  "name": "Frame 2095585130",
+                                  "nodeId": "5217:6862",
+                                  "dimensions": {
+                                    "width": 329,
+                                    "height": 82
+                                  },
+                                  "layout": {
+                                    "direction": "column",
+                                    "gap": "12px"
+                                  },
+                                  "layers": [
+                                    {
+                                      "name": "Go Live 🚀",
+                                      "nodeId": "5217:6863",
+                                      "dimensions": {
+                                        "width": 329,
+                                        "height": 22
+                                      },
+                                      "type": "text",
+                                      "content": "Go Live 🚀",
+                                      "typography": {
+                                        "fontSize": 16,
+                                        "fontWeight": 700,
+                                        "lineHeightPx": 22
+                                      }
+                                    },
+                                    {
+                                      "name": "AccentBar",
+                                      "nodeId": "5217:6864",
+                                      "dimensions": {
+                                        "width": 64,
+                                        "height": 4
+                                      },
+                                      "boundVariables": {
+                                        "itemSpacing": {
+                                          "type": "VARIABLE_ALIAS",
+                                          "id": "VariableID:5425:8541"
+                                        },
+                                        "paddingLeft": {
+                                          "type": "VARIABLE_ALIAS",
+                                          "id": "VariableID:5425:8541"
+                                        },
+                                        "paddingTop": {
+                                          "type": "VARIABLE_ALIAS",
+                                          "id": "VariableID:5425:8541"
+                                        },
+                                        "paddingRight": {
+                                          "type": "VARIABLE_ALIAS",
+                                          "id": "VariableID:5425:8541"
+                                        },
+                                        "paddingBottom": {
+                                          "type": "VARIABLE_ALIAS",
+                                          "id": "VariableID:5425:8541"
+                                        },
+                                        "rectangleCornerRadii": {
+                                          "RECTANGLE_TOP_LEFT_CORNER_RADIUS": {
+                                            "type": "VARIABLE_ALIAS",
+                                            "id": "VariableID:5425:8564"
+                                          },
+                                          "RECTANGLE_TOP_RIGHT_CORNER_RADIUS": {
+                                            "type": "VARIABLE_ALIAS",
+                                            "id": "VariableID:5425:8564"
+                                          },
+                                          "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS": {
+                                            "type": "VARIABLE_ALIAS",
+                                            "id": "VariableID:5425:8564"
+                                          },
+                                          "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS": {
+                                            "type": "VARIABLE_ALIAS",
+                                            "id": "VariableID:5425:8564"
+                                          }
+                                        },
+                                        "fills": [
+                                          {
+                                            "type": "VARIABLE_ALIAS",
+                                            "id": "VariableID:3003:27"
+                                          }
+                                        ]
+                                      },
+                                      "instanceVariants": {
+                                        "Accent": "Navy"
+                                      }
+                                    },
+                                    {
+                                      "name": "Platform launches under your brand. 30-day support included.",
+                                      "nodeId": "5217:6865",
+                                      "dimensions": {
+                                        "width": 329,
+                                        "height": 32
+                                      },
+                                      "type": "text",
+                                      "content": "Platform launches under your brand. 30-day support included.",
+                                      "typography": {
+                                        "fontSize": 12,
+                                        "fontWeight": 400,
+                                        "lineHeightPx": 16
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }

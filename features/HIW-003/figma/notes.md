@@ -10,6 +10,7 @@
 | #18 | Hero | `5217:6699` | `5217:7073` → reuse `component.landing.hero` (`hiw-page`) | ✓ extracted |
 | #19 | Three-step teaser | reuse `5164:6567` / `5164:6690` | LP-001 cache | ✓ reuse (no HIW re-extract) |
 | #20 | Mid CTA | `5217:6701` | absent on mobile | ✓ extracted |
+| #21 | Six-week timeline | `5217:6705` | `5217:6812` | ✓ extracted |
 
 ## Slice 1 — Hero (#18)
 
@@ -111,6 +112,61 @@ Registry motion paths: `component.howItWorks.hero.motion.root`, `.headGroup`, `.
 | Copy | typography | 24/32 Satoshi Medium | `typography.heading.desktop.h3-sm` | YES |
 | Button/Primary | reuse | LP-001 | `HeroPrimaryCta` | YES |
 
+## Slice 4 — Six-week timeline (#21)
+
+| Item | Value |
+|------|-------|
+| Slice-root (desktop) | `5217:6705` SixWeekSection |
+| Slice-root (mobile) | `5217:6812` HowItWorksSection (mobile frame `5217:6715`) |
+| Reference PNGs | `reference-sixweeksection.png`, `reference-sixweeksection-mobile.png` |
+| Registry paths | 13 under `component.howItWorks.sixWeek.*` |
+| Motion | No `*-animation` twin / empty `interactions[]` on static slice — timeline motion deferred to fe-implement Track B if designer adds prototype |
+
+### Dual-source reconciliation
+
+| slice-root | REST | MCP | instanceVariants | action |
+|------------|------|-----|------------------|--------|
+| `5217:6705` | ✓ `5217-6705.json` | ✓ `get_design_context` | ✓ `SectionPill` Type=Onboarding; 4× `OnboardingCard` Week=1\|2-3\|4-5\|GoLive; `AccentBar` Navy/Teal; 3× `BenefitCard` Fees/WhiteLabel/MultiGDS; `TestimonialBlock` Variant=A | merged |
+| `5217:6812` | ✓ `5217-6812.json` | ✓ `get_design_context` | mobile cards are detached frames (no INSTANCE variants) | merged |
+
+### Token mapping (slice 4 — six-week)
+
+| Node path | Property | Figma value | Token used | Exact? |
+|-----------|----------|-------------|------------|--------|
+| OnboardingSection | padding-y | 40px | `spacing.40` | YES |
+| OnboardingSection | gap | 40px | `spacing.40` | YES |
+| OnboardingSection | background | subtle wash | `color.background.subtle` | YES |
+| SectionHeader | gap | 16px | `spacing.16` | YES |
+| heading-block | gap | 8px | `spacing.8` | YES |
+| Headline | typography | 40/52 Satoshi Bold | `typography.heading.desktop.h1` | YES |
+| Subcopy | typography | 16/24 Inter | `typography.body.desktop.md` | YES |
+| cards-wrap | gap | 24px | `spacing.24` | YES |
+| cards-wrap | padding-x | 60px | `spacing.60` | YES |
+| cards-row | gap | 20px | `spacing.20` | YES |
+| OnboardingCard | width | 314px | layout constant | YES |
+| OnboardingCard | radius | 20px | `radius.20` | YES |
+| card-content | padding | 16/24 | `spacing.16` / `spacing.24` | YES |
+| badge | padding | 5/8 | `spacing.5` / `spacing.8` | YES |
+| Week micro-tag | typography | 9/14 Inter Bold | `typography.label.desktop.micro` | YES |
+| Card title | typography | 18/24 Satoshi | `typography.heading.desktop.h4` | YES |
+| Card body | typography | 13/20 Inter | `typography.body.desktop.xs-sm` | YES |
+| Mobile stack | gap | 32px / 20px | `spacing.32` / `spacing.20` | YES |
+| Mobile headline | typography | 32/40 Satoshi | `typography.heading.mobile.h1` | YES |
+
+### Downloaded assets (slice 4)
+
+| Node ID | Node name | Type | File saved |
+|---------|-----------|------|------------|
+| `I5217:6705;5223:6674;5223:20` | timeline-track | svg | `public/icons/icon-timeline-track-desktop.svg` |
+| `5217:6824` | mobile progress line | svg | `public/icons/icon-timeline-progress-mobile.svg` |
+| `I5217:6705;5223:6722;5223:6655;5217:5928` | Fees icon | svg | `public/icons/icon-benefit-zero-fees.svg` |
+| `I5217:6705;5223:6722;5223:6661;5217:5941` | White-label icon | svg | `public/icons/icon-benefit-white-label.svg` |
+| `I5217:6705;5223:6722;5223:6667;5217:5954` | Multi-GDS icon | svg | `public/icons/icon-benefit-multi-gds.svg` |
+| `5217:5002` | Section pill dot | svg | `public/icons/icon-section-pill-dot.svg` (shared LP-001) |
+| `3171:23` / `3171:24` | Avatar glow/circle | svg | `public/icons/icon-avatar-glow.svg`, `icon-avatar-circle.svg` (shared) |
+
+Company logo slot (`logo-slot`) is **dynamic** — listed in `asset-manifest.json` as `dataSource: dynamic`.
+
 ## Missing tokens
 
-None for slice 1 — all measurements resolve to tokens in `reports/tokens-report.md`.
+None for slices 1–4 — measurements resolve to tokens in `reports/tokens-report.md`.

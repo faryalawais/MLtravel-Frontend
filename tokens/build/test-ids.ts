@@ -2903,7 +2903,20 @@ export const testIds = {
   "component.howItWorks.midCta.demoCta": "component-howItWorks-midCta-demoCta",
   "component.howItWorks.midCta.label": "component-howItWorks-midCta-label",
   "component.howItWorks.midCta.ctaIcon": "component-howItWorks-midCta-ctaIcon",
-  "component.howItWorks.midCta.graphic": "component-howItWorks-midCta-graphic"
+  "component.howItWorks.midCta.graphic": "component-howItWorks-midCta-graphic",
+  "component.howItWorks.sixWeek.root": "component-howItWorks-sixWeek-root",
+  "component.howItWorks.sixWeek.mobile": "component-howItWorks-sixWeek-mobile",
+  "component.howItWorks.sixWeek.onboardingSection": "component-howItWorks-sixWeek-onboardingSection",
+  "component.howItWorks.sixWeek.sectionHeader": "component-howItWorks-sixWeek-sectionHeader",
+  "component.howItWorks.sixWeek.sectionPill": "component-howItWorks-sixWeek-sectionPill",
+  "component.howItWorks.sixWeek.heading": "component-howItWorks-sixWeek-heading",
+  "component.howItWorks.sixWeek.subheading": "component-howItWorks-sixWeek-subheading",
+  "component.howItWorks.sixWeek.timelineTrack": "component-howItWorks-sixWeek-timelineTrack",
+  "component.howItWorks.sixWeek.weekCard1": "component-howItWorks-sixWeek-weekCard1",
+  "component.howItWorks.sixWeek.weekCard2": "component-howItWorks-sixWeek-weekCard2",
+  "component.howItWorks.sixWeek.weekCard3": "component-howItWorks-sixWeek-weekCard3",
+  "component.howItWorks.sixWeek.weekCard4": "component-howItWorks-sixWeek-weekCard4",
+  "component.howItWorks.sixWeek.socialProofStrip": "component-howItWorks-sixWeek-socialProofStrip"
 } as const;
 
 export type RegistryPath = keyof typeof testIds;
@@ -5890,6 +5903,21 @@ export const ids = {
         "label": "component-howItWorks-midCta-label",
         "ctaIcon": "component-howItWorks-midCta-ctaIcon",
         "graphic": "component-howItWorks-midCta-graphic"
+      },
+      "sixWeek": {
+        "root": "component-howItWorks-sixWeek-root",
+        "mobile": "component-howItWorks-sixWeek-mobile",
+        "onboardingSection": "component-howItWorks-sixWeek-onboardingSection",
+        "sectionHeader": "component-howItWorks-sixWeek-sectionHeader",
+        "sectionPill": "component-howItWorks-sixWeek-sectionPill",
+        "heading": "component-howItWorks-sixWeek-heading",
+        "subheading": "component-howItWorks-sixWeek-subheading",
+        "timelineTrack": "component-howItWorks-sixWeek-timelineTrack",
+        "weekCard1": "component-howItWorks-sixWeek-weekCard1",
+        "weekCard2": "component-howItWorks-sixWeek-weekCard2",
+        "weekCard3": "component-howItWorks-sixWeek-weekCard3",
+        "weekCard4": "component-howItWorks-sixWeek-weekCard4",
+        "socialProofStrip": "component-howItWorks-sixWeek-socialProofStrip"
       }
     }
   }

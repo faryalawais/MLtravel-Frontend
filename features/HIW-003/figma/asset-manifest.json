@@ -1,0 +1,86 @@
+{
+  "$meta": {
+    "feature": "HIW-003",
+    "frame": "5217:6697",
+    "figmaFileKey": "h6BqI1ZRMSJxR7jESNF0Ep",
+    "generatedAt": "2026-07-06"
+  },
+  "assets": [
+    {
+      "nodeId": "I5217:6705;5223:6674;5223:20",
+      "nodeName": "Desktop timeline track (dots + track)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5217:6705;5223:6674;5223:20&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-timeline-track-desktop.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "5217:6824",
+      "nodeName": "Mobile timeline progress line",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=5217:6824&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-timeline-progress-mobile.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5217:6705;5223:6722;5223:6655;5217:5928",
+      "nodeName": "BenefitCard Fees icon",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5217:6705;5223:6722;5223:6655;5217:5928&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-benefit-zero-fees.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5217:6705;5223:6722;5223:6661;5217:5941",
+      "nodeName": "BenefitCard WhiteLabel icon",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5217:6705;5223:6722;5223:6661;5217:5941&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-benefit-white-label.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5217:6705;5223:6722;5223:6667;5217:5954",
+      "nodeName": "BenefitCard MultiGDS icon",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5217:6705;5223:6722;5223:6667;5217:5954&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-benefit-multi-gds.svg",
+      "type": "svg",
+      "dataSource": "static"
+    },
+    {
+      "nodeId": "I5217:6705;5223:6674;5223:10;5151:13131;5217:5002",
+      "nodeName": "Section pill dot (Onboarding)",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=5217:5002&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-section-pill-dot.svg",
+      "type": "svg",
+      "dataSource": "static",
+      "note": "Shared with LP-001 SectionPill; master 5217:5002."
+    },
+    {
+      "nodeId": "I5217:6705;5223:6722;5217:6114;5159:26;5159:14;3171:23",
+      "nodeName": "Testimonial avatar glow",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=3171:23&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-avatar-glow.svg",
+      "type": "svg",
+      "dataSource": "static",
+      "note": "Shared with LP-001 social proof."
+    },
+    {
+      "nodeId": "I5217:6705;5223:6722;5217:6114;5159:26;5159:14;3171:24",
+      "nodeName": "Testimonial avatar circle",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=3171:24&format=svg&svg_include_id=true",
+      "localPath": "public/icons/icon-avatar-circle.svg",
+      "type": "svg",
+      "dataSource": "static",
+      "note": "Shared with LP-001 social proof."
+    },
+    {
+      "nodeId": "I5217:6705;5223:6722;5217:6114;5159:23;5158:14",
+      "nodeName": "Testimonial company logo slot",
+      "figmaUrl": "https://api.figma.com/v1/images/h6BqI1ZRMSJxR7jESNF0Ep?ids=I5217:6705;5223:6722;5217:6114;5159:23;5158:14&format=png&scale=2",
+      "localPath": "public/images/testimonial-logo-placeholder.png",
+      "type": "png",
+      "dataSource": "dynamic",
+      "note": "Figma shows example raster; runtime logo is agency-specific."
+    }
+  ]
+}
