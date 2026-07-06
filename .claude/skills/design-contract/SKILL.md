@@ -518,3 +518,16 @@ feature's `design_contract` field in `backlog.yaml`, and advance its `status`
   `components[]` entry; `timing.designerConfirmed: true` for all; 
   `npm run validate:motion-spec -- <id>` exits 0.
 - Backlog status is `contracted`.
+
+## Step final — Commit (mandatory)
+
+After Checkpoint B exits 0 and `status: contracted` is written:
+
+```bash
+git rev-parse --abbrev-ref HEAD   # must be feature/<fe-jira-id>
+git add features/<id>/contract.md features/<id>/memory.md features/backlog.yaml
+git commit -m "chore(<id>): design-contract"
+```
+
+If Step 0 created the branch, this is the first commit on that branch. See
+`skills/_shared/pipeline-git-commit.md`.
