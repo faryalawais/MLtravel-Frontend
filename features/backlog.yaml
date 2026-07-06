@@ -1,7 +1,7 @@
 # features/backlog.yaml
 # One parent feature per page → feature-split → .1 API / .2 UI
 #
-# LP-001 Landing · F-002 Contact · F-003 How It Works
+# LP-001 Landing · CP-002 Contact Us · F-003 How It Works
 # Shared: design tokens (tokens/), Navbar/Footer from LP-001
 #
 # START: /grill-me per feature, then prd-author per feature
@@ -18,16 +18,16 @@ features:
       value proposition so I can decide whether to book a demo.
     acceptance_criteria:
       - "Guest can view the full landing page matching Figma at desktop and mobile breakpoints"
-      - "Navbar links to /contact (F-002) and /how-it-works (F-003) routes"
+      - "Navbar links to /contact (CP-002) and /how-it-works (F-003) routes"
       - "Hero CTA navigates to /contact"
       - "All sections render: hero, problem, comparison, how-it-works, features, social proof, pricing, footer"
       - "Each slice ships desktop + mobile together; motion per MOTION-SPEC where Figma shows it"
       - "Layout uses design tokens only — no raw hex or px"
-      - "Shared Navbar and Footer reused on F-002 and F-003 — no duplicate components"
+      - "Shared Navbar and Footer reused on CP-002 and F-003 — no duplicate components"
       - "Strict pixel match to Figma; spacing targets post-design Figma updates"
       - "MUST feature-split → LP-001.1 API (health stub), LP-001.2 UI"
     priority: 1
-    status: fe-implemented
+    status: contracted
     design_contract: features/LP-001/contract.md
     depends_on: []
     figma_frames:
@@ -49,26 +49,27 @@ features:
       - "component.navbar.*"
       - "component.footer.*"
 
-  - id: F-002
-    title: "Contact — demo booking flow"
-    persona: Travel agency decision-maker
+  - id: CP-002
+    title: "Contact Us — Calendly demo booking"
+    persona: Every visitor
     slice: parent
     story: >-
-      As a prospect I want to pick a day and time for a live demo so I can
-      see the platform without committing to a contract.
+      As a visitor I want to book a live demo via Calendly embeds on the
+      Contact Us page so I can schedule without sales back-and-forth.
     acceptance_criteria:
-      - "Guest can complete the 4-step flow: choose day → choose hour → details → summary"
+      - "Guest can complete the booking flow: choose date/time → hours → details → summary"
+      - "Calendly iframe embeds power scheduling; page chrome matches Figma"
       - "Each step matches the corresponding Figma frame"
-      - "Form validation on details step (name, email required)"
-      - "MUST feature-split → F-002.1 API (if any), F-002.2 UI"
+      - "MUST feature-split → CP-002.1 API (if any), CP-002.2 UI"
     priority: 2
-    status: pending
+    status: contracted
+    design_contract: features/CP-002/contract.md
     depends_on: [LP-001]
     figma_frames:
-      - { name: "Choose day", node_id: "5185:4332" }
+      - { name: "Choose day (canonical layout)", node_id: "5185:4332" }
       - { name: "Choose hour", node_id: "5186:4533" }
       - { name: "Details", node_id: "5186:4857" }
-      - { name: "Summary", node_id: "5198:4102" }
+      - { name: "Summary (Calendly copy ref)", node_id: "5198:4102" }
     registry_roots:
       - "screen.contact.*"
       - "component.contact.*"
@@ -83,7 +84,7 @@ features:
     acceptance_criteria:
       - "Guest can view the how-it-works page matching HIW-Desktop"
       - "FAQ section expands and collapses"
-      - "Mid-page and final CTAs link to contact / demo booking (F-002)"
+      - "Mid-page and final CTAs link to contact / demo booking (CP-002)"
       - "MUST feature-split → F-003.1 API (if any), F-003.2 UI"
     priority: 3
     status: pending
