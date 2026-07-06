@@ -167,6 +167,7 @@ Slices #19–#25 append in later contract passes after figma-extract per slice.
 - GH#19 patch: onboarding note visible on HIW route; `HiwFooterMotionSlot` reserves space during cascade (overlap fix)
 - GH#20: `HowItWorksMidCtaSection` desktop band `5217:6701` + `HeroPrimaryCta` → `/contact`; hidden below `lg`
 - GH#21 figma-extract: `5217:6705` desktop + `5217:6812` mobile six-week timeline; `component.howItWorks.sixWeek` registry seeded
+- GH#21 design-contract: §2 anatomy + layout/tokens for six-week desktop/mobile; SocialProofStrip noted GH#22/23
 
 <!-- To be written by: be-implement -->
 
