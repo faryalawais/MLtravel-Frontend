@@ -528,9 +528,16 @@ slices without a review between each one.
 #### If the user says APPROVE
 
 - Mark the slice approved in conversation (and optionally note in `memory.md`).
+- **Step 7b — Commit approved slice (mandatory):**
+  ```bash
+  git add app/ components/ constants/ types/ features/<parent-id>/memory.md
+  git commit -m "feat(<fe-jira-id>-FE): implement <slice name> (GH#<N>)"
+  ```
 - Tell the user what the **next slice** is (next GitHub issue) and which skill
   to invoke first (`/figma-extract` for the new slice's nodes).
-- Do **not** auto-commit unless the user explicitly asks to commit and push.
+
+See `skills/_shared/pipeline-git-commit.md`. Pipeline commit steps override
+generic "only commit when asked" — APPROVE is the gate for per-slice commits.
 
 ### Step 8 — Write to memory
 ```markdown

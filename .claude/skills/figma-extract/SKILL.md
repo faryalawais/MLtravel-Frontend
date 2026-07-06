@@ -1094,3 +1094,17 @@ non-empty array of distinct lowerCamelCase strings.
 ## Failure handling
 If the Figma MCP is unavailable, or the file/frame URL is wrong, **stop and
 report**. Do not invent measurements, tokens, or images.
+
+## Step final — Commit (mandatory)
+
+After success criteria pass, on `feature/<fe-jira-id>` (create via `design-contract`
+if this is the first FE skill and branch does not exist yet — see `design-contract`
+Step 0):
+
+```bash
+git add features/<id>/figma/ features/<id>/memory.md
+git commit -m "chore(<id>): figma-extract <slice-name or feature>"
+```
+
+See `skills/_shared/pipeline-git-commit.md` for branch rules. Do not leave extract
+artifacts uncommitted.
