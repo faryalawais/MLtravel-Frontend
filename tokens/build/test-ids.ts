@@ -68,6 +68,16 @@ export const testIds = {
   "component.footer.mobile.navCols": "component-footer-mobile-navCols",
   "component.footer.mobile.bottomRow": "component-footer-mobile-bottomRow",
   "component.footer.motion.root": "component-footer-motion-root",
+  "component.contact.hero.root": "component-contact-hero-root",
+  "component.contact.hero.heading": "component-contact-hero-heading",
+  "component.contact.hero.subhead": "component-contact-hero-subhead",
+  "component.contact.embed.root": "component-contact-embed-root",
+  "component.contact.embedSkeleton.root": "component-contact-embedSkeleton-root",
+  "component.contact.embedFallback.root": "component-contact-embedFallback-root",
+  "component.contact.fallback.root": "component-contact-fallback-root",
+  "component.contact.fallback.heading": "component-contact-fallback-heading",
+  "component.contact.fallback.body": "component-contact-fallback-body",
+  "component.contact.fallback.emailCta": "component-contact-fallback-emailCta",
   "component.landing.hero.root": "component-landing-hero-root",
   "component.landing.hero.heroTop": "component-landing-hero-heroTop",
   "component.landing.hero.textBlock": "component-landing-hero-textBlock",
@@ -2923,6 +2933,28 @@ export const ids = {
       },
       "motion": {
         "root": "component-footer-motion-root"
+      }
+    },
+    "contact": {
+      "hero": {
+        "root": "component-contact-hero-root",
+        "heading": "component-contact-hero-heading",
+        "subhead": "component-contact-hero-subhead"
+      },
+      "embed": {
+        "root": "component-contact-embed-root"
+      },
+      "embedSkeleton": {
+        "root": "component-contact-embedSkeleton-root"
+      },
+      "embedFallback": {
+        "root": "component-contact-embedFallback-root"
+      },
+      "fallback": {
+        "root": "component-contact-fallback-root",
+        "heading": "component-contact-fallback-heading",
+        "body": "component-contact-fallback-body",
+        "emailCta": "component-contact-fallback-emailCta"
       }
     },
     "landing": {

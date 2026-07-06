@@ -76,6 +76,16 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.footer.mobile.navCols` | Footer mobile nav columns | `screen.landing.home` | `default` | `component-footer-mobile-navCols` |
 | `component.footer.mobile.bottomRow` | Footer mobile bottom row | `screen.landing.home` | `default` | `component-footer-mobile-bottomRow` |
 | `component.footer.motion.root` | Footer motion prototype (Gherkin: motion matches 5164:10371) | `screen.landing.home` | `default`, `hover` | `component-footer-motion-root` |
+| `component.contact.hero.root` | Contact hero headline + subhead (Gherkin: component.contact.hero) | `screen.contact.page` | `default` | `component-contact-hero-root` |
+| `component.contact.hero.heading` | Contact hero headline | `screen.contact.page` | `default` | `component-contact-hero-heading` |
+| `component.contact.hero.subhead` | Contact hero subhead | `screen.contact.page` | `default` | `component-contact-hero-subhead` |
+| `component.contact.embed.root` | Calendly embed container — iframe slot (Gherkin: component.contact.embed) | `screen.contact.page` | `loading`, `loaded`, `error` | `component-contact-embed-root` |
+| `component.contact.embedSkeleton.root` | Embed loading skeleton (Gherkin: component.contact.embedSkeleton) | `screen.contact.page` | `visible`, `hidden` | `component-contact-embedSkeleton-root` |
+| `component.contact.embedFallback.root` | Embed error / unset-URL fallback (Gherkin: component.contact.embedFallback) | `screen.contact.page` | `default` | `component-contact-embedFallback-root` |
+| `component.contact.fallback.root` | Email fallback block below embed (Gherkin: component.contact.fallback) | `screen.contact.page` | `default` | `component-contact-fallback-root` |
+| `component.contact.fallback.heading` | Fallback block heading | `screen.contact.page` | `default` | `component-contact-fallback-heading` |
+| `component.contact.fallback.body` | Fallback block body copy | `screen.contact.page` | `default` | `component-contact-fallback-body` |
+| `component.contact.fallback.emailCta` | Fallback email CTA button (Gherkin: component.contact.fallback email cta) | `screen.contact.page` | `default`, `hover`, `focused` | `component-contact-fallback-emailCta` |
 | `component.landing.hero.root` | Hero section desktop (Gherkin: component.landing.hero) | `screen.landing.home` | `default`, `hover` | `component-landing-hero-root` |
 | `component.landing.hero.heroTop` | Hero top row — copy + product image | `screen.landing.home` | `default` | `component-landing-hero-heroTop` |
 | `component.landing.hero.textBlock` | Hero text block | `screen.landing.home` | `default` | `component-landing-hero-textBlock` |
@@ -104,8 +114,8 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.landing.hero.mobile.cta` | Mobile primary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-hero-mobile-cta` |
 | `component.landing.hero.motion.root` | Hero motion prototype (Gherkin: motion 5164:10343) | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-root` |
 | `component.landing.hero.motion.cta` | Motion frame primary CTA | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-cta` |
-| `component.landing.hero.motion.textColumn` | Hero motion text column — Figma Frame 1561553827 | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-textColumn` |
-| `component.landing.hero.motion.ctaColumn` | Hero motion CTA column — Figma Frame 1561553830 | `screen.landing.home` | `default`, `hover` | `component-landing-hero-motion-ctaColumn` |
+| `component.landing.hero.motion.textColumn` | Hero motion text column (Frame 1561553827) | `screen.landing.home` | `default` | `component-landing-hero-motion-textColumn` |
+| `component.landing.hero.motion.ctaColumn` | Hero motion CTA column (Frame 1561553830) | `screen.landing.home` | `default` | `component-landing-hero-motion-ctaColumn` |
 | `component.landing.problem.root` | Problem section desktop (Gherkin: component.landing.problem) | `screen.landing.home` | `default`, `hover` | `component-landing-problem-root` |
 | `component.landing.problem.outerFrame` | Problem outer layout frame | `screen.landing.home` | `default` | `component-landing-problem-outerFrame` |
 | `component.landing.problem.innerFrame` | Problem inner layout frame | `screen.landing.home` | `default` | `component-landing-problem-innerFrame` |

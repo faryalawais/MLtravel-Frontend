@@ -17,7 +17,13 @@
       "component.landing.featureGrid": "component.landing.featureGrid.root",
       "component.landing.socialProof": "component.landing.socialProof.root",
       "component.landing.pricing": "component.landing.pricing.root",
-      "component.footer": "component.footer.root"
+      "component.footer": "component.footer.root",
+      "component.contact.hero": "component.contact.hero.root",
+      "component.contact.embed": "component.contact.embed.root",
+      "component.contact.embedSkeleton": "component.contact.embedSkeleton.root",
+      "component.contact.embedFallback": "component.contact.embedFallback.root",
+      "component.contact.fallback": "component.contact.fallback.root",
+      "component.contact.fallback.emailCta": "component.contact.fallback.emailCta"
     }
   },
   "screen": {
@@ -28,7 +34,8 @@
     },
     "contact": {
       "page": {
-        "$description": "Contact / demo booking at /contact (Gherkin: screen.contact)"
+        "$description": "Contact / demo booking at /contact (Gherkin: screen.contact)",
+        "$figmaNode": "5185:4332"
       }
     },
     "howItWorks": {
@@ -563,6 +570,111 @@
         }
       }
     },
+    "contact": {
+      "hero": {
+        "root": {
+          "$description": "Contact hero headline + subhead (Gherkin: component.contact.hero)",
+          "$screen": "screen.contact.page",
+          "$figmaNode": "5198:3440",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "heading": {
+          "$description": "Contact hero headline",
+          "$screen": "screen.contact.page",
+          "$figmaNode": "5198:3444",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "subhead": {
+          "$description": "Contact hero subhead",
+          "$screen": "screen.contact.page",
+          "$figmaNode": "5198:3445",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        }
+      },
+      "embed": {
+        "root": {
+          "$description": "Calendly embed container — iframe slot (Gherkin: component.contact.embed)",
+          "$screen": "screen.contact.page",
+          "$figmaNode": "5186:4368",
+          "$states": [
+            "loading",
+            "loaded",
+            "error"
+          ],
+          "$tokens": {}
+        }
+      },
+      "embedSkeleton": {
+        "root": {
+          "$description": "Embed loading skeleton (Gherkin: component.contact.embedSkeleton)",
+          "$screen": "screen.contact.page",
+          "$states": [
+            "visible",
+            "hidden"
+          ],
+          "$tokens": {}
+        }
+      },
+      "embedFallback": {
+        "root": {
+          "$description": "Embed error / unset-URL fallback (Gherkin: component.contact.embedFallback)",
+          "$screen": "screen.contact.page",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        }
+      },
+      "fallback": {
+        "root": {
+          "$description": "Email fallback block below embed (Gherkin: component.contact.fallback)",
+          "$screen": "screen.contact.page",
+          "$figmaNode": "5198:3429",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "heading": {
+          "$description": "Fallback block heading",
+          "$screen": "screen.contact.page",
+          "$figmaNode": "5198:3431",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "body": {
+          "$description": "Fallback block body copy",
+          "$screen": "screen.contact.page",
+          "$figmaNode": "5198:3432",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "emailCta": {
+          "$description": "Fallback email CTA button (Gherkin: component.contact.fallback email cta)",
+          "$screen": "screen.contact.page",
+          "$figmaNode": "5198:3433",
+          "$states": [
+            "default",
+            "hover",
+            "focused"
+          ],
+          "$tokens": {}
+        }
+      }
+    },
     "landing": {
       "hero": {
         "root": {
@@ -827,24 +939,20 @@
             "$tokens": {}
           },
           "textColumn": {
-            "$description": "Hero motion text column — Figma Frame 1561553827",
+            "$description": "Hero motion text column (Frame 1561553827)",
             "$screen": "screen.landing.home",
             "$figmaNode": "I5164:10343;5132:5203",
-            "$figmaLayerName": "Frame 1561553827",
             "$states": [
-              "default",
-              "hover"
+              "default"
             ],
             "$tokens": {}
           },
           "ctaColumn": {
-            "$description": "Hero motion CTA column — Figma Frame 1561553830",
+            "$description": "Hero motion CTA column (Frame 1561553830)",
             "$screen": "screen.landing.home",
             "$figmaNode": "5132:5280",
-            "$figmaLayerName": "Frame 1561553830",
             "$states": [
-              "default",
-              "hover"
+              "default"
             ],
             "$tokens": {}
           }
