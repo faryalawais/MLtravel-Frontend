@@ -97,6 +97,11 @@ export interface HiwFooterLinkProps {
   motionEngaged?: boolean;
 }
 
+export interface HowItWorksTeaserSectionProps {
+  /** When false, hides the “Read the full breakdown” footer (HIW page). */
+  showFooterLink?: boolean;
+}
+
 /** Landing page — comparison first section */
 export type ComparisonRowAccent = 'danger' | 'success' | 'navy' | 'orange';
 

@@ -251,4 +251,14 @@ HIWHeroSection  (nodeId 5217:6699, 1440×504)  [component.howItWorks.hero]  data
 
 ---
 
-> **Next contract append:** GH#19 three-step teaser (reuse `component.landing.howItWorksTeaser`) after `figma-extract` slice 2.
+> **Next contract append:** GH#20 mid CTA after `figma-extract` slice 3.
+
+### GH#19 — Three-step teaser (reuse)
+
+| Item | Value |
+|------|-------|
+| Component | Reuse `component.landing.howItWorksTeaser` |
+| Desktop Figma | `5164:6567` (LP-001 extract) |
+| Mobile Figma | `5164:6690` (LP-001 extract) |
+| HIW variant | `showFooterLink={false}` on `/how-it-works` |
+| Motion | LP-001 `HowItWorks-animation` / `component.landing.howItWorksTeaser.motion.*` unchanged |

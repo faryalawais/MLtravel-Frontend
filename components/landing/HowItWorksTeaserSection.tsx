@@ -38,6 +38,7 @@ import type {
   HiwCardMobileProps,
   HiwFooterLinkProps,
   HiwSectionPillProps,
+  HowItWorksTeaserSectionProps,
 } from '@/types/landing.types';
 
 const hiw = ids.component.landing.howItWorksTeaser;
@@ -416,7 +417,7 @@ function HiwDesktopCards({
   );
 }
 
-export function HowItWorksTeaserSection() {
+export function HowItWorksTeaserSection({ showFooterLink = true }: HowItWorksTeaserSectionProps) {
   const [revealedUpTo, setRevealedUpTo] = useState(-1);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [headerEmphasized, setHeaderEmphasized] = useState(false);
@@ -518,7 +519,9 @@ export function HowItWorksTeaserSection() {
       </div>
 
       <div className="flex justify-center px-[var(--spacing-16)] pb-[var(--spacing-28)] min-[1440px]:px-[var(--spacing-64)] min-[1440px]:pb-[var(--spacing-40)]">
-        <HiwFooterLink isEmphasized={footerEmphasized} motionEngaged={motionEngaged} />
+        {showFooterLink ? (
+          <HiwFooterLink isEmphasized={footerEmphasized} motionEngaged={motionEngaged} />
+        ) : null}
       </div>
     </section>
   );

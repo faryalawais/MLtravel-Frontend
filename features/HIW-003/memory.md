@@ -162,6 +162,8 @@ Slices #19–#25 append in later contract passes after figma-extract per slice.
 - token-lint: not scaffolded
 - Deviations: mobile stats reuse LP-001 `MOBILE_STATS`; `hero.group` icon subtree not individually test-id'd
 - Human review: APPROVED on 2026-07-06 (GH#18)
+- GH#19: `HowItWorksTeaserSection` on `/how-it-works` with `showFooterLink={false}` (reuse LP-001 `5164:6567` / `5164:6690`)
+- Human review: APPROVED on 2026-07-06 (GH#19)
 
 <!-- To be written by: be-implement -->
 

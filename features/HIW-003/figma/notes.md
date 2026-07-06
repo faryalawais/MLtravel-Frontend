@@ -8,7 +8,7 @@
 | GH# | Section | Desktop node | Mobile / reuse | Status |
 |-----|---------|--------------|----------------|--------|
 | #18 | Hero | `5217:6699` | `5217:7073` → reuse `component.landing.hero` (`hiw-page`) | ✓ extracted |
-| #19–#25 | Steps, mid CTA, six-week, testimonial, benefits, final CTA, FAQ | pending | pending | not extracted |
+| #19 | Three-step teaser | reuse `5164:6567` / `5164:6690` | LP-001 cache | ✓ reuse (no HIW re-extract) |
 
 ## Slice 1 — Hero (#18)
 

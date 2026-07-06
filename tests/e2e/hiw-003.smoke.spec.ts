@@ -4,6 +4,7 @@ import { ids } from '@/tokens/build/test-ids';
 const screen = ids.screen.howItWorks.page;
 const hiwHero = ids.component.howItWorks.hero;
 const landingHero = ids.component.landing.hero;
+const teaser = ids.component.landing.howItWorksTeaser;
 
 test.describe('HIW-003 smoke', () => {
   test('GH#18 — desktop HIW hero at 1440px', async ({ page }) => {
@@ -41,5 +42,28 @@ test.describe('HIW-003 smoke', () => {
 
     await page.getByTestId(landingHero.mobile.cta).click();
     await expect(page).toHaveURL(/\/contact/);
+  });
+
+  test('GH#19 — desktop teaser without footer link at 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(teaser.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(teaser.root)).toBeVisible();
+    await expect(page.getByTestId(teaser.sectionHeader)).toBeVisible();
+    await expect(page.getByTestId(teaser.hiwCard)).toBeVisible();
+    await expect(page.getByTestId(teaser.footerNote)).toBeHidden();
+    await expect(page.getByTestId(teaser.motion.footerNote)).toBeHidden();
+  });
+
+  test('GH#19 — mobile teaser without footer link at 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(teaser.mobile.sectionRoot).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(teaser.mobile.sectionRoot)).toBeVisible();
+    await expect(page.getByTestId(teaser.mobile.hiwStack)).toBeVisible();
+    await expect(page.getByTestId(teaser.footerNote)).toBeHidden();
+    await expect(page.getByTestId(teaser.motion.footerNote)).toBeHidden();
   });
 });
