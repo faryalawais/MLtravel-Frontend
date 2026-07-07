@@ -25,8 +25,27 @@
       "source": "explicit"
     },
     {
+      "nodeId": "5404:10705",
+      "name": "HIW-onboarding-animation",
+      "source": "explicit",
+      "motionTwin": true,
+      "staticTwinNodeId": "5217:6705"
+    },
+    {
       "nodeId": "5217:6812",
       "name": "SixWeekSection-mobile",
+      "source": "explicit",
+      "mobileFrame": "5217:6715"
+    },
+    {
+      "nodeId": "5217:6866",
+      "name": "HIW-mobile-social-strip",
+      "source": "explicit",
+      "mobileFrame": "5217:6715"
+    },
+    {
+      "nodeId": "5217:6867",
+      "name": "HIW-mobile-testimonial",
       "source": "explicit",
       "mobileFrame": "5217:6715"
     }

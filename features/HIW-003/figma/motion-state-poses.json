@@ -1,7 +1,7 @@
 {
   "$meta": {
     "feature": "HIW-003",
-    "generatedAt": "2026-07-06T12:13:14.684Z",
+    "generatedAt": "2026-07-07T07:20:17.257Z",
     "source": "build-motion-from-cache"
   },
   "chains": [
@@ -9,10 +9,10 @@
       "name": "HIW-hero-animation",
       "subgraphId": "primary",
       "staticTwin": {
-        "name": "HIWHeroSection",
-        "nodeId": "5217:6699"
+        "name": null,
+        "nodeId": null
       },
-      "initialRender": "staticTwin",
+      "initialRender": "animationState1",
       "terminalStateIndex": 3,
       "states": [
         {
@@ -67,6 +67,48 @@
               "opacity": 1
             }
           }
+        }
+      ]
+    },
+    {
+      "name": "HIW-onboarding-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": null,
+        "nodeId": null
+      },
+      "initialRender": "animationState1",
+      "terminalStateIndex": 5,
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5404:10705",
+          "label": "idle",
+          "layers": {}
+        },
+        {
+          "index": 2,
+          "nodeId": "5404:10704",
+          "label": "state-2",
+          "layers": {}
+        },
+        {
+          "index": 3,
+          "nodeId": "5404:10703",
+          "label": "state-3",
+          "layers": {}
+        },
+        {
+          "index": 4,
+          "nodeId": "5404:10701",
+          "label": "state-4",
+          "layers": {}
+        },
+        {
+          "index": 5,
+          "nodeId": "5404:10702",
+          "label": "state-5",
+          "layers": {}
         }
       ]
     }

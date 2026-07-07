@@ -1,7 +1,7 @@
 {
   "$meta": {
     "feature": "HIW-003",
-    "generatedAt": "2026-07-06T12:13:14.683Z",
+    "generatedAt": "2026-07-07T07:20:17.256Z",
     "source": "build-motion-from-cache"
   },
   "globalRules": {
@@ -14,8 +14,8 @@
       "name": "HIW-hero-animation",
       "subgraphId": "primary",
       "staticTwin": {
-        "name": "HIWHeroSection",
-        "nodeId": "5217:6699"
+        "name": null,
+        "nodeId": null
       },
       "animationNodeId": "5404:6760",
       "status": "closed",
@@ -71,6 +71,119 @@
           "rawTrigger": "AFTER_TIMEOUT",
           "triggerNodeId": "5409:11417",
           "triggerNodeName": "Property 1=Variant2",
+          "delayMs": 300,
+          "delayToken": "motion.duration.autoAdvance",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        }
+      ]
+    },
+    {
+      "name": "HIW-onboarding-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "SixWeekSection",
+        "nodeId": "5217:6705"
+      },
+      "animationNodeId": "5404:10705",
+      "status": "closed",
+      "kind": "interactive",
+      "pattern": "rapid-four-step",
+      "runner": "runChainedTransitionMotion",
+      "baseStyle": "DEFAULT_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.howItWorks.sixWeek.motion.root",
+        "targetNodeId": "5404:10705"
+      },
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5404:10705",
+          "label": "idle",
+          "referencePng": "reference-hiw-onboarding-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5404:10704",
+          "label": "state-2",
+          "referencePng": "reference-hiw-onboarding-animation-state-2.png"
+        },
+        {
+          "index": 3,
+          "nodeId": "5404:10703",
+          "label": "state-3",
+          "referencePng": "reference-hiw-onboarding-animation-state-3.png"
+        },
+        {
+          "index": 4,
+          "nodeId": "5404:10701",
+          "label": "state-4",
+          "referencePng": "reference-hiw-onboarding-animation-state-4.png"
+        },
+        {
+          "index": 5,
+          "nodeId": "5404:10702",
+          "label": "state-5",
+          "referencePng": "reference-hiw-onboarding-animation-state-5.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5404:10705",
+          "to": "5404:10704",
+          "trigger": "MOUSE_ENTER",
+          "rawTrigger": "MOUSE_ENTER",
+          "triggerNodeId": "5404:10705",
+          "triggerNodeName": "Property 1=1",
+          "delayMs": 0,
+          "delayToken": null,
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5404:10704",
+          "to": "5404:10703",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5404:10704",
+          "triggerNodeName": "Property 1=2",
+          "delayMs": 300,
+          "delayToken": "motion.duration.autoAdvance",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5404:10703",
+          "to": "5404:10701",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5404:10703",
+          "triggerNodeName": "Property 1=3",
+          "delayMs": 300,
+          "delayToken": "motion.duration.autoAdvance",
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        },
+        {
+          "from": "5404:10701",
+          "to": "5404:10702",
+          "trigger": "AFTER_TIMEOUT",
+          "rawTrigger": "AFTER_TIMEOUT",
+          "triggerNodeId": "5404:10701",
+          "triggerNodeName": "Property 1=4",
           "delayMs": 300,
           "delayToken": "motion.duration.autoAdvance",
           "durationMs": 700,

@@ -51,3 +51,46 @@ test.describe('HIW-003 visual — GH#20 mid CTA', () => {
     await expect(page.getByTestId(midCta.root)).toHaveScreenshot('hiw-mid-cta-desktop.png');
   });
 });
+
+test.describe('HIW-003 visual — GH#21 six-week timeline', () => {
+  const sixWeek = ids.component.howItWorks.sixWeek;
+
+  test('hiw six-week desktop 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+    await page.getByTestId(sixWeek.onboardingSection).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(sixWeek.onboardingSection)).toHaveScreenshot(
+      'hiw-six-week-desktop.png',
+    );
+  });
+
+  test('hiw six-week mobile 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+    await page.getByTestId(sixWeek.mobile).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(sixWeek.mobile)).toHaveScreenshot('hiw-six-week-mobile.png');
+  });
+});
+
+test.describe('HIW-003 visual — GH#22 social proof strip', () => {
+  const mobileSocialStrip = ids.component.howItWorks.mobileSocialStrip;
+  const socialProofStrip = ids.component.howItWorks.sixWeek.socialProofStrip;
+
+  test('hiw mobile testimonial 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+    await page.getByTestId(mobileSocialStrip.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(mobileSocialStrip.root)).toHaveScreenshot(
+      'hiw-mobile-testimonial.png',
+    );
+  });
+
+  test('hiw desktop social proof strip 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+    await page.getByTestId(socialProofStrip).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(socialProofStrip)).toHaveScreenshot(
+      'hiw-desktop-social-proof-strip.png',
+    );
+  });
+});

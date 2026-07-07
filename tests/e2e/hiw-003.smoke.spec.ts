@@ -96,4 +96,82 @@ test.describe('HIW-003 smoke', () => {
 
     await expect(page.getByTestId(midCta.root)).toBeHidden();
   });
+
+  test('GH#21 — six-week timeline desktop at 1440px', async ({ page }) => {
+    const sixWeek = ids.component.howItWorks.sixWeek;
+    const desktop = page.getByTestId(sixWeek.onboardingSection);
+
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(sixWeek.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(sixWeek.root)).toBeVisible();
+    await expect(desktop).toBeVisible();
+    await expect(desktop.getByTestId(sixWeek.sectionHeader)).toBeVisible();
+    await expect(desktop.getByTestId(sixWeek.timelineTrack)).toBeVisible();
+    await expect(desktop.getByTestId(sixWeek.weekCard1)).toBeVisible();
+    await expect(desktop.getByTestId(sixWeek.weekCard4)).toBeVisible();
+    await expect(page.getByTestId(sixWeek.mobile)).toBeHidden();
+
+    await expect(desktop.getByTestId(sixWeek.weekCard1)).toContainText('WEEK 1');
+    await expect(desktop.getByTestId(sixWeek.weekCard2)).toContainText('WEEK 2-3');
+    await expect(desktop.getByTestId(sixWeek.weekCard3)).toContainText('WEEK 4-5');
+    await expect(desktop.getByTestId(sixWeek.weekCard4)).toContainText('WEEK 6');
+  });
+
+  test('GH#21 — six-week timeline mobile at 393px', async ({ page }) => {
+    const sixWeek = ids.component.howItWorks.sixWeek;
+    const mobile = page.getByTestId(sixWeek.mobile);
+
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(sixWeek.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(sixWeek.root)).toBeVisible();
+    await expect(mobile).toBeVisible();
+    await expect(page.getByTestId(sixWeek.onboardingSection)).toBeHidden();
+    await expect(mobile.getByTestId(sixWeek.weekCard1)).toBeVisible();
+    await expect(mobile.getByTestId(sixWeek.weekCard4)).toBeVisible();
+
+    await expect(mobile.getByTestId(sixWeek.weekCard1)).toContainText('WEEK 1');
+    await expect(mobile.getByTestId(sixWeek.weekCard2)).toContainText('WEEK 2-3');
+    await expect(mobile.getByTestId(sixWeek.weekCard3)).toContainText('WEEK 4-5');
+    await expect(mobile.getByTestId(sixWeek.weekCard4)).toContainText('WEEK 6');
+  });
+
+  test('GH#22 — mobile testimonial visible at 393px', async ({ page }) => {
+    const screen = ids.screen.howItWorks.page;
+    const mobileSocialStrip = ids.component.howItWorks.mobileSocialStrip;
+    const testimonialBlock = ids.component.landing.socialProof.testimonialBlock;
+
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(mobileSocialStrip.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(screen).getByTestId(mobileSocialStrip.root)).toBeVisible();
+    await expect(page.getByTestId(mobileSocialStrip.root).getByTestId(testimonialBlock)).toBeVisible();
+    await expect(page.getByTestId(mobileSocialStrip.root).getByTestId(ids.component.landing.socialProof.moazamArshad)).toHaveText(
+      'Moazam Arshad',
+    );
+  });
+
+  test('GH#22 — desktop social proof strip visible at 1440px', async ({ page }) => {
+    const screen = ids.screen.howItWorks.page;
+    const mobileSocialStrip = ids.component.howItWorks.mobileSocialStrip;
+    const socialProofStrip = ids.component.howItWorks.sixWeek.socialProofStrip;
+    const testimonialBlock = ids.component.landing.socialProof.testimonialBlock;
+
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(socialProofStrip).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(screen).getByTestId(mobileSocialStrip.root)).toBeHidden();
+    await expect(page.getByTestId(screen).getByTestId(socialProofStrip)).toBeVisible();
+    await expect(page.getByTestId(socialProofStrip).getByTestId(testimonialBlock)).toBeVisible();
+    await expect(page.getByTestId(socialProofStrip).getByTestId(ids.component.landing.socialProof.moazamArshad)).toHaveText(
+      'Moazam Arshad',
+    );
+    await expect(page.getByTestId(socialProofStrip)).toContainText('Zero booking fees');
+    await expect(page.getByTestId(socialProofStrip)).toContainText('Multi-GDS search');
+  });
 });

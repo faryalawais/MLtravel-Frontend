@@ -396,6 +396,19 @@ function IntegrationsStrip({
   );
 }
 
+export function SocialProofTestimonialDesktopBlock({
+  includeTestIds = true,
+}: {
+  includeTestIds?: boolean;
+}) {
+  return (
+    <TestimonialBlockDesktop
+      testimonial={SOCIAL_PROOF_DESKTOP_TESTIMONIALS[0]}
+      includeTestIds={includeTestIds}
+    />
+  );
+}
+
 export function SocialProofSection() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [carouselTransitionEnabled, setCarouselTransitionEnabled] = useState(true);

@@ -3,6 +3,7 @@ import {
   HIW_MID_CTA_COPY,
   HIW_MID_CTA_COPY_CLASS,
   HIW_MID_CTA_DEMO_LABEL,
+  HIW_MID_CTA_SECTION_CLASS,
 } from '@/constants/how-it-works.constants';
 import { HeroPrimaryCta } from '@/components/landing/HeroPrimaryCta';
 import { ids } from '@/tokens/build/test-ids';
@@ -13,7 +14,7 @@ export function HowItWorksMidCtaSection() {
   return (
     <section
       data-testid={midCta.root}
-      className="hidden w-full justify-center bg-[var(--color-background-page)] px-[var(--spacing-16)] lg:flex"
+      className={`hidden w-full flex-col items-center justify-center bg-[var(--color-background-page)] px-[var(--spacing-16)] lg:flex ${HIW_MID_CTA_SECTION_CLASS}`}
     >
       <div data-testid={midCta.card} className={HIW_MID_CTA_CARD_CLASS}>
         <p data-testid={midCta.copy} className={HIW_MID_CTA_COPY_CLASS}>

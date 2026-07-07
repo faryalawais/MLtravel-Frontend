@@ -1,17 +1,20 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import {
   HIW_DESKTOP_STATS,
   HIW_HERO_DEMO_CTA_LABEL,
   HIW_HERO_HEADLINE,
+  HIW_HERO_HEAD_GROUP_HEIGHT_PX,
   HIW_HERO_PROOF_LINE,
   HIW_HERO_SUBCOPY,
   HIW_HERO_CTA_SLOT_TOP_PX,
+  HIW_HERO_TEXT_BLOCK_GAP_PX,
   HIW_HERO_TEXT_BLOCK_MIN_HEIGHT_PX,
 } from '@/constants/how-it-works.constants';
 import {
   getHiwHeroLayerMotionStyle,
+  HERO_MOTION_CTA_CLUSTER_HEIGHT_PX,
   type HiwHeroMotionStep,
 } from '@/constants/motion.constants';
 import { runHeroMotion } from '@/lib/motion-sequence';
@@ -86,19 +89,90 @@ function HeroStatsStrip() {
   );
 }
 
+function HeroHeadCopy() {
+  const hero = ids.component.howItWorks.hero;
+
+  return (
+    <div
+      data-testid={hero.headGroup}
+      className="flex flex-col items-center gap-[var(--spacing-8)] text-center"
+    >
+      <h1
+        id="hiw-hero-heading"
+        data-testid={hero.textBlock2}
+        className="text-display-desktop-lg text-[var(--color-text-primary)]"
+      >
+        {HIW_HERO_HEADLINE}
+      </h1>
+      <p
+        data-testid={hero.textBlock3}
+        className="text-body-desktop-md text-[var(--color-text-secondary)]"
+      >
+        {HIW_HERO_SUBCOPY}
+      </p>
+    </div>
+  );
+}
+
+function HeroCtaCluster({ emphasized }: { emphasized: boolean }) {
+  const hero = ids.component.howItWorks.hero;
+
+  return (
+    <div
+      data-testid={hero.ctaGroup}
+      className="flex flex-col items-center gap-[var(--spacing-12)]"
+    >
+      <HeroPrimaryCta
+        testId={hero.demoCta}
+        labelTestId={hero.label}
+        iconTestId={hero.ctaIcon}
+        graphicTestId={hero.graphic}
+        href="/contact"
+        label={HIW_HERO_DEMO_CTA_LABEL}
+        emphasized={emphasized}
+        useHeroEasing
+      />
+      <p
+        data-testid={hero.textBlock4}
+        className="text-body-desktop-xs text-[var(--color-text-secondary)]"
+      >
+        {HIW_HERO_PROOF_LINE}
+      </p>
+    </div>
+  );
+}
+
 export function HowItWorksHeroSection() {
   const hero = ids.component.howItWorks.hero;
+  const textBlockRef = useRef<HTMLDivElement>(null);
+  const headGroupRef = useRef<HTMLDivElement>(null);
   const [motionEngaged, setMotionEngaged] = useState(false);
   const [motionStep, setMotionStep] = useState<HiwHeroMotionStep>(0);
+  const [ctaSlotTopPx, setCtaSlotTopPx] = useState(HIW_HERO_CTA_SLOT_TOP_PX);
+  const [textBlockMinHeightPx, setTextBlockMinHeightPx] = useState(
+    HIW_HERO_TEXT_BLOCK_MIN_HEIGHT_PX,
+  );
 
   const playMotion = useCallback(() => {
+    const headHeight = headGroupRef.current?.offsetHeight ?? HIW_HERO_HEAD_GROUP_HEIGHT_PX;
+    const slotTop = headHeight + HIW_HERO_TEXT_BLOCK_GAP_PX;
+    const clusterHeight = textBlockRef.current?.offsetHeight ?? textBlockMinHeightPx;
+
+    setCtaSlotTopPx(slotTop);
+    setTextBlockMinHeightPx(
+      Math.max(
+        HIW_HERO_TEXT_BLOCK_MIN_HEIGHT_PX,
+        slotTop + HERO_MOTION_CTA_CLUSTER_HEIGHT_PX,
+        clusterHeight,
+      ),
+    );
     setMotionEngaged(true);
     setMotionStep(0);
     return runHeroMotion(
       () => setMotionStep(1),
       () => setMotionStep(2),
     );
-  }, []);
+  }, [textBlockMinHeightPx]);
 
   const triggerMotion = useOneWayMotion(playMotion);
 
@@ -121,72 +195,40 @@ export function HowItWorksHeroSection() {
           className="flex flex-col items-center py-[var(--spacing-52)]"
         >
           <div
+            ref={textBlockRef}
             data-testid={hero.textBlock}
-            className={`flex w-full max-w-[642px] flex-col items-center gap-[var(--spacing-24)] ${
-              motionEngaged ? 'relative overflow-hidden' : ''
-            }`}
+            className={`w-full max-w-[642px] ${motionEngaged ? 'relative overflow-hidden' : ''}`}
             style={
-              motionEngaged
-                ? { minHeight: `${HIW_HERO_TEXT_BLOCK_MIN_HEIGHT_PX}px` }
-                : undefined
+              motionEngaged ? { minHeight: `${textBlockMinHeightPx}px` } : undefined
             }
           >
-            <div
-              data-testid={hero.motion.headGroup}
-              className={motionEngaged ? 'absolute left-0 top-0 z-10 w-full' : 'w-full'}
-              style={motionEngaged ? headMotionStyle : undefined}
-            >
-              <div
-                data-testid={hero.headGroup}
-                className="flex flex-col items-center gap-[var(--spacing-8)] text-center"
-              >
-                <h1
-                  id="hiw-hero-heading"
-                  data-testid={hero.textBlock2}
-                  className="text-display-desktop-lg text-[var(--color-text-primary)]"
+            {motionEngaged ? (
+              <>
+                <div
+                  data-testid={hero.motion.headGroup}
+                  className="absolute left-0 top-0 z-10 w-full"
+                  style={headMotionStyle}
                 >
-                  {HIW_HERO_HEADLINE}
-                </h1>
-                <p
-                  data-testid={hero.textBlock3}
-                  className="text-body-desktop-md text-[var(--color-text-secondary)]"
+                  <HeroHeadCopy />
+                </div>
+                <div
+                  data-testid={hero.motion.ctaGroup}
+                  className="absolute left-0 z-0 w-full"
+                  style={{ top: `${ctaSlotTopPx}px`, ...ctaMotionStyle }}
                 >
-                  {HIW_HERO_SUBCOPY}
-                </p>
+                  <HeroCtaCluster emphasized={motionStep >= 2} />
+                </div>
+              </>
+            ) : (
+              <div className="flex flex-col items-center gap-[var(--spacing-24)]">
+                <div ref={headGroupRef} data-testid={hero.motion.headGroup}>
+                  <HeroHeadCopy />
+                </div>
+                <div data-testid={hero.motion.ctaGroup}>
+                  <HeroCtaCluster emphasized={false} />
+                </div>
               </div>
-            </div>
-
-            <div
-              data-testid={hero.motion.ctaGroup}
-              className={motionEngaged ? 'absolute left-0 z-0 w-full' : 'w-full'}
-              style={
-                motionEngaged
-                  ? { top: `${HIW_HERO_CTA_SLOT_TOP_PX}px`, ...ctaMotionStyle }
-                  : undefined
-              }
-            >
-              <div
-                data-testid={hero.ctaGroup}
-                className="flex flex-col items-center gap-[var(--spacing-12)]"
-              >
-                <HeroPrimaryCta
-                  testId={hero.demoCta}
-                  labelTestId={hero.label}
-                  iconTestId={hero.ctaIcon}
-                  graphicTestId={hero.graphic}
-                  href="/contact"
-                  label={HIW_HERO_DEMO_CTA_LABEL}
-                  emphasized={motionStep >= 2}
-                  useHeroEasing
-                />
-                <p
-                  data-testid={hero.textBlock4}
-                  className="text-body-desktop-xs text-[var(--color-text-secondary)]"
-                >
-                  {HIW_HERO_PROOF_LINE}
-                </p>
-              </div>
-            </div>
+            )}
           </div>
         </div>
 

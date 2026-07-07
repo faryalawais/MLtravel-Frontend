@@ -2925,6 +2925,9 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.howItWorks.sixWeek.weekCard3` | OnboardingCard Week=4-5 | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-weekCard3` |
 | `component.howItWorks.sixWeek.weekCard4` | OnboardingCard Week=GoLive | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-weekCard4` |
 | `component.howItWorks.sixWeek.socialProofStrip` | Desktop testimonial + benefit stack (bundled in 5217:6705; GH#22/23 scope) | `screen.howItWorks.page` | `default` | `component-howItWorks-sixWeek-socialProofStrip` |
+| `component.howItWorks.sixWeek.motion.root` | HIW onboarding cascade prototype (HIW-onboarding-animation 5404:10705) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-sixWeek-motion-root` |
+| `component.howItWorks.mobileSocialStrip.root` | HIW mobile testimonial + benefits region (Gherkin: GH#22/23; Figma 5217:6866) | `screen.howItWorks.page` | `default` | `component-howItWorks-mobileSocialStrip-root` |
+| `component.howItWorks.mobileSocialStrip.testimonial` | Mobile Moazam testimonial block (5217:6867 test) — reuses component.landing.socialProof.testimonialBlock test ids | `screen.howItWorks.page` | `default` | `component-howItWorks-mobileSocialStrip-testimonial` |
 
 ---
 

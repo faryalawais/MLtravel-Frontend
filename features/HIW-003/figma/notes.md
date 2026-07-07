@@ -11,6 +11,7 @@
 | #19 | Three-step teaser | reuse `5164:6567` / `5164:6690` | LP-001 cache | ✓ reuse (no HIW re-extract) |
 | #20 | Mid CTA | `5217:6701` | absent on mobile | ✓ extracted |
 | #21 | Six-week timeline | `5217:6705` | `5217:6812` | ✓ extracted |
+| #22 | Mobile testimonial | — | `5217:6867` / `5217:6866` | ✓ extracted (reuse LP testimonial copy) |
 
 ## Slice 1 — Hero (#18)
 

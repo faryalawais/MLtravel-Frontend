@@ -70,15 +70,19 @@ Feature: How It Works (HIW-003)
     And `component.howItWorks.sixWeek` matches Figma node "5217:6812"
 
   @fe
-  Scenario: GH#22 — Mobile testimonial reuses social proof card and is absent on desktop
+  Scenario: GH#22 — Testimonial reuses social proof card on mobile and desktop strip
     Given a guest views the site at 393px width
     When the guest navigates to "/how-it-works"
-    Then `component.landing.socialProof.testimonialBlock` is visible
+    Then `component.howItWorks.mobileSocialStrip` is visible
+    And `component.landing.socialProof.testimonialBlock` is visible
     And `component.landing.socialProof.testimonialBlock` matches Figma node "5217:6867"
     And `component.landing.socialProof.testimonialBlock` displays attribution "Moazam Arshad"
     Given a guest views the site at 1440px width
     When the guest navigates to "/how-it-works"
-    Then `component.landing.socialProof.testimonialBlock` is not visible on HIW page
+    Then `component.howItWorks.mobileSocialStrip` is not visible
+    And `component.howItWorks.sixWeek.socialProofStrip` is visible
+    And `component.landing.socialProof.testimonialBlock` is visible on HIW page
+    And `component.howItWorks.sixWeek.socialProofStrip` displays benefit "Zero booking fees"
 
   @fe
   Scenario: GH#23 — Mobile benefits stats row matches Figma and is absent on desktop

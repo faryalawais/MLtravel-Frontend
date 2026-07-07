@@ -1,0 +1,55 @@
+{
+  "chain": "HIW-onboarding-animation",
+  "alias": "HIW-Sixweek-animation",
+  "animationNodeId": "5404:10705",
+  "staticTwinNodeId": "5217:6705",
+  "pattern": "rapid-four-step",
+  "runner": "runChainedTransitionMotion",
+  "figmaStates": [
+    { "index": 1, "nodeId": "5404:10705", "label": "idle" },
+    { "index": 2, "nodeId": "5404:10704", "label": "state-2" },
+    { "index": 3, "nodeId": "5404:10703", "label": "state-3" },
+    { "index": 4, "nodeId": "5404:10701", "label": "state-4" },
+    { "index": 5, "nodeId": "5404:10702", "label": "state-5" }
+  ],
+  "transitions": [
+    {
+      "stepIndex": 0,
+      "trigger": "MOUSE_ENTER",
+      "durationMs": 700,
+      "delayMs": 0
+    },
+    {
+      "stepIndex": 1,
+      "trigger": "AFTER_TIMEOUT",
+      "durationMs": 700,
+      "delayMs": 300,
+      "delayToken": "motion.duration.autoAdvance"
+    },
+    {
+      "stepIndex": 2,
+      "trigger": "AFTER_TIMEOUT",
+      "durationMs": 700,
+      "delayMs": 300,
+      "delayToken": "motion.duration.autoAdvance"
+    },
+    {
+      "stepIndex": 3,
+      "trigger": "AFTER_TIMEOUT",
+      "durationMs": 700,
+      "delayMs": 300,
+      "delayToken": "motion.duration.autoAdvance"
+    }
+  ],
+  "implementationExpected": {
+    "trigger": "onMouseEnter on component.howItWorks.sixWeek.motion.root",
+    "desktopOnly": true,
+    "steps": [
+      { "index": 0, "reveal": "headerAndWeekCard1" },
+      { "index": 1, "reveal": "weekCard2" },
+      { "index": 2, "reveal": "weekCard3" },
+      { "index": 3, "reveal": "weekCard4" },
+      { "index": 4, "reveal": "socialProofStrip" }
+    ]
+  }
+}

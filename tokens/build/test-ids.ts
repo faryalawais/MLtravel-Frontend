@@ -2916,7 +2916,10 @@ export const testIds = {
   "component.howItWorks.sixWeek.weekCard2": "component-howItWorks-sixWeek-weekCard2",
   "component.howItWorks.sixWeek.weekCard3": "component-howItWorks-sixWeek-weekCard3",
   "component.howItWorks.sixWeek.weekCard4": "component-howItWorks-sixWeek-weekCard4",
-  "component.howItWorks.sixWeek.socialProofStrip": "component-howItWorks-sixWeek-socialProofStrip"
+  "component.howItWorks.sixWeek.socialProofStrip": "component-howItWorks-sixWeek-socialProofStrip",
+  "component.howItWorks.sixWeek.motion.root": "component-howItWorks-sixWeek-motion-root",
+  "component.howItWorks.mobileSocialStrip.root": "component-howItWorks-mobileSocialStrip-root",
+  "component.howItWorks.mobileSocialStrip.testimonial": "component-howItWorks-mobileSocialStrip-testimonial"
 } as const;
 
 export type RegistryPath = keyof typeof testIds;
@@ -5917,7 +5920,14 @@ export const ids = {
         "weekCard2": "component-howItWorks-sixWeek-weekCard2",
         "weekCard3": "component-howItWorks-sixWeek-weekCard3",
         "weekCard4": "component-howItWorks-sixWeek-weekCard4",
-        "socialProofStrip": "component-howItWorks-sixWeek-socialProofStrip"
+        "socialProofStrip": "component-howItWorks-sixWeek-socialProofStrip",
+        "motion": {
+          "root": "component-howItWorks-sixWeek-motion-root"
+        }
+      },
+      "mobileSocialStrip": {
+        "root": "component-howItWorks-mobileSocialStrip-root",
+        "testimonial": "component-howItWorks-mobileSocialStrip-testimonial"
       }
     }
   }

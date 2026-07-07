@@ -26,7 +26,8 @@
       "component.contact.fallback.emailCta": "component.contact.fallback.emailCta",
       "component.howItWorks.hero": "component.howItWorks.hero.root",
       "component.howItWorks.midCta": "component.howItWorks.midCta.root",
-      "component.howItWorks.sixWeek": "component.howItWorks.sixWeek.root"
+      "component.howItWorks.sixWeek": "component.howItWorks.sixWeek.root",
+      "component.howItWorks.mobileSocialStrip": "component.howItWorks.mobileSocialStrip.root"
     }
   },
   "screen": {
@@ -26505,6 +26506,38 @@
           "$description": "Desktop testimonial + benefit stack (bundled in 5217:6705; GH#22/23 scope)",
           "$screen": "screen.howItWorks.page",
           "$figmaNode": "I5217:6705;5223:6722",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "motion": {
+          "root": {
+            "$description": "HIW onboarding cascade prototype (HIW-onboarding-animation 5404:10705)",
+            "$screen": "screen.howItWorks.page",
+            "$figmaNode": "5404:10705",
+            "$states": [
+              "default",
+              "hover"
+            ],
+            "$tokens": {}
+          }
+        }
+      },
+      "mobileSocialStrip": {
+        "root": {
+          "$description": "HIW mobile testimonial + benefits region (Gherkin: GH#22/23; Figma 5217:6866)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5217:6866",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "testimonial": {
+          "$description": "Mobile Moazam testimonial block (5217:6867 test) — reuses component.landing.socialProof.testimonialBlock test ids",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5217:6867",
           "$states": [
             "default"
           ],

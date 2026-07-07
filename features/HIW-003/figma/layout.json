@@ -23,6 +23,9 @@
         "slug": "component.howItWorks.sixWeek.mobile"
       },
       {
+        "slug": "component.howItWorks.mobileSocialStrip.root"
+      },
+      {
         "type": "stack",
         "direction": "vertical",
         "align": "center",
