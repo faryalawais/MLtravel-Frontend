@@ -8,9 +8,10 @@ export const NAV_LINK_CLASS_NAME =
 export const MOBILE_NAV_LINK_CLASS_NAME =
   'block py-[var(--spacing-12)] text-body-desktop-sm text-[var(--color-text-primary)] hover:underline focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]';
 
-export const MOBILE_NAV_LINKS = [
+/** Shared layout — site navigation links (desktop + mobile drawer) */
+export const SITE_NAV_LINKS = [
   {
-    href: '#product',
+    href: '/',
     label: 'Product',
     linkTestId: ids.component.navbar.productLink,
     labelTestId: ids.component.navbar.productLinkLabel,
@@ -22,12 +23,14 @@ export const MOBILE_NAV_LINKS = [
     labelTestId: ids.component.navbar.howItWorksLinkLabel,
   },
   {
-    href: '#pricing',
-    label: 'Pricing',
+    href: '/contact',
+    label: 'Contact',
     linkTestId: ids.component.navbar.pricingLink,
     labelTestId: ids.component.navbar.pricingLinkLabel,
   },
 ] as const;
+
+export const MOBILE_NAV_LINKS = SITE_NAV_LINKS;
 
 export const MOBILE_NAV_MOTION_TRANSITION =
   'duration-[var(--motion-duration-default)] ease-[var(--motion-easing-default)]';

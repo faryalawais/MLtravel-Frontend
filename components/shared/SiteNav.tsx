@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { NAV_LINK_CLASS_NAME } from '@/constants/shared.constants';
+import { NAV_LINK_CLASS_NAME, SITE_NAV_LINKS } from '@/constants/shared.constants';
 import { ids } from '@/tokens/build/test-ids';
 import { MobileNavbar } from './MobileNavbar';
 import { NavbarCta } from './NavbarCta';
@@ -33,29 +33,16 @@ export function SiteNav() {
           className="flex items-center gap-[var(--spacing-52)]"
           aria-label="Main"
         >
-          <Link
-            href="#product"
-            data-testid={ids.component.navbar.productLink}
-            className={NAV_LINK_CLASS_NAME}
-          >
-            <span data-testid={ids.component.navbar.productLinkLabel}>Product</span>
-          </Link>
-          <Link
-            href="/how-it-works"
-            data-testid={ids.component.navbar.howItWorksLink}
-            className={NAV_LINK_CLASS_NAME}
-          >
-            <span data-testid={ids.component.navbar.howItWorksLinkLabel}>
-              How It Works
-            </span>
-          </Link>
-          <Link
-            href="#pricing"
-            data-testid={ids.component.navbar.pricingLink}
-            className={NAV_LINK_CLASS_NAME}
-          >
-            <span data-testid={ids.component.navbar.pricingLinkLabel}>Pricing</span>
-          </Link>
+          {SITE_NAV_LINKS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              data-testid={item.linkTestId}
+              className={NAV_LINK_CLASS_NAME}
+            >
+              <span data-testid={item.labelTestId}>{item.label}</span>
+            </Link>
+          ))}
         </nav>
 
         <NavbarCta
