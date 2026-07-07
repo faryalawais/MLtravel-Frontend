@@ -3,7 +3,7 @@ import { SocialProofTestimonialDesktopBlock } from '@/components/landing/SocialP
 import {
   HIW_DESKTOP_BENEFIT_BODY_CLASS,
   HIW_DESKTOP_BENEFIT_CARD_CLASS,
-  HIW_DESKTOP_BENEFIT_CARDS,
+  HIW_BENEFIT_CARDS,
   HIW_DESKTOP_BENEFIT_ICON_SHELL_CLASS,
   HIW_DESKTOP_BENEFIT_STACK_CLASS,
   HIW_DESKTOP_BENEFIT_TITLE_CLASS,
@@ -11,11 +11,11 @@ import {
 } from '@/constants/how-it-works.constants';
 import { DEFAULT_MOTION_STYLE, getMotionSlideRevealStyle } from '@/constants/motion.constants';
 import { ids } from '@/tokens/build/test-ids';
-import type { HiwDesktopBenefitCardConfig } from '@/types/how-it-works.types';
+import type { HiwBenefitCardConfig } from '@/types/how-it-works.types';
 
 const socialProofStrip = ids.component.howItWorks.sixWeek.socialProofStrip;
 
-function HiwDesktopBenefitCard({ card }: { card: HiwDesktopBenefitCardConfig }) {
+function HiwDesktopBenefitCard({ card }: { card: HiwBenefitCardConfig }) {
   return (
     <article className={HIW_DESKTOP_BENEFIT_CARD_CLASS}>
       <div className={HIW_DESKTOP_BENEFIT_ICON_SHELL_CLASS} aria-hidden="true">
@@ -50,7 +50,7 @@ export function HowItWorksDesktopSocialProofStrip({
     >
       <SocialProofTestimonialDesktopBlock />
       <div className={HIW_DESKTOP_BENEFIT_STACK_CLASS}>
-        {HIW_DESKTOP_BENEFIT_CARDS.map((card) => (
+        {HIW_BENEFIT_CARDS.map((card) => (
           <HiwDesktopBenefitCard key={card.title} card={card} />
         ))}
       </div>

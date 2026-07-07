@@ -2918,6 +2918,7 @@ export const testIds = {
   "component.howItWorks.sixWeek.weekCard4": "component-howItWorks-sixWeek-weekCard4",
   "component.howItWorks.sixWeek.socialProofStrip": "component-howItWorks-sixWeek-socialProofStrip",
   "component.howItWorks.sixWeek.motion.root": "component-howItWorks-sixWeek-motion-root",
+  "component.howItWorks.benefitsStats.root": "component-howItWorks-benefitsStats-root",
   "component.howItWorks.mobileSocialStrip.root": "component-howItWorks-mobileSocialStrip-root",
   "component.howItWorks.mobileSocialStrip.testimonial": "component-howItWorks-mobileSocialStrip-testimonial"
 } as const;
@@ -5924,6 +5925,9 @@ export const ids = {
         "motion": {
           "root": "component-howItWorks-sixWeek-motion-root"
         }
+      },
+      "benefitsStats": {
+        "root": "component-howItWorks-benefitsStats-root"
       },
       "mobileSocialStrip": {
         "root": "component-howItWorks-mobileSocialStrip-root",

@@ -174,4 +174,28 @@ test.describe('HIW-003 smoke', () => {
     await expect(page.getByTestId(socialProofStrip)).toContainText('Zero booking fees');
     await expect(page.getByTestId(socialProofStrip)).toContainText('Multi-GDS search');
   });
+
+  test('GH#23 — mobile benefits stats visible at 393px', async ({ page }) => {
+    const screen = ids.screen.howItWorks.page;
+    const benefitsStats = ids.component.howItWorks.benefitsStats;
+
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(benefitsStats.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(screen).getByTestId(benefitsStats.root)).toBeVisible();
+    await expect(page.getByTestId(benefitsStats.root)).toContainText('Zero booking fees');
+    await expect(page.getByTestId(benefitsStats.root)).toContainText('Full white-label');
+    await expect(page.getByTestId(benefitsStats.root)).toContainText('Multi-GDS search');
+  });
+
+  test('GH#23 — mobile benefits stats hidden on desktop at 1440px', async ({ page }) => {
+    const screen = ids.screen.howItWorks.page;
+    const benefitsStats = ids.component.howItWorks.benefitsStats;
+
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+
+    await expect(page.getByTestId(screen).getByTestId(benefitsStats.root)).toBeHidden();
+  });
 });

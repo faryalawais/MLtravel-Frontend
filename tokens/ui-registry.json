@@ -26524,6 +26524,17 @@
           }
         }
       },
+      "benefitsStats": {
+        "root": {
+          "$description": "Mobile benefits stat row (Gherkin: GH#23; Figma 5217:6883)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5217:6883",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        }
+      },
       "mobileSocialStrip": {
         "root": {
           "$description": "HIW mobile testimonial + benefits region (Gherkin: GH#22/23; Figma 5217:6866)",

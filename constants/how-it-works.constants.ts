@@ -1,7 +1,7 @@
 import { FEATURE_GRID_ACCENT_BAR_CLASS } from '@/constants/landing.constants';
 import { ids } from '@/tokens/build/test-ids';
 import type {
-  HiwDesktopBenefitCardConfig,
+  HiwBenefitCardConfig,
   HowItWorksHeroStatConfig,
   SixWeekAccentBarVariant,
   SixWeekCardConfig,
@@ -260,20 +260,51 @@ export const HIW_DESKTOP_BENEFIT_TITLE_CLASS =
 export const HIW_DESKTOP_BENEFIT_BODY_CLASS =
   '[font-family:var(--typography-body-desktop-xs-font-family)] [font-size:var(--typography-body-desktop-xs-font-size)] [font-weight:var(--typography-body-desktop-xs-font-weight)] [line-height:var(--typography-body-desktop-xs-line-height)] text-[var(--color-text-secondary)]';
 
-export const HIW_DESKTOP_BENEFIT_CARDS: readonly HiwDesktopBenefitCardConfig[] = [
+/** Figma stat row (5217:6883) — mobile-only vertical benefit stack. */
+export const HIW_MOBILE_BENEFITS_STATS_CLASS =
+  'flex w-full max-w-[361px] flex-col gap-[var(--spacing-12)] lg:hidden';
+
+export const HIW_MOBILE_BENEFIT_CARD_CLASS =
+  'flex w-full flex-row items-center gap-[var(--spacing-8)] rounded-[var(--radius-12)] border border-[var(--color-border-default)] bg-[var(--color-background-page)] p-[var(--spacing-16)]';
+
+export const HIW_MOBILE_BENEFIT_ICON_SHELL_BASE_CLASS =
+  'flex size-[calc(var(--spacing-32)+var(--spacing-4))] shrink-0 items-center justify-center rounded-[var(--radius-12)]';
+
+export const HIW_MOBILE_BENEFIT_ICON_SHELL_SUCCESS_CLASS =
+  'bg-[color-mix(in_srgb,var(--color-text-success)_8%,transparent)]';
+
+export const HIW_MOBILE_BENEFIT_ICON_SHELL_NAVY_CLASS =
+  'bg-[color-mix(in_srgb,var(--color-text-brand-navy)_8%,transparent)]';
+
+export const HIW_MOBILE_BENEFIT_ICON_SHELL_PRIMARY_CLASS =
+  'bg-[color-mix(in_srgb,var(--color-action-primary-default-background)_8%,transparent)]';
+
+export const HIW_MOBILE_BENEFIT_TITLE_CLASS =
+  'text-heading-mobile-h4 text-[var(--color-text-primary)]';
+
+export const HIW_MOBILE_BENEFIT_BODY_CLASS =
+  '[font-family:var(--typography-body-mobile-xs-font-family)] [font-size:var(--typography-body-mobile-xs-font-size)] [font-weight:var(--typography-body-mobile-xs-font-weight)] [line-height:var(--typography-body-mobile-xs-line-height)] text-[var(--color-text-secondary)]';
+
+export const HIW_BENEFIT_CARDS: readonly HiwBenefitCardConfig[] = [
   {
     title: 'Zero booking fees',
     body: 'Pay once. Keep every margin.',
     iconSrc: '/icons/icon-benefit-zero-fees.svg',
+    mobileIconShellClass: HIW_MOBILE_BENEFIT_ICON_SHELL_SUCCESS_CLASS,
   },
   {
     title: 'Full white-label',
     body: 'Your brand on every screen and domain.',
     iconSrc: '/icons/icon-benefit-white-label.svg',
+    mobileIconShellClass: HIW_MOBILE_BENEFIT_ICON_SHELL_NAVY_CLASS,
   },
   {
     title: 'Multi-GDS search',
     body: 'All sources simultaneously, one list.',
     iconSrc: '/icons/icon-benefit-multi-gds.svg',
+    mobileIconShellClass: HIW_MOBILE_BENEFIT_ICON_SHELL_PRIMARY_CLASS,
   },
 ] as const;
+
+/** @deprecated Use HIW_BENEFIT_CARDS */
+export const HIW_DESKTOP_BENEFIT_CARDS = HIW_BENEFIT_CARDS;

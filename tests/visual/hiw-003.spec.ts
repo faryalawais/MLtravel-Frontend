@@ -76,12 +76,12 @@ test.describe('HIW-003 visual — GH#22 social proof strip', () => {
   const mobileSocialStrip = ids.component.howItWorks.mobileSocialStrip;
   const socialProofStrip = ids.component.howItWorks.sixWeek.socialProofStrip;
 
-  test('hiw mobile testimonial 393px', async ({ page }) => {
+  test('hiw mobile social strip 393px', async ({ page }) => {
     await page.setViewportSize({ width: 393, height: 900 });
     await page.goto('/how-it-works');
     await page.getByTestId(mobileSocialStrip.root).scrollIntoViewIfNeeded();
     await expect(page.getByTestId(mobileSocialStrip.root)).toHaveScreenshot(
-      'hiw-mobile-testimonial.png',
+      'hiw-mobile-social-strip.png',
     );
   });
 

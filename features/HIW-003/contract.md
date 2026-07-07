@@ -454,7 +454,7 @@ Frame 2095585162  (nodeId 5217:6866, 393×622)  [component.howItWorks.mobileSoci
 | <1024px (`md` and below) | Hide `component.howItWorks.hero`; render `component.landing.hero` with `layout="hiw-page"` matching `5217:7073` |
 | <1024px | Hide `component.howItWorks.midCta` |
 | <1024px | Render `component.howItWorks.sixWeek` matching mobile `5217:6812` — vertical timeline + stacked cards |
-| <1024px | Render `component.howItWorks.mobileSocialStrip` with `component.landing.socialProof.testimonialBlock` — Figma `5217:6866` / `5217:6867` |
+| <1024px | Render `component.howItWorks.mobileSocialStrip` with testimonial + `component.howItWorks.benefitsStats` — Figma `5217:6866` / `5217:6883` |
 | ≥1024px (`lg+`) | Hide `component.howItWorks.mobileSocialStrip`; render `component.howItWorks.sixWeek.socialProofStrip` with `component.landing.socialProof.testimonialBlock` + desktop benefit cards — Figma `I5217:6705;5223:6722` |
 
 ## 7. Accessibility
@@ -504,4 +504,17 @@ Frame 2095585162  (nodeId 5217:6866, 393×622)  [component.howItWorks.mobileSoci
 
 ---
 
-> **Next contract append:** GH#23 mobile benefits stats (`5217:6883`) after `figma-extract`.
+| GH#23 — mobile benefits stats | `GH#23` — `component.howItWorks.benefitsStats` visible @ 393px · hidden @ 1440px · Figma `5217:6883` |
+
+### GH#23 — Mobile benefits stats (`5217:6883` inside `5217:6866`)
+
+| Container | Direction | Gap | Padding | Notes |
+|-----------|-----------|-----|---------|-------|
+| stat (`5217:6883`) | column | `spacing.12` | — | max 361px · `component.howItWorks.benefitsStats` |
+| BenefitCard (each) | row | `spacing.8` | `spacing.16` | 68px tall · `radius.12` border |
+| icon shell | — | — | — | 36×36 tinted wash per variant |
+| title / body stack | column | `spacing.4` | — | `typography.heading.mobile.h4` / `typography.body.mobile.xs` |
+
+**Copy:** Reuses `HIW_BENEFIT_CARDS` — Zero booking fees · Full white-label · Multi-GDS search (same as desktop strip).
+
+> **Next contract append:** GH#24 final CTA (`5217:7555` / `5217:7583`) after `figma-extract`.

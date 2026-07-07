@@ -12,11 +12,12 @@ export interface SixWeekCardConfig {
   badgeVariant: SixWeekBadgeVariant;
 }
 
-/** How It Works page — desktop social proof strip benefit cards */
-export interface HiwDesktopBenefitCardConfig {
+/** How It Works page — benefit cards (desktop strip + mobile stat row) */
+export interface HiwBenefitCardConfig {
   title: string;
   body: string;
   iconSrc: string;
+  mobileIconShellClass: string;
 }
 
 /** How It Works page — hero section */
