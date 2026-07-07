@@ -230,7 +230,7 @@ Backlog: `features/backlog.yaml` — F-001 Landing first, Navbar frame `5164:655
 | [`designer-token-handoff.md`](./designer-token-handoff.md) | Full audit + fix list — **send to designer** |
 | [`feature-pipeline-quickref.md`](./feature-pipeline-quickref.md) | Skill order: tokens → registry → figma → implement |
 | [`figma-setup.md`](./figma-setup.md) | Figma REST + Desktop MCP |
-| [`START-HERE.md`](./START-HERE.md) | Project entry, feature IDs F-001–F-003 |
+| [`START-HERE.md`](./START-HERE.md) | Project entry, feature IDs LP-001 / CP-002 / HIW-003 |
 | `.claude/skills/design-tokens/SKILL.md` | Validator rules (source of truth for schema) |
 
 ---

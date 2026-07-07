@@ -20,7 +20,7 @@ Travel agency owners and operations leads evaluating booking platforms need a co
 
 - Guest can view the full landing page matching Figma at **desktop and mobile** breakpoints with strict visual sign-off.
 - Navbar, Hero CTA, and Footer provide clear paths to `/contact` (demo booking) and `/how-it-works`.
-- Shared site chrome (Navbar, Footer) is built once in LP-001 and reused on F-002 and F-003 without duplication.
+- Shared site chrome (Navbar, Footer) is built once in LP-001 and reused on F-002 and HIW-003 without duplication.
 - API-first mandatory: feature-split → **LP-001.1** (minimal BE health stub) then **LP-001.2** (UI).
 - Spacing corrections are tracked in Figma; implementation targets **post-fix** frames (designer updates Figma first, then FE matches).
 
@@ -46,14 +46,14 @@ No secondary persona with different LP-001 requirements in v1.
 - **Shared chrome** — Navbar (`5164:6559`) and Footer (`5164:6565`) as reusable components on `/`, `/contact`, `/how-it-works`.
 - **Landing sections** — Hero, Problem, Comparison, How-it-works (landing section), Feature grid, Social proof, Pricing, Footer.
 - **Motion** — button hovers, focus states, and section motion per Figma + `tokens/MOTION-SPEC.md` (in v1, not deferred).
-- **Routes** — `/` (landing), `/contact` (F-002), `/how-it-works` (F-003); Hero primary CTA → `/contact`.
+- **Routes** — `/` (landing), `/contact` (F-002), `/how-it-works` (HIW-003); Hero primary CTA → `/contact`.
 - **Design tokens** — all values from `tokens/primitives.json`, `semantics.json`, `typography.json`; no raw hex or px in components.
 - **LP-001.1** — minimal `GET /api/health` (or equivalent) in MLtravel-Backend so pipeline BE gate passes; no landing-specific domain APIs.
 
 ### Out of scope
 
 - Contact booking flow (F-002).
-- How It Works standalone page content (F-003) — except shared Navbar/Footer built here.
+- How It Works standalone page content (HIW-003) — except shared Navbar/Footer built here.
 - Dynamic content (CMS, API-driven copy, pricing, testimonials).
 - i18n / multi-language.
 - Calendly or third-party embed configuration (F-002 scope).
@@ -72,7 +72,7 @@ No secondary persona with different LP-001 requirements in v1.
 - Navbar links to `/contact` and `/how-it-works`; active route styling where Figma specifies.
 - Hero primary CTA navigates to `/contact`.
 - Each section matches Figma layout, typography, color, spacing (via tokens), and motion at desktop and mobile breakpoints.
-- Navbar and Footer render identically on F-002 and F-003 routes once those pages exist.
+- Navbar and Footer render identically on F-002 and HIW-003 routes once those pages exist.
 
 **Acceptance (high-level — vertical slices; detailed paths in v2 after `figma-extract`):**
 

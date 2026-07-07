@@ -11,7 +11,7 @@
 
 **In:** Contact page layout matching Figma; Calendly booking widget iframe embeds for the multi-step flow (date/time, hours, details, summary); shared Navbar/Footer from LP-001.
 
-**Out:** Custom calendar or booking API (Calendly handles scheduling), Landing page sections (LP-001), How It Works page (F-003).
+**Out:** Custom calendar or booking API (Calendly handles scheduling), Landing page sections (LP-001), How It Works page (HIW-003).
 
 ## Depends on
 

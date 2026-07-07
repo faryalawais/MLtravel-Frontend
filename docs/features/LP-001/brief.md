@@ -9,9 +9,9 @@
 
 ## Scope
 
-**In:** Navbar, Hero, Problem, Comparison, How-it-works section, Feature grid, Social proof, Pricing, Footer — **responsive desktop + mobile** per Figma section node IDs in `features/backlog.yaml`. Shared Navbar and Footer reused on F-002 and F-003 routes.
+**In:** Navbar, Hero, Problem, Comparison, How-it-works section, Feature grid, Social proof, Pricing, Footer — **responsive desktop + mobile** per Figma section node IDs in `features/backlog.yaml`. Shared Navbar and Footer reused on F-002 and HIW-003 routes.
 
-**Out:** Contact booking flow (F-002), How It Works standalone page content (F-003), CMS/i18n, dynamic APIs for landing content.
+**Out:** Contact booking flow (F-002), How It Works standalone page content (HIW-003), CMS/i18n, dynamic APIs for landing content.
 
 ## Depends on
 

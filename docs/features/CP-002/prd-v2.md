@@ -56,7 +56,7 @@ No secondary persona with different CP-002 requirements in v1.
 - CP-002 OpenAPI endpoints, webhooks, booking persistence.
 - Custom React thank-you route — Calendly success UI inside iframe.
 - Cookie consent, Privacy Policy, Terms inside widget (Calendly-provided).
-- LP-001 landing sections, F-003 How It Works content.
+- LP-001 landing sections, HIW-003 How It Works content.
 - CMS, i18n, `react-calendly` package.
 - Pixel-matching Calendly mock UI (calendar grid, timezone picker, form fields) — replaced by iframe.
 

@@ -21,7 +21,7 @@ Travel agency owners and operations leads evaluating booking platforms need a co
 
 - Guest can view the full landing page matching Figma at **desktop (1440px)** and **mobile (393px)** breakpoints with strict visual sign-off.
 - Navbar, Hero CTA, and Footer provide clear paths to `/contact` (demo booking) and `/how-it-works`.
-- Shared site chrome (Navbar, Footer) is built once in LP-001 and reused on F-002 and F-003 without duplication.
+- Shared site chrome (Navbar, Footer) is built once in LP-001 and reused on F-002 and HIW-003 without duplication.
 - API-first mandatory: feature-split → **LP-001.1** (minimal BE health stub) then **LP-001.2** (UI).
 - Spacing corrections are tracked in Figma; implementation targets **post-fix** frames.
 
@@ -51,7 +51,7 @@ Travel agency owners and operations leads evaluating booking platforms need a co
 
 ### Out of scope
 
-- F-002 contact flow, F-003 page content (except shared chrome).
+- F-002 contact flow, HIW-003 page content (except shared chrome).
 - CMS, i18n, dynamic APIs, Calendly embed.
 - `Placeholder Content` node `5187:3101` on desktop (design artefact — do not implement unless design reactivates).
 - **ComparisonSection (2nd) `5164:6563`** — off-canvas design duplicate at `x=3234` on `D4-Desktop` (not in the main 1440px page column). Do **not** implement as a second on-page section unless design moves it to `x=0`.
@@ -122,7 +122,7 @@ Travel agency owners and operations leads evaluating booking platforms need a co
 | HeroSection | `5164:6560` | `5164:7080` (`Frame 2095585155`) | Hero + partner/airline logo strip |
 | ProblemSection | `5164:6561` | `5164:6571` (`ProblemPanelsSection`) | Problem statement panels |
 | ComparisonSection (1st) | `5164:6566` | `5164:6609` (`ComparisonSection — v3 FINAL`) | First comparison block — **main column** (`x=0`, `y≈1583`) |
-| HowItWorksSection | `5164:6567` | `5164:6690` (`How It Works`) | Landing HIW teaser (not F-003 page) |
+| HowItWorksSection | `5164:6567` | `5164:6690` (`How It Works`) | Landing HIW teaser (not HIW-003 page) |
 | FeatureGrid | `5164:6562` | `5164:6785` (`FeatureGrid — Light Modern`) | **1 of 3** post–How-it-works sections — feature cards grid |
 | SocialProofSectionBig | `5164:6568` | `5164:6836` (`Social proof`) | **2 of 3** — testimonials + integrations strip |
 | NewPricingSection | `5164:6564` | `5164:6915` (`Own it`) | **3 of 3** — pricing tiers |
@@ -231,7 +231,7 @@ None — LP-001 UI does not consume BE response bodies. Health endpoint is gate-
 | **Figma spacing not yet updated** | Do not implement against stale spacing; wait for designer Figma fix per Q9 grill decision |
 | **Token vs Figma value mismatch** | Update token export; never hard-code raw px/hex |
 | **Missing / broken image export** | Show broken-image fallback in dev; block visual sign-off until asset fixed |
-| **Unknown route** | Next.js 404 page (not LP-001 scope but chrome may appear when F-002/F-003 exist) |
+| **Unknown route** | Next.js 404 page (not LP-001 scope but chrome may appear when F-002/HIW-003 exist) |
 | **Slow network** | Static page renders without waiting on API; no loading skeletons for content |
 | **API health failure** | No user-visible impact on landing (health not called on page load) |
 | **Keyboard navigation** | All interactive nav/CTA elements focusable with visible focus ring per tokens |

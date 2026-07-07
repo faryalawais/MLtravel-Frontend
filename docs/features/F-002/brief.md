@@ -11,7 +11,7 @@
 
 **In:** Full multi-step contact / demo booking UI with form validation on the details step.
 
-**Out:** Real calendar API integration (stub or static unless BE slice added), Landing page sections (LP-001), HIW page (F-003).
+**Out:** Real calendar API integration (stub or static unless BE slice added), Landing page sections (LP-001), HIW page (HIW-003).
 
 ## Depends on
 

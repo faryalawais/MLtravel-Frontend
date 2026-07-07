@@ -7,7 +7,7 @@
 - **Status:** fe-implemented
 - **Last updated:** 2026-07-03
 - **Figma file key:** `h6BqI1ZRMSJxR7jESNF0Ep`
-- **Figma anchor:** `5164:6346` (landing page only — not used for F-002 / F-003)
+- **Figma anchor:** `5164:6346` (landing page only — not used for CP-002 / HIW-003)
 
 ## Brief inputs (Step 1 — `/feature-brief`)
 <!-- Confirmed by user: "fill it if you know" — sourced from backlog + Figma + project context -->
@@ -297,7 +297,7 @@ Full file: `tokens/ui-registry.json` · glossary: `reports/ui-registry-glossary.
 ---
 
 ## Pipeline log
-- **2026-06-30** — `/feature-brief` — parent ID LP-001; landing page D4; owns shared Navbar + Footer for F-002 / F-003 reuse.
+- **2026-06-30** — `/feature-brief` — parent ID LP-001; landing page D4; owns shared Navbar + Footer for CP-002 / HIW-003 reuse.
 - **2026-06-30** — New Figma file `h6BqI1ZRMSJxR7jESNF0Ep`; designer token upload (6 files in `tokens/`).
 - **2026-06-30** — `/grill-me` complete — 9 decisions locked (static, responsive, routes, BE stub, motion, Navbar first, Figma-driven acceptance).
 - **2026-07-01** — `/prd-author` — `docs/features/LP-001/prd-v1.md` written (Figma-first; grill-me decisions incorporated).

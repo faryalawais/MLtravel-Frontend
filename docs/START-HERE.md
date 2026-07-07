@@ -1,7 +1,7 @@
 # START HERE — MLtravel Frontend
 
-**Status:** Phase 1 · **LP-001** — `fe-implemented` · F-002 / F-003 — `brief-created`  
-**Figma file:** `h6BqI1ZRMSJxR7jESNF0Ep` — [ML Travel Project (faryal-updated)](https://www.figma.com/design/h6BqI1ZRMSJxR7jESNF0Ep/ML-Travel-Project--faryal-updated-?p=f&m=dev) (frame links are per feature — see LP-001 / F-002 / F-003 briefs)
+**Status:** Phase 1 · **LP-001** — `fe-implemented` · CP-002 / **HIW-003** — `brief-created`  
+**Figma file:** `h6BqI1ZRMSJxR7jESNF0Ep` — [ML Travel Project (faryal-updated)](https://www.figma.com/design/h6BqI1ZRMSJxR7jESNF0Ep/ML-Travel-Project--faryal-updated-?p=f&m=dev) (frame links are per feature — see LP-001 / CP-002 / HIW-003 briefs)
 **Pipeline:** [`docs/feature-pipeline-quickref.md`](./feature-pipeline-quickref.md)
 
 ---
@@ -14,7 +14,7 @@ Static marketing site from Figma — pixel-accurate, token-driven:
 |------|------------|-------|-------------|
 | Landing | **LP-001** | `docs/features/LP-001/brief.md` | `5164:6346` (page) · sections in backlog |
 | Contact | **F-002** | `docs/features/F-002/brief.md` | `5185:4332` … |
-| How It Works | **F-003** | `docs/features/F-003/brief.md` | `5217:6697` |
+| How It Works | **HIW-003** | `docs/features/HIW-003/brief.md` | `5217:6696` (anchor) · `5217:6697` (desktop) |
 
 Design system source pages: Color System `2864:1549`, Text Styles `2780:11647`, Components `2713:1937`.
 
@@ -42,7 +42,7 @@ Planning runs **once per feature ID** — separate PRD, issues, and Gherkins per
 |---------|------|-----------------|
 | **LP-001** | Landing | **start here** |
 | F-002 | Contact | after LP-001 slices defined |
-| F-003 | How It Works | after LP-001 slices defined |
+| HIW-003 | How It Works | after LP-001 slices defined |
 
 Static pages: BE may be minimal (no API or stubs). Gate still expects `be-implemented` before FE page work.
 
@@ -91,8 +91,8 @@ Gate: `npm run gate` → human visual sign-off → `status: approved` in `backlo
 ```
 LP-001  Landing (navbar + footer — shared chrome)
   ↓
-F-002  Contact
-F-003  How It Works
+CP-002  Contact
+HIW-003  How It Works
 ```
 
 Full backlog: [`features/backlog.yaml`](../features/backlog.yaml)
@@ -115,6 +115,6 @@ Full backlog: [`features/backlog.yaml`](../features/backlog.yaml)
 
 > **FE unblocked.** Start: issue [#1](https://github.com/faryalawais/MLtravel-Frontend/issues/1) app shell, then [#3](https://github.com/faryalawais/MLtravel-Frontend/issues/3) Navbar (`figma-extract` → `design-contract` → `fe-implement`)
 
-Repeat the planning loop for F-002 and F-003 after LP-001 planning gates pass (or in parallel if slices are independent).
+Repeat the planning loop for CP-002 and HIW-003 after LP-001 planning gates pass (or in parallel if slices are independent).
 
 Do **not** skip to `/fe-implement` until planning gates pass.

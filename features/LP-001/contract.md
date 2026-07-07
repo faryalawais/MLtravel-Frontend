@@ -10,7 +10,7 @@
 |------|---------|
 | `/` | Landing — hosts shared `component.navbar` |
 | `/contact` | Contact / demo booking (navbar reused when F-002 ships) |
-| `/how-it-works` | How it works page (navbar reused when F-003 ships) |
+| `/how-it-works` | How it works page (navbar reused when HIW-003 ships) |
 
 **Navbar navigation behaviour (GH#3):**
 - Link label **How It Works** → `/how-it-works`
