@@ -11,3 +11,11 @@ export interface ContactEmbedSectionProps {
 export interface ContactFallbackSectionProps {
   contactEmail: string;
 }
+
+/** Calendly inline embed — `calendly.page_height` postMessage payload */
+export interface CalendlyPageHeightMessage {
+  event: 'calendly.page_height';
+  payload: {
+    height: string;
+  };
+}

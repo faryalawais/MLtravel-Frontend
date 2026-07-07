@@ -1,19 +1,43 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
+  buildCalendlyEmbedUrl,
+  CALENDLY_EMBED_RENDER_HEIGHT_PX,
+  CALENDLY_EMBED_RENDER_WIDTH_PX,
+  CALENDLY_EMBED_WIDTH_SCALE,
   CALENDLY_IFRAME_TITLE,
+  CONTACT_EMBED_FALLBACK_SHELL_CLASS,
+  CONTACT_EMBED_IFRAME_CLASS,
+  CONTACT_EMBED_IFRAME_MOBILE_CLASS,
+  CONTACT_EMBED_IFRAME_WIDE_CLASS,
+  CONTACT_EMBED_SCALED_FRAME_CLASS,
+  CONTACT_EMBED_SHELL_CLASS,
+  CONTACT_EMBED_SHELL_HEIGHT_CLASS,
+  CONTACT_EMBED_SKELETON_CLASS,
   EMBED_FALLBACK_LINK_LABEL,
   EMBED_FALLBACK_MESSAGE,
+  parseCalendlyPageHeightPx,
+  resolveCalendlyShellHeightPx,
 } from '@/constants/contact.constants';
 import { ids } from '@/tokens/build/test-ids';
-import type { ContactEmbedSectionProps } from '@/types/contact.types';
+import type { CalendlyPageHeightMessage, ContactEmbedSectionProps } from '@/types/contact.types';
+
+const WIDE_EMBED_MEDIA_QUERY = '(min-width: 1024px)';
+
+function isCalendlyOrigin(origin: string): boolean {
+  try {
+    return new URL(origin).hostname.endsWith('calendly.com');
+  } catch {
+    return false;
+  }
+}
 
 function ContactEmbedSkeleton({ hidden }: { hidden: boolean }) {
   return (
     <div
       data-testid={ids.component.contact.embedSkeleton.root}
-      className={`absolute inset-0 animate-pulse rounded-[var(--radius-6)] bg-[var(--color-surface-muted)] ${hidden ? 'hidden' : ''}`}
+      className={`${CONTACT_EMBED_SKELETON_CLASS} ${hidden ? 'hidden' : ''}`}
       aria-hidden={hidden}
     />
   );
@@ -25,7 +49,7 @@ function ContactEmbedFallback({ calendlyUrl }: { calendlyUrl: string }) {
   return (
     <div
       data-testid={ids.component.contact.embedFallback.root}
-      className="flex min-h-[550px] w-full flex-col items-center justify-center gap-[var(--space-md)] rounded-[var(--radius-6)] border border-[var(--color-border-default)] bg-[var(--color-background-page)] px-[var(--spacing-16)] py-[var(--spacing-24)] text-center"
+      className={CONTACT_EMBED_FALLBACK_SHELL_CLASS}
     >
       <p className="text-body-desktop-md text-[var(--color-text-primary)]">
         {EMBED_FALLBACK_MESSAGE}
@@ -44,8 +68,58 @@ function ContactEmbedFallback({ calendlyUrl }: { calendlyUrl: string }) {
 
 export function ContactEmbedSection({ calendlyUrl }: ContactEmbedSectionProps) {
   const trimmedUrl = calendlyUrl.trim();
+  const [embedUrl, setEmbedUrl] = useState('');
+  const [isWideLayout, setIsWideLayout] = useState(false);
+  const [naturalHeightPx, setNaturalHeightPx] = useState(CALENDLY_EMBED_RENDER_HEIGHT_PX);
   const [isLoading, setIsLoading] = useState(Boolean(trimmedUrl));
   const [hasError, setHasError] = useState(false);
+
+  const shellHeightPx = resolveCalendlyShellHeightPx(isWideLayout, naturalHeightPx);
+  const shellHeightClass = isWideLayout ? '' : CONTACT_EMBED_SHELL_HEIGHT_CLASS;
+
+  useEffect(() => {
+    if (!trimmedUrl) {
+      setEmbedUrl('');
+      setIsLoading(false);
+      return;
+    }
+
+    setEmbedUrl(buildCalendlyEmbedUrl(trimmedUrl, window.location.host));
+    setNaturalHeightPx(CALENDLY_EMBED_RENDER_HEIGHT_PX);
+    setIsLoading(true);
+    setHasError(false);
+  }, [trimmedUrl]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(WIDE_EMBED_MEDIA_QUERY);
+    const updateLayout = () => setIsWideLayout(mediaQuery.matches);
+    updateLayout();
+    mediaQuery.addEventListener('change', updateLayout);
+    return () => mediaQuery.removeEventListener('change', updateLayout);
+  }, []);
+
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (!isCalendlyOrigin(event.origin)) {
+        return;
+      }
+
+      const data = event.data as Partial<CalendlyPageHeightMessage>;
+      if (data.event !== 'calendly.page_height' || !data.payload?.height) {
+        return;
+      }
+
+      const nextHeight = parseCalendlyPageHeightPx(data.payload.height);
+      if (nextHeight === null) {
+        return;
+      }
+
+      setNaturalHeightPx(nextHeight);
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
 
   const handleLoad = useCallback(() => {
     setIsLoading(false);
@@ -56,11 +130,11 @@ export function ContactEmbedSection({ calendlyUrl }: ContactEmbedSectionProps) {
     setHasError(true);
   }, []);
 
-  if (!trimmedUrl || hasError) {
+  if (!trimmedUrl || !embedUrl || hasError) {
     return (
       <section
         data-testid={ids.component.contact.embed.root}
-        className="flex w-full max-w-[868px] justify-center"
+        className={`${CONTACT_EMBED_SHELL_CLASS} ${CONTACT_EMBED_SHELL_HEIGHT_CLASS}`}
       >
         <ContactEmbedFallback calendlyUrl={trimmedUrl} />
       </section>
@@ -70,18 +144,45 @@ export function ContactEmbedSection({ calendlyUrl }: ContactEmbedSectionProps) {
   return (
     <section
       data-testid={ids.component.contact.embed.root}
-      className="relative w-full max-w-[868px] min-h-[550px]"
+      className={`${CONTACT_EMBED_SHELL_CLASS} ${shellHeightClass}`}
+      style={isWideLayout ? { height: `${shellHeightPx}px` } : undefined}
     >
       <ContactEmbedSkeleton hidden={!isLoading} />
-      <iframe
-        src={trimmedUrl}
-        title={CALENDLY_IFRAME_TITLE}
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`h-[550px] w-full rounded-[var(--radius-6)] border-0 ${
-          isLoading ? 'invisible absolute inset-0' : 'relative'
-        }`}
-      />
+      {isWideLayout ? (
+        <div
+          className={`${CONTACT_EMBED_SCALED_FRAME_CLASS} ${
+            isLoading ? 'invisible' : ''
+          }`}
+          style={{
+            width: `${CALENDLY_EMBED_RENDER_WIDTH_PX}px`,
+            height: `${naturalHeightPx}px`,
+            transform: `scale(${CALENDLY_EMBED_WIDTH_SCALE})`,
+          }}
+        >
+          <iframe
+            src={embedUrl}
+            title={CALENDLY_IFRAME_TITLE}
+            onLoad={handleLoad}
+            onError={handleError}
+            scrolling="no"
+            width={CALENDLY_EMBED_RENDER_WIDTH_PX}
+            height={naturalHeightPx}
+            style={{ width: `${CALENDLY_EMBED_RENDER_WIDTH_PX}px`, height: `${naturalHeightPx}px` }}
+            className={`${CONTACT_EMBED_IFRAME_CLASS} ${CONTACT_EMBED_IFRAME_WIDE_CLASS}`}
+          />
+        </div>
+      ) : (
+        <iframe
+          src={embedUrl}
+          title={CALENDLY_IFRAME_TITLE}
+          onLoad={handleLoad}
+          onError={handleError}
+          scrolling="no"
+          className={`${CONTACT_EMBED_IFRAME_CLASS} ${CONTACT_EMBED_IFRAME_MOBILE_CLASS} ${
+            isLoading ? 'invisible' : ''
+          }`}
+        />
+      )}
     </section>
   );
 }

@@ -1,6 +1,9 @@
 import {
   CONTACT_HERO_HEADLINE,
+  CONTACT_HERO_HEADLINE_CLASS,
+  CONTACT_HERO_SECTION_CLASS,
   CONTACT_HERO_SUBHEAD,
+  CONTACT_HERO_SUBHEAD_CLASS,
 } from '@/constants/contact.constants';
 import { ids } from '@/tokens/build/test-ids';
 
@@ -8,17 +11,17 @@ export function ContactHeroSection() {
   return (
     <section
       data-testid={ids.component.contact.hero.root}
-      className="flex w-full max-w-[755px] flex-col items-center gap-[var(--space-sm)] text-center"
+      className={CONTACT_HERO_SECTION_CLASS}
     >
       <h1
         data-testid={ids.component.contact.hero.heading}
-        className="text-display-mobile-lg text-[var(--color-text-primary)] lg:text-display-desktop-lg"
+        className={CONTACT_HERO_HEADLINE_CLASS}
       >
         {CONTACT_HERO_HEADLINE}
       </h1>
       <p
         data-testid={ids.component.contact.hero.subhead}
-        className="text-body-desktop-md text-[var(--color-text-primary)]"
+        className={CONTACT_HERO_SUBHEAD_CLASS}
       >
         {CONTACT_HERO_SUBHEAD}
       </p>

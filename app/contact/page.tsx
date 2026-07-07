@@ -1,7 +1,10 @@
 import { ContactEmbedSection } from '@/components/contact/ContactEmbedSection';
 import { ContactFallbackSection } from '@/components/contact/ContactFallbackSection';
 import { ContactHeroSection } from '@/components/contact/ContactHeroSection';
-import { CONTACT_FALLBACK_EMAIL } from '@/constants/contact.constants';
+import {
+  CONTACT_FALLBACK_EMAIL,
+  CONTACT_PAGE_SHELL_CLASS,
+} from '@/constants/contact.constants';
 import { ids } from '@/tokens/build/test-ids';
 import type { ContactPageProps } from '@/types/contact.types';
 
@@ -21,10 +24,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? CONTACT_FALLBACK_EMAIL;
 
   return (
-    <div
-      data-testid={ids.screen.contact.page}
-      className="flex w-full flex-col items-center gap-[var(--spacing-40)] px-[var(--spacing-16)] pb-[var(--spacing-40)] pt-[var(--spacing-24)] sm:px-[var(--spacing-64)]"
-    >
+    <div data-testid={ids.screen.contact.page} className={CONTACT_PAGE_SHELL_CLASS}>
       <ContactHeroSection />
       <ContactEmbedSection calendlyUrl={calendlyUrl} />
       <ContactFallbackSection contactEmail={contactEmail} />
