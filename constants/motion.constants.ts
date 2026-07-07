@@ -65,6 +65,40 @@ export const PRICING_MOTION_MAIN_GROUP_OFFSET_PX =
 
 export type PricingMotionStep = ComparisonMotionStep;
 
+/** HIW-FinalCTA-animation — banner translateY (`5409:11616` top 280px → `5409:11646` top 0). */
+export const HIW_FINAL_CTA_MOTION_BANNER_OFFSET_PX = 280;
+
+export type HiwFinalCtaMotionStep = -1 | 0 | 1;
+
+export function getHiwFinalCtaBannerTransform(
+  motionEngaged: boolean,
+  motionSettled: boolean,
+): string {
+  if (!motionEngaged || motionSettled) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  return `translateY(${HIW_FINAL_CTA_MOTION_BANNER_OFFSET_PX}px)`;
+}
+
+/** Final CTA banner slide for HIW-FinalCTA-animation simple-one-step chain. */
+export function getHiwFinalCtaBannerMotionStyle(
+  motionEngaged: boolean,
+  motionSettled: boolean,
+  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
+): CSSProperties {
+  const snapEntry = motionEngaged && !motionSettled;
+
+  return {
+    ...baseStyle,
+    transitionProperty: 'transform',
+    transitionDuration: snapEntry
+      ? '0ms'
+      : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    transform: getHiwFinalCtaBannerTransform(motionEngaged, motionSettled),
+  };
+}
+
 export function getPricingMainGroupTransform(
   motionEngaged: boolean,
   motionSettled: boolean,

@@ -198,4 +198,33 @@ test.describe('HIW-003 smoke', () => {
 
     await expect(page.getByTestId(screen).getByTestId(benefitsStats.root)).toBeHidden();
   });
+
+  test('GH#24 — final CTA desktop at 1440px', async ({ page }) => {
+    const finalCta = ids.component.howItWorks.finalCta;
+
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(finalCta.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(finalCta.root)).toBeVisible();
+    await expect(page.getByTestId(finalCta.headline)).toContainText('6 weeks');
+    await expect(page.getByTestId(finalCta.subcopy)).toHaveText(
+      'Book a free 20-minute demo. No commitment. Just a live walkthrough.',
+    );
+    await page.getByTestId(finalCta.demoCta).click();
+    await expect(page).toHaveURL(/\/contact/);
+  });
+
+  test('GH#24 — final CTA mobile at 393px', async ({ page }) => {
+    const finalCta = ids.component.howItWorks.finalCta;
+
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(finalCta.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(finalCta.root)).toBeVisible();
+    await expect(page.getByTestId(finalCta.headline)).toContainText('6 weeks');
+    await page.getByTestId(finalCta.demoCta).click();
+    await expect(page).toHaveURL(/\/contact/);
+  });
 });

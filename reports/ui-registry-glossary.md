@@ -2929,6 +2929,15 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.howItWorks.benefitsStats.root` | Mobile benefits stat row (Gherkin: GH#23; Figma 5217:6883) | `screen.howItWorks.page` | `default` | `component-howItWorks-benefitsStats-root` |
 | `component.howItWorks.mobileSocialStrip.root` | HIW mobile testimonial + benefits region (Gherkin: GH#22/23; Figma 5217:6866) | `screen.howItWorks.page` | `default` | `component-howItWorks-mobileSocialStrip-root` |
 | `component.howItWorks.mobileSocialStrip.testimonial` | Mobile Moazam testimonial block (5217:6867 test) — reuses component.landing.socialProof.testimonialBlock test ids | `screen.howItWorks.page` | `default` | `component-howItWorks-mobileSocialStrip-testimonial` |
+| `component.howItWorks.finalCta.root` | HIW final demo CTA band (Gherkin: component.howItWorks.finalCta; desktop 5217:7555 / mobile 5217:7583) | `screen.howItWorks.page` | `default` | `component-howItWorks-finalCta-root` |
+| `component.howItWorks.finalCta.textBlock` | FinalCTATextBlock copy stack (5225:9 / 5217:7596) | `screen.howItWorks.page` | `default` | `component-howItWorks-finalCta-textBlock` |
+| `component.howItWorks.finalCta.headline` | Final CTA headline with orange 6 weeks accent | `screen.howItWorks.page` | `default` | `component-howItWorks-finalCta-headline` |
+| `component.howItWorks.finalCta.subcopy` | Final CTA supporting line | `screen.howItWorks.page` | `default` | `component-howItWorks-finalCta-subcopy` |
+| `component.howItWorks.finalCta.demoCta` | Button/Primary — Book A Free Demo (I5217:7555;5225:18 / 5217:7587) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-finalCta-demoCta` |
+| `component.howItWorks.finalCta.label` | Final CTA button label | `screen.howItWorks.page` | `default` | `component-howItWorks-finalCta-label` |
+| `component.howItWorks.finalCta.ctaIcon` | Final CTA button icon wrapper | `screen.howItWorks.page` | `default` | `component-howItWorks-finalCta-ctaIcon` |
+| `component.howItWorks.finalCta.graphic` | Final CTA plane arrow graphic | `screen.howItWorks.page` | `default` | `component-howItWorks-finalCta-graphic` |
+| `component.howItWorks.finalCta.motion.root` | HIW-FinalCTA-animation prototype (5409:11661 → 5409:11660) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-finalCta-motion-root` |
 
 ---
 

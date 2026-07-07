@@ -384,6 +384,7 @@ Frame 2095585162  (nodeId 5217:6866, 393×622)  [component.howItWorks.mobileSoci
 | `component.landing.hero` (mobile) | default | LP-001 mobile hero with `hiw-page` variant |
 | `component.howItWorks.midCta.demoCta` | hover | LP-001 `HeroPrimaryCta` primary hover tokens |
 | `component.howItWorks.sixWeek` | default | `HIW-onboarding-animation` (`HIW-Sixweek-animation`) — hover `component.howItWorks.sixWeek.motion.root` · 5-state card cascade + social proof strip reveal |
+| `component.howItWorks.finalCta.motion.root` | hover | `HIW-FinalCTA-animation` — banner slide-up reveal (desktop `lg+` only) |
 
 ### 5b. Motion (Track A — `HIW-hero-animation`)
 
@@ -456,6 +457,7 @@ Frame 2095585162  (nodeId 5217:6866, 393×622)  [component.howItWorks.mobileSoci
 | <1024px | Render `component.howItWorks.sixWeek` matching mobile `5217:6812` — vertical timeline + stacked cards |
 | <1024px | Render `component.howItWorks.mobileSocialStrip` with testimonial + `component.howItWorks.benefitsStats` — Figma `5217:6866` / `5217:6883` |
 | ≥1024px (`lg+`) | Hide `component.howItWorks.mobileSocialStrip`; render `component.howItWorks.sixWeek.socialProofStrip` with `component.landing.socialProof.testimonialBlock` + desktop benefit cards — Figma `I5217:6705;5223:6722` |
+| all breakpoints | Render `component.howItWorks.finalCta` after mobile social strip — desktop `5217:7555` (radial gradient card) · mobile `5217:7583` (solid dark-deep card) |
 
 ## 7. Accessibility
 
@@ -492,6 +494,8 @@ Frame 2095585162  (nodeId 5217:6866, 393×622)  [component.howItWorks.mobileSoci
 - `features/HIW-003/figma/reference-sixweeksection-mobile.png` — mobile timeline `5217:6812`
 - `features/HIW-003/figma/reference-hiw-mobile-social-strip.png` — mobile social strip `5217:6866`
 - `features/HIW-003/figma/reference-hiw-mobile-testimonial.png` — mobile testimonial `5217:6867`
+- `features/HIW-003/figma/nodes/5217-7555.json` — desktop final CTA `5217:7555`
+- `features/HIW-003/figma/nodes/5217-7583.json` — mobile final CTA `5217:7583`
 - Mobile `5217:7073` — reuse LP-001 `features/LP-001/figma/reference-frame-2095585155.png`
 
 ## 11. Fidelity tolerance
@@ -517,4 +521,37 @@ Frame 2095585162  (nodeId 5217:6866, 393×622)  [component.howItWorks.mobileSoci
 
 **Copy:** Reuses `HIW_BENEFIT_CARDS` — Zero booking fees · Full white-label · Multi-GDS search (same as desktop strip).
 
-> **Next contract append:** GH#24 final CTA (`5217:7555` / `5217:7583`) after `figma-extract`.
+### GH#24 — Final CTA (`5217:7555` / `5217:7583`)
+
+| Element | Background | Text | Border | Radius | Typography |
+|---------|------------|------|--------|--------|------------|
+| Desktop card | radial `color.navy.500` → `color.neutral.900` | — | — | `radius.panel` (20px) | — |
+| Mobile card | `color.background.dark-deep` | — | — | `radius.panel` | — |
+| Headline (desktop) | — | inverse + `color.text.brand.orange` accent on “6 weeks” | — | — | `typography.display.desktop.pricing-xl` |
+| Headline (mobile) | — | inverse + orange accent | — | — | `typography.display.mobile.pricing.sm` (28px / 36px) |
+| Subcopy (desktop) | — | `color.text.inverse` | — | — | `typography.body.desktop.sm` |
+| Subcopy (mobile) | — | `color.text.inverse` | — | — | `typography.body.mobile.sm` |
+| Demo CTA | `color.action.primary.default` | inverse label | — | `radius.6` | `typography.label.desktop.lg` — reuse `HeroPrimaryCta` → `/contact` |
+
+**Motion — `HIW-FinalCTA-animation` (`5409:11662`)**
+
+| State | nodeId | Banner position |
+|-------|--------|-----------------|
+| 1 (idle) | `5409:11661` | `translateY(280px)` — below clip |
+| 2 (terminal) | `5409:11660` | `translateY(0)` — matches static twin `5217:7555` |
+
+| Step | Trigger | Duration | Behaviour |
+|------|---------|----------|-----------|
+| 1 | `MOUSE_ENTER` on `component.howItWorks.finalCta.motion.root` | 700ms | `runSimpleOneStepMotion` — snap banner below clip, slide to rest |
+
+Desktop only (`lg+`). Mobile `5217:7583` has no animation twin.
+
+**Copy**
+
+- Headline: “Your agents could be searching every GDS from one screen in **6 weeks**.”
+- Subcopy: “Book a free 20-minute demo. No commitment. Just a live walkthrough.”
+- CTA label: “Book A Free Demo”
+
+| GH#24 — final CTA | `GH#24` — `component.howItWorks.finalCta` visible @ 1440px + 393px · Figma `5217:7555` / `5217:7583` · demo CTA → `/contact` |
+
+> **Next contract append:** GH#25 FAQ (`5261:8072` / `5261:8150`) after `figma-extract`.

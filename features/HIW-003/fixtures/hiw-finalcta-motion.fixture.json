@@ -1,0 +1,29 @@
+{
+  "chain": "HIW-FinalCTA-animation",
+  "alias": "HIW-FinalCTA-animation",
+  "animationNodeId": "5409:11661",
+  "staticTwinNodeId": "5217:7555",
+  "pattern": "simple-one-step",
+  "runner": "runSimpleOneStepMotion",
+  "figmaStates": [
+    { "index": 1, "nodeId": "5409:11661", "label": "idle" },
+    { "index": 2, "nodeId": "5409:11660", "label": "state-2" }
+  ],
+  "transitions": [
+    {
+      "stepIndex": 0,
+      "trigger": "MOUSE_ENTER",
+      "durationMs": 700,
+      "delayMs": 0
+    }
+  ],
+  "implementationExpected": {
+    "trigger": "onMouseEnter on component.howItWorks.finalCta.motion.root",
+    "desktopOnly": true,
+    "bannerOffsetPx": 280,
+    "steps": [
+      { "index": 0, "action": "snapBannerBelowClip" },
+      { "index": 1, "action": "slideBannerToRest" }
+    ]
+  }
+}

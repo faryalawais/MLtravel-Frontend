@@ -289,6 +289,40 @@ export const HIW_MOBILE_BENEFIT_TITLE_CLASS =
 export const HIW_MOBILE_BENEFIT_BODY_CLASS =
   '[font-family:var(--typography-body-mobile-xs-font-family)] [font-size:var(--typography-body-mobile-xs-font-size)] [font-weight:var(--typography-body-mobile-xs-font-weight)] [line-height:var(--typography-body-mobile-xs-line-height)] text-[var(--color-text-secondary)]';
 
+export const HIW_FINAL_CTA_HEADLINE_PREFIX =
+  'Your agents could be searching every GDS from one screen in ';
+
+export const HIW_FINAL_CTA_HEADLINE_ACCENT = '6 weeks';
+
+export const HIW_FINAL_CTA_SUBCOPY =
+  'Book a free 20-minute demo. No commitment. Just a live walkthrough.';
+
+/** Figma page inset — frame `5217:6697` content x=63 on 1440px canvas. */
+export const HIW_FINAL_CTA_SECTION_CLASS =
+  'flex w-full flex-col items-center px-[var(--spacing-16)] py-[var(--spacing-40)] lg:px-[calc(var(--spacing-64)-var(--spacing-1))]';
+
+export const HIW_FINAL_CTA_CARD_CLASS =
+  'flex w-full max-w-[1314px] flex-col items-center rounded-[var(--radius-panel)] bg-[var(--color-background-dark-deep)] px-[var(--spacing-16)] py-[calc(var(--spacing-32)+var(--spacing-4))] lg:bg-[image:radial-gradient(ellipse_at_center,var(--color-navy-500)_0%,var(--color-neutral-900)_100%)] lg:px-[var(--spacing-40)] lg:py-[var(--spacing-40)]';
+
+/** Figma HIW-FinalCTA-animation clip (`5409:11661` → `5409:11660`) — banner height 280px on desktop only. */
+export const HIW_FINAL_CTA_DESKTOP_MOTION_CLIP_CLASS =
+  'w-full max-w-[1314px] lg:h-[280px] lg:overflow-hidden lg:rounded-[var(--radius-panel)]';
+
+export const HIW_FINAL_CTA_INNER_CLASS =
+  'flex w-full max-w-[329px] flex-col items-center gap-[var(--spacing-20)] lg:max-w-[680px] lg:gap-[var(--spacing-24)]';
+
+export const HIW_FINAL_CTA_TEXT_BLOCK_CLASS =
+  'flex w-full flex-col items-center gap-[var(--spacing-4)] text-center lg:gap-[var(--spacing-8)]';
+
+export const HIW_FINAL_CTA_HEADLINE_CLASS =
+  '[word-break:break-word] [font-family:var(--typography-display-mobile-pricing-sm-font-family)] [font-size:var(--typography-display-mobile-pricing-sm-font-size)] [font-weight:var(--typography-display-mobile-pricing-sm-font-weight)] [line-height:var(--typography-display-mobile-pricing-sm-line-height)] tracking-[var(--font-letterspacing-neg2)] text-center text-[var(--color-text-inverse)] lg:[font-family:var(--typography-display-desktop-pricing-xl-font-family)] lg:[font-size:var(--typography-display-desktop-pricing-xl-font-size)] lg:[font-weight:var(--typography-display-desktop-pricing-xl-font-weight)] lg:[line-height:var(--typography-display-desktop-pricing-xl-line-height)]';
+
+export const HIW_FINAL_CTA_HEADLINE_ACCENT_CLASS =
+  'text-[var(--color-text-brand-orange)]';
+
+export const HIW_FINAL_CTA_SUBCOPY_CLASS =
+  '[font-family:var(--typography-body-mobile-sm-font-family)] [font-size:var(--typography-body-mobile-sm-font-size)] [font-weight:var(--typography-body-mobile-sm-font-weight)] [line-height:var(--typography-body-mobile-sm-line-height)] tracking-[var(--font-letterspacing-neg0-3125)] text-center text-[var(--color-text-inverse)] lg:text-body-desktop-sm lg:tracking-[var(--font-letterspacing-neg0-4)]';
+
 export const HIW_BENEFIT_CARDS: readonly HiwBenefitCardConfig[] = [
   {
     title: 'Zero booking fees',

@@ -94,3 +94,21 @@ test.describe('HIW-003 visual — GH#22 social proof strip', () => {
     );
   });
 });
+
+test.describe('HIW-003 visual — GH#24 final CTA', () => {
+  const finalCta = ids.component.howItWorks.finalCta;
+
+  test('hiw final cta desktop 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+    await page.getByTestId(finalCta.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(finalCta.root)).toHaveScreenshot('hiw-final-cta-desktop.png');
+  });
+
+  test('hiw final cta mobile 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+    await page.getByTestId(finalCta.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(finalCta.root)).toHaveScreenshot('hiw-final-cta-mobile.png');
+  });
+});

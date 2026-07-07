@@ -193,6 +193,56 @@
           "transitionType": "SMART_ANIMATE"
         }
       ]
+    },
+    {
+      "name": "HIW-FinalCTA-animation",
+      "subgraphId": "primary",
+      "staticTwin": {
+        "name": "FinalCTASection",
+        "nodeId": "5217:7555"
+      },
+      "animationNodeId": "5409:11661",
+      "status": "closed",
+      "kind": "interactive",
+      "pattern": "simple-one-step",
+      "runner": "runSimpleOneStepMotion",
+      "baseStyle": "DEFAULT_MOTION_STYLE",
+      "trigger": {
+        "event": "onMouseEnter",
+        "targetTestId": "component.howItWorks.finalCta.motion.root",
+        "targetNodeId": "5409:11661"
+      },
+      "states": [
+        {
+          "index": 1,
+          "nodeId": "5409:11661",
+          "label": "idle",
+          "referencePng": "reference-hiw-finalcta-animation-state-1.png"
+        },
+        {
+          "index": 2,
+          "nodeId": "5409:11660",
+          "label": "state-2",
+          "referencePng": "reference-hiw-finalcta-animation-state-2.png"
+        }
+      ],
+      "transitions": [
+        {
+          "from": "5409:11661",
+          "to": "5409:11660",
+          "trigger": "MOUSE_ENTER",
+          "rawTrigger": "MOUSE_ENTER",
+          "triggerNodeId": "5409:11661",
+          "triggerNodeName": "Property 1=1",
+          "delayMs": 0,
+          "delayToken": null,
+          "durationMs": 700,
+          "durationToken": "motion.duration.default",
+          "easing": "EASE_IN",
+          "easingToken": "motion.easing.default",
+          "transitionType": "SMART_ANIMATE"
+        }
+      ]
     }
   ],
   "ambientMotion": []

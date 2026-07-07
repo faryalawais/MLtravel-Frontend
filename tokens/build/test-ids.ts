@@ -2920,7 +2920,16 @@ export const testIds = {
   "component.howItWorks.sixWeek.motion.root": "component-howItWorks-sixWeek-motion-root",
   "component.howItWorks.benefitsStats.root": "component-howItWorks-benefitsStats-root",
   "component.howItWorks.mobileSocialStrip.root": "component-howItWorks-mobileSocialStrip-root",
-  "component.howItWorks.mobileSocialStrip.testimonial": "component-howItWorks-mobileSocialStrip-testimonial"
+  "component.howItWorks.mobileSocialStrip.testimonial": "component-howItWorks-mobileSocialStrip-testimonial",
+  "component.howItWorks.finalCta.root": "component-howItWorks-finalCta-root",
+  "component.howItWorks.finalCta.textBlock": "component-howItWorks-finalCta-textBlock",
+  "component.howItWorks.finalCta.headline": "component-howItWorks-finalCta-headline",
+  "component.howItWorks.finalCta.subcopy": "component-howItWorks-finalCta-subcopy",
+  "component.howItWorks.finalCta.demoCta": "component-howItWorks-finalCta-demoCta",
+  "component.howItWorks.finalCta.label": "component-howItWorks-finalCta-label",
+  "component.howItWorks.finalCta.ctaIcon": "component-howItWorks-finalCta-ctaIcon",
+  "component.howItWorks.finalCta.graphic": "component-howItWorks-finalCta-graphic",
+  "component.howItWorks.finalCta.motion.root": "component-howItWorks-finalCta-motion-root"
 } as const;
 
 export type RegistryPath = keyof typeof testIds;
@@ -5932,6 +5941,19 @@ export const ids = {
       "mobileSocialStrip": {
         "root": "component-howItWorks-mobileSocialStrip-root",
         "testimonial": "component-howItWorks-mobileSocialStrip-testimonial"
+      },
+      "finalCta": {
+        "root": "component-howItWorks-finalCta-root",
+        "textBlock": "component-howItWorks-finalCta-textBlock",
+        "headline": "component-howItWorks-finalCta-headline",
+        "subcopy": "component-howItWorks-finalCta-subcopy",
+        "demoCta": "component-howItWorks-finalCta-demoCta",
+        "label": "component-howItWorks-finalCta-label",
+        "ctaIcon": "component-howItWorks-finalCta-ctaIcon",
+        "graphic": "component-howItWorks-finalCta-graphic",
+        "motion": {
+          "root": "component-howItWorks-finalCta-motion-root"
+        }
       }
     }
   }

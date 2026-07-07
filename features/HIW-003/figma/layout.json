@@ -26,6 +26,9 @@
         "slug": "component.howItWorks.mobileSocialStrip.root"
       },
       {
+        "slug": "component.howItWorks.finalCta.root"
+      },
+      {
         "type": "stack",
         "direction": "vertical",
         "align": "center",
