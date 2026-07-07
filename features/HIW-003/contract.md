@@ -37,6 +37,7 @@
 | `component.howItWorks.midCta` | Mid-page demo CTA band (desktop `5217:6701` only) | `screen.howItWorks` | `default`, `hover` |
 | `component.howItWorks.sixWeek` | Six-week onboarding timeline — desktop `5217:6705` · mobile `5217:6812` | `screen.howItWorks` | `default` |
 | `component.howItWorks.mobileSocialStrip` | Mobile social proof region (`5217:6866`) — testimonial + benefits (GH#22/23) | `screen.howItWorks` | `default` · mobile only |
+| `component.howItWorks.faq` | FAQ tabs + accordion — desktop `5261:8072` · mobile `5261:8150` | `screen.howItWorks` | `default` |
 
 > **Implementation detail:** Sub-elements (`demoCta`, `statsStrip`, `weekCard1`–`weekCard4`, copy blocks, etc.) are registered in `tokens/ui-registry.json` for `data-testid` and `fe-implement`. See §2 anatomy.
 
@@ -458,6 +459,7 @@ Frame 2095585162  (nodeId 5217:6866, 393×622)  [component.howItWorks.mobileSoci
 | <1024px | Render `component.howItWorks.mobileSocialStrip` with testimonial + `component.howItWorks.benefitsStats` — Figma `5217:6866` / `5217:6883` |
 | ≥1024px (`lg+`) | Hide `component.howItWorks.mobileSocialStrip`; render `component.howItWorks.sixWeek.socialProofStrip` with `component.landing.socialProof.testimonialBlock` + desktop benefit cards — Figma `I5217:6705;5223:6722` |
 | all breakpoints | Render `component.howItWorks.finalCta` after mobile social strip — desktop `5217:7555` (radial gradient card) · mobile `5217:7583` (solid dark-deep card) |
+| all breakpoints | Render `component.howItWorks.faq` after final CTA — desktop `5261:8072` · mobile `5261:8150` |
 
 ## 7. Accessibility
 
@@ -554,4 +556,28 @@ Desktop only (`lg+`). Mobile `5217:7583` has no animation twin.
 
 | GH#24 — final CTA | `GH#24` — `component.howItWorks.finalCta` visible @ 1440px + 393px · Figma `5217:7555` / `5217:7583` · demo CTA → `/contact` |
 
-> **Next contract append:** GH#25 FAQ (`5261:8072` / `5261:8150`) after `figma-extract`.
+### GH#25 — FAQ (`5261:8072` / `5261:8150`)
+
+| Element | Background | Text | Border | Radius | Typography |
+|---------|------------|------|--------|--------|------------|
+| Section | `color.background.page` | — | — | — | — |
+| Heading | — | `color.text.primary` | — | — | `typography.heading.desktop.h1` / `typography.heading.mobile.h1` |
+| Active tab | `color.navy.500` | `color.text.inverse` | — | `radius.6` | `typography.label.desktop.md.tag` |
+| Inactive tab | navy 12% tint | `color.text.secondary` | — | `radius.6` | `typography.label.desktop.md.tag` |
+| Question (desktop) | — | `color.text.primary` | — | — | `typography.heading.desktop.h3.sm` |
+| Question (mobile) | — | `color.text.primary` | — | — | `typography.heading.mobile.h3.sm` |
+| Answer | — | `color.text.primary` | — | — | `typography.body.desktop.sm` |
+| Divider | `color.border.default` | — | — | full pill | 2px height |
+
+**Behaviour**
+
+- Single category tab: Getting Started
+- Default state: second question expanded (GDS credentials answer visible)
+- Single-open accordion
+
+**Copy (Getting Started)**
+
+1. “What exactly is Maqsood Travels and who is it built for?”
+2. “What do I need to provide to get started?” — expanded by default
+
+| GH#25 — FAQ | `GH#25` — `component.howItWorks.faq` @ 1440px + 393px · Figma `5261:8072` / `5261:8150` · full page `5217:6715` @ 393px |

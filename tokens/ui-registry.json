@@ -29,7 +29,8 @@
       "component.howItWorks.sixWeek": "component.howItWorks.sixWeek.root",
       "component.howItWorks.mobileSocialStrip": "component.howItWorks.mobileSocialStrip.root",
       "component.howItWorks.benefitsStats": "component.howItWorks.benefitsStats.root",
-      "component.howItWorks.finalCta": "component.howItWorks.finalCta.root"
+      "component.howItWorks.finalCta": "component.howItWorks.finalCta.root",
+      "component.howItWorks.faq": "component.howItWorks.faq.root"
     }
   },
   "screen": {
@@ -26642,6 +26643,111 @@
             ],
             "$tokens": {}
           }
+        }
+      },
+      "faq": {
+        "root": {
+          "$description": "HIW FAQ section (Gherkin: component.howItWorks.faq; desktop 5261:8072 / mobile 5261:8150)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5261:8072",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "heading": {
+          "$description": "FAQ section heading",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5261:7989",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "block": {
+          "$description": "FAQ tabs + accordion block",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5261:8072;5261:8025",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "tabs": {
+          "$description": "FAQ category tab list",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5261:8072;5261:7981",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "tabGettingStarted": {
+          "$description": "Getting Started tab",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5261:8072;5261:7982",
+          "$states": [
+            "default",
+            "selected"
+          ],
+          "$tokens": {}
+        },
+        "accordion": {
+          "$description": "FAQ accordion list for active tab",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5261:8072;5261:7991",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "question": {
+          "$description": "FAQ accordion item wrapper",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5261:8072;5261:7992",
+          "$states": [
+            "default",
+            "expanded"
+          ],
+          "$tokens": {}
+        },
+        "questionMaqsood": {
+          "$description": "FAQ question — Maqsood Travels",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5261:8072;5261:7992;5261:7861",
+          "$states": [
+            "default",
+            "expanded"
+          ],
+          "$tokens": {}
+        },
+        "answerMaqsood": {
+          "$description": "FAQ answer — Maqsood Travels",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5261:8072;5261:7992;5261:7861",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
+        },
+        "questionGdsCredentials": {
+          "$description": "FAQ question — GDS credentials",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "I5261:8072;5261:7992;5261:7861",
+          "$states": [
+            "default",
+            "expanded"
+          ],
+          "$tokens": {}
+        },
+        "answerGdsCredentials": {
+          "$description": "FAQ answer — GDS credentials (5225:11 / 5261:8223)",
+          "$screen": "screen.howItWorks.page",
+          "$figmaNode": "5225:11",
+          "$states": [
+            "default"
+          ],
+          "$tokens": {}
         }
       }
     }

@@ -227,4 +227,35 @@ test.describe('HIW-003 smoke', () => {
     await page.getByTestId(finalCta.demoCta).click();
     await expect(page).toHaveURL(/\/contact/);
   });
+
+  test('GH#25 — FAQ desktop tabs and accordion at 1440px', async ({ page }) => {
+    const faq = ids.component.howItWorks.faq;
+
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(faq.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(faq.root)).toBeVisible();
+    await expect(page.getByTestId(faq.heading)).toHaveText('FAQs');
+
+    await expect(page.getByTestId(faq.answerGdsCredentials)).toBeVisible();
+    await expect(page.getByTestId(faq.answerMaqsood)).toBeHidden();
+
+    await page.getByTestId(faq.questionMaqsood).click();
+    await expect(page.getByTestId(faq.answerMaqsood)).toBeVisible();
+    await expect(page.getByTestId(faq.answerGdsCredentials)).toBeHidden();
+  });
+
+  test('GH#25 — FAQ mobile at 393px', async ({ page }) => {
+    const faq = ids.component.howItWorks.faq;
+
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+
+    await page.getByTestId(faq.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(faq.root)).toBeVisible();
+    await expect(page.getByTestId(faq.answerGdsCredentials)).toBeVisible();
+    await expect(page.getByTestId(faq.questionMaqsood)).toBeVisible();
+    await expect(page.getByTestId(faq.questionGdsCredentials)).toBeVisible();
+  });
 });

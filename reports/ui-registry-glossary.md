@@ -2938,6 +2938,17 @@ Per the Executable-Requirements PRD (`tokens/templates/PRD-Executable-Requiremen
 | `component.howItWorks.finalCta.ctaIcon` | Final CTA button icon wrapper | `screen.howItWorks.page` | `default` | `component-howItWorks-finalCta-ctaIcon` |
 | `component.howItWorks.finalCta.graphic` | Final CTA plane arrow graphic | `screen.howItWorks.page` | `default` | `component-howItWorks-finalCta-graphic` |
 | `component.howItWorks.finalCta.motion.root` | HIW-FinalCTA-animation prototype (5409:11661 → 5409:11660) | `screen.howItWorks.page` | `default`, `hover` | `component-howItWorks-finalCta-motion-root` |
+| `component.howItWorks.faq.root` | HIW FAQ section (Gherkin: component.howItWorks.faq; desktop 5261:8072 / mobile 5261:8150) | `screen.howItWorks.page` | `default` | `component-howItWorks-faq-root` |
+| `component.howItWorks.faq.heading` | FAQ section heading | `screen.howItWorks.page` | `default` | `component-howItWorks-faq-heading` |
+| `component.howItWorks.faq.block` | FAQ tabs + accordion block | `screen.howItWorks.page` | `default` | `component-howItWorks-faq-block` |
+| `component.howItWorks.faq.tabs` | FAQ category tab list | `screen.howItWorks.page` | `default` | `component-howItWorks-faq-tabs` |
+| `component.howItWorks.faq.tabGettingStarted` | Getting Started tab | `screen.howItWorks.page` | `default`, `selected` | `component-howItWorks-faq-tabGettingStarted` |
+| `component.howItWorks.faq.accordion` | FAQ accordion list for active tab | `screen.howItWorks.page` | `default` | `component-howItWorks-faq-accordion` |
+| `component.howItWorks.faq.question` | FAQ accordion item wrapper | `screen.howItWorks.page` | `default`, `expanded` | `component-howItWorks-faq-question` |
+| `component.howItWorks.faq.questionMaqsood` | FAQ question — Maqsood Travels | `screen.howItWorks.page` | `default`, `expanded` | `component-howItWorks-faq-questionMaqsood` |
+| `component.howItWorks.faq.answerMaqsood` | FAQ answer — Maqsood Travels | `screen.howItWorks.page` | `default` | `component-howItWorks-faq-answerMaqsood` |
+| `component.howItWorks.faq.questionGdsCredentials` | FAQ question — GDS credentials | `screen.howItWorks.page` | `default`, `expanded` | `component-howItWorks-faq-questionGdsCredentials` |
+| `component.howItWorks.faq.answerGdsCredentials` | FAQ answer — GDS credentials (5225:11 / 5261:8223) | `screen.howItWorks.page` | `default` | `component-howItWorks-faq-answerGdsCredentials` |
 
 ---
 

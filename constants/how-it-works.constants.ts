@@ -2,6 +2,7 @@ import { FEATURE_GRID_ACCENT_BAR_CLASS } from '@/constants/landing.constants';
 import { ids, testIds } from '@/tokens/build/test-ids';
 import type {
   HiwBenefitCardConfig,
+  HiwFaqTabConfig,
   HowItWorksHeroStatConfig,
   SixWeekAccentBarVariant,
   SixWeekCardConfig,
@@ -322,6 +323,84 @@ export const HIW_FINAL_CTA_HEADLINE_ACCENT_CLASS =
 
 export const HIW_FINAL_CTA_SUBCOPY_CLASS =
   '[font-family:var(--typography-body-mobile-sm-font-family)] [font-size:var(--typography-body-mobile-sm-font-size)] [font-weight:var(--typography-body-mobile-sm-font-weight)] [line-height:var(--typography-body-mobile-sm-line-height)] tracking-[var(--font-letterspacing-neg0-3125)] text-center text-[var(--color-text-inverse)] lg:text-body-desktop-sm lg:tracking-[var(--font-letterspacing-neg0-4)]';
+
+/** Figma default accordion state — second question open (`5261:8072` / `5261:8150`). */
+export const HIW_FAQ_DEFAULT_EXPANDED_INDEX = 1;
+
+export const HIW_FAQ_SECTION_CLASS =
+  'flex w-full flex-col items-center gap-[var(--spacing-32)] bg-[var(--color-background-page)] px-[var(--spacing-16)] py-[var(--spacing-32)] lg:gap-[var(--spacing-40)] lg:px-0 lg:py-[var(--spacing-40)]';
+
+export const HIW_FAQ_HEADING_CLASS =
+  'text-heading-mobile-h1 text-center text-[var(--color-text-primary)] lg:text-heading-desktop-h1';
+
+export const HIW_FAQ_BLOCK_CLASS =
+  'flex w-full max-w-[361px] flex-col items-center gap-[var(--spacing-20)] lg:max-w-[1090px] lg:gap-[var(--spacing-32)]';
+
+export const HIW_FAQ_TABS_CLASS =
+  'flex flex-row flex-wrap items-center justify-center gap-[var(--spacing-12)] lg:gap-[var(--spacing-20)]';
+
+export const HIW_FAQ_TAB_ACTIVE_CLASS =
+  'rounded-[var(--radius-6)] bg-[var(--color-navy-500)] px-[calc(var(--spacing-12)+var(--spacing-2))] py-[var(--spacing-12)] text-label-desktop-md-tag text-[var(--color-text-inverse)] lg:px-[22px]';
+
+export const HIW_FAQ_TAB_INACTIVE_CLASS =
+  'rounded-[var(--radius-6)] bg-[color-mix(in_srgb,var(--color-navy-500)_12%,transparent)] px-[calc(var(--spacing-12)+var(--spacing-2))] py-[var(--spacing-12)] text-label-desktop-md-tag text-[var(--color-text-secondary)] lg:px-[22px]';
+
+export const HIW_FAQ_ACCORDION_CLASS =
+  'flex w-full flex-col gap-[var(--spacing-24)] lg:max-w-[1090px] lg:gap-[var(--spacing-28)]';
+
+export const HIW_FAQ_ITEM_CLASS =
+  'flex w-full flex-col gap-[var(--spacing-8)] bg-[var(--color-background-page)] lg:gap-[var(--spacing-12)]';
+
+export const HIW_FAQ_QUESTION_ROW_CLASS =
+  'flex w-full flex-row items-start justify-between gap-[var(--spacing-12)]';
+
+export const HIW_FAQ_QUESTION_DESKTOP_CLASS =
+  'text-left [font-family:var(--typography-heading-desktop-h3-sm-font-family)] [font-size:var(--typography-heading-desktop-h3-sm-font-size)] [font-weight:var(--typography-heading-desktop-h3-sm-font-weight)] [line-height:var(--typography-heading-desktop-h3-sm-line-height)] tracking-[var(--font-letterspacing-neg0-449)] text-[var(--color-text-primary)]';
+
+export const HIW_FAQ_QUESTION_MOBILE_CLASS =
+  'text-left [font-family:var(--typography-heading-mobile-h3-sm-font-family)] [font-size:var(--typography-heading-mobile-h3-sm-font-size)] [font-weight:var(--typography-heading-mobile-h3-sm-font-weight)] [line-height:var(--typography-heading-mobile-h3-sm-line-height)] tracking-[var(--font-letterspacing-neg0-449)] text-[var(--color-text-primary)]';
+
+export const HIW_FAQ_ANSWER_CLASS = 'text-body-desktop-sm text-[var(--color-text-primary)]';
+
+export const HIW_FAQ_DIVIDER_CLASS =
+  'h-[var(--spacing-2)] w-full shrink-0 rounded-full bg-[var(--color-border-default)] lg:max-w-[845px]';
+
+const HIW_FAQ_GETTING_STARTED_ANSWER_GDS =
+  "All we need from you are your GDS API credentials — Amadeus, Sabre, or Travelport — and we handle everything else. We've already built and certified integrations with all major GDS systems and leading NDC airlines, so there's no technical work on your end. If your preferred NDC airline isn't currently in our portfolio, we'll integrate it for you at no additional charge.";
+
+/** Figma `5261:8072` — collapsed Maqsood question answer placeholder. */
+const HIW_FAQ_GETTING_STARTED_ANSWER_PLATFORM = 'Lorem Ipsum Text here';
+
+const HIW_FAQ_PLACEHOLDER_TABS: readonly HiwFaqTabConfig[] = [
+  { id: 'placeholder-1', label: 'Lorem Ipsum', items: [] },
+  { id: 'placeholder-2', label: 'Lorem Ipsum', items: [] },
+  { id: 'placeholder-3', label: 'Lorem Ipsum', items: [], desktopOnly: true },
+];
+
+export const HIW_FAQ_TABS: readonly HiwFaqTabConfig[] = [
+  {
+    id: 'getting-started',
+    label: 'Getting Started',
+    tabTestId: 'component-howItWorks-faq-tabGettingStarted',
+    items: [
+      {
+        id: 'maqsood-platform',
+        questionTestId: 'component-howItWorks-faq-questionMaqsood',
+        answerTestId: 'component-howItWorks-faq-answerMaqsood',
+        question: 'What exactly is Maqsood Travels and who is it built for?',
+        answer: HIW_FAQ_GETTING_STARTED_ANSWER_PLATFORM,
+      },
+      {
+        id: 'gds-credentials',
+        questionTestId: 'component-howItWorks-faq-questionGdsCredentials',
+        answerTestId: 'component-howItWorks-faq-answerGdsCredentials',
+        question: 'What do I need to provide to get started?',
+        answer: HIW_FAQ_GETTING_STARTED_ANSWER_GDS,
+      },
+    ],
+  },
+  ...HIW_FAQ_PLACEHOLDER_TABS,
+];
 
 export const HIW_BENEFIT_CARDS: readonly HiwBenefitCardConfig[] = [
   {

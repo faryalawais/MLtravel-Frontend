@@ -112,3 +112,31 @@ test.describe('HIW-003 visual — GH#24 final CTA', () => {
     await expect(page.getByTestId(finalCta.root)).toHaveScreenshot('hiw-final-cta-mobile.png');
   });
 });
+
+test.describe('HIW-003 visual — GH#25 FAQ', () => {
+  const faq = ids.component.howItWorks.faq;
+  const screen = ids.screen.howItWorks.page;
+
+  test('hiw faq desktop 1440px', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/how-it-works');
+    await page.getByTestId(faq.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(faq.root)).toHaveScreenshot('hiw-faq-desktop.png');
+  });
+
+  test('hiw faq mobile 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+    await page.getByTestId(faq.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(faq.root)).toHaveScreenshot('hiw-faq-mobile.png');
+  });
+
+  test('hiw full page mobile 393px', async ({ page }) => {
+    await page.setViewportSize({ width: 393, height: 900 });
+    await page.goto('/how-it-works');
+    await page.getByTestId(faq.root).scrollIntoViewIfNeeded();
+    await expect(page.getByTestId(screen)).toHaveScreenshot('hiw-full-page-mobile.png', {
+      fullPage: true,
+    });
+  });
+});

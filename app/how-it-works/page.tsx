@@ -1,3 +1,4 @@
+import { HowItWorksFaqSection } from '@/components/how-it-works/HowItWorksFaqSection';
 import { HowItWorksFinalCtaSection } from '@/components/how-it-works/HowItWorksFinalCtaSection';
 import { HowItWorksHeroSection } from '@/components/how-it-works/HowItWorksHeroSection';
 import { HowItWorksMidCtaSection } from '@/components/how-it-works/HowItWorksMidCtaSection';
@@ -17,6 +18,7 @@ export default function HowItWorksPage() {
       <HowItWorksSixWeekSection />
       <HowItWorksMobileSocialStripSection />
       <HowItWorksFinalCtaSection />
+      <HowItWorksFaqSection />
     </div>
   );
 }

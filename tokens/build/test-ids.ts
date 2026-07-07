@@ -2929,7 +2929,18 @@ export const testIds = {
   "component.howItWorks.finalCta.label": "component-howItWorks-finalCta-label",
   "component.howItWorks.finalCta.ctaIcon": "component-howItWorks-finalCta-ctaIcon",
   "component.howItWorks.finalCta.graphic": "component-howItWorks-finalCta-graphic",
-  "component.howItWorks.finalCta.motion.root": "component-howItWorks-finalCta-motion-root"
+  "component.howItWorks.finalCta.motion.root": "component-howItWorks-finalCta-motion-root",
+  "component.howItWorks.faq.root": "component-howItWorks-faq-root",
+  "component.howItWorks.faq.heading": "component-howItWorks-faq-heading",
+  "component.howItWorks.faq.block": "component-howItWorks-faq-block",
+  "component.howItWorks.faq.tabs": "component-howItWorks-faq-tabs",
+  "component.howItWorks.faq.tabGettingStarted": "component-howItWorks-faq-tabGettingStarted",
+  "component.howItWorks.faq.accordion": "component-howItWorks-faq-accordion",
+  "component.howItWorks.faq.question": "component-howItWorks-faq-question",
+  "component.howItWorks.faq.questionMaqsood": "component-howItWorks-faq-questionMaqsood",
+  "component.howItWorks.faq.answerMaqsood": "component-howItWorks-faq-answerMaqsood",
+  "component.howItWorks.faq.questionGdsCredentials": "component-howItWorks-faq-questionGdsCredentials",
+  "component.howItWorks.faq.answerGdsCredentials": "component-howItWorks-faq-answerGdsCredentials"
 } as const;
 
 export type RegistryPath = keyof typeof testIds;
@@ -5954,6 +5965,19 @@ export const ids = {
         "motion": {
           "root": "component-howItWorks-finalCta-motion-root"
         }
+      },
+      "faq": {
+        "root": "component-howItWorks-faq-root",
+        "heading": "component-howItWorks-faq-heading",
+        "block": "component-howItWorks-faq-block",
+        "tabs": "component-howItWorks-faq-tabs",
+        "tabGettingStarted": "component-howItWorks-faq-tabGettingStarted",
+        "accordion": "component-howItWorks-faq-accordion",
+        "question": "component-howItWorks-faq-question",
+        "questionMaqsood": "component-howItWorks-faq-questionMaqsood",
+        "answerMaqsood": "component-howItWorks-faq-answerMaqsood",
+        "questionGdsCredentials": "component-howItWorks-faq-questionGdsCredentials",
+        "answerGdsCredentials": "component-howItWorks-faq-answerGdsCredentials"
       }
     }
   }

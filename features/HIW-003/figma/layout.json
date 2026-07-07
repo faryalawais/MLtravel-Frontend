@@ -29,6 +29,9 @@
         "slug": "component.howItWorks.finalCta.root"
       },
       {
+        "slug": "component.howItWorks.faq.root"
+      },
+      {
         "type": "stack",
         "direction": "vertical",
         "align": "center",
