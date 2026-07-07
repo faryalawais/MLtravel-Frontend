@@ -27,7 +27,8 @@
       "component.howItWorks.hero": "component.howItWorks.hero.root",
       "component.howItWorks.midCta": "component.howItWorks.midCta.root",
       "component.howItWorks.sixWeek": "component.howItWorks.sixWeek.root",
-      "component.howItWorks.mobileSocialStrip": "component.howItWorks.mobileSocialStrip.root"
+      "component.howItWorks.mobileSocialStrip": "component.howItWorks.mobileSocialStrip.root",
+      "component.howItWorks.benefitsStats": "component.howItWorks.benefitsStats.root"
     }
   },
   "screen": {

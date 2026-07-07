@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import {
+  HIW_BENEFITS_STATS_ROOT_TEST_ID,
   HIW_BENEFIT_CARDS,
   HIW_MOBILE_BENEFIT_BODY_CLASS,
   HIW_MOBILE_BENEFIT_CARD_CLASS,
@@ -26,7 +27,6 @@ import { ids } from '@/tokens/build/test-ids';
 import type { HiwBenefitCardConfig } from '@/types/how-it-works.types';
 
 const mobileSocialStrip = ids.component.howItWorks.mobileSocialStrip;
-const benefitsStats = ids.component.howItWorks.benefitsStats;
 const testimonial = SOCIAL_PROOF_DESKTOP_TESTIMONIALS[0];
 
 function HiwMobileTestimonialAvatar({
@@ -129,7 +129,7 @@ export function HowItWorksMobileSocialStripSection() {
         </div>
       </article>
 
-      <div data-testid={benefitsStats.root} className={HIW_MOBILE_BENEFITS_STATS_CLASS}>
+      <div data-testid={HIW_BENEFITS_STATS_ROOT_TEST_ID} className={HIW_MOBILE_BENEFITS_STATS_CLASS}>
         {HIW_BENEFIT_CARDS.map((card) => (
           <HiwMobileBenefitCard key={card.title} card={card} />
         ))}

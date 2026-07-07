@@ -1,5 +1,5 @@
 import { FEATURE_GRID_ACCENT_BAR_CLASS } from '@/constants/landing.constants';
-import { ids } from '@/tokens/build/test-ids';
+import { ids, testIds } from '@/tokens/build/test-ids';
 import type {
   HiwBenefitCardConfig,
   HowItWorksHeroStatConfig,
@@ -9,6 +9,10 @@ import type {
 
 const hero = ids.component.howItWorks.hero;
 const sixWeek = ids.component.howItWorks.sixWeek;
+
+/** GH#23 — mobile benefits row (`5217:6883`). Flat lookup avoids stale nested `ids` tree after registry edits. */
+export const HIW_BENEFITS_STATS_ROOT_TEST_ID =
+  testIds['component.howItWorks.benefitsStats.root'];
 
 export const HIW_HERO_HEADLINE =
   'See exactly how your agency goes live in 6 weeks.';
