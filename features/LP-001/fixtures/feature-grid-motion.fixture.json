@@ -56,20 +56,23 @@
       "translateY": { "fromPx": 1096, "toPx": 916, "custom": false }
     }
   ],
+  "layerOffsetsFromTerminal": {
+    "featureRow1": { "idle": 450, "state2": 0, "state3": 0, "state4": 0 },
+    "featureRow2": { "idle": 450, "state2": 270, "state3": -7, "state4": 0 },
+    "footerBar": { "idle": 450, "state2": 270, "state3": 270, "state4": 0 }
+  },
   "contentPoses": {
-    "entryOffsetPx": 734,
-    "state2Px": 284,
-    "state3Px": 284,
+    "row2State2OffsetPx": 270,
     "settledPx": 0
   },
   "implementationExpected": {
     "trigger": "onMouseEnter on component.landing.featureGrid.motion.root",
     "desktopOnly": true,
-    "motionTarget": "component.landing.featureGrid.cardsGrid (rows + footer wrapper)",
+    "motionTarget": "per-layer featureRow1, featureRow2, footerBar (not cardsGrid wrapper)",
     "steps": [
-      { "index": 0, "action": "snapAllLayersEntryThenState2" },
-      { "index": 1, "action": "row2State3" },
-      { "index": 2, "action": "terminalState4" }
+      { "index": 0, "action": "snapAllLayersIdleThenAnimateState2 (row1→0, row2/footer→270)" },
+      { "index": 1, "action": "row2State3 (row2→0, footer stays 270)" },
+      { "index": 2, "action": "terminalState4 (footer→0)" }
     ]
   }
 }

@@ -7,6 +7,7 @@ import {
   HIW_DESKTOP_CARDS,
   HIW_MOBILE_CARDS,
   HIW_CARD_BODY_CLASS,
+  HIW_CARD_BODY_MOBILE_CLASS,
   HIW_CARD_VISUAL_IMAGE_STYLE,
   HIW_ONBOARDING_NOTE_TEXT,
   HIW_SECTION_SUBTITLE,
@@ -16,6 +17,7 @@ import {
   LANDING_SECTION_PILL_LABEL_DESKTOP_CLASS,
   LANDING_SECTION_PILL_LABEL_MOBILE_CLASS,
   LANDING_SECTION_SUBTITLE_CLASS,
+  LANDING_SECTION_SUBTITLE_MOBILE_CLASS,
   PROBLEM_CARD_BASE_CLASS,
   PROBLEM_MOTION_STYLE,
   PROBLEM_TOKENS,
@@ -119,8 +121,8 @@ function HiwSectionPill({ pillTestId, labelTestId, variant = 'desktop' }: HiwSec
       data-testid={pillTestId}
       className={
         isMobile
-          ? 'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border border-[var(--color-pill-solution-border)] bg-[color-mix(in_srgb,var(--color-pill-solution-background)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]'
-          : 'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border border-[var(--color-pill-solution-border)] bg-[color-mix(in_srgb,var(--color-pill-solution-background)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]'
+          ? 'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-pill-solution-border)] bg-[color-mix(in_srgb,var(--color-pill-solution-background)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]'
+          : 'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-pill-solution-border)] bg-[color-mix(in_srgb,var(--color-pill-solution-background)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]'
       }
     >
       <span
@@ -186,12 +188,26 @@ function HiwCardContent({
   isHighlighted = false,
   cascadeRunning = false,
   motionEngaged = false,
+  variant = 'desktop',
 }: {
   card: HiwCardConfig;
   isHighlighted?: boolean;
   cascadeRunning?: boolean;
   motionEngaged?: boolean;
+  variant?: 'desktop' | 'mobile';
 }) {
+  const isMobile = variant === 'mobile';
+  const microTagClass = isMobile
+    ? 'text-label-mobile-micro-tag uppercase'
+    : 'text-label-desktop-micro-tag uppercase';
+  const headingClass = isMobile
+    ? 'text-heading-mobile-h4 text-[var(--color-text-primary)]'
+    : 'text-heading-desktop-h4 text-[var(--color-text-primary)]';
+  const bodyClass = isMobile ? HIW_CARD_BODY_MOBILE_CLASS : HIW_CARD_BODY_CLASS;
+  const taglineClass = isMobile
+    ? `text-label-mobile-sm-semibold ${ACCENT_TEXT[card.accent]}`
+    : `text-label-desktop-sm-semibold ${ACCENT_TEXT[card.accent]}`;
+
   return (
     <div
       data-testid={card.cardContentTestId}
@@ -203,7 +219,7 @@ function HiwCardContent({
       >
         <span
           data-testid={card.stepLabelTestId}
-          className={`text-label-desktop-micro-tag uppercase ${ACCENT_TEXT[card.accent]}`}
+          className={`${microTagClass} ${ACCENT_TEXT[card.accent]}`}
         >
           {card.stepLabel}
         </span>
@@ -218,10 +234,7 @@ function HiwCardContent({
           PROBLEM_MOTION_STYLE,
         )}
       >
-        <h3
-          data-testid={card.headingTestId}
-          className="text-heading-desktop-h4 text-[var(--color-text-primary)]"
-        >
+        <h3 data-testid={card.headingTestId} className={headingClass}>
           {card.heading}
         </h3>
         <HiwAccentBar
@@ -229,16 +242,10 @@ function HiwCardContent({
           isHighlighted={isHighlighted}
           cascadeRunning={cascadeRunning}
         />
-        <p
-          data-testid={card.bodyTestId}
-          className={HIW_CARD_BODY_CLASS}
-        >
+        <p data-testid={card.bodyTestId} className={bodyClass}>
           {card.body}
         </p>
-        <p
-          data-testid={card.taglineTestId}
-          className={`text-body-desktop-sm font-semibold ${ACCENT_TEXT[card.accent]}`}
-        >
+        <p data-testid={card.taglineTestId} className={taglineClass}>
           {card.tagline}
         </p>
       </div>
@@ -292,7 +299,7 @@ function HiwCardMobile({ card }: HiwCardMobileProps) {
       className={`${PROBLEM_CARD_BASE_CLASS} w-full overflow-hidden border border-[var(--color-border-default)] bg-[var(--color-background-surface)]`}
     >
       <CardVisualImage card={card} />
-      <HiwCardContent card={card} />
+      <HiwCardContent card={card} variant="mobile" />
     </article>
   );
 }
@@ -333,7 +340,7 @@ function HiwOnboardingNote({
     <HiwFooterMotionSlot isEmphasized={isEmphasized} motionEngaged={motionEngaged}>
       <p
         data-testid={hiw.textBlock21}
-        className="text-body-desktop-sm text-[var(--color-text-secondary)]"
+        className="text-body-mobile-sm text-[var(--color-text-secondary)] min-[1440px]:text-body-desktop-sm"
       >
         {HIW_ONBOARDING_NOTE_TEXT}
       </p>
@@ -353,10 +360,10 @@ function HiwFooterLink({ isEmphasized = false, motionEngaged = false }: HiwFoote
       <Link
         href="/how-it-works"
         data-testid={hiw.textBlock21}
-        className="inline-flex flex-wrap items-center justify-center gap-[var(--spacing-6)] text-body-desktop-sm transition-colors focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]"
+        className="inline-flex flex-wrap items-center justify-center gap-[var(--spacing-6)] text-body-mobile-sm transition-colors focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)] min-[1440px]:text-body-desktop-sm"
       >
         <span className="text-[var(--color-text-secondary)]">How does the technical setup work?</span>
-        <span className="inline-flex items-center gap-[var(--spacing-6)] font-semibold text-[var(--color-text-brand-navy)]">
+        <span className="inline-flex items-center gap-[var(--spacing-6)] text-label-mobile-sm-semibold text-[var(--color-text-brand-navy)] min-[1440px]:text-label-desktop-sm-semibold">
           Read the full breakdown →
           <Image
             src="/icons/icon-button-arrow.svg"
@@ -567,7 +574,7 @@ export function HowItWorksTeaserSection({ showFooterLink = true }: HowItWorksTea
                   From contract to booking in{' '}
                   <span className={LANDING_SECTION_HEADING_ACCENT_CLASS}>three steps.</span>
                 </h2>
-                <p data-testid={hiw.mobile.paragraph} className={LANDING_SECTION_SUBTITLE_CLASS}>
+                <p data-testid={hiw.mobile.paragraph} className={LANDING_SECTION_SUBTITLE_MOBILE_CLASS}>
                   {HIW_SECTION_SUBTITLE}
                 </p>
               </div>

@@ -4,20 +4,32 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useState, type CSSProperties } from 'react';
 import {
+  COMPARISON_CARD_DESKTOP_CLASS,
   COMPARISON_CARD_HEADER_BADGE_INDUSTRY_CLASS,
   COMPARISON_CARD_HEADER_BADGE_MAQSOOD_CLASS,
   COMPARISON_CARD_HEADER_BADGE_MOBILE_CLASS,
   COMPARISON_CARD_HEADER_TITLE_DESKTOP_CLASS,
   COMPARISON_CARD_HEADER_TITLE_MOBILE_CLASS,
+  COMPARISON_CARD_MOBILE_CLASS,
   COMPARISON_FOOTNOTE_DESKTOP_CLASS,
   COMPARISON_FOOTNOTE_EMPHASIS_CLASS,
   COMPARISON_FOOTNOTE_MOBILE_CLASS,
+  COMPARISON_GIANT_TICKET_DESKTOP_CLASS,
   COMPARISON_MOTION_STYLE,
+  COMPARISON_PERFORATION_SEGMENT_CLASS,
+  COMPARISON_PERFORATION_SEGMENT_COUNT,
+  COMPARISON_PERFORATION_TRACK_CLASS,
   COMPARISON_ROW_BODY_DESKTOP_CLASS,
+  COMPARISON_ROW_BODY_INDUSTRY_DESKTOP_CLASS,
+  COMPARISON_ROW_BODY_INDUSTRY_MOBILE_CLASS,
   COMPARISON_ROW_BODY_MOBILE_CLASS,
+  COMPARISON_ROW_DIVIDER_INDUSTRY_CLASS,
+  COMPARISON_ROW_DIVIDER_MAQSOOD_CLASS,
   COMPARISON_ROW_MICRO_TAG_DESKTOP_CLASS,
   COMPARISON_ROW_MICRO_TAG_MOBILE_CLASS,
   COMPARISON_ROW_TITLE_DESKTOP_CLASS,
+  COMPARISON_ROW_TITLE_INDUSTRY_DESKTOP_CLASS,
+  COMPARISON_ROW_TITLE_INDUSTRY_MOBILE_CLASS,
   COMPARISON_ROW_TITLE_MOBILE_CLASS,
   COMPARISON_SECTION_SUBTITLE_MOBILE_CLASS,
   COMPARISON_STAMP_DESKTOP_CLASS,
@@ -60,18 +72,12 @@ function rowAccentStyles(accent: ComparisonRowAccent) {
     tagBg: `bg-[color-mix(in_srgb,var(${token})_8%,transparent)]`,
     tagText: `text-[var(${token})]`,
     stampText: `text-[var(${token})]`,
-    tagMuted: accent === 'danger' ? 'opacity-50' : '',
-    stampMuted: accent === 'danger' ? 'opacity-50' : '',
-    rowDivider: `bg-[color-mix(in_srgb,var(${token})_8%,transparent)]`,
   };
 }
 
 function variantStyles(variant: 'industry' | 'maqsood') {
   const isIndustry = variant === 'industry';
   return {
-    revealBorder: isIndustry
-      ? 'border-[var(--color-border-warning)]'
-      : 'border-[var(--color-border-info)]',
     accentBar: isIndustry
       ? 'bg-[var(--color-pill-problem-background)]'
       : 'bg-[linear-gradient(to_right,var(--color-text-brand-orange),var(--color-text-brand-navy))]',
@@ -117,8 +123,8 @@ function ComparisonSectionPill({
       data-testid={pillTestId}
       className={
         isMobile
-          ? 'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border border-[var(--color-pill-feature-border)] bg-[color-mix(in_srgb,var(--color-pill-feature-background)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]'
-          : 'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border border-[var(--color-pill-feature-border)] bg-[color-mix(in_srgb,var(--color-pill-feature-background)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]'
+          ? 'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-pill-feature-border)] bg-[color-mix(in_srgb,var(--color-pill-feature-background)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]'
+          : 'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-pill-feature-border)] bg-[color-mix(in_srgb,var(--color-pill-feature-background)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]'
       }
     >
       <span
@@ -143,8 +149,11 @@ function ComparisonDemoCta({
   labelTestId,
   iconTestId,
   graphicTestId,
+  variant = 'desktop',
 }: ComparisonCtaProps) {
   const [hovered, setHovered] = useState(false);
+  const labelClass =
+    variant === 'mobile' ? 'text-label-mobile-lg' : 'text-label-desktop-lg';
 
   return (
     <Link
@@ -152,7 +161,7 @@ function ComparisonDemoCta({
       data-testid={ctaTestId}
       data-motion-duration="motion.duration.default"
       onMouseEnter={() => setHovered(true)}
-      className="inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-6)] px-[var(--spacing-32)] py-[var(--spacing-12)] text-label-desktop-lg transition-[background-color,color] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]"
+      className={`inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-6)] px-[var(--spacing-32)] py-[var(--spacing-12)] ${labelClass} transition-[background-color,color] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]`}
       style={{
         ...COMPARISON_MOTION_STYLE,
         transitionProperty: 'background-color, color',
@@ -189,26 +198,57 @@ function ComparisonDemoCta({
   );
 }
 
-function RowDivider({ accent }: { accent: ComparisonRowAccent }) {
-  const { rowDivider } = rowAccentStyles(accent);
-  return <div aria-hidden="true" className={`h-px w-full opacity-50 ${rowDivider}`} />;
+function RowDivider({ side }: { side: 'industry' | 'maqsood' }) {
+  return (
+    <div
+      aria-hidden="true"
+      className={
+        side === 'industry'
+          ? COMPARISON_ROW_DIVIDER_INDUSTRY_CLASS
+          : COMPARISON_ROW_DIVIDER_MAQSOOD_CLASS
+      }
+    />
+  );
+}
+
+function DividerPerforated() {
+  return (
+    <div
+      data-testid={comparison.dividerPerforated}
+      aria-hidden="true"
+      className={COMPARISON_PERFORATION_TRACK_CLASS}
+    >
+      {Array.from({ length: COMPARISON_PERFORATION_SEGMENT_COUNT }, (_, index) => (
+        <span key={index} className={COMPARISON_PERFORATION_SEGMENT_CLASS} />
+      ))}
+    </div>
+  );
 }
 
 function ComparisonRowDesktop({
   row,
+  side,
   showDivider = true,
 }: {
   row: ComparisonRowConfig;
+  side: 'industry' | 'maqsood';
   showDivider?: boolean;
 }) {
-  const { tagBg, tagText, tagMuted, stampText, stampMuted } = rowAccentStyles(row.accent);
+  const { tagBg, tagText, stampText } = rowAccentStyles(row.accent);
+  const isIndustry = side === 'industry';
+  const titleClass = isIndustry
+    ? COMPARISON_ROW_TITLE_INDUSTRY_DESKTOP_CLASS
+    : COMPARISON_ROW_TITLE_DESKTOP_CLASS;
+  const bodyClass = isIndustry
+    ? COMPARISON_ROW_BODY_INDUSTRY_DESKTOP_CLASS
+    : COMPARISON_ROW_BODY_DESKTOP_CLASS;
 
   return (
     <>
       <div data-testid={row.rowTestId} className="flex flex-col gap-[var(--spacing-8)]">
         <div
           data-testid={row.microTagTestId}
-          className={`inline-flex w-fit rounded-[var(--radius-3)] px-[var(--spacing-8)] py-[var(--spacing-3)] ${tagBg} ${tagMuted}`}
+          className={`inline-flex w-fit rounded-[var(--radius-3)] px-[var(--spacing-8)] py-[var(--spacing-3)] ${tagBg}`}
         >
           <span
             data-testid={row.tagLabelTestId}
@@ -218,59 +258,68 @@ function ComparisonRowDesktop({
           </span>
         </div>
         <div className="flex flex-col gap-[var(--spacing-4)]">
-          <p data-testid={row.titleTestId} className={COMPARISON_ROW_TITLE_DESKTOP_CLASS}>
+          <p data-testid={row.titleTestId} className={titleClass}>
             {row.title}
           </p>
-          <p data-testid={row.bodyTestId} className={COMPARISON_ROW_BODY_DESKTOP_CLASS}>
+          <p data-testid={row.bodyTestId} className={bodyClass}>
             {row.body}
           </p>
         </div>
         <div data-testid={row.stampTestId} className="flex justify-end">
           <span
             data-testid={row.stampLabelTestId}
-            className={`text-right ${COMPARISON_STAMP_DESKTOP_CLASS} ${stampText} ${stampMuted}`}
+            className={`text-right ${COMPARISON_STAMP_DESKTOP_CLASS} ${stampText}`}
           >
             {row.stampLabel}
           </span>
         </div>
       </div>
-      {showDivider ? <RowDivider accent={row.accent} /> : null}
+      {showDivider ? <RowDivider side={side} /> : null}
     </>
   );
 }
 
 function ComparisonRowMobile({
   row,
+  side,
   showDivider = true,
 }: {
   row: ComparisonMobileRowConfig;
+  side: 'industry' | 'maqsood';
   showDivider?: boolean;
 }) {
-  const { tagBg, tagText, tagMuted, stampText, stampMuted } = rowAccentStyles(row.accent);
+  const { tagBg, tagText, stampText } = rowAccentStyles(row.accent);
+  const isIndustry = side === 'industry';
+  const titleClass = isIndustry
+    ? COMPARISON_ROW_TITLE_INDUSTRY_MOBILE_CLASS
+    : COMPARISON_ROW_TITLE_MOBILE_CLASS;
+  const bodyClass = isIndustry
+    ? COMPARISON_ROW_BODY_INDUSTRY_MOBILE_CLASS
+    : COMPARISON_ROW_BODY_MOBILE_CLASS;
 
   return (
     <>
       <div data-testid={row.rowTestId} className="flex flex-col gap-[var(--spacing-6)]">
         <span
           data-testid={row.tagTestId}
-          className={`inline-flex w-fit rounded-[var(--radius-3)] px-[var(--spacing-8)] py-[var(--spacing-3)] ${COMPARISON_ROW_MICRO_TAG_MOBILE_CLASS} ${tagBg} ${tagText} ${tagMuted}`}
+          className={`inline-flex w-fit rounded-[var(--radius-3)] px-[var(--spacing-8)] py-[var(--spacing-3)] ${COMPARISON_ROW_MICRO_TAG_MOBILE_CLASS} ${tagBg} ${tagText}`}
         >
           {row.tagLabel}
         </span>
-        <p data-testid={row.titleTestId} className={COMPARISON_ROW_TITLE_MOBILE_CLASS}>
+        <p data-testid={row.titleTestId} className={titleClass}>
           {row.title}
         </p>
-        <p data-testid={row.bodyTestId} className={COMPARISON_ROW_BODY_MOBILE_CLASS}>
+        <p data-testid={row.bodyTestId} className={bodyClass}>
           {row.body}
         </p>
         <span
           data-testid={row.stampTestId}
-          className={`self-end text-right ${COMPARISON_STAMP_MOBILE_CLASS} ${stampText} ${stampMuted}`}
+          className={`self-end text-right ${COMPARISON_STAMP_MOBILE_CLASS} ${stampText}`}
         >
           {row.stampLabel}
         </span>
       </div>
-      {showDivider ? <RowDivider accent={row.accent} /> : null}
+      {showDivider ? <RowDivider side={side} /> : null}
     </>
   );
 }
@@ -278,7 +327,7 @@ function ComparisonRowMobile({
 function getCardEmphasisStyle(revealed: boolean): CSSProperties {
   return {
     ...COMPARISON_MOTION_STYLE,
-    transitionProperty: 'border-color, box-shadow',
+    transitionProperty: 'box-shadow',
     boxShadow: revealed ? COMPARISON_TOKENS.shadowTicketReveal : 'none',
   };
 }
@@ -289,7 +338,7 @@ function IndustryCardDesktop({ revealed }: { revealed: boolean }) {
   return (
     <article
       data-testid={comparison.industryCard}
-      className={`flex min-w-0 flex-1 flex-col overflow-hidden border-y border-l border-r border-[var(--color-border-default)] ${styles.cardBg} ${revealed ? styles.revealBorder : ''}`}
+      className={`${COMPARISON_CARD_DESKTOP_CLASS} ${styles.cardBg}`}
       style={getCardEmphasisStyle(revealed)}
     >
       <header
@@ -300,7 +349,7 @@ function IndustryCardDesktop({ revealed }: { revealed: boolean }) {
           aria-hidden="true"
           className={`h-[var(--spacing-6)] w-full shrink-0 ${styles.accentBar}`}
         />
-        <div className="flex flex-col gap-[var(--spacing-16)] px-[var(--spacing-28)] py-[var(--spacing-24)]">
+        <div className="flex flex-col gap-[var(--spacing-16)] px-[var(--spacing-32)] py-[var(--spacing-24)]">
           <div
             data-testid={comparison.industryBadge}
             className={`${styles.badge} ${styles.badgeSurface}`}
@@ -327,12 +376,13 @@ function IndustryCardDesktop({ revealed }: { revealed: boolean }) {
       </header>
       <div
         data-testid={comparison.industryCardBody}
-        className="flex flex-col gap-[var(--spacing-24)] px-[var(--spacing-28)] py-[var(--spacing-40)]"
+        className="flex flex-col gap-[var(--spacing-20)] px-[var(--spacing-32)] py-[var(--spacing-24)]"
       >
         {INDUSTRY_DESKTOP_ROWS.map((row, index) => (
           <ComparisonRowDesktop
             key={row.rowTestId}
             row={row}
+            side="industry"
             showDivider={index < INDUSTRY_DESKTOP_ROWS.length - 1}
           />
         ))}
@@ -347,7 +397,7 @@ function MaqsoodCardDesktop({ revealed }: { revealed: boolean }) {
   return (
     <article
       data-testid={comparison.maqsoodCard}
-      className={`flex min-w-0 flex-1 flex-col overflow-hidden border-y border-r border-[var(--color-border-info)] ${styles.cardBg} ${revealed ? styles.revealBorder : ''}`}
+      className={`${COMPARISON_CARD_DESKTOP_CLASS} ${styles.cardBg}`}
       style={getCardEmphasisStyle(revealed)}
     >
       <header
@@ -358,7 +408,7 @@ function MaqsoodCardDesktop({ revealed }: { revealed: boolean }) {
           aria-hidden="true"
           className={`h-[var(--spacing-6)] w-full shrink-0 ${styles.accentBar}`}
         />
-        <div className="flex flex-col gap-[var(--spacing-16)] px-[var(--spacing-28)] py-[var(--spacing-24)]">
+        <div className="flex flex-col gap-[var(--spacing-16)] px-[var(--spacing-32)] py-[var(--spacing-24)]">
           <div
             data-testid={comparison.maqsoodBadge}
             className={`${styles.badge} ${styles.badgeSurface}`}
@@ -385,12 +435,13 @@ function MaqsoodCardDesktop({ revealed }: { revealed: boolean }) {
       </header>
       <div
         data-testid={comparison.maqsoodCardBody}
-        className="flex flex-col gap-[var(--spacing-24)] px-[var(--spacing-28)] py-[var(--spacing-40)]"
+        className="flex flex-col gap-[var(--spacing-20)] px-[var(--spacing-32)] py-[var(--spacing-24)]"
       >
         {MAQSOOD_DESKTOP_ROWS.map((row, index) => (
           <ComparisonRowDesktop
             key={row.rowTestId}
             row={row}
+            side="maqsood"
             showDivider={index < MAQSOOD_DESKTOP_ROWS.length - 1}
           />
         ))}
@@ -405,7 +456,7 @@ function GiantTicketDesktop({ motionStep }: { motionStep: ComparisonMotionStep }
   return (
     <div
       data-testid={comparison.giantTicket}
-      className="relative flex w-full flex-row items-stretch overflow-hidden rounded-[var(--radius-panel)] border border-[var(--color-border-subtle)] bg-[var(--color-background-surface)]"
+      className={COMPARISON_GIANT_TICKET_DESKTOP_CLASS}
       style={{
         ...getComparisonMainGroupMotionStyle(
           motionStep >= 0,
@@ -424,6 +475,7 @@ function GiantTicketDesktop({ motionStep }: { motionStep: ComparisonMotionStep }
         className="pointer-events-none absolute left-1/2 top-0 z-10 size-[calc(var(--spacing-32)+var(--spacing-4))] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--color-background-page)]"
       />
       <IndustryCardDesktop revealed={motionRevealed} />
+      <DividerPerforated />
       <MaqsoodCardDesktop revealed={motionRevealed} />
     </div>
   );
@@ -435,7 +487,7 @@ function IndustryCardMobile() {
   return (
     <article
       data-testid={comparison.mobile.industryCard}
-      className={`flex w-full flex-col overflow-hidden rounded-[var(--radius-panel)] border border-[var(--color-border-default)] ${styles.cardBg}`}
+      className={`${COMPARISON_CARD_MOBILE_CLASS} ${styles.cardBg}`}
     >
       <span
         aria-hidden="true"
@@ -472,6 +524,7 @@ function IndustryCardMobile() {
           <ComparisonRowMobile
             key={row.rowTestId}
             row={row}
+            side="industry"
             showDivider={index < INDUSTRY_MOBILE_ROWS.length - 1}
           />
         ))}
@@ -486,7 +539,7 @@ function MaqsoodCardMobile() {
   return (
     <article
       data-testid={comparison.mobile.maqsoodCard}
-      className={`flex w-full flex-col overflow-hidden rounded-[var(--radius-panel)] border border-[var(--color-border-info)] ${styles.cardBg}`}
+      className={`${COMPARISON_CARD_MOBILE_CLASS} ${styles.cardBg}`}
     >
       <span
         aria-hidden="true"
@@ -523,6 +576,7 @@ function MaqsoodCardMobile() {
           <ComparisonRowMobile
             key={row.rowTestId}
             row={row}
+            side="maqsood"
             showDivider={index < MAQSOOD_MOBILE_ROWS.length - 1}
           />
         ))}
@@ -579,6 +633,7 @@ function ComparisonCtaBlock({
         labelTestId={labelTestId}
         iconTestId={iconTestId}
         graphicTestId={graphicTestId}
+        variant={footnoteVariant}
       />
     </div>
   );

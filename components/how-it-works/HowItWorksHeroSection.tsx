@@ -52,7 +52,7 @@ function HeroStatsStrip() {
             >
               <span
                 data-testid={stat.valueTestId}
-                className="text-display-desktop-stat text-[var(--color-text-primary)]"
+                className="text-display-desktop-stat text-[var(--color-text-brand-navy)]"
               >
                 {stat.value}
               </span>
@@ -134,7 +134,7 @@ function HeroCtaCluster({ emphasized }: { emphasized: boolean }) {
       />
       <p
         data-testid={hero.textBlock4}
-        className="text-body-desktop-xs text-[var(--color-text-secondary)]"
+        className="text-body-desktop-xs text-[var(--color-text-muted)]"
       >
         {HIW_HERO_PROOF_LINE}
       </p>

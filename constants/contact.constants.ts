@@ -31,7 +31,7 @@ export const CONTACT_HERO_HEADLINE_CLASS =
   'text-display-mobile-lg text-[var(--color-text-primary)] lg:text-display-desktop-lg';
 
 export const CONTACT_HERO_SUBHEAD_CLASS =
-  'max-w-[640px] text-body-desktop-md text-[var(--color-text-primary)]';
+  'max-w-[640px] text-body-mobile-md text-[var(--color-text-secondary)] lg:text-body-desktop-md';
 
 /** Figma embed slot `5186:4368` — 868×550 white card with border + radius (`radius.panel`). */
 export const CALENDLY_EMBED_MAX_WIDTH_PX = 868;
@@ -82,10 +82,11 @@ export const CONTACT_FALLBACK_COPY_STACK_CLASS =
 export const CONTACT_FALLBACK_HEADING_CLASS =
   'text-heading-mobile-h2 text-[var(--color-text-primary)] lg:text-heading-desktop-h2';
 
-export const CONTACT_FALLBACK_BODY_CLASS = 'text-body-desktop-xs text-[var(--color-text-muted)]';
+export const CONTACT_FALLBACK_BODY_CLASS =
+  'text-body-mobile-xs text-[var(--color-text-secondary)] lg:text-body-desktop-xs';
 
 export const CONTACT_EMAIL_CTA_CLASS_NAME =
-  'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-6)] border border-[var(--color-border-brand-navy)] bg-[var(--color-action-secondary-default-background)] px-[var(--spacing-28)] py-[var(--spacing-12)] text-label-desktop-lg text-[var(--color-action-secondary-default-label)] transition-colors hover:bg-[var(--color-action-secondary-hover-background)] hover:text-[var(--color-action-secondary-hover-label)] focus-visible:bg-[var(--color-action-secondary-focused-background)] focus-visible:text-[var(--color-action-secondary-focused-label)] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-action-secondary-focused-border)]';
+  'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-6)] border border-[var(--color-border-brand-navy)] bg-[var(--color-action-secondary-default-background)] px-[var(--spacing-28)] py-[var(--spacing-12)] text-label-mobile-lg text-[var(--color-action-secondary-default-label)] transition-colors hover:bg-[var(--color-action-secondary-hover-background)] hover:text-[var(--color-action-secondary-hover-label)] focus-visible:bg-[var(--color-action-secondary-focused-background)] focus-visible:text-[var(--color-action-secondary-focused-label)] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-action-secondary-focused-border)] lg:text-label-desktop-lg';
 
 /** Calendly inline branding — navy primary matches `color.text.brand.navy`. */
 const CALENDLY_EMBED_QUERY = {

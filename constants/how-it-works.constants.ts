@@ -69,7 +69,7 @@ export const HIW_MOBILE_TESTIMONIAL_AVATAR_SHELL_CLASS =
   'relative size-[calc(var(--spacing-32)+var(--spacing-4))] shrink-0';
 
 export const HIW_MOBILE_TESTIMONIAL_AVATAR_INITIALS_CLASS =
-  'absolute [font-size:var(--font-size-18)] [font-weight:var(--font-weight-700)] [line-height:var(--font-lineheight-24)] text-[var(--color-text-inverse)]';
+  'absolute text-heading-desktop-h4 text-[var(--color-text-inverse)]';
 
 /** Figma HIWHeroTextBlock height (5217-6699 cache). */
 export const HIW_HERO_TEXT_BLOCK_MIN_HEIGHT_PX = 280;
@@ -155,7 +155,7 @@ export const HIW_SIX_WEEK_PILL_LABEL_DESKTOP_CLASS =
   'text-label-desktop-md-tag text-[var(--color-text-brand-navy)]';
 
 export const HIW_SIX_WEEK_PILL_LABEL_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-md-tag-font-family)] [font-size:var(--typography-label-mobile-md-tag-font-size)] [font-weight:var(--typography-label-mobile-md-tag-font-weight)] [line-height:var(--typography-label-mobile-md-tag-line-height)] text-[var(--color-text-brand-navy)]';
+  'text-label-mobile-md-tag text-[var(--color-text-brand-navy)]';
 
 export const HIW_SIX_WEEK_CARD_SHELL_CLASS =
   'flex w-full flex-col overflow-hidden rounded-[var(--radius-panel)] border border-[var(--color-border-default)] bg-[var(--color-background-page)] shadow-[var(--shadow-card)] lg:w-[314px] lg:shrink-0';
@@ -173,13 +173,13 @@ export const HIW_SIX_WEEK_CARD_TITLE_MOBILE_CLASS =
   'text-heading-mobile-h4 text-[var(--color-text-primary)]';
 
 export const HIW_SIX_WEEK_CARD_BODY_DESKTOP_CLASS =
-  '[font-family:var(--typography-body-desktop-xs-sm-font-family)] [font-size:var(--typography-body-desktop-xs-sm-font-size)] [font-weight:var(--typography-body-desktop-xs-sm-font-weight)] [line-height:var(--typography-body-desktop-xs-sm-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-desktop-xs-sm text-[var(--color-text-secondary)]';
 
 export const HIW_SIX_WEEK_CARD_BODY_MOBILE_CLASS =
-  '[font-family:var(--typography-body-mobile-xs-sm-font-family)] [font-size:var(--typography-body-mobile-xs-sm-font-size)] [font-weight:var(--typography-body-mobile-xs-sm-font-weight)] [line-height:var(--typography-body-mobile-xs-sm-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-mobile-xs-sm text-[var(--color-text-secondary)]';
 
 export const HIW_SIX_WEEK_MOBILE_SUBCOPY_CLASS =
-  '[font-family:var(--typography-body-mobile-md-font-family)] [font-size:var(--typography-body-mobile-md-font-size)] [font-weight:var(--typography-body-mobile-md-font-weight)] [line-height:var(--typography-body-mobile-md-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-mobile-md text-[var(--color-text-secondary)]';
 
 export const HIW_SIX_WEEK_BADGE_SHELL_NAVY_CLASS =
   'inline-flex w-fit items-center rounded-[var(--radius-4)] bg-[color-mix(in_srgb,var(--color-text-brand-navy)_8%,transparent)] px-[var(--spacing-8)] py-[var(--spacing-4)]';
@@ -263,7 +263,7 @@ export const HIW_DESKTOP_BENEFIT_TITLE_CLASS =
   'text-heading-desktop-h4-feature text-[var(--color-text-primary)]';
 
 export const HIW_DESKTOP_BENEFIT_BODY_CLASS =
-  '[font-family:var(--typography-body-desktop-xs-font-family)] [font-size:var(--typography-body-desktop-xs-font-size)] [font-weight:var(--typography-body-desktop-xs-font-weight)] [line-height:var(--typography-body-desktop-xs-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-desktop-xs text-[var(--color-text-secondary)]';
 
 /** Figma stat row (5217:6883) — mobile-only vertical benefit stack. */
 export const HIW_MOBILE_BENEFITS_STATS_CLASS =
@@ -288,7 +288,7 @@ export const HIW_MOBILE_BENEFIT_TITLE_CLASS =
   'text-heading-mobile-h4 text-[var(--color-text-primary)]';
 
 export const HIW_MOBILE_BENEFIT_BODY_CLASS =
-  '[font-family:var(--typography-body-mobile-xs-font-family)] [font-size:var(--typography-body-mobile-xs-font-size)] [font-weight:var(--typography-body-mobile-xs-font-weight)] [line-height:var(--typography-body-mobile-xs-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-mobile-xs text-[var(--color-text-secondary)]';
 
 export const HIW_FINAL_CTA_HEADLINE_PREFIX =
   'Your agents could be searching every GDS from one screen in ';
@@ -316,13 +316,13 @@ export const HIW_FINAL_CTA_TEXT_BLOCK_CLASS =
   'flex w-full flex-col items-center gap-[var(--spacing-4)] text-center lg:gap-[var(--spacing-8)]';
 
 export const HIW_FINAL_CTA_HEADLINE_CLASS =
-  '[word-break:break-word] [font-family:var(--typography-display-mobile-pricing-sm-font-family)] [font-size:var(--typography-display-mobile-pricing-sm-font-size)] [font-weight:var(--typography-display-mobile-pricing-sm-font-weight)] [line-height:var(--typography-display-mobile-pricing-sm-line-height)] tracking-[var(--font-letterspacing-neg2)] text-center text-[var(--color-text-inverse)] lg:[font-family:var(--typography-display-desktop-pricing-xl-font-family)] lg:[font-size:var(--typography-display-desktop-pricing-xl-font-size)] lg:[font-weight:var(--typography-display-desktop-pricing-xl-font-weight)] lg:[line-height:var(--typography-display-desktop-pricing-xl-line-height)]';
+  '[word-break:break-word] text-display-mobile-pricing-sm text-center text-[var(--color-text-inverse)] lg:text-display-desktop-pricing-xl';
 
 export const HIW_FINAL_CTA_HEADLINE_ACCENT_CLASS =
   'text-[var(--color-text-brand-orange)]';
 
 export const HIW_FINAL_CTA_SUBCOPY_CLASS =
-  '[font-family:var(--typography-body-mobile-sm-font-family)] [font-size:var(--typography-body-mobile-sm-font-size)] [font-weight:var(--typography-body-mobile-sm-font-weight)] [line-height:var(--typography-body-mobile-sm-line-height)] tracking-[var(--font-letterspacing-neg0-3125)] text-center text-[var(--color-text-inverse)] lg:text-body-desktop-sm lg:tracking-[var(--font-letterspacing-neg0-4)]';
+  'text-body-mobile-sm text-center text-[var(--color-text-inverse)] lg:text-body-desktop-sm';
 
 /** Figma default accordion state — second question open (`5261:8072` / `5261:8150`). */
 export const HIW_FAQ_DEFAULT_EXPANDED_INDEX = 1;
@@ -340,10 +340,10 @@ export const HIW_FAQ_TABS_CLASS =
   'flex flex-row flex-wrap items-center justify-center gap-[var(--spacing-12)] lg:gap-[var(--spacing-20)]';
 
 export const HIW_FAQ_TAB_ACTIVE_CLASS =
-  'rounded-[var(--radius-6)] bg-[var(--color-navy-500)] px-[calc(var(--spacing-12)+var(--spacing-2))] py-[var(--spacing-12)] text-label-desktop-md-tag text-[var(--color-text-inverse)] lg:px-[22px]';
+  'rounded-[var(--radius-6)] bg-[var(--color-navy-500)] px-[calc(var(--spacing-12)+var(--spacing-2))] py-[var(--spacing-12)] text-label-mobile-md-tag text-[var(--color-text-inverse)] lg:px-[22px] lg:text-label-desktop-md-tag';
 
 export const HIW_FAQ_TAB_INACTIVE_CLASS =
-  'rounded-[var(--radius-6)] bg-[color-mix(in_srgb,var(--color-navy-500)_12%,transparent)] px-[calc(var(--spacing-12)+var(--spacing-2))] py-[var(--spacing-12)] text-label-desktop-md-tag text-[var(--color-text-secondary)] lg:px-[22px]';
+  'rounded-[var(--radius-6)] bg-[color-mix(in_srgb,var(--color-navy-500)_12%,transparent)] px-[calc(var(--spacing-12)+var(--spacing-2))] py-[var(--spacing-12)] text-label-mobile-md-tag text-[var(--color-text-secondary)] lg:px-[22px] lg:text-label-desktop-md-tag';
 
 export const HIW_FAQ_ACCORDION_CLASS =
   'flex w-full flex-col gap-[var(--spacing-24)] lg:max-w-[1090px] lg:gap-[var(--spacing-28)]';
@@ -355,12 +355,13 @@ export const HIW_FAQ_QUESTION_ROW_CLASS =
   'flex w-full flex-row items-start justify-between gap-[var(--spacing-12)]';
 
 export const HIW_FAQ_QUESTION_DESKTOP_CLASS =
-  'text-left [font-family:var(--typography-heading-desktop-h3-sm-font-family)] [font-size:var(--typography-heading-desktop-h3-sm-font-size)] [font-weight:var(--typography-heading-desktop-h3-sm-font-weight)] [line-height:var(--typography-heading-desktop-h3-sm-line-height)] tracking-[var(--font-letterspacing-neg0-449)] text-[var(--color-text-primary)]';
+  'text-left text-heading-desktop-h3-sm text-[var(--color-text-primary)]';
 
 export const HIW_FAQ_QUESTION_MOBILE_CLASS =
-  'text-left [font-family:var(--typography-heading-mobile-h3-sm-font-family)] [font-size:var(--typography-heading-mobile-h3-sm-font-size)] [font-weight:var(--typography-heading-mobile-h3-sm-font-weight)] [line-height:var(--typography-heading-mobile-h3-sm-line-height)] tracking-[var(--font-letterspacing-neg0-449)] text-[var(--color-text-primary)]';
+  'text-left text-heading-mobile-h3-sm text-[var(--color-text-primary)]';
 
-export const HIW_FAQ_ANSWER_CLASS = 'text-body-desktop-sm text-[var(--color-text-primary)]';
+export const HIW_FAQ_ANSWER_CLASS =
+  'text-body-mobile-sm text-[var(--color-text-primary)] lg:text-body-desktop-sm';
 
 export const HIW_FAQ_DIVIDER_CLASS =
   'h-[var(--spacing-2)] w-full shrink-0 rounded-full bg-[var(--color-border-default)] lg:max-w-[845px]';

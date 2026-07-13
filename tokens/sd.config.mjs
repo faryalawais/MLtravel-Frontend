@@ -219,6 +219,7 @@ function typographyCssVars(dictionary, outputReferences) {
       ['font-size',   v.fontSize,   original.fontSize],
       ['font-weight', v.fontWeight, original.fontWeight],
       ['line-height', v.lineHeight, original.lineHeight],
+      ['letter-spacing', v.letterSpacing, original.letterSpacing],
     ];
     for (const [suffix, resolved, raw] of subProps) {
       if (resolved == null) continue;
@@ -318,6 +319,7 @@ StyleDictionary.registerFormat({
           fontSize: `var(--${baseName}-font-size)`,
           fontWeight: `var(--${baseName}-font-weight)`,
           lineHeight: `var(--${baseName}-line-height)`,
+          letterSpacing: `var(--${baseName}-letter-spacing)`,
         };
       }
       // colorDark.* intentionally skipped; see file header.

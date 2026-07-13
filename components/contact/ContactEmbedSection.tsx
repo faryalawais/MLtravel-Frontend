@@ -51,14 +51,14 @@ function ContactEmbedFallback({ calendlyUrl }: { calendlyUrl: string }) {
       data-testid={ids.component.contact.embedFallback.root}
       className={CONTACT_EMBED_FALLBACK_SHELL_CLASS}
     >
-      <p className="text-body-desktop-md text-[var(--color-text-primary)]">
+      <p className="text-body-mobile-md text-[var(--color-text-secondary)] lg:text-body-desktop-md">
         {EMBED_FALLBACK_MESSAGE}
       </p>
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-body-desktop-md text-[var(--color-action-primary-default-label)] underline"
+        className="text-body-mobile-md text-[var(--color-text-brand-navy)] underline lg:text-body-desktop-md"
       >
         {EMBED_FALLBACK_LINK_LABEL}
       </a>

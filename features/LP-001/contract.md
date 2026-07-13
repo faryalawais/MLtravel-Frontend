@@ -476,8 +476,11 @@ FeatureGrid-animation  (nodeId 5404:6074) — motion prototype
 **Motion bindings (motion-diffs):**
 | Step | testId | Helper | Change |
 |------|--------|--------|--------|
-| 0 | `…featureGrid.motion.featureRow1` | `getMotionSlideRevealStyle` | translateY custom |
-| 0 | `…featureGrid.motion.featureRow2` | `getMotionSlideRevealStyle` | translateY spacing.180 |
+| 0 | `…featureGrid.motion.featureRow1` | `getFeatureGridContentMotionStyle` | translateY custom (734→284); offset from terminal |
+| 0 | `…featureGrid.motion.featureRow2` | `getFeatureGridContentMotionStyle` | translateY spacing.180 delta (914→734); partial settle |
+| 0 | `…featureGrid.motion.footerBar` | `getFeatureGridContentMotionStyle` | translateY spacing.180 delta (1096→916); partial settle |
+| 1 | FeatureRow2 | `getFeatureGridContentMotionStyle` | row-wise: 734→457 (Row2 settles) |
+| 2 | FooterBar (+ Row2 micro) | `getFeatureGridContentMotionStyle` | footer 916→646 (footer settles) |
 | 0 | `…featureGrid.motion.footerBar` | `getMotionSlideRevealStyle` | translateY spacing.180 |
 
 ### Variant matrix — Social proof (cache + checklist)
@@ -770,7 +773,7 @@ PricingSectionanimation  (nodeId 5164:11487, variants: Property 1=1) — motion 
 | CTA hover | `color.action.secondary.active.background` | `color.action.secondary.hover.label` | — | `radius.6` | padding grows per `5164:10334` | — |
 | Mobile bar | `color.background.page` | — | — | — | §3 | — |
 | Problem section | `color.background.page` | — | — | — | §3 | — |
-| SectionPill | transparent | `color.text.brand-orange` | `color.border.brand-orange` | `radius.pill` | §3 | `typography.label.desktop.sm` (14px semibold) |
+| SectionPill | transparent | `color.text.brand-orange` | `color.border.brand-orange` 0.3px | `radius.pill` | §3 | `typography.label.desktop.sm` (14px semibold) |
 | Section heading | — | `color.text.primary` | — | — | — | `typography.heading.desktop.h2` / mobile `typography.heading.mobile.h2` |
 | Section subtitle | — | `color.text.secondary` | — | — | — | `typography.body.desktop.md` |
 | ProblemCard default | `color.background.surface` | — | `color.border.default` | `radius.panel` (20px) | §3 | — |
@@ -781,20 +784,22 @@ PricingSectionanimation  (nodeId 5164:11487, variants: Property 1=1) — motion 
 | ProblemCTA lines | — | `color.text.primary` + `color.text.brand-navy` emphasis on line 2 | — | — | — | `typography.heading.desktop.h4` |
 | gradient-bar | brand gradient (navy → orange) | — | — | — | full width 4px | — |
 | Comparison section | `color.background.page` | — | — | — | §3 | — |
-| Comparison SectionPill | tinted pill bg | **`color.text.brand-navy`** (instance fill) | `color.pill.feature.border` | `radius.pill` | §3 | `LANDING_SECTION_PILL_LABEL_*` |
+| Comparison SectionPill | tinted pill bg | **`color.text.brand-navy`** (instance fill) | `color.pill.feature.border` 0.3px | `radius.pill` | §3 | `LANDING_SECTION_PILL_LABEL_*` |
 | Comparison H2 | — | `color.text.primary` + `color.text.brand-navy` accent | — | — | — | **40px/700** `LANDING_SECTION_HEADING_DESKTOP_CLASS` |
 | Comparison subtitle | — | `color.text.secondary` | — | — | — | `LANDING_SECTION_SUBTITLE_CLASS` / mobile 14px xs |
-| Industry card surface | `color.background.surface` | — | `color.border.default` | `radius.panel` | §3 | — |
+| Industry card surface | `color.background.surface-warm` | — | **none** (Figma `strokes=[]`) | — | §3 | — |
 | Industry badge | `color.feedback.warning.background` | `color.feedback.warning.foreground` | `color.border.warning` | `radius.6` | — | micro label |
-| Maqsood card surface | `color.background.surface` | — | `color.border.info` | `radius.panel` | §3 | — |
+| Maqsood card surface | `color.background.subtle` | — | **none** (Figma `strokes=[]`) | — | §3 | — |
 | Maqsood badge | `color.feedback.info.background` | `color.feedback.info.foreground` | `color.border.info` | `radius.6` | — | micro label |
+| GiantTicket shell | — | — | **none**; shadow only | `radius.panel` | §3 | `divider-perforated` seam + `notch-top` |
+| Row divider | accent @ 8% | — | none (1px fill rect) | — | — | inset in card-body |
 | ComparisonMicroTag | semantic tint | `color.text.secondary` | — | `radius.6` | — | uppercase label |
 | ComparisonStamp | stamp tint | brand emphasis | — | `radius.pill` | — | stamp label |
 | Comparison footnote | — | `color.text.secondary` | — | — | — | `typography.body.desktop.sm` |
 | Book A Free Demo CTA | `color.action.primary.default.background` | `color.action.primary.default.label` | — | `radius.6` | §3 | `typography.label.desktop.lg` |
 | Book A Free Demo hover | `color.action.primary.hover.background` | `color.action.primary.hover.label` | — | `radius.6` | — | per `5164:10411` |
 | HowItWorks section | `color.background.page` | — | — | — | §3 | — |
-| HIW SectionPill | tinted `color.pill.solution.*` | **`color.text.brand-navy`** (instance fill, not `pill.solution.text`) | `color.pill.solution.border` | `radius.pill` | §3 | `LANDING_SECTION_PILL_LABEL_*` |
+| HIW SectionPill | tinted `color.pill.solution.*` | **`color.text.brand-navy`** (instance fill, not `pill.solution.text`) | `color.pill.solution.border` 0.3px | `radius.pill` | §3 | `LANDING_SECTION_PILL_LABEL_*` |
 | HIW section H2 | — | `color.text.primary` | — | — | — | **40px/700** `LANDING_SECTION_HEADING_DESKTOP_CLASS` |
 | HIW section subtitle | — | `color.text.secondary` | — | — | — | `LANDING_SECTION_SUBTITLE_CLASS` |
 | HIWCard default | `color.background.surface` | — | `color.border.default` | `radius.panel` (20px) | §3 | — |
@@ -807,7 +812,7 @@ PricingSectionanimation  (nodeId 5164:11487, variants: Property 1=1) — motion 
 | HIW card visual panel | `color.background.subtle` | mock labels | `color.border.subtle` | `radius.12` | §3 | monospace micro labels |
 | footer-note link | — | `color.text.link` | — | — | — | `typography.body.desktop.sm` + arrow icon |
 | FeatureGrid section | `color.background.page` | — | — | — | §3 | — |
-| Feature SectionPill | `color.pill.feature.background` | **`color.text.brand-navy`** (instance fill, not `pill.feature.text`) | `color.pill.feature.border` | `radius.pill` | §3 | `LANDING_SECTION_PILL_LABEL_*` |
+| Feature SectionPill | `color.pill.feature.background` | **`color.text.brand-navy`** (instance fill, not `pill.feature.text`) | `color.pill.feature.border` 0.3px | `radius.pill` | §3 | `LANDING_SECTION_PILL_LABEL_*` |
 | Feature section H2 | — | `color.text.primary` | — | — | — | `typography.heading.desktop.h2` / mobile h2 |
 | Feature section subtitle | — | `color.text.secondary` | — | — | — | `typography.body.desktop.md` |
 | FeatureCard default | `color.background.surface` | — | `color.border.default` | `radius.panel` (20px) | §3 | — |
@@ -823,7 +828,7 @@ PricingSectionanimation  (nodeId 5164:11487, variants: Property 1=1) — motion 
 | Decorative plane bottom | — | — | — | — | absolute position | `<Image src="/icons/icon-feature-grid-plane-bottom.svg" alt="" />` |
 | CTA plane arrow graphic | — | — | — | — | — | `<Image src="/icons/icon-plane-arrow-white.svg" alt="" />` |
 | Social proof section | `color.background.page` | — | — | — | §3 | — |
-| Social SectionPill (`Type=Trusted`) | orange 10% tint (`color.feedback.warning.background` @ 10% per Figma) | `color.text.brand-orange` | `color.border.brand-orange` | `radius.pill` | §3 | `LANDING_SECTION_PILL_LABEL_*` |
+| Social SectionPill (`Type=Trusted`) | orange 10% tint (`color.feedback.warning.background` @ 10% per Figma) | `color.text.brand-orange` | `color.border.brand-orange` 0.3px | `radius.pill` | §3 | `LANDING_SECTION_PILL_LABEL_*` |
 | Social section H2 | — | `color.text.primary` + `color.text.brand-navy` accent line 2 | — | — | — | **40px/700** `LANDING_SECTION_HEADING_DESKTOP_CLASS` |
 | Social section subtitle | — | `color.text.secondary` | — | — | — | `LANDING_SECTION_SUBTITLE_CLASS` |
 | TestimonialLogoCard | `color.background.subtle` | — | — | `radius.4` | — | — |
@@ -1098,7 +1103,7 @@ See main **§2 Component anatomy** above for the full ProblemSection / ProblemPa
 
 | Element | Background | Text | Border | Radius | Typography |
 |---------|------------|------|--------|--------|------------|
-| Section pill | transparent | `color.text.brand-orange` | `color.border.brand-orange` | `radius.pill` | 14px semibold label |
+| Section pill | transparent | `color.text.brand-orange` | `color.border.brand-orange` 0.3px | `radius.pill` | 14px semibold label |
 | Section H2 | — | `color.text.primary` | — | — | desktop h2 / mobile h2 |
 | Subtitle | — | `color.text.secondary` | — | — | `typography.body.desktop.md` |
 | Card surface | `color.background.surface` | — | `color.border.default` | `radius.panel` | — |
@@ -1164,9 +1169,13 @@ See main **§2 Component anatomy** above for the full ComparisonSection / Compar
 
 | Element | Background | Text | Border | Radius | Typography |
 |---------|------------|------|--------|--------|------------|
-| Section pill | tinted `color.pill.feature.*` | **`color.text.brand-navy`** (`3003:24`) | `color.pill.feature.border` | `radius.pill` | 14px/600 desktop · 10px/600 mobile · `LANDING_SECTION_PILL_LABEL_*` |
+| Section pill | tinted `color.pill.feature.*` | **`color.text.brand-navy`** (`3003:24`) | `color.pill.feature.border` 0.3px | `radius.pill` | 14px/600 desktop · 10px/600 mobile · `LANDING_SECTION_PILL_LABEL_*` |
 | Section heading | — | `color.text.primary` + accent `color.text.brand-navy` | — | — | **40px/700** desktop · **32px/700** mobile · `LANDING_SECTION_HEADING_*` |
 | Subtitle | — | `color.text.secondary` | — | — | 16px/400 desktop · **14px/400** mobile |
+| Industry card surface | `color.background.surface-warm` | — | **none** | — | fills only |
+| Maqsood card surface | `color.background.subtle` | — | **none** | — | fills only |
+| GiantTicket | shadow elevated | — | **none** | `radius.panel` | perforated vertical seam |
+| Row partition | accent @ 8% | — | — | — | 1px inset dividers (both columns) |
 | Card header badge | tint bg | industry **`color.text.brand-orange`** (`3003:25`) · Maqsood **`color.text.success`** (`3003:27`) | — | `radius.3` | **8px/700** desktop stamp · **7px/700** mobile stamp |
 | Card header title | — | primary / danger / inverse / orange per card | — | — | **26px/700** desktop `text-heading-desktop-h2` · **18px/700** mobile `text-heading-mobile-h2` |
 | Row micro tag | semantic tint | danger `3003:28` · success `3003:27` etc. | — | `radius.3` | **9px/700** desktop · **8px/700** mobile |
@@ -1182,8 +1191,8 @@ See main **§2 Component anatomy** above for the full ComparisonSection / Compar
 |---------|-------|----------------|
 | `component.landing.comparisonFirst` | default | Two-column GiantTicket desktop; stacked cards mobile |
 | `component.landing.comparisonFirst` | hover | One-step section reveal per `5164:10411` (700ms ease-in) |
-| `component.landing.comparisonFirst.industryCard` | hover | Card border/shadow emphasis |
-| `component.landing.comparisonFirst.maqsoodCard` | hover | Card border/shadow emphasis |
+| `component.landing.comparisonFirst.industryCard` | hover | Card shadow emphasis (no stroke) |
+| `component.landing.comparisonFirst.maqsoodCard` | hover | Card shadow emphasis (no stroke) |
 | `component.landing.comparisonFirst.cta` | hover | Primary button hover fill |
 | `component.landing.howItWorksTeaser` | default | Static per Figma desktop/mobile frames |
 | `component.landing.howItWorksTeaser` | hover | 4-step card cascade per `5164:10412` |
@@ -1239,7 +1248,7 @@ See main **§2 Component anatomy** above for the full HowItWorksSection / How It
 
 | Element | Background | Text | Border | Radius | Typography |
 |---------|------------|------|--------|--------|------------|
-| Section pill | tinted `color.pill.solution.*` | **`color.text.brand-navy`** (Figma fill `3003:24`, not `pill.solution.text`) | `color.pill.solution.border` | `radius.pill` | 14px/600 desktop · 10px/600 mobile · `LANDING_SECTION_PILL_LABEL_*` |
+| Section pill | tinted `color.pill.solution.*` | **`color.text.brand-navy`** (Figma fill `3003:24`, not `pill.solution.text`) | `color.pill.solution.border` 0.3px | `radius.pill` | 14px/600 desktop · 10px/600 mobile · `LANDING_SECTION_PILL_LABEL_*` |
 | Section heading | — | `color.text.primary` + accent `color.text.brand-navy` | — | — | **40px/700** → `text-heading-desktop-h1` · mobile **32px/700** → `LANDING_SECTION_HEADING_MOBILE_CLASS` (not h2) |
 | Subtitle | — | `color.text.secondary` | — | — | 16px/400 → `LANDING_SECTION_SUBTITLE_CLASS` |
 | HIWCard surface | `color.background.surface` | — | `color.border.default` | `radius.panel` | — |
@@ -1317,7 +1326,7 @@ See main **§2 Component anatomy** above for the full FeatureGrid / FeatureGrid 
 
 | Element | Background | Text | Border | Radius | Typography |
 |---------|------------|------|--------|--------|------------|
-| Section pill | `color.pill.feature.*` | **`color.text.brand-navy`** (Figma fill `3003:24`, not `pill.feature.text`) | `color.pill.feature.border` | `radius.pill` | 14px/600 desktop · 10px/600 mobile · `LANDING_SECTION_PILL_LABEL_*` |
+| Section pill | `color.pill.feature.*` | **`color.text.brand-navy`** (Figma fill `3003:24`, not `pill.feature.text`) | `color.pill.feature.border` 0.3px | `radius.pill` | 14px/600 desktop · 10px/600 mobile · `LANDING_SECTION_PILL_LABEL_*` |
 | Section heading line 1 | — | `color.text.primary` | — | — | **40px/700** → `LANDING_SECTION_HEADING_DESKTOP_CLASS` |
 | Section heading line 2 | — | `color.text.brand-navy` | — | — | same utility + `LANDING_SECTION_HEADING_ACCENT_CLASS` |
 | Subtitle | — | `color.text.secondary` | — | — | 16px/400 → `LANDING_SECTION_SUBTITLE_CLASS` |
@@ -1398,7 +1407,7 @@ See main **§2 Component anatomy** above for the full SocialProofSectionBig / So
 
 | Element | Background | Text | Border | Radius | Typography |
 |---------|------------|------|--------|--------|------------|
-| SectionPill Trusted | orange 10% tint | `color.text.brand-orange` | `color.border.brand-orange` | `radius.pill` | `LANDING_SECTION_PILL_LABEL_*` |
+| SectionPill Trusted | orange 10% tint | `color.text.brand-orange` | `color.border.brand-orange` 0.3px | `radius.pill` | `LANDING_SECTION_PILL_LABEL_*` |
 | Section H2 | — | primary + navy accent | — | — | `LANDING_SECTION_HEADING_*` |
 | Subtitle | — | `color.text.secondary` | — | — | `LANDING_SECTION_SUBTITLE_CLASS` |
 | TestimonialLogoCard | `color.background.subtle` | — | — | `radius.4` | — |
@@ -1481,7 +1490,7 @@ See main **§2 Component anatomy** above for the full NewPricingSection / Own it
 
 | Element | Background | Text | Border | Radius | Typography |
 |---------|------------|------|--------|--------|------------|
-| SectionPill Pricing | teal 8% tint `rgba(17,123,139,0.08)` | `color.text.brand-teal` | `color.border.brand-teal` | `radius.pill` | 14px/600 desktop · 10px/600 mobile · `LANDING_SECTION_PILL_LABEL_*` |
+| SectionPill Pricing | teal 8% tint `rgba(17,123,139,0.08)` | `color.text.brand-teal` | `color.border.brand-teal` 0.3px | `radius.pill` | 14px/600 desktop · 10px/600 mobile · `LANDING_SECTION_PILL_LABEL_*` |
 | Section H1 line 1 | — | `color.text.primary` | — | — | 40px/700 desktop · 32px/700 mobile |
 | Section H1 line 2 accent | — | `color.text.brand-navy` | — | — | same + `LANDING_SECTION_HEADING_ACCENT_CLASS` |
 | Subtitle | — | `color.text.secondary` | — | — | 16px/400 desktop · 12px/400 mobile |

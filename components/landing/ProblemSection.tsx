@@ -17,6 +17,7 @@ import {
   LANDING_SECTION_HEADING_DESKTOP_CLASS,
   LANDING_SECTION_HEADING_MOBILE_CLASS,
   LANDING_SECTION_SUBTITLE_CLASS,
+  LANDING_SECTION_SUBTITLE_MOBILE_CLASS,
   PROBLEM_CARD_BASE_CLASS,
   PROBLEM_MOTION_STYLE,
   PROBLEM_TOKENS,
@@ -80,8 +81,8 @@ function SectionPill({ pillTestId, labelTestId, variant = 'desktop' }: SectionPi
       data-testid={pillTestId}
       className={
         isMobile
-          ? 'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border border-[var(--color-pill-problem-border)] bg-[color-mix(in_srgb,var(--color-pill-problem-background)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]'
-          : 'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border border-[var(--color-pill-problem-border)] bg-[color-mix(in_srgb,var(--color-pill-problem-background)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]'
+          ? 'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-pill-problem-border)] bg-[color-mix(in_srgb,var(--color-pill-problem-background)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]'
+          : 'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-pill-problem-border)] bg-[color-mix(in_srgb,var(--color-pill-problem-background)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]'
       }
     >
       <span
@@ -319,13 +320,13 @@ function ProblemCtaMobile() {
       <div className="flex flex-row flex-wrap items-center justify-center gap-[var(--spacing-6)]">
         <span
           data-testid={problem.mobile.ctaLine1}
-          className="whitespace-nowrap text-label-desktop-md-tag text-[var(--color-text-primary)]"
+          className="whitespace-nowrap text-label-mobile-md-tag text-[var(--color-text-primary)]"
         >
           The model is broken on purpose.
         </span>
         <span
           data-testid={problem.mobile.ctaLine2}
-          className="whitespace-nowrap text-label-desktop-lg text-[var(--color-text-brand-navy)]"
+          className="whitespace-nowrap text-label-mobile-lg text-[var(--color-text-brand-navy)]"
         >
           We built the alternative.
         </span>
@@ -510,7 +511,7 @@ export function ProblemSection() {
             </h2>
             <p
               data-testid={problem.mobile.sectionSubtitle}
-              className={LANDING_SECTION_SUBTITLE_CLASS}
+              className={LANDING_SECTION_SUBTITLE_MOBILE_CLASS}
             >
               The travel industry runs on outdated infrastructure that holds you back
             </p>

@@ -8,6 +8,7 @@ import {
   LANDING_SECTION_HEADING_DESKTOP_CLASS,
   LANDING_SECTION_HEADING_MOBILE_CLASS,
   LANDING_SECTION_SUBTITLE_CLASS,
+  LANDING_SECTION_SUBTITLE_MOBILE_CLASS,
   PRICING_ADDON_AMOUNT,
   PRICING_ADDON_FOOTNOTE,
   PRICING_ADDON_LABEL,
@@ -79,7 +80,9 @@ import {
   PRICING_SECTION_PILL_MOBILE_CLASS,
   PRICING_SECTION_SUBTITLE,
   PRICING_SEAT_LABEL_CLASS,
+  PRICING_SEAT_LABEL_MOBILE_CLASS,
   PRICING_SEAT_VALUE_CLASS,
+  PRICING_SEAT_VALUE_MOBILE_CLASS,
   PRICING_TRACKING_LABEL_ADDON_CLASS,
   PRICING_TRACKING_LABEL_ADDON_MOBILE_CLASS,
   PRICING_TRACKING_LABEL_PLATFORM_CLASS,
@@ -423,10 +426,10 @@ function PricingCardMobile({
             </p>
           </div>
           <div data-testid={prMobile.frame1561553874} className="flex shrink-0 flex-col items-end text-right">
-            <span data-testid={prMobile.sEAT} className={PRICING_SEAT_LABEL_CLASS}>
+            <span data-testid={prMobile.sEAT} className={PRICING_SEAT_LABEL_MOBILE_CLASS}>
               SEAT
             </span>
-            <span data-testid={prMobile.n32A} className={PRICING_SEAT_VALUE_CLASS}>
+            <span data-testid={prMobile.n32A} className={PRICING_SEAT_VALUE_MOBILE_CLASS}>
               32A
             </span>
           </div>
@@ -615,7 +618,7 @@ function PricingMobilePanel() {
                 {PRICING_HEADING_LINE2}
               </span>
             </h2>
-            <p data-testid={prMobile.textBlock} className={LANDING_SECTION_SUBTITLE_CLASS}>
+            <p data-testid={prMobile.textBlock} className={LANDING_SECTION_SUBTITLE_MOBILE_CLASS}>
               {PRICING_SECTION_SUBTITLE}
             </p>
           </div>

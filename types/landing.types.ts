@@ -10,6 +10,7 @@ export interface HeroPrimaryCtaProps {
   /** One-way motion emphasis from hero section sequence (MOTION-SPEC §1). */
   emphasized?: boolean;
   useHeroEasing?: boolean;
+  typography?: 'desktop' | 'mobile';
 }
 
 export interface HeroOptionalClassNameProps {
@@ -138,6 +139,7 @@ export interface ComparisonCtaProps {
   labelTestId: string;
   iconTestId: string;
   graphicTestId?: string;
+  variant?: 'desktop' | 'mobile';
 }
 
 /** Landing page — how-it-works teaser section */
@@ -260,6 +262,22 @@ export interface SocialProofClientLogoConfig {
 export interface SocialProofSectionPillProps {
   pillTestId: string;
   labelTestId: string;
+  variant?: 'desktop' | 'mobile';
+}
+
+export interface SocialProofSlideProgressBarProps {
+  testId: string;
+  trackTestId: string;
+  fillTestId: string;
+  numbersTestId: string;
+  n1TestId: string;
+  n2TestId: string;
+  n3TestId: string;
+  activeSlide: number;
+  fillPercent: number;
+  progressDurationMs: number;
+  progressTransitionEnabled?: boolean;
+  onSelectSlide: (index: number) => void;
   variant?: 'desktop' | 'mobile';
 }
 

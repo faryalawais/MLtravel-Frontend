@@ -1,12 +1,12 @@
 import { ids } from '@/tokens/build/test-ids';
 
-/** Shared layout — site navigation (desktop) */
+/** Shared layout — site navigation (desktop) — Figma nav links = text.secondary */
 export const NAV_LINK_CLASS_NAME =
-  'text-body-desktop-sm text-[var(--color-text-primary)] hover:underline focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]';
+  'text-label-desktop-nav-link text-[var(--color-text-secondary)] hover:underline focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]';
 
 /** Shared layout — mobile navigation */
 export const MOBILE_NAV_LINK_CLASS_NAME =
-  'block py-[var(--spacing-12)] text-body-desktop-sm text-[var(--color-text-primary)] hover:underline focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]';
+  'block py-[var(--spacing-12)] text-body-mobile-sm text-[var(--color-text-secondary)] hover:underline focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]';
 
 /** Shared layout — site navigation links (desktop + mobile drawer) */
 export const SITE_NAV_LINKS = [
@@ -75,16 +75,16 @@ export const FOOTER_BRAND_HEADER_CLASS = 'flex items-center gap-[var(--spacing-8
 
 export const FOOTER_BRAND_MARK_CLASS = 'size-[var(--spacing-32)] shrink-0';
 
-/** Figma style `2176:21` — Satoshi 18px/24, -0.3px tracking. */
+/** Figma style `2176:21` — Satoshi 18px/24 (tracking via heading utility). */
 export const FOOTER_BRAND_LABEL_DESKTOP_CLASS =
-  'text-heading-desktop-h4 tracking-[length:-0.3px] text-[var(--color-text-primary)]';
+  'text-heading-desktop-h4 text-[var(--color-text-primary)]';
 
-/** Figma style `2196:22` — Satoshi 16px/22, -0.44px tracking. */
+/** Figma style `2196:22` — Satoshi 16px/22 (tracking via heading utility). */
 export const FOOTER_BRAND_LABEL_MOBILE_CLASS =
-  'text-heading-mobile-h4 tracking-[length:-0.44px] text-[var(--color-text-primary)]';
+  'text-heading-mobile-h4 text-[var(--color-text-primary)]';
 
 export const FOOTER_TAGLINE_CLASS =
-  'text-[length:var(--font-size-13)] font-normal leading-[var(--font-lineheight-20)] text-[var(--color-text-secondary)]';
+  'text-body-desktop-xs-sm text-[var(--color-text-secondary)]';
 
 /** Figma nav-cols `itemSpacing: 48`. */
 export const FOOTER_NAV_COLS_CLASS =
@@ -93,21 +93,21 @@ export const FOOTER_NAV_COLS_CLASS =
 export const FOOTER_NAV_COL_CLASS = 'flex flex-col gap-[var(--spacing-12)]';
 
 export const FOOTER_NAV_HEADING_DESKTOP_CLASS =
-  'text-heading-desktop-h4 tracking-[length:-0.3px] text-[var(--color-text-primary)]';
+  'text-heading-desktop-h4 text-[var(--color-text-primary)]';
 
 export const FOOTER_NAV_HEADING_MOBILE_CLASS =
-  'text-heading-mobile-h4 tracking-[length:-0.44px] text-[var(--color-text-primary)]';
+  'text-heading-mobile-h4 text-[var(--color-text-primary)]';
 
 export const FOOTER_NAV_LINK_LIST_CLASS = 'flex flex-col gap-[var(--spacing-12)]';
 
 const FOOTER_LINK_INTERACTION_CLASS =
   'transition-colors hover:text-[var(--color-text-brand-navy)] hover:underline focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]';
 
-/** Figma style `5151:9371` — 15px/24, secondary, -0.15px tracking. */
-export const FOOTER_NAV_LINK_CLASS = `text-body-desktop-sm tracking-[length:-0.15px] text-[var(--color-text-secondary)] ${FOOTER_LINK_INTERACTION_CLASS}`;
+/** Figma style `5151:9371` — label.desktop.nav-link (15/400/-0.15). */
+export const FOOTER_NAV_LINK_CLASS = `text-label-desktop-nav-link text-[var(--color-text-secondary)] ${FOOTER_LINK_INTERACTION_CLASS}`;
 
-/** Figma style `2196:28` — 13px/20 mobile footer links. */
-export const FOOTER_NAV_LINK_MOBILE_CLASS = `${FOOTER_TAGLINE_CLASS} ${FOOTER_LINK_INTERACTION_CLASS}`;
+/** Figma style `2196:28` — body.mobile.xs (13/400 mobile). */
+export const FOOTER_NAV_LINK_MOBILE_CLASS = `text-body-mobile-xs text-[var(--color-text-secondary)] ${FOOTER_LINK_INTERACTION_CLASS}`;
 
 export const FOOTER_BOTTOM_ROW_CLASS =
   'flex w-full max-w-[1280px] items-center justify-between self-center border-t border-[var(--color-border-default)] py-[var(--spacing-16)]';
@@ -117,11 +117,11 @@ export const FOOTER_BOTTOM_ROW_MOBILE_CLASS =
 
 /** Figma style `2756:19` — 13px/20, muted, 0 tracking. */
 export const FOOTER_COPYRIGHT_DESKTOP_CLASS =
-  'text-[length:var(--font-size-13)] font-normal leading-[var(--font-lineheight-20)] text-[var(--color-text-muted)]';
+  'text-body-desktop-xs-sm text-[var(--color-text-muted)]';
 
 /** Figma style `2756:20` — 12px/16, muted, -0.31px tracking, centered. */
 export const FOOTER_COPYRIGHT_MOBILE_CLASS =
-  'text-center text-[length:var(--font-size-12)] font-normal leading-[var(--font-lineheight-16)] tracking-[length:-0.31px] text-[var(--color-text-muted)]';
+  'text-center text-body-mobile-xs-sm text-[var(--color-text-muted)]';
 
 export const FOOTER_LEGAL_LINKS_CLASS = 'flex items-center gap-[var(--spacing-24)]';
 

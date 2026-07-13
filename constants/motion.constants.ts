@@ -209,44 +209,29 @@ export function getHiwFooterMotionStyle(
   };
 }
 
-/** Feature grid content block — rows + footer move as one unit (flex-safe; per-row transform breaks footer gap). */
-export const FEATURE_GRID_CONTENT_POSE_ENTRY_PX = 734;
-export const FEATURE_GRID_CONTENT_POSE_STATE2_PX = 284;
-export const FEATURE_GRID_CONTENT_POSE_STATE3_PX = 284;
+/**
+ * FeatureGrid-animation absolute Y poses (motion-state-poses.json).
+ * Offsets for CSS = poseY − state4 (terminal / static twin).
+ */
+export const FEATURE_GRID_LAYER_POSE_Y = {
+  featureRow1: { idle: 734, state2: 284, state3: 284, state4: 284 },
+  featureRow2: { idle: 914, state2: 734, state3: 457, state4: 464 },
+  footerBar: { idle: 1096, state2: 916, state3: 916, state4: 646 },
+} as const;
+
+export type FeatureGridMotionLayer = keyof typeof FEATURE_GRID_LAYER_POSE_Y;
+
+/** @deprecated Absolute idle Y of FeatureRow1 — prefer FEATURE_GRID_LAYER_POSE_Y. */
+export const FEATURE_GRID_CONTENT_POSE_ENTRY_PX = FEATURE_GRID_LAYER_POSE_Y.featureRow1.idle;
+/** Mid-chain Row2 offset from terminal (state-2): 734 − 464. */
+export const FEATURE_GRID_CONTENT_POSE_STATE2_PX =
+  FEATURE_GRID_LAYER_POSE_Y.featureRow2.state2 - FEATURE_GRID_LAYER_POSE_Y.featureRow2.state4;
+/** @deprecated Row1 is already at terminal in state-2/3 — always 0 offset. */
+export const FEATURE_GRID_CONTENT_POSE_STATE3_PX = 0;
 
 export type FeatureGridMotionStep = -1 | 0 | 1 | 2 | 3;
 
-/** Row visibility for feature-grid staged-sequence (row1 then full row2 — not per-card). */
-export type FeatureGridRevealedRow = 0 | 1 | 2;
-
-export function getFeatureGridRowRevealStyle(
-  motionEngaged: boolean,
-  revealedRow: FeatureGridRevealedRow,
-  row: 1 | 2,
-  baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
-): CSSProperties {
-  if (!motionEngaged) {
-    return {};
-  }
-
-  const isVisible = row === 1 ? revealedRow >= 1 : revealedRow >= 2;
-  const snapHidden = motionEngaged && !isVisible;
-
-  return {
-    ...baseStyle,
-    transitionProperty: 'opacity, transform, max-height',
-    transitionDuration: snapHidden
-      ? '0ms'
-      : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? MOTION_SLIDE_REST_TRANSFORM : MOTION_SLIDE_PENDING_TRANSFORM,
-    maxHeight: isVisible ? '800px' : '0px',
-    overflow: 'hidden',
-    pointerEvents: isVisible ? 'auto' : 'none',
-  };
-}
-
-/** Card shell — highlight/lift only; row wrappers control visibility (FeatureGrid-animation). */
+/** Card shell — highlight/lift only; rows/footer own translateY (FeatureGrid-animation). */
 export function getFeatureGridCardSurfaceStyle(
   motionEngaged: boolean,
   isHighlighted: boolean,
@@ -275,7 +260,9 @@ export function getFeatureGridCardSurfaceStyle(
   };
 }
 
-export function getFeatureGridContentOffsetPx(
+/** translateY from terminal pose for one FeatureGrid layer (row-wise staged-sequence). */
+export function getFeatureGridLayerOffsetPx(
+  layer: FeatureGridMotionLayer,
   motionEngaged: boolean,
   motionStep: FeatureGridMotionStep,
 ): number {
@@ -283,24 +270,40 @@ export function getFeatureGridContentOffsetPx(
     return 0;
   }
 
-  if (motionStep === 0) {
-    return FEATURE_GRID_CONTENT_POSE_ENTRY_PX;
-  }
+  const poses = FEATURE_GRID_LAYER_POSE_Y[layer];
+  const absoluteY =
+    motionStep === 0
+      ? poses.idle
+      : motionStep === 1
+        ? poses.state2
+        : motionStep === 2
+          ? poses.state3
+          : poses.state4;
 
-  if (motionStep === 1) {
-    return FEATURE_GRID_CONTENT_POSE_STATE2_PX;
-  }
-
-  return 0;
+  return absoluteY - poses.state4;
 }
 
-/** Staged slide for feature-grid cards + footer block (motion-chains FeatureGrid-animation). */
+/** @deprecated Use getFeatureGridLayerOffsetPx — whole-block offset was incorrect vs Figma. */
+export function getFeatureGridContentOffsetPx(
+  motionEngaged: boolean,
+  motionStep: FeatureGridMotionStep,
+): number {
+  return getFeatureGridLayerOffsetPx('featureRow1', motionEngaged, motionStep);
+}
+
+/**
+ * Per-layer staged slide (FeatureGrid-animation motion-diffs).
+ * Step 0 idle snap → step 1 Row1 settles + Row2/footer partial → step 2 Row2 settles →
+ * step 3 footer settles.
+ */
 export function getFeatureGridContentMotionStyle(
   motionEngaged: boolean,
   motionStep: FeatureGridMotionStep,
+  layer: FeatureGridMotionLayer,
   baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
 ): CSSProperties {
   const snapEntry = motionEngaged && motionStep === 0;
+  const offsetPx = getFeatureGridLayerOffsetPx(layer, motionEngaged, motionStep);
 
   return {
     ...baseStyle,
@@ -308,7 +311,7 @@ export function getFeatureGridContentMotionStyle(
     transitionDuration: snapEntry
       ? '0ms'
       : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
-    transform: `translateY(${getFeatureGridContentOffsetPx(motionEngaged, motionStep)}px)`,
+    transform: `translateY(${offsetPx}px)`,
   };
 }
 
@@ -649,7 +652,11 @@ export function getSocialProofClientsLogoMotionStyle(
   };
 }
 
-/** Footer mobile nav link emphasis — inferred from notes.md (700ms, no REST prototype). */
+/**
+ * Footer mobile nav link emphasis — inferred from notes.md (700ms, no REST prototype).
+ * `!font-semibold` is intentional: motion-only weight bump without swapping to a
+ * label-semibold utility (which would change size/family on body-sm links).
+ */
 export const FOOTER_NAV_LINK_EMPHASIS_CLASS =
   '!font-semibold text-[var(--color-text-brand-navy)] underline';
 

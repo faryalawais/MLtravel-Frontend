@@ -7,13 +7,17 @@ import {
   useRef,
   useState,
   type CSSProperties,
+  type MouseEvent,
   type RefObject,
+  type TransitionEvent,
+  type UIEvent,
 } from 'react';
 import {
   LANDING_SECTION_HEADING_ACCENT_CLASS,
   LANDING_SECTION_HEADING_DESKTOP_CLASS,
   LANDING_SECTION_HEADING_MOBILE_CLASS,
   LANDING_SECTION_SUBTITLE_CLASS,
+  LANDING_SECTION_SUBTITLE_MOBILE_CLASS,
   SOCIAL_PROOF_CAROUSEL_TRANSITION_STYLE,
   SOCIAL_PROOF_CLIENT_LOGO_IMAGE_CLASS,
   SOCIAL_PROOF_CLIENT_LOGO_IMAGE_STYLE,
@@ -25,21 +29,34 @@ import {
   SOCIAL_PROOF_HEADING_LINE2,
   SOCIAL_PROOF_INTEGRATIONS_TAGLINE,
   SOCIAL_PROOF_INTEGRATIONS_TAGLINE_CLASS,
+  SOCIAL_PROOF_INTEGRATIONS_TAGLINE_MOBILE_CLASS,
   SOCIAL_PROOF_MOBILE_TESTIMONIALS,
   SOCIAL_PROOF_AUTHOR_COMPANY_CLASS,
+  SOCIAL_PROOF_AUTHOR_COMPANY_MOBILE_CLASS,
   SOCIAL_PROOF_AUTHOR_NAME_CLASS,
+  SOCIAL_PROOF_AUTHOR_NAME_MOBILE_CLASS,
   SOCIAL_PROOF_AUTHOR_ROLE_CLASS,
+  SOCIAL_PROOF_AUTHOR_ROLE_MOBILE_CLASS,
   SOCIAL_PROOF_PILL_LABEL,
   SOCIAL_PROOF_PILL_LABEL_DESKTOP_CLASS,
   SOCIAL_PROOF_PILL_LABEL_MOBILE_CLASS,
   SOCIAL_PROOF_PLANE_CLASS,
+  SOCIAL_PROOF_PROGRESS_FILL_CLASS,
+  SOCIAL_PROOF_PROGRESS_NUMBER_ACTIVE_CLASS,
+  SOCIAL_PROOF_PROGRESS_NUMBER_INACTIVE_CLASS,
+  SOCIAL_PROOF_PROGRESS_NUMBERS_DESKTOP_CLASS,
+  SOCIAL_PROOF_PROGRESS_NUMBERS_MOBILE_CLASS,
+  SOCIAL_PROOF_PROGRESS_SHELL_CLASS,
+  SOCIAL_PROOF_PROGRESS_TRACK_CLASS,
+  SOCIAL_PROOF_PROGRESS_TRACK_SHELL_CLASS,
   SOCIAL_PROOF_QUOTE_DESKTOP_CLASS,
   SOCIAL_PROOF_QUOTE_MOBILE_CLASS,
   SOCIAL_PROOF_SECTION_PILL_DESKTOP_CLASS,
   SOCIAL_PROOF_SECTION_PILL_MOBILE_CLASS,
   SOCIAL_PROOF_SECTION_SUBTITLE,
   SOCIAL_PROOF_SLIDE_COUNT,
-  SOCIAL_PROOF_SLIDE_FILL_PERCENT,
+  getSocialProofSlideFillEndPercent,
+  getSocialProofSlideFillStartPercent,
   SOCIAL_PROOF_MOTION_STYLE,
   SOCIAL_PROOF_TOKENS,
 } from '@/constants/landing.constants';
@@ -56,6 +73,7 @@ import { useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
   SocialProofSectionPillProps,
+  SocialProofSlideProgressBarProps,
   SocialProofTestimonialConfig,
 } from '@/types/landing.types';
 
@@ -67,6 +85,11 @@ const spMobile = sp.mobile;
 const SOCIAL_PROOF_DESKTOP_TRACK = [
   ...SOCIAL_PROOF_DESKTOP_TESTIMONIALS,
   SOCIAL_PROOF_DESKTOP_TESTIMONIALS[0],
+];
+
+const SOCIAL_PROOF_MOBILE_TRACK = [
+  ...SOCIAL_PROOF_MOBILE_TESTIMONIALS,
+  SOCIAL_PROOF_MOBILE_TESTIMONIALS[0],
 ];
 
 function SocialProofSectionPill({ pillTestId, labelTestId, variant = 'desktop' }: SocialProofSectionPillProps) {
@@ -127,7 +150,7 @@ function TestimonialAvatar({
         />
         <span
           {...(initialsTestId ? { 'data-testid': initialsTestId } : {})}
-          className="absolute [font-size:var(--font-size-18)] [font-weight:var(--font-weight-700)] [line-height:var(--font-lineheight-24)] text-[var(--color-text-inverse)]"
+          className="absolute text-heading-desktop-h4 text-[var(--color-text-inverse)]"
         >
           {initials}
         </span>
@@ -197,18 +220,27 @@ function TestimonialBlockDesktop({
   );
 }
 
-function TestimonialBlockMobile({ testimonial }: { testimonial: SocialProofTestimonialConfig }) {
+function TestimonialBlockMobile({
+  testimonial,
+  includeTestIds = true,
+}: {
+  testimonial: SocialProofTestimonialConfig;
+  includeTestIds?: boolean;
+}) {
+  const testId = (id: string) => (includeTestIds ? { 'data-testid': id } : {});
+
   return (
     <article
-      data-testid={testimonial.blockTestId}
+      {...testId(testimonial.blockTestId)}
       className="flex w-[min(100%,320px)] shrink-0 snap-center flex-col gap-[var(--spacing-16)] rounded-[var(--radius-panel)] bg-[var(--color-background-page)] p-[var(--spacing-16)]"
+      aria-hidden={!includeTestIds}
     >
       <div
-        data-testid={testimonial.logoCardTestId}
+        {...testId(testimonial.logoCardTestId)}
         className="flex h-[120px] w-full items-center justify-center rounded-[var(--radius-4)] bg-[var(--color-background-subtle)]"
       >
         <Image
-          data-testid={testimonial.companyLogoTestId}
+          {...testId(testimonial.companyLogoTestId)}
           src={testimonial.logoSrc}
           alt=""
           width={200}
@@ -217,23 +249,23 @@ function TestimonialBlockMobile({ testimonial }: { testimonial: SocialProofTesti
           style={RESPONSIVE_IMAGE_DIMENSION_STYLE}
         />
       </div>
-      <blockquote data-testid={testimonial.quoteTestId} className={SOCIAL_PROOF_QUOTE_MOBILE_CLASS}>
+      <blockquote {...testId(testimonial.quoteTestId)} className={SOCIAL_PROOF_QUOTE_MOBILE_CLASS}>
         {testimonial.quote}
       </blockquote>
-      <div data-testid={testimonial.authorTestId} className="flex flex-row items-start gap-[var(--spacing-12)]">
+      <div {...testId(testimonial.authorTestId)} className="flex flex-row items-start gap-[var(--spacing-12)]">
         <TestimonialAvatar
-          avatarTestId={testimonial.avatarTestId}
-          initialsTestId={testimonial.initialsTestId}
+          avatarTestId={includeTestIds ? testimonial.avatarTestId : undefined}
+          initialsTestId={includeTestIds ? testimonial.initialsTestId : undefined}
           initials={testimonial.initials}
         />
         <div className="flex flex-col gap-[var(--spacing-4)]">
-          <p data-testid={testimonial.nameTestId} className={SOCIAL_PROOF_AUTHOR_NAME_CLASS}>
+          <p {...testId(testimonial.nameTestId)} className={SOCIAL_PROOF_AUTHOR_NAME_MOBILE_CLASS}>
             {testimonial.name}
           </p>
-          <p data-testid={testimonial.roleTestId} className={SOCIAL_PROOF_AUTHOR_ROLE_CLASS}>
+          <p {...testId(testimonial.roleTestId)} className={SOCIAL_PROOF_AUTHOR_ROLE_MOBILE_CLASS}>
             {testimonial.role}
           </p>
-          <p data-testid={testimonial.companyTestId} className={SOCIAL_PROOF_AUTHOR_COMPANY_CLASS}>
+          <p {...testId(testimonial.companyTestId)} className={SOCIAL_PROOF_AUTHOR_COMPANY_MOBILE_CLASS}>
             {testimonial.company}
           </p>
         </div>
@@ -251,63 +283,88 @@ function SlideProgressBar({
   n2TestId,
   n3TestId,
   activeSlide,
+  fillPercent,
+  progressDurationMs,
+  progressTransitionEnabled = true,
   onSelectSlide,
-}: {
-  testId: string;
-  trackTestId: string;
-  fillTestId: string;
-  numbersTestId: string;
-  n1TestId: string;
-  n2TestId: string;
-  n3TestId: string;
-  activeSlide: number;
-  onSelectSlide: (index: number) => void;
-}) {
+  variant = 'desktop',
+}: SocialProofSlideProgressBarProps) {
   const numberTestIds = [n1TestId, n2TestId, n3TestId] as const;
+  const numbersClass =
+    variant === 'mobile'
+      ? SOCIAL_PROOF_PROGRESS_NUMBERS_MOBILE_CLASS
+      : SOCIAL_PROOF_PROGRESS_NUMBERS_DESKTOP_CLASS;
+  const indicatorSlide = Math.min(
+    Math.max(activeSlide, 0),
+    SOCIAL_PROOF_SLIDE_COUNT - 1,
+  );
+
+  const handleTrackClick = (event: MouseEvent<HTMLDivElement>) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    if (bounds.width <= 0) return;
+    const ratio = (event.clientX - bounds.left) / bounds.width;
+    const nextSlide = Math.min(
+      SOCIAL_PROOF_SLIDE_COUNT - 1,
+      Math.max(0, Math.floor(ratio * SOCIAL_PROOF_SLIDE_COUNT)),
+    );
+    onSelectSlide(nextSlide);
+  };
 
   return (
-    <div data-testid={testId} className="flex w-full flex-row items-center gap-[var(--spacing-20)]">
-      <div className="relative h-[var(--spacing-4)] min-w-0 flex-1">
+    <div data-testid={testId} className={SOCIAL_PROOF_PROGRESS_SHELL_CLASS}>
+      <div
+        className={SOCIAL_PROOF_PROGRESS_TRACK_SHELL_CLASS}
+        onClick={handleTrackClick}
+        role="progressbar"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={Math.round(fillPercent)}
+        aria-label="Testimonial carousel progress"
+      >
         <div
           data-testid={trackTestId}
-          className="absolute inset-0 rounded-full bg-[var(--color-border-default)]"
+          className={SOCIAL_PROOF_PROGRESS_TRACK_CLASS}
           aria-hidden="true"
         />
         <div
           data-testid={fillTestId}
-          className="absolute left-0 top-0 h-full rounded-full bg-[var(--color-border-brand-navy)]"
+          className={SOCIAL_PROOF_PROGRESS_FILL_CLASS}
           style={{
-            ...SOCIAL_PROOF_CAROUSEL_TRANSITION_STYLE,
-            transitionProperty: 'width',
-            width: SOCIAL_PROOF_SLIDE_FILL_PERCENT[activeSlide],
+            width: `${fillPercent}%`,
+            transitionProperty: progressTransitionEnabled ? 'width' : 'none',
+            transitionDuration: progressTransitionEnabled ? `${progressDurationMs}ms` : '0ms',
+            transitionTimingFunction: 'var(--motion-easing-default)',
           }}
           aria-hidden="true"
         />
       </div>
       <div
         data-testid={numbersTestId}
-        className="flex shrink-0 flex-row items-center gap-[var(--spacing-20)] text-body-desktop-xs"
+        className={numbersClass}
         role="tablist"
         aria-label="Testimonial slides"
       >
-        {numberTestIds.map((numberTestId, index) => (
-          <button
-            key={numberTestId}
-            type="button"
-            data-testid={numberTestId}
-            role="tab"
-            aria-selected={activeSlide === index}
-            aria-label={`Show testimonial slide ${index + 1}`}
-            onClick={() => onSelectSlide(index)}
-            className={
-              activeSlide === index
-                ? 'text-[var(--color-text-brand-navy)]'
-                : 'text-[var(--color-text-muted)]'
-            }
-          >
-            {index + 1}
-          </button>
-        ))}
+        {numberTestIds.map((numberTestId, index) => {
+          const isActive = indicatorSlide === index;
+          return (
+            <button
+              key={numberTestId}
+              type="button"
+              data-testid={numberTestId}
+              role="tab"
+              aria-selected={isActive}
+              aria-label={`Show testimonial slide ${index + 1}`}
+              onClick={() => onSelectSlide(index)}
+              className={
+                isActive
+                  ? SOCIAL_PROOF_PROGRESS_NUMBER_ACTIVE_CLASS
+                  : SOCIAL_PROOF_PROGRESS_NUMBER_INACTIVE_CLASS
+              }
+            >
+              {index + 1}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
@@ -326,7 +383,7 @@ function scrollMobileTrackToSlide(
     getComputedStyle(track).columnGap || getComputedStyle(track).gap || '16',
     10,
   );
-  const cardIndex = slideIndex >= SOCIAL_PROOF_SLIDE_COUNT - 1 ? 0 : Math.min(slideIndex, track.children.length - 1);
+  const cardIndex = Math.min(Math.max(slideIndex, 0), track.children.length - 1);
 
   track.scrollTo({
     left: cardIndex * (cardWidth + gap),
@@ -361,7 +418,11 @@ function IntegrationsStrip({
     >
       <p
         data-testid={taglineTestId}
-        className={`text-center ${SOCIAL_PROOF_INTEGRATIONS_TAGLINE_CLASS}`}
+        className={`text-center ${
+          isMobile
+            ? SOCIAL_PROOF_INTEGRATIONS_TAGLINE_MOBILE_CLASS
+            : SOCIAL_PROOF_INTEGRATIONS_TAGLINE_CLASS
+        }`}
         style={getMotionSlideRevealStyle(taglineRevealed, SOCIAL_PROOF_MOTION_STYLE)}
       >
         {SOCIAL_PROOF_INTEGRATIONS_TAGLINE}
@@ -412,6 +473,9 @@ export function SocialProofTestimonialDesktopBlock({
 export function SocialProofSection() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [carouselTransitionEnabled, setCarouselTransitionEnabled] = useState(true);
+  const [progressTransitionEnabled, setProgressTransitionEnabled] = useState(false);
+  const [fillPercent, setFillPercent] = useState(getSocialProofSlideFillEndPercent(0));
+  const [progressDurationMs, setProgressDurationMs] = useState(0);
   const [testimonialsMotionActive, setTestimonialsMotionActive] = useState(false);
   const [clientsMotionStep, setClientsMotionStep] = useState<SocialProofClientsMotionStep>(-1);
 
@@ -420,6 +484,7 @@ export function SocialProofSection() {
   const carouselAutoPausedRef = useRef(false);
   const autoAdvanceTimerRef = useRef<number | null>(null);
   const isScrollingFromStateRef = useRef(false);
+  const progressFrameRef = useRef<number | null>(null);
 
   const desktopOffset = activeSlide * SOCIAL_PROOF_DESKTOP_SLIDE_STEP_PX;
 
@@ -429,6 +494,64 @@ export function SocialProofSection() {
       autoAdvanceTimerRef.current = null;
     }
   };
+
+  const clearProgressFrame = () => {
+    if (progressFrameRef.current !== null) {
+      window.cancelAnimationFrame(progressFrameRef.current);
+      progressFrameRef.current = null;
+    }
+  };
+
+  const runSlideProgress = useCallback((slideIndex: number, durationMs: number, fromSegmentStart: boolean) => {
+    clearProgressFrame();
+    const start = getSocialProofSlideFillStartPercent(slideIndex);
+    const end = getSocialProofSlideFillEndPercent(slideIndex);
+
+    if (fromSegmentStart) {
+      setProgressTransitionEnabled(false);
+      setProgressDurationMs(0);
+      setFillPercent(start);
+      progressFrameRef.current = window.requestAnimationFrame(() => {
+        progressFrameRef.current = window.requestAnimationFrame(() => {
+          progressFrameRef.current = null;
+          setProgressDurationMs(durationMs);
+          setProgressTransitionEnabled(true);
+          setFillPercent(end);
+        });
+      });
+      return;
+    }
+
+    setProgressDurationMs(durationMs);
+    setProgressTransitionEnabled(true);
+    setFillPercent(end);
+  }, []);
+
+  const snapCarouselToStart = useCallback(() => {
+    clearProgressFrame();
+    setCarouselTransitionEnabled(false);
+    setProgressTransitionEnabled(false);
+    setProgressDurationMs(0);
+    setFillPercent(0);
+    setActiveSlide(0);
+    isScrollingFromStateRef.current = true;
+    const track = mobileScrollRef.current;
+    if (track) {
+      track.scrollTo({ left: 0, behavior: 'auto' });
+    }
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setCarouselTransitionEnabled(true);
+        isScrollingFromStateRef.current = false;
+        const autoplaying = carouselStartedRef.current && !carouselAutoPausedRef.current;
+        runSlideProgress(
+          0,
+          autoplaying ? getSocialProofCarouselAdvanceMs() : getSocialProofCarouselSlideMs(),
+          true,
+        );
+      });
+    });
+  }, [runSlideProgress]);
 
   const goToSlide = useCallback((index: number) => {
     const nextSlide = ((index % SOCIAL_PROOF_SLIDE_COUNT) + SOCIAL_PROOF_SLIDE_COUNT) % SOCIAL_PROOF_SLIDE_COUNT;
@@ -476,21 +599,27 @@ export function SocialProofSection() {
       carouselAutoPausedRef.current = true;
       clearAutoAdvance();
       goToSlide(index);
+      runSlideProgress(index, getSocialProofCarouselSlideMs(), false);
     },
-    [goToSlide],
+    [goToSlide, runSlideProgress],
   );
 
-  const handleDesktopTransitionEnd = useCallback(() => {
-    if (activeSlide !== SOCIAL_PROOF_SLIDE_COUNT - 1) return;
+  const handleDesktopTransitionEnd = useCallback(
+    (event: TransitionEvent<HTMLDivElement>) => {
+      if (event.target !== event.currentTarget) return;
+      if (event.propertyName !== 'transform') return;
+      if (activeSlide !== SOCIAL_PROOF_SLIDE_COUNT - 1) return;
 
-    setCarouselTransitionEnabled(false);
-    setActiveSlide(0);
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        setCarouselTransitionEnabled(true);
-      });
-    });
-  }, [activeSlide]);
+      const pauseMs = Math.max(
+        getSocialProofCarouselAdvanceMs() - getSocialProofCarouselSlideMs(),
+        0,
+      );
+      window.setTimeout(() => {
+        snapCarouselToStart();
+      }, pauseMs);
+    },
+    [activeSlide, snapCarouselToStart],
+  );
 
   useEffect(() => {
     clearAutoAdvance();
@@ -500,8 +629,17 @@ export function SocialProofSection() {
       carouselAutoPausedRef.current ||
       activeSlide >= SOCIAL_PROOF_SLIDE_COUNT - 1
     ) {
+      if (
+        carouselStartedRef.current &&
+        !carouselAutoPausedRef.current &&
+        activeSlide === SOCIAL_PROOF_SLIDE_COUNT - 1
+      ) {
+        runSlideProgress(activeSlide, getSocialProofCarouselAdvanceMs(), true);
+      }
       return undefined;
     }
+
+    runSlideProgress(activeSlide, getSocialProofCarouselAdvanceMs(), true);
 
     const stepMs = getSocialProofCarouselAdvanceMs();
 
@@ -510,10 +648,13 @@ export function SocialProofSection() {
       goToSlide(activeSlide + 1);
     }, stepMs);
 
-    return clearAutoAdvance;
-  }, [activeSlide, goToSlide]);
+    return () => {
+      clearAutoAdvance();
+      clearProgressFrame();
+    };
+  }, [activeSlide, goToSlide, runSlideProgress]);
 
-  const handleMobileScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {
+  const handleMobileScroll = useCallback((event: UIEvent<HTMLDivElement>) => {
     if (isScrollingFromStateRef.current) return;
 
     const track = event.currentTarget;
@@ -525,10 +666,16 @@ export function SocialProofSection() {
       getComputedStyle(track).columnGap || getComputedStyle(track).gap || '16',
       10,
     );
-    const index = Math.round(track.scrollLeft / (cardWidth + gap));
-    const nextSlide = Math.min(index, SOCIAL_PROOF_SLIDE_COUNT - 1);
-    setActiveSlide((current) => (current === nextSlide ? current : nextSlide));
-  }, []);
+    const step = cardWidth + gap;
+    const index = Math.round(track.scrollLeft / step);
+    const nextSlide = Math.min(Math.max(index, 0), SOCIAL_PROOF_SLIDE_COUNT - 1);
+
+    setActiveSlide((current) => {
+      if (current === nextSlide) return current;
+      runSlideProgress(nextSlide, getSocialProofCarouselSlideMs(), false);
+      return nextSlide;
+    });
+  }, [runSlideProgress]);
 
   return (
     <section
@@ -632,7 +779,10 @@ export function SocialProofSection() {
                       n2TestId={sp.n2}
                       n3TestId={sp.n3}
                       activeSlide={activeSlide}
+                      fillPercent={fillPercent}
+                      progressDurationMs={progressDurationMs}
                       onSelectSlide={selectSlideManually}
+                      progressTransitionEnabled={progressTransitionEnabled}
                     />
                   </div>
                 </div>
@@ -675,7 +825,7 @@ export function SocialProofSection() {
                   {SOCIAL_PROOF_HEADING_LINE2}
                 </span>
               </h2>
-              <p data-testid={spMobile.paragraph} className={LANDING_SECTION_SUBTITLE_CLASS}>
+              <p data-testid={spMobile.paragraph} className={LANDING_SECTION_SUBTITLE_MOBILE_CLASS}>
                 {SOCIAL_PROOF_SECTION_SUBTITLE}
               </p>
             </div>
@@ -687,8 +837,12 @@ export function SocialProofSection() {
             className="flex w-full snap-x snap-mandatory flex-row gap-[var(--spacing-16)] overflow-x-auto px-[var(--spacing-16)] [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             onScroll={handleMobileScroll}
           >
-            {SOCIAL_PROOF_MOBILE_TESTIMONIALS.map((testimonial) => (
-              <TestimonialBlockMobile key={testimonial.blockTestId} testimonial={testimonial} />
+            {SOCIAL_PROOF_MOBILE_TRACK.map((testimonial, index) => (
+              <TestimonialBlockMobile
+                key={`${testimonial.blockTestId}-${index}`}
+                testimonial={testimonial}
+                includeTestIds={index < SOCIAL_PROOF_MOBILE_TESTIMONIALS.length}
+              />
             ))}
           </div>
 
@@ -712,7 +866,11 @@ export function SocialProofSection() {
               n2TestId={spMobile.n2}
               n3TestId={spMobile.n3}
               activeSlide={activeSlide}
+              fillPercent={fillPercent}
+              progressDurationMs={progressDurationMs}
               onSelectSlide={selectSlideManually}
+              progressTransitionEnabled={progressTransitionEnabled}
+              variant="mobile"
             />
           </div>
         </div>

@@ -75,12 +75,21 @@ function HeroHeadingMobile({ layout = 'default' }: { layout?: 'default' | 'hiw-p
   );
 }
 
-function HeroSubheading({ layout = 'default' }: { layout?: 'default' | 'hiw-page' }) {
+function HeroSubheading({
+  layout = 'default',
+  variant = 'desktop',
+}: {
+  layout?: 'default' | 'hiw-page';
+  variant?: 'desktop' | 'mobile';
+}) {
+  const typeClass =
+    variant === 'mobile' ? 'text-body-mobile-md' : 'text-body-desktop-md';
+
   if (layout === 'hiw-page') {
     return (
       <p
         data-testid={ids.component.landing.hero.subheading}
-        className="text-body-desktop-md text-[var(--color-text-secondary)]"
+        className={`${typeClass} text-[var(--color-text-secondary)]`}
       >
         {HIW_HERO_SUBCOPY}
       </p>
@@ -90,7 +99,7 @@ function HeroSubheading({ layout = 'default' }: { layout?: 'default' | 'hiw-page
   return (
     <p
       data-testid={ids.component.landing.hero.subheading}
-      className="text-body-desktop-md text-[var(--color-text-secondary)]"
+      className={`${typeClass} text-[var(--color-text-primary)]`}
     >
       MaqsoodTravel gives IATA-certified travel agencies a fully branded booking platform.
       Multi-source search across Sabre, Amadeus and Travelport, zero per-booking fees, and
@@ -99,12 +108,15 @@ function HeroSubheading({ layout = 'default' }: { layout?: 'default' | 'hiw-page
   );
 }
 
-function HeroSecondaryCta() {
+function HeroSecondaryCta({ variant = 'desktop' }: { variant?: 'desktop' | 'mobile' }) {
+  const typeClass =
+    variant === 'mobile' ? 'text-label-mobile-lg' : 'text-label-desktop-lg';
+
   return (
     <Link
       href="#pricing"
       data-testid={ids.component.landing.hero.secondaryCta}
-      className="inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-6)] border border-[var(--color-border-brand-navy)] bg-[var(--color-background-page)] px-[var(--spacing-28)] py-[var(--spacing-12)] text-label-desktop-lg text-[var(--color-action-secondary-default-label)] transition-colors hover:bg-[var(--color-action-secondary-hover-background)] hover:text-[var(--color-action-secondary-hover-label)] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]"
+      className={`inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-6)] border border-[var(--color-border-brand-navy)] bg-[var(--color-background-page)] px-[var(--spacing-28)] py-[var(--spacing-12)] ${typeClass} text-[var(--color-action-secondary-default-label)] transition-colors hover:bg-[var(--color-action-secondary-hover-background)] hover:text-[var(--color-action-secondary-hover-label)] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]`}
     >
       <span data-testid={ids.component.landing.hero.secondaryCtaLabel}>View Pricing</span>
       <Image
@@ -122,16 +134,22 @@ function HeroSecondaryCta() {
 function HeroProofLine({
   className = '',
   layout = 'default',
-}: HeroOptionalClassNameProps & { layout?: 'default' | 'hiw-page' }) {
+  variant = 'desktop',
+}: HeroOptionalClassNameProps & {
+  layout?: 'default' | 'hiw-page';
+  variant?: 'desktop' | 'mobile';
+}) {
   const copy =
     layout === 'hiw-page'
       ? HIW_HERO_PROOF_LINE
       : 'Agencies save an average of $1,200/month in platform fee within their first month of going live.';
+  const typeClass =
+    variant === 'mobile' ? 'text-body-mobile-xs' : 'text-body-desktop-xs';
 
   return (
     <p
       data-testid={ids.component.landing.hero.proofLine}
-      className={`text-body-desktop-xs text-[var(--color-text-secondary)] ${className}`}
+      className={`${typeClass} text-[var(--color-text-muted)] ${className}`}
     >
       {copy}
     </p>
@@ -178,7 +196,7 @@ function HeroStatsDesktop() {
           className="flex flex-col items-center justify-center gap-[var(--spacing-12)] px-[var(--spacing-12)] text-center"
         >
           <div className="flex flex-col items-center gap-[var(--spacing-6)]">
-            <span className="text-display-desktop-stat text-[var(--color-text-primary)]">
+            <span className="text-display-desktop-stat text-[var(--color-text-brand-navy)]">
               {stat.value}
             </span>
             <StatBar />
@@ -210,12 +228,12 @@ function HeroStatsMobile() {
           className="flex flex-col items-center justify-center gap-[var(--spacing-8)] text-center"
         >
           <div className="flex flex-col items-center gap-[var(--spacing-6)]">
-            <span className="text-display-mobile-stat text-[var(--color-text-primary)]">
+            <span className="text-display-mobile-stat text-[var(--color-text-brand-navy)]">
               {stat.value}
             </span>
             <StatBar />
           </div>
-          <span className="text-label-desktop-md-stat uppercase text-[var(--color-text-primary)]">
+          <span className="text-label-mobile-md-stat uppercase text-[var(--color-text-primary)]">
             {stat.label}
           </span>
         </div>
@@ -243,7 +261,7 @@ function HeroLogosStrip() {
                   className="h-[var(--font-lineheight-22)] w-px shrink-0 bg-[var(--color-border-default)]"
                 />
               ) : null}
-              <span className="text-label-desktop-nav-link font-bold text-[var(--color-text-muted)] min-[1440px]:text-heading-desktop-h4 min-[1440px]:font-bold">
+              <span className="text-label-mobile-lg text-[var(--color-text-muted)] min-[1440px]:text-heading-desktop-h4">
                 {name}
               </span>
             </div>
@@ -418,7 +436,7 @@ export function HeroSection({ layout = 'default' }: HeroSectionProps) {
               className="flex flex-col gap-[var(--spacing-8)]"
             >
               <HeroHeadingMobile layout={layout} />
-              <HeroSubheading layout={layout} />
+              <HeroSubheading layout={layout} variant="mobile" />
             </div>
             <div data-testid={hero.ctaGroup} className="flex flex-col gap-[var(--spacing-12)]">
               <div
@@ -432,11 +450,12 @@ export function HeroSection({ layout = 'default' }: HeroSectionProps) {
                   graphicTestId={hero.ctaGraphic}
                   href="/contact"
                   label={primaryCtaLabel}
+                  typography="mobile"
                   className="w-full justify-center sm:w-auto"
                 />
-                {isHiwPage ? null : <HeroSecondaryCta />}
+                {isHiwPage ? null : <HeroSecondaryCta variant="mobile" />}
               </div>
-              <HeroProofLine layout={layout} />
+              <HeroProofLine layout={layout} variant="mobile" />
             </div>
           </div>
           {isHiwPage ? null : (

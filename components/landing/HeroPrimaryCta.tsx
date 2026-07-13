@@ -16,9 +16,12 @@ export function HeroPrimaryCta({
   className = '',
   emphasized,
   useHeroEasing = false,
+  typography = 'desktop',
 }: HeroPrimaryCtaProps) {
   const [localHovered, setLocalHovered] = useState(false);
   const isActive = emphasized ?? localHovered;
+  const typeClass =
+    typography === 'mobile' ? 'text-label-mobile-lg' : 'text-label-desktop-lg';
 
   return (
     <Link
@@ -31,7 +34,7 @@ export function HeroPrimaryCta({
         }
       }}
       className={[
-        'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-6)] px-[var(--spacing-32)] py-[var(--spacing-12)] text-label-desktop-lg transition-[background-color,color] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]',
+        `inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-6)] px-[var(--spacing-32)] py-[var(--spacing-12)] ${typeClass} transition-[background-color,color] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]`,
         className,
       ].join(' ')}
       style={{

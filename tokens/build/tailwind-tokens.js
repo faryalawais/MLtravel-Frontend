@@ -252,307 +252,358 @@ export default {
       "fontFamily": "var(--typography-display-desktop-pricing-xl-font-family)",
       "fontSize": "var(--typography-display-desktop-pricing-xl-font-size)",
       "fontWeight": "var(--typography-display-desktop-pricing-xl-font-weight)",
-      "lineHeight": "var(--typography-display-desktop-pricing-xl-line-height)"
+      "lineHeight": "var(--typography-display-desktop-pricing-xl-line-height)",
+      "letterSpacing": "var(--typography-display-desktop-pricing-xl-letter-spacing)"
     },
     "display-desktop-lg": {
       "fontFamily": "var(--typography-display-desktop-lg-font-family)",
       "fontSize": "var(--typography-display-desktop-lg-font-size)",
       "fontWeight": "var(--typography-display-desktop-lg-font-weight)",
-      "lineHeight": "var(--typography-display-desktop-lg-line-height)"
+      "lineHeight": "var(--typography-display-desktop-lg-line-height)",
+      "letterSpacing": "var(--typography-display-desktop-lg-letter-spacing)"
     },
     "display-desktop-stat": {
       "fontFamily": "var(--typography-display-desktop-stat-font-family)",
       "fontSize": "var(--typography-display-desktop-stat-font-size)",
       "fontWeight": "var(--typography-display-desktop-stat-font-weight)",
-      "lineHeight": "var(--typography-display-desktop-stat-line-height)"
+      "lineHeight": "var(--typography-display-desktop-stat-line-height)",
+      "letterSpacing": "var(--typography-display-desktop-stat-letter-spacing)"
     },
     "display-desktop-pricing-sm": {
       "fontFamily": "var(--typography-display-desktop-pricing-sm-font-family)",
       "fontSize": "var(--typography-display-desktop-pricing-sm-font-size)",
       "fontWeight": "var(--typography-display-desktop-pricing-sm-font-weight)",
-      "lineHeight": "var(--typography-display-desktop-pricing-sm-line-height)"
+      "lineHeight": "var(--typography-display-desktop-pricing-sm-line-height)",
+      "letterSpacing": "var(--typography-display-desktop-pricing-sm-letter-spacing)"
     },
     "display-mobile-lg": {
       "fontFamily": "var(--typography-display-mobile-lg-font-family)",
       "fontSize": "var(--typography-display-mobile-lg-font-size)",
       "fontWeight": "var(--typography-display-mobile-lg-font-weight)",
-      "lineHeight": "var(--typography-display-mobile-lg-line-height)"
+      "lineHeight": "var(--typography-display-mobile-lg-line-height)",
+      "letterSpacing": "var(--typography-display-mobile-lg-letter-spacing)"
     },
     "display-mobile-stat": {
       "fontFamily": "var(--typography-display-mobile-stat-font-family)",
       "fontSize": "var(--typography-display-mobile-stat-font-size)",
       "fontWeight": "var(--typography-display-mobile-stat-font-weight)",
-      "lineHeight": "var(--typography-display-mobile-stat-line-height)"
+      "lineHeight": "var(--typography-display-mobile-stat-line-height)",
+      "letterSpacing": "var(--typography-display-mobile-stat-letter-spacing)"
     },
     "display-mobile-pricing-xl": {
       "fontFamily": "var(--typography-display-mobile-pricing-xl-font-family)",
       "fontSize": "var(--typography-display-mobile-pricing-xl-font-size)",
       "fontWeight": "var(--typography-display-mobile-pricing-xl-font-weight)",
-      "lineHeight": "var(--typography-display-mobile-pricing-xl-line-height)"
+      "lineHeight": "var(--typography-display-mobile-pricing-xl-line-height)",
+      "letterSpacing": "var(--typography-display-mobile-pricing-xl-letter-spacing)"
     },
     "display-mobile-pricing-sm": {
       "fontFamily": "var(--typography-display-mobile-pricing-sm-font-family)",
       "fontSize": "var(--typography-display-mobile-pricing-sm-font-size)",
       "fontWeight": "var(--typography-display-mobile-pricing-sm-font-weight)",
-      "lineHeight": "var(--typography-display-mobile-pricing-sm-line-height)"
+      "lineHeight": "var(--typography-display-mobile-pricing-sm-line-height)",
+      "letterSpacing": "var(--typography-display-mobile-pricing-sm-letter-spacing)"
     },
     "heading-desktop-h1": {
       "fontFamily": "var(--typography-heading-desktop-h1-font-family)",
       "fontSize": "var(--typography-heading-desktop-h1-font-size)",
       "fontWeight": "var(--typography-heading-desktop-h1-font-weight)",
-      "lineHeight": "var(--typography-heading-desktop-h1-line-height)"
+      "lineHeight": "var(--typography-heading-desktop-h1-line-height)",
+      "letterSpacing": "var(--typography-heading-desktop-h1-letter-spacing)"
     },
     "heading-desktop-h2": {
       "fontFamily": "var(--typography-heading-desktop-h2-font-family)",
       "fontSize": "var(--typography-heading-desktop-h2-font-size)",
       "fontWeight": "var(--typography-heading-desktop-h2-font-weight)",
-      "lineHeight": "var(--typography-heading-desktop-h2-line-height)"
+      "lineHeight": "var(--typography-heading-desktop-h2-line-height)",
+      "letterSpacing": "var(--typography-heading-desktop-h2-letter-spacing)"
     },
     "heading-desktop-h3-sm": {
       "fontFamily": "var(--typography-heading-desktop-h3-sm-font-family)",
       "fontSize": "var(--typography-heading-desktop-h3-sm-font-size)",
       "fontWeight": "var(--typography-heading-desktop-h3-sm-font-weight)",
-      "lineHeight": "var(--typography-heading-desktop-h3-sm-line-height)"
+      "lineHeight": "var(--typography-heading-desktop-h3-sm-line-height)",
+      "letterSpacing": "var(--typography-heading-desktop-h3-sm-letter-spacing)"
     },
     "heading-desktop-h4": {
       "fontFamily": "var(--typography-heading-desktop-h4-font-family)",
       "fontSize": "var(--typography-heading-desktop-h4-font-size)",
       "fontWeight": "var(--typography-heading-desktop-h4-font-weight)",
-      "lineHeight": "var(--typography-heading-desktop-h4-line-height)"
+      "lineHeight": "var(--typography-heading-desktop-h4-line-height)",
+      "letterSpacing": "var(--typography-heading-desktop-h4-letter-spacing)"
     },
     "heading-desktop-h1-hero": {
       "fontFamily": "var(--typography-heading-desktop-h1-hero-font-family)",
       "fontSize": "var(--typography-heading-desktop-h1-hero-font-size)",
       "fontWeight": "var(--typography-heading-desktop-h1-hero-font-weight)",
-      "lineHeight": "var(--typography-heading-desktop-h1-hero-line-height)"
+      "lineHeight": "var(--typography-heading-desktop-h1-hero-line-height)",
+      "letterSpacing": "var(--typography-heading-desktop-h1-hero-letter-spacing)"
     },
     "heading-desktop-h4-feature": {
       "fontFamily": "var(--typography-heading-desktop-h4-feature-font-family)",
       "fontSize": "var(--typography-heading-desktop-h4-feature-font-size)",
       "fontWeight": "var(--typography-heading-desktop-h4-feature-font-weight)",
-      "lineHeight": "var(--typography-heading-desktop-h4-feature-line-height)"
+      "lineHeight": "var(--typography-heading-desktop-h4-feature-line-height)",
+      "letterSpacing": "var(--typography-heading-desktop-h4-feature-letter-spacing)"
     },
     "heading-mobile-h1": {
       "fontFamily": "var(--typography-heading-mobile-h1-font-family)",
       "fontSize": "var(--typography-heading-mobile-h1-font-size)",
       "fontWeight": "var(--typography-heading-mobile-h1-font-weight)",
-      "lineHeight": "var(--typography-heading-mobile-h1-line-height)"
+      "lineHeight": "var(--typography-heading-mobile-h1-line-height)",
+      "letterSpacing": "var(--typography-heading-mobile-h1-letter-spacing)"
     },
     "heading-mobile-h2": {
       "fontFamily": "var(--typography-heading-mobile-h2-font-family)",
       "fontSize": "var(--typography-heading-mobile-h2-font-size)",
       "fontWeight": "var(--typography-heading-mobile-h2-font-weight)",
-      "lineHeight": "var(--typography-heading-mobile-h2-line-height)"
+      "lineHeight": "var(--typography-heading-mobile-h2-line-height)",
+      "letterSpacing": "var(--typography-heading-mobile-h2-letter-spacing)"
     },
     "heading-mobile-h3-sm": {
       "fontFamily": "var(--typography-heading-mobile-h3-sm-font-family)",
       "fontSize": "var(--typography-heading-mobile-h3-sm-font-size)",
       "fontWeight": "var(--typography-heading-mobile-h3-sm-font-weight)",
-      "lineHeight": "var(--typography-heading-mobile-h3-sm-line-height)"
+      "lineHeight": "var(--typography-heading-mobile-h3-sm-line-height)",
+      "letterSpacing": "var(--typography-heading-mobile-h3-sm-letter-spacing)"
     },
     "heading-mobile-h4": {
       "fontFamily": "var(--typography-heading-mobile-h4-font-family)",
       "fontSize": "var(--typography-heading-mobile-h4-font-size)",
       "fontWeight": "var(--typography-heading-mobile-h4-font-weight)",
-      "lineHeight": "var(--typography-heading-mobile-h4-line-height)"
+      "lineHeight": "var(--typography-heading-mobile-h4-line-height)",
+      "letterSpacing": "var(--typography-heading-mobile-h4-letter-spacing)"
     },
     "heading-mobile-h1-hero": {
       "fontFamily": "var(--typography-heading-mobile-h1-hero-font-family)",
       "fontSize": "var(--typography-heading-mobile-h1-hero-font-size)",
       "fontWeight": "var(--typography-heading-mobile-h1-hero-font-weight)",
-      "lineHeight": "var(--typography-heading-mobile-h1-hero-line-height)"
+      "lineHeight": "var(--typography-heading-mobile-h1-hero-line-height)",
+      "letterSpacing": "var(--typography-heading-mobile-h1-hero-letter-spacing)"
     },
     "heading-mobile-h4-feature": {
       "fontFamily": "var(--typography-heading-mobile-h4-feature-font-family)",
       "fontSize": "var(--typography-heading-mobile-h4-feature-font-size)",
       "fontWeight": "var(--typography-heading-mobile-h4-feature-font-weight)",
-      "lineHeight": "var(--typography-heading-mobile-h4-feature-line-height)"
+      "lineHeight": "var(--typography-heading-mobile-h4-feature-line-height)",
+      "letterSpacing": "var(--typography-heading-mobile-h4-feature-letter-spacing)"
     },
     "body-desktop-md": {
       "fontFamily": "var(--typography-body-desktop-md-font-family)",
       "fontSize": "var(--typography-body-desktop-md-font-size)",
       "fontWeight": "var(--typography-body-desktop-md-font-weight)",
-      "lineHeight": "var(--typography-body-desktop-md-line-height)"
+      "lineHeight": "var(--typography-body-desktop-md-line-height)",
+      "letterSpacing": "var(--typography-body-desktop-md-letter-spacing)"
     },
     "body-desktop-sm": {
       "fontFamily": "var(--typography-body-desktop-sm-font-family)",
       "fontSize": "var(--typography-body-desktop-sm-font-size)",
       "fontWeight": "var(--typography-body-desktop-sm-font-weight)",
-      "lineHeight": "var(--typography-body-desktop-sm-line-height)"
+      "lineHeight": "var(--typography-body-desktop-sm-line-height)",
+      "letterSpacing": "var(--typography-body-desktop-sm-letter-spacing)"
     },
     "body-desktop-xs": {
       "fontFamily": "var(--typography-body-desktop-xs-font-family)",
       "fontSize": "var(--typography-body-desktop-xs-font-size)",
       "fontWeight": "var(--typography-body-desktop-xs-font-weight)",
-      "lineHeight": "var(--typography-body-desktop-xs-line-height)"
+      "lineHeight": "var(--typography-body-desktop-xs-line-height)",
+      "letterSpacing": "var(--typography-body-desktop-xs-letter-spacing)"
     },
     "body-desktop-testimonial": {
       "fontFamily": "var(--typography-body-desktop-testimonial-font-family)",
       "fontSize": "var(--typography-body-desktop-testimonial-font-size)",
       "fontWeight": "var(--typography-body-desktop-testimonial-font-weight)",
-      "lineHeight": "var(--typography-body-desktop-testimonial-line-height)"
+      "lineHeight": "var(--typography-body-desktop-testimonial-line-height)",
+      "letterSpacing": "var(--typography-body-desktop-testimonial-letter-spacing)"
     },
     "body-desktop-xs-sm": {
       "fontFamily": "var(--typography-body-desktop-xs-sm-font-family)",
       "fontSize": "var(--typography-body-desktop-xs-sm-font-size)",
       "fontWeight": "var(--typography-body-desktop-xs-sm-font-weight)",
-      "lineHeight": "var(--typography-body-desktop-xs-sm-line-height)"
+      "lineHeight": "var(--typography-body-desktop-xs-sm-line-height)",
+      "letterSpacing": "var(--typography-body-desktop-xs-sm-letter-spacing)"
     },
     "body-mobile-md": {
       "fontFamily": "var(--typography-body-mobile-md-font-family)",
       "fontSize": "var(--typography-body-mobile-md-font-size)",
       "fontWeight": "var(--typography-body-mobile-md-font-weight)",
-      "lineHeight": "var(--typography-body-mobile-md-line-height)"
+      "lineHeight": "var(--typography-body-mobile-md-line-height)",
+      "letterSpacing": "var(--typography-body-mobile-md-letter-spacing)"
     },
     "body-mobile-sm": {
       "fontFamily": "var(--typography-body-mobile-sm-font-family)",
       "fontSize": "var(--typography-body-mobile-sm-font-size)",
       "fontWeight": "var(--typography-body-mobile-sm-font-weight)",
-      "lineHeight": "var(--typography-body-mobile-sm-line-height)"
+      "lineHeight": "var(--typography-body-mobile-sm-line-height)",
+      "letterSpacing": "var(--typography-body-mobile-sm-letter-spacing)"
     },
     "body-mobile-xs": {
       "fontFamily": "var(--typography-body-mobile-xs-font-family)",
       "fontSize": "var(--typography-body-mobile-xs-font-size)",
       "fontWeight": "var(--typography-body-mobile-xs-font-weight)",
-      "lineHeight": "var(--typography-body-mobile-xs-line-height)"
+      "lineHeight": "var(--typography-body-mobile-xs-line-height)",
+      "letterSpacing": "var(--typography-body-mobile-xs-letter-spacing)"
     },
     "body-mobile-testimonial": {
       "fontFamily": "var(--typography-body-mobile-testimonial-font-family)",
       "fontSize": "var(--typography-body-mobile-testimonial-font-size)",
       "fontWeight": "var(--typography-body-mobile-testimonial-font-weight)",
-      "lineHeight": "var(--typography-body-mobile-testimonial-line-height)"
+      "lineHeight": "var(--typography-body-mobile-testimonial-line-height)",
+      "letterSpacing": "var(--typography-body-mobile-testimonial-letter-spacing)"
     },
     "body-mobile-xs-sm": {
       "fontFamily": "var(--typography-body-mobile-xs-sm-font-family)",
       "fontSize": "var(--typography-body-mobile-xs-sm-font-size)",
       "fontWeight": "var(--typography-body-mobile-xs-sm-font-weight)",
-      "lineHeight": "var(--typography-body-mobile-xs-sm-line-height)"
+      "lineHeight": "var(--typography-body-mobile-xs-sm-line-height)",
+      "letterSpacing": "var(--typography-body-mobile-xs-sm-letter-spacing)"
     },
     "label-desktop-nav-link": {
       "fontFamily": "var(--typography-label-desktop-nav-link-font-family)",
       "fontSize": "var(--typography-label-desktop-nav-link-font-size)",
       "fontWeight": "var(--typography-label-desktop-nav-link-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-nav-link-line-height)"
+      "lineHeight": "var(--typography-label-desktop-nav-link-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-nav-link-letter-spacing)"
     },
     "label-desktop-lg": {
       "fontFamily": "var(--typography-label-desktop-lg-font-family)",
       "fontSize": "var(--typography-label-desktop-lg-font-size)",
       "fontWeight": "var(--typography-label-desktop-lg-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-lg-line-height)"
+      "lineHeight": "var(--typography-label-desktop-lg-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-lg-letter-spacing)"
     },
     "label-desktop-md-tag": {
       "fontFamily": "var(--typography-label-desktop-md-tag-font-family)",
       "fontSize": "var(--typography-label-desktop-md-tag-font-size)",
       "fontWeight": "var(--typography-label-desktop-md-tag-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-md-tag-line-height)"
+      "lineHeight": "var(--typography-label-desktop-md-tag-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-md-tag-letter-spacing)"
     },
     "label-desktop-xs-semibold": {
       "fontFamily": "var(--typography-label-desktop-xs-semibold-font-family)",
       "fontSize": "var(--typography-label-desktop-xs-semibold-font-size)",
       "fontWeight": "var(--typography-label-desktop-xs-semibold-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-xs-semibold-line-height)"
+      "lineHeight": "var(--typography-label-desktop-xs-semibold-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-xs-semibold-letter-spacing)"
     },
     "label-desktop-xs-medium": {
       "fontFamily": "var(--typography-label-desktop-xs-medium-font-family)",
       "fontSize": "var(--typography-label-desktop-xs-medium-font-size)",
       "fontWeight": "var(--typography-label-desktop-xs-medium-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-xs-medium-line-height)"
+      "lineHeight": "var(--typography-label-desktop-xs-medium-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-xs-medium-letter-spacing)"
     },
     "label-desktop-md-stat": {
       "fontFamily": "var(--typography-label-desktop-md-stat-font-family)",
       "fontSize": "var(--typography-label-desktop-md-stat-font-size)",
       "fontWeight": "var(--typography-label-desktop-md-stat-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-md-stat-line-height)"
+      "lineHeight": "var(--typography-label-desktop-md-stat-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-md-stat-letter-spacing)"
     },
     "label-desktop-stamp": {
       "fontFamily": "var(--typography-label-desktop-stamp-font-family)",
       "fontSize": "var(--typography-label-desktop-stamp-font-size)",
       "fontWeight": "var(--typography-label-desktop-stamp-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-stamp-line-height)"
+      "lineHeight": "var(--typography-label-desktop-stamp-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-stamp-letter-spacing)"
     },
     "label-desktop-micro-tag": {
       "fontFamily": "var(--typography-label-desktop-micro-tag-font-family)",
       "fontSize": "var(--typography-label-desktop-micro-tag-font-size)",
       "fontWeight": "var(--typography-label-desktop-micro-tag-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-micro-tag-line-height)"
+      "lineHeight": "var(--typography-label-desktop-micro-tag-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-micro-tag-letter-spacing)"
     },
     "label-desktop-sm-semibold": {
       "fontFamily": "var(--typography-label-desktop-sm-semibold-font-family)",
       "fontSize": "var(--typography-label-desktop-sm-semibold-font-size)",
       "fontWeight": "var(--typography-label-desktop-sm-semibold-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-sm-semibold-line-height)"
+      "lineHeight": "var(--typography-label-desktop-sm-semibold-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-sm-semibold-letter-spacing)"
     },
     "label-desktop-sub": {
       "fontFamily": "var(--typography-label-desktop-sub-font-family)",
       "fontSize": "var(--typography-label-desktop-sub-font-size)",
       "fontWeight": "var(--typography-label-desktop-sub-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-sub-line-height)"
+      "lineHeight": "var(--typography-label-desktop-sub-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-sub-letter-spacing)"
     },
     "label-desktop-hero-statlabel": {
       "fontFamily": "var(--typography-label-desktop-hero-statlabel-font-family)",
       "fontSize": "var(--typography-label-desktop-hero-statlabel-font-size)",
       "fontWeight": "var(--typography-label-desktop-hero-statlabel-font-weight)",
-      "lineHeight": "var(--typography-label-desktop-hero-statlabel-line-height)"
+      "lineHeight": "var(--typography-label-desktop-hero-statlabel-line-height)",
+      "letterSpacing": "var(--typography-label-desktop-hero-statlabel-letter-spacing)"
     },
     "label-mobile-lg": {
       "fontFamily": "var(--typography-label-mobile-lg-font-family)",
       "fontSize": "var(--typography-label-mobile-lg-font-size)",
       "fontWeight": "var(--typography-label-mobile-lg-font-weight)",
-      "lineHeight": "var(--typography-label-mobile-lg-line-height)"
+      "lineHeight": "var(--typography-label-mobile-lg-line-height)",
+      "letterSpacing": "var(--typography-label-mobile-lg-letter-spacing)"
     },
     "label-mobile-md-tag": {
       "fontFamily": "var(--typography-label-mobile-md-tag-font-family)",
       "fontSize": "var(--typography-label-mobile-md-tag-font-size)",
       "fontWeight": "var(--typography-label-mobile-md-tag-font-weight)",
-      "lineHeight": "var(--typography-label-mobile-md-tag-line-height)"
+      "lineHeight": "var(--typography-label-mobile-md-tag-line-height)",
+      "letterSpacing": "var(--typography-label-mobile-md-tag-letter-spacing)"
     },
     "label-mobile-xs-semibold": {
       "fontFamily": "var(--typography-label-mobile-xs-semibold-font-family)",
       "fontSize": "var(--typography-label-mobile-xs-semibold-font-size)",
       "fontWeight": "var(--typography-label-mobile-xs-semibold-font-weight)",
-      "lineHeight": "var(--typography-label-mobile-xs-semibold-line-height)"
+      "lineHeight": "var(--typography-label-mobile-xs-semibold-line-height)",
+      "letterSpacing": "var(--typography-label-mobile-xs-semibold-letter-spacing)"
     },
     "label-mobile-xs-medium": {
       "fontFamily": "var(--typography-label-mobile-xs-medium-font-family)",
       "fontSize": "var(--typography-label-mobile-xs-medium-font-size)",
       "fontWeight": "var(--typography-label-mobile-xs-medium-font-weight)",
-      "lineHeight": "var(--typography-label-mobile-xs-medium-line-height)"
+      "lineHeight": "var(--typography-label-mobile-xs-medium-line-height)",
+      "letterSpacing": "var(--typography-label-mobile-xs-medium-letter-spacing)"
     },
     "label-mobile-md-stat": {
       "fontFamily": "var(--typography-label-mobile-md-stat-font-family)",
       "fontSize": "var(--typography-label-mobile-md-stat-font-size)",
       "fontWeight": "var(--typography-label-mobile-md-stat-font-weight)",
-      "lineHeight": "var(--typography-label-mobile-md-stat-line-height)"
+      "lineHeight": "var(--typography-label-mobile-md-stat-line-height)",
+      "letterSpacing": "var(--typography-label-mobile-md-stat-letter-spacing)"
     },
     "label-mobile-stamp": {
       "fontFamily": "var(--typography-label-mobile-stamp-font-family)",
       "fontSize": "var(--typography-label-mobile-stamp-font-size)",
       "fontWeight": "var(--typography-label-mobile-stamp-font-weight)",
-      "lineHeight": "var(--typography-label-mobile-stamp-line-height)"
+      "lineHeight": "var(--typography-label-mobile-stamp-line-height)",
+      "letterSpacing": "var(--typography-label-mobile-stamp-letter-spacing)"
     },
     "label-mobile-micro-tag": {
       "fontFamily": "var(--typography-label-mobile-micro-tag-font-family)",
       "fontSize": "var(--typography-label-mobile-micro-tag-font-size)",
       "fontWeight": "var(--typography-label-mobile-micro-tag-font-weight)",
-      "lineHeight": "var(--typography-label-mobile-micro-tag-line-height)"
+      "lineHeight": "var(--typography-label-mobile-micro-tag-line-height)",
+      "letterSpacing": "var(--typography-label-mobile-micro-tag-letter-spacing)"
     },
     "label-mobile-sm-semibold": {
       "fontFamily": "var(--typography-label-mobile-sm-semibold-font-family)",
       "fontSize": "var(--typography-label-mobile-sm-semibold-font-size)",
       "fontWeight": "var(--typography-label-mobile-sm-semibold-font-weight)",
-      "lineHeight": "var(--typography-label-mobile-sm-semibold-line-height)"
+      "lineHeight": "var(--typography-label-mobile-sm-semibold-line-height)",
+      "letterSpacing": "var(--typography-label-mobile-sm-semibold-letter-spacing)"
     },
     "label-mobile-sub": {
       "fontFamily": "var(--typography-label-mobile-sub-font-family)",
       "fontSize": "var(--typography-label-mobile-sub-font-size)",
       "fontWeight": "var(--typography-label-mobile-sub-font-weight)",
-      "lineHeight": "var(--typography-label-mobile-sub-line-height)"
+      "lineHeight": "var(--typography-label-mobile-sub-line-height)",
+      "letterSpacing": "var(--typography-label-mobile-sub-letter-spacing)"
     },
     "label-mobile-hero-statlabel": {
       "fontFamily": "var(--typography-label-mobile-hero-statlabel-font-family)",
       "fontSize": "var(--typography-label-mobile-hero-statlabel-font-size)",
       "fontWeight": "var(--typography-label-mobile-hero-statlabel-font-weight)",
-      "lineHeight": "var(--typography-label-mobile-hero-statlabel-line-height)"
+      "lineHeight": "var(--typography-label-mobile-hero-statlabel-line-height)",
+      "letterSpacing": "var(--typography-label-mobile-hero-statlabel-letter-spacing)"
     }
   }
 };

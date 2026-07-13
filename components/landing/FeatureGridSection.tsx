@@ -5,6 +5,7 @@ import { useCallback, useState, type CSSProperties } from 'react';
 import {
   FEATURE_GRID_ACCENT_BAR_CLASS,
   FEATURE_GRID_BADGE_LABEL_CLASS,
+  FEATURE_GRID_BADGE_LABEL_MOBILE_CLASS,
   FEATURE_GRID_CTA_LABEL,
   FEATURE_GRID_DESKTOP_CARDS,
   FEATURE_GRID_DESKTOP_FRAME_CLASS,
@@ -19,6 +20,7 @@ import {
   LANDING_SECTION_PILL_LABEL_DESKTOP_CLASS,
   LANDING_SECTION_PILL_LABEL_MOBILE_CLASS,
   LANDING_SECTION_SUBTITLE_CLASS,
+  LANDING_SECTION_SUBTITLE_MOBILE_CLASS,
   FEATURE_GRID_PLANE_TOP_CLASS,
   FEATURE_GRID_SUBTITLE,
   FEATURE_GRID_TAGLINE,
@@ -30,13 +32,11 @@ import {
   beginMotionReveal,
   getFeatureGridCardSurfaceStyle,
   getFeatureGridContentMotionStyle,
-  getFeatureGridRowRevealStyle,
   getMotionCascadeTextStyle,
   getMotionSlideRevealStyle,
   MOTION_DELAY_AUTO_ADVANCE,
   MOTION_TRANSITION_PROPERTIES,
   type FeatureGridMotionStep,
-  type FeatureGridRevealedRow,
 } from '@/constants/motion.constants';
 import { HeroPrimaryCta } from '@/components/landing/HeroPrimaryCta';
 import { runFeatureGridMotion } from '@/lib/motion-sequence';
@@ -98,8 +98,8 @@ function FeatureGridSectionPill({ pillTestId, labelTestId, variant = 'desktop' }
       data-testid={pillTestId}
       className={
         isMobile
-          ? 'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border border-[var(--color-pill-feature-border)] bg-[color-mix(in_srgb,var(--color-pill-feature-background)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]'
-          : 'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border border-[var(--color-pill-feature-border)] bg-[color-mix(in_srgb,var(--color-pill-feature-background)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]'
+          ? 'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-pill-feature-border)] bg-[color-mix(in_srgb,var(--color-pill-feature-background)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]'
+          : 'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-pill-feature-border)] bg-[color-mix(in_srgb,var(--color-pill-feature-background)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]'
       }
     >
       <span
@@ -148,10 +148,12 @@ function FeatureGridBadge({
   badgeTestId,
   badgeLabelTestId,
   badgeLabel,
+  variant = 'desktop',
 }: {
   badgeTestId: string;
   badgeLabelTestId: string;
   badgeLabel: string;
+  variant?: 'desktop' | 'mobile';
 }) {
   return (
     <div
@@ -160,7 +162,9 @@ function FeatureGridBadge({
     >
       <span
         data-testid={badgeLabelTestId}
-        className={FEATURE_GRID_BADGE_LABEL_CLASS}
+        className={
+          variant === 'mobile' ? FEATURE_GRID_BADGE_LABEL_MOBILE_CLASS : FEATURE_GRID_BADGE_LABEL_CLASS
+        }
       >
         {badgeLabel}
       </span>
@@ -269,6 +273,7 @@ function FeatureGridCardMobile({ card }: FeatureGridCardMobileProps) {
                 badgeTestId={card.badgeTestId}
                 badgeLabelTestId={card.badgeLabelTestId}
                 badgeLabel={card.badgeLabel}
+                variant="mobile"
               />
             ) : null}
           </div>
@@ -290,15 +295,15 @@ function FeatureGridCardMobile({ card }: FeatureGridCardMobileProps) {
 }
 
 function FeatureGridCardsDesktop({
-  revealedRow,
   activeIndex,
   cascadeActive,
   motionEngaged,
+  motionStep,
 }: {
-  revealedRow: FeatureGridRevealedRow;
   activeIndex: number | null;
   cascadeActive: boolean;
   motionEngaged: boolean;
+  motionStep: FeatureGridMotionStep;
 }) {
   const row1 = FEATURE_GRID_DESKTOP_CARDS.slice(0, 2);
   const row2 = FEATURE_GRID_DESKTOP_CARDS.slice(2);
@@ -308,7 +313,12 @@ function FeatureGridCardsDesktop({
       <div
         data-testid={fg.featureRow1}
         className="flex w-full flex-wrap items-stretch justify-center gap-[var(--spacing-20)]"
-        style={getFeatureGridRowRevealStyle(motionEngaged, revealedRow, 1, PROBLEM_MOTION_STYLE)}
+        style={getFeatureGridContentMotionStyle(
+          motionEngaged,
+          motionStep,
+          'featureRow1',
+          PROBLEM_MOTION_STYLE,
+        )}
       >
         {row1.map((card, index) => (
           <FeatureGridCardDesktop
@@ -325,7 +335,12 @@ function FeatureGridCardsDesktop({
       <div
         data-testid={fg.featureRow2}
         className="flex w-full flex-wrap items-stretch justify-center gap-[var(--spacing-20)]"
-        style={getFeatureGridRowRevealStyle(motionEngaged, revealedRow, 2, PROBLEM_MOTION_STYLE)}
+        style={getFeatureGridContentMotionStyle(
+          motionEngaged,
+          motionStep,
+          'featureRow2',
+          PROBLEM_MOTION_STYLE,
+        )}
       >
         {row2.map((card, index) => (
           <FeatureGridCardDesktop
@@ -344,7 +359,6 @@ function FeatureGridCardsDesktop({
 }
 
 function FeatureGridDesktopPanel() {
-  const [revealedRow, setRevealedRow] = useState<FeatureGridRevealedRow>(0);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [headerEmphasized, setHeaderEmphasized] = useState(false);
   const [cascadeActive, setCascadeActive] = useState(false);
@@ -359,13 +373,11 @@ function FeatureGridDesktopPanel() {
             () => {
               setMotionEngaged(true);
               setMotionStep(0);
-              setRevealedRow(0);
               setCascadeActive(true);
               setActiveIndex(null);
             },
             () => {
               setMotionStep(1);
-              setRevealedRow(1);
               setHeaderEmphasized(true);
               setActiveIndex(0);
             },
@@ -373,12 +385,10 @@ function FeatureGridDesktopPanel() {
         },
         () => {
           setMotionStep(2);
-          setRevealedRow(2);
           setActiveIndex(2);
         },
         () => {
           setMotionStep(3);
-          setRevealedRow(2);
           setActiveIndex(null);
           setCascadeActive(false);
         },
@@ -392,7 +402,7 @@ function FeatureGridDesktopPanel() {
     <div data-testid={fg.root} className="hidden min-[1440px]:block">
       <div
         data-testid={fg.motion.root}
-        className={FEATURE_GRID_DESKTOP_FRAME_CLASS}
+        className={`${FEATURE_GRID_DESKTOP_FRAME_CLASS} overflow-hidden`}
         onMouseEnter={triggerMotion}
       >
         <Image
@@ -466,18 +476,13 @@ function FeatureGridDesktopPanel() {
 
             <div
               data-testid={fg.cardsGrid}
-              className="flex w-full flex-col gap-[var(--spacing-40)]"
-              style={getFeatureGridContentMotionStyle(
-                motionEngaged,
-                motionStep,
-                PROBLEM_MOTION_STYLE,
-              )}
+              className="flex w-full flex-col gap-[var(--spacing-40)] overflow-hidden"
             >
               <FeatureGridCardsDesktop
-                revealedRow={revealedRow}
                 activeIndex={activeIndex}
                 cascadeActive={cascadeActive}
                 motionEngaged={motionEngaged}
+                motionStep={motionStep}
               />
               <FeatureGridFooter motionEngaged={motionEngaged} motionStep={motionStep} />
             </div>
@@ -513,10 +518,22 @@ function FeatureGridFooter({
           ? 'flex w-full flex-col items-center gap-[var(--spacing-16)]'
           : 'flex w-full flex-row items-center justify-between gap-[var(--spacing-16)] py-[var(--spacing-20)]'
       }
+      style={
+        isMobile
+          ? undefined
+          : getFeatureGridContentMotionStyle(
+              motionEngaged,
+              motionStep,
+              'footerBar',
+              PROBLEM_MOTION_STYLE,
+            )
+      }
     >
       <p
         data-testid={taglineTestId}
-        className={`text-body-desktop-md text-[var(--color-text-secondary)] ${isMobile ? 'text-center' : 'text-left'}`}
+        className={`${
+          isMobile ? 'text-body-mobile-md' : 'text-body-desktop-md'
+        } text-[var(--color-text-secondary)] ${isMobile ? 'text-center' : 'text-left'}`}
       >
         {FEATURE_GRID_TAGLINE}
       </p>
@@ -567,7 +584,7 @@ export function FeatureGridSection() {
                 </h2>
                 <p
                   data-testid={fgMobile.paragraph}
-                  className={LANDING_SECTION_SUBTITLE_CLASS}
+                  className={LANDING_SECTION_SUBTITLE_MOBILE_CLASS}
                 >
                   {FEATURE_GRID_SUBTITLE}
                 </p>

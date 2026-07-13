@@ -24,7 +24,8 @@ export function NavbarCta({
       data-motion-duration="motion.duration.default"
       onMouseEnter={() => setHovered(true)}
       className={[
-        'inline-flex items-center justify-center rounded-[var(--radius-6)] text-label-desktop-lg transition-[background-color,color,padding] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]',
+        'inline-flex items-center justify-center rounded-[var(--radius-6)] transition-[background-color,color,padding] focus-visible:outline focus-visible:outline-[length:var(--spacing-3)] focus-visible:outline-offset-[var(--spacing-3)] focus-visible:outline-[var(--color-focus-ring)]',
+        isDesktop ? 'text-label-desktop-lg' : 'text-label-mobile-lg',
         isDesktop
           ? hovered
             ? 'px-[var(--spacing-28)] py-[var(--spacing-12)]'

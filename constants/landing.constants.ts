@@ -183,19 +183,42 @@ export const COMPARISON_TOKENS = {
   shadowTicketReveal: 'var(--shadow-card-navy)',
 } as const;
 
+/** Vertical ticket seam — Figma `divider-perforated` (2×11px segments, 18px pitch, border.subtle). */
+export const COMPARISON_PERFORATION_SEGMENT_COUNT = 34;
+export const COMPARISON_PERFORATION_SEGMENT_CLASS =
+  'h-[11px] w-[2px] shrink-0 bg-[var(--color-border-subtle)]';
+export const COMPARISON_PERFORATION_TRACK_CLASS =
+  'pointer-events-none absolute bottom-0 left-1/2 top-0 z-[5] flex w-[2px] -translate-x-1/2 flex-col items-center justify-between';
+
+/** GiantTicket shell — Figma strokes=[] ; elevation via shadow only. */
+export const COMPARISON_GIANT_TICKET_DESKTOP_CLASS =
+  'relative flex w-full flex-row items-stretch overflow-hidden rounded-[var(--radius-panel)]';
+
+export const COMPARISON_CARD_DESKTOP_CLASS =
+  'flex min-w-0 flex-1 flex-col overflow-hidden';
+
+export const COMPARISON_CARD_MOBILE_CLASS =
+  'flex w-full flex-col overflow-hidden rounded-[var(--radius-panel)]';
+
+export const COMPARISON_ROW_DIVIDER_CLASS = 'h-px w-full opacity-[0.08]';
+export const COMPARISON_ROW_DIVIDER_INDUSTRY_CLASS =
+  `${COMPARISON_ROW_DIVIDER_CLASS} bg-[var(--color-text-danger)]`;
+export const COMPARISON_ROW_DIVIDER_MAQSOOD_CLASS =
+  `${COMPARISON_ROW_DIVIDER_CLASS} bg-[var(--color-text-brand-navy)]`;
+
 /**
  * Comparison section typography — Figma 5164:6566 (desktop) / 5164:6609 (mobile).
  * Sizes and fill variables from node cache; do not reuse semantic h2/h4 without px check.
  */
 export const COMPARISON_CARD_HEADER_BADGE_DESKTOP_CLASS =
-  '[font-family:var(--typography-label-desktop-stamp-font-family)] [font-size:var(--typography-label-desktop-stamp-font-size)] [font-weight:var(--typography-label-desktop-stamp-font-weight)] [line-height:var(--typography-label-desktop-stamp-line-height)] uppercase';
+  'text-label-desktop-stamp uppercase';
 
 export const COMPARISON_CARD_HEADER_BADGE_INDUSTRY_CLASS = `${COMPARISON_CARD_HEADER_BADGE_DESKTOP_CLASS} text-[var(--color-text-brand-orange)]`;
 
 export const COMPARISON_CARD_HEADER_BADGE_MAQSOOD_CLASS = `${COMPARISON_CARD_HEADER_BADGE_DESKTOP_CLASS} text-[var(--color-text-success)]`;
 
 export const COMPARISON_CARD_HEADER_BADGE_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-stamp-font-family)] [font-size:var(--typography-label-mobile-stamp-font-size)] [font-weight:var(--typography-label-mobile-stamp-font-weight)] [line-height:var(--typography-label-mobile-stamp-line-height)] uppercase';
+  'text-label-mobile-stamp uppercase';
 
 export const COMPARISON_CARD_HEADER_TITLE_DESKTOP_CLASS = 'text-heading-desktop-h2';
 
@@ -208,32 +231,47 @@ export const COMPARISON_ROW_MICRO_TAG_MOBILE_CLASS = 'text-label-mobile-micro-ta
 export const COMPARISON_ROW_TITLE_DESKTOP_CLASS =
   'text-heading-desktop-h4 text-[var(--color-text-primary)]';
 
+/** Industry row title/body — Figma VariableID 3003:22 → `color.text.muted` (not secondary). */
+export const COMPARISON_ROW_TITLE_INDUSTRY_DESKTOP_CLASS =
+  'text-heading-desktop-h4 text-[var(--color-text-muted)]';
+
 export const COMPARISON_ROW_TITLE_MOBILE_CLASS =
   'text-heading-mobile-h4 text-[var(--color-text-primary)]';
 
+export const COMPARISON_ROW_TITLE_INDUSTRY_MOBILE_CLASS =
+  'text-heading-mobile-h4 text-[var(--color-text-muted)]';
+
 export const COMPARISON_ROW_BODY_DESKTOP_CLASS =
-  '[font-family:var(--typography-body-desktop-xs-sm-font-family)] [font-size:var(--typography-body-desktop-xs-sm-font-size)] [font-weight:var(--typography-body-desktop-xs-sm-font-weight)] [line-height:var(--typography-body-desktop-xs-sm-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-desktop-xs-sm text-[var(--color-text-secondary)]';
+
+/** Industry body — same muted bind as titles (3003:22). */
+export const COMPARISON_ROW_BODY_INDUSTRY_DESKTOP_CLASS =
+  'text-body-desktop-xs-sm text-[var(--color-text-muted)]';
 
 export const COMPARISON_ROW_BODY_MOBILE_CLASS =
-  '[font-family:var(--typography-body-mobile-xs-sm-font-family)] [font-size:var(--typography-body-mobile-xs-sm-font-size)] [font-weight:var(--typography-body-mobile-xs-sm-font-weight)] [line-height:var(--typography-body-mobile-xs-sm-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-mobile-xs-sm text-[var(--color-text-secondary)]';
 
+export const COMPARISON_ROW_BODY_INDUSTRY_MOBILE_CLASS =
+  'text-body-mobile-xs-sm text-[var(--color-text-muted)]';
+
+/** Stamps — full-opacity accent (Figma a=1); do not fade industry stamps. */
 export const COMPARISON_STAMP_DESKTOP_CLASS =
-  '[font-family:var(--typography-label-desktop-stamp-font-family)] [font-size:var(--typography-label-desktop-stamp-font-size)] [font-weight:var(--typography-label-desktop-stamp-font-weight)] [line-height:var(--typography-label-desktop-stamp-line-height)] uppercase';
+  'text-label-desktop-stamp uppercase';
 
 export const COMPARISON_STAMP_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-micro-tag-font-family)] [font-size:var(--typography-label-mobile-micro-tag-font-size)] [font-weight:var(--typography-label-mobile-micro-tag-font-weight)] [line-height:var(--typography-label-mobile-micro-tag-line-height)] uppercase';
+  'text-label-mobile-micro-tag uppercase';
 
 export const COMPARISON_FOOTNOTE_DESKTOP_CLASS =
-  '[font-family:var(--typography-body-desktop-xs-font-family)] [font-size:var(--font-size-14)] [font-weight:var(--font-weight-500)] [line-height:var(--font-lineheight-22)] italic text-[var(--color-text-primary)]';
+  'text-body-desktop-xs italic text-[var(--color-text-primary)]';
 
 export const COMPARISON_FOOTNOTE_EMPHASIS_CLASS =
-  'font-bold italic text-[var(--color-text-brand-navy)]';
+  'italic text-[var(--color-text-brand-navy)] [font-weight:var(--font-weight-700)]';
 
 export const COMPARISON_FOOTNOTE_MOBILE_CLASS =
-  '[font-family:var(--typography-body-mobile-xs-font-family)] [font-size:var(--typography-body-mobile-xs-font-size)] [font-weight:var(--font-weight-500)] [line-height:var(--typography-body-mobile-xs-line-height)] italic text-[var(--color-text-primary)]';
+  'text-body-mobile-xs italic text-[var(--color-text-primary)]';
 
 export const COMPARISON_SECTION_SUBTITLE_MOBILE_CLASS =
-  'text-body-desktop-xs text-[var(--color-text-secondary)]';
+  'text-body-mobile-xs text-[var(--color-text-secondary)]';
 
 export const INDUSTRY_DESKTOP_ROWS: ComparisonRowConfig[] = [
   {
@@ -419,18 +457,21 @@ export const LANDING_SECTION_PILL_LABEL_DESKTOP_CLASS =
   'text-label-desktop-md-tag text-[var(--color-text-brand-navy)]';
 
 export const LANDING_SECTION_PILL_LABEL_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-xs-semibold-font-family)] [font-size:var(--typography-label-mobile-xs-semibold-font-size)] [font-weight:var(--typography-label-mobile-xs-semibold-font-weight)] [line-height:var(--typography-label-mobile-xs-semibold-line-height)] text-[var(--color-text-brand-navy)]';
+  'text-label-mobile-xs-semibold text-[var(--color-text-brand-navy)]';
 
 export const LANDING_SECTION_HEADING_DESKTOP_CLASS =
   'text-heading-desktop-h1 text-[var(--color-text-primary)]';
 
 export const LANDING_SECTION_HEADING_MOBILE_CLASS =
-  '[font-family:var(--typography-heading-mobile-h1-font-family)] [font-size:var(--typography-heading-mobile-h1-font-size)] [font-weight:var(--typography-heading-mobile-h1-font-weight)] [line-height:var(--typography-heading-mobile-h1-line-height)] text-[var(--color-text-primary)]';
+  'text-heading-mobile-h1 text-[var(--color-text-primary)]';
 
 export const LANDING_SECTION_HEADING_ACCENT_CLASS = 'text-[var(--color-text-brand-navy)]';
 
 export const LANDING_SECTION_SUBTITLE_CLASS =
   'text-body-desktop-md text-[var(--color-text-secondary)]';
+
+export const LANDING_SECTION_SUBTITLE_MOBILE_CLASS =
+  'text-body-mobile-md text-[var(--color-text-secondary)]';
 
 /**
  * Problem section typography — Figma 5164:6561 / 5164:6571.
@@ -440,7 +481,7 @@ export const PROBLEM_SECTION_PILL_LABEL_DESKTOP_CLASS =
   'text-label-desktop-md-tag text-[var(--color-text-danger)]';
 
 export const PROBLEM_SECTION_PILL_LABEL_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-xs-semibold-font-family)] [font-size:var(--typography-label-mobile-xs-semibold-font-size)] [font-weight:var(--typography-label-mobile-xs-semibold-font-weight)] [line-height:var(--typography-label-mobile-xs-semibold-line-height)] text-[var(--color-text-danger)]';
+  'text-label-mobile-xs-semibold text-[var(--color-text-danger)]';
 
 export const PROBLEM_CARD_TITLE_DESKTOP_CLASS =
   'text-heading-desktop-h3-sm text-[var(--color-text-primary)]';
@@ -449,14 +490,17 @@ export const PROBLEM_CARD_TITLE_MOBILE_CLASS =
   'text-heading-mobile-h3-sm text-[var(--color-text-primary)]';
 
 export const PROBLEM_CARD_BODY_CLASS =
-  '[font-family:var(--typography-body-desktop-xs-sm-font-family)] [font-size:var(--typography-body-desktop-xs-sm-font-size)] [font-weight:var(--typography-body-desktop-xs-sm-font-weight)] [line-height:var(--typography-body-desktop-xs-sm-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-desktop-xs-sm text-[var(--color-text-secondary)]';
 
 export const PROBLEM_CARD_BODY_MOBILE_CLASS =
-  '[font-family:var(--typography-body-mobile-xs-sm-font-family)] [font-size:var(--typography-body-mobile-xs-sm-font-size)] [font-weight:var(--typography-body-mobile-xs-sm-font-weight)] [line-height:var(--typography-body-mobile-xs-sm-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-mobile-xs-sm text-[var(--color-text-secondary)]';
 
 /** How-it-works card body — Figma 14px/400 secondary */
 export const HIW_CARD_BODY_CLASS =
   'text-body-desktop-xs text-[var(--color-text-secondary)]';
+
+export const HIW_CARD_BODY_MOBILE_CLASS =
+  'text-body-mobile-xs text-[var(--color-text-secondary)]';
 
 /** Landing page — how-it-works teaser section */
 const hiw = ids.component.landing.howItWorksTeaser;
@@ -590,10 +634,13 @@ export const FEATURE_GRID_PLANE_BOTTOM_CLASS =
   'pointer-events-none absolute left-[17.85%] top-[0.41%] z-0 h-auto w-[21.18%]';
 
 export const FEATURE_GRID_BADGE_LABEL_CLASS =
-  'uppercase text-[var(--color-text-brand-navy)] [font-family:var(--typography-label-desktop-xs-semibold-font-family)] [font-size:var(--typography-label-desktop-xs-semibold-font-size)] [font-weight:var(--typography-label-desktop-xs-semibold-font-weight)] [line-height:var(--typography-label-desktop-xs-semibold-line-height)]';
+  'uppercase text-[var(--color-text-brand-navy)] text-label-desktop-xs-semibold';
+
+export const FEATURE_GRID_BADGE_LABEL_MOBILE_CLASS =
+  'uppercase text-[var(--color-text-brand-navy)] text-label-mobile-xs-semibold';
 
 export const FEATURE_GRID_MOBILE_BODY_CLASS =
-  '[font-family:var(--typography-body-mobile-xs-font-family)] [font-size:var(--typography-body-mobile-xs-font-size)] [font-weight:var(--typography-body-mobile-xs-font-weight)] [line-height:var(--typography-body-mobile-xs-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-mobile-xs text-[var(--color-text-secondary)]';
 
 export const FEATURE_GRID_HEADING_LINE1 = 'Built for Speed, Precision,';
 export const FEATURE_GRID_HEADING_LINE2 = 'and Total Control';
@@ -785,16 +832,16 @@ export const SOCIAL_PROOF_PLANE_CLASS =
   'pointer-events-none absolute right-[12%] top-[38%] z-0 h-auto w-[6.4%]';
 
 export const SOCIAL_PROOF_SECTION_PILL_DESKTOP_CLASS =
-  'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border border-[var(--color-border-brand-orange)] bg-[color-mix(in_srgb,var(--color-feedback-warning-background)_10%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]';
+  'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-orange)] bg-[color-mix(in_srgb,var(--color-feedback-warning-background)_10%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]';
 
 export const SOCIAL_PROOF_SECTION_PILL_MOBILE_CLASS =
-  'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border border-[var(--color-border-brand-orange)] bg-[color-mix(in_srgb,var(--color-feedback-warning-background)_10%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]';
+  'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-orange)] bg-[color-mix(in_srgb,var(--color-feedback-warning-background)_10%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]';
 
 export const SOCIAL_PROOF_PILL_LABEL_DESKTOP_CLASS =
   'text-label-desktop-md-tag text-[var(--color-text-brand-orange)]';
 
 export const SOCIAL_PROOF_PILL_LABEL_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-xs-semibold-font-family)] [font-size:var(--typography-label-mobile-xs-semibold-font-size)] [font-weight:var(--typography-label-mobile-xs-semibold-font-weight)] [line-height:var(--typography-label-mobile-xs-semibold-line-height)] text-[var(--color-text-brand-orange)]';
+  'text-label-mobile-xs-semibold text-[var(--color-text-brand-orange)]';
 
 export const SOCIAL_PROOF_QUOTE_DESKTOP_CLASS =
   'text-body-desktop-testimonial text-[var(--color-text-primary)]';
@@ -804,14 +851,26 @@ export const SOCIAL_PROOF_QUOTE_MOBILE_CLASS =
 
 export const SOCIAL_PROOF_AUTHOR_NAME_CLASS = 'text-label-desktop-lg text-[var(--color-text-primary)]';
 
+export const SOCIAL_PROOF_AUTHOR_NAME_MOBILE_CLASS =
+  'text-label-mobile-lg text-[var(--color-text-primary)]';
+
 export const SOCIAL_PROOF_AUTHOR_ROLE_CLASS =
   'text-label-desktop-md-stat text-[var(--color-text-secondary)]';
+
+export const SOCIAL_PROOF_AUTHOR_ROLE_MOBILE_CLASS =
+  'text-label-mobile-md-stat text-[var(--color-text-secondary)]';
 
 export const SOCIAL_PROOF_AUTHOR_COMPANY_CLASS =
   'text-label-desktop-xs-semibold text-[var(--color-text-brand-orange)]';
 
+export const SOCIAL_PROOF_AUTHOR_COMPANY_MOBILE_CLASS =
+  'text-label-mobile-xs-semibold text-[var(--color-text-brand-orange)]';
+
 export const SOCIAL_PROOF_INTEGRATIONS_TAGLINE_CLASS =
-  'text-label-desktop-md-stat font-semibold text-[var(--color-text-muted)]';
+  'text-label-desktop-md-stat text-[var(--color-text-muted)]';
+
+export const SOCIAL_PROOF_INTEGRATIONS_TAGLINE_MOBILE_CLASS =
+  'text-label-mobile-md-stat text-[var(--color-text-muted)]';
 
 export const SOCIAL_PROOF_HEADING_LINE1 = 'Built for Founders,';
 export const SOCIAL_PROOF_HEADING_LINE2 = 'Proven in Production';
@@ -826,13 +885,51 @@ export const SOCIAL_PROOF_DESKTOP_SLIDE_STEP_PX = 868 + 120;
 
 export const SOCIAL_PROOF_SLIDE_COUNT = 3;
 
-export const SOCIAL_PROOF_SLIDE_FILL_PERCENT = ['36.3%', '66.7%', '100%'] as const;
+/** Figma progress ends per slide (track 1376 · fill grows ~500 → full). */
+export const SOCIAL_PROOF_SLIDE_FILL_PERCENT = ['33.333%', '66.667%', '100%'] as const;
+
+export function getSocialProofSlideFillStartPercent(slideIndex: number): number {
+  const clamped = Math.min(Math.max(slideIndex, 0), SOCIAL_PROOF_SLIDE_COUNT - 1);
+  return (clamped / SOCIAL_PROOF_SLIDE_COUNT) * 100;
+}
+
+export function getSocialProofSlideFillEndPercent(slideIndex: number): number {
+  const clamped = Math.min(Math.max(slideIndex, 0), SOCIAL_PROOF_SLIDE_COUNT - 1);
+  return ((clamped + 1) / SOCIAL_PROOF_SLIDE_COUNT) * 100;
+}
 
 export const SOCIAL_PROOF_CAROUSEL_TRANSITION_STYLE: CSSProperties = {
   transitionDuration: SOCIAL_PROOF_CAROUSEL_SLIDE_DURATION,
   transitionTimingFunction: SOCIAL_PROOF_TOKENS.motionEasingDefault,
   transitionProperty: 'transform',
 };
+
+export const SOCIAL_PROOF_PROGRESS_SHELL_CLASS =
+  'flex w-full flex-row items-center gap-[var(--spacing-20)]';
+
+export const SOCIAL_PROOF_PROGRESS_TRACK_SHELL_CLASS =
+  'relative h-[var(--spacing-4)] min-w-0 flex-1 cursor-pointer overflow-hidden rounded-full';
+
+export const SOCIAL_PROOF_PROGRESS_TRACK_CLASS =
+  'absolute inset-0 rounded-full bg-[var(--color-border-default)]';
+
+export const SOCIAL_PROOF_PROGRESS_FILL_CLASS =
+  'absolute left-0 top-0 z-[1] h-full rounded-full bg-[var(--color-border-brand-navy)]';
+
+export const SOCIAL_PROOF_PROGRESS_NUMBERS_DESKTOP_CLASS =
+  'flex shrink-0 flex-row items-center gap-[var(--spacing-20)] text-body-desktop-xs';
+
+export const SOCIAL_PROOF_PROGRESS_NUMBERS_MOBILE_CLASS =
+  'flex shrink-0 flex-row items-center gap-[var(--spacing-20)] text-body-mobile-xs';
+
+export const SOCIAL_PROOF_PROGRESS_NUMBER_BASE_CLASS =
+  'transition-[color,font-weight] duration-[var(--motion-duration-default)] ease-[var(--motion-easing-default)]';
+
+export const SOCIAL_PROOF_PROGRESS_NUMBER_ACTIVE_CLASS =
+  `${SOCIAL_PROOF_PROGRESS_NUMBER_BASE_CLASS} font-semibold text-[var(--color-text-brand-navy)]`;
+
+export const SOCIAL_PROOF_PROGRESS_NUMBER_INACTIVE_CLASS =
+  `${SOCIAL_PROOF_PROGRESS_NUMBER_BASE_CLASS} font-normal text-[var(--color-text-muted)]`;
 
 export const SOCIAL_PROOF_DESKTOP_TESTIMONIALS: SocialProofTestimonialConfig[] = [
   {
@@ -990,50 +1087,50 @@ export const PRICING_SECTION_PILL_DOT_CLASS =
   'size-[7px] shrink-0 rounded-full bg-[var(--color-text-brand-teal)]';
 
 export const PRICING_SECTION_PILL_DESKTOP_CLASS =
-  'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border border-[var(--color-border-brand-teal)] bg-[color-mix(in_srgb,var(--color-text-brand-teal)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]';
+  'inline-flex items-center justify-center gap-[var(--spacing-8)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-teal)] bg-[color-mix(in_srgb,var(--color-text-brand-teal)_8%,transparent)] px-[var(--spacing-16)] py-[var(--spacing-8)]';
 
 export const PRICING_SECTION_PILL_MOBILE_CLASS =
-  'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border border-[var(--color-border-brand-teal)] bg-[color-mix(in_srgb,var(--color-text-brand-teal)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]';
+  'inline-flex items-center justify-center gap-[var(--spacing-6)] rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-teal)] bg-[color-mix(in_srgb,var(--color-text-brand-teal)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-8)]';
 
 export const PRICING_PILL_LABEL_DESKTOP_CLASS =
   'text-label-desktop-md-tag text-[var(--color-text-brand-teal)]';
 
 export const PRICING_PILL_LABEL_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-xs-semibold-font-family)] [font-size:var(--typography-label-mobile-xs-semibold-font-size)] [font-weight:var(--typography-label-mobile-xs-semibold-font-weight)] [line-height:var(--typography-label-mobile-xs-semibold-line-height)] text-[var(--color-text-brand-teal)]';
+  'text-label-mobile-xs-semibold text-[var(--color-text-brand-teal)]';
 
 export const PRICING_ROUTE_STRIP_CLASS =
-  'relative h-[var(--spacing-44)] w-full overflow-hidden rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-navy)] bg-[color-mix(in_srgb,var(--color-text-brand-navy)_8%,transparent)]';
+  'relative flex h-[var(--spacing-44)] w-full items-center justify-between overflow-hidden rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-navy)] bg-[color-mix(in_srgb,var(--color-text-brand-navy)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-6)]';
 
 export const PRICING_ROUTE_STRIP_MOBILE_CLASS =
   'flex h-[26px] w-full items-center justify-between overflow-hidden rounded-[var(--radius-pill)] border-[0.3px] border-[var(--color-border-brand-navy)] bg-[color-mix(in_srgb,var(--color-text-brand-navy)_8%,transparent)] px-[var(--spacing-12)] py-[var(--spacing-6)]';
 
-export const PRICING_ROUTE_FROM_DESKTOP_CLASS =
-  'absolute left-[31.7px] top-[calc(50%-7px)] -translate-y-1/2 whitespace-pre';
+export const PRICING_ROUTE_FROM_DESKTOP_CLASS = 'shrink-0 whitespace-pre leading-none';
 
-export const PRICING_ROUTE_FROM_MOBILE_CLASS = 'shrink-0 whitespace-pre';
+export const PRICING_ROUTE_FROM_MOBILE_CLASS = 'shrink-0 whitespace-pre leading-none';
 
 export const PRICING_ROUTE_TO_DESKTOP_CLASS =
-  'absolute right-[209.7px] top-[calc(50%-7px)] -translate-y-1/2 translate-x-full whitespace-pre text-label-desktop-sm-semibold text-[var(--color-text-brand-navy)]';
+  'shrink-0 whitespace-pre leading-none text-label-desktop-sm-semibold text-[var(--color-text-brand-navy)]';
 
 export const PRICING_ROUTE_TO_MOBILE_CLASS =
-  'shrink-0 whitespace-pre [font-family:var(--typography-label-mobile-xs-medium-font-family)] [font-size:var(--typography-label-mobile-xs-medium-font-size)] [font-weight:var(--typography-label-mobile-xs-medium-font-weight)] [line-height:var(--typography-label-mobile-xs-medium-line-height)] text-[var(--color-text-brand-navy)]';
+  'shrink-0 whitespace-pre leading-none text-label-mobile-xs-medium text-[var(--color-text-brand-navy)]';
 
 export const PRICING_ROUTE_PLANE_TRACK_DESKTOP_CLASS =
-  'pointer-events-none absolute left-1/2 top-[calc(50%+0.5px)] h-[22px] w-[150px] -translate-x-1/2 -translate-y-1/2';
+  'pointer-events-none relative flex h-[22px] w-[150px] shrink-0 items-center justify-center';
 
-export const PRICING_ROUTE_PLANE_TRACK_MOBILE_CLASS = 'pointer-events-none relative h-[10px] w-[72px] shrink-0';
+export const PRICING_ROUTE_PLANE_TRACK_MOBILE_CLASS =
+  'pointer-events-none relative flex h-[10px] w-[72px] shrink-0 items-center justify-center';
 
 export const PRICING_ROUTE_PLANE_DESKTOP_SRC = '/images/pricing-route-plane-desktop.gif';
 
 export const PRICING_ROUTE_PLANE_MOBILE_SRC = '/images/pricing-route-plane-mobile.gif';
 
-export const PRICING_ROUTE_PLANE_IMAGE_CLASS = 'pointer-events-none size-full object-cover';
+export const PRICING_ROUTE_PLANE_IMAGE_CLASS = 'pointer-events-none size-full object-contain';
 
 export const PRICING_ROUTE_LABEL_DESKTOP_CLASS =
-  'text-label-desktop-sm-semibold text-[var(--color-text-secondary)]';
+  'text-label-desktop-sm-semibold leading-none text-[var(--color-text-secondary)]';
 
 export const PRICING_ROUTE_LABEL_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-xs-medium-font-family)] [font-size:var(--typography-label-mobile-xs-medium-font-size)] [font-weight:var(--typography-label-mobile-xs-medium-font-weight)] [line-height:var(--typography-label-mobile-xs-medium-line-height)] text-[var(--color-text-secondary)]';
+  'text-label-mobile-xs-medium leading-none text-[var(--color-text-secondary)]';
 
 export const PRICING_CARD_SHELL_CLASS =
   'flex w-full max-w-[868px] flex-col overflow-hidden rounded-[var(--radius-panel)] border-2 border-[var(--color-border-default)] bg-[var(--color-background-page)] shadow-[var(--shadow-card-navy)]';
@@ -1042,10 +1139,10 @@ export const PRICING_CARD_HEADER_CLASS =
   'flex items-start justify-between bg-[var(--color-background-subtle)] px-[var(--spacing-28)] py-[var(--spacing-20)]';
 
 export const PRICING_BOARDING_LABEL_CLASS =
-  'text-label-desktop-xs-medium uppercase tracking-wide text-[var(--color-text-brand-navy)]';
+  'text-label-desktop-xs-medium uppercase text-[var(--color-text-brand-navy)]';
 
 export const PRICING_BOARDING_LABEL_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-xs-medium-font-family)] [font-size:var(--typography-label-mobile-xs-medium-font-size)] [font-weight:var(--typography-label-mobile-xs-medium-font-weight)] [line-height:var(--typography-label-mobile-xs-medium-line-height)] uppercase tracking-wide text-[var(--color-text-brand-navy)]';
+  'text-label-mobile-xs-medium uppercase text-[var(--color-text-brand-navy)]';
 
 export const PRICING_CARD_TITLE_DESKTOP_CLASS =
   'text-heading-desktop-h2 text-[var(--color-text-primary)]';
@@ -1062,8 +1159,14 @@ export const PRICING_CARD_SUBTITLE_MOBILE_CLASS =
 export const PRICING_SEAT_LABEL_CLASS =
   'text-label-desktop-xs-medium uppercase text-[var(--color-text-muted)]';
 
+export const PRICING_SEAT_LABEL_MOBILE_CLASS =
+  'text-label-mobile-xs-medium uppercase text-[var(--color-text-muted)]';
+
 export const PRICING_SEAT_VALUE_CLASS =
-  'text-label-desktop-lg text-[var(--color-text-primary)]';
+  'text-label-desktop-lg text-[var(--color-text-brand-navy)]';
+
+export const PRICING_SEAT_VALUE_MOBILE_CLASS =
+  'text-label-mobile-lg text-[var(--color-text-brand-navy)]';
 
 export const PRICING_TRACKING_LABEL_PLATFORM_CLASS =
   'text-label-desktop-xs-semibold uppercase text-[var(--color-text-brand-orange)]';
@@ -1072,10 +1175,10 @@ export const PRICING_TRACKING_LABEL_ADDON_CLASS =
   'text-label-desktop-xs-semibold uppercase text-[var(--color-text-muted)]';
 
 export const PRICING_TRACKING_LABEL_PLATFORM_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-xs-semibold-font-family)] [font-size:var(--typography-label-mobile-xs-semibold-font-size)] [font-weight:var(--typography-label-mobile-xs-semibold-font-weight)] [line-height:var(--typography-label-mobile-xs-semibold-line-height)] uppercase text-[var(--color-text-brand-orange)]';
+  'text-label-mobile-xs-semibold uppercase text-[var(--color-text-brand-orange)]';
 
 export const PRICING_TRACKING_LABEL_ADDON_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-xs-semibold-font-family)] [font-size:var(--typography-label-mobile-xs-semibold-font-size)] [font-weight:var(--typography-label-mobile-xs-semibold-font-weight)] [line-height:var(--typography-label-mobile-xs-semibold-line-height)] uppercase text-[var(--color-text-muted)]';
+  'text-label-mobile-xs-semibold uppercase text-[var(--color-text-muted)]';
 
 export const PRICING_PRICE_PRIMARY_DESKTOP_CLASS =
   'text-display-desktop-pricing-xl text-[var(--color-text-primary)]';
@@ -1102,10 +1205,10 @@ export const PRICING_CHECKLIST_HEADING_MOBILE_CLASS =
   'text-label-mobile-md-stat text-[var(--color-text-primary)]';
 
 export const PRICING_CHECKLIST_ITEM_CLASS =
-  '[font-family:var(--typography-body-desktop-xs-sm-font-family)] [font-size:var(--typography-body-desktop-xs-sm-font-size)] [font-weight:var(--typography-body-desktop-xs-sm-font-weight)] [line-height:var(--typography-body-desktop-xs-sm-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-desktop-xs-sm text-[var(--color-text-secondary)]';
 
 export const PRICING_CHECKLIST_ITEM_MOBILE_CLASS =
-  '[font-family:var(--typography-body-mobile-xs-sm-font-family)] [font-size:var(--typography-body-mobile-xs-sm-font-size)] [font-weight:var(--typography-body-mobile-xs-sm-font-weight)] [line-height:var(--typography-body-mobile-xs-sm-line-height)] text-[var(--color-text-secondary)]';
+  'text-body-mobile-xs-sm text-[var(--color-text-secondary)]';
 
 export const PRICING_TRUST_BAR_CLASS =
   'flex w-full max-w-[868px] items-center justify-between rounded-[var(--radius-surface)] border border-[var(--color-border-default)] bg-[var(--color-background-subtle)] px-[var(--spacing-40)] py-[var(--spacing-10)]';
@@ -1117,19 +1220,19 @@ export const PRICING_TRUST_LABEL_CLASS =
   'text-label-desktop-xs-semibold uppercase text-[var(--color-text-muted)]';
 
 export const PRICING_TRUST_LABEL_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-xs-semibold-font-family)] [font-size:var(--typography-label-mobile-xs-semibold-font-size)] [font-weight:var(--typography-label-mobile-xs-semibold-font-weight)] [line-height:var(--typography-label-mobile-xs-semibold-line-height)] uppercase text-[var(--color-text-muted)]';
+  'text-label-mobile-xs-semibold uppercase text-[var(--color-text-muted)]';
 
 export const PRICING_TRUST_ITEM_CLASS =
   'text-label-desktop-xs-semibold text-[var(--color-text-secondary)]';
 
 export const PRICING_TRUST_ITEM_MOBILE_CLASS =
-  '[font-family:var(--typography-label-mobile-xs-semibold-font-family)] [font-size:var(--typography-label-mobile-xs-semibold-font-size)] [font-weight:var(--typography-label-mobile-xs-semibold-font-weight)] [line-height:var(--typography-label-mobile-xs-semibold-line-height)] text-[var(--color-text-secondary)]';
+  'text-label-mobile-xs-semibold text-[var(--color-text-secondary)]';
 
 export const PRICING_TRUST_FOOTNOTE_CLASS =
-  '[font-family:var(--typography-body-desktop-xs-sm-font-family)] [font-size:var(--typography-body-desktop-xs-sm-font-size)] [font-weight:var(--typography-body-desktop-xs-sm-font-weight)] [line-height:var(--typography-body-desktop-xs-sm-line-height)] text-center text-[var(--color-text-muted)]';
+  'text-body-desktop-xs-sm text-center text-[var(--color-text-muted)]';
 
 export const PRICING_TRUST_FOOTNOTE_MOBILE_CLASS =
-  '[font-family:var(--typography-body-mobile-xs-sm-font-family)] [font-size:var(--typography-body-mobile-xs-sm-font-size)] [font-weight:var(--typography-body-mobile-xs-sm-font-weight)] [line-height:var(--typography-body-mobile-xs-sm-line-height)] text-center text-[var(--color-text-muted)]';
+  'text-body-mobile-xs-sm text-center text-[var(--color-text-muted)]';
 
 export const PRICING_PILL_LABEL = 'Simple Pricing';
 export const PRICING_HEADING_LINE1 = 'Own it,';

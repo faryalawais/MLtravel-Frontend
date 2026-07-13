@@ -10,9 +10,12 @@ import { expectTranslateY, isTranslateYNear, parseTranslateY } from './helpers/t
 const fg = ids.component.landing.featureGrid;
 const DESKTOP_WIDTH = 1440;
 
-async function getContentBlockTranslateY(page: import('@playwright/test').Page): Promise<number> {
-  const block = page.getByTestId(fg.cardsGrid);
-  const transform = await block.evaluate((el) => getComputedStyle(el).transform);
+async function getLayerTranslateY(
+  page: import('@playwright/test').Page,
+  testId: string,
+): Promise<number> {
+  const el = page.getByTestId(testId);
+  const transform = await el.evaluate((node) => getComputedStyle(node).transform);
   return parseTranslateY(transform);
 }
 
@@ -28,13 +31,18 @@ test.describe('GH#10 — Feature grid motion (fixture)', () => {
     expect(featureGridFixture.transitions).toHaveLength(3);
     expect(featureGridFixture.transitions[0].trigger).toBe('MOUSE_ENTER');
     expect(featureGridFixture.motionDiffsExpected[0].helper).toBe('getFeatureGridContentMotionStyle');
+    expect(featureGridFixture.layerOffsetsFromTerminal.featureRow2.state2).toBe(
+      FEATURE_GRID_CONTENT_POSE_STATE2_PX,
+    );
   });
 
-  test('feature grid motion: static block → staged slide → settled static', async ({ page }) => {
+  test('feature grid motion: row-wise staged slide → settled static', async ({ page }) => {
     const motionRoot = page.getByTestId(fg.motion.root);
     await motionRoot.scrollIntoViewIfNeeded();
 
-    expectTranslateY(await getContentBlockTranslateY(page), 0);
+    expectTranslateY(await getLayerTranslateY(page, fg.featureRow1), 0);
+    expectTranslateY(await getLayerTranslateY(page, fg.featureRow2), 0);
+    expectTranslateY(await getLayerTranslateY(page, fg.footerBar), 0);
 
     const transitionMs =
       featureGridFixture.transitions[0].durationMs ??
@@ -47,23 +55,43 @@ test.describe('GH#10 — Feature grid motion (fixture)', () => {
 
     await motionRoot.hover({ force: true });
 
+    // Mid-chain (state-2): Row1 at terminal, Row2/footer still offset (~270)
     await expect
       .poll(
-        async () =>
-          isTranslateYNear(await getContentBlockTranslateY(page), FEATURE_GRID_CONTENT_POSE_STATE2_PX) ||
-          (await getContentBlockTranslateY(page)) > 200,
+        async () => {
+          const row1 = await getLayerTranslateY(page, fg.featureRow1);
+          const row2 = await getLayerTranslateY(page, fg.featureRow2);
+          return (
+            isTranslateYNear(row1, 0) &&
+            (isTranslateYNear(row2, FEATURE_GRID_CONTENT_POSE_STATE2_PX) || row2 > 100)
+          );
+        },
         { timeout: stepIntervalMs * 2 + 400, intervals: [50] },
       )
       .toBe(true);
 
     await expect
-      .poll(async () => isTranslateYNear(await getContentBlockTranslateY(page), 0), {
-        timeout: finalStepMs,
-        intervals: [50],
-      })
+      .poll(
+        async () => {
+          const row1 = await getLayerTranslateY(page, fg.featureRow1);
+          const row2 = await getLayerTranslateY(page, fg.featureRow2);
+          const footer = await getLayerTranslateY(page, fg.footerBar);
+          return (
+            isTranslateYNear(row1, 0) &&
+            isTranslateYNear(row2, 0) &&
+            isTranslateYNear(footer, 0)
+          );
+        },
+        {
+          timeout: finalStepMs,
+          intervals: [50],
+        },
+      )
       .toBe(true);
 
-    expectTranslateY(await getContentBlockTranslateY(page), 0);
+    expectTranslateY(await getLayerTranslateY(page, fg.featureRow1), 0);
+    expectTranslateY(await getLayerTranslateY(page, fg.featureRow2), 0);
+    expectTranslateY(await getLayerTranslateY(page, fg.footerBar), 0);
 
     await expect(page.getByTestId(fg.featureCard6)).toBeVisible();
   });

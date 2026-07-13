@@ -1492,32 +1492,44 @@
         }
       },
       "pos0p2": {
-        "$type": "number",
-        "$value": 0.2,
+        "$type": "dimension",
+        "$value": {
+          "value": 0.2,
+          "unit": "px"
+        },
         "$extensions": {
           "layer": "primitive",
           "source": "figma"
         }
       },
       "pos0p3": {
-        "$type": "number",
-        "$value": 0.3,
+        "$type": "dimension",
+        "$value": {
+          "value": 0.3,
+          "unit": "px"
+        },
         "$extensions": {
           "layer": "primitive",
           "source": "figma"
         }
       },
       "pos0p55": {
-        "$type": "number",
-        "$value": 0.55,
+        "$type": "dimension",
+        "$value": {
+          "value": 0.55,
+          "unit": "px"
+        },
         "$extensions": {
           "layer": "primitive",
           "source": "figma"
         }
       },
       "pos1p2": {
-        "$type": "number",
-        "$value": 1.2,
+        "$type": "dimension",
+        "$value": {
+          "value": 1.2,
+          "unit": "px"
+        },
         "$extensions": {
           "layer": "primitive",
           "source": "figma"
@@ -1568,16 +1580,22 @@
         }
       },
       "pos0p1996": {
-        "$type": "number",
-        "$value": 0.1996,
+        "$type": "dimension",
+        "$value": {
+          "value": 0.1996,
+          "unit": "px"
+        },
         "$extensions": {
           "layer": "primitive",
           "source": "figma"
         }
       },
       "pos1p5": {
-        "$type": "number",
-        "$value": 1.5,
+        "$type": "dimension",
+        "$value": {
+          "value": 1.5,
+          "unit": "px"
+        },
         "$extensions": {
           "layer": "primitive",
           "source": "figma"
