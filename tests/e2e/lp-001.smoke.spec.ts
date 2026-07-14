@@ -83,11 +83,12 @@ test.describe('GH#5 — Problem', () => {
     await expect(page.getByTestId(ids.component.landing.problem.mobile.sectionHeading)).toBeVisible();
   });
 
-  test('product nav link navigates to home', async ({ page }) => {
+  test('product nav link scrolls to #product', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto('/how-it-works');
     await page.getByTestId(ids.component.navbar.productLink).click();
-    await expect(page).toHaveURL('/');
+    await expect(page).toHaveURL(/\/#product$/);
+    await expect(page.getByTestId(ids.component.landing.problem.root)).toBeVisible();
   });
 
   test('contact nav link navigates to /contact', async ({ page }) => {

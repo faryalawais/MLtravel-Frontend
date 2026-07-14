@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useState, type CSSProperties } from 'react';
+import { useCallback, useRef, useState, type CSSProperties } from 'react';
 import { HeroPrimaryCta } from '@/components/landing/HeroPrimaryCta';
 import {
   LANDING_SECTION_HEADING_ACCENT_CLASS,
@@ -102,7 +102,7 @@ import {
 } from '@/constants/landing.constants';
 import { getMotionSlideRevealStyle, getPricingMainGroupMotionStyle, type PricingMotionStep } from '@/constants/motion.constants';
 import { runSimpleOneStepMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import { useInViewMotionTrigger, useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type { PricingSectionPillProps } from '@/types/landing.types';
 
@@ -483,6 +483,7 @@ function PricingCardMobile({
 }
 
 function PricingDesktopPanel() {
+  const motionRootRef = useRef<HTMLDivElement>(null);
   const [motionStep, setMotionStep] = useState<PricingMotionStep>(-1);
 
   const playPricingMotion = useCallback(() => {
@@ -493,12 +494,17 @@ function PricingDesktopPanel() {
   }, []);
 
   const triggerMotion = useOneWayMotion(playPricingMotion);
+  useInViewMotionTrigger(triggerMotion, motionRootRef);
 
   const motionEngaged = motionStep >= 0;
   const motionSettled = motionStep >= 1;
 
   const headerStyle = (options?: { transitionDelay?: string }): CSSProperties =>
-    getMotionSlideRevealStyle(motionEngaged, PRICING_MOTION_STYLE, options);
+    getMotionSlideRevealStyle(motionSettled, PRICING_MOTION_STYLE, {
+      ...options,
+      engaged: motionEngaged,
+      animateOpacity: true,
+    });
 
   return (
     <div data-testid={pr.root} className={PRICING_DESKTOP_ROOT_CLASS}>
@@ -523,6 +529,7 @@ function PricingDesktopPanel() {
           aria-hidden="true"
         />
         <div
+          ref={motionRootRef}
           data-testid={pr.motion.root}
           className={PRICING_DESKTOP_CONTENT_CLASS}
           onMouseEnter={triggerMotion}

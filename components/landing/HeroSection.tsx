@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import {
   DESKTOP_STATS,
   LOGO_PARTNERS,
@@ -21,10 +21,11 @@ import {
   HERO_MOTION_CTA_CLUSTER_HEIGHT_PX,
   HERO_MOTION_CTA_PARTIAL_OFFSET_PX,
   HERO_MOTION_TEXT_COLUMN_HEIGHT_PX,
+  isStaticTwinIdleMode,
   type HeroMotionStep,
 } from '@/constants/motion.constants';
 import { runHeroMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import { useInViewMotionTrigger, useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type { HeroOptionalClassNameProps, HeroSectionProps } from '@/types/landing.types';
 import { HeroPrimaryCta } from './HeroPrimaryCta';
@@ -274,8 +275,10 @@ function HeroLogosStrip() {
 
 function HeroDesktopMotion() {
   const hero = ids.component.landing.hero;
+  const motionRootRef = useRef<HTMLDivElement>(null);
   const textBlockRef = useRef<HTMLDivElement>(null);
   const textColumnRef = useRef<HTMLDivElement>(null);
+  const staticTwinIdle = isStaticTwinIdleMode();
   const [motionEngaged, setMotionEngaged] = useState(false);
   const [motionStep, setMotionStep] = useState<HeroMotionStep>(0);
   const [ctaTerminalOffsetPx, setCtaTerminalOffsetPx] = useState(
@@ -285,7 +288,7 @@ function HeroDesktopMotion() {
     HERO_MOTION_COPY_CLUSTER_MIN_HEIGHT_PX,
   );
 
-  const playMotion = useCallback(() => {
+  const measureCluster = useCallback(() => {
     const textHeight =
       textColumnRef.current?.offsetHeight ?? HERO_MOTION_TEXT_COLUMN_HEIGHT_PX;
     const terminalOffset = getHeroCtaTerminalOffsetPx(textHeight);
@@ -295,18 +298,32 @@ function HeroDesktopMotion() {
     setClusterMinHeightPx(
       Math.max(clusterHeight, terminalOffset + HERO_MOTION_CTA_CLUSTER_HEIGHT_PX),
     );
+  }, [clusterMinHeightPx]);
+
+  useLayoutEffect(() => {
+    // Read E2E flag inside the effect so the dependency list stays fixed-length
+    // (Fast Refresh errors if the array size changes between hot updates).
+    if (motionEngaged || process.env.NEXT_PUBLIC_E2E_MODE !== '1') {
+      measureCluster();
+    }
+  }, [measureCluster, motionEngaged]);
+
+  const playMotion = useCallback(() => {
+    measureCluster();
     setMotionEngaged(true);
     setMotionStep(0);
     return runHeroMotion(
       () => setMotionStep(1),
       () => setMotionStep(2),
     );
-  }, []);
+  }, [measureCluster]);
 
   const triggerMotion = useOneWayMotion(playMotion);
+  useInViewMotionTrigger(triggerMotion, motionRootRef);
 
   return (
     <div
+      ref={motionRootRef}
       data-testid={hero.motion.root}
       className="hidden min-[1440px]:flex min-[1440px]:flex-col"
       onMouseEnter={triggerMotion}
@@ -318,14 +335,19 @@ function HeroDesktopMotion() {
         <div
           ref={textBlockRef}
           data-testid={hero.textBlock}
-          className={`relative w-[645px] max-w-full shrink-0 ${motionEngaged ? 'overflow-hidden' : ''}`}
+          className={`relative w-[645px] max-w-full shrink-0 ${
+            motionEngaged || !staticTwinIdle ? 'overflow-hidden' : ''
+          }`}
           style={
-            motionEngaged ? { minHeight: `${clusterMinHeightPx}px` } : undefined
+            motionEngaged || !staticTwinIdle
+              ? { minHeight: `${clusterMinHeightPx}px` }
+              : undefined
           }
         >
-          {motionEngaged ? (
+          {motionEngaged || !staticTwinIdle ? (
             <>
               <div
+                ref={textColumnRef}
                 data-testid={hero.motion.textColumn}
                 className="absolute left-0 top-0 z-10 w-full"
                 style={getHeroColumnMotionStyle(motionEngaged, motionStep, 'text')}

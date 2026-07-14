@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import {
   FOOTER_BOTTOM_ROW_CLASS,
   FOOTER_BOTTOM_ROW_MOBILE_CLASS,
@@ -45,7 +45,7 @@ import {
   getFooterNavLinkMotionStyle,
 } from '@/constants/motion.constants';
 import { runFooterLinkEmphasisMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import { useInViewMotionTrigger, useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type { FooterNavColumnConfig, FooterNavLinkProps } from '@/types/shared.types';
 
@@ -211,6 +211,7 @@ function FooterDesktop() {
 }
 
 function FooterMobile() {
+  const motionRootRef = useRef<HTMLDivElement>(null);
   const [motionEngaged, setMotionEngaged] = useState(false);
   const [emphasizedLinkIndex, setEmphasizedLinkIndex] = useState<number | null>(null);
 
@@ -225,10 +226,12 @@ function FooterMobile() {
   }, []);
 
   const triggerMotion = useOneWayMotion(playMotion);
+  useInViewMotionTrigger(triggerMotion, motionRootRef);
 
   return (
     <footer data-testid={ftMobile.root} className={FOOTER_MOBILE_SHELL_CLASS}>
       <div
+        ref={motionRootRef}
         data-testid={ft.motion.root}
         className={FOOTER_MOBILE_INNER_CLASS}
         onMouseEnter={triggerMotion}

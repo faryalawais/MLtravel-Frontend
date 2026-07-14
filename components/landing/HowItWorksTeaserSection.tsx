@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useState, type CSSProperties, type ReactNode } from 'react';
+import { useCallback, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react';
 import {
   HIW_DESKTOP_CARDS,
   HIW_MOBILE_CARDS,
@@ -33,7 +33,7 @@ import {
   MOTION_TRANSITION_PROPERTIES,
 } from '@/constants/motion.constants';
 import { runRapidFourStepMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import { useInViewMotionTrigger, useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
   HiwCardAccent,
@@ -406,6 +406,7 @@ function HiwDesktopCards({
   headerEmphasized,
   motionEngaged,
   onPlaySequence,
+  motionRootRef,
 }: {
   revealedUpTo: number;
   activeIndex: number | null;
@@ -413,10 +414,12 @@ function HiwDesktopCards({
   headerEmphasized: boolean;
   motionEngaged: boolean;
   onPlaySequence: () => void;
+  motionRootRef: RefObject<HTMLDivElement | null>;
 }) {
   return (
     <div className="hidden min-[1440px]:block">
       <div
+        ref={motionRootRef}
         data-testid={hiw.motion.root}
         className="flex justify-center px-[var(--spacing-64)] py-[var(--spacing-40)]"
         onMouseEnter={onPlaySequence}
@@ -491,6 +494,7 @@ function HiwDesktopCards({
 }
 
 export function HowItWorksTeaserSection({ showFooterLink = true }: HowItWorksTeaserSectionProps) {
+  const motionRootRef = useRef<HTMLDivElement>(null);
   const [revealedUpTo, setRevealedUpTo] = useState(-1);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [headerEmphasized, setHeaderEmphasized] = useState(false);
@@ -534,6 +538,7 @@ export function HowItWorksTeaserSection({ showFooterLink = true }: HowItWorksTea
   );
 
   const triggerMotion = useOneWayMotion(playSequence);
+  useInViewMotionTrigger(triggerMotion, motionRootRef);
 
   return (
     <section
@@ -548,6 +553,7 @@ export function HowItWorksTeaserSection({ showFooterLink = true }: HowItWorksTea
         headerEmphasized={headerEmphasized}
         motionEngaged={motionEngaged}
         onPlaySequence={triggerMotion}
+        motionRootRef={motionRootRef}
       />
 
       {/* Mobile — Figma 5164:6690 */}

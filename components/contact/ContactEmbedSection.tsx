@@ -20,6 +20,7 @@ import {
   parseCalendlyPageHeightPx,
   resolveCalendlyShellHeightPx,
 } from '@/constants/contact.constants';
+import { useSectionEntranceMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type { CalendlyPageHeightMessage, ContactEmbedSectionProps } from '@/types/contact.types';
 
@@ -67,6 +68,7 @@ function ContactEmbedFallback({ calendlyUrl }: { calendlyUrl: string }) {
 }
 
 export function ContactEmbedSection({ calendlyUrl }: ContactEmbedSectionProps) {
+  const { rootRef, triggerMotion, entranceStyle } = useSectionEntranceMotion();
   const trimmedUrl = calendlyUrl.trim();
   const [embedUrl, setEmbedUrl] = useState('');
   const [isWideLayout, setIsWideLayout] = useState(false);
@@ -76,6 +78,7 @@ export function ContactEmbedSection({ calendlyUrl }: ContactEmbedSectionProps) {
 
   const shellHeightPx = resolveCalendlyShellHeightPx(isWideLayout, naturalHeightPx);
   const shellHeightClass = isWideLayout ? '' : CONTACT_EMBED_SHELL_HEIGHT_CLASS;
+  const entrance = entranceStyle({ animateOpacity: false });
 
   useEffect(() => {
     if (!trimmedUrl) {
@@ -133,8 +136,11 @@ export function ContactEmbedSection({ calendlyUrl }: ContactEmbedSectionProps) {
   if (!trimmedUrl || !embedUrl || hasError) {
     return (
       <section
+        ref={rootRef}
         data-testid={ids.component.contact.embed.root}
         className={`${CONTACT_EMBED_SHELL_CLASS} ${CONTACT_EMBED_SHELL_HEIGHT_CLASS}`}
+        style={entrance}
+        onMouseEnter={triggerMotion}
       >
         <ContactEmbedFallback calendlyUrl={trimmedUrl} />
       </section>
@@ -143,9 +149,14 @@ export function ContactEmbedSection({ calendlyUrl }: ContactEmbedSectionProps) {
 
   return (
     <section
+      ref={rootRef}
       data-testid={ids.component.contact.embed.root}
       className={`${CONTACT_EMBED_SHELL_CLASS} ${shellHeightClass}`}
-      style={isWideLayout ? { height: `${shellHeightPx}px` } : undefined}
+      style={{
+        ...entrance,
+        ...(isWideLayout ? { height: `${shellHeightPx}px` } : null),
+      }}
+      onMouseEnter={triggerMotion}
     >
       <ContactEmbedSkeleton hidden={!isLoading} />
       {isWideLayout ? (

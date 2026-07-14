@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import {
   HIW_DESKTOP_STATS,
   HIW_HERO_DEMO_CTA_LABEL,
@@ -15,10 +15,11 @@ import {
 import {
   getHiwHeroLayerMotionStyle,
   HERO_MOTION_CTA_CLUSTER_HEIGHT_PX,
+  isStaticTwinIdleMode,
   type HiwHeroMotionStep,
 } from '@/constants/motion.constants';
 import { runHeroMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import { useInViewMotionTrigger, useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import { HeroPrimaryCta } from '@/components/landing/HeroPrimaryCta';
 
@@ -144,8 +145,10 @@ function HeroCtaCluster({ emphasized }: { emphasized: boolean }) {
 
 export function HowItWorksHeroSection() {
   const hero = ids.component.howItWorks.hero;
+  const motionRootRef = useRef<HTMLDivElement>(null);
   const textBlockRef = useRef<HTMLDivElement>(null);
   const headGroupRef = useRef<HTMLDivElement>(null);
+  const staticTwinIdle = isStaticTwinIdleMode();
   const [motionEngaged, setMotionEngaged] = useState(false);
   const [motionStep, setMotionStep] = useState<HiwHeroMotionStep>(0);
   const [ctaSlotTopPx, setCtaSlotTopPx] = useState(HIW_HERO_CTA_SLOT_TOP_PX);
@@ -153,7 +156,7 @@ export function HowItWorksHeroSection() {
     HIW_HERO_TEXT_BLOCK_MIN_HEIGHT_PX,
   );
 
-  const playMotion = useCallback(() => {
+  const measureCluster = useCallback(() => {
     const headHeight = headGroupRef.current?.offsetHeight ?? HIW_HERO_HEAD_GROUP_HEIGHT_PX;
     const slotTop = headHeight + HIW_HERO_TEXT_BLOCK_GAP_PX;
     const clusterHeight = textBlockRef.current?.offsetHeight ?? textBlockMinHeightPx;
@@ -166,15 +169,28 @@ export function HowItWorksHeroSection() {
         clusterHeight,
       ),
     );
+  }, [textBlockMinHeightPx]);
+
+  useLayoutEffect(() => {
+    // Read E2E flag inside the effect so the dependency list stays fixed-length
+    // (Fast Refresh errors if the array size changes between hot updates).
+    if (motionEngaged || process.env.NEXT_PUBLIC_E2E_MODE !== '1') {
+      measureCluster();
+    }
+  }, [measureCluster, motionEngaged]);
+
+  const playMotion = useCallback(() => {
+    measureCluster();
     setMotionEngaged(true);
     setMotionStep(0);
     return runHeroMotion(
       () => setMotionStep(1),
       () => setMotionStep(2),
     );
-  }, [textBlockMinHeightPx]);
+  }, [measureCluster]);
 
   const triggerMotion = useOneWayMotion(playMotion);
+  useInViewMotionTrigger(triggerMotion, motionRootRef);
 
   const headMotionStyle = getHiwHeroLayerMotionStyle(motionEngaged, motionStep, 'head');
   const ctaMotionStyle = getHiwHeroLayerMotionStyle(motionEngaged, motionStep, 'cta');
@@ -186,6 +202,7 @@ export function HowItWorksHeroSection() {
       className="hidden bg-[var(--color-background-page)] lg:block"
     >
       <div
+        ref={motionRootRef}
         data-testid={hero.motion.root}
         className="flex flex-col"
         onMouseEnter={triggerMotion}
@@ -197,14 +214,19 @@ export function HowItWorksHeroSection() {
           <div
             ref={textBlockRef}
             data-testid={hero.textBlock}
-            className={`w-full max-w-[642px] ${motionEngaged ? 'relative overflow-hidden' : ''}`}
+            className={`w-full max-w-[642px] ${
+              motionEngaged || !staticTwinIdle ? 'relative overflow-hidden' : ''
+            }`}
             style={
-              motionEngaged ? { minHeight: `${textBlockMinHeightPx}px` } : undefined
+              motionEngaged || !staticTwinIdle
+                ? { minHeight: `${textBlockMinHeightPx}px` }
+                : undefined
             }
           >
-            {motionEngaged ? (
+            {motionEngaged || !staticTwinIdle ? (
               <>
                 <div
+                  ref={headGroupRef}
                   data-testid={hero.motion.headGroup}
                   className="absolute left-0 top-0 z-10 w-full"
                   style={headMotionStyle}

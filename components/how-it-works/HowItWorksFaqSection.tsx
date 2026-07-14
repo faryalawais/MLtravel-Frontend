@@ -19,6 +19,8 @@ import {
   HIW_FAQ_TABS,
   HIW_FAQ_TABS_CLASS,
 } from '@/constants/how-it-works.constants';
+import { MOTION_DELAY_STEP } from '@/constants/motion.constants';
+import { useSectionEntranceMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type { HiwFaqItemConfig } from '@/types/how-it-works.types';
 
@@ -81,6 +83,7 @@ function FaqAccordionItem({
 
 export function HowItWorksFaqSection() {
   const baseId = useId();
+  const { rootRef, triggerMotion, entranceStyle } = useSectionEntranceMotion();
   const [activeTabId, setActiveTabId] = useState(HIW_FAQ_TABS[0].id);
   const [expandedByTab, setExpandedByTab] = useState<Record<string, number>>(() => ({
     [HIW_FAQ_TABS[0].id]: HIW_FAQ_DEFAULT_EXPANDED_INDEX,
@@ -108,12 +111,28 @@ export function HowItWorksFaqSection() {
   );
 
   return (
-    <section data-testid={faq.root} className={HIW_FAQ_SECTION_CLASS}>
-      <h2 data-testid={faq.heading} className={HIW_FAQ_HEADING_CLASS}>
+    <section
+      ref={rootRef}
+      data-testid={faq.root}
+      className={HIW_FAQ_SECTION_CLASS}
+      onMouseEnter={triggerMotion}
+    >
+      <h2
+        data-testid={faq.heading}
+        className={HIW_FAQ_HEADING_CLASS}
+        style={entranceStyle({ animateOpacity: false })}
+      >
         FAQs
       </h2>
 
-      <div data-testid={faq.block} className={HIW_FAQ_BLOCK_CLASS}>
+      <div
+        data-testid={faq.block}
+        className={HIW_FAQ_BLOCK_CLASS}
+        style={entranceStyle({
+          animateOpacity: false,
+          transitionDelay: MOTION_DELAY_STEP,
+        })}
+      >
         <div
           data-testid={faq.tabs}
           role="tablist"

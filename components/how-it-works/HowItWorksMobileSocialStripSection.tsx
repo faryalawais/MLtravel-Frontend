@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import {
   HIW_BENEFITS_STATS_ROOT_TEST_ID,
@@ -22,7 +24,8 @@ import {
   SOCIAL_PROOF_DESKTOP_TESTIMONIALS,
   SOCIAL_PROOF_QUOTE_MOBILE_CLASS,
 } from '@/constants/landing.constants';
-import { RESPONSIVE_IMAGE_DIMENSION_STYLE } from '@/constants/motion.constants';
+import { MOTION_DELAY_STEP, RESPONSIVE_IMAGE_DIMENSION_STYLE } from '@/constants/motion.constants';
+import { useSectionEntranceMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type { HiwBenefitCardConfig } from '@/types/how-it-works.types';
 
@@ -83,9 +86,20 @@ function HiwMobileBenefitCard({ card }: { card: HiwBenefitCardConfig }) {
 }
 
 export function HowItWorksMobileSocialStripSection() {
+  const { rootRef, triggerMotion, entranceStyle } = useSectionEntranceMotion();
+
   return (
-    <section data-testid={mobileSocialStrip.root} className={HIW_MOBILE_SOCIAL_STRIP_SECTION_CLASS}>
-      <article data-testid={testimonial.blockTestId} className={HIW_MOBILE_TESTIMONIAL_BLOCK_CLASS}>
+    <section
+      ref={rootRef}
+      data-testid={mobileSocialStrip.root}
+      className={HIW_MOBILE_SOCIAL_STRIP_SECTION_CLASS}
+      onMouseEnter={triggerMotion}
+    >
+      <article
+        data-testid={testimonial.blockTestId}
+        className={HIW_MOBILE_TESTIMONIAL_BLOCK_CLASS}
+        style={entranceStyle({ animateOpacity: false })}
+      >
         <div
           data-testid={mobileSocialStrip.testimonial}
           className="flex w-full flex-col items-center gap-[var(--spacing-16)]"
@@ -129,7 +143,14 @@ export function HowItWorksMobileSocialStripSection() {
         </div>
       </article>
 
-      <div data-testid={HIW_BENEFITS_STATS_ROOT_TEST_ID} className={HIW_MOBILE_BENEFITS_STATS_CLASS}>
+      <div
+        data-testid={HIW_BENEFITS_STATS_ROOT_TEST_ID}
+        className={HIW_MOBILE_BENEFITS_STATS_CLASS}
+        style={entranceStyle({
+          animateOpacity: false,
+          transitionDelay: MOTION_DELAY_STEP,
+        })}
+      >
         {HIW_BENEFIT_CARDS.map((card) => (
           <HiwMobileBenefitCard key={card.title} card={card} />
         ))}

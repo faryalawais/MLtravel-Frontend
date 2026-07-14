@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useState, type CSSProperties } from 'react';
+import { useCallback, useRef, useState, type CSSProperties } from 'react';
 import {
   FEATURE_GRID_ACCENT_BAR_CLASS,
   FEATURE_GRID_BADGE_LABEL_CLASS,
@@ -40,7 +40,7 @@ import {
 } from '@/constants/motion.constants';
 import { HeroPrimaryCta } from '@/components/landing/HeroPrimaryCta';
 import { runFeatureGridMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import { useInViewMotionTrigger, useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
   FeatureGridCardAccent,
@@ -359,6 +359,7 @@ function FeatureGridCardsDesktop({
 }
 
 function FeatureGridDesktopPanel() {
+  const motionRootRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [headerEmphasized, setHeaderEmphasized] = useState(false);
   const [cascadeActive, setCascadeActive] = useState(false);
@@ -397,10 +398,12 @@ function FeatureGridDesktopPanel() {
   );
 
   const triggerMotion = useOneWayMotion(playSequence);
+  useInViewMotionTrigger(triggerMotion, motionRootRef);
 
   return (
     <div data-testid={fg.root} className="hidden min-[1440px]:block">
       <div
+        ref={motionRootRef}
         data-testid={fg.motion.root}
         className={`${FEATURE_GRID_DESKTOP_FRAME_CLASS} overflow-hidden`}
         onMouseEnter={triggerMotion}

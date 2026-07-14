@@ -69,7 +69,7 @@ import {
   RESPONSIVE_IMAGE_DIMENSION_STYLE,
 } from '@/constants/motion.constants';
 import { runSimpleOneStepMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import { useInViewMotionTrigger, useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
   SocialProofSectionPillProps,
@@ -480,6 +480,8 @@ export function SocialProofSection() {
   const [clientsMotionStep, setClientsMotionStep] = useState<SocialProofClientsMotionStep>(-1);
 
   const mobileScrollRef = useRef<HTMLDivElement>(null);
+  const testimonialsMotionRootRef = useRef<HTMLDivElement>(null);
+  const clientsMotionRootRef = useRef<HTMLDivElement>(null);
   const carouselStartedRef = useRef(false);
   const carouselAutoPausedRef = useRef(false);
   const autoAdvanceTimerRef = useRef<number | null>(null);
@@ -584,6 +586,7 @@ export function SocialProofSection() {
   }, [goToSlide]);
 
   const triggerTestimonialsMotion = useOneWayMotion(playTestimonialsMotion);
+  useInViewMotionTrigger(triggerTestimonialsMotion, testimonialsMotionRootRef);
 
   const playClientsMotion = useCallback(() => {
     return runSimpleOneStepMotion(
@@ -593,6 +596,7 @@ export function SocialProofSection() {
   }, []);
 
   const triggerClientsMotion = useOneWayMotion(playClientsMotion);
+  useInViewMotionTrigger(triggerClientsMotion, clientsMotionRootRef);
 
   const selectSlideManually = useCallback(
     (index: number) => {
@@ -691,6 +695,7 @@ export function SocialProofSection() {
         <div className={SOCIAL_PROOF_DESKTOP_FRAME_CLASS}>
           <div className="relative flex flex-col gap-[var(--spacing-40)] pb-[var(--spacing-40)]">
             <div
+              ref={testimonialsMotionRootRef}
               data-testid={spMotion.root}
               className="relative flex flex-col items-center gap-[var(--spacing-40)] px-[var(--spacing-64)] pt-[var(--spacing-64)]"
               onMouseEnter={triggerTestimonialsMotion}
@@ -790,6 +795,7 @@ export function SocialProofSection() {
             </div>
 
             <div
+              ref={clientsMotionRootRef}
               data-testid={spClients.root}
               onMouseEnter={triggerClientsMotion}
             >

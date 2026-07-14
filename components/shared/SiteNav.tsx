@@ -9,7 +9,7 @@ export function SiteNav() {
     <>
       <header
         data-testid={ids.component.navbar.root}
-        className="hidden min-[1440px]:flex h-[var(--spacing-64)] w-full items-center justify-between bg-[var(--color-background-page)] px-[var(--spacing-40)] py-[var(--spacing-20)]"
+        className="hidden lg:flex h-[var(--spacing-64)] w-full items-center justify-between bg-[var(--color-background-page)] px-[var(--spacing-40)] py-[var(--spacing-20)]"
       >
         <div
           data-testid={ids.component.navbar.brand}

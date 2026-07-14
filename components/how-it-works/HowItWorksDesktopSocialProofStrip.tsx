@@ -9,7 +9,7 @@ import {
   HIW_DESKTOP_BENEFIT_TITLE_CLASS,
   HIW_DESKTOP_SOCIAL_PROOF_STRIP_CLASS,
 } from '@/constants/how-it-works.constants';
-import { DEFAULT_MOTION_STYLE, getMotionSlideRevealStyle } from '@/constants/motion.constants';
+import { DEFAULT_MOTION_STYLE, getMotionSlideRevealStyle, isStaticTwinIdleMode } from '@/constants/motion.constants';
 import { ids } from '@/tokens/build/test-ids';
 import type { HiwBenefitCardConfig } from '@/types/how-it-works.types';
 
@@ -36,16 +36,17 @@ export function HowItWorksDesktopSocialProofStrip({
   motionEngaged?: boolean;
   socialProofRevealed?: boolean;
 }) {
-  const stripVisible = !motionEngaged || socialProofRevealed;
+  const revealed = isStaticTwinIdleMode()
+    ? !motionEngaged || socialProofRevealed
+    : socialProofRevealed;
 
   return (
     <div
       data-testid={socialProofStrip}
       className={HIW_DESKTOP_SOCIAL_PROOF_STRIP_CLASS}
-      style={getMotionSlideRevealStyle(stripVisible, DEFAULT_MOTION_STYLE, {
-        engaged: motionEngaged,
+      style={getMotionSlideRevealStyle(revealed, DEFAULT_MOTION_STYLE, {
+        engaged: isStaticTwinIdleMode() ? (motionEngaged ? true : undefined) : motionEngaged,
         animateOpacity: true,
-        idleOpacity: 0,
       })}
     >
       <SocialProofTestimonialDesktopBlock />

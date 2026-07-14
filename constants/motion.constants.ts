@@ -5,6 +5,38 @@ import {
   MOTION_DURATION_DEFAULT_VAR,
 } from '@/lib/motion-tokens';
 
+/**
+ * Playwright sets `NEXT_PUBLIC_E2E_MODE=1` — keep Figma staticTwin idle so visual
+ * baselines and fixture timing still measure hover from the finished layout.
+ * Real browsers hide motion layers until the section enters view, then play.
+ */
+export function isStaticTwinIdleMode(): boolean {
+  return process.env.NEXT_PUBLIC_E2E_MODE === '1';
+}
+
+/** Production: motion layers stay invisible until reveal/settle. */
+export function getMotionVisibilityOpacity(
+  visible: boolean,
+): Pick<CSSProperties, 'opacity' | 'pointerEvents'> {
+  if (visible) {
+    return { opacity: 1 };
+  }
+
+  return { opacity: 0, pointerEvents: 'none' };
+}
+
+/** Simple-one-step / gate: visible after settle; E2E shows static twin before hover. */
+export function isMotionLayerVisible(
+  motionEngaged: boolean,
+  motionSettled: boolean,
+): boolean {
+  if (isStaticTwinIdleMode() && !motionEngaged) {
+    return true;
+  }
+
+  return motionSettled;
+}
+
 /** Semantic step-delay tokens (motion-chains / primitives). */
 export const MOTION_DELAY_STEP = 'var(--motion-duration-step-delay)';
 export const MOTION_DELAY_AUTO_ADVANCE = 'var(--motion-duration-auto-advance)';
@@ -74,7 +106,11 @@ export function getHiwFinalCtaBannerTransform(
   motionEngaged: boolean,
   motionSettled: boolean,
 ): string {
-  if (!motionEngaged || motionSettled) {
+  if (motionSettled) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  if (isStaticTwinIdleMode() && !motionEngaged) {
     return MOTION_SLIDE_REST_TRANSFORM;
   }
 
@@ -88,14 +124,16 @@ export function getHiwFinalCtaBannerMotionStyle(
   baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
 ): CSSProperties {
   const snapEntry = motionEngaged && !motionSettled;
+  const visible = isMotionLayerVisible(motionEngaged, motionSettled);
 
   return {
     ...baseStyle,
-    transitionProperty: 'transform',
-    transitionDuration: snapEntry
+    transitionProperty: 'transform, opacity',
+    transitionDuration: snapEntry || (!motionEngaged && !isStaticTwinIdleMode())
       ? '0ms'
       : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
     transform: getHiwFinalCtaBannerTransform(motionEngaged, motionSettled),
+    ...getMotionVisibilityOpacity(visible),
   };
 }
 
@@ -103,7 +141,11 @@ export function getPricingMainGroupTransform(
   motionEngaged: boolean,
   motionSettled: boolean,
 ): string {
-  if (!motionEngaged || motionSettled) {
+  if (motionSettled) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  if (isStaticTwinIdleMode() && !motionEngaged) {
     return MOTION_SLIDE_REST_TRANSFORM;
   }
 
@@ -117,14 +159,16 @@ export function getPricingMainGroupMotionStyle(
   baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
 ): CSSProperties {
   const snapEntry = motionEngaged && !motionSettled;
+  const visible = isMotionLayerVisible(motionEngaged, motionSettled);
 
   return {
     ...baseStyle,
-    transitionProperty: 'transform',
-    transitionDuration: snapEntry
+    transitionProperty: 'transform, opacity',
+    transitionDuration: snapEntry || (!motionEngaged && !isStaticTwinIdleMode())
       ? '0ms'
       : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
     transform: getPricingMainGroupTransform(motionEngaged, motionSettled),
+    ...getMotionVisibilityOpacity(visible),
   };
 }
 
@@ -132,7 +176,11 @@ export function getComparisonMainGroupTransform(
   motionEngaged: boolean,
   motionSettled: boolean,
 ): string {
-  if (!motionEngaged || motionSettled) {
+  if (motionSettled) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  if (isStaticTwinIdleMode() && !motionEngaged) {
     return MOTION_SLIDE_REST_TRANSFORM;
   }
 
@@ -146,19 +194,25 @@ export function getComparisonMainGroupMotionStyle(
   baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
 ): CSSProperties {
   const snapEntry = motionEngaged && !motionSettled;
+  const visible = isMotionLayerVisible(motionEngaged, motionSettled);
 
   return {
     ...baseStyle,
-    transitionProperty: 'transform',
-    transitionDuration: snapEntry
+    transitionProperty: 'transform, opacity',
+    transitionDuration: snapEntry || (!motionEngaged && !isStaticTwinIdleMode())
       ? '0ms'
       : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
     transform: getComparisonMainGroupTransform(motionEngaged, motionSettled),
+    ...getMotionVisibilityOpacity(visible),
   };
 }
 
 export function getProblemCtaTransform(motionEngaged: boolean, settled: boolean): string {
-  if (!motionEngaged || settled) {
+  if (settled) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  if (isStaticTwinIdleMode() && !motionEngaged) {
     return MOTION_SLIDE_REST_TRANSFORM;
   }
 
@@ -171,11 +225,17 @@ export function getProblemCtaMotionStyle(
   settled: boolean,
   baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
 ): CSSProperties {
+  const visible = isMotionLayerVisible(motionEngaged, settled);
+
   return {
     ...baseStyle,
-    transitionProperty: 'transform',
-    transitionDuration: baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    transitionProperty: 'transform, opacity',
+    transitionDuration:
+      !motionEngaged && !isStaticTwinIdleMode()
+        ? '0ms'
+        : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
     transform: getProblemCtaTransform(motionEngaged, settled),
+    ...getMotionVisibilityOpacity(visible),
   };
 }
 
@@ -188,7 +248,11 @@ export const HIW_MOTION_FOOTER_OFFSET_PX =
   HIW_MOTION_FOOTER_POSE_ENTRY_PX - HIW_MOTION_FOOTER_POSE_TERMINAL_PX;
 
 export function getHiwFooterTransform(motionEngaged: boolean, settled: boolean): string {
-  if (!motionEngaged || settled) {
+  if (settled) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  if (isStaticTwinIdleMode() && !motionEngaged) {
     return MOTION_SLIDE_REST_TRANSFORM;
   }
 
@@ -201,11 +265,17 @@ export function getHiwFooterMotionStyle(
   settled: boolean,
   baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
 ): CSSProperties {
+  const visible = isMotionLayerVisible(motionEngaged, settled);
+
   return {
     ...baseStyle,
-    transitionProperty: 'transform',
-    transitionDuration: baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    transitionProperty: 'transform, opacity',
+    transitionDuration:
+      !motionEngaged && !isStaticTwinIdleMode()
+        ? '0ms'
+        : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
     transform: getHiwFooterTransform(motionEngaged, settled),
+    ...getMotionVisibilityOpacity(visible),
   };
 }
 
@@ -266,11 +336,16 @@ export function getFeatureGridLayerOffsetPx(
   motionEngaged: boolean,
   motionStep: FeatureGridMotionStep,
 ): number {
+  const poses = FEATURE_GRID_LAYER_POSE_Y[layer];
+
+  // Pre-trigger idle matches animationState1 unless E2E staticTwin mode.
   if (!motionEngaged || motionStep < 0) {
-    return 0;
+    if (isStaticTwinIdleMode()) {
+      return 0;
+    }
+    return poses.idle - poses.state4;
   }
 
-  const poses = FEATURE_GRID_LAYER_POSE_Y[layer];
   const absoluteY =
     motionStep === 0
       ? poses.idle
@@ -304,14 +379,17 @@ export function getFeatureGridContentMotionStyle(
 ): CSSProperties {
   const snapEntry = motionEngaged && motionStep === 0;
   const offsetPx = getFeatureGridLayerOffsetPx(layer, motionEngaged, motionStep);
+  const visible =
+    (isStaticTwinIdleMode() && !motionEngaged) || (motionEngaged && motionStep >= 1);
 
   return {
     ...baseStyle,
-    transitionProperty: 'transform',
-    transitionDuration: snapEntry
+    transitionProperty: 'transform, opacity',
+    transitionDuration: snapEntry || (!motionEngaged && !isStaticTwinIdleMode())
       ? '0ms'
       : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
     transform: `translateY(${offsetPx}px)`,
+    ...getMotionVisibilityOpacity(visible),
   };
 }
 
@@ -344,7 +422,12 @@ export function getHiwHeroHeadGroupTransform(
   motionEngaged: boolean,
   step: HiwHeroMotionStep,
 ): string {
-  if (!motionEngaged || step >= 1) {
+  if (isStaticTwinIdleMode() && !motionEngaged) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  // Idle (!engaged) and step 0 share animationState1 entry pose.
+  if (motionEngaged && step >= 1) {
     return MOTION_SLIDE_REST_TRANSFORM;
   }
 
@@ -355,7 +438,12 @@ export function getHiwHeroCtaGroupTransform(
   motionEngaged: boolean,
   step: HiwHeroMotionStep,
 ): string {
-  if (!motionEngaged || step >= 2) {
+  if (isStaticTwinIdleMode() && !motionEngaged) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  // Idle (!engaged) and steps 0–1 share entry pose until CTA settles at step 2.
+  if (motionEngaged && step >= 2) {
     return MOTION_SLIDE_REST_TRANSFORM;
   }
 
@@ -374,14 +462,18 @@ export function getHiwHeroLayerMotionStyle(
     layer === 'head'
       ? getHiwHeroHeadGroupTransform(motionEngaged, step)
       : getHiwHeroCtaGroupTransform(motionEngaged, step);
+  const visible =
+    (isStaticTwinIdleMode() && !motionEngaged) ||
+    (motionEngaged && (layer === 'head' ? step >= 1 : step >= 1));
 
   return {
     ...baseStyle,
-    transitionProperty: 'transform',
-    transitionDuration: snapEntry
+    transitionProperty: 'transform, opacity',
+    transitionDuration: snapEntry || (!motionEngaged && !isStaticTwinIdleMode())
       ? '0ms'
       : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
     transform,
+    ...getMotionVisibilityOpacity(visible),
   };
 }
 
@@ -394,13 +486,16 @@ export function getHeroTextColumnTransform(
   motionEngaged: boolean,
   step: HeroMotionStep,
 ): string {
-  if (!motionEngaged) {
+  if (isStaticTwinIdleMode() && !motionEngaged) {
     return MOTION_SLIDE_REST_TRANSFORM;
   }
 
-  return step >= 1
-    ? MOTION_SLIDE_REST_TRANSFORM
-    : `translateY(${HERO_MOTION_COLUMN_OFFSET_PX}px)`;
+  // Idle (!engaged) and step 0 share animationState1 entry pose.
+  if (motionEngaged && step >= 1) {
+    return MOTION_SLIDE_REST_TRANSFORM;
+  }
+
+  return `translateY(${HERO_MOTION_COLUMN_OFFSET_PX}px)`;
 }
 
 export function getHeroCtaColumnTransform(
@@ -408,14 +503,15 @@ export function getHeroCtaColumnTransform(
   step: HeroMotionStep,
   ctaTerminalOffsetPx: number = HERO_MOTION_CTA_PARTIAL_OFFSET_PX,
 ): string {
-  if (!motionEngaged) {
+  if (isStaticTwinIdleMode() && !motionEngaged) {
     return MOTION_SLIDE_REST_TRANSFORM;
   }
 
-  if (step >= 2) {
+  if (motionEngaged && step >= 2) {
     return `translateY(${ctaTerminalOffsetPx}px)`;
   }
 
+  // Idle / steps 0–1: shared-origin entry offset (animationState1).
   return `translateY(${HERO_MOTION_COLUMN_OFFSET_PX}px)`;
 }
 
@@ -432,17 +528,21 @@ export function getHeroColumnMotionStyle(
   const { baseStyle = HERO_MOTION_STYLE, ctaTerminalOffsetPx = HERO_MOTION_CTA_PARTIAL_OFFSET_PX } =
     options;
   const snapEntry = motionEngaged && step === 0;
+  const visible =
+    (isStaticTwinIdleMode() && !motionEngaged) ||
+    (motionEngaged && (column === 'text' ? step >= 1 : step >= 1));
 
   return {
     ...baseStyle,
-    transitionProperty: 'transform',
-    transitionDuration: snapEntry
+    transitionProperty: 'transform, opacity',
+    transitionDuration: snapEntry || (!motionEngaged && !isStaticTwinIdleMode())
       ? '0ms'
       : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
     transform:
       column === 'text'
         ? getHeroTextColumnTransform(motionEngaged, step)
         : getHeroCtaColumnTransform(motionEngaged, step, ctaTerminalOffsetPx),
+    ...getMotionVisibilityOpacity(visible),
   };
 }
 
@@ -479,27 +579,38 @@ export function getMotionSlideRevealStyle(
   baseStyle: CSSProperties = DEFAULT_MOTION_STYLE,
   options?: MotionRevealOptions,
 ): CSSProperties {
-  if (options?.engaged === false) {
+  // E2E / staticTwin idle: finished layout until motion engages.
+  if (isStaticTwinIdleMode() && !revealed && options?.engaged !== true) {
     return {};
   }
 
   const animateOpacity = options?.animateOpacity ?? true;
-  const idleOpacity = options?.idleOpacity ?? MOTION_REVEAL_HERO_IDLE_OPACITY;
+  const awaitingTrigger = options?.engaged === false;
+  const atEntry = awaitingTrigger || !revealed;
+
+  if (atEntry) {
+    return {
+      ...baseStyle,
+      transitionProperty: options?.transitionProperty ?? 'opacity, transform',
+      transitionDelay: options?.transitionDelay ?? '0ms',
+      // Snap while waiting / priming — next revealed frame animates from here.
+      transitionDuration: '0ms',
+      opacity: 0,
+      transform: MOTION_SLIDE_ENTRY_TRANSFORM,
+      pointerEvents: 'none',
+    };
+  }
 
   return {
     ...baseStyle,
     transitionProperty: options?.transitionProperty ?? 'opacity, transform',
     transitionDelay: options?.transitionDelay ?? '0ms',
-    transitionDuration:
-      options?.snapPending && !revealed
-        ? '0ms'
-        : baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
-    opacity: animateOpacity ? (revealed ? 1 : idleOpacity) : 1,
-    transform: revealed
-      ? options?.liftWhenRevealed
-        ? MOTION_SLIDE_LIFT_TRANSFORM
-        : MOTION_SLIDE_REST_TRANSFORM
-      : MOTION_SLIDE_ENTRY_TRANSFORM,
+    transitionDuration: baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
+    opacity: 1,
+    transform: options?.liftWhenRevealed
+      ? MOTION_SLIDE_LIFT_TRANSFORM
+      : MOTION_SLIDE_REST_TRANSFORM,
+    ...(animateOpacity ? null : null),
   };
 }
 
@@ -574,19 +685,19 @@ export function getMotionCascadeCardSurfaceStyle({
     transform: MOTION_SLIDE_REST_TRANSFORM,
   };
 
-  if (!motionEngaged) {
-    return motionBase;
-  }
+  const hasRevealed = motionEngaged && cardIndex <= revealedUpTo;
 
-  const hasRevealed = cardIndex <= revealedUpTo;
-
+  // Production idle / unrevealed: keep transition duration so reveal can animate.
   if (!hasRevealed) {
+    if (isStaticTwinIdleMode() && !motionEngaged) {
+      return motionBase;
+    }
+
     return {
       ...motionBase,
       transform: MOTION_SLIDE_PENDING_TRANSFORM,
       opacity: 0,
       pointerEvents: 'none',
-      transitionDuration: '0ms',
     };
   }
 

@@ -11,7 +11,7 @@ export const MOBILE_NAV_LINK_CLASS_NAME =
 /** Shared layout — site navigation links (desktop + mobile drawer) */
 export const SITE_NAV_LINKS = [
   {
-    href: '/',
+    href: '/#product',
     label: 'Product',
     linkTestId: ids.component.navbar.productLink,
     labelTestId: ids.component.navbar.productLinkLabel,

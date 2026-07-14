@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import {
   HIW_SIX_WEEK_ACCENT_BAR_CLASS,
   HIW_SIX_WEEK_ACCENT_BAR_FILL_CLASS,
@@ -42,7 +42,7 @@ import {
   PROBLEM_TOKENS,
 } from '@/constants/landing.constants';
 import { runChainedTransitionMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import { useInViewMotionTrigger, useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import { HowItWorksDesktopSocialProofStrip } from '@/components/how-it-works/HowItWorksDesktopSocialProofStrip';
 import type { SixWeekAccentBarVariant, SixWeekCardConfig } from '@/types/how-it-works.types';
@@ -240,6 +240,7 @@ function SixWeekOnboardingCard({
 }
 
 export function HowItWorksSixWeekSection() {
+  const motionRootRef = useRef<HTMLDivElement>(null);
   const [revealedUpTo, setRevealedUpTo] = useState(-1);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [headerEmphasized, setHeaderEmphasized] = useState(false);
@@ -291,6 +292,7 @@ export function HowItWorksSixWeekSection() {
   );
 
   const triggerMotion = useOneWayMotion(playSequence);
+  useInViewMotionTrigger(triggerMotion, motionRootRef);
 
   return (
     <section
@@ -298,6 +300,7 @@ export function HowItWorksSixWeekSection() {
       className="flex w-full flex-col items-center gap-[var(--spacing-60)] bg-[var(--color-background-page)]"
     >
       <div
+        ref={motionRootRef}
         data-testid={sixWeek.motion.root}
         className="hidden w-full flex-col items-center gap-[var(--spacing-60)] lg:flex"
         onMouseEnter={triggerMotion}

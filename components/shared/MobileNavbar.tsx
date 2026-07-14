@@ -82,7 +82,7 @@ export function MobileNavbar() {
     <>
       <header
         data-testid={ids.component.navbar.mobile.root}
-        className="flex min-[1440px]:hidden h-[var(--spacing-60)] w-full items-center justify-between bg-[var(--color-background-page)] px-[var(--space-md)] py-[var(--spacing-12)]"
+        className="flex lg:hidden h-[var(--spacing-60)] w-full items-center justify-between bg-[var(--color-background-page)] px-[var(--space-md)] py-[var(--spacing-12)]"
       >
         <div
           data-testid={ids.component.navbar.mobile.leadingCluster}
@@ -131,7 +131,7 @@ export function MobileNavbar() {
 
       {menuMounted ? (
         <div
-          className={`fixed inset-0 z-50 min-[1440px]:hidden ${menuVisible ? '' : 'pointer-events-none'}`}
+          className={`fixed inset-0 z-50 lg:hidden ${menuVisible ? '' : 'pointer-events-none'}`}
           role="presentation"
         >
           <button

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useState, type CSSProperties } from 'react';
+import { useCallback, useRef, useState, type CSSProperties, type RefObject } from 'react';
 import {
   CARD_SHELL_DEFAULT,
   CARD_SHELL_HIGHLIGHT,
@@ -32,7 +32,12 @@ import {
   MOTION_TRANSITION_PROPERTIES,
 } from '@/constants/motion.constants';
 import { runRapidFourStepMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import {
+  useHashMotionTrigger,
+  useInViewMotionTrigger,
+  useOneWayMotion,
+  useSectionEntranceMotion,
+} from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
   AccentBarProps,
@@ -337,6 +342,7 @@ function ProblemCtaMobile() {
 }
 
 function ProblemDesktopContent() {
+  const motionRootRef = useRef<HTMLDivElement>(null);
   const [revealedUpTo, setRevealedUpTo] = useState(-1);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [headerEmphasized, setHeaderEmphasized] = useState(false);
@@ -380,9 +386,12 @@ function ProblemDesktopContent() {
   );
 
   const triggerMotion = useOneWayMotion(playSequence);
+  useInViewMotionTrigger(triggerMotion, motionRootRef);
+  useHashMotionTrigger(triggerMotion, '#product');
 
   return (
     <div
+      ref={motionRootRef}
       data-testid={problem.motion.root}
       data-motion-duration="motion.duration.default"
       className="flex justify-center px-[var(--spacing-64)] py-[var(--spacing-40)]"
@@ -401,7 +410,7 @@ function ProblemDesktopContent() {
               className="flex w-full max-w-[900px] flex-col items-center"
               style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
                 engaged: motionEngaged,
-                animateOpacity: false,
+                animateOpacity: true,
               })}
             >
               <div
@@ -417,7 +426,7 @@ function ProblemDesktopContent() {
                   className="flex flex-col items-center gap-[var(--spacing-8)]"
                   style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
                     engaged: motionEngaged,
-                    animateOpacity: false,
+                    animateOpacity: true,
                   })}
                 >
                   <h2
@@ -425,7 +434,7 @@ function ProblemDesktopContent() {
                     className={LANDING_SECTION_HEADING_DESKTOP_CLASS}
                     style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
                       engaged: motionEngaged,
-                      animateOpacity: false,
+                      animateOpacity: true,
                     })}
                   >
                     The industry charges you
@@ -437,7 +446,7 @@ function ProblemDesktopContent() {
                     className={LANDING_SECTION_SUBTITLE_CLASS}
                     style={getMotionSlideRevealStyle(headerEmphasized, PROBLEM_MOTION_STYLE, {
                       engaged: motionEngaged,
-                      animateOpacity: false,
+                      animateOpacity: true,
                       transitionDelay: MOTION_DELAY_STEP,
                     })}
                   >
@@ -473,6 +482,9 @@ function ProblemDesktopContent() {
 }
 
 export function ProblemSection() {
+  const { rootRef, triggerMotion, entranceStyle } = useSectionEntranceMotion();
+  useHashMotionTrigger(triggerMotion, '#product');
+
   return (
     <section
       id="product"
@@ -480,19 +492,22 @@ export function ProblemSection() {
       aria-label="The Problem"
       className="bg-[var(--color-background-page)]"
     >
-      {/* Desktop — Figma 5164:6561 */}
-      <div className="hidden min-[1440px]:block">
+      {/* Desktop — matches SiteNav `lg` breakpoint so Product nav motion is available */}
+      <div className="hidden lg:block">
         <ProblemDesktopContent />
       </div>
 
-      {/* Mobile — Figma 5164:6571 */}
+      {/* Mobile / tablet below lg */}
       <div
+        ref={rootRef as RefObject<HTMLDivElement | null>}
         data-testid={problem.mobile.root}
-        className="flex flex-col gap-[var(--spacing-32)] px-[var(--spacing-16)] py-[var(--spacing-28)] min-[1440px]:hidden"
+        className="flex flex-col gap-[var(--spacing-32)] px-[var(--spacing-16)] py-[var(--spacing-28)] lg:hidden"
+        onMouseEnter={triggerMotion}
       >
         <div
           data-testid={problem.mobile.headerContainer}
           className="flex flex-col items-center gap-[var(--spacing-8)] text-center"
+          style={entranceStyle({ animateOpacity: true })}
         >
           <SectionPill
             pillTestId={problem.mobile.sectionPill}
@@ -521,6 +536,10 @@ export function ProblemSection() {
         <div
           data-testid={problem.mobile.cardsContainer}
           className="flex flex-col gap-[var(--spacing-16)]"
+          style={entranceStyle({
+            animateOpacity: true,
+            transitionDelay: MOTION_DELAY_STEP,
+          })}
         >
           {MOBILE_CARDS.map((card) => (
             <ProblemCardMobile key={card.cardTestId} card={card} />

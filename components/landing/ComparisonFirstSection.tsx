@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useState, type CSSProperties } from 'react';
+import { useCallback, useRef, useState, type CSSProperties } from 'react';
 import {
   COMPARISON_CARD_DESKTOP_CLASS,
   COMPARISON_CARD_HEADER_BADGE_INDUSTRY_CLASS,
@@ -48,7 +48,7 @@ import {
 } from '@/constants/landing.constants';
 import { getComparisonMainGroupMotionStyle, type ComparisonMotionStep } from '@/constants/motion.constants';
 import { runSimpleOneStepMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import { useInViewMotionTrigger, useOneWayMotion } from '@/lib/use-one-way-motion';
 import { ids } from '@/tokens/build/test-ids';
 import type {
   ComparisonCtaProps,
@@ -640,6 +640,7 @@ function ComparisonCtaBlock({
 }
 
 export function ComparisonFirstSection() {
+  const motionRootRef = useRef<HTMLDivElement>(null);
   const [motionStep, setMotionStep] = useState<ComparisonMotionStep>(-1);
 
   const playComparisonMotion = useCallback(() => {
@@ -650,6 +651,7 @@ export function ComparisonFirstSection() {
   }, []);
 
   const triggerMotion = useOneWayMotion(playComparisonMotion);
+  useInViewMotionTrigger(triggerMotion, motionRootRef);
 
   return (
     <section
@@ -660,6 +662,7 @@ export function ComparisonFirstSection() {
       {/* Desktop — Figma 5164:6566 */}
       <div className="hidden min-[1440px]:block">
         <div
+          ref={motionRootRef}
           data-testid={comparison.motion.root}
           className="flex justify-center px-[var(--spacing-64)] py-[var(--spacing-40)]"
           onMouseEnter={triggerMotion}

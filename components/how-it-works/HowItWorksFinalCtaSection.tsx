@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import {
   HIW_FINAL_CTA_CARD_CLASS,
   HIW_FINAL_CTA_DESKTOP_MOTION_CLIP_CLASS,
@@ -21,13 +21,14 @@ import {
   type HiwFinalCtaMotionStep,
 } from '@/constants/motion.constants';
 import { runSimpleOneStepMotion } from '@/lib/motion-sequence';
-import { useOneWayMotion } from '@/lib/use-one-way-motion';
+import { useInViewMotionTrigger, useOneWayMotion } from '@/lib/use-one-way-motion';
 import { HeroPrimaryCta } from '@/components/landing/HeroPrimaryCta';
 import { ids } from '@/tokens/build/test-ids';
 
 const finalCta = ids.component.howItWorks.finalCta;
 
 export function HowItWorksFinalCtaSection() {
+  const motionRootRef = useRef<HTMLDivElement>(null);
   const [motionStep, setMotionStep] = useState<HiwFinalCtaMotionStep>(-1);
 
   const playFinalCtaMotion = useCallback(
@@ -40,6 +41,7 @@ export function HowItWorksFinalCtaSection() {
   );
 
   const triggerMotion = useOneWayMotion(playFinalCtaMotion);
+  useInViewMotionTrigger(triggerMotion, motionRootRef);
 
   const motionEngaged = motionStep >= 0;
   const motionSettled = motionStep >= 1;
@@ -47,6 +49,7 @@ export function HowItWorksFinalCtaSection() {
   return (
     <section data-testid={finalCta.root} className={HIW_FINAL_CTA_SECTION_CLASS}>
       <div
+        ref={motionRootRef}
         data-testid={finalCta.motion.root}
         className="flex w-full flex-col items-center"
         onMouseEnter={triggerMotion}
