@@ -348,6 +348,74 @@ Motion is **not done** until every animation twin has a **closed** chain — mea
 - **Never** read `tokens/MOTION-SPEC.md` — Tracks A + B JSON only.
 - Human overview: `docs/motion-guideline.md` (Track A) · project `motion-spec` templates (Track B).
 
+#### Web entrance idle (mandatory to specify — Figma/requirements decide the value)
+
+Figma has **two twins**: static page frames (finished layout) and animation prototypes
+(entry poses + hover chain). **Neither idle is hard-coded for production.** The
+designer / PRD / Figma demand chooses `productIdle` per slice. The pipeline’s job
+is to **capture and enforce that choice**, not to invent empty states.
+
+| Idle | Purpose | Who sees it |
+|------|---------|-------------|
+| **`productIdle`** | What real users see before trigger | Production / staging |
+| **`qaIdle`** | Snapshot / fixture idle (often static twin) | Playwright (`NEXT_PUBLIC_E2E_MODE=1`), golden snapshots, layout QA |
+
+**Allowed `productIdle` values (pick one per slice — from Figma / designer):**
+
+| Value | User sees before trigger | When to use |
+|-------|--------------------------|-------------|
+| `staticTwin` | Finished layout (no empty / hidden frame) | Designer wants content visible immediately; hover/chain only enriches; **no empty states** |
+| `entryPose` | Animation state 1 offsets (partially visible) | Prototype idle is the intended first paint |
+| `hidden` | Opacity 0 + entry transform until trigger | Marketing reveal / scroll entrance; avoid static-flash |
+
+**Allowed `qaIdle`:** usually `staticTwin` for layout baselines. When
+`productIdle === staticTwin`, product and QA idles **align** — no dual-mode
+required for that slice.
+
+**Do not assume `hidden`.** Empty/hidden first paint is only valid when the Web
+entrance row (or designer) says so. Forcing hidden on every transition is a
+skill gap of its own.
+
+**Designer deliverable (mandatory intent — flexible naming):**
+Design does **not** have to use the tokens `productIdle` / `qaIdle`. They may
+write prose, Figma comments, Variables, or PRD bullets in any wording. Extract /
+contract **must** map that intent into the canonical enums below before
+`fe-implement`. If intent cannot be mapped → **STOP and ask** (do not invent).
+
+| Canonical (notes.md / contract) | Designer may say (examples — not exhaustive) |
+|---------------------------------|-----------------------------------------------|
+| `productIdle: staticTwin` | “no empty state”, “always show content”, “match page frame”, “visible before hover” |
+| `productIdle: entryPose` | “start like animation frame 1”, “idle = prototype idle”, “offset until scroll” |
+| `productIdle: hidden` | “reveal on scroll”, “invisible until in view”, “empty until trigger” |
+| triggers `hover` / `inView` / `hash` / `load` | “on hover”, “when section enters”, “Product nav / #product”, “on load” |
+
+Aliases in JSON/Variables (if a file uses different keys) are fine — normalize on
+write to notes/contract. Examples: `firstPaint`, `webIdle`, `initialRender`,
+`idleMode` → map to `productIdle`; `e2eIdle` / `snapshotIdle` → `qaIdle`.
+
+**How to decide (in order):**
+1. Explicit note in Figma / `notes.md` / PRD / Variables (any naming — map to enum)
+2. Ask designer: “Before hover/scroll, should this section look like the **static page frame**, **animation state 1**, or **fully hidden**?”
+3. If still ambiguous: **STOP and ask** — do not silently pick `hidden` or `staticTwin`.
+
+**Per animated slice — record in `notes.md` (blocks extract complete if missing):**
+```markdown
+### Web entrance — <SectionName>
+| Field | Value |
+|-------|-------|
+| productIdle | staticTwin \| entryPose \| hidden |
+| qaIdle | staticTwin \| (same as productIdle when aligned) |
+| source | designer \| figma-comment \| prd \| asked-<date> \| Variable:<name> |
+| designerWording | (optional verbatim — any keys/prose before canonical map) |
+| triggers | inView \| hash(`#…`) \| hover \| load (list all that apply) |
+| nav hash | `#product` / — |
+```
+
+**Anti-gap rule:** static twin = layout truth; animation chain = motion truth;
+**product idle must be an explicit Figma/requirements choice.** Wrong defaults
+(always static → flash; always hidden → empty states the designer rejected)
+are both failures.
+
 #### Track B — motion-spec inventory (MCP, when Animations page exists)
 
 Figma prototype **timing is not in REST file content**. MCP **can** extract **variant keyframes** — static frames as `Property 1=Default`, `Property 1=2`, … on the Animations page.
@@ -391,6 +459,7 @@ Reference pilot: `tokens/templates/motion-spec.example.json` (when present in pr
 | 13 | `componentProperties` diff state 1 vs terminal | accent/size variant changes in notes.md |
 | 14 | Unknown duration/delay flagged | `durationToken: null` → `validate:motion-chains` FAIL |
 | 15 | Every Animations-page twin in `slice-roots.json` | no orphan `*-animation` frames |
+| 16 | Web entrance row in `notes.md` | Map designer intent → `productIdle` (`staticTwin`\|`entryPose`\|`hidden`) + `qaIdle` + `triggers` + `source` — key names flexible, intent mandatory; no assumed empty states |
 
 #### npm procedure (after REST steps 1–4)
 
@@ -443,6 +512,11 @@ Chain status: **closed** | motion-chains built | validate:motion-chains: pass
 | `MOUSE_LEAVE` | ignored | one-way product rule — do not wire reverse |
 | `ON_CLICK` / unsupported | **STOP** | report — extend catalog first |
 
+**Web entrance triggers:** list whatever the contract/`notes.md` requires
+(`hover`, `inView`, `hash`, `load`). Figma prototypes are often hover-only —
+add `inView` / `hash` **only when** designer, PRD, or nav anchors demand them,
+not by default on every slice.
+
 #### Hard rules
 
 - **BLOCK** `design-contract` / `fe-implement` if any chain `status: incomplete` (full gate).
@@ -458,9 +532,10 @@ features/<id>/figma/
 ├── chain-walk-report.json      # missing destinationIds per twin
 ├── motion-chains.json          # timing, pattern, runner, every state nodeId
 ├── motion-diffs.json           # per-layer Smart Animate deltas per transition
-├── motion-state-poses.json     # per-state translateYpx matrix; initialRender rule
+├── motion-state-poses.json     # per-state translateYpx; initialRender / poses — feed Web entrance choice
 ├── nodes/<every-state>.json    # one file per variant state in chain
 └── reference-*-animation-state-*.png
+# notes.md also requires: ### Web entrance — productIdle (staticTwin|entryPose|hidden) + source + triggers
 ```
 
 ### MCP driver path (Phase 2 of dual-source — when get_design_context works)

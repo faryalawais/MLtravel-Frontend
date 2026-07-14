@@ -134,8 +134,16 @@ When writing Job 2 (`reports/<id>-visual.md`), for animated sections add a
 **Motion** subsection per `contract.md` **Motion** block (Track A) or §5b
 (Track B when no §2 Motion block):
 - **Pattern** from motion-chains (Track A) or trigger/keyframes from motion-spec (Track B)
-- **Pre-hover screenshot** (Job 1) vs **terminal state reference PNG** (Job 4)
+- **Web entrance** from contract §5a-web / notes: `productIdle` /
+  `qaIdle` / `source` — Job 1 baselines follow **qaIdle**; production behavior
+  follows **productIdle** (may be `staticTwin` with no empty states when
+  designer demands it). Designer may have used other Variable / prose names;
+  contract holds the canonical mapping — judge against the contract, not Figma
+  Variable spelling
+- **Pre-hover screenshot** (Job 1 / qaIdle) vs **terminal state reference PNG** (Job 4)
 - Verdict: **Matches** / **Differs** / **Not reviewed** (pending Step 7 APPROVE)
+- Step 7 verifies production matches contracted `productIdle` — do not reject
+  a slice for “not hidden” if the contract says `staticTwin`
 
 Do not add motion hover screenshots to the golden-master baseline unless an
 explicit `motion-hover.spec.ts` exists — mixing pre- and post-hover in the

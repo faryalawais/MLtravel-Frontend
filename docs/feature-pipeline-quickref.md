@@ -84,7 +84,7 @@
 
 - `features/<id>/figma/motion-chains.json` — pattern, runner, trigger testId, timings, `status: closed`
 - `features/<id>/figma/motion-diffs.json` — step · testId · helper · change table
-- `features/<id>/figma/motion-state-poses.json` — per-state layer `translateYpx` matrix; `initialRender: staticTwin` rule
+- `features/<id>/figma/motion-state-poses.json` — per-state `translateYpx`; pair with **Web entrance** in `notes.md` / contract: canonical `productIdle` = `staticTwin` \| `entryPose` \| `hidden` (map any designer Variable/prose → enum; intent mandatory, key names flexible) — see `docs/motion-guideline.md` + `/figma-extract`
 - `asset-manifest.json` — ambient `gifRef` rows in anatomy
 
 **Never an input:** `tokens/MOTION-SPEC.md` (legacy). If it disagrees with `motion-chains.json`, JSON wins.

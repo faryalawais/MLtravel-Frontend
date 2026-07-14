@@ -224,20 +224,33 @@ component. Authoritative docs: `docs/motion-guideline.md` (Track A) ·
 □ Do NOT read tokens/MOTION-SPEC.md
 □ Track A — motion-chains.json — chain for this slice: status "closed" (or subgraph closed)
 □ Track A — motion-diffs.json — all diffs for this chain / subgraphId
-□ Track A — motion-state-poses.json — per-state translateYpx; initialRender staticTwin vs animationState1
+□ Track A — motion-state-poses.json — per-state translateYpx; initialRender = qaIdle hint only
+□ Contract / notes.md **Web entrance** row: productIdle + qaIdle + source + triggers
 □ Track A — Every transition: trigger, delayMs, durationToken, easingToken from motion-chains
 □ Track B — motion-spec.json entry for this componentPath; duration/easing from confirmed timing
 □ Every moving layer: testId in ui-registry.json (component.*.motion.*)
 □ Custom translateY px (custom: true) → constants/motion.constants.ts only — never inline in TSX
-□ If initialRender is staticTwin: pre-hover layout = flex/natural flow matching static frame — NOT animation state 1
+□ Production idle = contract productIdle exactly (staticTwin | entryPose | hidden) — do not invent empty states
+□ If productIdle ≠ qaIdle: gate qaIdle behind NEXT_PUBLIC_E2E_MODE=1 (isStaticTwinIdleMode / equivalent)
+□ Wire triggers listed in contract only (hover / inView / hash / load) — no extras
 □ Staged-sequence timing: cumulative duration+delay between steps — not delay × stepIndex
 □ If any state node missing from nodes/ → figma:refresh-node before coding
-□ contract.md **Motion** block matches motion-chains.json (Track A) OR §5b matches motion-spec (Track B)
+□ contract.md **Motion** + **Web entrance** match notes / motion-chains (Track A) OR §5b (Track B)
 □ Bind each motion-diffs row → helper + data-testid — not sibling TSX
 □ gifRef ambient → asset-manifest path + <Image unoptimized /> — no hover handler
 □ reference-*-animation-state-*.png available for Step 7 spot-check
 □ prefers-reduced-motion: show terminal state, skip runner (when useReducedMotion exists)
 ```
+
+**Idle flexibility (BLOCKER if wrong for *this* contract):** Implement the
+**signed Web entrance row**, not a global “always hide” or “always staticTwin”
+habit. If `productIdle: staticTwin`, first paint is finished layout (no empty
+frame). If `entryPose` / `hidden`, do not flash the finished twin then snap.
+If the row is missing or ambiguous → STOP and ask design — do not guess.
+Designers are **not** required to use our variable names; FE only reads the
+canonical contract enums after extract mapped their intent
+(`/figma-extract` flexible naming). Do not fail implement because Figma used
+`firstPaint` / prose instead of `productIdle`.
 
 **Pattern → code (mechanical — from `motion-chains.json` `pattern` field):**
 
@@ -260,12 +273,16 @@ When `motion-diffs` marks `custom: true` (no spacing token for 370/284 etc.),
 define named constants in `motion.constants.ts` sourced from `motion-state-poses.json`.
 
 **Step 7 motion review (mandatory for animated slices):** after automated gates,
-hover the slice at 1440px desktop and compare end-state to
-`reference-<slug>-animation-state-terminal.png` (or highest state index PNG).
-For multi-step patterns (`rapid-four-step`, `staged-sequence`), spot-check
-intermediate states against `reference-*-animation-state-2.png` etc. if the
-cascade looks wrong. Static `test:visual` screenshots capture **pre-hover**
-layout only — they do not prove motion fidelity.
+review against the **contract Web entrance** (not a global preference):
+1. **Production path:** reload → first paint matches `productIdle`
+   (`staticTwin` = visible finished layout / no empty; `entryPose` / `hidden` =
+   no finished-twin flash). Confirm listed triggers fire the chain.
+2. **QA path** (when `productIdle ≠ qaIdle`): with `NEXT_PUBLIC_E2E_MODE=1`,
+   pre-hover matches `qaIdle` (usually static twin); then hover and compare
+   end-state to `reference-<slug>-animation-state-terminal.png`.
+For multi-step patterns, spot-check intermediate `reference-*-animation-state-N.png`
+if the cascade looks wrong. Static `test:visual` screenshots prove layout /
+qaIdle only — APPROVE only if production matches the contracted `productIdle`.
 
 **Violation routing (motion):** wrong timing, pattern, or layer binding →
 `/figma-extract` chain walk + `build:motion-from-cache`, not ad-hoc CSS.

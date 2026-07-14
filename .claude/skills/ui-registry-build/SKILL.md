@@ -100,7 +100,8 @@ unless the layer is exclusively a motion decorative — document in anatomy per
 `design-contract` skill.
 
 Authoritative docs: `docs/motion-guideline.md` · `docs/motion-pipeline-plan.md`
-steps 14–15.
+steps 14–15. Web entrance idle enums live in contract / notes — not in
+ui-registry paths; registry only covers `component.*.motion.*` moving layers.
 
 ### Step 3 — Identify states for each component
 For each component, check spec.json for variant data or layer naming that

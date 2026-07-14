@@ -264,8 +264,29 @@ Fill in `contract-template.md` (in this skill's folder) for the feature:
    |-------|-------|--------------|--------|
    | 1 | Frame 1561553827 | 370 | component.landing.hero.motion.textColumn |
    ```
-   Include `initialRender: staticTwin` when present — documents that page load
-   matches the static frame, not animation state 1.
+   Include pose matrix / `initialRender` when present. Always add a **Web
+   entrance** line from `notes.md`. **Mandatory intent, flexible naming:** design
+   need not use the keys `productIdle` / `qaIdle` (prose, Figma comments,
+   Variables, PRD are fine). Extract maps intent → canonical enums
+   (`staticTwin` \| `entryPose` \| `hidden`). Aliases like `firstPaint` /
+   `webIdle` / `idleMode` → `productIdle`; `e2eIdle` / `snapshotIdle` →
+   `qaIdle`. See `/figma-extract` “Designer deliverable (mandatory intent —
+   flexible naming)”.
+
+   ```markdown
+   **Web entrance:** productIdle=`staticTwin|entryPose|hidden` ·
+   qaIdle=`staticTwin|(aligned)` · source=`designer|figma|prd|asked-…` ·
+   triggers=`hover` [, `inView`] [, `hash(#…)`] [, `load`].
+   Implement production idle = productIdle exactly. When productIdle ≠ qaIdle,
+   gate qaIdle behind `NEXT_PUBLIC_E2E_MODE=1` (or equivalent).
+   ```
+
+   **BLOCK:** animated slice missing resolvable Web entrance intent (including
+   `source`) — do not write / APPROVE until idle + triggers are mapped from
+   Figma/requirements. Do **not** invent `hidden` empty states when the designer
+   wants `staticTwin` (visible content, no empty frame). Do **not** invent
+   `staticTwin` first paint when the designer wants a reveal. Do **not** require
+   designers to adopt our key names — require mappable intent only.
 
    **Hybrid sections (e.g. SocialProof):** when `motion-chains.json` has
    multiple `chains[]` entries for one slice-root, write **one Motion block

@@ -77,6 +77,25 @@
 | <name>  | disabled | <token change> |
 | <name>  | loading / empty / error | <description> |
 
+### 5a-web. Web entrance (Track A animated slices — mandatory)
+> **Flexible — Figma / PRD / designer demand choose idle.** Static twin = layout
+> truth; animation chain = motion truth; product idle is an explicit choice.
+> Do not force empty/hidden states when the designer wants visible content.
+
+| Component | productIdle | qaIdle | source | triggers | nav hash |
+|-----------|-------------|--------|--------|----------|----------|
+| `component.<feature>.…` | staticTwin \| entryPose \| hidden | staticTwin \| (same as product) | designer \| figma \| prd \| asked-… | hover [, inView] [, hash] [, load] | `#…` / — |
+
+- **`productIdle: staticTwin`** — finished layout on first paint; **no empty states**; chain runs on trigger only.
+- **`productIdle: entryPose`** — animation state 1 until trigger.
+- **`productIdle: hidden`** — invisible until trigger (reveal / scroll entrance).
+- **`qaIdle`** — typically staticTwin for baselines; may match productIdle when aligned.
+- **Ambiguous?** STOP and ask — never silently pick hidden or staticTwin.
+- **Naming:** designer Variables / comments need not match these key names;
+  extract maps any equivalent wording into this table (see figma-extract
+  “flexible naming”). Canonical keys in contract stay `productIdle` / `qaIdle`
+  so FE stays stable.
+
 ### 5b. Motion-spec (Track B — supplementary)
 > Source: `features/<FEATURE-ID>/figma/motion-spec.json` (built during
 > `figma-extract` from the Figma **Animations** page variant frames via MCP).

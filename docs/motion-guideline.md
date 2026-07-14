@@ -28,6 +28,39 @@ PricingSection          ↔  PricingSectionanimation
 
 Naming must stay paired. Static frames feed layout; animation frames feed motion.
 
+### Web entrance idle (required to specify — Figma/requirements decide)
+
+Static twin = layout truth; animation chain = motion truth. **`productIdle` is
+not a global hard-code.** Forcing every section to `hidden` rejects valid
+“no empty state” designs; forcing every section to `staticTwin` causes flash
+when a reveal was intended.
+
+| Idle | Purpose | Who sees it |
+|------|---------|-------------|
+| **productIdle** | Explicit first paint: `staticTwin` \| `entryPose` \| `hidden` | Production / staging |
+| **qaIdle** | Snapshot / fixture idle (often `staticTwin`) | Playwright / golden QA |
+
+**Choose per slice from designer / Figma / PRD** (ask if ambiguous — never guess):
+
+| productIdle | First paint | Typical demand |
+|-------------|-------------|----------------|
+| `staticTwin` | Finished layout, **no empty states** | Content always visible; motion on hover only |
+| `entryPose` | Animation state 1 | Prototype idle is the live idle |
+| `hidden` | Invisible until trigger | Scroll / nav reveal |
+
+**Mandatory intent, flexible naming:** designers need not use the keys
+`productIdle` / `qaIdle`. Prose, Figma comments, or Variables
+(`firstPaint`, `webIdle`, `idleMode`, `e2eIdle`, …) are fine — pipeline skills
+map them to the canonical enums in `notes.md` / `contract.md`. FE and QA only
+read the contract. If intent cannot be mapped → STOP and ask.
+
+Record **Web entrance** (`productIdle` + `qaIdle` + `source` + `triggers`) before
+APPROVE. Triggers (`hover`, `inView`, `hash`, `load`) are also per-slice, not
+global defaults.
+
+Authoritative skill detail: `.claude/skills/figma-extract/SKILL.md` § Web entrance
+idle · `design-contract` §5a-web · `fe-implement` idle checklist.
+
 ---
 
 ## Two kinds of motion
@@ -261,7 +294,11 @@ Step bodies come from **`motion-diffs.json`**, not from copying another section.
 
 **motion-state-poses:** per-state `translateYpx` for `Frame 1561553827` (text) and `Frame 1561553830` (CTA+proof).
 
-**Initial render rule:** when `initialRender: "staticTwin"`, page load matches the **static twin** frame (`5164:6560`) — flex column with `gap-24`, **no** `translateY` on columns. Animation state 1 (both columns at y=370) applies **only after** `onMouseEnter`.
+**Idle / initial render (from contract Web entrance — not a global rule):**
+- **Production:** match `productIdle` — `staticTwin` (visible finished layout /
+  no empty states), `entryPose`, or `hidden` until the contracted triggers fire.
+- **QA:** when `productIdle ≠ qaIdle`, use `NEXT_PUBLIC_E2E_MODE=1` so fixtures
+  can keep `qaIdle` (often static twin). When both are `staticTwin`, modes align.
 
 **Code shape:**
 
@@ -278,7 +315,8 @@ const playMotion = useCallback(() => {
   );
 }, []);
 
-// !motionEngaged → flex column (static twin)
+// !motionEngaged → pose from contract productIdle (staticTwin | entryPose | hidden)
+// dual-mode only when productIdle ≠ qaIdle (E2E flag → qaIdle)
 // motionEngaged → absolute shared-origin + getHeroColumnMotionStyle
 ```
 
