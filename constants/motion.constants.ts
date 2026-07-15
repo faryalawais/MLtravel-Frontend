@@ -606,11 +606,10 @@ export function getMotionSlideRevealStyle(
     transitionProperty: options?.transitionProperty ?? 'opacity, transform',
     transitionDelay: options?.transitionDelay ?? '0ms',
     transitionDuration: baseStyle.transitionDuration ?? MOTION_TOKEN_REFS.durationDefault,
-    opacity: 1,
     transform: options?.liftWhenRevealed
       ? MOTION_SLIDE_LIFT_TRANSFORM
       : MOTION_SLIDE_REST_TRANSFORM,
-    ...(animateOpacity ? null : null),
+    ...(animateOpacity ? { opacity: 1 } : {}),
   };
 }
 
